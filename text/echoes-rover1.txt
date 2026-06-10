@@ -1,0 +1,157 @@
+el nombre del set es "Havoc Eclipse", algo interesante de los echoes de wuwa es que tienen habilidades distintas si estan en el primer slot. Solo trabajaremos con echoes de 5*; olvidaremos que existen otras rarezas por simplicidad. te pasaré 5 que usaremos como referencia en nuestra primera implementación con rover. punto 1 los cost(4: Calamity Class, 3: Elite Class, 1: Common Class), un personaje tiene un limite de 12, que permite configuraciones como 4-4-1-1-1 o 4-3-3-1-1  que la ultima es la que usaremos al ser la mas optima en este caso: "-
+|
+Calamity Class
+Dreamless
+Cost 4
+ID 6000053
+Dreamless
+5★
+Skill
+Transform into Dreamless and perform 6 consecutive strikes. The first 5 strikes deal 54.08% Havoc DMG each, and the last strike deal 270.40% Havoc DMG.
+The DMG of this Echo Skill is increased by 50.00% during the first 5s after Rover: Havoc casts Resonance Liberation: Deadening Abyss.
+
+CD: 20s
+Effects
+Havoc Eclipse
+2-Pc
+Havoc DMG + 10%.
+5-Pc
+Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s.", "Tacet Discord - Disorder Species
+Element:Havoc
+Property:ATK
+Rate:270.4%
+Energy:4.22
+Element Power:0
+Hardness:1
+Tough:1.69"
+"Elite Class
+Tambourinist
+Cost 3
+ID 390077023
+Huanglong
+Tambourinist
+Skill
+Summon a Tambourinist that plays out Melodies of Annihilation. Any Resonator on the team gains the following effect for 10s upon obtaining a Melody of Annihilation: When the Resonator hits a target, the Tambourinist deals 14.40% Havoc DMG to the target, up to 10 times.
+
+CD: 15s
+Effects
+Freezing Frost
+2-Pc
+Glacio DMG + 10%.
+5-Pc
+Glacio DMG + 10% after releasing Basic Attack or Heavy Attack. This effect stacks up to 3 times, each stack lasts 15s.
+Havoc Eclipse
+2-Pc
+Havoc DMG + 10%.
+5-Pc
+Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s.
+Damage Data
+Element:Havoc
+Property:ATK
+Rate:14.4%
+Energy:0.22
+Element Power:0
+Hardness:1
+Tough:0.09
+" 
+
+"Mutant Flora
+|
+Elite Class
+Roseshroom
+Cost 3
+ID 390077029
+Huanglong
+Roseshroom
+Skill
+Summon a Roseshroom that fires a laser, dealing 57.07% Havoc DMG up to 3 times.
+
+CD: 15s
+Effects
+Freezing Frost
+2-Pc
+Glacio DMG + 10%.
+5-Pc
+Glacio DMG + 10% after releasing Basic Attack or Heavy Attack. This effect stacks up to 3 times, each stack lasts 15s.
+Havoc Eclipse
+2-Pc
+Havoc DMG + 10%.
+5-Pc
+Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s.
+Damage Data
+Element:Havoc
+Property:ATK
+Rate:57.06%
+Energy:0.89
+Element Power:0
+Hardness:1
+Tough:0.3566" 
+
+"Mutant Flora
+|
+Common Class
+Baby Roseshroom
+Cost 1
+ID 390070079
+Huanglong
+Baby Roseshroom
+skill
+Summon a Baby Roseshroom that fires a laser, dealing 32.00%+64 Havoc DMG.
+
+CD: 8s
+Effects
+Sierra Gale
+2-Pc
+Aero DMG + 10%.
+5-Pc
+Aero DMG + 30% for 15s after releasing Intro Skill.
+Havoc Eclipse
+2-Pc
+Havoc DMG + 10%.
+5-Pc
+Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s.
+Damage Data
+Element:Havoc
+Property:ATK
+Rate:32.00% + 64DMG HAVOC
+Energy:1.8 (esto se supone que devuelve la energia a la ultimate del personaje.)
+Element Power:0
+Hardness:1
+Tough:0.75" 
+
+"Tacet Discord - Natural Species
+|
+Common Class
+Havoc Prism
+Cost 1
+ID 390077017
+Huanglong
+Havoc Prism
+Skill
+Summon a Havoc Prism to fire five crystal shards, each dealing 23.04% Havoc DMG.
+
+CD: 8s
+Effects
+Void Thunder
+2-Pc
+Electro DMG + 10%.
+5-Pc
+Electro DMG + 15% after releasing Heavy Attack or Resonance Skill. This effect stacks up to 2 times, each stack lasts 15s.
+Celestial Light
+2-Pc
+Spectro DMG + 10%.
+5-Pc
+Spectro DMG + 30% for 15s after releasing Intro Skill.
+Havoc Eclipse
+2-Pc
+Havoc DMG + 10%.
+5-Pc
+Havoc DMG + 7.5% after releasing Basic Attack or Heavy Attack. This effect stacks up to 4 times, each stack lasts 15s.
+Damage Data
+Element:HAVOC
+Property:ATK
+Rate:23.04%
+Energy:0.36
+Element Power:0
+Hardness:1
+Tough:0.144" "Tough: parece ser la 'duresa' de la barra de algunos enemigas para inmovlizarlos un tiempo." pero antes quiero saber como es el sistema de importacion en genshin optimazer, como .json tiene las propiedades del echoe O esta en el proecto y sol0o guarda propiedades simples. busca que signufica realmente cada elemento de un echo en wuwa
