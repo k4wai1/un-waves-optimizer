@@ -1,0 +1,17 @@
+{
+  "id": "RoverHavoc",
+  "baseStats": {
+    "1": {
+      "hp": 866,
+      "atk": 33,
+      "def": 103,
+      "energy": 125
+    },
+    "90": {
+      "hp": 10500,
+      "atk": 450,
+      "def": 1200,
+      "energy": 125
+    }
+  }
+}

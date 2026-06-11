@@ -1,0 +1,17 @@
+{
+  "id": "Dreamless",
+  "cost": 4,
+  "sonata": ["HavocEclipse"],
+  "skill": {
+    "cooldown": 20,
+    "hits": [
+      { "mult": 54.08, "count": 5 },
+      { "mult": 270.40, "count": 1 }
+    ],
+    "buff": {
+      "condition": "Post-Resonance Liberation",
+      "duration": 5,
+      "dmgMultiplier_": 50.0
+    }
+  }
+}

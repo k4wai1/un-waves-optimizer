@@ -8,6 +8,9 @@ tmp
 # dependencies
 node_modules
 
+# texto no relevante
+text/*
+
 # IDEs and editors
 /.idea
 .project

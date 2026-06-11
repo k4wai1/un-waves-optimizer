@@ -1,0 +1,139 @@
+{
+  "character": "Rover Havoc Build",
+  "basicAttack": {
+    "a1": {
+      "name": "Part I Damage",
+      "rawFormula": "28.50"
+    },
+    "a2": {
+      "name": "Part II Damage",
+      "rawFormula": "28.50*2"
+    },
+    "a3": {
+      "name": "Part III Damage",
+      "rawFormula": "42.75"
+    },
+    "a4": {
+      "name": "Part IV Damage",
+      "rawFormula": "20.27*3"
+    },
+    "a5": {
+      "name": "Part V Damage",
+      "rawFormula": "47.50*2"
+    },
+    "a6": {
+      "name": "Heavy Attack Damage",
+      "rawFormula": "48.00"
+    },
+    "a7": {
+      "name": "Mid-Air Attack Damage",
+      "rawFormula": "58.90"
+    },
+    "a8": {
+      "name": "Dodge Counter Damage",
+      "rawFormula": "90.25"
+    },
+    "a9": {
+      "name": "Heavy Attack Stamina Consumption",
+      "rawFormula": "25"
+    },
+    "a10": {
+      "name": "Mid-Air Attack Stamina Consumption",
+      "rawFormula": "30"
+    }
+  },
+  "resonanceSkill": {
+    "a11": {
+      "name": "Skill Damage",
+      "rawFormula": "144.00*2"
+    },
+    "a12": {
+      "name": "Cooldown Time",
+      "rawFormula": "12"
+    },
+    "a13": {
+      "name": "Con. Energy Regen",
+      "rawFormula": "15"
+    }
+  },
+  "resonanceLiberation": {
+    "a14": {
+      "name": "Skill Damage",
+      "rawFormula": "765.00"
+    },
+    "a15": {
+      "name": "Cooldown Time",
+      "rawFormula": "16"
+    },
+    "a16": {
+      "name": "Res. Energy Cost",
+      "rawFormula": "125"
+    },
+    "a17": {
+      "name": "Con. Energy Regen",
+      "rawFormula": "20"
+    }
+  },
+  "forteCircuit": {
+    "a20": {
+      "name": "Devastation Damage",
+      "rawFormula": "114.75"
+    },
+    "a21": {
+      "name": "Umbra: Basic Attack Part I Damage",
+      "rawFormula": "28.35"
+    },
+    "a22": {
+      "name": "Umbra: Basic Attack Part II Damage",
+      "rawFormula": "47.25"
+    },
+    "a23": {
+      "name": "Umbra: Basic Attack Part III Damage",
+      "rawFormula": "78.30"
+    },
+    "a24": {
+      "name": "Umbra: Basic Attack Part IV Damage",
+      "rawFormula": "18.68*3+56.03"
+    },
+    "a25": {
+      "name": "Umbra: Basic Attack Part V Damage",
+      "rawFormula": "14.35*4+57.38"
+    },
+    "a26": {
+      "name": "Umbra: Heavy Attack Damage",
+      "rawFormula": "64.80"
+    },
+    "a27": {
+      "name": "Umbra: Thwackblade Damage",
+      "rawFormula": "63.70+5.00*4"
+    },
+    "a28": {
+      "name": "Umbra: Plunging Attack Damage",
+      "rawFormula": "62.00"
+    },
+    "a29": {
+      "name": "Umbra: Dodge Counter Damage",
+      "rawFormula": "159.30"
+    },
+    "a30": {
+      "name": "Umbra: Heavy Attack Stamina Consumption",
+      "rawFormula": "25"
+    },
+    "a31": {
+      "name": "Umbra: Plunging Stamina Consumption",
+      "rawFormula": "30"
+    },
+    "a32": {
+      "name": "Umbra: Lifetaker Damage",
+      "rawFormula": "139.00*2+5.00*4"
+    },
+    "a33": {
+      "name": "Umbra: Lifetaker Cooldown",
+      "rawFormula": "12"
+    },
+    "a34": {
+      "name": "Lifetaker Con. Energy Regen",
+      "rawFormula": "15"
+    }
+  }
+}
