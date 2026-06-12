@@ -1,0 +1,25 @@
+{
+  "id": "EternalRadiance",
+  "name": "Eternal Radiance",
+  "2pc": {
+    "description": "Spectro DMG +10%",
+    "buffs": { "spectro_dmg_": 0.10 }
+  },
+  "5pc": {
+    "description": "Inflicting enemies with Spectro Frazzle increases Crit. Rate by 20% for 15s. Attacking enemies with 10 stacks of Spectro Frazzle grants 15% Spectro DMG Bonus for 15s.",
+    "conditionals": {
+      "frazzle_inflict": {
+        "trigger": "onFrazzleInflict",
+        "maxStacks": 1,
+        "duration_sec": 15,
+        "buffs": { "critRate_": 0.20 }
+      },
+      "frazzle_attack": {
+        "trigger": "onAttackFrazzle10Stacks",
+        "maxStacks": 1,
+        "duration_sec": 15,
+        "buffs": { "spectro_dmg_": 0.15 }
+      }
+    }
+  }
+}

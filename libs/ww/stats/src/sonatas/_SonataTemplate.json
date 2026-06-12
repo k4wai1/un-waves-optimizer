@@ -1,0 +1,18 @@
+{
+  "id": "FreezingFrost",
+  "name": "Freezing Frost",
+  "2pc": {
+    "description": "Glacio DMG +10%",
+    "buffs": { "glacio_dmg_": 0.10 }
+  },
+  "5pc": {
+    "description": "Glacio DMG +10%. Upon releasing Basic Attack or Heavy Attack, Glacio DMG +10%, stacks up to 3 times, lasts 15s.",
+    "passive_buffs": { "glacio_dmg_": 0.10 },
+    "conditional": {
+      "trigger": "onBasicOrHeavy",
+      "maxStacks": 3,
+      "duration": 15,
+      "buffs": { "glacio_dmg_": 0.10 }
+    }
+  }
+}

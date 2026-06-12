@@ -1,0 +1,21 @@
+{
+  "id": "EmpyreanAnthem",
+  "name": "Empyrean Anthem",
+  "2pc": {
+    "description": "Energy Regen +10%",
+    "buffs": { "energy_regen_": 0.10 }
+  },
+  "5pc": {
+    "description": "Increase the Resonator's Coordinated Attack DMG by 80%. Upon a critical hit of Coordinated Attack, increase the active Resonator's ATK by 20% for 4s.",
+    "passive_buffs": {
+      "coordinated_dmg_": 0.80
+    },
+    "conditional": {
+      "trigger": "onCoordinatedCrit",
+      "target": "active",
+      "maxStacks": 1,
+      "duration_sec": 4,
+      "buffs": { "atk_": 0.20 }
+    }
+  }
+}

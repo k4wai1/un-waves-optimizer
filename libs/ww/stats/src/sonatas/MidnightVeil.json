@@ -1,0 +1,22 @@
+{
+  "id": "MidnightVeil",
+  "name": "Midnight Veil",
+  "2pc": {
+    "description": "Havoc DMG +10%",
+    "buffs": { "havoc_dmg_": 0.10 }
+  },
+  "5pc": {
+    "description": "Triggering Outro Skill deals additional 480% Havoc DMG to surrounding enemies, considered Outro Skill DMG and grants the incoming Resonator 15% Havoc DMG Bonus for 15s.",
+    "passive_mechanics": {
+      "trigger": "onOutro",
+      "dmg_instance": { "mv": 4.80, "element": "havoc", "move": "outro" }
+    },
+    "conditional": {
+      "trigger": "onOutro",
+      "target": "next",
+      "maxStacks": 1,
+      "duration_sec": 15,
+      "buffs": { "havoc_dmg_": 0.15 }
+    }
+  }
+}

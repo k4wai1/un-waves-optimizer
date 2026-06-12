@@ -1,0 +1,1125 @@
+Tabla de Estadísticas por Fase de Ascensión y Nivel
+Fase 0:
+
+Nivel 1/20: HP 805.00, ATK 22.00, DEF 77.00
+
+Nivel 20/20: HP 2,093.00, ATK 57.20, DEF 197.12
+
+Fase 1:
+
+Nivel 20/40: HP 2,630.74, ATK 73.26, DEF 247.17
+
+Nivel 40/40: HP 3,986.76, ATK 110.00, DEF 374.22
+
+Fase 2:
+
+Nivel 40/50: HP 4,516.05, ATK 127.16, DEF 424.27
+
+Nivel 50/50: HP 5,200.30, ATK 145.42, DEF 488.18
+
+Fase 3:
+
+Nivel 50/60: HP 5,739.65, ATK 162.36, DEF 537.46
+
+Nivel 60/60: HP 6,415.85, ATK 180.84, DEF 600.60
+
+Fase 4:
+
+Nivel 60/70: HP 6,953.59, ATK 196.68, DEF 650.88
+
+Nivel 70/70: HP 7,632.85, ATK 216.26, DEF 714.66
+
+Fase 5:
+
+Nivel 70/80: HP 8,169.14, ATK 227.26, DEF 764.59
+
+Nivel 80/80: HP 8,846.95, ATK 245.67, DEF 827.75
+
+Fase 6:
+
+Nivel 80/90: HP 9,384.55, ATK 256.67, DEF 877.68
+
+Nivel 90/90: HP 10,062.50, ATK 275.00, DEF 941.09
+
+niveles de basico:
+Base Attack Lv: 1
+Part I Damage	24.50%
+Part II Damage	37.10%
+Part III Damage	10.85%*4
+Part IV Damage	19.95%*2
+Part V Damage	117.60%
+Heavy Attack Damage	11.2%*5
+Mid-Air Attack Damage	43.40%
+Dodge Counter Damage	84.00%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 2
+
+Part I Damage	26.51%
+Part II Damage	40.15%
+Part III Damage	11.74%*4
+Part IV Damage	21.59%*2
+Part V Damage	127.25%
+Heavy Attack Damage	12.12%*5
+Mid-Air Attack Damage	46.96%
+Dodge Counter Damage	90.89%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 3
+
+Part I Damage	28.52%
+Part II Damage	43.19%
+Part III Damage	12.63%*4
+Part IV Damage	23.23%*2
+Part V Damage	136.89%
+Heavy Attack Damage	13.04%*5
+Mid-Air Attack Damage	50.52%
+Dodge Counter Damage	97.78%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 4
+
+Part I Damage	31.34%
+Part II Damage	47.45%
+Part III Damage	13.88%*4
+Part IV Damage	25.52%*2
+Part V Damage	150.39%
+Heavy Attack Damage	14.33%*5
+Mid-Air Attack Damage	55.50%
+Dodge Counter Damage	107.42%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 5
+
+Part I Damage	33.34%
+Part II Damage	50.49%
+Part III Damage	14.77%*4
+Part IV Damage	27.15%*2
+Part V Damage	160.04%
+Heavy Attack Damage	15.25%*5
+Mid-Air Attack Damage	59.06%
+Dodge Counter Damage	114.31%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 6
+
+Part I Damage	35.65%
+Part II Damage	53.99%
+Part III Damage	15.79%*4
+Part IV Damage	29.03%*2
+Part V Damage	171.12%
+Heavy Attack Damage	16.3%*5
+Mid-Air Attack Damage	63.16%
+Dodge Counter Damage	122.23%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 7
+
+Part I Damage	38.87%
+Part II Damage	58.86%
+Part III Damage	17.22%*4
+Part IV Damage	31.65%*2
+Part V Damage	186.55%
+Heavy Attack Damage	17.77%*5
+Mid-Air Attack Damage	68.85%
+Dodge Counter Damage	133.25%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 8
+
+Part I Damage	42.08%
+Part II Damage	63.72%
+Part III Damage	18.64%*4
+Part IV Damage	34.27%*2
+Part V Damage	201.98%
+Heavy Attack Damage	19.24%*5
+Mid-Air Attack Damage	74.54%
+Dodge Counter Damage	144.27%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 9
+
+Part I Damage	45.30%
+Part II Damage	68.59%
+Part III Damage	20.06%*4
+Part IV Damage	36.89%*2
+Part V Damage	217.41%
+Heavy Attack Damage	20.71%*5
+Mid-Air Attack Damage	80.24%
+Dodge Counter Damage	155.30%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+Base Attack Lv: 10
+
+Part I Damage	48.71%
+Part II Damage	73.76%
+Part III Damage	21.58%*4
+Part IV Damage	39.67%*2
+Part V Damage	233.81%
+Heavy Attack Damage	22.27%*5
+Mid-Air Attack Damage	86.29%
+Dodge Counter Damage	167.01%
+Heavy Attack Stamina Consumption	25
+Mid-Air Attack Stamina Consumption	30
+
+
+habilidad de resonancia, hice un scrip que lo extrae ahora lo pasare en formato.json:
+
+{
+  "character": "Sanhua Build",
+  "table": "resonance-skill-table",
+  "levels": {
+    "1": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "181.00"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "2": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "195.85"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "3": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "210.69"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "4": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "231.47"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "5": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "246.31"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "6": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "263.38"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "7": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "287.13"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "8": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "310.87"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "9": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "334.62"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    },
+    "10": {
+      "a11": {
+        "name": "Skill Damage",
+        "rawFormula": "359.85"
+      },
+      "a12": {
+        "name": "Cooldown Time",
+        "rawFormula": "10"
+      },
+      "a13": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "15"
+      }
+    }
+  }
+}
+
+liberacion:
+
+{
+  "character": "Sanhua Build",
+  "table": "resonance-liberation-table",
+  "levels": {
+    "1": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "407.16"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "2": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "440.55"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "3": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "473.94"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "4": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "520.68"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "5": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "554.07"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "6": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "592.46"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "7": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "645.88"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "8": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "699.30"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "9": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "752.72"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    },
+    "10": {
+      "a14": {
+        "name": "Skill Damage",
+        "rawFormula": "809.48"
+      },
+      "a15": {
+        "name": "Cooldown Time",
+        "rawFormula": "16"
+      },
+      "a16": {
+        "name": "Res. Energy Cost",
+        "rawFormula": "100"
+      },
+      "a17": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "20"
+      }
+    }
+  }
+}
+
+forte:
+
+{
+  "character": "Sanhua Build",
+  "table": "forte-circuit-table",
+  "levels": {
+    "1": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "93.70*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "70.00"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "40.00"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "30.00"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "2": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "101.39*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "75.74"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "43.28"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "32.46"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "3": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "109.07*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "81.48"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "46.56"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "34.92"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "4": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "119.83*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "89.52"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "51.16"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "38.37"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "5": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "127.51*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "95.26"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "54.44"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "40.83"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "6": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "136.35*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "101.86"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "58.21"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "43.66"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "7": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "148.64*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "111.05"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "63.46"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "47.59"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "8": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "160.93*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "120.23"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "68.70"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "51.53"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "9": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "173.23*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "129.41"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "73.95"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "55.47"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    },
+    "10": {
+      "a20": {
+        "name": "Burst Damage",
+        "rawFormula": "186.29*2"
+      },
+      "a21": {
+        "name": "Glacier Burst Damage",
+        "rawFormula": "139.17"
+      },
+      "a22": {
+        "name": "Ice Prism Burst Damage",
+        "rawFormula": "79.53"
+      },
+      "a23": {
+        "name": "Ice Thorn Burst Damage",
+        "rawFormula": "59.65"
+      },
+      "a24": {
+        "name": "Clarity Duration",
+        "rawFormula": "5"
+      },
+      "a25": {
+        "name": "Burst Con. Energy Regen",
+        "rawFormula": "15"
+      },
+      "a26": {
+        "name": "Glacier Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a27": {
+        "name": "Ice Prism Burst Con. Damage Regen",
+        "rawFormula": "15"
+      },
+      "a28": {
+        "name": "Glacier Duration",
+        "rawFormula": "5"
+      },
+      "a29": {
+        "name": "Ice Prism Duration",
+        "rawFormula": "5"
+      },
+      "a30": {
+        "name": "Ice Thorn Duration",
+        "rawFormula": "8"
+      }
+    }
+  }
+}
+
+intro: 
+
+{
+  "character": "Sanhua Build",
+  "table": "intro-skill-table",
+  "levels": {
+    "1": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "70.00"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "2": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "75.74"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "3": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "81.48"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "4": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "89.52"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "5": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "95.26"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "6": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "101.86"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "7": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "111.05"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "8": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "120.23"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "9": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "129.41"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    },
+    "10": {
+      "a18": {
+        "name": "Skill Damage",
+        "rawFormula": "139.17"
+      },
+      "a19": {
+        "name": "Con. Energy Regen",
+        "rawFormula": "10"
+      }
+    }
+  }
+}
+
+cosas en lenguaje natural:
+dupes:
+ Resonance Chain: Sanhua
+ Nivel 1: Solitude's Embrace
+ 
+ Efecto: El Basic Attack V incrementa el Crit. Rate de Sanhua en un 15% durante 10 segundos.
+ 
+ Nivel 2: Snowy Clarity
+ 
+ Efecto: El costo de estamina del Heavy Attack Detonate se reduce en 10. Al lanzar la Resonance Skill Eternal Frost, su resistencia a interrupciones (Anti-interruption) aumenta durante 10 segundos.
+ 
+ Nivel 3: Anomalous Vision
+ 
+ Efecto: El daño infligido por Sanhua aumenta un 35% contra objetivos con HP inferior al 70%.
+ 
+ Nivel 4: Blade Mastery
+ 
+ Efecto: La Resonance Liberation Glacial Gaze restaura 10 de Resonance Energy. El daño del siguiente Heavy Attack Detonate realizado en un margen de 5 segundos aumenta un 120%.
+ 
+ Nivel 5: Unraveling Fate
+ 
+ Efecto: El Crit. DMG del Forte Circuit Ice Burst aumenta un 100%. Las Ice Creations (Ice Thorn, Ice Prism y Glacier) explotarán incluso si no son detonadas manualmente.
+ 
+ Nivel 6: Daybreak Radiance
+ 
+ Efecto: Después de detonar un Ice Prism o un Glacier, el ATK de todos los miembros del equipo aumenta un 10% durante 20 segundos. Este efecto puede acumularse hasta 2 veces.
+
+ pasivas: 
+ Habilidades Innatas (Inherent Skills)
+ Condensation: El daño infligido por la Resonance Skill de Sanhua aumenta un 20% durante 8 segundos después de lanzar su Intro Skill.
+ 
+ Avalanche: El daño infligido por el Forte Circuit: Ice Burst de Sanhua aumenta un 20% durante 8 segundos después de lanzar el Basic Attack 5.
+ 
+ Habilidad de Salida (Outro Skill)
+ Silversnow: El siguiente personaje (u otros personajes en un equipo cercano que activen una Outro Skill) obtiene un 38% de Basic Attack DMG Deepen durante 14 segundos o hasta que sean cambiados fuera del campo de batalla.

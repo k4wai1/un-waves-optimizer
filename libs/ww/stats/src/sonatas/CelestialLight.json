@@ -1,0 +1,17 @@
+{
+  "id": "CelestialLight",
+  "name": "Celestial Light",
+  "2pc": {
+    "description": "Spectro DMG +10%",
+    "buffs": { "spectro_dmg_": 0.10 }
+  },
+  "5pc": {
+    "description": "Spectro DMG +30% for 15s after releasing Intro Skill.",
+    "conditional": {
+      "trigger": "onIntro",
+      "maxStacks": 1,
+      "duration_sec": 15,
+      "buffs": { "spectro_dmg_": 0.30 }
+    }
+  }
+}

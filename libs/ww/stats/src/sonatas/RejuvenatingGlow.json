@@ -1,0 +1,18 @@
+{
+  "id": "RejuvenatingGlow",
+  "name": "Rejuvenating Glow",
+  "2pc": {
+    "description": "Healing Bonus +10%",
+    "buffs": { "healing_bonus_": 0.10 }
+  },
+  "5pc": {
+    "description": "Increases the ATK of all party members by 15% for 30s upon healing allies.",
+    "conditional": {
+      "trigger": "onHeal",
+      "target": "party",
+      "maxStacks": 1,
+      "duration_sec": 30,
+      "buffs": { "atk_": 0.15 }
+    }
+  }
+}

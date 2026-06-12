@@ -1,0 +1,25 @@
+{
+  "id": "FrostyResolve",
+  "name": "Frosty Resolve",
+  "2pc": {
+    "description": "Resonance Skill DMG +12%",
+    "buffs": { "skill_dmg_": 0.12 }
+  },
+  "5pc": {
+    "description": "Casting Resonance Skill grants 22.5% Glacio DMG Bonus for 15s and casting Resonance Liberation increases Resonance Skill DMG by 18%, lasting for 5s. This effect stacks up to 2 times.",
+    "conditionals": {
+      "on_skill": {
+        "trigger": "onSkill",
+        "maxStacks": 1,
+        "duration_sec": 15,
+        "buffs": { "glacio_dmg_": 0.225 }
+      },
+      "on_liberation": {
+        "trigger": "onLiberation",
+        "maxStacks": 2,
+        "duration_sec": 5,
+        "buffs": { "skill_dmg_": 0.18 }
+      }
+    }
+  }
+}

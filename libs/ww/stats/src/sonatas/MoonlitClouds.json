@@ -1,0 +1,18 @@
+{
+  "id": "MoonlitClouds",
+  "name": "Moonlit Clouds",
+  "2pc": {
+    "description": "Energy Regen +10%",
+    "buffs": { "energy_regen_": 0.10 }
+  },
+  "5pc": {
+    "description": "After using Outro Skill, increases the ATK of the next Resonator by 22.5% for 15s.",
+    "conditional": {
+      "trigger": "onOutro",
+      "target": "next",
+      "maxStacks": 1,
+      "duration_sec": 15,
+      "buffs": { "atk_": 0.225 }
+    }
+  }
+}

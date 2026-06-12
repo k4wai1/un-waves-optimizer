@@ -1,0 +1,17 @@
+{
+  "id": "VoidThunder",
+  "name": "Void Thunder",
+  "2pc": {
+    "description": "Electro DMG +10%",
+    "buffs": { "electro_dmg_": 0.10 }
+  },
+  "5pc": {
+    "description": "Electro DMG +15% after releasing Heavy Attack or Resonance Skill. This effect stacks up to 2 times, each stack lasts 15s.",
+    "conditional": {
+      "trigger": "onHeavyOrSkill",
+      "maxStacks": 2,
+      "duration_sec": 15,
+      "buffs": { "electro_dmg_": 0.15 }
+    }
+  }
+}

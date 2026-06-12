@@ -1,0 +1,17 @@
+{
+  "id": "LingeringTunes",
+  "name": "Lingering Tunes",
+  "2pc": {
+    "description": "ATK +10%",
+    "buffs": { "atk_": 0.10 }
+  },
+  "5pc": {
+    "description": "While on the field, ATK increases by 5% every 1.5s. This effect stacks up to 4 stacks. Outro Skill DMG +60%.",
+    "passive_buffs": { "outro_dmg_": 0.60 },
+    "conditional": {
+      "trigger": "onFieldTime_1_5s",
+      "maxStacks": 4,
+      "buffs": { "atk_": 0.05 }
+    }
+  }
+}
