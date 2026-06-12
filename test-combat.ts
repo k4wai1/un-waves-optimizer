@@ -1,6 +1,7 @@
 import { nonCritDamage, critDamage } from './libs/ww/formula/src/data/combat';
-import { RoverHavocStats, getStatAtLevel as getCharStat } from './libs/ww/stats/src/resonators/RoverHavoc';
-import { getWeaponStat } from './libs/ww/stats/src/weapons/EmeraldOfGenesis';
+import { SanhuaStats, getStatAtLevel as getCharStat } from './libs/ww/stats/src/resonators/Sanhua';
+import { getWeaponBaseStat, getWeaponSecondStat } from './libs/ww/stats/src/weapons/EmeraldOfGenesis';
+import { getFreezingFrostBuffs } from './libs/ww/stats/src/sonatas/FreezingFrost';
 
 function evaluatePandoNode(node: any, context: Record<string, number>): number {
   if (!node) return 0;
@@ -16,7 +17,6 @@ function evaluatePandoNode(node: any, context: Record<string, number>): number {
       const y = evaluatePandoNode(node.x[1], context);
       return (x + y) === 0 ? 0 : x / (x + y);
     case 'thres': 
-      // Evaluador dinámico e indestructible para el AST de Pando
       const val = evaluatePandoNode(node.x[0], context);
       const thres = node.br !== undefined ? evaluatePandoNode(node.br[0], context) : evaluatePandoNode(node.x[1], context);
       const pass = node.br !== undefined ? evaluatePandoNode(node.x[1], context) : evaluatePandoNode(node.x[2], context);
@@ -26,37 +26,43 @@ function evaluatePandoNode(node: any, context: Record<string, number>): number {
   }
 }
 
+// 1. STATS BASE (Sanhua Nv 90 + Emerald Nv 90)
 const charBaseAtk = getCharStat('atk', 90); 
-const weaponBaseAtk = getWeaponStat('atk', 90); 
+const weaponBaseAtk = getWeaponBaseStat('atk', 90); 
 const totalBaseAtk = charBaseAtk + weaponBaseAtk;
 
-const forteAtkBonus = 0.12; 
-const forteHavocBonus = 0.12; 
-const finalAtk = totalBaseAtk * (1 + forteAtkBonus);
+// Simulamos que los Echoes le dan un 40% de ATK adicional en sub-stats
+const echoAtkBonus = 0.40; 
+const finalAtk = totalBaseAtk * (1 + echoAtkBonus);
 
-const testCritRate = 0.293; 
-const testCritDmg = 1.6937; 
+// 2. LECTURA DE SONATA (Freezing Frost)
+// Condición: 5 piezas activas, 3 cargas al máximo (Tras usar básicos)
+const glacioDmgBonus = getFreezingFrostBuffs(true, 3); 
 
+// 3. STATS DE CRÍTICO
+const weaponCrit = getWeaponSecondStat(90).value; // 24.3%
+const finalCritRate = 0.05 + weaponCrit + 0.20; // 5% Base + Arma + 20% de Echoes
+const finalCritDmg = 1.50 + 0.60; // 150% Base + 60% de Echoes
+
+// Construcción del Contexto para Pando
 const baseContext = {
   atk: finalAtk,
   flatDmg: 0,
-  allDmgBonus_: forteHavocBonus, 
+  allDmgBonus_: glacioDmgBonus, // Inyectamos el Glacio DMG total de la Sonata
   dmgAmplify_: 0,
   lvl: 90,
   def: 1512, 
   defIgnore_: 0,
   resTotal: 0.10, 
-  critDmg_: testCritDmg,
-  critRate_: testCritRate
+  critDmg_: finalCritDmg,
+  critRate_: finalCritRate
 };
 
-const a1_mv = RoverHavocStats.formula.basic.a1[9]; 
-const skill_hit1_mv = RoverHavocStats.formula.skill.hit1[9];
+// 4. MULTIPLICADOR DE LA HABILIDAD (Nivel 10)
+const skill_mv = SanhuaStats.formula.skill[9]; 
 
-const s1_skillBonus = 0.30; 
-
-function simularGolpe(nombre: string, mv: number, extraBonus: number = 0) {
-  const ctx = { ...baseContext, mv: mv, allDmgBonus_: baseContext.allDmgBonus_ + extraBonus };
+function simularGolpe(nombre: string, mv: number) {
+  const ctx = { ...baseContext, mv: mv };
   const nonCrit = evaluatePandoNode(nonCritDamage, ctx);
   const crit = evaluatePandoNode(critDamage, ctx);
   
@@ -65,9 +71,11 @@ function simularGolpe(nombre: string, mv: number, extraBonus: number = 0) {
   console.log(`  -> CRÍTICO: ${Math.round(crit)} DMG\n`);
 }
 
-console.log(`\n===========================================`);
-console.log(`🗡️  ROVER HAVOC (S6) - SIMULADOR FINAL`);
-console.log(`===========================================`);
-simularGolpe('Basic Attack 1', a1_mv);
-simularGolpe('Resonance Skill (Golpe 1) + S1', skill_hit1_mv, s1_skillBonus);
-console.log(`===========================================\n`);
+console.log(`\n======================================================`);
+console.log(`❄️  SANHUA - TEST DE INTEGRACIÓN: ARMA + SONATA`);
+console.log(`======================================================`);
+console.log(`ATK Total: ${finalAtk.toFixed(2)} | Glacio DMG: ${(glacioDmgBonus * 100).toFixed(1)}%`);
+console.log(`Crit Rate: ${(finalCritRate * 100).toFixed(1)}% | Crit DMG: ${(finalCritDmg * 100).toFixed(1)}%`);
+console.log(`------------------------------------------------------`);
+simularGolpe('Resonance Skill (Nv. 10)', skill_mv);
+console.log(`======================================================\n`);
