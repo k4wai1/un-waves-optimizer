@@ -1,8 +1,7 @@
-import { finalDamage } from './libs/ww/formula/src/data/combat';
-import { getStatAtLevel as getCharStat } from './libs/ww/stats/src/resonators/RoverHavoc';
-import { getWeaponStat, getPassiveValue } from './libs/ww/stats/src/weapons/EmeraldOfGenesis';
+import { nonCritDamage, critDamage } from './libs/ww/formula/src/data/combat';
+import { RoverHavocStats, getStatAtLevel as getCharStat } from './libs/ww/stats/src/resonators/RoverHavoc';
+import { getWeaponStat } from './libs/ww/stats/src/weapons/EmeraldOfGenesis';
 
-// Evaluador del motor Pando (Simulador de runtime)
 function evaluatePandoNode(node: any, context: Record<string, number>): number {
   if (!node) return 0;
   if (typeof node === 'number') return node;
@@ -17,45 +16,58 @@ function evaluatePandoNode(node: any, context: Record<string, number>): number {
       const y = evaluatePandoNode(node.x[1], context);
       return (x + y) === 0 ? 0 : x / (x + y);
     case 'thres': 
-      const val1 = evaluatePandoNode(node.x[0], context);
-      const val2 = evaluatePandoNode(node.br[0], context);
-      return val1 >= val2 ? evaluatePandoNode(node.x[1], context) : evaluatePandoNode(node.x[2], context);
-    default:
-      console.warn(`Operación no soportada: ${node.op}`);
-      return 0;
+      // Evaluador dinámico e indestructible para el AST de Pando
+      const val = evaluatePandoNode(node.x[0], context);
+      const thres = node.br !== undefined ? evaluatePandoNode(node.br[0], context) : evaluatePandoNode(node.x[1], context);
+      const pass = node.br !== undefined ? evaluatePandoNode(node.x[1], context) : evaluatePandoNode(node.x[2], context);
+      const fail = node.br !== undefined ? evaluatePandoNode(node.x[2], context) : evaluatePandoNode(node.x[3], context);
+      return val >= thres ? pass : fail;
+    default: return 0;
   }
 }
 
-// 1. Obtención de datos reales desde los JSONs
-const charBaseAtk = getCharStat('atk', 90);
-const weaponBaseAtk = getWeaponStat('atk', 90);
+const charBaseAtk = getCharStat('atk', 90); 
+const weaponBaseAtk = getWeaponStat('atk', 90); 
 const totalBaseAtk = charBaseAtk + weaponBaseAtk;
 
-const passiveAtkBonus = getPassiveValue('atk_', 1) * 2; // R1 con 2 stacks (12% total)
+const forteAtkBonus = 0.12; 
+const forteHavocBonus = 0.12; 
+const finalAtk = totalBaseAtk * (1 + forteAtkBonus);
 
-console.log('⚔️  Optimizador WuWa - Simulador de Daño Total');
-console.log(`-------------------------------------------`);
-console.log(`ATK Base (PJ + Arma): ${totalBaseAtk.toFixed(2)}`);
+const testCritRate = 0.293; 
+const testCritDmg = 1.6937; 
 
-// 2. Definición del Contexto (La "Build" del personaje)
-// Aquí es donde el motor toma el ATK Base y le aplica todos los añadidos.
-const context = {
-  // Fórmula de ATK Real: Base * (1 + %ATK) + Planos
-  atk: totalBaseAtk * (1 + passiveAtkBonus), 
-  mv: 0.285,               // Multiplicador básico
-  flatDmg: 0,              
-  allDmgBonus_: 0.60,      // Bono de daño elemental (60%)
-  dmgAmplify_: 0,          
-  lvl: 90,                 
-  def: 1512,               
-  defIgnore_: 0,           
-  resTotal: 0.10           
+const baseContext = {
+  atk: finalAtk,
+  flatDmg: 0,
+  allDmgBonus_: forteHavocBonus, 
+  dmgAmplify_: 0,
+  lvl: 90,
+  def: 1512, 
+  defIgnore_: 0,
+  resTotal: 0.10, 
+  critDmg_: testCritDmg,
+  critRate_: testCritRate
 };
 
-// 3. Evaluación
-const dmg = evaluatePandoNode(finalDamage, context);
+const a1_mv = RoverHavocStats.formula.basic.a1[9]; 
+const skill_hit1_mv = RoverHavocStats.formula.skill.hit1[9];
 
-console.log(`ATK Final Aplicado: ${context.atk.toFixed(2)}`);
-console.log(`Daño de A1 calculado: ${dmg.toFixed(2)}`);
-console.log(`-------------------------------------------`);
-console.log(`✅ Lógica de ATK Base y Multiplicadores validada.`);
+const s1_skillBonus = 0.30; 
+
+function simularGolpe(nombre: string, mv: number, extraBonus: number = 0) {
+  const ctx = { ...baseContext, mv: mv, allDmgBonus_: baseContext.allDmgBonus_ + extraBonus };
+  const nonCrit = evaluatePandoNode(nonCritDamage, ctx);
+  const crit = evaluatePandoNode(critDamage, ctx);
+  
+  console.log(`[${nombre}] (MV: ${(mv * 100).toFixed(2)}%)`);
+  console.log(`  -> Normal:  ${Math.round(nonCrit)} DMG`);
+  console.log(`  -> CRÍTICO: ${Math.round(crit)} DMG\n`);
+}
+
+console.log(`\n===========================================`);
+console.log(`🗡️  ROVER HAVOC (S6) - SIMULADOR FINAL`);
+console.log(`===========================================`);
+simularGolpe('Basic Attack 1', a1_mv);
+simularGolpe('Resonance Skill (Golpe 1) + S1', skill_hit1_mv, s1_skillBonus);
+console.log(`===========================================\n`);

@@ -1,0 +1,36 @@
+{
+  "name": "CharacterName",
+  "baseStats": {
+    "hp": { "1": 1000, "90": 10000 },
+    "atk": { "1": 100, "90": 400 },
+    "def": { "1": 80, "90": 500 }
+  },
+  "formula": {
+    "basic": [0.5, 0.6, 0.7],
+    "skill": [1.0, 1.2, 1.5]
+  },
+  "passives": {
+    "inherent_1": {
+      "description": "Aumenta el Daño Elemental propio un 20%.",
+      "target": "local", 
+      "buffs": { "allDmgBonus_": 0.20 }
+    },
+    "outro": {
+      "description": "Otorga un 38% de Amplificación de Básico al siguiente personaje (ej. Sanhua).",
+      "target": "global",
+      "buffs": { "dmgAmplify_": 0.38 }
+    }
+  },
+  "sequences": {
+    "s1": {
+      "description": "Daño de Habilidad +30%.",
+      "target": "local",
+      "buffs": { "skill_dmg_": 0.30 }
+    },
+    "s4": {
+      "description": "Reduce la Resistencia del enemigo (Global/Debuff).",
+      "target": "enemy",
+      "buffs": { "resReduction_": 0.20 }
+    }
+  }
+}

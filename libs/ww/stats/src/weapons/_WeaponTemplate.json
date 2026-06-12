@@ -1,0 +1,22 @@
+{
+  "id": "WeaponName",
+  "name": "Weapon Display Name",
+  "rarity": 4,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": { "1": 33, "20": 85, "40": 165, "50": 218, "60": 271, "70": 324, "80": 368, "90": 412 }
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": { "1": 0.04, "20": 0.08, "40": 0.12, "50": 0.14, "60": 0.16, "70": 0.18, "80": 0.20, "90": 0.22 }
+  },
+  "passives": {
+    "atk_": [0.04, 0.05, 0.06, 0.07, 0.08],
+    "energyRegen_": [0.10, 0.12, 0.14, 0.16, 0.18]
+  },
+  "mechanics": {
+    "maxStacks": 1,
+    "trigger": "always",
+    "duration_sec": 0
+  }
+}
