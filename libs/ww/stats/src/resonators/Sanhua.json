@@ -8,6 +8,16 @@
     "tuneBreakBoost": 0.0,
     "offTuneBuildupRate": 1.0
   },
+  "statNodes": [
+      { "id": "node_atk_l1", "name": "ATK +1.8%", "buffs": { "atk_": 0.018 } },
+      { "id": "node_atk_l2", "name": "ATK +1.8%", "buffs": { "atk_": 0.018 } },
+      { "id": "node_atk_h1", "name": "ATK +4.2%", "buffs": { "atk_": 0.042 } },
+      { "id": "node_atk_h2", "name": "ATK +4.2%", "buffs": { "atk_": 0.042 } },
+      { "id": "node_glacio_l1", "name": "Glacio DMG +1.8%", "buffs": { "glacio_dmg_": 0.018 } },
+      { "id": "node_glacio_l2", "name": "Glacio DMG +1.8%", "buffs": { "glacio_dmg_": 0.018 } },
+      { "id": "node_glacio_h1", "name": "Glacio DMG +4.2%", "buffs": { "glacio_dmg_": 0.042 } },
+      { "id": "node_glacio_h2", "name": "Glacio DMG +4.2%", "buffs": { "glacio_dmg_": 0.042 } }
+    ],
   "formula": {
     "basic": {
       "a1": [0.2450, 0.2651, 0.2852, 0.3134, 0.3334, 0.3565, 0.3887, 0.4208, 0.4530, 0.4871],
