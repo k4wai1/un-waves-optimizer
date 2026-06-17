@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-/* Clases utilitarias globales para nuestra arquitectura */
 @layer utilities {
   .unique-hover:hover {
     filter: brightness(1.2);
