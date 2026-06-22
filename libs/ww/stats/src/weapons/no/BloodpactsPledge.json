@@ -1,0 +1,24 @@
+{
+  "id": "BloodpactsPledge",
+  "name": "Bloodpact's Pledge",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Providing Healing increases Resonance Skill DMG by 10% for 6s. When Rover Aero casts Resonance Skill Unbound Flow, Aero DMG dealt by nearby Resonators is amplified by 10% for 30s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "energyRegen_",
+    "values": {
+      "90": 0.389
+    }
+  }
+}

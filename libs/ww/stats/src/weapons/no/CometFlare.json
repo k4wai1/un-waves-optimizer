@@ -1,0 +1,24 @@
+{
+  "id": "CometFlare",
+  "name": "Comet Flare",
+  "rarity": 4,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 412
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by 3%, stacking up to 3 time(s). This effect lasts for 8s and can be triggered 1 time(s) every 0.6s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "hp_",
+    "values": {
+      "90": 0.303
+    }
+  }
+}

@@ -1,6 +1,0 @@
-export * from './ElectricIcon'
-export * from './EtherIcon'
-export * from './FireIcon'
-export * from './FrostIcon'
-export * from './IceIcon'
-export * from './PhysicalIcon'

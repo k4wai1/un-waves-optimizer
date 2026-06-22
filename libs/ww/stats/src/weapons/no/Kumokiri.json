@@ -1,0 +1,24 @@
+{
+  "id": "Kumokiri",
+  "name": "Kumokiri",
+  "rarity": 5,
+  "weaponType": "broadblade",
+  "baseStats": {
+    "atk": {
+      "90": 500
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "ATK is increased by 12%. When the wielder casts Intro Skill or inflicts Negative Statuses, they gain 8% Resonance Liberation DMG Bonus, stacking up to 3 times for 15s. At max stacks, when Resonators in the team inflict Negative Statuses, they gain 24% All-Attribute DMG Bonus for 15s. Effects of the same name cannot be stacked.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.36
+    }
+  }
+}

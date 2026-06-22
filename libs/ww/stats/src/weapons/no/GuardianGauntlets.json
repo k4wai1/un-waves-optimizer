@@ -1,0 +1,24 @@
+{
+  "id": "GuardianGauntlets",
+  "name": "Guardian Gauntlets",
+  "rarity": 3,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 300
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases Resonance Liberation DMG Bonus by 12%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "def_",
+    "values": {
+      "90": 0.384
+    }
+  }
+}

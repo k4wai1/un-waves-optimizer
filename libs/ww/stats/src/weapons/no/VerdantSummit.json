@@ -1,0 +1,24 @@
+{
+  "id": "VerdantSummit",
+  "name": "Verdant Summit",
+  "rarity": 5,
+  "weaponType": "broadblade",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases the DMG Bonus of all Resonance Attributes by 12%. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by 24%, stacking up to 2 time(s). This effect lasts for 14s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critDmg_",
+    "values": {
+      "90": 0.486
+    }
+  }
+}

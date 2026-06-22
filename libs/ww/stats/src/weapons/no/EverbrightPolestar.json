@@ -1,0 +1,24 @@
+{
+  "id": "EverbrightPolestar",
+  "name": "Everbright Polestar",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increase All-Attribute DMG Bonus by 12%. When inflicting Tune Repture - Shifting or Fusion Burst, the wielder's Resonance Liberation DMG ignores 32% DEF and 10% Fusion RES on targets for 8s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

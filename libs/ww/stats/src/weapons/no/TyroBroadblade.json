@@ -1,0 +1,24 @@
+{
+  "id": "TyroBroadblade",
+  "name": "Tyro Broadblade",
+  "rarity": 2,
+  "weaponType": "broadblade",
+  "baseStats": {
+    "atk": {
+      "90": 275
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 5%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "atk_",
+    "values": {
+      "90": 0.14800000000000002
+    }
+  }
+}

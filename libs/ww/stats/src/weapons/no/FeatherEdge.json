@@ -1,0 +1,24 @@
+{
+  "id": "FeatherEdge",
+  "name": "Feather Edge",
+  "rarity": 4,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 412
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Casting Resonance Liberation increases ATK by 7.2% and grants 10.8% Resonance Liberation DMG Bonus for 15s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.203
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "DaybreakersSpine",
+  "name": "Daybreaker's Spine",
+  "rarity": 5,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 588
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. After dealing Basic Attack DMG, the wielder gains 20% Spectro DMG Bonus for 4s. Each time after the wielder inflicts Tune Strain - Shifting on the target, they gain 20% Basic Attack DMG Amplification and their Basic Attack DMG ignores 10% of the target's DEF for 6s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

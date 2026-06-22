@@ -1,0 +1,24 @@
+{
+  "id": "PulsationBracer",
+  "name": "Pulsation Bracer",
+  "rarity": 5,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. Dealing damage to targets under Tune Strain - Interfered grants 6% Basic Attack DMG Bonus for 3s, stacking up to 4 times. This effect can be triggered 1 time(s) every 0.5s. Retriggering the effect resets its duration.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

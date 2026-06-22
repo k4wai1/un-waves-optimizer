@@ -1,0 +1,24 @@
+{
+  "id": "DefiersThorn",
+  "name": "Defier's Thorn",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 413
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Max HP is increased by 12%. 15s after casting Intro Skill or Basic Attacks, ignores 8% of the target's DEF. If the target has Aero Erosion, DMG taken is amplified by 20%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "hp_",
+    "values": {
+      "90": 0.722
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "GuardianBroadblade",
+  "name": "Guardian Broadblade",
+  "rarity": 3,
+  "weaponType": "broadblade",
+  "baseStats": {
+    "atk": {
+      "90": 325
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "The damage of Basic Attack and Heavy Attack is increased by 12%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "atk_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

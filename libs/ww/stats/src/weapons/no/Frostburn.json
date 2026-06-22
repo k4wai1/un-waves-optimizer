@@ -1,0 +1,24 @@
+{
+  "id": "Frostburn",
+  "name": "Frostburn",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 588
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "ATK is increased by 12%. When the wielder applies Glacio Chafe, Glacio DMG is Amplified by 28%, and Resonance Liberation DMG ignores 10% of the target's DEF for 20s. If the wielder is the active Resonator in the team, Glacio Chafe DMG dealt to all targets within a certain range is Amplified by 20% for 6s. This effect can be triggered up to 1 time every 0.1s. Only the strongest effect of the same name applies.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

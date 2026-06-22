@@ -1,0 +1,24 @@
+{
+  "id": "GauntletsofNight",
+  "name": "Gauntlets of Night",
+  "rarity": 3,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 325
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When Intro Skill is released, increases ATK by 8% for 10s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "atk_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

@@ -1,0 +1,1798 @@
+[
+  {
+    "name": "Freeze Frame",
+    "imageFilename": "Freeze Frame.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "588",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "588",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. After inflicting Glacio Chafe on the target, the wielder gains <span class=\"highlight-5\">30%</span> Glacio DMG Bonus for <span class=\"highlight-5\">12s</span>, and all Resonators in the team gain <span class=\"highlight-5\">24%</span> ATK increase for <span class=\"highlight-5\">30s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Spectral Trigger",
+    "imageFilename": "Spectral Trigger.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "588",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "588",
+      "Crit DMG": "48.6%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Casting Resonance Skill grants <span class=\"highlight-5\">20%</span> Spectro DMG Bonus to the wielder for <span class=\"highlight-5\">14s</span>, stacking up to <span class=\"highlight-5\">2</span> times. Inflicting Hack - Shifting grants <span class=\"highlight-5\">30%</span> Heavy Attack DMG Amplification to the wielder for <span class=\"highlight-5\">14s</span>, during which Heavy Attack DMG ignores <span class=\"highlight-5\">10%</span> of the target's DEF."
+  },
+  {
+    "name": "Skull Thrasher",
+    "imageFilename": "Skull Thrasher.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "72%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit DMG": "72%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Casting Intro Skill grants <span class=\"highlight-5\">24%</span> Basic Attack DMG Bonus to the wielder for <span class=\"highlight-5\">14s</span>. Inflicting Hack - Shifting grants <span class=\"highlight-5\">12%</span> Basic Attack DMG Bonus to the wielder for <span class=\"highlight-5\">14s</span>, and increases the ATK of Resonators in the team by <span class=\"highlight-5\">24%</span> for <span class=\"highlight-5\">30s</span>. Effects of the same name do not stack."
+  },
+  {
+    "name": "Forged Dwarf Star",
+    "imageFilename": "Forged Dwarf Star.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "36%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit Rate": "36%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. When the wielder inflicts Fusion Burst Effect or Tune Strain - Shifting on the target, it increases their Resonance Liberation DMG Bonus by <span class=\"highlight-5\">36%</span> for <span class=\"highlight-5\">5s</span>. Under this effect, when Resonators in the team inflict Fusion Burst Effect or Tune Strain - Shifting, their ATK is increased by <span class=\"highlight-5\">24%</span> for <span class=\"highlight-5\">15s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Frostburn",
+    "imageFilename": "Frostburn.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "588",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "588",
+      "Crit Rate": "24.3%"
+    },
+    "description": "ATK is increased by <span class=\"highlight-5\">12%</span>. When the wielder applies Glacio Chafe, Glacio DMG is Amplified by <span class=\"highlight-5\">28%</span>, and Resonance Liberation DMG ignores <span class=\"highlight-5\">10%</span> of the target's DEF for <span class=\"highlight-5\">20s</span>. If the wielder is the active Resonator in the team, Glacio Chafe DMG dealt to all targets within a certain range is Amplified by <span class=\"highlight-5\">20%</span> for <span class=\"highlight-5\">6s</span>. This effect can be triggered up to 1 time every 0.1s. Only the strongest effect of the same name applies."
+  },
+  {
+    "name": "Solsworn Ciphers",
+    "imageFilename": "Solsworn Ciphers.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Casting Intro Skill or Echo Skill grants <span class=\"highlight-5\">32%</span> Echo Skill DMG Amplification for <span class=\"highlight-5\">15s</span>. When dealing Echo Skill DMG, Aero DMG ignores <span class=\"highlight-5\">10%</span> of the target's DEF for <span class=\"highlight-5\">6s</span>."
+  },
+  {
+    "name": "Daybreaker's Spine",
+    "imageFilename": "Daybreaker's Spine.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "588",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "588",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. After dealing Basic Attack DMG, the wielder gains <span class=\"highlight-5\">20%</span> Spectro DMG Bonus for <span class=\"highlight-5\">4s</span>. Each time after the wielder inflicts Tune Strain - Shifting on the target, they gain <span class=\"highlight-5\">20%</span> Basic Attack DMG Amplification and their Basic Attack DMG ignores <span class=\"highlight-5\">10%</span> of the target's DEF for <span class=\"highlight-5\">6s</span>."
+  },
+  {
+    "name": "Everbright Polestar",
+    "imageFilename": "Everbright Polestar.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increase All-Attribute DMG Bonus by <span class=\"highlight-5\">12%</span>. When inflicting Tune Repture - Shifting or Fusion Burst, the wielder's Resonance Liberation DMG ignores <span class=\"highlight-5\">32%</span> DEF and <span class=\"highlight-5\">10%</span> Fusion RES on targets for <span class=\"highlight-5\">8s</span>."
+  },
+  {
+    "name": "Starfield Calibrator",
+    "imageFilename": "Starfield Calibrator.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "413",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "77%"
+    },
+    "allStats": {
+      "ATK": "413",
+      "Energy Regen": "77%"
+    },
+    "description": "Increases DEF by <span class=\"highlight-5\">16%</span>. Casting Resonance Liberation restores <span class=\"highlight-5\">8</span> points of Concerto Energy. This effect can be triggered once every <span class=\"highlight-5\">20s</span>. When the wielder heals Resonators, increases Crit. DMG of all nearby Resonators in the team by <span class=\"highlight-5\">20%</span> for <span class=\"highlight-5\">4s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Spectrum Blaster",
+    "imageFilename": "Spectrum Blaster.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>.\nCasting Intro Skill or hitting the target with Basic Attack\nincreases the wielder's Basic Attack DMG by\n<span class=\"highlight-5\">36%</span> for <span class=\"highlight-5\">4s</span>. Each time the wielder\ninflicts Tune Rupture - Shifting or Tune Strain - Shifting\nduring Basic Attacks, all DMG dealt by Resonators in the\nteam is increased by <span class=\"highlight-5\">8%</span> for <span class=\"highlight-5\">30s</span>,\nup to <span class=\"highlight-5\">3</span> stacks. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Radiance Cleaver",
+    "imageFilename": "Radiance Cleaver.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Dealing damage to targets under Tune Strain - Interfered grants <span class=\"highlight-5\">24%</span> Resonance Liberation DMG Bonus for <span class=\"highlight-5\">3s</span>. Retriggering the effect resets its duration."
+  },
+  {
+    "name": "Laser Shearer",
+    "imageFilename": "Laser Shearer.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "587",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "38.9%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Energy Regen": "38.9%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Dealing damage to targets under Tune Strain - Interfered grants <span class=\"highlight-5\">24%</span> Resonance Skill DMG Bonus for <span class=\"highlight-5\">3s</span>. Retriggering the effect resets its duration."
+  },
+  {
+    "name": "Phasic Homogenizer",
+    "imageFilename": "Phasic Homogenizer.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. After a Resonator in the team casts a Tune Break skill, it grants <span class=\"highlight-5\">20%</span> All-Attribute DMG Bonus to the wielder for <span class=\"highlight-5\">14s</span>."
+  },
+  {
+    "name": "Pulsation Bracer",
+    "imageFilename": "Pulsation Bracer.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Dealing damage to targets under Tune Strain - Interfered grants <span class=\"highlight-5\">6%</span> Basic Attack DMG Bonus for <span class=\"highlight-5\">3s</span>, stacking up to <span class=\"highlight-5\">4</span> times. This effect can be triggered <span class=\"highlight-5\">1</span> time(s) every <span class=\"highlight-5\">0.5s</span>. Retriggering the effect resets its duration."
+  },
+  {
+    "name": "Boson Astrolabe",
+    "imageFilename": "Boson Astrolabe.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "525",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "38.9%"
+    },
+    "allStats": {
+      "ATK": "525",
+      "Energy Regen": "38.9%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. After a Resonator in the team casts a Tune Break skill, it grants a <span class=\"highlight-5\">12%</span> ATK increase and <span class=\"highlight-5\">12%</span> Basic Attack DMG Bonus to the wielder for <span class=\"highlight-5\">14s</span>."
+  },
+  {
+    "name": "Kumokiri",
+    "imageFilename": "Kumokiri.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "36%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit Rate": "36%"
+    },
+    "description": "ATK is increased by <span class=\"highlight-5\">12%</span>. When the wielder casts Intro Skill or inflicts Negative Statuses, they gain <span class=\"highlight-5\">8%</span> Resonance Liberation DMG Bonus, stacking up to <span class=\"highlight-5\">3</span> times for <span class=\"highlight-5\">15s</span>. At max stacks, when Resonators in the team inflict Negative Statuses, they gain <span class=\"highlight-5\">24%</span> All-Attribute DMG Bonus for <span class=\"highlight-5\">15s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Emerald Sentence",
+    "imageFilename": "Emerald Sentence.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "ATK is increased by <span class=\"highlight-5\">12%</span>. Casting Echo Skill within <span class=\"highlight-5\">10s</span> after casting Echo Skill or Basic Attack grants <span class=\"highlight-5\">1</span> stack of \"Bamboo Cleaver\", which grants <span class=\"highlight-5\">30%</span> Heavy Attack DMG Bonus to the wielder. This effect can be triggered by Echoes of the same name once only, stacking up to <span class=\"highlight-5\">2</span> times, lasting for <span class=\"highlight-5\">12s</span>. Casting Echo Skill at max stacks does not reset the duration. This effect can be triggered once every <span class=\"highlight-5\">10s</span> and ends early if the wielder is switched off the field.<br> Casting Intro Skill grants <span class=\"highlight-5\">20%</span> Echo Skill DMG Bonus to all Resonators in the team for <span class=\"highlight-5\">30s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Lux & Umber",
+    "imageFilename": "Lux & Umber.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "ATK is increased by <span class=\"highlight-5\">12%</span>. Upon dealing Echo Skill DMG, gain <span class=\"highlight-5\">24%</span> Heavy Attack DMG Amplification for <span class=\"highlight-5\">6s</span>. Upon dealing Heavy Attack DMG, gain <span class=\"highlight-5\">24%</span> Echo Skill DMG Amplification for <span class=\"highlight-5\">6s</span>. DMG Amplification on each attack is capped at <span class=\"highlight-5\">24%</span>. While both effects are active, dealing damage ignores <span class=\"highlight-5\">8%</span> of the target's DEF."
+  },
+  {
+    "name": "Moongazer’s Sigil",
+    "imageFilename": "Moongazer’s Sigil.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "36%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit Rate": "36%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Casting Intro Skill or Resonance Liberation increases Resonance Liberation DMG by <span class=\"highlight-5\">20%</span> for <span class=\"highlight-5\">15s</span>. Obtaining Shield allows Resonance Liberation DMG to ignore <span class=\"highlight-5\">7.2%</span> of the target’s DEF for <span class=\"highlight-5\">7s</span>, stacking up to <span class=\"highlight-5\">5</span> times. This effect is triggered once every <span class=\"highlight-5\">0.5s</span>. Upon casting Intro Skill, this effect reaches max stacks immediately, lasting for <span class=\"highlight-5\">3s</span>."
+  },
+  {
+    "name": "Thunderflare Dominion",
+    "imageFilename": "Thunderflare Dominion.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "675",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "12.1%"
+    },
+    "allStats": {
+      "ATK": "675",
+      "Crit Rate": "12.1%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Casting Intro Skill or Resonance Skill increases Heavy Attack DMG by <span class=\"highlight-5\">20%</span> for <span class=\"highlight-5\">15s</span>. Obtaining Shield allows Heavy Attack DMG to ignore <span class=\"highlight-5\">7.2%</span> of the target's DEF for <span class=\"highlight-5\">7s</span>, stacking up to <span class=\"highlight-5\">5</span> times. This effect is triggered once every <span class=\"highlight-5\">0.5s</span>"
+  },
+  {
+    "name": "Lethean Elegy",
+    "imageFilename": "Lethean Elegy.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "ATK is increased by <span class=\"highlight-5\">12%</span>. Within <span class=\"highlight-5\">12s</span> after dealing Echo Skill DMG, gain <span class=\"highlight-5\">32%</span> Resonance Skill DMG Bonus and <span class=\"highlight-5\">32%</span> Echo Skill DMG Amplification, and ignore <span class=\"highlight-5\">8%</span> of the target's DEF when dealing damage."
+  },
+  {
+    "name": "Wildfire Mark",
+    "imageFilename": "Wildfire Mark.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Performing Intro Skill or Resonance Liberation increases Resonance Liberation DMG by <span class=\"highlight-5\">24%</span> for <span class=\"highlight-5\">6s</span>. Dealing Heavy Attack DMG extends this effect by <span class=\"highlight-5\">4s</span>, up to <span class=\"highlight-5\">1</span> time. Each successful extension gives <span class=\"highlight-5\">24%</span> Fusion DMG Bonus to all Resonators in the team for <span class=\"highlight-5\">30s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Defier's Thorn",
+    "imageFilename": "Defier's Thorn.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "413",
+    "mainStat": {
+      "name": "HP",
+      "value": "72.2%"
+    },
+    "allStats": {
+      "ATK": "413",
+      "HP": "72.2%"
+    },
+    "description": "Max HP is increased by <span class=\"highlight-5\">12%</span>. <span class=\"highlight-5\">15s</span> after casting Intro Skill or Basic Attacks, ignores <span class=\"highlight-5\">8%</span> of the target's DEF. If the target has Aero Erosion, DMG taken is amplified by <span class=\"highlight-5\">20%</span>."
+  },
+  {
+    "name": "Woodland Aria",
+    "imageFilename": "Woodland Aria.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "36%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit Rate": "36%"
+    },
+    "description": "ATK is increased by <span class=\"highlight-5\">12%</span>. Inflicting Aero Erosion on the target gives <span class=\"highlight-5\">24%</span> Aero DMG Bonus for <span class=\"highlight-5\">10s</span>. Hitting targets with Aero Erosion reduces their Aero RES by <span class=\"highlight-5\">10%</span> for <span class=\"highlight-5\">20s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Blazing Justice",
+    "imageFilename": "Blazing Justice.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Casting Basic Attack grants the following effects: Dealing damage ignores <span class=\"highlight-5\">8%</span> of the target's DEF and amplifies Spectro Frazzle DMG dealt by <span class=\"highlight-5\">50%</span> for <span class=\"highlight-5\">6s</span>. Retriggering the effect resets its duration."
+  },
+  {
+    "name": "Bloodpact's Pledge",
+    "imageFilename": "Bloodpact's Pledge.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "587",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "38.9%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Energy Regen": "38.9%"
+    },
+    "description": "Providing Healing increases Resonance Skill DMG by <span class=\"highlight-5\">10%</span> for <span class=\"highlight-5\">6s</span>. When Rover Aero casts Resonance Skill Unbound Flow, Aero DMG dealt by nearby Resonators is amplified by <span class=\"highlight-5\">10%</span> for <span class=\"highlight-5\">30s</span>."
+  },
+  {
+    "name": "Whispers of Sirens",
+    "imageFilename": "Whispers of Sirens.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "72%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit DMG": "72%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Casting Echo Skill within <span class=\"highlight-5\">10s</span> after casting Intro Skill or Basic Attacks grants <span class=\"highlight-5\">1</span> stack of Gentle Dream. Echoes with the same name can only trigger this effect once, stacking up to <span class=\"highlight-5\">2</span> times, lasting for <span class=\"highlight-5\">10s</span>. When reaching <span class=\"highlight-5\">2</span> stacks, casting Echo Skill no longer resets the duration of this effect. This effect activates up to once per <span class=\"highlight-5\">10s</span>. Switching to another Resonator ends this effect early. With <span class=\"highlight-5\">1</span> stack: Grants <span class=\"highlight-5\">40%</span> Basic Attack DMG Bonus. With <span class=\"highlight-5\">2</span> stacks: Ignores <span class=\"highlight-5\">12%</span> of the target's Havoc RES."
+  },
+  {
+    "name": "Unflickering Valor",
+    "imageFilename": "Unflickering Valor.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "415",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "77%"
+    },
+    "allStats": {
+      "ATK": "415",
+      "Energy Regen": "77%"
+    },
+    "description": "Increase Crit Rate by <span class=\"highlight-5\">8%</span>. Casting Resonance Liberation grants <span class=\"highlight-5\">24%</span> Basic Attack DMG Bonus for <span class=\"highlight-5\">10s</span>. Dealing Basic Attack DMG grants <span class=\"highlight-5\">24%</span> Basic Attack DMG Bonus for <span class=\"highlight-5\">4s</span>."
+  },
+  {
+    "name": "Luminous Hymn",
+    "imageFilename": "Luminous Hymn.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "36%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit Rate": "36%"
+    },
+    "description": "Increase ATK by <span class=\"highlight-5\">12%</span>. Dealing DMG to targets with Spectro Frazzle grants the wielder <span class=\"highlight-5\">14%</span> Basic Attack DMG Bonus and <span class=\"highlight-5\">14%</span> Heavy Attack DMG Bonus, stacking up to <span class=\"highlight-5\">3</span> times for <span class=\"highlight-5\">6s</span>. Casting Outro Skill amplifies the Spectro Frazzle DMG on targets around the active Resonator by <span class=\"highlight-5\">30%</span> for <span class=\"highlight-5\">30s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Tragicomedy",
+    "imageFilename": "Tragicomedy.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Every time Basic Attack or Intro Skill is cast, Heavy Attack DMG Bonus increases by <span class=\"highlight-5\">48%</span> for <span class=\"highlight-5\">3s</span>."
+  },
+  {
+    "name": "The Last Dance",
+    "imageFilename": "The Last Dance.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "72%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit DMG": "72%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Every time Intro Skill or Resonance Liberation is cast, Resonance Skill DMG Bonus increases by <span class=\"highlight-5\">48%</span> for <span class=\"highlight-5\">5s</span>."
+  },
+  {
+    "name": "Red Spring",
+    "imageFilename": "Red Spring.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increase ATK by <span class=\"highlight-5\">12%</span>. When dealing Basic Attack DMG, gain <span class=\"highlight-5\">10%</span> Basic Attack DMG Bonus for <span class=\"highlight-5\">14s</span> (up to <span class=\"highlight-5\">3</span> stacks, <span class=\"highlight-5\">1</span>/s). When Concerto Energy is consumed, gain <span class=\"highlight-5\">40%</span> Basic Attack DMG Bonus for <span class=\"highlight-5\">10s</span> (<span class=\"highlight-5\">1</span>/s). Ends when switched off-field."
+  },
+  {
+    "name": "Stellar Symphony",
+    "imageFilename": "Stellar Symphony.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "412",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "77%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Energy Regen": "77%"
+    },
+    "description": "Increase HP by <span class=\"highlight-5\">12%</span>. Restore <span class=\"highlight-5\">8</span> Concerto Energy when casting Resonance Liberation. This effect can be triggered <span class=\"highlight-5\">1</span> time(s) every <span class=\"highlight-5\">20s</span>. When casting Resonance Skill that heals, increase nearby party members' ATK by <span class=\"highlight-5\">14%</span> for <span class=\"highlight-5\">30s</span>. Effects of the same name cannot be stacked."
+  },
+  {
+    "name": "Verity's Handle",
+    "imageFilename": "Verity's Handle.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Gain <span class=\"highlight-5\">12%</span> Attribute DMG Bonus. When using Resonance Liberation, the wielder gains <span class=\"highlight-5\">48%</span> Resonance Liberation DMG Bonus for <span class=\"highlight-5\">8s</span>. This effect can be extended by <span class=\"highlight-5\">5s</span> each time Resonance Skills are cast, up to <span class=\"highlight-5\">3</span> times."
+  },
+  {
+    "name": "Rime-Draped Sprouts",
+    "imageFilename": "Rime-Draped Sprouts.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "72%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit DMG": "72%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-5\">12%</span>. Using Resonance Skill gives the equipped Resonator <span class=\"highlight-5\">12%</span> Basic Attack DMG Bonus for <span class=\"highlight-5\">6s</span>, stacking up to <span class=\"highlight-5\">3</span> times. When casting Outro Skill with <span class=\"highlight-5\">3</span> stacks, consume all stacks to give <span class=\"highlight-5\">52%</span> DMG Bonus to the off-field Basic Attacks performed by the equipped Resonator, lasting for <span class=\"highlight-5\">27s</span>."
+  },
+  {
+    "name": "Blazing Brilliance",
+    "imageFilename": "Blazing Brilliance.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "ATK increased by <span class=\"highlight-5\">12%</span>. The equipper gains <span class=\"highlight-5\">1</span> stack of Searing Feather upon dealing damage (once every <span class=\"highlight-5\">0.5s</span>), and <span class=\"highlight-5\">5</span> stacks upon casting Resonance Skill. Each stack grants <span class=\"highlight-5\">4%</span> Resonance Skill DMG Bonus, up to <span class=\"highlight-5\">14</span> stacks. All stacks expire <span class=\"highlight-5\">12s</span> after reaching max stacks."
+  },
+  {
+    "name": "Ages of Harvest",
+    "imageFilename": "Ages of Harvest.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Grants <span class=\"highlight-5\">12%</span> Attribute DMG Bonus. Casting Intro Skill gives the equipper Ageless Marking, which grants <span class=\"highlight-5\">24%</span> Resonance Skill DMG Bonus for <span class=\"highlight-5\">12s</span>. Casting Resonance Skill gives the equipper Ethereal Endowment, which grants <span class=\"highlight-5\">24%</span> Resonance Skill DMG Bonus for <span class=\"highlight-5\">12s</span>."
+  },
+  {
+    "name": "Stringmaster",
+    "imageFilename": "Stringmaster.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "500",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "36%"
+    },
+    "allStats": {
+      "ATK": "500",
+      "Crit Rate": "36%"
+    },
+    "description": "Grant <span class=\"highlight-5\">12%</span> Attribute DMG Bonus. When dealing Resonance Skill DMG, increases ATK by <span class=\"highlight-5\">12%</span>, stacking up to <span class=\"highlight-5\">2</span> time(s). This effect lasts for <span class=\"highlight-5\">5s</span>. When the equipped Resonator is not on the field, increases their ATK by an additional <span class=\"highlight-5\">12%</span>."
+  },
+  {
+    "name": "Verdant Summit",
+    "imageFilename": "Verdant Summit.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "48.6%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit DMG": "48.6%"
+    },
+    "description": "Increases the DMG Bonus of all Resonance Attributes by <span class=\"highlight-5\">12%</span>. Every time Intro Skill or Resonance Liberation is cast, increases Heavy Attack DMG Bonus by <span class=\"highlight-5\">24%</span>, stacking up to <span class=\"highlight-5\">2</span> time(s). This effect lasts for <span class=\"highlight-5\">14s</span>."
+  },
+  {
+    "name": "Lustrous Razor",
+    "imageFilename": "Lustrous Razor.webp",
+    "rarity": 5,
+    "type": "Broadblade",
+    "attack": "36.4%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "36.4%"
+    },
+    "description": "Increases Energy Regen by <span class=\"highlight-5\">12.8%</span>. When Resonance Skill is released, increases Resonance Liberation DMG by <span class=\"highlight-5\">7%</span>, stacking up to <span class=\"highlight-5\">3</span> times. This effect lasts for <span class=\"highlight-5\">12s</span>."
+  },
+  {
+    "name": "Static Mist",
+    "imageFilename": "Static Mist.webp",
+    "rarity": 5,
+    "type": "Pistols",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increases Energy Regen by <span class=\"highlight-5\">12.8%</span>. When Outro Skill is released, increases the switched-in Resonator's ATK by <span class=\"highlight-5\">10%</span>, stacking up to <span class=\"highlight-5\">1</span> time(s). This effect lasts for <span class=\"highlight-5\">14s</span>."
+  },
+  {
+    "name": "Cosmic Ripples",
+    "imageFilename": "Cosmic Ripples.webp",
+    "rarity": 5,
+    "type": "Rectifier",
+    "attack": "54%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "54%"
+    },
+    "description": "Increases Energy Regen by <span class=\"highlight-5\">12.8%</span>. When hitting a target with Basic Attacks, increases Basic Attack DMG Bonus by <span class=\"highlight-5\">3.2%</span>, stacking up to <span class=\"highlight-5\">5</span> time(s). This effect lasts for <span class=\"highlight-5\">8s</span> and can be triggered <span class=\"highlight-5\">1</span> time(s) every <span class=\"highlight-5\">0.5s</span>."
+  },
+  {
+    "name": "Abyss Surges",
+    "imageFilename": "Abyss Surges.webp",
+    "rarity": 5,
+    "type": "Gauntlets",
+    "attack": "36.4%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "36.4%"
+    },
+    "description": "Increases Energy Regen by <span class=\"highlight-5\">12.8%</span>. When hitting a target with Resonance Skill, increases Basic Attack DMG Bonus by <span class=\"highlight-5\">10%</span> for <span class=\"highlight-5\">8s</span>. When hitting a target with Basic Attacks, increases Resonance Skill DMG Bonus by <span class=\"highlight-5\">10%</span> for <span class=\"highlight-5\">8s</span>."
+  },
+  {
+    "name": "Emerald of Genesis",
+    "imageFilename": "Emerald of Genesis.webp",
+    "rarity": 5,
+    "type": "Sword",
+    "attack": "587",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "587",
+      "Crit Rate": "24.3%"
+    },
+    "description": "Increases Energy Regen by <span class=\"highlight-5\">12.8%</span>. When Resonance Skill is released, increases ATK by <span class=\"highlight-5\">6%</span>, stacking up to <span class=\"highlight-5\">2</span> times for <span class=\"highlight-5\">10s</span>."
+  },
+  {
+    "name": "Aureate Zenith",
+    "imageFilename": "Aureate Zenith.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "40.5%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit DMG": "40.5%"
+    },
+    "description": "Casting Resonance Liberation increases ATK by <span class=\"highlight-4\">7.2%</span> and grants <span class=\"highlight-4\">10.8%</span> Heavy Attack DMG Bonus for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Autumntrace",
+    "imageFilename": "Autumntrace.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "20.2%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit Rate": "20.2%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-4\">4%</span> upon dealing Basic Attack DMG or Heavy Attack DMG, stacking up to <span class=\"highlight-4\">5</span> time(s). This effect lasts for <span class=\"highlight-4\">7s</span> and can be triggered <span class=\"highlight-4\">1</span> time(s) every <span class=\"highlight-4\">1s</span>."
+  },
+  {
+    "name": "Broadblade#41",
+    "imageFilename": "Broadblade#41.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "412",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "32.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Energy Regen": "32.3%"
+    },
+    "description": "When the Resonator's HP is above <span class=\"highlight-4\">80%</span>, increases ATK by <span class=\"highlight-4\">12%</span>. When the Resonator's HP is below <span class=\"highlight-4\">40%</span>, restores their HP by <span class=\"highlight-4\">5%</span>, for dealing Basic Attack DMG or Heavy Attack DMG. This effect can be triggered <span class=\"highlight-4\">1</span> time(s) every <span class=\"highlight-4\">8s</span>."
+  },
+  {
+    "name": "Dauntless Evernight",
+    "imageFilename": "Dauntless Evernight.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "337",
+    "mainStat": {
+      "name": "DEF",
+      "value": "61.5%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "DEF": "61.5%"
+    },
+    "description": "When Intro Skill is released, increases ATK by <span class=\"highlight-4\">8%</span> and DEF by <span class=\"highlight-4\">15%</span>, lasting for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Discord",
+    "imageFilename": "Discord.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "337",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "51.8%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "Energy Regen": "51.8%"
+    },
+    "description": "When Resonance Skill is released, restores Concerto Energy by <span class=\"highlight-4\">8</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Helios Cleaver",
+    "imageFilename": "Helios Cleaver.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "412",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "30.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "ATK%": "30.3%"
+    },
+    "description": "Within <span class=\"highlight-4\">12s</span> after Resonance Skill is cast, increases ATK by <span class=\"highlight-4\">3%</span> every <span class=\"highlight-4\">2s</span>, stacking up to <span class=\"highlight-4\">4</span> time(s). This effect can be triggered <span class=\"highlight-4\">1</span> time(s) every <span class=\"highlight-4\">12s</span>. When the number of stacks reaches <span class=\"highlight-4\">4</span>, all stacks will be reset within <span class=\"highlight-4\">6s</span>."
+  },
+  {
+    "name": "Meditations on Mercy",
+    "imageFilename": "Meditations on Mercy.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "462",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "18.2%"
+    },
+    "allStats": {
+      "ATK": "462",
+      "ATK%": "18.2%"
+    },
+    "description": "Dealing DMG to enemies with Negative Statuses increases the wielder's ATK by <span class=\"highlight-4\">4%</span> for <span class=\"highlight-4\">10s</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time per second, stackable up to <span class=\"highlight-4\">4</span> times."
+  },
+  {
+    "name": "Waning Redshift",
+    "imageFilename": "Waning Redshift.webp",
+    "rarity": 4,
+    "type": "Broadblade",
+    "attack": "462",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "18.2%"
+    },
+    "allStats": {
+      "ATK": "462",
+      "ATK%": "18.2%"
+    },
+    "description": "Casting the Resonance Skill grants <span class=\"highlight-4\">6</span> Resonance Energy and increases ATK by <span class=\"highlight-4\">10%</span>, lasting for <span class=\"highlight-4\">16s</span>. This effect can be triggered once every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Aether Strike",
+    "imageFilename": "Aether Strike.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "40.5%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit DMG": "40.5%"
+    },
+    "description": "Casting Resonance Liberation increases ATK by <span class=\"highlight-4\">7.2%</span> and grants <span class=\"highlight-4\">10.8%</span> Resonance Liberation DMG Bonus for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Amity Accord",
+    "imageFilename": "Amity Accord.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "337",
+    "mainStat": {
+      "name": "DEF",
+      "value": "61.5%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "DEF": "61.5%"
+    },
+    "description": "When Intro Skill is released, increases Resonance Liberation DMG Bonus by <span class=\"highlight-4\">20%</span>, lasting for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Celestial Spiral",
+    "imageFilename": "Celestial Spiral.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "462",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "18.2%"
+    },
+    "allStats": {
+      "ATK": "462",
+      "ATK%": "18.2%"
+    },
+    "description": "Casting the Resonance Skill grants <span class=\"highlight-4\">6</span> Resonance Energy and increases ATK by <span class=\"highlight-4\">10%</span>, lasting for <span class=\"highlight-4\">16s</span>. This effect can be triggered once every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Gauntlets#21D",
+    "imageFilename": "Gauntlets#21D.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "387",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "38.8%"
+    },
+    "allStats": {
+      "ATK": "387",
+      "Energy Regen": "38.8%"
+    },
+    "description": "When the Resonator dashes or dodges, increases ATK by <span class=\"highlight-4\">8%</span>. Increases Counter Attack DMG by <span class=\"highlight-4\">50%</span> for <span class=\"highlight-4\">8s</span>. When Counter Attack is performed, restores the Resonator's HP by <span class=\"highlight-4\">5%</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time(s) every <span class=\"highlight-4\">6s</span>."
+  },
+  {
+    "name": "Hollow Mirage",
+    "imageFilename": "Hollow Mirage.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "412",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "30.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "ATK%": "30.3%"
+    },
+    "description": "When Resonance Liberation is released, grants <span class=\"highlight-4\">3</span> stack(s) of Iron Armor. Each stack increases ATK and DEF by <span class=\"highlight-4\">3%</span>, stacking up to <span class=\"highlight-4\">3</span> time(s). When the Resonator takes damage, reduces the number of stacks by <span class=\"highlight-4\">1</span>."
+  },
+  {
+    "name": "Legend of Drunken Hero",
+    "imageFilename": "Legend of Drunken Hero.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "462",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "18.2%"
+    },
+    "allStats": {
+      "ATK": "462",
+      "ATK%": "18.2%"
+    },
+    "description": "Dealing DMG to enemies with Negative Statuses increases the wielder's ATK by <span class=\"highlight-4\">4%</span> for <span class=\"highlight-4\">10s</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time per second, stackable up to <span class=\"highlight-4\">4</span> times."
+  },
+  {
+    "name": "Marcato",
+    "imageFilename": "Marcato.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "337",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "51.8%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "Energy Regen": "51.8%"
+    },
+    "description": "When Resonance Skill is released, restores Concerto Energy by <span class=\"highlight-4\">8</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Stonard",
+    "imageFilename": "Stonard.webp",
+    "rarity": 4,
+    "type": "Gauntlets",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "20.2%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit Rate": "20.2%"
+    },
+    "description": "When Resonance Skill is released, increases Resonance Liberation DMG Bonus by <span class=\"highlight-4\">18%</span> for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Commando of Conviction",
+    "imageFilename": "Commando of Conviction.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "412",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "30.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "ATK%": "30.3%"
+    },
+    "description": "When Intro Skill is released, increases ATK by <span class=\"highlight-4\">15%</span> for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Endless Collapse",
+    "imageFilename": "Endless Collapse.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "462",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "18.2%"
+    },
+    "allStats": {
+      "ATK": "462",
+      "ATK%": "18.2%"
+    },
+    "description": "Casting the Resonance Skill grants <span class=\"highlight-4\">6</span> Resonance Energy and increases ATK by <span class=\"highlight-4\">10%</span> for <span class=\"highlight-4\">16s</span>. This effect can be triggered once every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Fables of Wisdom",
+    "imageFilename": "Fables of Wisdom.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "462",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "18.2%"
+    },
+    "allStats": {
+      "ATK": "462",
+      "ATK%": "18.2%"
+    },
+    "description": "Dealing DMG to enemies with Negative Statuses increases the wielder's ATK by <span class=\"highlight-4\">4%</span> for <span class=\"highlight-4\">10s</span>. Can trigger <span class=\"highlight-4\">1</span> time per second, up to <span class=\"highlight-4\">4</span> stacks."
+  },
+  {
+    "name": "Feather Edge",
+    "imageFilename": "Feather Edge.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "20.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit Rate": "20.3%"
+    },
+    "description": "Casting Resonance Liberation increases ATK by <span class=\"highlight-4\">7.2%</span> and grants <span class=\"highlight-4\">10.8%</span> Resonance Liberation DMG Bonus for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Lumingloss",
+    "imageFilename": "Lumingloss.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "387",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "36.4%"
+    },
+    "allStats": {
+      "ATK": "387",
+      "ATK%": "36.4%"
+    },
+    "description": "When Resonance Skill is released, increases Basic Attack DMG and Heavy Attack DMG by <span class=\"highlight-4\">20%</span> for <span class=\"highlight-4\">10s</span> (<span class=\"highlight-4\">1</span>/s, stacks up to <span class=\"highlight-4\">1</span>)."
+  },
+  {
+    "name": "Lunar Cutter",
+    "imageFilename": "Lunar Cutter.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "412",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "30.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "ATK%": "30.3%"
+    },
+    "description": "Upon entering the field, gain <span class=\"highlight-4\">6</span> stacks of Oath. Each stack increases ATK by <span class=\"highlight-4\">2%</span>, up to <span class=\"highlight-4\">6</span> stacks. Triggers once every <span class=\"highlight-4\">12s</span>. Oath decreases by <span class=\"highlight-4\">1</span> stack every <span class=\"highlight-4\">2s</span>. Defeating an enemy grants an additional <span class=\"highlight-4\">6</span> stacks."
+  },
+  {
+    "name": "Overture",
+    "imageFilename": "Overture.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "337",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "51.8%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "Energy Regen": "51.8%"
+    },
+    "description": "When Resonance Skill is released, restores Concerto Energy by <span class=\"highlight-4\">8</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Somnoire Anchor",
+    "imageFilename": "Somnoire Anchor.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "462",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "18.2%"
+    },
+    "allStats": {
+      "ATK": "462",
+      "ATK%": "18.2%"
+    },
+    "description": "Gain <span class=\"highlight-4\">1</span> stack of Hiss when dealing damage (<span class=\"highlight-4\">1</span>/s). Each stack increases ATK by <span class=\"highlight-4\">2%</span> for <span class=\"highlight-4\">3s</span>, up to <span class=\"highlight-4\">10</span> stacks; switching off clears stacks. At <span class=\"highlight-4\">10</span> stacks, gain +<span class=\"highlight-4\">6%</span> Crit Rate."
+  },
+  {
+    "name": "Sword#18",
+    "imageFilename": "Sword#18.webp",
+    "rarity": 4,
+    "type": "Sword",
+    "attack": "387",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "36.4%"
+    },
+    "allStats": {
+      "ATK": "387",
+      "ATK%": "36.4%"
+    },
+    "description": "When HP drops below <span class=\"highlight-4\">40%</span>, increases Heavy Attack DMG by <span class=\"highlight-4\">18%</span> and restores HP by <span class=\"highlight-4\">5%</span> when dealing Heavy Attack DMG. Triggers once every <span class=\"highlight-4\">8s</span>."
+  },
+  {
+    "name": "Augment",
+    "imageFilename": "Augment.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "20.2%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit Rate": "20.2%"
+    },
+    "description": "When Resonance Liberation is released, increases the caster's ATK by <span class=\"highlight-4\">15%</span>, lasting for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Call of the Abyss",
+    "imageFilename": "Call of the Abyss.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "338",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "51.8%"
+    },
+    "allStats": {
+      "ATK": "338",
+      "Energy Regen": "51.8%"
+    },
+    "description": "Casting Resonance Liberation increases the Resonator's Healing Bonus by <span class=\"highlight-4\">16%</span> for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Comet Flare",
+    "imageFilename": "Comet Flare.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "412",
+    "mainStat": {
+      "name": "HP",
+      "value": "30.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "HP": "30.3%"
+    },
+    "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Healing Bonus by <span class=\"highlight-4\">3%</span>, stacking up to <span class=\"highlight-4\">3</span> time(s). This effect lasts for <span class=\"highlight-4\">8s</span> and can be triggered <span class=\"highlight-4\">1</span> time(s) every <span class=\"highlight-4\">0.6s</span>."
+  },
+  {
+    "name": "Fusion Accretion",
+    "imageFilename": "Fusion Accretion.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "18.2%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "18.2%"
+    },
+    "description": "Casting the Resonance Skill grants <span class=\"highlight-4\">6</span> Resonance Energy and increases ATK by <span class=\"highlight-4\">10%</span>, lasting for <span class=\"highlight-4\">16s</span>. This effect can be triggered once every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Jinzhou Keeper",
+    "imageFilename": "Jinzhou Keeper.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "36.4%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "36.4%"
+    },
+    "description": "When Intro Skill is released, increases the caster's ATK by <span class=\"highlight-4\">8%</span> and HP by <span class=\"highlight-4\">10%</span>, lasting for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Ocean's Gift",
+    "imageFilename": "Ocean's Gift.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "18.2%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "18.2%"
+    },
+    "description": "Dealing DMG to enemies with Spectro Frazzle increases the wielder's Spectro DMG by <span class=\"highlight-4\">6%</span>, gaining <span class=\"highlight-4\">1</span> stack per second for <span class=\"highlight-4\">6s</span>, stacking up to <span class=\"highlight-4\">4</span> times."
+  },
+  {
+    "name": "Radiant Dawn",
+    "imageFilename": "Radiant Dawn.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "40.5%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit DMG": "40.5%"
+    },
+    "description": "Casting Resonance Skill increases ATK by <span class=\"highlight-4\">9%</span> and grants <span class=\"highlight-4\">9%</span> Basic Attack DMG Bonus for <span class=\"highlight-4\">10s</span>."
+  },
+  {
+    "name": "Rectifier#25",
+    "imageFilename": "Rectifier#25.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "337",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "51.8%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "Energy Regen": "51.8%"
+    },
+    "description": "When Resonance Skill is released, if the Resonator's HP is below <span class=\"highlight-4\">60%</span>, restores their HP by <span class=\"highlight-4\">5%</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time(s) every <span class=\"highlight-4\">8s</span>; if the Resonator's HP is above <span class=\"highlight-4\">60%</span>, increases ATK by <span class=\"highlight-4\">12%</span>, lasting for <span class=\"highlight-4\">10s</span>."
+  },
+  {
+    "name": "Variation",
+    "imageFilename": "Variation.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "337",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "51.8%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "Energy Regen": "51.8%"
+    },
+    "description": "When Resonance Skill is released, restores Concerto Energy by <span class=\"highlight-4\">8</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Waltz in Masquerade",
+    "imageFilename": "Waltz in Masquerade.webp",
+    "rarity": 4,
+    "type": "Rectifier",
+    "attack": "18.2%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "18.2%"
+    },
+    "description": "Dealing DMG to enemies with Negative Statuses increases the wielder's ATK by <span class=\"highlight-4\">4%</span> for <span class=\"highlight-4\">10s</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time per second, stackable up to <span class=\"highlight-4\">4</span> times."
+  },
+  {
+    "name": "Cadenza",
+    "imageFilename": "Cadenza.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "337",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "51.8%"
+    },
+    "allStats": {
+      "ATK": "337",
+      "Energy Regen": "51.8%"
+    },
+    "description": "When Resonance Skill is released, restores Concerto Energy by <span class=\"highlight-4\">8</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Novaburst",
+    "imageFilename": "Novaburst.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "30.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "30.3%"
+    },
+    "description": "When the Resonator dashes or dodges, increases ATK by <span class=\"highlight-4\">4%</span>, stacking up to <span class=\"highlight-4\">3</span> time(s). This effect lasts for <span class=\"highlight-4\">8s</span>."
+  },
+  {
+    "name": "Pistols#26",
+    "imageFilename": "Pistols#26.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "36.4%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "36.4%"
+    },
+    "description": "When the Resonator takes no damage, increases ATK by <span class=\"highlight-4\">6%</span> every <span class=\"highlight-4\">5s</span>, stacking up to <span class=\"highlight-4\">2</span> time(s). This effect lasts for <span class=\"highlight-4\">8s</span>. When the Resonator takes damage, reduces the number of stacks by <span class=\"highlight-4\">1</span> and restores their HP by <span class=\"highlight-4\">5%</span>."
+  },
+  {
+    "name": "Relativistic Jet",
+    "imageFilename": "Relativistic Jet.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "18.2%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "18.2%"
+    },
+    "description": "Casting the Resonance Skill grants <span class=\"highlight-4\">6</span> Resonance Energy and increases ATK by <span class=\"highlight-4\">10%</span>, lasting for <span class=\"highlight-4\">16s</span>. This effect can be triggered once every <span class=\"highlight-4\">20s</span>."
+  },
+  {
+    "name": "Romance in Farewell",
+    "imageFilename": "Romance in Farewell.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "18.2%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "18.2%"
+    },
+    "description": "Dealing DMG to enemies with Negative Statuses increases the wielder's ATK by <span class=\"highlight-4\">4%</span> for <span class=\"highlight-4\">10s</span>. This effect can be triggered <span class=\"highlight-4\">1</span> time per second, stackable up to <span class=\"highlight-4\">4</span> times."
+  },
+  {
+    "name": "Solar Flame",
+    "imageFilename": "Solar Flame.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "412",
+    "mainStat": {
+      "name": "Crit Rate",
+      "value": "20.3%"
+    },
+    "allStats": {
+      "ATK": "412",
+      "Crit Rate": "20.3%"
+    },
+    "description": "Dealing Basic Attack or Heavy Attack DMG increases ATK by <span class=\"highlight-4\">2.2%</span> and grants <span class=\"highlight-4\">2.2%</span> Heavy Attack DMG Bonus for <span class=\"highlight-4\">7s</span>, stacking up to <span class=\"highlight-4\">4</span> times. This effect can be triggered <span class=\"highlight-4\">1</span> time every <span class=\"highlight-4\">1s</span>."
+  },
+  {
+    "name": "Thunderbolt",
+    "imageFilename": "Thunderbolt.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "36.4%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "36.4%"
+    },
+    "description": "When hitting a target with Basic Attacks or Heavy Attacks, increases Resonance Skill DMG Bonus by <span class=\"highlight-4\">7%</span>, stacking up to <span class=\"highlight-4\">3</span> time(s). This effect lasts for <span class=\"highlight-4\">10s</span> and can be triggered <span class=\"highlight-4\">1</span> time(s) every <span class=\"highlight-4\">1s</span>."
+  },
+  {
+    "name": "Undying Flame",
+    "imageFilename": "Undying Flame.webp",
+    "rarity": 4,
+    "type": "Pistols",
+    "attack": "30.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "30.3%"
+    },
+    "description": "When Intro Skill is released, increases Resonance Skill DMG Bonus by <span class=\"highlight-4\">20%</span> for <span class=\"highlight-4\">15s</span>."
+  },
+  {
+    "name": "Beguiling Melody",
+    "imageFilename": "Beguiling Melody.webp",
+    "rarity": 3,
+    "type": "Broadblade",
+    "attack": "300",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "30.4%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "ATK%": "30.4%"
+    },
+    "description": "When Intro Skill is cast, restores <span class=\"highlight-3\">4</span> Concerto Energy. When Outro Skill is cast, restores <span class=\"highlight-3\">4</span> Resonance Energy."
+  },
+  {
+    "name": "Broadblade of Night",
+    "imageFilename": "Broadblade of Night.webp",
+    "rarity": 3,
+    "type": "Broadblade",
+    "attack": "325",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "325",
+      "ATK%": "24.3%"
+    },
+    "description": "When Intro Skill is released, increases ATK by <span class=\"highlight-3\">8%</span>, lasting for <span class=\"highlight-3\">10s</span>."
+  },
+  {
+    "name": "Broadblade of Voyager",
+    "imageFilename": "Broadblade of Voyager.webp",
+    "rarity": 3,
+    "type": "Broadblade",
+    "attack": "300",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "32.3%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "Energy Regen": "32.3%"
+    },
+    "description": "When Resonance Skill is released, restores Resonance Energy by <span class=\"highlight-3\">8</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time every <span class=\"highlight-3\">20s</span>."
+  },
+  {
+    "name": "Guardian Broadblade",
+    "imageFilename": "Guardian Broadblade.webp",
+    "rarity": 3,
+    "type": "Broadblade",
+    "attack": "325",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "325",
+      "ATK%": "24.3%"
+    },
+    "description": "The damage of Basic Attack and Heavy Attack is increased by <span class=\"highlight-3\">12%</span>."
+  },
+  {
+    "name": "Originite: Type I",
+    "imageFilename": "Originite_ Type I.webp",
+    "rarity": 3,
+    "type": "Broadblade",
+    "attack": "300",
+    "mainStat": {
+      "name": "DEF",
+      "value": "38.4%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "DEF": "38.4%"
+    },
+    "description": "When Resonance Skill is released, restores HP by <span class=\"highlight-3\">3%</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time(s) every <span class=\"highlight-3\">12s</span>."
+  },
+  {
+    "name": "Gauntlets of Night",
+    "imageFilename": "Gauntlets of Night.webp",
+    "rarity": 3,
+    "type": "Gauntlets",
+    "attack": "325",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "325",
+      "ATK%": "24.3%"
+    },
+    "description": "When Intro Skill is released, increases ATK by <span class=\"highlight-3\">8%</span> for <span class=\"highlight-3\">10s</span>."
+  },
+  {
+    "name": "Gauntlets of Voyager",
+    "imageFilename": "Gauntlets of Voyager.webp",
+    "rarity": 3,
+    "type": "Gauntlets",
+    "attack": "325",
+    "mainStat": {
+      "name": "DEF",
+      "value": "30.7%"
+    },
+    "allStats": {
+      "ATK": "325",
+      "DEF": "30.7%"
+    },
+    "description": "When Resonance Skill is released, restores Resonance Energy by <span class=\"highlight-3\">8</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time every <span class=\"highlight-3\">20s</span>."
+  },
+  {
+    "name": "Guardian Gauntlets",
+    "imageFilename": "Guardian Gauntlets.webp",
+    "rarity": 3,
+    "type": "Gauntlets",
+    "attack": "300",
+    "mainStat": {
+      "name": "DEF",
+      "value": "38.4%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "DEF": "38.4%"
+    },
+    "description": "Increases Resonance Liberation DMG Bonus by <span class=\"highlight-3\">12%</span>."
+  },
+  {
+    "name": "Originite: Type IV",
+    "imageFilename": "Originite_ Type IV.webp",
+    "rarity": 3,
+    "type": "Gauntlets",
+    "attack": "300",
+    "mainStat": {
+      "name": "Crit DMG",
+      "value": "40.5%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "Crit DMG": "40.5%"
+    },
+    "description": "When hitting a target with Basic Attacks, restores HP by <span class=\"highlight-3\">0.5%</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time(s) every <span class=\"highlight-3\">3s</span>."
+  },
+  {
+    "name": "Guardian Sword",
+    "imageFilename": "Guardian Sword.webp",
+    "rarity": 3,
+    "type": "Sword",
+    "attack": "300",
+    "mainStat": {
+      "name": "HP",
+      "value": "30.3%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "HP": "30.3%"
+    },
+    "description": "Increases Resonance Skill DMG by <span class=\"highlight-3\">12%</span>."
+  },
+  {
+    "name": "Originite: Type II",
+    "imageFilename": "Originite_ Type II.webp",
+    "rarity": 3,
+    "type": "Sword",
+    "attack": "325",
+    "mainStat": {
+      "name": "HP",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "325",
+      "HP": "24.3%"
+    },
+    "description": "When Resonance Liberation is released, restores HP by <span class=\"highlight-3\">5%</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time every <span class=\"highlight-3\">20s</span>."
+  },
+  {
+    "name": "Sword of Night",
+    "imageFilename": "Sword of Night.webp",
+    "rarity": 3,
+    "type": "Sword",
+    "attack": "325",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "24.3%"
+    },
+    "allStats": {
+      "ATK": "325",
+      "ATK%": "24.3%"
+    },
+    "description": "When Intro Skill is released, increases ATK by <span class=\"highlight-3\">8%</span> for <span class=\"highlight-3\">10s</span>."
+  },
+  {
+    "name": "Sword of Voyager",
+    "imageFilename": "Sword of Voyager.webp",
+    "rarity": 3,
+    "type": "Sword",
+    "attack": "300",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "32.3%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "Energy Regen": "32.3%"
+    },
+    "description": "When Resonance Skill is released, restores Resonance Energy by <span class=\"highlight-3\">8</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time every <span class=\"highlight-3\">20s</span>."
+  },
+  {
+    "name": "Guardian Rectifier",
+    "imageFilename": "Guardian Rectifier.webp",
+    "rarity": 3,
+    "type": "Rectifier",
+    "attack": "24.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "24.3%"
+    },
+    "description": "Increases Basic Attack and Heavy Attack DMG Bonus by <span class=\"highlight-3\">12%</span>."
+  },
+  {
+    "name": "Originite: Type V",
+    "imageFilename": "Originite_ Type V.webp",
+    "rarity": 3,
+    "type": "Rectifier",
+    "attack": "30.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "30.3%"
+    },
+    "description": "When Intro Skill is released, restores HP by <span class=\"highlight-3\">5%</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time(s) every <span class=\"highlight-3\">20s</span>."
+  },
+  {
+    "name": "Rectifier of Night",
+    "imageFilename": "Rectifier of Night.webp",
+    "rarity": 3,
+    "type": "Rectifier",
+    "attack": "24.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "24.3%"
+    },
+    "description": "When Intro Skill is released, increases ATK by <span class=\"highlight-3\">8%</span>, lasting for <span class=\"highlight-3\">10s</span>."
+  },
+  {
+    "name": "Rectifier of Voyager",
+    "imageFilename": "Rectifier of Voyager.webp",
+    "rarity": 3,
+    "type": "Rectifier",
+    "attack": "300",
+    "mainStat": {
+      "name": "Energy Regen",
+      "value": "32.3%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "Energy Regen": "32.3%"
+    },
+    "description": "When Resonance Skill is released, restores Resonance Energy by <span class=\"highlight-3\">8</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time every <span class=\"highlight-3\">20s</span>."
+  },
+  {
+    "name": "Guardian Pistols",
+    "imageFilename": "Guardian Pistols.webp",
+    "rarity": 3,
+    "type": "Pistols",
+    "attack": "24.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "24.3%"
+    },
+    "description": "Increases Resonance Skill DMG Bonus by <span class=\"highlight-3\">12%</span>."
+  },
+  {
+    "name": "Originite: Type III",
+    "imageFilename": "Originite_ Type III.webp",
+    "rarity": 3,
+    "type": "Pistols",
+    "attack": "24.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "24.3%"
+    },
+    "description": "When Counter Attack is released, restores HP by <span class=\"highlight-3\">1.6%</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time(s) every <span class=\"highlight-3\">6s</span>."
+  },
+  {
+    "name": "Pistols of Night",
+    "imageFilename": "Pistols of Night.webp",
+    "rarity": 3,
+    "type": "Pistols",
+    "attack": "24.3%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "24.3%"
+    },
+    "description": "When Intro Skill is released, increases ATK by <span class=\"highlight-3\">8%</span>, lasting for <span class=\"highlight-3\">10s</span>."
+  },
+  {
+    "name": "Pistols of Voyager",
+    "imageFilename": "Pistols of Voyager.webp",
+    "rarity": 3,
+    "type": "Pistols",
+    "attack": "300",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "30.3%"
+    },
+    "allStats": {
+      "ATK": "300",
+      "ATK%": "30.3%"
+    },
+    "description": "When Resonance Skill is released, restores Resonance Energy by <span class=\"highlight-3\">8</span>. This effect can be triggered <span class=\"highlight-3\">1</span> time(s) every <span class=\"highlight-3\">20s</span>."
+  },
+  {
+    "name": "Tyro Broadblade",
+    "imageFilename": "Tyro Broadblade.webp",
+    "rarity": 2,
+    "type": "Broadblade",
+    "attack": "275",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "14.8%"
+    },
+    "allStats": {
+      "ATK": "275",
+      "ATK%": "14.8%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-2\">5%</span>."
+  },
+  {
+    "name": "Tyro Gauntlets",
+    "imageFilename": "Tyro Gauntlets.webp",
+    "rarity": 2,
+    "type": "Gauntlets",
+    "attack": "275",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "14.8%"
+    },
+    "allStats": {
+      "ATK": "275",
+      "ATK%": "14.8%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-2\">5%</span>."
+  },
+  {
+    "name": "Tyro Sword",
+    "imageFilename": "Tyro Sword.webp",
+    "rarity": 2,
+    "type": "Sword",
+    "attack": "275",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "14.8%"
+    },
+    "allStats": {
+      "ATK": "275",
+      "ATK%": "14.8%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-2\">5%</span>."
+  },
+  {
+    "name": "Tyro Rectifier",
+    "imageFilename": "Tyro Rectifier.webp",
+    "rarity": 2,
+    "type": "Rectifier",
+    "attack": "14.8%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "14.8%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-2\">5%</span>."
+  },
+  {
+    "name": "Tyro Pistols",
+    "imageFilename": "Tyro Pistols.webp",
+    "rarity": 2,
+    "type": "Pistols",
+    "attack": "14.8%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "14.8%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-2\">5%</span>."
+  },
+  {
+    "name": "Training Broadblade",
+    "imageFilename": "Training Broadblade.webp",
+    "rarity": 1,
+    "type": "Broadblade",
+    "attack": "250",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "11.4%"
+    },
+    "allStats": {
+      "ATK": "250",
+      "ATK%": "11.4%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-1\">4%</span>."
+  },
+  {
+    "name": "Training Gauntlets",
+    "imageFilename": "Training Gauntlets.webp",
+    "rarity": 1,
+    "type": "Gauntlets",
+    "attack": "250",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "11.4%"
+    },
+    "allStats": {
+      "ATK": "250",
+      "ATK%": "11.4%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-1\">4%</span>."
+  },
+  {
+    "name": "Training Sword",
+    "imageFilename": "Training Sword.webp",
+    "rarity": 1,
+    "type": "Sword",
+    "attack": "250",
+    "mainStat": {
+      "name": "ATK%",
+      "value": "11.4%"
+    },
+    "allStats": {
+      "ATK": "250",
+      "ATK%": "11.4%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-1\">4%</span>."
+  },
+  {
+    "name": "Training Rectifier",
+    "imageFilename": "Training Rectifier.webp",
+    "rarity": 1,
+    "type": "Rectifier",
+    "attack": "11.4%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "11.4%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-1\">4%</span>."
+  },
+  {
+    "name": "Training Pistols",
+    "imageFilename": "Training Pistols.webp",
+    "rarity": 1,
+    "type": "Pistols",
+    "attack": "11.4%",
+    "mainStat": null,
+    "allStats": {
+      "ATK": "11.4%"
+    },
+    "description": "Increases ATK by <span class=\"highlight-1\">4%</span>."
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "id": "Stringmaster",
+  "name": "Stringmaster",
+  "rarity": 5,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 500
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Grant 12% Attribute DMG Bonus. When dealing Resonance Skill DMG, increases ATK by 12%, stacking up to 2 time(s). This effect lasts for 5s. When the equipped Resonator is not on the field, increases their ATK by an additional 12%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.36
+    }
+  }
+}

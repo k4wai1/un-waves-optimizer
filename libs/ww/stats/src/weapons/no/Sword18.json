@@ -1,0 +1,24 @@
+{
+  "id": "Sword18",
+  "name": "Sword#18",
+  "rarity": 4,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 387
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When HP drops below 40%, increases Heavy Attack DMG by 18% and restores HP by 5% when dealing Heavy Attack DMG. Triggers once every 8s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "atk_",
+    "values": {
+      "90": 0.364
+    }
+  }
+}

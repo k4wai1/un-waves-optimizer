@@ -1,0 +1,24 @@
+{
+  "id": "SpectralTrigger",
+  "name": "Spectral Trigger",
+  "rarity": 5,
+  "weaponType": "pistols",
+  "baseStats": {
+    "atk": {
+      "90": 588
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. Casting Resonance Skill grants 20% Spectro DMG Bonus to the wielder for 14s, stacking up to 2 times. Inflicting Hack - Shifting grants 30% Heavy Attack DMG Amplification to the wielder for 14s, during which Heavy Attack DMG ignores 10% of the target's DEF.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critDmg_",
+    "values": {
+      "90": 0.486
+    }
+  }
+}

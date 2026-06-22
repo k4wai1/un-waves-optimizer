@@ -1,0 +1,186 @@
+{
+  "character": "Shorekeeper Build",
+  "table": "resonance-skill-table",
+  "levels": {
+    "1": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "15.75"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "660+3.00"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "2": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "17.04"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "715+3.25"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "3": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "18.33"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "769+3.50"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "4": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "20.14"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "845+3.84"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "5": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "21.43"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "899+4.09"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "6": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "22.91"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "961+4.37"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "7": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "24.98"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "1047+4.76"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "8": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "27.05"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "1134+5.16"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "9": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "29.11"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "1221+5.55"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    },
+    "10": {
+      "a10": {
+        "name": "Dim Star Butterfly DMG",
+        "rawFormula": "31.31"
+      },
+      "a11": {
+        "name": "Healing",
+        "rawFormula": "1313+5.97"
+      },
+      "a12": {
+        "name": "Cooldown",
+        "rawFormula": "16"
+      },
+      "a13": {
+        "name": "Concerto Regen",
+        "rawFormula": "20"
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "CalloftheAbyss",
+  "name": "Call of the Abyss",
+  "rarity": 4,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 338
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Casting Resonance Liberation increases the Resonator's Healing Bonus by 16% for 15s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "energyRegen_",
+    "values": {
+      "90": 0.518
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "SwordofVoyager",
+  "name": "Sword of Voyager",
+  "rarity": 3,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 300
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When Resonance Skill is released, restores Resonance Energy by 8. This effect can be triggered 1 time every 20s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "energyRegen_",
+    "values": {
+      "90": 0.32299999999999995
+    }
+  }
+}

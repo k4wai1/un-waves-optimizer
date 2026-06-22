@@ -1,0 +1,18 @@
+{
+  "id": "UndyingFlame",
+  "name": "Undying Flame",
+  "rarity": 4,
+  "weaponType": "pistols",
+  "baseStats": {
+    "atk": {
+      "90": 0.303
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When Intro Skill is released, increases Resonance Skill DMG Bonus by 20% for 15s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  }
+}

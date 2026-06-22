@@ -1,0 +1,24 @@
+{
+  "id": "ThunderflareDominion",
+  "name": "Thunderflare Dominion",
+  "rarity": 5,
+  "weaponType": "broadblade",
+  "baseStats": {
+    "atk": {
+      "90": 675
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. Casting Intro Skill or Resonance Skill increases Heavy Attack DMG by 20% for 15s. Obtaining Shield allows Heavy Attack DMG to ignore 7.2% of the target's DEF for 7s, stacking up to 5 times. This effect is triggered once every 0.5s",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.121
+    }
+  }
+}

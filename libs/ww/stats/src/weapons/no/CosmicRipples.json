@@ -1,0 +1,18 @@
+{
+  "id": "CosmicRipples",
+  "name": "Cosmic Ripples",
+  "rarity": 5,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 0.54
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases Energy Regen by 12.8%. When hitting a target with Basic Attacks, increases Basic Attack DMG Bonus by 3.2%, stacking up to 5 time(s). This effect lasts for 8s and can be triggered 1 time(s) every 0.5s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  }
+}

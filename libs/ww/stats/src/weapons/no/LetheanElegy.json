@@ -1,0 +1,24 @@
+{
+  "id": "LetheanElegy",
+  "name": "Lethean Elegy",
+  "rarity": 5,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "ATK is increased by 12%. Within 12s after dealing Echo Skill DMG, gain 32% Resonance Skill DMG Bonus and 32% Echo Skill DMG Amplification, and ignore 8% of the target's DEF when dealing damage.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "TrainingPistols",
+  "name": "Training Pistols",
+  "rarity": 1,
+  "weaponType": "pistols",
+  "baseStats": {
+    "atk": {
+      "90": 0.114
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 4%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "BosonAstrolabe",
+  "name": "Boson Astrolabe",
+  "rarity": 5,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 525
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. After a Resonator in the team casts a Tune Break skill, it grants a 12% ATK increase and 12% Basic Attack DMG Bonus to the wielder for 14s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "energyRegen_",
+    "values": {
+      "90": 0.389
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "id": "JinzhouKeeper",
+  "name": "Jinzhou Keeper",
+  "rarity": 4,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 0.364
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When Intro Skill is released, increases the caster's ATK by 8% and HP by 10%, lasting for 15s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  }
+}

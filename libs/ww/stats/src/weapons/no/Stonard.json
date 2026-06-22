@@ -1,0 +1,24 @@
+{
+  "id": "Stonard",
+  "name": "Stonard",
+  "rarity": 4,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 412
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When Resonance Skill is released, increases Resonance Liberation DMG Bonus by 18% for 15s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.20199999999999999
+    }
+  }
+}

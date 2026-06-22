@@ -1,0 +1,24 @@
+{
+  "id": "StarfieldCalibrator",
+  "name": "Starfield Calibrator",
+  "rarity": 5,
+  "weaponType": "broadblade",
+  "baseStats": {
+    "atk": {
+      "90": 413
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases DEF by 16%. Casting Resonance Liberation restores 8 points of Concerto Energy. This effect can be triggered once every 20s. When the wielder heals Resonators, increases Crit. DMG of all nearby Resonators in the team by 20% for 4s. Effects of the same name cannot be stacked.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "energyRegen_",
+    "values": {
+      "90": 0.77
+    }
+  }
+}

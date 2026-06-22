@@ -1,0 +1,23 @@
+{
+  "id": "WeaponTemplateName",
+  "name": "Template Name",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": { "1": 0, "20": 0, "40": 0, "50": 0, "60": 0, "70": 0, "80": 0, "90": 0 }
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": { "1": 0.0, "20": 0.0, "40": 0.0, "50": 0.0, "60": 0.0, "70": 0.0, "80": 0.0, "90": 0.0 }
+  },
+  "passives": {
+    "atk_": [0.0, 0.0, 0.0, 0.0, 0.0],
+    "allDmgBonus_": [0.0, 0.0, 0.0, 0.0, 0.0]
+  },
+  "mechanics": {
+    "description_raw": "Texto original para usar como guía de programación",
+    "maxStacks": 1,
+    "trigger": "onHit",
+    "duration_sec": 10
+  }
+}

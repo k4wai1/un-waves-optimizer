@@ -18,37 +18,37 @@
     { "id": "node_heal_h1", "name": "Healing Bonus +4.2%", "buffs": { "healing_bonus_": 0.042 } },
     { "id": "node_heal_h2", "name": "Healing Bonus +4.2%", "buffs": { "healing_bonus_": 0.042 } }
   ],
-  "formula": {
-    "basic": {
-      "a1": [0.1599, 0.1730, 0.1861, 0.2045, 0.2176, 0.2326, 0.2536, 0.2746, 0.2955],
-      "a2": [0.1200, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219],
-      "a3": [0.1173, 0.1269, 0.1366, 0.1500, 0.1596, 0.1707, 0.1861, 0.2015, 0.2169],
-      "a4": [0.3658, 0.3958, 0.4258, 0.4678, 0.4978, 0.5323, 0.5803, 0.6282, 0.6762]
+  "DMG": {
+    "Normal Attack: Origin Calculus": {
+      "Stage 1 DMG": { "scaler": "atk", "multiplier": [0.1599, 0.1730, 0.1861, 0.2045, 0.2176, 0.2326, 0.2536, 0.2746, 0.2955, 0.3164] },
+      "Stage 2 DMG": { "scaler": "atk", "multiplier": [0.1200, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2377] },
+      "Stage 3 DMG": { "scaler": "atk", "multiplier": [0.1173, 0.1269, 0.1366, 0.1500, 0.1596, 0.1707, 0.1861, 0.2015, 0.2169, 0.2323] },
+      "Stage 4 DMG": { "scaler": "atk", "multiplier": [0.3658, 0.3958, 0.4258, 0.4678, 0.4978, 0.5323, 0.5803, 0.6282, 0.6762, 0.7242] },
+      "Heavy Attack DMG": { "scaler": "atk", "multiplier": [0.2304, 0.2493, 0.2682, 0.2947, 0.3136, 0.3353, 0.3655, 0.3958, 0.4260, 0.4562] },
+      "Plunging Attack DMG": { "scaler": "atk", "multiplier": [0.3720, 0.4026, 0.4331, 0.4758, 0.5063, 0.5413, 0.5902, 0.6390, 0.6878, 0.7366] },
+      "Dodge Counter DMG": { "scaler": "atk", "multiplier": [0.4400, 0.4761, 0.5122, 0.5627, 0.5988, 0.6403, 0.6980, 0.7557, 0.8135, 0.8713] }
     },
-    "heavy": [0.2304, 0.2493, 0.2682, 0.2947, 0.3136, 0.3353, 0.3655, 0.3958, 0.4260],
-    "plunge": [0.3720, 0.4026, 0.4331, 0.4758, 0.5063, 0.5413, 0.5902, 0.6390, 0.6878],
-    "dodge_counter": [0.4400, 0.4761, 0.5122, 0.5627, 0.5988, 0.6403, 0.6980, 0.7557, 0.8135],
-    "skill": {
-      "dim_star_dmg": [0.1575, 0.1704, 0.1833, 0.2014, 0.2143, 0.2291, 0.2498, 0.2705, 0.2911],
-      "healing_base": [660, 715, 769, 845, 899, 961, 1047, 1134, 1221],
-      "healing_hp_pct": [0.0300, 0.0325, 0.0350, 0.0384, 0.0409, 0.0437, 0.0476, 0.0516, 0.0555]
+    "Resonance Skill: Chaos Theory": {
+      "Dim Star Butterfly DMG": { "scaler": "atk", "multiplier": [0.1575, 0.1704, 0.1833, 0.2014, 0.2143, 0.2291, 0.2498, 0.2705, 0.2911, 0.3117] },
+      "Healing (% Max HP)": { "scaler": "hp", "multiplier": [0.0300, 0.0325, 0.0350, 0.0384, 0.0409, 0.0437, 0.0476, 0.0516, 0.0555, 0.0594] },
+      "Healing (Flat Base)": { "scaler": "flat", "multiplier": [660, 715, 769, 845, 899, 961, 1047, 1134, 1221, 1308] }
     },
-    "forte": {
-      "flare_star_dmg": [0.1876, 0.2029, 0.2183, 0.2399, 0.2552, 0.2729, 0.2975, 0.3221, 0.3467],
-      "illation_dmg": [0.0954, 0.1033, 0.1111, 0.1220, 0.1299, 0.1389, 0.1514, 0.1639, 0.1764],
-      "transmutation_dmg": [0.3720, 0.4026, 0.4331, 0.4758, 0.5063, 0.5413, 0.5902, 0.6390, 0.6878]
+    "Forte Circuit: Astral Chord": {
+      "Flare Star Butterfly DMG": { "scaler": "atk", "multiplier": [0.1876, 0.2029, 0.2183, 0.2399, 0.2552, 0.2729, 0.2975, 0.3221, 0.3467, 0.3713] },
+      "Illation DMG": { "scaler": "atk", "multiplier": [0.0954, 0.1033, 0.1111, 0.1220, 0.1299, 0.1389, 0.1514, 0.1639, 0.1764, 0.1889] },
+      "Transmutation DMG": { "scaler": "atk", "multiplier": [0.3720, 0.4026, 0.4331, 0.4758, 0.5063, 0.5413, 0.5902, 0.6390, 0.6878, 0.7366] }
     },
-    "liberation": {
-      "healing_base": [220, 239, 257, 282, 300, 321, 349, 378, 407],
-      "healing_hp_pct": [0.0120, 0.0130, 0.0140, 0.0154, 0.0164, 0.0175, 0.0191, 0.0207, 0.0222]
+    "Resonance Liberation: End Loop": {
+      "Healing (% Max HP)": { "scaler": "hp", "multiplier": [0.0120, 0.0130, 0.0140, 0.0154, 0.0164, 0.0175, 0.0191, 0.0207, 0.0222, 0.0237] },
+      "Healing (Flat Base)": { "scaler": "flat", "multiplier": [220, 239, 257, 282, 300, 321, 349, 378, 407, 436] }
     },
-    "intro": {
-      "enlightenment_dmg": [0.2279, 0.2466, 0.2653, 0.2914, 0.3101, 0.3316, 0.3615, 0.3914, 0.4213],
-      "enlightenment_healing_base": [130, 141, 152, 167, 177, 190, 207, 224, 241],
-      "enlightenment_healing_hp_pct": [0.0060, 0.0065, 0.0070, 0.0077, 0.0082, 0.0088, 0.0096, 0.0104, 0.0111],
-      "discernment_dmg": [0.0988, 0.1069, 0.1150, 0.1264, 0.1345, 0.1438, 0.1567, 0.1697, 0.1826],
-      "discernment_healing_base": [145, 157, 169, 186, 198, 211, 231, 250, 269],
-      "discernment_healing_hp_pct": [0.0066, 0.0072, 0.0077, 0.0085, 0.0090, 0.0097, 0.0105, 0.0114, 0.0123]
+    "Intro Skill: Proof of Existence": {
+      "Enlightenment DMG": { "scaler": "atk", "multiplier": [0.2279, 0.2466, 0.2653, 0.2914, 0.3101, 0.3316, 0.3615, 0.3914, 0.4213, 0.4512] },
+      "Enlightenment Healing (% HP)": { "scaler": "hp", "multiplier": [0.0060, 0.0065, 0.0070, 0.0077, 0.0082, 0.0088, 0.0096, 0.0104, 0.0111, 0.0118] },
+      "Enlightenment Healing (Flat)": { "scaler": "flat", "multiplier": [130, 141, 152, 167, 177, 190, 207, 224, 241, 258] },
+      "Discernment DMG": { "scaler": "atk", "multiplier": [0.0988, 0.1069, 0.1150, 0.1264, 0.1345, 0.1438, 0.1567, 0.1697, 0.1826, 0.1955] },
+      "Discernment Healing (% HP)": { "scaler": "hp", "multiplier": [0.0066, 0.0072, 0.0077, 0.0085, 0.0090, 0.0097, 0.0105, 0.0114, 0.0123, 0.0132] },
+      "Discernment Healing (Flat)": { "scaler": "flat", "multiplier": [145, 157, 169, 186, 198, 211, 231, 250, 269, 288] }
     }
   },
   "passives": {
@@ -67,51 +67,16 @@
       "name": "Destined Synergy (Rover)",
       "target": "party",
       "ui_type": "checkbox",
-      "visibility_conditions": {
-        "target_character_name": ["RoverHavoc", "RoverSpectro"]
-      },
+      "visibility_conditions": { "target_character_name": ["RoverHavoc", "RoverSpectro"] },
       "buffs": { "energy_regen_": 0.10 }
     }
   },
   "sequences": {
-    "s1": {
-      "name": "Unspoken Conjecture",
-      "target": "local",
-      "mechanics": { "stellarealm_duration_multiplier": 1.50, "stellarealm_range_extended": true }
-    },
-    "s2": {
-      "name": "Night's Gift and Refusal",
-      "target": "party",
-      "conditional": {
-        "trigger": "onDimStarHit",
-        "maxStacks": 5,
-        "duration_sec": 30,
-        "buffs": { "allDmgBonus_": 0.03 }
-      },
-      "mechanics": { "flare_star_self_heal_hp_pct": 0.02 }
-    },
-    "s3": {
-      "name": "Infinity Awaits Me",
-      "target": "local",
-      "mechanics": { "concerto_regen_on_ally_intro": 20 }
-    },
-    "s4": {
-      "name": "Overflowing Quietude",
-      "target": "party",
-      "conditions": ["after_outro"],
-      "buffs": { "allDmgBonus_": 0.10 },
-      "duration": 30
-    },
-    "s5": {
-      "name": "Echoes in Silence",
-      "target": "local",
-      "mechanics": { "basic_3_range_extended": 0.30 }
-    },
-    "s6": {
-      "name": "To the New World",
-      "target": "local",
-      "conditions": ["after_intro_discernment"],
-      "buffs": { "intro_discernment_multiplier_": 0.42, "critDmg_": 2.00 }
-    }
+    "s1": { "name": "Unspoken Conjecture", "target": "local", "mechanics": { "stellarealm_duration_multiplier": 1.50, "stellarealm_range_extended": true } },
+    "s2": { "name": "Night's Gift and Refusal", "target": "party", "conditional": { "trigger": "onDimStarHit", "maxStacks": 5, "duration_sec": 30, "buffs": { "allDmgBonus_": 0.03 } }, "mechanics": { "flare_star_self_heal_hp_pct": 0.02 } },
+    "s3": { "name": "Infinity Awaits Me", "target": "local", "mechanics": { "concerto_regen_on_ally_intro": 20 } },
+    "s4": { "name": "Overflowing Quietude", "target": "party", "conditions": ["after_outro"], "buffs": { "allDmgBonus_": 0.10 }, "duration": 30 },
+    "s5": { "name": "Echoes in Silence", "target": "local", "mechanics": { "basic_3_range_extended": 0.30 } },
+    "s6": { "name": "To the New World", "target": "local", "conditions": ["after_intro_discernment"], "buffs": { "intro_discernment_multiplier_": 0.42, "critDmg_": 2.00 } }
   }
 }

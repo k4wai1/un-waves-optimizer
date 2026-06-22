@@ -1,0 +1,24 @@
+{
+  "id": "Tragicomedy",
+  "name": "Tragicomedy",
+  "rarity": 5,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. Every time Basic Attack or Intro Skill is cast, Heavy Attack DMG Bonus increases by 48% for 3s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

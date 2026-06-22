@@ -1,0 +1,24 @@
+{
+  "id": "EmeraldSentence",
+  "name": "Emerald Sentence",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "ATK is increased by 12%. Casting Echo Skill within 10s after casting Echo Skill or Basic Attack grants 1 stack of \"Bamboo Cleaver\", which grants 30% Heavy Attack DMG Bonus to the wielder. This effect can be triggered by Echoes of the same name once only, stacking up to 2 times, lasting for 12s. Casting Echo Skill at max stacks does not reset the duration. This effect can be triggered once every 10s and ends early if the wielder is switched off the field. Casting Intro Skill grants 20% Echo Skill DMG Bonus to all Resonators in the team for 30s. Effects of the same name cannot be stacked.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

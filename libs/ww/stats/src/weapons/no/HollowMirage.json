@@ -1,0 +1,24 @@
+{
+  "id": "HollowMirage",
+  "name": "Hollow Mirage",
+  "rarity": 4,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 412
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "When Resonance Liberation is released, grants 3 stack(s) of Iron Armor. Each stack increases ATK and DEF by 3%, stacking up to 3 time(s). When the Resonator takes damage, reduces the number of stacks by 1.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "atk_",
+    "values": {
+      "90": 0.303
+    }
+  }
+}

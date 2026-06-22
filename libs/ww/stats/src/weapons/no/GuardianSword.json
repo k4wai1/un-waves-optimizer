@@ -1,0 +1,24 @@
+{
+  "id": "GuardianSword",
+  "name": "Guardian Sword",
+  "rarity": 3,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 300
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases Resonance Skill DMG by 12%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "hp_",
+    "values": {
+      "90": 0.303
+    }
+  }
+}

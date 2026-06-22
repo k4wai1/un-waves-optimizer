@@ -1,0 +1,24 @@
+{
+  "id": "UnflickeringValor",
+  "name": "Unflickering Valor",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 415
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increase Crit Rate by 8%. Casting Resonance Liberation grants 24% Basic Attack DMG Bonus for 10s. Dealing Basic Attack DMG grants 24% Basic Attack DMG Bonus for 4s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "energyRegen_",
+    "values": {
+      "90": 0.77
+    }
+  }
+}

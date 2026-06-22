@@ -1,0 +1,24 @@
+{
+  "id": "BlazingJustice",
+  "name": "Blazing Justice",
+  "rarity": 5,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. Casting Basic Attack grants the following effects: Dealing damage ignores 8% of the target's DEF and amplifies Spectro Frazzle DMG dealt by 50% for 6s. Retriggering the effect resets its duration.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critDmg_",
+    "values": {
+      "90": 0.486
+    }
+  }
+}

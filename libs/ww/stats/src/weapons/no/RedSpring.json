@@ -1,0 +1,24 @@
+{
+  "id": "RedSpring",
+  "name": "Red Spring",
+  "rarity": 5,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 587
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increase ATK by 12%. When dealing Basic Attack DMG, gain 10% Basic Attack DMG Bonus for 14s (up to 3 stacks, 1/s). When Concerto Energy is consumed, gain 40% Basic Attack DMG Bonus for 10s (1/s). Ends when switched off-field.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.243
+    }
+  }
+}

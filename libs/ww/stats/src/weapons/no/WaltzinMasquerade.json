@@ -1,0 +1,18 @@
+{
+  "id": "WaltzinMasquerade",
+  "name": "Waltz in Masquerade",
+  "rarity": 4,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 0.182
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Dealing DMG to enemies with Negative Statuses increases the wielder's ATK by 4% for 10s. This effect can be triggered 1 time per second, stackable up to 4 times.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  }
+}

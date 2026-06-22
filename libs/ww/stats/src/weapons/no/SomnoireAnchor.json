@@ -1,0 +1,24 @@
+{
+  "id": "SomnoireAnchor",
+  "name": "Somnoire Anchor",
+  "rarity": 4,
+  "weaponType": "sword",
+  "baseStats": {
+    "atk": {
+      "90": 462
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Gain 1 stack of Hiss when dealing damage (1/s). Each stack increases ATK by 2% for 3s, up to 10 stacks; switching off clears stacks. At 10 stacks, gain +6% Crit Rate.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "atk_",
+    "values": {
+      "90": 0.182
+    }
+  }
+}

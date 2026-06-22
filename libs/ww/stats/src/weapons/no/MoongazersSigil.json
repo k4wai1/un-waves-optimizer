@@ -1,0 +1,24 @@
+{
+  "id": "MoongazersSigil",
+  "name": "Moongazer’s Sigil",
+  "rarity": 5,
+  "weaponType": "gauntlets",
+  "baseStats": {
+    "atk": {
+      "90": 500
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 12%. Casting Intro Skill or Resonance Liberation increases Resonance Liberation DMG by 20% for 15s. Obtaining Shield allows Resonance Liberation DMG to ignore 7.2% of the target’s DEF for 7s, stacking up to 5 times. This effect is triggered once every 0.5s. Upon casting Intro Skill, this effect reaches max stacks immediately, lasting for 3s.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  },
+  "secondStat": {
+    "statKey": "critRate_",
+    "values": {
+      "90": 0.36
+    }
+  }
+}

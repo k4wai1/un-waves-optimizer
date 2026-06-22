@@ -1,0 +1,3010 @@
+[
+  {
+    "name": "Reminiscence - Nightmare: Adam Smasher",
+    "imageFilename": "Reminiscence - Nightmare_ Adam Smasher.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Cast Echo Skill to deal 16 instances of Physical DMG equal to <span class=\"ep-num\">10.26%</span> of ATK. When Lucy or Rebecca has this Echo equipped in the main slot, Crit. Rate is increased by <span class=\"ep-num\">15%</span>, and they unlock special Echo Skills. Lucy's special Echo Skill deals <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">273.60%</span> of ATK. Rebecca's special Echo Skill fires missiles, dealing 16 instances of <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> equal to <span class=\"ep-num\">17.10%</span> of ATK.",
+    "sonataSets": [
+      {
+        "name": "Shadow of Shattered Dreams",
+        "icon": "https://arabwuwa.com/images/set/shadow-of-shattered-dreams.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nameless Explorer",
+    "imageFilename": "Nameless Explorer.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon Nameless Explorer to attack enemies along its path, dealing <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.\nThe Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus and <span class=\"ep-num\">20.00%</span> Echo Skill DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      },
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Flora Reindeer",
+    "imageFilename": "Flora Reindeer.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Flora Reindeer to attack enemies within a large range, dealing <span class=\"ep-num\">192.60%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.\n\nCD: 15s.",
+    "sonataSets": [
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      },
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Mining Reindeer",
+    "imageFilename": "Mining Reindeer.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Summon a Mining Reindeer to launch a charged attack at enemies, dealing <span class=\"ep-num\">237.60%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.\n\nCD: 20s.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Ironhoof",
+    "imageFilename": "Ironhoof.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "\nTransform into an Ironhoof to charge at enemies, dealing <span class=\"ep-num\">53.64%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>. At the end of the charge, unleash a goring attack that deals <span class=\"ep-num\">13.41%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> 3 times and <span class=\"ep-num\">174.33%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> once.\n\nCD: 15s.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      },
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Voidwing Moth",
+    "imageFilename": "Voidwing Moth.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "25s",
+    "description": "Press Echo Skill to transform into Voidwing Moth, dealing <span class=\"ep-num\">405.00%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> to nearby enemies.\nHold Echo Skill to continuously attack, dealing up to 12 instances of <span class=\"ep-num\">49.33%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.\nWithin 15s after using this Echo skill, casting Outro Skill increases the incoming Resonator's ATK by <span class=\"ep-num\">12.00%</span> for 15s.",
+    "sonataSets": [
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Flora Drone",
+    "imageFilename": "Flora Drone.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Flora Drone, dealing <span class=\"ep-num\">64.80%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> to enemies and healing Resonators within range by <span class=\"ep-num\">3.60%</span> of their Max HP plus an additional 160 HP.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      },
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      },
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Mining Drone",
+    "imageFilename": "Mining Drone.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Transform into a Mining Drone to attack enemies, dealing <span class=\"ep-num\">102.60%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> twice.",
+    "sonataSets": [
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      },
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      },
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Iceglint Dancer",
+    "imageFilename": "Iceglint Dancer.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Transform into an Iceglint Dancer to attack enemies, dealing <span class=\"ep-num\">205.20%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      },
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      },
+      {
+        "name": "Reel of Spliced Memories",
+        "icon": "https://arabwuwa.com/images/set/reel-of-spliced-memories.webp"
+      }
+    ]
+  },
+  {
+    "name": "Reminiscence: Threnodian - Voidborne Construct",
+    "imageFilename": "Reminiscence_ Threnodian - Voidborne Construct.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Summon Aleph-1's Creation to deal <span class=\"ep-num\">21.88%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> 5 times and <span class=\"ep-num\">164.16%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> 1 time to enemies.\nThe Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Liberation DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      }
+    ]
+  },
+  {
+    "name": "Frostbite Coleoid",
+    "imageFilename": "Frostbite Coleoid.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "\nSummon a Frostbite Coleoid to punch enemies, dealing <span class=\"ep-num\">192.60%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.\n\nCD: 15s.",
+    "sonataSets": [
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      }
+    ]
+  },
+  {
+    "name": "Windlash Coleoid",
+    "imageFilename": "Windlash Coleoid.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "\nTransform into a Windlash Coleoid to kick enemies, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.\n\nCD: 15s.",
+    "sonataSets": [
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      },
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      }
+    ]
+  },
+  {
+    "name": "Glommoth",
+    "imageFilename": "Glommoth.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Summon a Glommoth to stomp enemies, dealing <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.\nCasting Outro Skill within 15s after summoning Glommoth grants <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> Bonus to the incoming Resonator for 15s.",
+    "sonataSets": [
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      },
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      }
+    ]
+  },
+  {
+    "name": "Tremor Warrior",
+    "imageFilename": "Tremor Warrior.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Transform into a Tremor Warrior and viciously attack enemies in the front, dealing <span class=\"ep-num\">205.20%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      },
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      }
+    ]
+  },
+  {
+    "name": "Shadow Stepper",
+    "imageFilename": "Shadow Stepper.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Shadow Stepper to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      },
+      {
+        "name": "Wishes of Quiet Snowfall",
+        "icon": "https://arabwuwa.com/images/set/wishes-of-quiet-snowfall.webp"
+      }
+    ]
+  },
+  {
+    "name": "Twin Nova: Collapsar Blade",
+    "imageFilename": "Twin Nova_ Collapsar Blade.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "8s",
+    "description": "Transform into a Twin Nova: Collapsar Blade to rapidly fire at enemies for 5s, with each attack dealing <span class=\"ep-num\">2.01%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.\n\nThe Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Basic Attack DMG Bonus.\n\nIf Twin Nova: Nebulous Cannon is equipped in another slot on the Resonator:\n- Casting Echo Skill in succession transforms you into Collapsar Blade and Nebulous Cannon alternately and is considered casting Echo skills of the same name.\n- DMG dealt by Twin Nova: Collapsar Blade becomes <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. The <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus gained from equipping it in the main slot is turned into <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> Bonus.\n- Casting Basic Attacks grants 1 stack of Dyad Origins. Casting Resonance Skill grants 3 stacks of Dyad Origins. Dyad Origins can stack up to 6 times and lasts for 8s. Each stack increases Echo Skill DMG by <span class=\"ep-num\">10%</span>, and all stacks are cleared after this Echo Skill ends.\n- This skill is capped at 2 uses. Initially, this skill can be used 2 times, with 1 use added every 8s.",
+    "sonataSets": [
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      },
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      },
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      }
+    ]
+  },
+  {
+    "name": "Spacetrek Explorer",
+    "imageFilename": "Spacetrek Explorer.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Summon a Spacetrek Explorer to grant nearby active Resonators in the team a Shield equal to <span class=\"ep-num\">10%</span> of the summoner's Max HP for 4s.",
+    "sonataSets": [
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      },
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      }
+    ]
+  },
+  {
+    "name": "Sabercat Reaver",
+    "imageFilename": "Sabercat Reaver.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Sabercat Reaver to attack enemies, dealing <span class=\"ep-num\">192.60%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      }
+    ]
+  },
+  {
+    "name": "Sabercat Prowler",
+    "imageFilename": "Sabercat Prowler.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Sabercat Prowler to fire beams at enemies, dealing <span class=\"ep-num\">192.60%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      }
+    ]
+  },
+  {
+    "name": "Zip Zap",
+    "imageFilename": "Zip Zap.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Zip Zap to launch spinning attacks at enemies, dealing <span class=\"ep-num\">25.92%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> 5 times.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      },
+      {
+        "name": "Sound of True Name",
+        "icon": "https://arabwuwa.com/images/set/sound-of-true-name.webp"
+      }
+    ]
+  },
+  {
+    "name": "Reactor Husk",
+    "imageFilename": "Reactor Husk.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into a Reactor Husk, jumping into the air and unleashing a heavy slash that deals <span class=\"ep-num\">351.00%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> to enemies.\n\nThe Resonator with this Echo equipped in their main slot gain <span class=\"ep-num\">10.00%</span> Energy Regen.",
+    "sonataSets": [
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      }
+    ]
+  },
+  {
+    "name": "Reminiscence: Denia",
+    "imageFilename": "Reminiscence_ Denia.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Summon \"Trickster\" to deal <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> to enemies. Within the next 15s, casting Outro Skill grants the incoming Resonator <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> Bonus for 15s.",
+    "sonataSets": [
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      }
+    ]
+  },
+  {
+    "name": "Twin Nova: Nebulous Cannon",
+    "imageFilename": "Twin Nova_ Nebulous Cannon.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "8s",
+    "description": "Transform into a Twin Nova: Nebulous Cannon to slash enemies twice, with each attack dealing <span class=\"ep-num\">80.51%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.\n\nThe Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Basic Attack DMG Bonus.\n\nIf Twin Nova: Collapsar Blade is equipped in another slot on the Resonator:\n- Casting Echo Skill in succession transforms you into Nebulous Cannon and Collapsar Blade alternately and is considered casting Echo skills of the same name. The DMG Bonus from the Echo in the main slot remains unchanged.\n- DMG dealt by Twin Nova: Collapsar Blade becomes <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.\n- Casting Basic Attacks grants 1 stack of Dyad Origins. Casting Resonance Skill grants 3 stacks of Dyad Origins. Dyad Origins can stack up to 6 times and lasts for 8s. Each stack increases Echo Skill DMG by <span class=\"ep-num\">10%</span>, and all stacks are cleared after this Echo Skill ends.\n-This skill is capped at 2 uses. Initially, this skill can be used 2 times, with 1 use added every 8s.",
+    "sonataSets": [
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      }
+    ]
+  },
+  {
+    "name": "Kronablight",
+    "imageFilename": "Kronablight.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "134.10s",
+    "description": "Transform into a Kronablight, soar into the air, and dive to deal <span class=\"ep-num\">67.05%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> to the enemies.",
+    "sonataSets": [
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      }
+    ]
+  },
+  {
+    "name": "Kronaclaw",
+    "imageFilename": "Kronaclaw.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into a Kronaclaw and soar into the air to deal <span class=\"ep-num\">8.04%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> up to 8 times and <span class=\"ep-num\">24.13%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> 2 times, then dive to deal <span class=\"ep-num\">131.41%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> 1 time.",
+    "sonataSets": [
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      },
+      {
+        "name": "Chromatic Foam",
+        "icon": "https://arabwuwa.com/images/set/chromatic-foam.webp"
+      }
+    ]
+  },
+  {
+    "name": "Sigillum",
+    "imageFilename": "Sigillum.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon Sigillum to unleash two attacks, dealing <span class=\"ep-num\">68.40%</span> and <span class=\"ep-num\">205.20%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> respectively.\nWhen equipped in the main slot by Aemeath, it grants <span class=\"ep-num\">25.00%</span> Resonance Liberation DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      }
+    ]
+  },
+  {
+    "name": "Geospider S4",
+    "imageFilename": "Geospider S4.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Geospider S4 to attack enemies, dealing <span class=\"ep-num\">51.84%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> once and <span class=\"ep-num\">77.76%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> once.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Halo of Starry Radiance",
+        "icon": "https://arabwuwa.com/images/set/halo-of-starry-radiance.webp"
+      },
+      {
+        "name": "Trailblazing Star",
+        "icon": "https://arabwuwa.com/images/set/trailblazing-star.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hyvatia",
+    "imageFilename": "Hyvatia.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon Hyvatia to fire lasers at enemies from mid-air, dealing <span class=\"ep-num\">27.36%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> 10 times.\n\nCasting Outro Skill within 15s after summoning Hyvatia grants <span class=\"ep-num\">10.00%</span> All-Attribute DMG Bonus to the next Resonator using Intro Skill for 15s.\n\nCD: 20s.",
+    "sonataSets": [
+      {
+        "name": "Pact of Neonlight Leap",
+        "icon": "https://arabwuwa.com/images/set/pact-of-neonlight-leap.webp"
+      },
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      }
+    ]
+  },
+  {
+    "name": "Phantom: Twin Nova - Nebulous Cannon",
+    "imageFilename": "Phantom_ Twin Nova - Nebulous Cannon.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "8s",
+    "description": "Transform into a Twin Nova: Nebulous Cannon to slash enemies twice, with each attack dealing <span class=\"ep-num\">80.51%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.\n\nThe Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Basic Attack DMG Bonus.\n\nIf Twin Nova: Collapsar Blade is equipped in another slot on the Resonator:\n- Casting Echo Skill in succession transforms you into Nebulous Cannon and Collapsar Blade alternately and is considered casting Echo skills of the same name. The DMG Bonus from the Echo in the main slot remains unchanged.\n- DMG dealt by Twin Nova: Collapsar Blade becomes <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.\n- Casting Basic Attacks grants 1 stack of Dyad Origins. Casting Resonance Skill grants 3 stacks of Dyad Origins. Dyad Origins can stack up to 6 times and lasts for 8s. Each stack increases Echo Skill DMG by <span class=\"ep-num\">10%</span>, and all stacks are cleared after this Echo Skill ends.\n-This skill is capped at 2 uses. Initially, this skill can be used 2 times, with 1 use added every 8s.",
+    "sonataSets": [
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      }
+    ]
+  },
+  {
+    "name": "Phantom: Twin Nova - Collapsar Blade",
+    "imageFilename": "Phantom_ Twin Nova - Collapsar Blade.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "8s",
+    "description": "Transform into a Twin Nova: Collapsar Blade to rapidly fire at enemies for 5s, with each attack dealing <span class=\"ep-num\">2.01%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.\n\nThe Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Basic Attack DMG Bonus.\n\nIf Twin Nova: Nebulous Cannon is equipped in another slot on the Resonator:\n- Casting Echo Skill in succession transforms you into Collapsar Blade and Nebulous Cannon alternately and is considered casting Echo skills of the same name.\n- DMG dealt by Twin Nova: Collapsar Blade becomes <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. The <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus gained from equipping it in the main slot is turned into <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> Bonus.\n- Casting Basic Attacks grants 1 stack of Dyad Origins. Casting Resonance Skill grants 3 stacks of Dyad Origins. Dyad Origins can stack up to 6 times and lasts for 8s. Each stack increases Echo Skill DMG by <span class=\"ep-num\">10%</span>, and all stacks are cleared after this Echo Skill ends.\n- This skill is capped at 2 uses. Initially, this skill can be used 2 times, with 1 use added every 8s.",
+    "sonataSets": [
+      {
+        "name": "Rite of Gilded Revelation",
+        "icon": "https://arabwuwa.com/images/set/rite-of-gilded-revelation.webp"
+      }
+    ]
+  },
+  {
+    "name": "Reminiscence: Threnodian - Leviathan",
+    "imageFilename": "Reminiscence_ Threnodian - Leviathan.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "25s",
+    "description": "Summon a Collapsing Horizon, dealing two instances of <span class=\"ep-num\">131.04%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> to the nearby enemies and obtaining the Core of Collapse for 15s. While it lasts, Core of Collapse deals <span class=\"ep-num\">24.57%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> when the active Resonator in the team deals damage. This effect can be triggered once every 0.5s, up to 8. Enemies with <span class=\"ep-dmg ep-attr-havoc\">Havoc</span> Bane take <span class=\"ep-num\">100%</span> more DMG from this effect. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> Bonus and <span class=\"ep-num\">12%</span> Resonance Liberation DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Flamewing's Shadow",
+        "icon": "https://arabwuwa.com/images/set/flamewings-shadow.webp"
+      },
+      {
+        "name": "Thread of Severed Fate",
+        "icon": "https://arabwuwa.com/images/set/thread-of-severed-fate.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Roseshroom",
+    "imageFilename": "Nightmare_ Roseshroom.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Roseshroom that fires a laser, dealing <span class=\"ep-num\">41.02%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> up to 3 times.",
+    "sonataSets": [
+      {
+        "name": "Thread of Severed Fate",
+        "icon": "https://arabwuwa.com/images/set/thread-of-severed-fate.webp"
+      }
+    ]
+  },
+  {
+    "name": "Abyssal Gladius",
+    "imageFilename": "Abyssal Gladius.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Abyssal Gladius and attack enemies in front with the sword, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>. Hold the Echo Skill to maintain the Echo form for a while to slash enemies and cast a ranged attack forward, dealing <span class=\"ep-num\">268.20%</span> and <span class=\"ep-num\">670.50%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> respectively.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      },
+      {
+        "name": "Thread of Severed Fate",
+        "icon": "https://arabwuwa.com/images/set/thread-of-severed-fate.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Dwarf Cassowary",
+    "imageFilename": "Nightmare_ Dwarf Cassowary.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Dwarf Cassowary that tracks and attacks the enemy, dealing <span class=\"ep-num\">27.60%</span> Physical DMG 3 time(s).",
+    "sonataSets": [
+      {
+        "name": "Thread of Severed Fate",
+        "icon": "https://arabwuwa.com/images/set/thread-of-severed-fate.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Tick Tack",
+    "imageFilename": "Nightmare_ Tick Tack.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Tick Tack that charges and bites the enemy. The charge from Tick Tack will deal <span class=\"ep-num\">49.22%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> to the enemy, and the bite will deal <span class=\"ep-num\">73.83%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> to the enemy. Reduces enemy Vibration Strength by up to <span class=\"ep-num\">5%</span> during 5s.",
+    "sonataSets": [
+      {
+        "name": "Thread of Severed Fate",
+        "icon": "https://arabwuwa.com/images/set/thread-of-severed-fate.webp"
+      }
+    ]
+  },
+  {
+    "name": "Havoc Drake",
+    "imageFilename": "Havoc Drake.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-havoc\">Havoc</span> Drake to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> 3 times.",
+    "sonataSets": [
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      },
+      {
+        "name": "Thread of Severed Fate",
+        "icon": "https://arabwuwa.com/images/set/thread-of-severed-fate.webp"
+      }
+    ]
+  },
+  {
+    "name": "Corrosaurus",
+    "imageFilename": "Corrosaurus.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Summon a Corrosaurus to attack enemies, dealing <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> Bonus and <span class=\"ep-num\">20.00%</span> Echo Skill DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      },
+      {
+        "name": "Flamewing's Shadow",
+        "icon": "https://arabwuwa.com/images/set/flamewings-shadow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Kerasaur",
+    "imageFilename": "Kerasaur.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Kerasaur to leap into the air and slam down, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>. Shortly after hitting the target, cast Echo Skill again to charge at the target, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Liberation DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      },
+      {
+        "name": "Flamewing's Shadow",
+        "icon": "https://arabwuwa.com/images/set/flamewings-shadow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Viridblaze Saurian",
+    "imageFilename": "Nightmare_ Viridblaze Saurian.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "8s",
+    "description": "Summon a Viridblaze Saurian to continuously spit fire, dealing <span class=\"ep-num\">17.12%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> 10 times.",
+    "sonataSets": [
+      {
+        "name": "Flamewing's Shadow",
+        "icon": "https://arabwuwa.com/images/set/flamewings-shadow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nimbus Wraith",
+    "imageFilename": "Nimbus Wraith.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Nimbus Wraith that restores the active Resonator's HP by <span class=\"ep-num\">2.70%</span> of their Max HP, up to 4 times.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      },
+      {
+        "name": "Flamewing's Shadow",
+        "icon": "https://arabwuwa.com/images/set/flamewings-shadow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Baby Roseshroom",
+    "imageFilename": "Nightmare_ Baby Roseshroom.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Baby Roseshroom that fires a laser, dealing <span class=\"ep-num\">32.00%</span>+64 <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Flamewing's Shadow",
+        "icon": "https://arabwuwa.com/images/set/flamewings-shadow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Baby Viridblaze Saurian",
+    "imageFilename": "Nightmare_ Baby Viridblaze Saurian.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Transform into Baby Viridblaze Saurian to rest in place, and slowly restore HP.",
+    "sonataSets": [
+      {
+        "name": "Flamewing's Shadow",
+        "icon": "https://arabwuwa.com/images/set/flamewings-shadow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Reminiscence: Fenrico",
+    "imageFilename": "Reminiscence_ Fenrico.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon the Talons of Decree to attack nearby enemies, dealing <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Heavy Attack DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      },
+      {
+        "name": "Law of Harmony",
+        "icon": "https://arabwuwa.com/images/set/law-of-harmony.webp"
+      }
+    ]
+  },
+  {
+    "name": "Rage Against the Statue",
+    "imageFilename": "Rage Against the Statue.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Transform into Rage Against the Statue to attack enemies, dealing <span class=\"ep-num\">313.20%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. Hold the Echo Skill to maintain the Echo form and charge towards enemies, dealing <span class=\"ep-num\">469.80%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Law of Harmony",
+        "icon": "https://arabwuwa.com/images/set/law-of-harmony.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Cyan-Feathered Heron",
+    "imageFilename": "Nightmare_ Cyan-Feathered Heron.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Cyan-Feathered Heron and charge at the enemies, dealing <span class=\"ep-num\">236.80%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>; This Echo Skill interrupts enemy Special Skills upon dealing damage.",
+    "sonataSets": [
+      {
+        "name": "Law of Harmony",
+        "icon": "https://arabwuwa.com/images/set/law-of-harmony.webp"
+      }
+    ]
+  },
+  {
+    "name": "Golden Junrock",
+    "imageFilename": "Golden Junrock.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Golden Junrock that charges forward, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> to enemies in its path.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Law of Harmony",
+        "icon": "https://arabwuwa.com/images/set/law-of-harmony.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Chirpuff",
+    "imageFilename": "Nightmare_ Chirpuff.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Chirpuff that self-inflates and blasts a powerful gust of wind forward 3 times. Each blast inflicts <span class=\"ep-num\">38.40%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> and pushes enemies backwards.",
+    "sonataSets": [
+      {
+        "name": "Law of Harmony",
+        "icon": "https://arabwuwa.com/images/set/law-of-harmony.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Gulpuff",
+    "imageFilename": "Nightmare_ Gulpuff.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Gulpuff that blows bubbles 5 times, each time dealing <span class=\"ep-num\">23.04%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Law of Harmony",
+        "icon": "https://arabwuwa.com/images/set/law-of-harmony.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lady of the Sea",
+    "imageFilename": "Lady of the Sea.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon a Tidestorm to deal <span class=\"ep-num\">13.68%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> ten times and <span class=\"ep-num\">164.16%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> one time to enemies. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Liberation DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Crown of Valor",
+        "icon": "https://arabwuwa.com/images/set/crown-of-valor.webp"
+      }
+    ]
+  },
+  {
+    "name": "The False Sovereign",
+    "imageFilename": "The False Sovereign.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "8s",
+    "description": "Transform into the False Sovereign and dash forward in a spinning strike, dealing <span class=\"ep-num\">55.35%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> 4 times. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Heavy Attack DMG Bonus. Upon casting Intro Skill, the False Sovereign is also summoned to deal <span class=\"ep-num\">405.00%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. Start with 2 charges. Gain 1 charge every 8s, up to 2 charges.",
+    "sonataSets": [
+      {
+        "name": "Crown of Valor",
+        "icon": "https://arabwuwa.com/images/set/crown-of-valor.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hurriclaw",
+    "imageFilename": "Hurriclaw.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Transform into Hurriclaw and charge forward, dealing <span class=\"ep-num\">156.60%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> upon hit plus <span class=\"ep-num\">156.60%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> with a sweep attack. Hold the Echo Skill to continue charging forward. Use Echo Skill again while charging to perform a sweep attack.",
+    "sonataSets": [
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      },
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Crown of Valor",
+        "icon": "https://arabwuwa.com/images/set/crown-of-valor.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Violet-Feathered Heron",
+    "imageFilename": "Nightmare_ Violet-Feathered Heron.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Violet-Feathered Heron and enter a Parry Stance. Counterattack when the Parry stance is over, dealing <span class=\"ep-num\">288%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. If attacked during Parry Stance, you can counterattack in advance and additionally recover 5 Concerto Energy.",
+    "sonataSets": [
+      {
+        "name": "Crown of Valor",
+        "icon": "https://arabwuwa.com/images/set/crown-of-valor.webp"
+      }
+    ]
+  },
+  {
+    "name": "Calcified Junrock",
+    "imageFilename": "Calcified Junrock.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Calcified Junrock that restores HP for nearby Resonators in the team by <span class=\"ep-num\">2.52%</span> of their Max HP, up to 5 times.",
+    "sonataSets": [
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      },
+      {
+        "name": "Crown of Valor",
+        "icon": "https://arabwuwa.com/images/set/crown-of-valor.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Aero Predator",
+    "imageFilename": "Nightmare_ Aero Predator.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon an <span class=\"ep-dmg ep-attr-aero\">Aero</span> Predator that throws a dart forward. The dart will bounce between enemies up to three times, dealing <span class=\"ep-num\">28.80%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> each time it hits.",
+    "sonataSets": [
+      {
+        "name": "Crown of Valor",
+        "icon": "https://arabwuwa.com/images/set/crown-of-valor.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Electro Predator",
+    "imageFilename": "Nightmare_ Electro Predator.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon an <span class=\"ep-dmg ep-attr-electro\">Electro</span> Predator to shoot the enemy 5 times. The first 4 shots deals <span class=\"ep-num\">17.28%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>, and the last deals <span class=\"ep-num\">46.08%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Crown of Valor",
+        "icon": "https://arabwuwa.com/images/set/crown-of-valor.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Hecate",
+    "imageFilename": "Nightmare_ Hecate.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "25s",
+    "description": "Transform into Nightmare: Hecate. Leap up and smash down, dealing 3 stages of damage, each dealing <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> equal to <span class=\"ep-num\">152.39%</span> of her ATK. The Resonator with the Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> Bonus and <span class=\"ep-num\">20.00%</span> Echo Skill DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chop Chop",
+    "imageFilename": "Chop Chop.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Chop Chop to perform a series of consecutive attacks. The first 6 strikes each deal <span class=\"ep-num\">19.26%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> and the finishing strike deals <span class=\"ep-num\">77.04%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      },
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Tambourinist",
+    "imageFilename": "Nightmare_ Tambourinist.webp",
+    "cost": 3,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Tambourinist that plays out Melodies of Annihilation. Any Resonator on the team gains the following effect for 10s upon obtaining a Melody of Annihilation: When the Resonator hits a target, the Tambourinist deals <span class=\"ep-num\">14.40%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> to the target, up to 10 times.",
+    "sonataSets": [
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      }
+    ]
+  },
+  {
+    "name": "Phantom: Chop Chop",
+    "imageFilename": "Phantom_ Chop Chop.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Chop Chop to perform a series of consecutive attacks. The first 6 strikes each deal <span class=\"ep-num\">19.26%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> and the finishing strike deals <span class=\"ep-num\">77.04%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      },
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      }
+    ]
+  },
+  {
+    "name": "Fae Ignis",
+    "imageFilename": "Fae Ignis.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Fae Ignis to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Glacio Predator",
+    "imageFilename": "Nightmare_ Glacio Predator.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-glacio\">Glacio</span> Predator that throws an ice spear, dealing <span class=\"ep-num\">46.08%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> on hit. Deal <span class=\"ep-num\">4.61%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> up to 10 times during the charging time, and <span class=\"ep-num\">23.04%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> when the spear explodes.",
+    "sonataSets": [
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Havoc Warrior",
+    "imageFilename": "Nightmare_ Havoc Warrior.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Transform into <span class=\"ep-dmg ep-attr-havoc\">Havoc</span> Warrior to attack up to 3 times, dealing <span class=\"ep-num\">171.73%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> each time.",
+    "sonataSets": [
+      {
+        "name": "Dream of the Lost",
+        "icon": "https://arabwuwa.com/images/set/dream-of-the-lost.webp"
+      }
+    ]
+  },
+  {
+    "name": "Reminiscence: Fleurdelys",
+    "imageFilename": "Reminiscence_ Fleurdelys.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Summon the Windcleaver to attack the target, dealing <span class=\"ep-num\">27.36%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> 8 times and <span class=\"ep-num\">136.80%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> once. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">10.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus. If this Resonator is Rover: <span class=\"ep-dmg ep-attr-aero\">Aero</span> or Cartethyia, grant another <span class=\"ep-num\">10.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus.",
+    "sonataSets": [
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Kelpie",
+    "imageFilename": "Nightmare_ Kelpie.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Nightmare: Kelpie to attack nearby targets, dealing <span class=\"ep-num\">405%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus. Switching out the Resonator with Outro Skill summons Nightmares: Kelpie to deal <span class=\"ep-num\">405.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Capitaneus",
+    "imageFilename": "Capitaneus.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Summon a Capitaneus to jump up and smash enemies, dealing <span class=\"ep-num\">118.80%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. This attack generates 4 extra Merciless Judgements, each dealing <span class=\"ep-num\">59.40%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Heavy Attack DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Pilgrim's Shell",
+    "imageFilename": "Pilgrim's Shell.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into a Pilgrim's Shell to attack nearby enemies, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Glacio Drake",
+    "imageFilename": "Glacio Drake.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-glacio\">Glacio</span> Drake to attack enemies, dealing <span class=\"ep-num\">25.92%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> 5 times.",
+    "sonataSets": [
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Devotee's Flesh",
+    "imageFilename": "Devotee's Flesh.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Devotee's Flesh to attack enemies, dealing <span class=\"ep-num\">43.20%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> 3 times.",
+    "sonataSets": [
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Sacerdos",
+    "imageFilename": "Sacerdos.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Sacerdos to attack enemies, dealing <span class=\"ep-num\">64.80%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> 2 times.",
+    "sonataSets": [
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Fusion Drake",
+    "imageFilename": "Fusion Drake.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-fusion\">Fusion</span> Drake to attack enemies, dealing <span class=\"ep-num\">25.92%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> 3 times.",
+    "sonataSets": [
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Spectro Drake",
+    "imageFilename": "Spectro Drake.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-spectro\">Spectro</span> Drake to attack enemies, dealing <span class=\"ep-num\">43.20%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> 3 times.",
+    "sonataSets": [
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      },
+      {
+        "name": "Windward Pilgrimage",
+        "icon": "https://arabwuwa.com/images/set/windward-pilgrimage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lioness of Glory",
+    "imageFilename": "Lioness of Glory.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon the Halberd of Glory to crush an area, dealing <span class=\"ep-num\">82.08%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> to nearby targets, and then blast off after a short delay, dealing <span class=\"ep-num\">191.52%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Liberation DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      }
+    ]
+  },
+  {
+    "name": "Sagittario",
+    "imageFilename": "Sagittario.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Transform into Sagittario to move a certain distance and perform a ranged attack, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. Getting attacked while moving in the Sagittario form triggers a damage-avoiding enhanced Dodge Counter, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> once and <span class=\"ep-num\">53.64%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> 5 times.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      }
+    ]
+  },
+  {
+    "name": "Electro Drake",
+    "imageFilename": "Electro Drake.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon an <span class=\"ep-dmg ep-attr-electro\">Electro</span> Drake to attack enemies, dealing <span class=\"ep-num\">43.20%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> 3 times.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      }
+    ]
+  },
+  {
+    "name": "La Guardia",
+    "imageFilename": "La Guardia.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Transform into La Guardia and attack nearby targets, dealing <span class=\"ep-num\">268.20%</span> Physical DMG. Hold the Echo Skill to maintain the Echo form for a while to slash enemies and cast a ranged attack forward. The slash deals <span class=\"ep-num\">268.20%</span> Physical DMG, and the ranged attack deals <span class=\"ep-num\">17.87%</span> Physical DMG up to 15 times.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      }
+    ]
+  },
+  {
+    "name": "Aero Drake",
+    "imageFilename": "Aero Drake.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon an <span class=\"ep-dmg ep-attr-aero\">Aero</span> Drake to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      },
+      {
+        "name": "Gusts of Welkin",
+        "icon": "https://arabwuwa.com/images/set/gusts-of-welkin.webp"
+      },
+      {
+        "name": "Flaming Clawprint",
+        "icon": "https://arabwuwa.com/images/set/flaming-clawprint.webp"
+      }
+    ]
+  },
+  {
+    "name": "Dragon of Dirge",
+    "imageFilename": "Dragon of Dirge.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Dragon of Dirge and summon a Grief Rift lasting for 5s. Periodically deal <span class=\"ep-num\">36.81%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> to enemies within the area of effect. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Basic Attack DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Diurnus Knight",
+    "imageFilename": "Diurnus Knight.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Diurnus Knight and charge forward to attack enemies with the sword, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. DMG dealt to enemies inflicted by <span class=\"ep-dmg ep-attr-spectro\">Spectro</span> Frazzle is increased by <span class=\"ep-num\">100.00%</span>.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chop Chop: Leftless",
+    "imageFilename": "Chop Chop_ Leftless.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Chop Chop: Leftless to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chop Chop: Rightless",
+    "imageFilename": "Chop Chop_ Rightless.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Chop Chop: Rightless to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lottie Lost",
+    "imageFilename": "Lottie Lost.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Lottie Lost to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Aero Prism",
+    "imageFilename": "Aero Prism.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon an <span class=\"ep-dmg ep-attr-aero\">Aero</span> Prism to attack enemies, dealing <span class=\"ep-num\">19.26%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chop Chop: Headless",
+    "imageFilename": "Chop Chop_ Headless.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Chop Chop: Headless to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Diggy Duggy",
+    "imageFilename": "Diggy Duggy.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Transform into Diggy Duggy and jump up into the air to smash onto enemies, dealing <span class=\"ep-num\">268.20%</span> Physical DMG.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Tidebreaking Courage",
+        "icon": "https://arabwuwa.com/images/set/tidebreaking-courage.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hecate",
+    "imageFilename": "Hecate.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Summon 3 twirling Crescent Servants around you. Crescent Servants attack enemies with their spinning blades, dealing <span class=\"ep-num\">45.59%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. Triggering a Counterattack with the Echo attacks extends the Crescent Servants’ duration. The Resonator with this Echo equipped in the main slot has their Coordinated Attack DMG increased by <span class=\"ep-num\">40.00%</span>.",
+    "sonataSets": [
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      },
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Tempest Mephis",
+    "imageFilename": "Nightmare_ Tempest Mephis.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Nightmare: Tempest Mephis and attack surrounding enemies, dealing <span class=\"ep-num\">405%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Skill DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Lampylumen Myriad",
+    "imageFilename": "Nightmare_ Lampylumen Myriad.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon a Nightmare: Lampylumen Myriad and attack nearby enemies, dealing <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> Bonus and has their Coordinated Attack DMG increased by <span class=\"ep-num\">30.00%</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Abyssal Patricius",
+    "imageFilename": "Abyssal Patricius.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Abyssal Patricius and charge forward to attack enemies, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>. The Resonator with this Echo equipped in the main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> Bonus.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Vitreum Dancer",
+    "imageFilename": "Vitreum Dancer.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Transform into Vitreum Dancer and attack surrounding enemies, dealing <span class=\"ep-num\">313.20%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nocturnus Knight",
+    "imageFilename": "Nocturnus Knight.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Nocturnus Knight and strike enemies in front of you from the air, dealing <span class=\"ep-num\">268.20%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chest Mimic",
+    "imageFilename": "Chest Mimic.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Chest Mimic to attack enemies with 3 consecutive strikes, each dealing <span class=\"ep-num\">64.19%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Galescourge Stalker",
+    "imageFilename": "Galescourge Stalker.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Galescourge Stalker that restores nearby party members' HP by <span class=\"ep-num\">2.70%</span> of their Max HP, up to 3 times.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hocus Pocus",
+    "imageFilename": "Hocus Pocus.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Hocus Pocus to attack enemies with 3 consecutive strikes, each dealing <span class=\"ep-num\">43.20%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Voltscourge Stalker",
+    "imageFilename": "Voltscourge Stalker.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Voltscourge Stalker to perform 3 stages of attacks on enemies, each dealing <span class=\"ep-num\">43.20%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      },
+      {
+        "name": "Empyrean Anthem",
+        "icon": "https://arabwuwa.com/images/set/empyrean-anthem.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lorelei",
+    "imageFilename": "Lorelei.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Lorelei and attack surrounding enemies, dealing <span class=\"ep-num\">405%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Basic Attack DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Impermanence Heron",
+    "imageFilename": "Nightmare_ Impermanence Heron.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Nightmare: Impermanence Heron and deliver up to 10 consecutive strikes to surrounding enemies, each dealing <span class=\"ep-num\">40.50%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Heavy Attack DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      }
+    ]
+  },
+  {
+    "name": "Cuddle Wuddle",
+    "imageFilename": "Cuddle Wuddle.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Transform into Cuddle Wuddle and attack enemies with 4 strikes dealing <span class=\"ep-num\">46.98%</span> Physical DMG and 1 strike dealing <span class=\"ep-num\">125.28%</span> Physical DMG.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      }
+    ]
+  },
+  {
+    "name": "Questless Knight",
+    "imageFilename": "Questless Knight.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Transform into Questless Knight and smash the surrounding enemies, dealing <span class=\"ep-num\">313.20%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      }
+    ]
+  },
+  {
+    "name": "Frostscourge Stalker",
+    "imageFilename": "Frostscourge Stalker.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Frostscourge Stalker to attack enemies, dealing <span class=\"ep-num\">129.60%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      },
+      {
+        "name": "Midnight Veil",
+        "icon": "https://arabwuwa.com/images/set/midnight-veil.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Mourning Aix",
+    "imageFilename": "Nightmare_ Mourning Aix.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon a Nightmare: Mourning Aix to attack surrounding enemies, dealing <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. DMG dealt to enemies inflicted by <span class=\"ep-dmg ep-attr-spectro\">Spectro</span> Frazzle is increased by <span class=\"ep-num\">100.00%</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> Bonus.",
+    "sonataSets": [
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      }
+    ]
+  },
+  {
+    "name": "Abyssal Mercator",
+    "imageFilename": "Abyssal Mercator.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Abyssal Mercator and summon 3 Ice Spikes to attack enemies, each dealing <span class=\"ep-num\">89.39%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      },
+      {
+        "name": "Eternal Radiance",
+        "icon": "https://arabwuwa.com/images/set/eternal-radiance.webp"
+      }
+    ]
+  },
+  {
+    "name": "Sentry Construct",
+    "imageFilename": "Sentry Construct.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Sentry Construct and attack enemies in front, dealing <span class=\"ep-num\">405%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>. Each time the Resonator with this Echo casts Resonance Liberation, it charges the Strike Capacitor. Once Strike Capacitor is at max level, the Echo Skill cooldown will be reset. Use Echo Skill to transform into Sentry Construct and dive into enemies from the air, dealing <span class=\"ep-num\">405%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> and freezing the target. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Skill DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Frosty Resolve",
+        "icon": "https://arabwuwa.com/images/set/frosty-resolve.webp"
+      }
+    ]
+  },
+  {
+    "name": "Mech Abomination",
+    "imageFilename": "Mech Abomination.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Strike the enemies in front, dealing <span class=\"ep-num\">48.64%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. Summon Mech Waste to attack enemies. Mech Waste deals <span class=\"ep-num\">320%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> on-hit and explode after a while to deal <span class=\"ep-num\">160%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. After casting this Echo Skill, increase current character's ATK by <span class=\"ep-num\">12.00%</span> for 15s. Damage dealt by Mech Waste is considered Outro Skill DMG.",
+    "sonataSets": [
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Flautist",
+    "imageFilename": "Flautist.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Flautist, continuously emitting <span class=\"ep-dmg ep-attr-electro\">Electro</span> lasers, dealing <span class=\"ep-num\">53.2%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> for a total of 10 times. Gain 1 Concerto Energy every time a hit lands.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chasm Guardian",
+    "imageFilename": "Chasm Guardian.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Chasm Guardian to perform a Leap Strike that deals <span class=\"ep-num\">273.60%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> on hit. Current character loses <span class=\"ep-num\">10.00%</span> HP after the hit lands. Periodically restore current character's HP after 5s for up to <span class=\"ep-num\">10.00%</span> of their Max HP.",
+    "sonataSets": [
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Spearback",
+    "imageFilename": "Spearback.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Spearback to perform 5 consecutive attacks. The first 4 attacks deal <span class=\"ep-num\">29.96%</span> Physical DMG, and the last deals <span class=\"ep-num\">51.36%</span> Physical DMG.",
+    "sonataSets": [
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Fusion Prism",
+    "imageFilename": "Fusion Prism.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-fusion\">Fusion</span> Prism to fire a crystal shard, dealing <span class=\"ep-num\">32%</span>+64 <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Baby Viridblaze Saurian",
+    "imageFilename": "Baby Viridblaze Saurian.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "2s",
+    "description": "Transform into Baby Viridblaze Saurian to rest in place, and slowly restore HP.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lava Larva",
+    "imageFilename": "Lava Larva.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Lava Larva that continuously attacks enemies, dealing <span class=\"ep-num\">38.4%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> with each hit. The Lava Larva disappears when the summoner is switched out or moves too far away.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Snip Snap",
+    "imageFilename": "Snip Snap.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Snip Snap that throws fireballs at the enemy, dealing <span class=\"ep-num\">32%</span>+64 <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> on-hit.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Vanguard Junrock",
+    "imageFilename": "Vanguard Junrock.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Vanguard Junrock that charges forward, dealing <span class=\"ep-num\">32.00%</span>+64 Physical DMG to enemies in its path.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hooscamp",
+    "imageFilename": "Hooscamp.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Transform into Hooscamp Flinger and pounce at the enemies, dealing <span class=\"ep-num\">48.00%</span>+96 <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Zig Zag",
+    "imageFilename": "Zig Zag.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Zig Zag that denotates <span class=\"ep-dmg ep-attr-spectro\">Spectro</span> energy, dealing <span class=\"ep-num\">48%</span>+96 <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> and creating a Stagnation Zone that lasts 1.8s.",
+    "sonataSets": [
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Tick Tack",
+    "imageFilename": "Tick Tack.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Tick Tack that charges and bites the enemy. The charge from Tick Tack will deal <span class=\"ep-num\">68.48%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> to the enemy, and the bite will deal <span class=\"ep-num\">102.72%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> to the enemy. Reduces enemy Vibration Strength by up to <span class=\"ep-num\">5.00%</span> during 5s.",
+    "sonataSets": [
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Diamondclaw",
+    "imageFilename": "Diamondclaw.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Transform into Crystal Scorpion and enter a Parry State. Counterattack when the Parry State is over, dealing <span class=\"ep-num\">48.00%</span>+96 Physical DMG.",
+    "sonataSets": [
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      },
+      {
+        "name": "Lingering Tunes",
+        "icon": "https://arabwuwa.com/images/set/lingering-tunes.webp"
+      }
+    ]
+  },
+  {
+    "name": "Bell-Borne Geochelone",
+    "imageFilename": "Bell-Borne Geochelone.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Activate the protection of Bell-Borne Geochelone. Deal <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> based on <span class=\"ep-num\">145.92%</span> of the current character's DEF to nearby enemies, and obtain a Bell-Borne Shield that lasts for 15s The Bell-Borne Shield provides <span class=\"ep-num\">50.00%</span> DMG Reduction and <span class=\"ep-num\">10.00%</span> DMG Boost for the current team members, and disappears after the current character is hit for 3 times.",
+    "sonataSets": [
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Impermanence Heron",
+    "imageFilename": "Impermanence Heron.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Impermanence Heron to fly up and smack down, dealing <span class=\"ep-num\">310.56%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. Long press to stay as Impermanence Heron Heron and continuously spit flames, each attack dealing <span class=\"ep-num\">55.73%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. Once the initial attack lands on any enemy, the current character regains 10 Resonance Energy. If the current character uses their Outro Skill within the next 15s, the next character’s damage dealt will be boosted by <span class=\"ep-num\">12%</span> for 15s.",
+    "sonataSets": [
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Glacio Dreadmane",
+    "imageFilename": "Glacio Dreadmane.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "20s",
+    "description": "Lacerate enemies as a <span class=\"ep-dmg ep-attr-glacio\">Glacio</span> Dreadmane, dealing <span class=\"ep-num\">214.4%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> on each hit. Equipped with 2 charges and can be cast mid-air. <span class=\"ep-dmg ep-attr-glacio\">Glacio</span> Dreadmane deals <span class=\"ep-num\">20%</span> more DMG while in mid-air and generates 6 Icicles upon landing, each dealing <span class=\"ep-num\">32%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Viridblaze Saurian",
+    "imageFilename": "Viridblaze Saurian.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Viridblaze Saurian to continuously spit fire, dealing <span class=\"ep-num\">17.12%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> 10 times.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Carapace",
+    "imageFilename": "Carapace.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Carapace to perform a spinning attack that deals <span class=\"ep-num\">112.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>, followed by a slash that deals <span class=\"ep-num\">168.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Stonewall Bracer",
+    "imageFilename": "Stonewall Bracer.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Stonewall Bracer and charge forward, dealing <span class=\"ep-num\">112.64%</span> Physical DMG on-hit, then smash to deal <span class=\"ep-num\">168.96%</span> Physical DMG, and gain a shield of <span class=\"ep-num\">10.00%</span> of current character's Max HP. Use the Echo skill again to exit the transformation state.",
+    "sonataSets": [
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Glacio Prism",
+    "imageFilename": "Glacio Prism.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-glacio\">Glacio</span> Prism that continuously fires three crystal shards, each dealing <span class=\"ep-num\">38.40%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Sabyr Boar",
+    "imageFilename": "Sabyr Boar.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Sabyr Boar to headbutt the enemy into the air, dealing <span class=\"ep-num\">32.00%</span>+64 Physical DMG.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Fission Junrock",
+    "imageFilename": "Fission Junrock.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Fission Junrock. Generate a Resonance Effect that restores <span class=\"ep-num\">2%</span> HP for friendly units each time. If not in combat, you can pick up minerals or plants nearby.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Whiff Whaff",
+    "imageFilename": "Whiff Whaff.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Whiff Whaff that triggers an air explosion, dealing <span class=\"ep-num\">51.36%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> and produce a Low-pressure Zone. The Low-pressure Zone continuously pulls enemies nearby towards the center for 2s, dealing <span class=\"ep-num\">19.97%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> up to 6 times.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Cruisewing",
+    "imageFilename": "Cruisewing.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Cruisewing that restores HP for all current team characters by <span class=\"ep-num\">1.80%</span> of their Max HPs plus an additional 80 points of HP, up to 4 times.",
+    "sonataSets": [
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      },
+      {
+        "name": "Moonlit Clouds",
+        "icon": "https://arabwuwa.com/images/set/moonlit-clouds.webp"
+      }
+    ]
+  },
+  {
+    "name": "Fallacy of No Return",
+    "imageFilename": "Fallacy of No Return.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Activate the Echo Skill to summon a fraction of the Fallacy of No Return's power and deal a blast to the surrounding area, inflicting <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">15.86%</span> of max HP, after which the Resonator gains <span class=\"ep-num\">10%</span> bonus Energy Regen and all team members <span class=\"ep-num\">10%</span> bonus ATK for 20s. Hold Echo Skill to unleash a series of flurry assaults at the cost of STA, each dealing <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">1.58%</span> of max HP; Release to end the assail in a powerful blow, dealing <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">19.82%</span> of max HP.",
+    "sonataSets": [
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hoochief",
+    "imageFilename": "Hoochief.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Use the Echo skill, transform into Hoochief Cyclone and attack with a palm, causing <span class=\"ep-num\">268.2%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Rocksteady Guardian",
+    "imageFilename": "Rocksteady Guardian.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Rocksteady Guardian and enter a Parry State. Upon being attacked, deal <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">8.29%</span> of the current character's Max HP, and perform a follow-up attack that deals <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">8.29%</span> of the current character's Max HP. Use the Echo skill again to exit the transformation. If the attack received is a Special Skill attack, interrupt the enemy's Special Skill and perform a two-stage follow-up attack, each inflicting <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">5.52%</span> of the current character's max HP. These follow-up attacks simultaneously launch three ground-breaking waves, each inflicting <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> equal to <span class=\"ep-num\">4.59%</span> of the current character's Max HP.",
+    "sonataSets": [
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Fusion Dreadmane",
+    "imageFilename": "Fusion Dreadmane.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-fusion\">Fusion</span> Dreadmane that fiercely strikes the enemy, dealing <span class=\"ep-num\">32%</span>+64 <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Dwarf Cassowary",
+    "imageFilename": "Dwarf Cassowary.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Dwarf Cassowary that tracks and attacks the enemy, dealing <span class=\"ep-num\">38.4%</span> Physical DMG 3 time(s).",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Rejuvenating Glow",
+        "icon": "https://arabwuwa.com/images/set/rejuvenating-glow.webp"
+      }
+    ]
+  },
+  {
+    "name": "Dreamless",
+    "imageFilename": "Dreamless.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Transform into Dreamless and perform 6 consecutive attacks. The first 5 attacks deal <span class=\"ep-num\">54.08%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> each, and the last attack deal <span class=\"ep-num\">270.40%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. The DMG of this Echo Skill is increased by <span class=\"ep-num\">50%</span> during the first 5s after Rover-<span class=\"ep-dmg ep-attr-havoc\">Havoc</span> casts Resonance Liberation.",
+    "sonataSets": [
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Crownless",
+    "imageFilename": "Crownless.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Crownless and perform up to 4 consecutive attacks. The first 2 attacks deal <span class=\"ep-num\">134.08%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> each, the 3rd attack deals <span class=\"ep-num\">100.56%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> 2 times, and the 4th attack deals <span class=\"ep-num\">67.04%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> 3 times. After the transformation, increase current character's <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> by <span class=\"ep-num\">12.00%</span> and Resonance Skill DMG by <span class=\"ep-num\">12.00%</span> for 15s.",
+    "sonataSets": [
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Crownless",
+    "imageFilename": "Nightmare_ Crownless.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "12s",
+    "description": "Transform into Nightmare: Crownless and attack enemies in front, dealing <span class=\"ep-num\">264.6%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Basic Attack DMG Bonus. This skill has 3 initial charges, replenished once every 12s, max 3 charges. When Nightmare: Crownless hits a target, DMG dealt by this skill is increased by <span class=\"ep-num\">20.00%</span> for 2s (does not stack).",
+    "sonataSets": [
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Roseshroom",
+    "imageFilename": "Roseshroom.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Roseshroom that fires a laser, dealing <span class=\"ep-num\">57.07%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> up to 3 times.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Tambourinist",
+    "imageFilename": "Tambourinist.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Summon a Tambourinist that periodically emits Melodies of Annihilation. Friendly units hit with Melodies of Annihilation deal an extra <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> of <span class=\"ep-num\">14.40%</span> with their attacks, up to 10 times.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Havoc Dreadmane",
+    "imageFilename": "Havoc Dreadmane.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into <span class=\"ep-dmg ep-attr-havoc\">Havoc</span> Dreadmane to perform tail strikes up to 2 times. Each strike deals <span class=\"ep-num\">116.64%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>. An additional strike will be performed on hit, dealing <span class=\"ep-num\">77.76%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Excarat",
+    "imageFilename": "Excarat.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "2s",
+    "description": "Transform into an Excarat and tunnel underground to advance. In this state, you have the ability to change your direction and are immune to damage.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Havoc Prism",
+    "imageFilename": "Havoc Prism.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-havoc\">Havoc</span> Prism to fire five crystal shards, each dealing <span class=\"ep-num\">23.04%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Chirpuff",
+    "imageFilename": "Chirpuff.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Chirpuff that self-inflates and blasts a powerful gust of wind forward 3 times. Each blast inflicts 3 <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> and pushes enemies backwards.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Baby Roseshroom",
+    "imageFilename": "Baby Roseshroom.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Baby Roseshroom that fires a laser, dealing <span class=\"ep-num\">32%</span>+64 <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Havoc Warrior",
+    "imageFilename": "Havoc Warrior.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Transform into <span class=\"ep-dmg ep-attr-havoc\">Havoc</span> Warrior to attack up to 3 times, dealing <span class=\"ep-num\">171.73%</span> <span class=\"ep-dmg ep-attr-havoc\">Havoc DMG</span> each time.",
+    "sonataSets": [
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      },
+      {
+        "name": "Havoc Eclipse",
+        "icon": "https://arabwuwa.com/images/set/havoc-eclipse.webp"
+      }
+    ]
+  },
+  {
+    "name": "Jué",
+    "imageFilename": "Jué.webp",
+    "cost": 4,
+    "class": "Calamity",
+    "cooldown": "20s",
+    "description": "Summon Jué to the aid. Jué soars through the air, dealing <span class=\"ep-num\">48.64%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>, and summons thunderbolts that strike nearby enemies up to 5 times, each hit dealing <span class=\"ep-num\">19.46%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. Jué then spirals downward, attacking surrounding enemies twice, each hit dealing <span class=\"ep-num\">48.64%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. Casting this Echo Skill grants the Resonator a Blessing of Time effect that lasts 15s, during when: - The Resonator gains <span class=\"ep-num\">16%</span> Resonance Skill DMG Bonus. - When the Resonator's Resonance Skill hits the target, inflict <span class=\"ep-num\">16%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> 1 time per second for 15s, considered as the Resonator's Resonance Skill DMG.",
+    "sonataSets": [
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Mourning Aix",
+    "imageFilename": "Mourning Aix.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Mourning Aix and perform 2 consecutive claw attacks, each attack dealing <span class=\"ep-num\">157.44%</span> and <span class=\"ep-num\">236.16%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> respectively. After the transformation, increase current character's <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> by <span class=\"ep-num\">12.00%</span> and Resonance Liberation DMG by <span class=\"ep-num\">12.00%</span> for 15s.",
+    "sonataSets": [
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Autopuppet Scout",
+    "imageFilename": "Autopuppet Scout.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Autopuppet Scout, dealing <span class=\"ep-num\">272%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> to the surroundings, and generate up to 3 Ice Walls to block off the enemies.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Cyan-Feathered Heron",
+    "imageFilename": "Cyan-Feathered Heron.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Cyan-Feathered Heron and charge at the enemies, dealing <span class=\"ep-num\">236.8%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>; This Echo Skill interrupts enemy Special Skills upon dealing damage.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lightcrusher",
+    "imageFilename": "Lightcrusher.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Lunge forward as a Lightcrusher, dealing <span class=\"ep-num\">135.36%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. Generate 6 Ablucence on hit. Each Ablucence explosion deals <span class=\"ep-num\">15.04%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span>. Hold the Echo Skill to stay in the Lightcrusher form, which allows you to leap up and pounce forward in the air for a short distance.",
+    "sonataSets": [
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Clang Bang",
+    "imageFilename": "Clang Bang.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Clang Bang that follows the enemy and eventually self-combusts, dealing <span class=\"ep-num\">32.00%</span>+64 <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Glacio Predator",
+    "imageFilename": "Glacio Predator.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-glacio\">Glacio</span> Predator that throws an ice spear, dealing <span class=\"ep-num\">46.08%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> on hit. Deal <span class=\"ep-num\">4.61%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> up to 10 times during the charging time, and <span class=\"ep-num\">23.04%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> when the spear explodes.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Gulpuff",
+    "imageFilename": "Gulpuff.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a Gulpuff that blows bubbles 5 times, each time dealing 5 <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Hoartoise",
+    "imageFilename": "Hoartoise.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "2s",
+    "description": "Transform into Hoartoise and slowly restore HP. Use the Echo skill again to exit the transformation state.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Spectro Prism",
+    "imageFilename": "Spectro Prism.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon a <span class=\"ep-dmg ep-attr-spectro\">Spectro</span> Prism to emit a laser that hits the enemy up to 8 times, dealing <span class=\"ep-num\">14.40%</span> <span class=\"ep-dmg ep-attr-spectro\">Spectro DMG</span> each time.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Celestial Light",
+        "icon": "https://arabwuwa.com/images/set/celestial-light.webp"
+      }
+    ]
+  },
+  {
+    "name": "Feilian Beringal",
+    "imageFilename": "Feilian Beringal.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Feilian Beringal to perform a powerful kick. If the kick lands on an enemy, immediately perform a follow-up strike. The kick deals <span class=\"ep-num\">231.84%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>, and the follow-up strike deals <span class=\"ep-num\">283.36%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>. After the follow-up strike hits, the current character's <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> increases by <span class=\"ep-num\">12.00%</span>, and the Heavy Attack DMG increases by <span class=\"ep-num\">12.00%</span> for 15s.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Feilian Beringal",
+    "imageFilename": "Nightmare_ Feilian Beringal.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Summon a Nightmare: Feilian Beringal to attack enemies, dealing <span class=\"ep-num\">164.16%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>. The remaining Whirlwind Beam will continuously attack surrounding enemies up to 5 times, each dealing <span class=\"ep-num\">21.89%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Heavy Attack DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      }
+    ]
+  },
+  {
+    "name": "Fusion Warrior",
+    "imageFilename": "Fusion Warrior.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Transform into <span class=\"ep-dmg ep-attr-fusion\">Fusion</span> Warrior to perform a Counterattack. If the Counterattack is successful, the cooldown time of this skill will be reduced by <span class=\"ep-num\">70.00%</span>, and <span class=\"ep-num\">288%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> will be dealt.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      }
+    ]
+  },
+  {
+    "name": "Traffic Illuminator",
+    "imageFilename": "Traffic Illuminator.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "15s",
+    "description": "Summon a Traffic Illuminator, immobilizing enemies for up to 1s. The immobilization will be lifted once the enemy is hit.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      }
+    ]
+  },
+  {
+    "name": "Aero Predator",
+    "imageFilename": "Aero Predator.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon an <span class=\"ep-dmg ep-attr-aero\">Aero</span> Predator that throws a dart forward. The dart will bounce between enemies up to three times, dealing <span class=\"ep-num\">28.80%</span> <span class=\"ep-dmg ep-attr-aero\">Aero DMG</span> each time it hits.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      },
+      {
+        "name": "Sierra Gale",
+        "icon": "https://arabwuwa.com/images/set/sierra-gale.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Thundering Mephis",
+    "imageFilename": "Nightmare_ Thundering Mephis.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Nightmare: Thundering Mephis and attack enemies in front, dealing <span class=\"ep-num\">405%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Liberation DMG Bonus.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      }
+    ]
+  },
+  {
+    "name": "Tempest Mephis",
+    "imageFilename": "Tempest Mephis.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Tempest Mephis to perform tail swing attacks followed by a claw attack. The lightning strike summoned by the tail swing deals <span class=\"ep-num\">102.48%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> each time, while the claw attack deals <span class=\"ep-num\">175.68%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. After the claw hit, increase the current character’s <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> by <span class=\"ep-num\">12.00%</span> and Heavy Attack DMG by <span class=\"ep-num\">12.00%</span> for 15s.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      }
+    ]
+  },
+  {
+    "name": "Thundering Mephis",
+    "imageFilename": "Thundering Mephis.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Thundering Mephis, engaging in a rapid assault of up to 6 strikes. The first 5 strikes deal <span class=\"ep-num\">132.61%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> each, while the final strike inflicts <span class=\"ep-num\">189.44%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>, with an additional <span class=\"ep-num\">31.57%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> from the thunder. After the final hit, increase the current character’s <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span> by <span class=\"ep-num\">12.00%</span> and Resonance Liberation DMG by <span class=\"ep-num\">12.00%</span> for 15s.",
+    "sonataSets": [
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lumiscale Construct",
+    "imageFilename": "Lumiscale Construct.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into a Lumiscale Construct and enter a Parry Stance. If you are not attacked during the Parry Stance, slash to deal <span class=\"ep-num\">553.6%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> when the stance finishes. If attacked, counterattack instantly, dealing <span class=\"ep-num\">830.4%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>. When hit with a Special Skill attack while in the Parry Stance, break the Special Skill and counterattack, dealing <span class=\"ep-num\">830.4%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      }
+    ]
+  },
+  {
+    "name": "Violet-Feathered Heron",
+    "imageFilename": "Violet-Feathered Heron.webp",
+    "cost": 3,
+    "class": "Elite",
+    "cooldown": "15s",
+    "description": "Transform into Violet-Feathered Heron and enter a Parry Stance. Counterattack when the Parry stance is over, dealing <span class=\"ep-num\">288%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>. If attacked during Parry Stance, you can counterattack in advance and additionally recover 5 Concerto Energy.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      }
+    ]
+  },
+  {
+    "name": "Electro Predator",
+    "imageFilename": "Electro Predator.webp",
+    "cost": 1,
+    "class": "Common",
+    "cooldown": "8s",
+    "description": "Summon an <span class=\"ep-dmg ep-attr-electro\">Electro</span> Predator to shoot the enemy 5 times. The first 4 shots deal <span class=\"ep-num\">17.28%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>, and the last deals <span class=\"ep-num\">46.08%</span> <span class=\"ep-dmg ep-attr-electro\">Electro DMG</span>.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      },
+      {
+        "name": "Void Thunder",
+        "icon": "https://arabwuwa.com/images/set/void-thunder.webp"
+      }
+    ]
+  },
+  {
+    "name": "Inferno Rider",
+    "imageFilename": "Inferno Rider.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Inferno Rider to launch up to 3 consecutive slashes in a row, each slash dealing <span class=\"ep-num\">242.40%</span>, <span class=\"ep-num\">282.80%</span>, and <span class=\"ep-num\">282.80%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> respectively. After the final hit, increase the current character’s <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> by <span class=\"ep-num\">12.00%</span> and Basic Attack DMG by <span class=\"ep-num\">12.00%</span> for 15s. Long press the Echo Skill to transform into Inferno Rider and enter the Riding Mode. When exiting the Riding Mode, deal <span class=\"ep-num\">282.80%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> to enemies in front.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      }
+    ]
+  },
+  {
+    "name": "Nightmare: Inferno Rider",
+    "imageFilename": "Nightmare_ Inferno Rider.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "25s",
+    "description": "Transform into Nightmare: Inferno Rider and jump to attack enemies in front, dealing <span class=\"ep-num\">405%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span>. The Resonator with this Echo equipped in their main slot gains <span class=\"ep-num\">12.00%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> Bonus and <span class=\"ep-num\">12.00%</span> Resonance Skill DMG Bonus. Hold Echo Skill to transform into Nightmare: Inferno Rider and enter Riding Mode. When exiting Riding Mode, deal <span class=\"ep-num\">283.50%</span> <span class=\"ep-dmg ep-attr-fusion\">Fusion DMG</span> to enemies in front.",
+    "sonataSets": [
+      {
+        "name": "Molten Rift",
+        "icon": "https://arabwuwa.com/images/set/molten-rift.webp"
+      }
+    ]
+  },
+  {
+    "name": "Lampylumen Myriad",
+    "imageFilename": "Lampylumen Myriad.webp",
+    "cost": 4,
+    "class": "Overlord",
+    "cooldown": "20s",
+    "description": "Transform into Lampylumen Myriad. Perform up to 3 consecutive attacks. Unleash a freezing shock by performing consecutive forward strikes, with the initial two strikes inflicting <span class=\"ep-num\">200.16%</span> and <span class=\"ep-num\">200.16%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> respectively, and the final strike dealing <span class=\"ep-num\">266.88%</span> <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span>. Enemies will be frozen on hit. Each shock increases the current character’s <span class=\"ep-dmg ep-attr-glacio\">Glacio DMG</span> by <span class=\"ep-num\">4.00%</span> and Resonance Skill DMG dealt by <span class=\"ep-num\">4.00%</span> for 15s, stacking up to 3 times.",
+    "sonataSets": [
+      {
+        "name": "Freezing Frost",
+        "icon": "https://arabwuwa.com/images/set/freezing-frost.webp"
+      }
+    ]
+  }
+]

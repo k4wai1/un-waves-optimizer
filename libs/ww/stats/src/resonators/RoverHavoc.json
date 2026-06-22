@@ -9,74 +9,82 @@
     "offTuneBuildupRate": 1.0
   },
   "statNodes": [
-      { "id": "node_atk_l1", "name": "ATK +1.8%", "buffs": { "atk_": 0.018 } },
-      { "id": "node_atk_l2", "name": "ATK +1.8%", "buffs": { "atk_": 0.018 } },
-      { "id": "node_atk_h1", "name": "ATK +4.2%", "buffs": { "atk_": 0.042 } },
-      { "id": "node_atk_h2", "name": "ATK +4.2%", "buffs": { "atk_": 0.042 } },
-      { "id": "node_havoc_l1", "name": "Havoc DMG +1.8%", "buffs": { "havoc_dmg_": 0.018 } },
-      { "id": "node_havoc_l2", "name": "Havoc DMG +1.8%", "buffs": { "havoc_dmg_": 0.018 } },
-      { "id": "node_havoc_h1", "name": "Havoc DMG +4.2%", "buffs": { "havoc_dmg_": 0.042 } },
-      { "id": "node_havoc_h2", "name": "Havoc DMG +4.2%", "buffs": { "havoc_dmg_": 0.042 } }
-    ],
-  "formula": {
-    "basic": {
-      "a1": [0.285, 0.3084, 0.3318, 0.3645, 0.3879, 0.4148, 0.4521, 0.4895, 0.5269, 0.5667],
-      "a2": [0.285, 0.3084, 0.3318, 0.3645, 0.3879, 0.4148, 0.4521, 0.4895, 0.5269, 0.5667],
-      "a3": [0.4275, 0.4626, 0.4977, 0.5467, 0.5818, 0.6221, 0.6782, 0.7343, 0.7904, 0.8500],
-      "a4": {
-        "hit1": [0.2027, 0.2193, 0.2360, 0.2592, 0.2758, 0.2950, 0.3215, 0.3481, 0.3747, 0.4030],
-        "hit2": [0.2027, 0.2193, 0.2360, 0.2592, 0.2758, 0.2950, 0.3215, 0.3481, 0.3747, 0.4030],
-        "hit3": [0.2027, 0.2193, 0.2360, 0.2592, 0.2758, 0.2950, 0.3215, 0.3481, 0.3747, 0.4030]
+    { "id": "node_atk_l1", "name": "ATK +1.8%", "buffs": { "atk_": 0.018 } },
+    { "id": "node_atk_l2", "name": "ATK +1.8%", "buffs": { "atk_": 0.018 } },
+    { "id": "node_atk_h1", "name": "ATK +4.2%", "buffs": { "atk_": 0.042 } },
+    { "id": "node_atk_h2", "name": "ATK +4.2%", "buffs": { "atk_": 0.042 } },
+    { "id": "node_havoc_l1", "name": "Havoc DMG +1.8%", "buffs": { "havoc_dmg_": 0.018 } },
+    { "id": "node_havoc_l2", "name": "Havoc DMG +1.8%", "buffs": { "havoc_dmg_": 0.018 } },
+    { "id": "node_havoc_h1", "name": "Havoc DMG +4.2%", "buffs": { "havoc_dmg_": 0.042 } },
+    { "id": "node_havoc_h2", "name": "Havoc DMG +4.2%", "buffs": { "havoc_dmg_": 0.042 } }
+  ],
+  "DMG": {
+    "Normal Attack: Tuneslayer": {
+      "Stage 1 DMG": { "scaler": "atk", "multiplier": [0.285, 0.3084, 0.3318, 0.3645, 0.3879, 0.4148, 0.4521, 0.4895, 0.5269, 0.5667] },
+      "Stage 2 DMG": { "scaler": "atk", "multiplier": [0.285, 0.3084, 0.3318, 0.3645, 0.3879, 0.4148, 0.4521, 0.4895, 0.5269, 0.5667] },
+      "Stage 3 DMG": { "scaler": "atk", "multiplier": [0.4275, 0.4626, 0.4977, 0.5467, 0.5818, 0.6221, 0.6782, 0.7343, 0.7904, 0.8500] },
+      "Stage 4 DMG": {
+        "hit1": { "scaler": "atk", "multiplier": [0.2027, 0.2193, 0.2360, 0.2592, 0.2758, 0.2950, 0.3215, 0.3481, 0.3747, 0.4030] },
+        "hit2": { "scaler": "atk", "multiplier": [0.2027, 0.2193, 0.2360, 0.2592, 0.2758, 0.2950, 0.3215, 0.3481, 0.3747, 0.4030] },
+        "hit3": { "scaler": "atk", "multiplier": [0.2027, 0.2193, 0.2360, 0.2592, 0.2758, 0.2950, 0.3215, 0.3481, 0.3747, 0.4030] }
       },
-      "a5": {
-        "hit1": [0.4750, 0.5140, 0.5529, 0.6075, 0.6464, 0.6912, 0.7535, 0.8159, 0.8782, 0.9444],
-        "hit2": [0.4750, 0.5140, 0.5529, 0.6075, 0.6464, 0.6912, 0.7535, 0.8159, 0.8782, 0.9444]
+      "Stage 5 DMG": {
+        "hit1": { "scaler": "atk", "multiplier": [0.4750, 0.5140, 0.5529, 0.6075, 0.6464, 0.6912, 0.7535, 0.8159, 0.8782, 0.9444] },
+        "hit2": { "scaler": "atk", "multiplier": [0.4750, 0.5140, 0.5529, 0.6075, 0.6464, 0.6912, 0.7535, 0.8159, 0.8782, 0.9444] }
+      },
+      "Heavy Attack DMG": { "scaler": "atk", "multiplier": [0.48, 0.5194, 0.5588, 0.6139, 0.6532, 0.6985, 0.7615, 0.8244, 0.8874, 0.9543] },
+      "Mid-air Attack DMG": { "scaler": "atk", "multiplier": [0.5890, 0.6373, 0.6856, 0.7533, 0.8016, 0.8571, 0.9344, 1.0117, 1.0889, 1.1710] },
+      "Dodge Counter DMG": { "scaler": "atk", "multiplier": [0.9025, 0.9766, 1.0506, 1.1542, 1.2282, 1.3133, 1.4317, 1.5501, 1.6685, 1.7943] }
+    },
+    "Resonance Skill: Wingblade": {
+      "hit1": { "scaler": "atk", "multiplier": [1.44, 1.5581, 1.6762, 1.8415, 1.9596, 2.0954, 2.2843, 2.4732, 2.6622, 2.8629] },
+      "hit2": { "scaler": "atk", "multiplier": [1.44, 1.5581, 1.6762, 1.8415, 1.9596, 2.0954, 2.2843, 2.4732, 2.6622, 2.8629] }
+    },
+    "Resonance Liberation: Deadening Abyss": {
+      "Deadening Abyss DMG": { "scaler": "atk", "multiplier": [7.65, 8.2773, 8.9046, 9.7829, 10.4102, 11.131, 12.1352, 13.1389, 14.1426, 15.209] }
+    },
+    "Forte Circuit: Umbra Eclipse": {
+      "Devastation DMG": { "scaler": "atk", "multiplier": [1.1475, 2.2814] },
+      "Umbra: Basic Attack Stage 1 DMG": { "scaler": "atk", "multiplier": [0.2835, 0.5637] },
+      "Umbra: Basic Attack Stage 2 DMG": { "scaler": "atk", "multiplier": [0.4725, 0.9394] },
+      "Umbra: Basic Attack Stage 3 DMG": { "scaler": "atk", "multiplier": [0.7830, 1.5567] },
+      "Umbra: Basic Attack Stage 4 DMG": {
+        "hit1": { "scaler": "atk", "multiplier": [0.1868, 0.3713] },
+        "hit2": { "scaler": "atk", "multiplier": [0.1868, 0.3713] },
+        "hit3": { "scaler": "atk", "multiplier": [0.1868, 0.3713] },
+        "hit4": { "scaler": "atk", "multiplier": [0.5603, 1.1139] }
+      },
+      "Umbra: Basic Attack Stage 5 DMG": {
+        "hit1": { "scaler": "atk", "multiplier": [0.1435, 0.2852] },
+        "hit2": { "scaler": "atk", "multiplier": [0.1435, 0.2852] },
+        "hit3": { "scaler": "atk", "multiplier": [0.1435, 0.2852] },
+        "hit4": { "scaler": "atk", "multiplier": [0.1435, 0.2852] },
+        "hit5": { "scaler": "atk", "multiplier": [0.5738, 1.1407] }
+      },
+      "Umbra: Heavy Attack DMG": { "scaler": "atk", "multiplier": [0.6480, 1.2883] },
+      "Umbra: Thwackblade DMG": {
+        "base": { "scaler": "atk", "multiplier": [0.6370, 1.2665] },
+        "hit1": { "scaler": "atk", "multiplier": [0.0500, 0.0995] },
+        "hit2": { "scaler": "atk", "multiplier": [0.0500, 0.0995] },
+        "hit3": { "scaler": "atk", "multiplier": [0.0500, 0.0995] },
+        "hit4": { "scaler": "atk", "multiplier": [0.0500, 0.0995] }
+      },
+      "Umbra: Plunging Attack DMG": { "scaler": "atk", "multiplier": [0.6200, 1.2327] },
+      "Umbra: Dodge Counter DMG": { "scaler": "atk", "multiplier": [1.5930, 3.1671] },
+      "Umbra: Lifetaker DMG": {
+        "hit1": { "scaler": "atk", "multiplier": [1.3900, 2.7635] },
+        "hit2": { "scaler": "atk", "multiplier": [1.3900, 2.7635] },
+        "extra1": { "scaler": "atk", "multiplier": [0.0500, 0.0995] },
+        "extra2": { "scaler": "atk", "multiplier": [0.0500, 0.0995] },
+        "extra3": { "scaler": "atk", "multiplier": [0.0500, 0.0995] },
+        "extra4": { "scaler": "atk", "multiplier": [0.0500, 0.0995] }
       }
     },
-    "heavy": [0.48, 0.5194, 0.5588, 0.6139, 0.6532, 0.6985, 0.7615, 0.8244, 0.8874, 0.9543],
-    "plunge": [0.5890, 0.6373, 0.6856, 0.7533, 0.8016, 0.8571, 0.9344, 1.0117, 1.0889, 1.1710],
-    "dodge_counter": [0.9025, 0.9766, 1.0506, 1.1542, 1.2282, 1.3133, 1.4317, 1.5501, 1.6685, 1.7943],
-    "skill": {
-      "hit1": [1.44, 1.5581, 1.6762, 1.8415, 1.9596, 2.0954, 2.2843, 2.4732, 2.6622, 2.8629],
-      "hit2": [1.44, 1.5581, 1.6762, 1.8415, 1.9596, 2.0954, 2.2843, 2.4732, 2.6622, 2.8629]
+    "Intro Skill: Instant of Annihilation": {
+      "Instant of Annihilation DMG": { "scaler": "atk", "multiplier": [0.50, 1.00] }
     },
-    "liberation": [7.65, 8.2773, 8.9046, 9.7829, 10.4102, 11.131, 12.1352, 13.1389, 14.1426, 15.209],
-    "dark_surge": {
-      "devastation": [1.1475, 2.2814],
-      "umbra_a1": [0.2835, 0.5637],
-      "umbra_a2": [0.4725, 0.9394],
-      "umbra_a3": [0.7830, 1.5567],
-      "umbra_a4": {
-        "hit1": [0.1868, 0.3713],
-        "hit2": [0.1868, 0.3713],
-        "hit3": [0.1868, 0.3713],
-        "hit4": [0.5603, 1.1139]
-      },
-      "umbra_a5": {
-        "hit1": [0.1435, 0.2852],
-        "hit2": [0.1435, 0.2852],
-        "hit3": [0.1435, 0.2852],
-        "hit4": [0.1435, 0.2852],
-        "hit5": [0.5738, 1.1407]
-      },
-      "umbra_heavy": [0.6480, 1.2883],
-      "umbra_thwackblade": {
-        "base": [0.6370, 1.2665],
-        "hit1": [0.0500, 0.0995],
-        "hit2": [0.0500, 0.0995],
-        "hit3": [0.0500, 0.0995],
-        "hit4": [0.0500, 0.0995]
-      },
-      "umbra_plunge": [0.6200, 1.2327],
-      "umbra_dodge": [1.5930, 3.1671],
-      "umbra_lifetaker": {
-        "hit1": [1.3900, 2.7635],
-        "hit2": [1.3900, 2.7635],
-        "extra1": [0.0500, 0.0995],
-        "extra2": [0.0500, 0.0995],
-        "extra3": [0.0500, 0.0995],
-        "extra4": [0.0500, 0.0995]
-      }
+    "Outro Skill: Soundweaver": {
+      "Soundweaver DMG DoT": { "scaler": "atk", "multiplier": [1.433] }
     }
   },
   "passives": {
@@ -91,16 +99,6 @@
       "target": "local",
       "conditions": ["dark_surge_active"],
       "mechanics": { "energy_regen_flat": 1.0, "cooldown_ms": 1000 }
-    },
-    "intro_instant_annihilation": {
-      "name": "Instant of Annihilation",
-      "target": "local",
-      "formula": { "dmg": [0.50, 1.00] } 
-    },
-    "outro_soundweaver": {
-      "name": "Soundweaver",
-      "target": "local",
-      "formula": { "field_tick": 1.433 } 
     }
   },
   "sequences": {

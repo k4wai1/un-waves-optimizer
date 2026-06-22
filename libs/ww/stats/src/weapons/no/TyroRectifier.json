@@ -1,0 +1,18 @@
+{
+  "id": "TyroRectifier",
+  "name": "Tyro Rectifier",
+  "rarity": 2,
+  "weaponType": "rectifier",
+  "baseStats": {
+    "atk": {
+      "90": 0.14800000000000002
+    }
+  },
+  "passives": {},
+  "mechanics": {
+    "description_raw": "Increases ATK by 5%.",
+    "maxStacks": 1,
+    "trigger": "todo",
+    "duration_sec": 0
+  }
+}
