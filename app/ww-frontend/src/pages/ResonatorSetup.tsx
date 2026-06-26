@@ -7,7 +7,10 @@ interface ResonatorSetupProps {
   equippedWeapon: any | null;
   weaponLevel: number;
   weaponRank: number;
+  weaponStacks: number;
 }
+
+// ─── Funciones utilitarias ─────────────────────────────────────────────
 
 const getSkillCategory = (skillName: string): string => {
   const lower = skillName.toLowerCase();
@@ -29,34 +32,80 @@ const categoryLabels: Record<string, string> = {
   outroSkill: 'Outro Skill'
 };
 
-export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRank }: ResonatorSetupProps) {
+/**
+ * Escanea recursivamente un nodo del DMG y devuelve la longitud
+ * máxima de cualquier array `multiplier` que encuentre.
+ * Si el nodo es directamente un array (formato legacy), devuelve su length.
+ */
+function getMaxMultiplierLength(node: unknown): number {
+  if (!node || typeof node !== 'object') return 0;
+
+  // Caso 1: Nodo hoja con { scaler, multiplier: [...] }
+  if ('multiplier' in node && Array.isArray((node as any).multiplier)) {
+    return (node as any).multiplier.length;
+  }
+
+  // Caso 2: Array plano de valores (formato legacy: [0.5, 0.6, ...])
+  if (Array.isArray(node)) {
+    return node.length;
+  }
+
+  // Caso 3: Objeto anidado → recorrer hijos
+  let maxLen = 0;
+  for (const value of Object.values(node)) {
+    maxLen = Math.max(maxLen, getMaxMultiplierLength(value));
+  }
+  return maxLen;
+}
+
+/**
+ * Para cada categoría de skill detectada en el DMG, calcula el
+ * nivel máximo disponible escaneando todos sus multipliers.
+ */
+function computeMaxSkillLevels(charData: any): Record<string, number> {
+  const dmgData = charData.DMG || charData.formula || {};
+  const maxLevels: Record<string, number> = {};
+
+  for (const [key, categoryData] of Object.entries(dmgData)) {
+    const category = getSkillCategory(key);
+    if (category === 'other') continue;
+    const catMax = getMaxMultiplierLength(categoryData);
+    if (catMax > 0) {
+      maxLevels[category] = Math.max(maxLevels[category] || 0, catMax);
+    }
+  }
+
+  return maxLevels;
+}
+
+// ─── Componente ────────────────────────────────────────────────────────
+
+export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRank, weaponStacks }: ResonatorSetupProps) {
   const availableLevels = Object.keys(charData.baseStats?.hp || {}).map(Number).sort((a, b) => a - b);
   const [level, setLevel] = useState(availableLevels[availableLevels.length - 1] || 90);
   const [activeNodes, setActiveNodes] = useState<Record<string, boolean>>({});
-  const [skillLevels, setSkillLevels] = useState({
-    normalAttack: 10,
-    resonanceSkill: 10,
-    resonanceLiberation: 10,
-    forteCircuit: 10,
-    introSkill: 10,
-    outroSkill: 10,
-    other: 10
-  });
   const [sequenceRank, setSequenceRank] = useState(0);
+
+  // Niveles máximos dinámicos por categoría, derivados del JSON
+  const maxSkillLevels = useMemo(() => computeMaxSkillLevels(charData), [charData]);
+
+  const [skillLevels, setSkillLevels] = useState<Record<string, number>>(() => {
+    // Inicialización perezosa: usar máximos reales desde el JSON
+    return Object.fromEntries(
+      Object.entries(maxSkillLevels).map(([cat, max]) => [cat, max])
+    );
+  });
 
   useEffect(() => {
     setLevel(availableLevels[availableLevels.length - 1] || 90);
     setActiveNodes({});
     setSequenceRank(0);
-    setSkillLevels({
-      normalAttack: 10,
-      resonanceSkill: 10,
-      resonanceLiberation: 10,
-      forteCircuit: 10,
-      introSkill: 10,
-      outroSkill: 10,
-      other: 10
-    });
+    // Reset a niveles máximos dinámicos al cambiar de personaje
+    setSkillLevels(
+      Object.fromEntries(
+        Object.entries(maxSkillLevels).map(([cat, max]) => [cat, max])
+      )
+    );
   }, [charData.name]);
 
   const combatContext = useMemo(() => {
@@ -103,11 +152,14 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
       else if (secondStatKey === 'energyRegen_') extraEnergyRegen_ += secondStatValue;
     }
 
-    // Aplicar passives del arma
+    // ✅ Aplicar passives del arma (con multiplicador de stacks si maxStacks > 1)
     if (equippedWeapon?.passives) {
+      const maxWeaponStacks = equippedWeapon.mechanics?.maxStacks ?? 1;
+      const stackMult = maxWeaponStacks > 1 ? weaponStacks : 1;
+
       Object.entries(equippedWeapon.passives).forEach(([key, values]: [string, any]) => {
         if (Array.isArray(values) && values[weaponRank] !== undefined) {
-          const passiveValue = values[weaponRank];
+          const passiveValue = values[weaponRank] * stackMult;
           
           if (key === 'atk_') extraAtk_ += passiveValue;
           else if (key === 'hp_') extraHp_ += passiveValue;
@@ -119,7 +171,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
       });
     }
 
-    // Procesar Inherent Stat Nodes
+    // ✅ Procesar Inherent Stat Nodes — con mapeo correcto a _dmg_
     if (charData.statNodes) {
       charData.statNodes.forEach((node: any) => {
         if (activeNodes[node.id] && node.buffs) {
@@ -130,8 +182,9 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
           if (node.buffs.critDmg_) extraCritDmg_ += node.buffs.critDmg_;
           if (node.buffs.energyRegen_) extraEnergyRegen_ += node.buffs.energyRegen_;
           
+          // ✅ Las keys en JSON son [elemento]_dmg_ (ej. havoc_dmg_, spectro_dmg_)
           Object.keys(elementalBonuses).forEach(elem => {
-            const key = `${elem}DmgBonus_`;
+            const key = `${elem}_dmg_`;
             if (node.buffs[key]) elementalBonuses[elem] += node.buffs[key];
           });
           
@@ -167,7 +220,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
       }
     }
 
-    const elementKey = charData.element.toLowerCase();
+    const elementKey = charData.element?.toLowerCase() || 'spectro';
     const totalElementalBonus = elementalBonuses[elementKey] || 0;
 
     return {
@@ -208,9 +261,10 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
       defIgnore_: 0,
       resTotal: 0.10
     };
-  }, [charData, level, activeNodes, sequenceRank, equippedWeapon, weaponLevel, weaponRank]);
+  }, [charData, level, activeNodes, sequenceRank, equippedWeapon, weaponLevel, weaponRank, weaponStacks]);
 
-  const elementalStatKey = `${charData.element.toLowerCase()}DmgBonus_`;
+  const elementKey = charData.element?.toLowerCase() || 'spectro';
+  const elementalStatKey = `${elementKey}DmgBonus_`;
   
   const statConfig = [
     { key: 'hp', label: 'HP', format: 'flat', alwaysShow: true },
@@ -220,7 +274,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
     { key: 'critRate_', label: 'Crit. Rate', format: 'percent', alwaysShow: true },
     { key: 'critDmg_', label: 'Crit. DMG', format: 'percent', alwaysShow: true },
     { key: 'energyRegen_', label: 'Energy Regen', format: 'percent', alwaysShow: true },
-    { key: elementalStatKey, label: `${charData.element} DMG Bonus`, format: 'percent', alwaysShow: true },
+    { key: elementalStatKey, label: `${charData.element || 'Spectro'} DMG Bonus`, format: 'percent', alwaysShow: true },
     { key: 'resonanceSkillDmgBonus_', label: 'Resonance Skill DMG Bonus', format: 'percent', alwaysShow: false },
     { key: 'basicAttackDmgBonus_', label: 'Basic Attack DMG Bonus', format: 'percent', alwaysShow: false },
     { key: 'heavyAttackDmgBonus_', label: 'Heavy Attack DMG Bonus', format: 'percent', alwaysShow: false },
@@ -231,7 +285,9 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
     if (!categoryData) return null;
     const rows: { name: string, mv: number, scaler: string }[] = [];
     const category = getSkillCategory(categoryName);
-    const currentSkillLevel = skillLevels[category as keyof typeof skillLevels];
+    const currentSkillLevel = skillLevels[category] || 1;
+    // Nivel máximo real para esta categoría
+    const maxLevel = maxSkillLevels[category] || 10;
 
     const parseNode = (node: any, path: string) => {
       if (node && typeof node === 'object' && node.scaler && Array.isArray(node.multiplier)) {
@@ -300,11 +356,11 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
           <div className="flex justify-between items-start mb-6">
             <div>
               <h3 className="text-3xl font-bold" style={{ color: 'var(--accent)' }}>{charData.name}</h3>
-              <span className="text-sm uppercase tracking-widest opacity-60 font-semibold">{charData.element}</span>
+              <span className="text-sm uppercase tracking-widest opacity-60 font-semibold">{charData.element || 'Unknown'}</span>
             </div>
             <div className="text-right">
               <span className="px-3 py-1 text-sm rounded-full font-medium border block" style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-muted)' }}>
-                {charData.weaponType}
+                {charData.weaponType || 'Unknown'}
               </span>
               {equippedWeapon && (
                 <span className="text-xs mt-1 block" style={{ color: 'var(--text-muted)' }}>
@@ -329,21 +385,32 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
             </div>
           </div>
 
+          {/* Skill Levels DINÁMICOS: dropdowns con niveles reales del JSON */}
           <div className="border-t pt-4 mt-4" style={{ borderColor: 'var(--border)' }}>
             <h4 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>Skill Levels</h4>
             <div className="grid grid-cols-2 gap-3">
-              {availableSkillCategories.map(cat => (
-                <div key={cat}>
-                  <label className="block text-xs mb-1" style={{ color: 'var(--text-muted)' }}>{categoryLabels[cat]}</label>
-                  <select 
-                    value={skillLevels[cat as keyof typeof skillLevels]} 
-                    onChange={(e) => setSkillLevels(prev => ({ ...prev, [cat]: Number(e.target.value) }))}
-                    className="w-full p-2 text-sm rounded-lg border outline-none" 
-                    style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
-                    {[...Array(10)].map((_, i) => <option key={i} value={i + 1}>Lv. {i + 1}</option>)}
-                  </select>
-                </div>
-              ))}
+              {availableSkillCategories.map(cat => {
+                const maxLevel = maxSkillLevels[cat] || 10;
+                const isFixed = maxLevel <= 1;
+                return (
+                  <div key={cat}>
+                    <label className="block text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
+                      {categoryLabels[cat] || cat}
+                      {isFixed && <span className="ml-1 opacity-50">(fixed)</span>}
+                    </label>
+                    <select 
+                      value={skillLevels[cat] || maxLevel}
+                      onChange={(e) => setSkillLevels(prev => ({ ...prev, [cat]: Number(e.target.value) }))}
+                      disabled={isFixed}
+                      className={`w-full p-2 text-sm rounded-lg border outline-none ${isFixed ? 'opacity-50 cursor-not-allowed' : ''}`}
+                      style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
+                      {[...Array(maxLevel)].map((_, i) => (
+                        <option key={i} value={i + 1}>Lv. {i + 1}</option>
+                      ))}
+                    </select>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>

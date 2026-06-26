@@ -8,14 +8,26 @@ import ShorekeeperData from '@ww-stats/resonators/Shorekeeper.json';
 import RoverHavocData from '@ww-stats/resonators/RoverHavoc.json';
 import SanhuaData from '@ww-stats/resonators/Sanhua.json';
 
-// Carga dinámica de todas las armas
-const weaponModules = import.meta.glob('../../libs/ww/stats/src/weapons/*.json', { eager: true });
-const weaponsDB = Object.values(weaponModules).map((module: any) => module.default);
+// Carga dinámica de todas las armas (JSON) - ¡Con el path corregido!
+const weaponModules = import.meta.glob('../../../libs/ww/stats/src/weapons/*.json', { eager: true });
+const weaponsDB = Object.values(weaponModules).map((module: any) => module.default || module);
 
+// ✅ Carga dinámica de imágenes de armas (.webp) - ¡Con el path corregido!
+const weaponImageModules = import.meta.glob<{ default: string }>(
+  '../../../libs/ww/stats/src/weapons/*.webp',
+  { eager: true, query: '?url' }
+);
+const weaponImages: Record<string, string> = {};
+for (const [filePath, mod] of Object.entries(weaponImageModules)) {
+  const id = filePath.split('/').pop()?.replace(/\.webp$/, '') || '';
+  weaponImages[id] = mod.default;
+}
+
+// Los datos JSON ahora incluyen "element" y "weaponType" en la raíz
 const characterDB: Record<string, any> = {
-  Shorekeeper: { ...ShorekeeperData, element: 'Spectro' },
-  RoverHavoc: { ...RoverHavocData, element: 'Havoc' },
-  Sanhua: { ...SanhuaData, element: 'Glacio' },
+  Shorekeeper: ShorekeeperData,
+  RoverHavoc: RoverHavocData,
+  Sanhua: SanhuaData,
 };
 
 const elementColors: Record<string, string> = {
@@ -34,12 +46,21 @@ export default function App() {
   const [weaponLevel, setWeaponLevel] = useState(90);
   const [weaponRank, setWeaponRank] = useState(0); // 0-4 para R1-R5
 
-  const charData = characterDB[selectedChar];
-  const accentColor = elementColors[charData.element || 'Spectro'];
+  // ✅ Estado de stacks del arma (para armas con mechanics.maxStacks > 1)
+  const [weaponStacks, setWeaponStacks] = useState(0);
 
-  // Filtrar armas por tipo de arma del personaje
+  const charData = characterDB[selectedChar];
+  // Data-driven: element y weaponType vienen directamente del JSON
+  const charElement = charData.element || 'Spectro';
+  const accentColor = elementColors[charElement] || elementColors.Spectro;
+
+  // Filtrar armas por tipo de arma del personaje, insensible a mayúsculas
   const filteredWeapons = useMemo(() => {
-    return weaponsDB.filter(w => w.weaponType === charData.weaponType);
+    if (!charData.weaponType) return [];
+    const targetType = charData.weaponType.toLowerCase();
+    
+    // Solo incluye armas que tengan un weaponType y coincidan
+    return weaponsDB.filter(w => w.weaponType && w.weaponType.toLowerCase() === targetType);
   }, [charData.weaponType]);
 
   // Auto-equipar arma cuando cambie el personaje
@@ -49,6 +70,11 @@ export default function App() {
     setWeaponLevel(90);
     setWeaponRank(0);
   }, [selectedChar, filteredWeapons]);
+
+  // ✅ Resetear stacks al cambiar de arma
+  useEffect(() => {
+    setWeaponStacks(0);
+  }, [equippedWeapon?.id]);
 
   useEffect(() => {
     document.documentElement.style.setProperty('--accent', accentColor);
@@ -120,6 +146,7 @@ export default function App() {
               equippedWeapon={equippedWeapon}
               weaponLevel={weaponLevel}
               weaponRank={weaponRank}
+              weaponStacks={weaponStacks}
             />
           )}
           {activeTab === 'weapons' && (
@@ -128,9 +155,12 @@ export default function App() {
               equippedWeapon={equippedWeapon}
               weaponLevel={weaponLevel}
               weaponRank={weaponRank}
+              weaponImages={weaponImages}
+              weaponStacks={weaponStacks}
               onWeaponChange={setEquippedWeapon}
               onLevelChange={setWeaponLevel}
               onRankChange={setWeaponRank}
+              onStacksChange={setWeaponStacks}
             />
           )}
           {activeTab === 'echoes' && <Placeholder title="Echo Inventory" />}
