@@ -3,32 +3,41 @@ import { Menu, X, Moon, Sun, Users, Hexagon, Sword, Zap } from 'lucide-react';
 import { ResonatorSetup } from './pages/ResonatorSetup';
 import { WeaponsSetup } from './pages/WeaponsSetup';
 import { Placeholder } from './pages/Placeholder';
+import { loadJson5Glob } from './engine/loadJson5';
 
-import ShorekeeperData from '@ww-stats/resonators/Shorekeeper.json';
-import RoverHavocData from '@ww-stats/resonators/RoverHavoc.json';
-import SanhuaData from '@ww-stats/resonators/Sanhua.json';
+// ─── Carga de datos con JSON5 (tolera comentarios, trailing commas, etc.) ───
 
-// Carga dinámica de todas las armas (JSON) - ¡Con el path corregido!
-const weaponModules = import.meta.glob('../../../libs/ww/stats/src/weapons/*.json', { eager: true });
-const weaponsDB = Object.values(weaponModules).map((module: any) => module.default || module);
+// Resonadores: todos los .json de la carpeta resonators
+const resonatorModules = import.meta.glob<{ default: string }>(
+  '../../../libs/ww/stats/src/resonators/*.json',
+  { eager: true, as: 'raw' }
+) as Record<string, string>;
+const allResonators = loadJson5Glob<any>(resonatorModules);
 
-// ✅ Carga dinámica de imágenes de armas (.webp) - ¡Con el path corregido!
+// Armas: todos los .json de la carpeta weapons (solo顶层, no subcarpetas)
+const weaponModules = import.meta.glob<{ default: string }>(
+  '../../../libs/ww/stats/src/weapons/*.json',
+  { eager: true, as: 'raw' }
+) as Record<string, string>;
+const allWeapons = loadJson5Glob<any>(weaponModules);
+
+// Filtra armas válidas (que tengan id, name, weaponType) y excluye templates
+const weaponsDB = Object.values(allWeapons).filter(
+  (w: any) => w && w.id && w.name && w.weaponType
+);
+
+// Imágenes de armas (.webp)
 const weaponImageModules = import.meta.glob<{ default: string }>(
   '../../../libs/ww/stats/src/weapons/*.webp',
   { eager: true, query: '?url' }
 );
 const weaponImages: Record<string, string> = {};
 for (const [filePath, mod] of Object.entries(weaponImageModules)) {
-  const id = filePath.split('/').pop()?.replace(/\.webp$/, '') || '';
+  const id = filePath.split('/').pop()?.replace(/\..+$/, '') || '';
   weaponImages[id] = mod.default;
 }
 
-// Los datos JSON ahora incluyen "element" y "weaponType" en la raíz
-const characterDB: Record<string, any> = {
-  Shorekeeper: ShorekeeperData,
-  RoverHavoc: RoverHavocData,
-  Sanhua: SanhuaData,
-};
+// ─── Constantes ───
 
 const elementColors: Record<string, string> = {
   Havoc: '#d8b4e2', Spectro: '#fef08a', Aero: '#bbf7d0',
@@ -44,26 +53,23 @@ export default function App() {
   // Estados de armas
   const [equippedWeapon, setEquippedWeapon] = useState<any | null>(null);
   const [weaponLevel, setWeaponLevel] = useState(90);
-  const [weaponRank, setWeaponRank] = useState(0); // 0-4 para R1-R5
-
-  // ✅ Estado de stacks del arma (para armas con mechanics.maxStacks > 1)
+  const [weaponRank, setWeaponRank] = useState(0);
   const [weaponStacks, setWeaponStacks] = useState(0);
 
-  const charData = characterDB[selectedChar];
-  // Data-driven: element y weaponType vienen directamente del JSON
-  const charElement = charData.element || 'Spectro';
+  const charData = allResonators[selectedChar] || allResonators.Shorekeeper;
+  const charElement = charData?.element || 'Spectro';
   const accentColor = elementColors[charElement] || elementColors.Spectro;
 
-  // Filtrar armas por tipo de arma del personaje, insensible a mayúsculas
+  // Filtro case-insensitive de armas por tipo
   const filteredWeapons = useMemo(() => {
-    if (!charData.weaponType) return [];
+    if (!charData?.weaponType) return [];
     const targetType = charData.weaponType.toLowerCase();
-    
-    // Solo incluye armas que tengan un weaponType y coincidan
-    return weaponsDB.filter(w => w.weaponType && w.weaponType.toLowerCase() === targetType);
-  }, [charData.weaponType]);
+    return weaponsDB.filter(
+      (w: any) => w.weaponType && w.weaponType.toLowerCase() === targetType
+    );
+  }, [charData?.weaponType]);
 
-  // Auto-equipar arma cuando cambie el personaje
+  // Auto-equipar arma al cambiar de personaje
   useEffect(() => {
     const defaultWeapon = filteredWeapons[0] || null;
     setEquippedWeapon(defaultWeapon);
@@ -71,11 +77,12 @@ export default function App() {
     setWeaponRank(0);
   }, [selectedChar, filteredWeapons]);
 
-  // ✅ Resetear stacks al cambiar de arma
+  // Resetear stacks al cambiar de arma
   useEffect(() => {
     setWeaponStacks(0);
   }, [equippedWeapon?.id]);
 
+  // Tema oscuro / claro
   useEffect(() => {
     document.documentElement.style.setProperty('--accent', accentColor);
     document.documentElement.style.setProperty('--bg-main', isDarkMode ? '#0f1115' : '#f8fafc');
@@ -130,7 +137,9 @@ export default function App() {
             <select value={selectedChar} onChange={(e) => setSelectedChar(e.target.value)}
               className="p-2 rounded-lg border outline-none font-bold cursor-pointer"
               style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
-              {Object.keys(characterDB).map(key => <option key={key} value={key}>{characterDB[key].name}</option>)}
+              {Object.keys(allResonators).map(key => (
+                allResonators[key]?.name ? <option key={key} value={key}>{allResonators[key].name}</option> : null
+              ))}
             </select>
           </div>
           <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 rounded-full" style={{ backgroundColor: 'var(--bg-main)' }}>

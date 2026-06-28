@@ -1,7 +1,7 @@
 {
   "name": "Shorekeeper",
   "element": "Spectro",
-  "weaponType": "rectifier",
+  "weaponType": "Rectifier",
   "baseStats": {
     "hp": { "1": 1337.00, "20": 3476.20, "40": 6621.49, "50": 8637.02, "60": 10655.89, "70": 12677.17, "80": 14693.63, "90": 16712.50 },
     "atk": { "1": 23.00, "20": 59.80, "40": 115.00, "50": 152.03, "60": 189.06, "70": 226.09, "80": 256.83, "90": 287.50 },
@@ -44,7 +44,7 @@
       "Healing (Flat Base)": { "scaler": "flat", "multiplier": [220, 239, 257, 282, 300, 321, 349, 378, 407, 436] }
     },
     "Intro Skill: Proof of Existence": {
-      "Enlightenment DMG": { "scaler": "atk", "multiplier": [0.2279, 0.2466, 0.2653, 0.2914, 0.3101, 0.3316, 0.3615, 0.3914, 0.4213, 0.4512] },
+      "Enlightenment DMG": { "scaler": "hp", "multiplier": [0.2279, 0.2466, 0.2653, 0.2914, 0.3101, 0.3316, 0.3615, 0.3914, 0.4213, 0.4512] },
       "Enlightenment Healing (% HP)": { "scaler": "hp", "multiplier": [0.0060, 0.0065, 0.0070, 0.0077, 0.0082, 0.0088, 0.0096, 0.0104, 0.0111, 0.0118] },
       "Enlightenment Healing (Flat)": { "scaler": "flat", "multiplier": [130, 141, 152, 167, 177, 190, 207, 224, 241, 258] },
       "Discernment DMG": { "scaler": "atk", "multiplier": [0.0988, 0.1069, 0.1150, 0.1264, 0.1345, 0.1438, 0.1567, 0.1697, 0.1826, 0.1955] },

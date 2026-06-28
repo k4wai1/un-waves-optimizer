@@ -182,10 +182,15 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
           if (node.buffs.critDmg_) extraCritDmg_ += node.buffs.critDmg_;
           if (node.buffs.energyRegen_) extraEnergyRegen_ += node.buffs.energyRegen_;
           
-          // ✅ Las keys en JSON son [elemento]_dmg_ (ej. havoc_dmg_, spectro_dmg_)
-          Object.keys(elementalBonuses).forEach(elem => {
-            const key = `${elem}_dmg_`;
-            if (node.buffs[key]) elementalBonuses[elem] += node.buffs[key];
+          // ✅ Detecta cualquier buff que termine en _dmg_ (havoc_dmg_, spectro_dmg_, etc.)
+          //    iterando las llaves del buff directamente, sin depender del listado de elementos.
+          Object.entries(node.buffs).forEach(([buffKey, value]) => {
+            if (buffKey.endsWith('_dmg_')) {
+              const element = buffKey.replace('_dmg_', '');
+              if (element in elementalBonuses) {
+                elementalBonuses[element] += value as number;
+              }
+            }
           });
           
           if (node.buffs.resonanceSkillDmgBonus_) resonanceSkillBonus += node.buffs.resonanceSkillDmgBonus_;
