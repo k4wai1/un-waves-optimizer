@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "StaticMist",
+    "name": "Static Mist",
+    "entityType": "weapon",
+    "rarity": 5,
+    "version": "1.0",
+    "weaponType": "Pistols",
+    "tags": [
+      "support",
+      "energy"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": {
+      "1": 47,
+      "20": 122.25,
+      "40": 232.8,
+      "50": 303.74,
+      "60": 374.68,
+      "70": 445.62,
+      "80": 516.56,
+      "90": 587.5
+    },
+    "def": null,
+    "secondaryAttribute": {
+      "key": "critRate_",
+      "values": {
+        "1": 0.054,
+        "20": 0.096,
+        "40": 0.138,
+        "50": 0.159,
+        "60": 0.18,
+        "70": 0.201,
+        "80": 0.222,
+        "90": 0.243
+      }
+    },
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "staticmist_energy_regen",
+      "name": "Energy Regen",
+      "descriptionTemplate": "Energy Regen +{value}%",
+      "target": "stat.energyRegen",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.128,
+            0.16,
+            0.192,
+            0.224,
+            0.256
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "staticmist_next_atk_on_outro",
+      "name": "Next Character ATK on Outro",
+      "descriptionTemplate": "After Outro Skill, incoming Resonator ATK +{value}% for 14s",
+      "target": "stat.atk",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.1,
+            0.125,
+            0.15,
+            0.175,
+            0.2
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": true,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "Grip the sleek frame and feel its cool surface as you aim down the sight. With a pull of the trigger, unleash a thick smoke barrage onto the battlefield with these powerful Pistols in your hands.",
+    "quote": null
+  }
+}

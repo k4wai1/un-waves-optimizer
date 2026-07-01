@@ -1,0 +1,90 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "LustrousRazor",
+    "name": "Lustrous Razor",
+    "entityType": "weapon",
+    "rarity": 5,
+    "version": "1.0",
+    "weaponType": "Broadblade",
+    "tags": [
+      "energy",
+      "burst",
+      "liberation"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "secondaryAttribute": {
+      "key": "atk_",
+      "values": {
+        "1": 0.081,
+        "20": 0.144,
+        "40": 0.207,
+        "50": 0.2385,
+        "60": 0.27,
+        "70": 0.3015,
+        "80": 0.333,
+        "90": 0.3645
+      }
+    },
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "lustrousrazor_energy_regen",
+      "name": "Energy Regen",
+      "descriptionTemplate": "Energy Regen +{value}%",
+      "target": "stat.energyRegen",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.128,
+            0.16,
+            0.192,
+            0.224,
+            0.256
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "lustrousrazor_lib_dmg_stacks",
+      "name": "Liberation DMG on Skill",
+      "descriptionTemplate": "After Resonance Skill, Liberation DMG +{value}% per stack, max 3, 12s",
+      "target": "stat.liberationDmg",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.07,
+            0.0875,
+            0.105,
+            0.1225,
+            0.14
+          ]
+        }
+      ],
+      "maxStacks": 3,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "Gaze upon this Broadblade, its sharp edges gleaming in the frigid air. Wield it to feel power coursing through you like a raging river.",
+    "quote": null
+  }
+}

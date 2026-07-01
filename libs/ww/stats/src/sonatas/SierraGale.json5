@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "SierraGale",
+    "name": "Sierra Gale",
+    "entityType": "sonata",
+    "rarity": 5,
+    "version": "1.0",
+    "element": null,
+    "weaponType": null,
+    "tags": [
+      "sonata"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "secondaryAttribute": null,
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "SierraGale_2pc",
+      "name": "SierraGale 2pc Bonus",
+      "description": "Aero DMG +10%",
+      "type": "stat",
+      "operation": "add",
+      "stat": "aero_dmg_",
+      "value": [
+        0.1
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 2 Echoes of this Sonata set",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "SierraGale_5pc",
+      "name": "SierraGale 5pc Conditional",
+      "description": "Aero DMG +30% for 15s after releasing Intro Skill.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "aero_dmg_",
+      "value": [
+        0.3
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 5 Echoes: onIntro",
+      "maxStacks": 1,
+      "durationSeconds": 15,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": null,
+    "quote": null
+  }
+}

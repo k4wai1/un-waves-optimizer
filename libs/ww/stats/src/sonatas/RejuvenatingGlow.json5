@@ -1,0 +1,69 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "RejuvenatingGlow",
+    "name": "Rejuvenating Glow",
+    "entityType": "sonata",
+    "rarity": 5,
+    "version": "1.0",
+    "element": null,
+    "weaponType": null,
+    "tags": [
+      "sonata"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "secondaryAttribute": null,
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "RejuvenatingGlow_2pc",
+      "name": "RejuvenatingGlow 2pc Bonus",
+      "description": "Healing Bonus +10%",
+      "type": "stat",
+      "operation": "add",
+      "stat": "healing_bonus_",
+      "value": [
+        0.1
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 2 Echoes of this Sonata set",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "RejuvenatingGlow_5pc",
+      "name": "RejuvenatingGlow 5pc Conditional",
+      "description": "Increases the ATK of all party members by 15% for 30s upon healing allies.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "atk_",
+      "value": [
+        0.15
+      ],
+      "affects": "party",
+      "howToActivate": "Equip 5 Echoes: onHeal",
+      "maxStacks": 1,
+      "durationSeconds": 30,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": null,
+    "quote": null
+  }
+}

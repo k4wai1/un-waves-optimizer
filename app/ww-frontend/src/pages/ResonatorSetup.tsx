@@ -1,6 +1,11 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Activity } from 'lucide-react';
-import { calculateDamage, type CombatContext } from '../engine/calculator';
+import { Activity, Layers } from 'lucide-react';
+import { calculateDamage, DEFAULT_ENEMY, type CombatContext } from '../engine/calculator';
+import {
+  resolveEffects, indexEffects,
+  calculateActionDamage, formatDescription,
+  type Effect, type ActiveEffect, type Action as CalcAction,
+} from '../engine/effectResolver';
 
 interface ResonatorSetupProps {
   charData: any;
@@ -10,326 +15,195 @@ interface ResonatorSetupProps {
   weaponStacks: number;
 }
 
-// ─── Funciones utilitarias ─────────────────────────────────────────────
-
-const getSkillCategory = (skillName: string): string => {
-  const lower = skillName.toLowerCase();
-  if (lower.includes('normal attack')) return 'normalAttack';
-  if (lower.includes('resonance skill')) return 'resonanceSkill';
-  if (lower.includes('resonance liberation')) return 'resonanceLiberation';
-  if (lower.includes('forte')) return 'forteCircuit';
-  if (lower.includes('intro')) return 'introSkill';
-  if (lower.includes('outro')) return 'outroSkill';
-  return 'other';
-};
-
-const categoryLabels: Record<string, string> = {
-  normalAttack: 'Normal Attack',
-  resonanceSkill: 'Resonance Skill',
-  resonanceLiberation: 'Resonance Liberation',
-  forteCircuit: 'Forte Circuit',
-  introSkill: 'Intro Skill',
-  outroSkill: 'Outro Skill'
-};
-
-/**
- * Escanea recursivamente un nodo del DMG y devuelve la longitud
- * máxima de cualquier array `multiplier` que encuentre.
- * Si el nodo es directamente un array (formato legacy), devuelve su length.
- */
-function getMaxMultiplierLength(node: unknown): number {
-  if (!node || typeof node !== 'object') return 0;
-
-  // Caso 1: Nodo hoja con { scaler, multiplier: [...] }
-  if ('multiplier' in node && Array.isArray((node as any).multiplier)) {
-    return (node as any).multiplier.length;
-  }
-
-  // Caso 2: Array plano de valores (formato legacy: [0.5, 0.6, ...])
-  if (Array.isArray(node)) {
-    return node.length;
-  }
-
-  // Caso 3: Objeto anidado → recorrer hijos
-  let maxLen = 0;
-  for (const value of Object.values(node)) {
-    maxLen = Math.max(maxLen, getMaxMultiplierLength(value));
-  }
-  return maxLen;
+function getStats(d: any): any { if (!d) return {}; return d.stats || d.baseStats || {}; }
+function getMeta(d: any): any { if (!d) return {}; return d.metadata || d; }
+function getStatValue(s: any, k: string, lv: number, fb: number): number {
+  const o = s[k]; if (!o || typeof o !== 'object') return fb;
+  return o[String(lv)] ?? o['90'] ?? fb;
 }
 
-/**
- * Para cada categoría de skill detectada en el DMG, calcula el
- * nivel máximo disponible escaneando todos sus multipliers.
- */
-function computeMaxSkillLevels(charData: any): Record<string, number> {
-  const dmgData = charData.DMG || charData.formula || {};
-  const maxLevels: Record<string, number> = {};
+const typeLabels: Record<string, string> = {
+  basicAttack: 'Normal Attack', heavyAttack: 'Heavy Attack', plungingAttack: 'Plunging Attack',
+  dodgeCounter: 'Dodge Counter', resonanceSkill: 'Resonance Skill', resonanceLiberation: 'Resonance Liberation',
+  forteCircuit: 'Forte Circuit', introSkill: 'Intro Skill', outroSkill: 'Outro Skill', echoSkill: 'Echo Skill',
+};
 
-  for (const [key, categoryData] of Object.entries(dmgData)) {
-    const category = getSkillCategory(key);
-    if (category === 'other') continue;
-    const catMax = getMaxMultiplierLength(categoryData);
-    if (catMax > 0) {
-      maxLevels[category] = Math.max(maxLevels[category] || 0, catMax);
-    }
-  }
-
-  return maxLevels;
-}
-
-// ─── Componente ────────────────────────────────────────────────────────
+const statNames: Record<string, string> = {
+  critRate_: 'Crit. Rate', critDmg_: 'Crit. DMG', energyRegen_: 'Energy Regen',
+  skillDmg_: 'Skill DMG', basicDmg_: 'Basic DMG', heavyDmg_: 'Heavy DMG',
+  liberationDmg_: 'Liberation DMG', echoDmg_: 'Echo DMG',
+  coordinated_dmg_: 'Coord. DMG', outroDmg_: 'Outro DMG',
+  healing_bonus_: 'Healing Bonus',
+};
 
 export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRank, weaponStacks }: ResonatorSetupProps) {
-  const availableLevels = Object.keys(charData.baseStats?.hp || {}).map(Number).sort((a, b) => a - b);
+  if (!charData) return <div className="p-6 text-center opacity-50" style={{ color: 'var(--text-muted)' }}>No character data available</div>;
+
+  const meta = getMeta(charData);
+  const stats = getStats(charData);
+  const availableLevels = Object.keys(stats.hp || {}).map(Number).sort((a, b) => a - b);
   const [level, setLevel] = useState(availableLevels[availableLevels.length - 1] || 90);
   const [activeNodes, setActiveNodes] = useState<Record<string, boolean>>({});
   const [sequenceRank, setSequenceRank] = useState(0);
 
-  // Niveles máximos dinámicos por categoría, derivados del JSON
-  const maxSkillLevels = useMemo(() => computeMaxSkillLevels(charData), [charData]);
+  const allEffects: Effect[] = useMemo(() => {
+    const ce: Effect[] = charData.effects || [];
+    const we: Effect[] = equippedWeapon?.effects || [];
+    return [...ce, ...we];
+  }, [charData, equippedWeapon]);
+  const effectsDb = useMemo(() => indexEffects(allEffects), [allEffects]);
 
-  const [skillLevels, setSkillLevels] = useState<Record<string, number>>(() => {
-    // Inicialización perezosa: usar máximos reales desde el JSON
-    return Object.fromEntries(
-      Object.entries(maxSkillLevels).map(([cat, max]) => [cat, max])
-    );
-  });
+  const [effectStates, setEffectStates] = useState<Record<string, ActiveEffect>>({});
 
   useEffect(() => {
-    setLevel(availableLevels[availableLevels.length - 1] || 90);
-    setActiveNodes({});
-    setSequenceRank(0);
-    // Reset a niveles máximos dinámicos al cambiar de personaje
-    setSkillLevels(
-      Object.fromEntries(
-        Object.entries(maxSkillLevels).map(([cat, max]) => [cat, max])
-      )
-    );
-  }, [charData.name]);
+    const init: Record<string, ActiveEffect> = {};
+    for (const e of allEffects) {
+      const seqNum = parseInt(e.id.split('s')[1]?.split('_')[0] || '0', 10) || 0;
+      init[e.id] = {
+        effectId: e.id, rank: 0, stacks: Math.min(1, e.maxStacks),
+        enabled: e.enabledByDefault ?? (seqNum > 0 && seqNum <= sequenceRank),
+      };
+    }
+    setEffectStates(init);
+  }, [charData?.metadata?.id, equippedWeapon?.metadata?.id, sequenceRank]);
+
+  // Actions
+  const actions: any[] = charData.actions || [];
+  const actionsByType = useMemo(() => {
+    const m: Record<string, any[]> = {};
+    for (const a of actions) { if (!m[a.type]) m[a.type] = []; m[a.type].push(a); }
+    return m;
+  }, [actions]);
+  const availableTypes = Object.keys(actionsByType).filter(t => typeLabels[t]);
+
+  const maxSkillLevels = useMemo(() => {
+    const lv: Record<string, number> = {};
+    for (const a of actions) for (const sc of a.scaling || []) {
+      const len = sc.multiplier?.length || 0;
+      if (len > (lv[a.type] || 0)) lv[a.type] = len;
+    }
+    return lv;
+  }, [actions]);
+
+  const [skillLevels, setSkillLevels] = useState<Record<string, number>>({});
+  useEffect(() => {
+    setSkillLevels(Object.fromEntries(Object.entries(maxSkillLevels).map(([t, m]) => [t, m])));
+  }, [charData?.metadata?.id]);
+
+  const weaponStats = getStats(equippedWeapon);
 
   const combatContext = useMemo(() => {
-    const baseHp = charData.baseStats.hp[level.toString()] || charData.baseStats.hp["90"] || 800;
-    const baseAtk = charData.baseStats.atk[level.toString()] || charData.baseStats.atk["90"] || 300;
-    const baseDef = charData.baseStats.def[level.toString()] || charData.baseStats.def["90"] || 100;
-    const baseTuneBreak = charData.baseStats.tuneBreakBoost?.[level.toString()] || 0;
-    
-    // ========== INTEGRACIÓN DE ARMA ==========
+    const baseHp = getStatValue(stats, 'hp', level, 800);
+    const baseAtk = getStatValue(stats, 'atk', level, 300);
+    const baseDef = getStatValue(stats, 'def', level, 100);
     let weaponAtk = 0;
-    if (equippedWeapon) {
-      const weaponLevelKey = weaponLevel.toString();
-      weaponAtk = equippedWeapon.baseStats.atk[weaponLevelKey] || equippedWeapon.baseStats.atk["90"] || 0;
-    }
+    if (equippedWeapon) weaponAtk = getStatValue(weaponStats, 'atk', weaponLevel, 0);
 
-    let extraHp_ = 0;
-    let extraAtk_ = 0;
-    let extraDef_ = 0;
-    let extraCritRate_ = 0;
-    let extraCritDmg_ = 0;
-    let extraEnergyRegen_ = 0;
-    
-    const elementalBonuses: Record<string, number> = {
-      physical: 0, glacio: 0, fusion: 0, electro: 0, aero: 0, spectro: 0, havoc: 0
+    const ctx: CombatContext = {
+      hp: baseHp, atk: baseAtk + weaponAtk, def: baseDef,
+      tuneBreakBoost: stats.tuneBreakBoost ?? 0,
+      maxSTA: 0, maxFlightSTA: 0,
+      critRate_: 0.05, critDmg_: 1.50, energyRegen_: 0,
+      allDmgBonus_: 0, dmgAmplify_: 0, offTuneBuildupRate_: 0,
+      resonanceSkillDmgBonus_: 0, basicAttackDmgBonus_: 0, heavyAttackDmgBonus_: 0,
+      resonanceLiberationDmgBonus_: 0, echoSkillDmgBonus_: 0,
+      coordinatedDmgBonus_: 0, outroSkillDmgBonus_: 0,
+      physicalDmgBonus_: 0, glacioDmgBonus_: 0, fusionDmgBonus_: 0, electroDmgBonus_: 0,
+      aeroDmgBonus_: 0, spectroDmgBonus_: 0, havocDmgBonus_: 0,
+      physicalRes_: 0, glacioRes_: 0, fusionRes_: 0, electroRes_: 0, aeroRes_: 0, spectroRes_: 0, havocRes_: 0,
+      healingBonus_: 0, attackerLvl: level, defIgnore_: 0,
+      enemy: JSON.parse(JSON.stringify(DEFAULT_ENEMY)),
     };
-    
-    let resonanceSkillBonus = 0;
-    let basicAttackBonus = 0;
-    let heavyAttackBonus = 0;
-    let resonanceLiberationBonus = 0;
-    let echoSkillBonus = 0;
 
-    // Aplicar secondStat del arma
-    if (equippedWeapon?.secondStat) {
-      const weaponLevelKey = weaponLevel.toString();
-      const secondStatValue = equippedWeapon.secondStat.values[weaponLevelKey] || equippedWeapon.secondStat.values["90"] || 0;
-      const secondStatKey = equippedWeapon.secondStat.statKey;
-
-      if (secondStatKey === 'atk_') extraAtk_ += secondStatValue;
-      else if (secondStatKey === 'hp_') extraHp_ += secondStatValue;
-      else if (secondStatKey === 'def_') extraDef_ += secondStatValue;
-      else if (secondStatKey === 'critRate_') extraCritRate_ += secondStatValue;
-      else if (secondStatKey === 'critDmg_') extraCritDmg_ += secondStatValue;
-      else if (secondStatKey === 'energyRegen_') extraEnergyRegen_ += secondStatValue;
+    // secondaryAttribute
+    const sa = weaponStats?.secondaryAttribute;
+    if (sa?.values) {
+      const v = sa.values[String(weaponLevel)] ?? sa.values['90'] ?? 0;
+      if (sa.key === 'critRate_') ctx.critRate_ += v;
+      else if (sa.key === 'critDmg_') ctx.critDmg_ += v;
+      else if (sa.key === 'energyRegen_') ctx.energyRegen_ += v;
     }
 
-    // ✅ Aplicar passives del arma (con multiplicador de stacks si maxStacks > 1)
-    if (equippedWeapon?.passives) {
-      const maxWeaponStacks = equippedWeapon.mechanics?.maxStacks ?? 1;
-      const stackMult = maxWeaponStacks > 1 ? weaponStacks : 1;
-
-      Object.entries(equippedWeapon.passives).forEach(([key, values]: [string, any]) => {
-        if (Array.isArray(values) && values[weaponRank] !== undefined) {
-          const passiveValue = values[weaponRank] * stackMult;
-          
-          if (key === 'atk_') extraAtk_ += passiveValue;
-          else if (key === 'hp_') extraHp_ += passiveValue;
-          else if (key === 'def_') extraDef_ += passiveValue;
-          else if (key === 'critRate_') extraCritRate_ += passiveValue;
-          else if (key === 'critDmg_') extraCritDmg_ += passiveValue;
-          else if (key === 'energyRegen_') extraEnergyRegen_ += passiveValue;
-        }
-      });
-    }
-
-    // ✅ Procesar Inherent Stat Nodes — con mapeo correcto a _dmg_
-    if (charData.statNodes) {
-      charData.statNodes.forEach((node: any) => {
-        if (activeNodes[node.id] && node.buffs) {
-          if (node.buffs.hp_) extraHp_ += node.buffs.hp_;
-          if (node.buffs.atk_) extraAtk_ += node.buffs.atk_;
-          if (node.buffs.def_) extraDef_ += node.buffs.def_;
-          if (node.buffs.critRate_) extraCritRate_ += node.buffs.critRate_;
-          if (node.buffs.critDmg_) extraCritDmg_ += node.buffs.critDmg_;
-          if (node.buffs.energyRegen_) extraEnergyRegen_ += node.buffs.energyRegen_;
-          
-          // ✅ Detecta cualquier buff que termine en _dmg_ (havoc_dmg_, spectro_dmg_, etc.)
-          //    iterando las llaves del buff directamente, sin depender del listado de elementos.
-          Object.entries(node.buffs).forEach(([buffKey, value]) => {
-            if (buffKey.endsWith('_dmg_')) {
-              const element = buffKey.replace('_dmg_', '');
-              if (element in elementalBonuses) {
-                elementalBonuses[element] += value as number;
-              }
-            }
-          });
-          
-          if (node.buffs.resonanceSkillDmgBonus_) resonanceSkillBonus += node.buffs.resonanceSkillDmgBonus_;
-          if (node.buffs.basicAttackDmgBonus_) basicAttackBonus += node.buffs.basicAttackDmgBonus_;
-          if (node.buffs.heavyAttackDmgBonus_) heavyAttackBonus += node.buffs.heavyAttackDmgBonus_;
-          if (node.buffs.resonanceLiberationDmgBonus_) resonanceLiberationBonus += node.buffs.resonanceLiberationDmgBonus_;
-          if (node.buffs.echoSkillDmgBonus_) echoSkillBonus += node.buffs.echoSkillDmgBonus_;
-        }
-      });
-    }
-
-    // Procesar Sequences activas
-    if (charData.sequences && sequenceRank > 0) {
-      for (let i = 1; i <= sequenceRank; i++) {
-        const seq = charData.sequences[`s${i}`];
-        if (seq?.buffs) {
-          if (seq.buffs.hp_) extraHp_ += seq.buffs.hp_;
-          if (seq.buffs.atk_) extraAtk_ += seq.buffs.atk_;
-          if (seq.buffs.def_) extraDef_ += seq.buffs.def_;
-          if (seq.buffs.critRate_) extraCritRate_ += seq.buffs.critRate_;
-          if (seq.buffs.critDmg_) extraCritDmg_ += seq.buffs.critDmg_;
-          if (seq.buffs.skill_dmg_) resonanceSkillBonus += seq.buffs.skill_dmg_;
-          if (seq.buffs.energyRegen_) extraEnergyRegen_ += seq.buffs.energyRegen_;
-          
-          Object.keys(elementalBonuses).forEach(elem => {
-            const key = `${elem}_dmg_`;
-            if (seq.buffs[key]) elementalBonuses[elem] += seq.buffs[key];
-          });
-          
-          if (seq.buffs.havoc_dmg_) elementalBonuses.havoc += seq.buffs.havoc_dmg_;
-        }
+    // Stat nodes
+    const nodes = stats.statNodes || charData.statNodes || [];
+    for (const node of nodes) {
+      if (activeNodes[node.id] && node.buffs) {
+        // hp_/atk_/def_ handled at end
+        let hpPct = 0, atkPct = 0, defPct = 0;
+        Object.entries(node.buffs).forEach(([bk, bv]) => {
+          const val = bv as number;
+          if (bk === 'hp_') { hpPct += val; return; }
+          if (bk === 'atk_') { atkPct += val; return; }
+          if (bk === 'def_') { defPct += val; return; }
+          const map: Record<string, string> = {
+            critRate_: 'critRate_', critDmg_: 'critDmg_', energyRegen_: 'energyRegen_',
+            glacio_dmg_: 'glacioDmgBonus_', fusion_dmg_: 'fusionDmgBonus_',
+            electro_dmg_: 'electroDmgBonus_', aero_dmg_: 'aeroDmgBonus_',
+            spectro_dmg_: 'spectroDmgBonus_', havoc_dmg_: 'havocDmgBonus_',
+            healing_bonus_: 'healingBonus_',
+          };
+          const ck = map[bk];
+          if (ck && ck in ctx) (ctx as any)[ck] += val;
+        });
+        if (hpPct) ctx.hp = baseHp * (1 + hpPct);
+        if (atkPct) ctx.atk = (baseAtk + weaponAtk) * (1 + atkPct);
+        if (defPct) ctx.def = baseDef * (1 + defPct);
       }
     }
 
-    const elementKey = charData.element?.toLowerCase() || 'spectro';
-    const totalElementalBonus = elementalBonuses[elementKey] || 0;
+    const activeList = Object.values(effectStates).filter(ae => ae.enabled);
+    return resolveEffects(ctx, activeList, effectsDb);
+  }, [charData, level, activeNodes, equippedWeapon, weaponLevel, weaponRank, weaponStacks, effectStates, effectsDb, stats, weaponStats]);
 
-    return {
-      hp: baseHp * (1 + extraHp_),
-      atk: (baseAtk + weaponAtk) * (1 + extraAtk_),
-      def: baseDef * (1 + extraDef_),
-      tuneBreakBoost: baseTuneBreak,
-      maxSTA: 0,
-      maxFlightSTA: 0,
-      critRate_: 0.05 + extraCritRate_,
-      critDmg_: 1.50 + extraCritDmg_,
-      energyRegen_: extraEnergyRegen_,
-      offTuneBuildupRate_: 0,
-      resonanceSkillDmgBonus_: resonanceSkillBonus,
-      basicAttackDmgBonus_: basicAttackBonus,
-      heavyAttackDmgBonus_: heavyAttackBonus,
-      resonanceLiberationDmgBonus_: resonanceLiberationBonus,
-      echoSkillDmgBonus_: echoSkillBonus,
-      physicalDmgBonus_: elementalBonuses.physical,
-      glacioDmgBonus_: elementalBonuses.glacio,
-      fusionDmgBonus_: elementalBonuses.fusion,
-      electroDmgBonus_: elementalBonuses.electro,
-      aeroDmgBonus_: elementalBonuses.aero,
-      spectroDmgBonus_: elementalBonuses.spectro,
-      havocDmgBonus_: elementalBonuses.havoc,
-      physicalRes_: 0,
-      glacioRes_: 0,
-      fusionRes_: 0,
-      electroRes_: 0,
-      aeroRes_: 0,
-      spectroRes_: 0,
-      havocRes_: 0,
-      healingBonus_: 0,
-      allDmgBonus_: totalElementalBonus,
-      dmgAmplify_: 0,
-      attackerLvl: level,
-      enemyDef: 1000,
-      defIgnore_: 0,
-      resTotal: 0.10
-    };
-  }, [charData, level, activeNodes, sequenceRank, equippedWeapon, weaponLevel, weaponRank, weaponStacks]);
-
-  const elementKey = charData.element?.toLowerCase() || 'spectro';
+  const elementKey = (meta.element || 'Spectro').toLowerCase();
   const elementalStatKey = `${elementKey}DmgBonus_`;
-  
+
   const statConfig = [
     { key: 'hp', label: 'HP', format: 'flat', alwaysShow: true },
     { key: 'atk', label: 'ATK', format: 'flat', alwaysShow: true },
     { key: 'def', label: 'DEF', format: 'flat', alwaysShow: true },
-    { key: 'tuneBreakBoost', label: 'Tune Break Boost', format: 'flat', alwaysShow: false },
     { key: 'critRate_', label: 'Crit. Rate', format: 'percent', alwaysShow: true },
     { key: 'critDmg_', label: 'Crit. DMG', format: 'percent', alwaysShow: true },
     { key: 'energyRegen_', label: 'Energy Regen', format: 'percent', alwaysShow: true },
-    { key: elementalStatKey, label: `${charData.element || 'Spectro'} DMG Bonus`, format: 'percent', alwaysShow: true },
-    { key: 'resonanceSkillDmgBonus_', label: 'Resonance Skill DMG Bonus', format: 'percent', alwaysShow: false },
+    { key: elementalStatKey, label: `${meta.element || 'Spectro'} DMG Bonus`, format: 'percent', alwaysShow: true },
+    { key: 'resonanceSkillDmgBonus_', label: 'Skill DMG Bonus', format: 'percent', alwaysShow: false },
     { key: 'basicAttackDmgBonus_', label: 'Basic Attack DMG Bonus', format: 'percent', alwaysShow: false },
     { key: 'heavyAttackDmgBonus_', label: 'Heavy Attack DMG Bonus', format: 'percent', alwaysShow: false },
-    { key: 'resonanceLiberationDmgBonus_', label: 'Resonance Liberation DMG Bonus', format: 'percent', alwaysShow: false },
+    { key: 'resonanceLiberationDmgBonus_', label: 'Liberation DMG Bonus', format: 'percent', alwaysShow: false },
   ];
 
-  const generateCombatTable = (categoryName: string, categoryData: any) => {
-    if (!categoryData) return null;
-    const rows: { name: string, mv: number, scaler: string }[] = [];
-    const category = getSkillCategory(categoryName);
-    const currentSkillLevel = skillLevels[category] || 1;
-    // Nivel máximo real para esta categoría
-    const maxLevel = maxSkillLevels[category] || 10;
+  // ─── Combat table with calculateActionDamage ─────────────────────────
+  const generateCombatTable = (type: string, actionsList: any[]) => {
+    if (!actionsList?.length) return null;
+    const lvl = skillLevels[type] || 1;
+    const activeList = Object.values(effectStates).filter(ae => ae.enabled);
 
-    const parseNode = (node: any, path: string) => {
-      if (node && typeof node === 'object' && node.scaler && Array.isArray(node.multiplier)) {
-        const mv = node.multiplier[Math.min(currentSkillLevel - 1, node.multiplier.length - 1)];
-        if (mv) rows.push({ name: path, mv, scaler: node.scaler });
-      } 
-      else if (Array.isArray(node)) {
-        const mv = node[Math.min(currentSkillLevel - 1, node.length - 1)];
-        if (mv) rows.push({ name: path, mv, scaler: 'atk' });
-      } 
-      else if (node && typeof node === 'object') {
-        Object.entries(node).forEach(([k, v]) => parseNode(v, `${path} ${k}`));
+    const rows: { name: string; mv: number; stat: string; act: CalcAction }[] = [];
+    for (const a of actionsList) {
+      const idx = Math.min(lvl - 1, 9);
+      for (const sc of a.scaling || []) {
+        const mult = sc.multiplier?.[idx];
+        if (mult !== undefined) {
+          rows.push({ name: a.name, mv: mult, stat: sc.stat, act: { id: a.id, type: a.type, tags: a.tags || [] } });
+        }
       }
-    };
-
-    Object.entries(categoryData).forEach(([k, v]) => parseNode(v, k));
-    if (rows.length === 0) return null;
+    }
+    if (!rows.length) return null;
 
     return (
-      <div key={categoryName} className="mb-6">
-        <h4 className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>
-          {categoryName}
-        </h4>
+      <div key={type} className="mb-6">
+        <h4 className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>{typeLabels[type] || type}</h4>
         <div className="w-full border rounded-lg overflow-hidden" style={{ borderColor: 'var(--border)' }}>
           <div className="grid grid-cols-4 text-[11px] p-2 border-b font-bold uppercase tracking-wider" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', color: 'var(--text-muted)' }}>
-            <div className="col-span-1">Move</div>
-            <div className="text-right">Normal</div>
-            <div className="text-right">Average</div>
-            <div className="text-right">Crit</div>
+            <div className="col-span-1">Move</div><div className="text-right">Normal</div><div className="text-right">Average</div><div className="text-right">Crit</div>
           </div>
           {rows.map((r, i) => {
-            const dmg = calculateDamage(combatContext, r.mv, r.scaler);
+            const scaler = r.stat === 'HP' ? 'hp' : r.stat === 'FLAT' ? 'flat' : r.stat.toLowerCase();
+            const dmg = calculateActionDamage(combatContext, r.act, r.mv, scaler, elementKey, activeList, effectsDb, calculateDamage);
             return (
               <div key={i} className="grid grid-cols-4 text-xs p-2 border-b last:border-0 hover:bg-white/5 transition-colors" style={{ borderColor: 'var(--border)' }}>
                 <div className="col-span-1 truncate font-medium capitalize text-gray-300" title={r.name}>
-                  {r.name.replace(/_/g, ' ').trim()}
-                  {r.scaler !== 'atk' && <span className="text-[9px] ml-1 opacity-50 uppercase">({r.scaler})</span>}
+                  {r.name}{r.stat !== 'ATK' && <span className="text-[9px] ml-1 opacity-50 uppercase">({r.stat})</span>}
                 </div>
                 <div className="text-right font-mono opacity-90">{dmg.normal}</div>
                 <div className="text-right font-mono opacity-60">{dmg.average}</div>
@@ -342,89 +216,68 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
     );
   };
 
-  const availableSkillCategories = useMemo(() => {
-    const categories = new Set<string>();
-    const dmgData = charData.DMG || charData.formula || {};
-    Object.keys(dmgData).forEach(key => {
-      categories.add(getSkillCategory(key));
-    });
-    return Array.from(categories).filter(c => c !== 'other');
-  }, [charData]);
-
   const toggleNode = (id: string) => setActiveNodes(p => ({ ...p, [id]: !p[id] }));
 
   return (
     <div className="flex flex-col lg:flex-row gap-6 max-w-[1600px] mx-auto">
-      
       <div className="flex-1 space-y-6">
+        {/* Character header */}
         <div className="p-6 rounded-2xl border" style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
           <div className="flex justify-between items-start mb-6">
             <div>
-              <h3 className="text-3xl font-bold" style={{ color: 'var(--accent)' }}>{charData.name}</h3>
-              <span className="text-sm uppercase tracking-widest opacity-60 font-semibold">{charData.element || 'Unknown'}</span>
+              <h3 className="text-3xl font-bold" style={{ color: 'var(--accent)' }}>{meta.name}</h3>
+              <span className="text-sm uppercase tracking-widest opacity-60 font-semibold">{meta.element || 'Unknown'}</span>
             </div>
             <div className="text-right">
-              <span className="px-3 py-1 text-sm rounded-full font-medium border block" style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-muted)' }}>
-                {charData.weaponType || 'Unknown'}
-              </span>
-              {equippedWeapon && (
-                <span className="text-xs mt-1 block" style={{ color: 'var(--text-muted)' }}>
-                  {equippedWeapon.name}
-                </span>
-              )}
+              <span className="px-3 py-1 text-sm rounded-full font-medium border block" style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-muted)' }}>{meta.weaponType || 'Unknown'}</span>
+              {equippedWeapon && <span className="text-xs mt-1 block" style={{ color: 'var(--text-muted)' }}>{equippedWeapon.metadata?.name || equippedWeapon.name}</span>}
             </div>
           </div>
 
           <div className="grid grid-cols-2 gap-4 mb-4">
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-muted)' }}>Ascension Level</label>
-              <select value={level} onChange={(e) => setLevel(Number(e.target.value))} className="w-full p-3 rounded-lg border outline-none" style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
-                {availableLevels.map(lvl => <option key={lvl} value={lvl}>Level {lvl}</option>)}
+              <select value={level} onChange={e => setLevel(Number(e.target.value))} className="w-full p-3 rounded-lg border outline-none" style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
+                {availableLevels.map(l => <option key={l} value={l}>Level {l}</option>)}
               </select>
             </div>
             <div>
               <label className="block text-sm font-medium mb-2" style={{ color: 'var(--text-muted)' }}>Resonance Chain</label>
-              <select value={sequenceRank} onChange={(e) => setSequenceRank(Number(e.target.value))} className="w-full p-3 rounded-lg border outline-none" style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
+              <select value={sequenceRank} onChange={e => setSequenceRank(Number(e.target.value))} className="w-full p-3 rounded-lg border outline-none" style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
                 {[0, 1, 2, 3, 4, 5, 6].map(s => <option key={s} value={s}>S{s}</option>)}
               </select>
             </div>
           </div>
 
-          {/* Skill Levels DINÁMICOS: dropdowns con niveles reales del JSON */}
-          <div className="border-t pt-4 mt-4" style={{ borderColor: 'var(--border)' }}>
-            <h4 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>Skill Levels</h4>
-            <div className="grid grid-cols-2 gap-3">
-              {availableSkillCategories.map(cat => {
-                const maxLevel = maxSkillLevels[cat] || 10;
-                const isFixed = maxLevel <= 1;
-                return (
-                  <div key={cat}>
-                    <label className="block text-xs mb-1" style={{ color: 'var(--text-muted)' }}>
-                      {categoryLabels[cat] || cat}
-                      {isFixed && <span className="ml-1 opacity-50">(fixed)</span>}
-                    </label>
-                    <select 
-                      value={skillLevels[cat] || maxLevel}
-                      onChange={(e) => setSkillLevels(prev => ({ ...prev, [cat]: Number(e.target.value) }))}
-                      disabled={isFixed}
-                      className={`w-full p-2 text-sm rounded-lg border outline-none ${isFixed ? 'opacity-50 cursor-not-allowed' : ''}`}
-                      style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
-                      {[...Array(maxLevel)].map((_, i) => (
-                        <option key={i} value={i + 1}>Lv. {i + 1}</option>
-                      ))}
-                    </select>
-                  </div>
-                );
-              })}
+          {availableTypes.length > 0 && (
+            <div className="border-t pt-4 mt-4" style={{ borderColor: 'var(--border)' }}>
+              <h4 className="text-sm font-bold uppercase tracking-wider mb-3" style={{ color: 'var(--text-muted)' }}>Skill Levels</h4>
+              <div className="grid grid-cols-2 gap-3">
+                {availableTypes.map(type => {
+                  const maxLv = maxSkillLevels[type] || 10;
+                  const fixed = maxLv <= 1;
+                  return (
+                    <div key={type}>
+                      <label className="block text-xs mb-1" style={{ color: 'var(--text-muted)' }}>{typeLabels[type] || type}{fixed && <span className="ml-1 opacity-50">(fixed)</span>}</label>
+                      <select value={skillLevels[type] || maxLv} onChange={e => setSkillLevels(p => ({ ...p, [type]: Number(e.target.value) }))} disabled={fixed}
+                        className={`w-full p-2 text-sm rounded-lg border outline-none ${fixed ? 'opacity-50' : ''}`}
+                        style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
+                        {[...Array(maxLv)].map((_, i) => <option key={i} value={i + 1}>Lv. {i + 1}</option>)}
+                      </select>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
-          </div>
+          )}
         </div>
 
-        {charData.statNodes && (
+        {/* Stat Nodes */}
+        {(stats.statNodes || charData.statNodes) && (
           <div className="p-6 rounded-2xl border" style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
             <h4 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--text-muted)' }}>Inherent Stat Nodes</h4>
             <div className="grid grid-cols-2 gap-3">
-              {charData.statNodes.map((node: any) => (
+              {(stats.statNodes || charData.statNodes || []).map((node: any) => (
                 <button key={node.id} onClick={() => toggleNode(node.id)}
                   className={`p-3 rounded-lg text-xs font-medium border flex justify-between items-center transition-all ${activeNodes[node.id] ? 'opacity-100 shadow-sm' : 'opacity-40 hover:opacity-60'}`}
                   style={{ borderColor: activeNodes[node.id] ? 'var(--accent)' : 'var(--border)', color: activeNodes[node.id] ? 'var(--accent)' : 'var(--text-main)', backgroundColor: activeNodes[node.id] ? 'var(--bg-card)' : 'transparent' }}>
@@ -437,46 +290,93 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
             </div>
           </div>
         )}
-      </div>
 
-      <div className="flex-1 lg:max-w-[500px] xl:max-w-[600px] space-y-6 pb-20">
-        <div className="p-6 rounded-2xl border" style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
-          <div className="flex items-center gap-2 mb-6 pb-4 border-b" style={{ borderColor: 'var(--border)' }}>
-            <Activity size={20} style={{ color: 'var(--accent)' }} />
-            <h3 className="font-bold">Combat Statistics</h3>
-          </div>
+        {/* Effects auto-generados */}
+        {allEffects.length > 0 && (
+          <div className="p-6 rounded-2xl border" style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
+            <h4 className="text-sm font-bold uppercase tracking-wider mb-4" style={{ color: 'var(--text-muted)' }}>Effects</h4>
+            <div className="space-y-3">
+              {allEffects.map(effect => {
+                const state = effectStates[effect.id];
+                const isOn = state?.enabled ?? false;
+                const stacks = state?.stacks ?? 1;
+                const desc = effect.descriptionTemplate
+                  ? formatDescription(effect.descriptionTemplate, effect.modifiers || [], state?.rank || 0)
+                  : effect.name;
 
-          <div className="space-y-2 text-sm font-mono mb-6">
-            {statConfig
-              .filter(stat => {
-                if (stat.alwaysShow) return true;
-                const value = combatContext[stat.key as keyof CombatContext];
-                return typeof value === 'number' && value > 0;
-              })
-              .map((stat) => {
-                const value = combatContext[stat.key as keyof CombatContext] as number;
-                const formattedValue = stat.format === 'percent' 
-                  ? `${(value * 100).toFixed(1)}%` 
-                  : Math.round(value).toString();
-                
                 return (
-                  <div key={stat.key} className="flex justify-between py-1">
-                    <span style={{ color: 'var(--text-muted)' }}>{stat.label}</span>
-                    <span>{formattedValue}</span>
+                  <div key={effect.id} className="p-4 rounded-xl border" style={{ borderColor: isOn ? 'var(--accent)' : 'var(--border)', backgroundColor: 'var(--bg-card)', opacity: isOn ? 1 : 0.5 }}>
+                    <div className="flex items-start justify-between mb-2">
+                      <div>
+                        <div className="text-sm font-medium">{effect.name}</div>
+                        <div className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>{desc}</div>
+                      </div>
+                      <button onClick={() => setEffectStates(p => ({ ...p, [effect.id]: { ...p[effect.id], enabled: !isOn } }))}
+                        className="text-xs px-3 py-1.5 rounded-lg border font-bold shrink-0 ml-2"
+                        style={{ borderColor: isOn ? 'var(--accent)' : 'var(--border)', color: isOn ? 'var(--accent)' : 'var(--text-muted)', backgroundColor: isOn ? 'var(--bg-main)' : 'transparent' }}>
+                        {isOn ? 'ON' : 'OFF'}
+                      </button>
+                    </div>
+
+                    {effect.targets?.map((t: any, i: number) => (
+                      <span key={i} className="inline-block text-[10px] px-2 py-0.5 mr-1 mb-1 rounded-full border" style={{ borderColor: 'var(--border)', color: 'var(--text-muted)' }}>
+                        {t.type === 'Stat' ? (statNames[t.id] || t.id) : t.type === 'Action' ? `Action: ${t.id}` : `Category: ${t.id.replace(/([A-Z])/g, ' $1').trim()}`}
+                      </span>
+                    ))}
+
+                    {effect.modifiers?.map((m: any, i: number) => {
+                      const v = m.value[Math.min(state?.rank || 0, m.value.length - 1)] ?? 0;
+                      const vs = m.valueType === 'Percent' ? `${(v * 100).toFixed(1)}%` : m.valueType === 'Flat' ? v.toFixed(0) : `×${v.toFixed(2)}`;
+                      return <div key={i} className="text-xs font-mono mt-1" style={{ color: 'var(--accent)' }}>{m.operation} {vs}{effect.maxStacks > 1 && ` ×${stacks}`}</div>;
+                    })}
+
+                    {effect.maxStacks > 1 && (
+                      <div className="flex items-center gap-2 mt-3 pt-3 border-t" style={{ borderColor: 'var(--border)' }}>
+                        <Layers size={14} className="opacity-40 shrink-0" />
+                        <div className="flex gap-1">
+                          {Array.from({ length: effect.maxStacks + 1 }, (_, i) => (
+                            <button key={i} onClick={() => setEffectStates(p => ({ ...p, [effect.id]: { ...p[effect.id], stacks: i } }))}
+                              className={`px-3 py-1 text-xs rounded-lg border font-bold transition-all ${stacks === i ? 'shadow-sm' : 'opacity-40 hover:opacity-70'}`}
+                              style={{ backgroundColor: stacks === i ? 'var(--accent)' : 'transparent', borderColor: stacks === i ? 'var(--accent)' : 'var(--border)', color: stacks === i ? '#000' : 'var(--text-main)' }}>{i}</button>
+                          ))}
+                        </div>
+                      </div>
+                    )}
                   </div>
                 );
               })}
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Combat stats */}
+      <div className="flex-1 lg:max-w-[500px] xl:max-w-[600px] space-y-6 pb-20">
+        <div className="p-6 rounded-2xl border" style={{ backgroundColor: 'var(--bg-panel)', borderColor: 'var(--border)' }}>
+          <div className="flex items-center gap-2 mb-6 pb-4 border-b" style={{ borderColor: 'var(--border)' }}>
+            <Activity size={20} style={{ color: 'var(--accent)' }} /><h3 className="font-bold">Combat Statistics</h3>
+          </div>
+
+          <div className="space-y-2 text-sm font-mono mb-6">
+            {statConfig.filter(s => s.alwaysShow || (combatContext[s.key as keyof CombatContext] as number) > 0).map(stat => {
+              const value = combatContext[stat.key as keyof CombatContext] as number;
+              return (
+                <div key={stat.key} className="flex justify-between py-1">
+                  <span style={{ color: 'var(--text-muted)' }}>{stat.label}</span>
+                  <span>{stat.format === 'percent' ? `${(value * 100).toFixed(1)}%` : Math.round(value).toString()}</span>
+                </div>
+              );
+            })}
           </div>
 
           <div className="space-y-4">
-            {charData.DMG 
-              ? Object.keys(charData.DMG).map(key => generateCombatTable(key, charData.DMG[key]))
-              : charData.formula && Object.keys(charData.formula).map(key => generateCombatTable(key, charData.formula[key]))
+            {actions.length > 0
+              ? Object.entries(actionsByType).filter(([t]) => typeLabels[t]).map(([t, list]) => generateCombatTable(t, list))
+              : <div className="text-xs opacity-40 text-center py-8">No actions data</div>
             }
           </div>
         </div>
       </div>
-      
     </div>
   );
 }

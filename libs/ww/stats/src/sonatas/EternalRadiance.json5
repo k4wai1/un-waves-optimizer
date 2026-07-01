@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "EternalRadiance",
+    "name": "Eternal Radiance",
+    "entityType": "sonata",
+    "rarity": 5,
+    "version": "1.0",
+    "element": null,
+    "weaponType": null,
+    "tags": [
+      "sonata"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "secondaryAttribute": null,
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "EternalRadiance_2pc",
+      "name": "EternalRadiance 2pc Bonus",
+      "description": "Spectro DMG +10%",
+      "type": "stat",
+      "operation": "add",
+      "stat": "spectro_dmg_",
+      "value": [
+        0.1
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 2 Echoes of this Sonata set",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "EternalRadiance_5pc_frazzle_inflict",
+      "name": "EternalRadiance 5pc - frazzle_inflict",
+      "description": "Inflicting enemies with Spectro Frazzle increases Crit. Rate by 20% for 15s. Attacking enemies with 10 stacks of Spectro Frazzle grants 15% Spectro DMG Bonus for 15s.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "critRate_",
+      "value": [
+        0.2
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 5 Echoes: onFrazzleInflict",
+      "maxStacks": 1,
+      "durationSeconds": 15,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    },
+    {
+      "id": "EternalRadiance_5pc_frazzle_attack",
+      "name": "EternalRadiance 5pc - frazzle_attack",
+      "description": "Inflicting enemies with Spectro Frazzle increases Crit. Rate by 20% for 15s. Attacking enemies with 10 stacks of Spectro Frazzle grants 15% Spectro DMG Bonus for 15s.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "spectro_dmg_",
+      "value": [
+        0.15
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 5 Echoes: onAttackFrazzle10Stacks",
+      "maxStacks": 1,
+      "durationSeconds": 15,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": null,
+    "quote": null
+  }
+}

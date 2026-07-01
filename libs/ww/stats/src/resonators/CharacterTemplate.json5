@@ -1,0 +1,105 @@
+
+
+
+
+
+
+
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "CharacterName",
+    "name": "Character Name",
+    "entityType": "resonator",
+    "rarity": 5,
+    "version": "1.x",
+    "element": "Spectro",
+    "weaponType": "Sword",
+    "tags": [],
+    "aliases": []
+  },
+  "stats": {
+    "hp": { "1": 1000, "90": 10000 },
+    "atk": { "1": 100, "90": 400 },
+    "def": { "1": 80, "90": 500 },
+    "secondaryAttribute": null,
+    "statNodes": [],
+    "tuneBreakBoost": 0.0,
+    "offTuneBuildupRate": 1.0
+  },
+  "actions": [
+    {
+      "id": "char_basic1",
+      "name": "Stage 1 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        { "stat": "ATK", "multiplier": [0.50, 0.55, 0.60] }
+      ],
+      "tags": ["melee"]
+    },
+    {
+      "id": "char_skill",
+      "name": "Resonance Skill DMG",
+      "type": "resonanceSkill",
+      "scaling": [
+        { "stat": "ATK", "multiplier": [1.0, 1.1, 1.2] }
+      ],
+      "tags": []
+    }
+  ],
+  "effects": [
+    {
+      "id": "char_inherent_1",
+      "name": "Sample Inherent Passive",
+      "description": "Increases Elemental DMG by 20%",
+      "type": "stat",
+      "operation": "add",
+      "stat": "allDmgBonus_",
+      "value": [0.20],
+      "affects": "self",
+      "howToActivate": "Always active",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "char_outro",
+      "name": "Sample Outro Buff",
+      "description": "Increases Basic Attack DMG of the incoming Resonator by 38% for 14s",
+      "type": "stat",
+      "operation": "add",
+      "stat": "basicDmg_",
+      "value": [0.38],
+      "affects": "activeCharacter",
+      "howToActivate": "Use Outro Skill",
+      "maxStacks": 1,
+      "durationSeconds": 14,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    },
+    {
+      "id": "char_s1",
+      "name": "S1: Sample Sequence",
+      "description": "Increases Resonance Skill DMG by 30%",
+      "type": "stat",
+      "operation": "add",
+      "stat": "skillDmg_",
+      "value": [0.30],
+      "affects": "self",
+      "howToActivate": "Always active with S1 unlocked",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": null,
+    "quote": null
+  }
+}

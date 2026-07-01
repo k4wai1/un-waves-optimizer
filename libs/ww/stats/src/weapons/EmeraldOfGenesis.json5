@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "EmeraldOfGenesis",
+    "name": "Emerald of Genesis",
+    "entityType": "weapon",
+    "rarity": 5,
+    "version": "1.0",
+    "element": null,
+    "weaponType": "Sword",
+    "tags": [
+      "mainDps",
+      "energy",
+      "burst",
+      "skill"
+    ],
+    "aliases": [
+      "Emerald",
+      "EOG"
+    ]
+  },
+  "stats": {
+    "hp": null,
+    "atk": {
+      "1": 47,
+      "20": 122.25,
+      "40": 232.8,
+      "50": 303.74,
+      "60": 374.68,
+      "70": 445.62,
+      "80": 516.56,
+      "90": 587.5
+    },
+    "def": null,
+    "secondaryAttribute": {
+      "key": "critRate_",
+      "values": {
+        "1": 0.054,
+        "20": 0.095,
+        "40": 0.137,
+        "50": 0.158,
+        "60": 0.179,
+        "70": 0.2,
+        "80": 0.221,
+        "90": 0.243
+      }
+    },
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "emerald_energy_regen",
+      "name": "Energy Regen Passive",
+      "descriptionTemplate": "Energy Regen +{value}%",
+      "target": "stat.energyRegen",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.128,
+            0.16,
+            0.192,
+            0.224,
+            0.256
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "emerald_atk_stack",
+      "name": "ATK Stack on Skill",
+      "descriptionTemplate": "Upon casting Resonance Skill, ATK +{value}% per stack, max 2 stacks, 10s",
+      "target": "stat.atk",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.06,
+            0.075,
+            0.09,
+            0.105,
+            0.12
+          ]
+        }
+      ],
+      "maxStacks": 2,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "A sword forged from a crystallized energy source, humming with the pulse of creation itself. Its edge gleams with an emerald light that seems to pierce through reality.",
+    "quote": null
+  }
+}

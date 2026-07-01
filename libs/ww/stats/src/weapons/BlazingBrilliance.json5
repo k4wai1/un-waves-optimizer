@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "BlazingBrilliance",
+    "name": "Blazing Brilliance",
+    "entityType": "weapon",
+    "rarity": 5,
+    "version": "1.0",
+    "weaponType": "Sword",
+    "tags": [
+      "mainDps",
+      "skill",
+      "burst"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": {
+      "1": 47,
+      "20": 122.25,
+      "40": 232.8,
+      "50": 303.74,
+      "60": 374.68,
+      "70": 445.62,
+      "80": 516.56,
+      "90": 587.5
+    },
+    "def": null,
+    "secondaryAttribute": {
+      "key": "critDmg_",
+      "values": {
+        "1": 0.108,
+        "20": 0.192,
+        "40": 0.276,
+        "50": 0.318,
+        "60": 0.36,
+        "70": 0.402,
+        "80": 0.444,
+        "90": 0.486
+      }
+    },
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "blazingbrilliance_atk",
+      "name": "ATK Bonus",
+      "descriptionTemplate": "ATK +{value}%",
+      "target": "stat.atk",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.12,
+            0.15,
+            0.18,
+            0.21,
+            0.24
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "blazingbrilliance_skill_dmg_stacks",
+      "name": "Searing Feather - Skill DMG",
+      "descriptionTemplate": "Each Searing Feather stack: Skill DMG +{value}%, max 14 stacks, reset after 12s at max",
+      "target": "stat.skillDmg",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.04,
+            0.05,
+            0.06,
+            0.07,
+            0.08
+          ]
+        }
+      ],
+      "maxStacks": 14,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": null,
+    "quote": null
+  }
+}

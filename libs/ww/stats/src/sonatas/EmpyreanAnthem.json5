@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "EmpyreanAnthem",
+    "name": "Empyrean Anthem",
+    "entityType": "sonata",
+    "rarity": 5,
+    "version": "1.0",
+    "element": null,
+    "weaponType": null,
+    "tags": [
+      "sonata"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "secondaryAttribute": null,
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "EmpyreanAnthem_2pc",
+      "name": "EmpyreanAnthem 2pc Bonus",
+      "description": "Energy Regen +10%",
+      "type": "stat",
+      "operation": "add",
+      "stat": "energyRegen_",
+      "value": [
+        0.1
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 2 Echoes of this Sonata set",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "EmpyreanAnthem_5pc_passive",
+      "name": "EmpyreanAnthem 5pc Passive",
+      "description": "Increase the Resonator's Coordinated Attack DMG by 80%. Upon a critical hit of Coordinated Attack, increase the active Resonator's ATK by 20% for 4s.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "coordinated_dmg_",
+      "value": [
+        0.8
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 5 Echoes of this Sonata set",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "EmpyreanAnthem_5pc",
+      "name": "EmpyreanAnthem 5pc Conditional",
+      "description": "Increase the Resonator's Coordinated Attack DMG by 80%. Upon a critical hit of Coordinated Attack, increase the active Resonator's ATK by 20% for 4s.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "atk_",
+      "value": [
+        0.2
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 5 Echoes: onCoordinatedCrit",
+      "maxStacks": 1,
+      "durationSeconds": 4,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": null,
+    "quote": null
+  }
+}

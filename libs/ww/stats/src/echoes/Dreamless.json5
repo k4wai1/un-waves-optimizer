@@ -1,0 +1,104 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "Dreamless",
+    "name": "Dreamless",
+    "entityType": "echo",
+    "rarity": 5,
+    "version": "1.0",
+    "element": "Havoc",
+    "weaponType": null,
+    "tags": [
+      "echo",
+      "havoc",
+      "burst"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "secondaryAttribute": {
+      "key": "atk_",
+      "value": 0.18
+    },
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [
+    {
+      "id": "dreamless_hits",
+      "name": "Dreamless Slashes (5 hits)",
+      "type": "echoSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            54.08,
+            54.08,
+            54.08,
+            54.08,
+            54.08
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ],
+      "cooldown": 20
+    },
+    {
+      "id": "dreamless_final",
+      "name": "Dreamless Final Hit",
+      "type": "echoSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            270.4
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ],
+      "cooldown": 20
+    }
+  ],
+  "effects": [
+    {
+      "id": "dreamless_post_liberation_buff",
+      "name": "Post-Liberation DMG Boost",
+      "operation": "add",
+      "value": [
+        0.5
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "allDmgBonus_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.5
+          ]
+        }
+      ],
+      "descriptionTemplate": "After Resonance Liberation, increase DMG by {value}% for {value}s"
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "An echo of pure nightmare manifesting as a towering figure of darkness. Its presence alone is enough to drive lesser beings to madness.",
+    "quote": null
+  }
+}

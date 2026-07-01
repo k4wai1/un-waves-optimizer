@@ -1,0 +1,80 @@
+// ═══════════════════════════════════════════════════════════════════════════════
+// StellarSymphony.json5 — Arma Rectifier 5★ (Support / Healer)
+// ═══════════════════════════════════════════════════════════════════════════════
+// Habilidad: Aumenta HP del portador. Usar Liberación restaura Energía de
+// Concierto (20s de CD). Usar Habilidad que cure aumenta ATQ del equipo
+// cercano en 30s (efecto único, no acumulable).
+// ═══════════════════════════════════════════════════════════════════════════════
+
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "StellarSymphony",
+    "name": "Stellar Symphony",
+    "entityType": "weapon",
+    "rarity": 5,
+    "version": "1.0",
+    "element": null,
+    "weaponType": "Rectifier",
+    "tags": ["energy", "support", "healer"],
+    "aliases": ["Stellar"]
+  },
+  "stats": {
+    "hp": null,
+    "atk": { "1": 33, "20": 85.84, "40": 163.45, "50": 213.26,
+             "60": 263.07, "70": 312.88, "80": 362.69, "90": 412.5 },
+    "def": null,
+    "secondaryAttribute": {
+      "key": "energyRegen_",
+      "values": { "1": 0.1712, "20": 0.3043, "40": 0.4375, "50": 0.5041,
+                  "60": 0.5707, "70": 0.6372, "80": 0.7038, "90": 0.7704 }
+    },
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "stellar_hp_buff",
+      "name": "Increase HP",
+      "descriptionTemplate": "Increase HP by {value}%",
+      "target": "stat.hp",
+      "modifiers": [{ "operation": "Add", "valueType": "Percent", "value": [0.12, 0.15, 0.18, 0.21, 0.24] }],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    // ═══ Mecánica: Restaura Energía de Concierto ═══════════════════════════════
+    // Esto NO es un stat buff. Es una mecánica de cambio de personaje.
+    // La UI debe mostrar esto como información, no como modificación de daño.
+    {
+      "id": "stellar_concerto_restore",
+      "name": "Restore Concerto Energy",
+      "descriptionTemplate": "Restore {value} Concerto Energy when casting Resonance Liberation (20s CD)",
+      "target": "mechanic.concerto",
+      "modifiers": [{ "operation": "Add", "valueType": "Flat", "value": [8, 10, 12, 14, 16] }],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false
+    },
+    // ═══ Buff para TODO EL EQUIPO ═══════════════════════════════════════════════
+    // Al curar con Habilidad de Resonancia, aumenta ATQ de todos los miembros
+    // del equipo cercanos en 14-28% durante 30s. Efecto único (no acumulable).
+    {
+      "id": "stellar_team_atk_on_heal",
+      "name": "Team ATK on Heal Skill",
+      "descriptionTemplate": "When casting a healing Resonance Skill, increase party ATK by {value}% for 30s",
+      "target": "stat.atk",
+      "modifiers": [{ "operation": "Add", "valueType": "Percent", "value": [0.14, 0.175, 0.21, 0.245, 0.28] }],
+      "maxStacks": 1,
+      "exclusive": true,   // "Effects of the same name cannot be stacked"
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "A rectifier bearing an energy core that simulates the lifecycle of stars—an infinite loop that originates from a singularity and ends in explosive demise. The celestial debris collides in thunderous rumbles, heralding the birth of a new star.",
+    "quote": null
+  }
+}

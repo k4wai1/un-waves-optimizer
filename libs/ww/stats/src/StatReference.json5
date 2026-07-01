@@ -1,0 +1,137 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "description": "Catálogo de rutas válidas para effects. Los modifiers solo pueden apuntar a rutas listadas aquí.",
+
+
+
+
+
+
+
+
+
+  "stats": {
+    "hp":              "HP base del personaje (porcentaje multiplicativo)",
+    "atk":             "ATK base del personaje (porcentaje multiplicativo)",
+    "def":             "DEF base del personaje (porcentaje multiplicativo)",
+    "critRate":        "Probabilidad de golpe crítico (aditivo, decimal 0.05 = 5%)",
+    "critDmg":         "Daño crítico (aditivo, decimal 1.50 = 150%)",
+    "energyRegen":     "Recarga de energía (aditivo)",
+    "allDmgBonus":     "Bonificador de todo daño (aditivo)",
+    "dmgAmplify":      "Amplificación de daño (multiplicativo)",
+    "skillDmg":        "Bonificador de daño de Resonance Skill (aditivo)",
+    "basicDmg":        "Bonificador de daño de Basic Attack (aditivo)",
+    "heavyDmg":        "Bonificador de daño de Heavy Attack (aditivo)",
+    "liberationDmg":   "Bonificador de daño de Resonance Liberation (aditivo)",
+    "echoDmg":         "Bonificador de daño de Echo Skill (aditivo)",
+    "coordinatedDmg":  "Bonificador de daño de Coordinated Attack (aditivo)",
+    "outroDmg":        "Bonificador de daño de Outro Skill (aditivo)",
+    "healingBonus":    "Bonificador de curación (aditivo)",
+    "defIgnore":       "Ignorar defensa del enemigo (aditivo, decimal 0.20 = 20%)",
+    "glacioDmg":       "Bonificador de daño Glacio (aditivo)",
+    "fusionDmg":       "Bonificador de daño Fusion (aditivo)",
+    "electroDmg":      "Bonificador de daño Electro (aditivo)",
+    "aeroDmg":         "Bonificador de daño Aero (aditivo)",
+    "spectroDmg":      "Bonificador de daño Spectro (aditivo)",
+    "havocDmg":        "Bonificador de daño Havoc (aditivo)"
+  },
+
+
+
+
+
+
+
+
+  "enemy": {
+    "level":           "Nivel del enemigo (modifica la fórmula de DEF)",
+    "hp":              "HP del enemigo (informativo)",
+    "defense":         "DEF del enemigo (aditivo, -20% = -0.20)",
+    "damageTaken":     "Multiplicador de daño recibido (multiplicativo, 1.15 = +15%)",
+    "glacioRes":       "Resistencia Glacio del enemigo (aditivo, -10% = -0.10)",
+    "fusionRes":       "Resistencia Fusion del enemigo",
+    "electroRes":      "Resistencia Electro del enemigo",
+    "aeroRes":         "Resistencia Aero del enemigo",
+    "spectroRes":      "Resistencia Spectro del enemigo",
+    "havocRes":        "Resistencia Havoc del enemigo",
+    "physicalRes":     "Resistencia física del enemigo"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  "action": {
+    "basic_1": "Stage 1 DMG",
+    "basic_2": "Stage 2 DMG",
+    "basic_3": "Stage 3 DMG",
+    "basic_4": "Stage 4 DMG",
+    "basic_5": "Stage 5 DMG",
+    "heavy_1": "Heavy Attack DMG",
+    "plunge":  "Plunging Attack DMG",
+    "dodge":   "Dodge Counter DMG",
+    "skill":   "Resonance Skill DMG",
+    "liberation": "Resonance Liberation DMG",
+    "intro":   "Intro Skill DMG",
+    "outro":   "Outro Skill DMG",
+    "echo":    "Echo Skill DMG"
+  },
+  "actionSubroutes": {
+    "damage":     "Multiplica el daño de la acción (operation Add, valor 0.20 = +20%)",
+    "multiplier": "Reemplaza el multiplier base de la acción (operation Replace)"
+  },
+
+
+
+
+
+
+
+
+  "actionType": {
+    "basicAttack":         "Todas las Basic Attacks",
+    "heavyAttack":         "Todas las Heavy Attacks",
+    "plungingAttack":      "Todas las Plunging Attacks",
+    "dodgeCounter":        "Dodge Counter",
+    "resonanceSkill":      "Todas las Resonance Skills",
+    "resonanceLiberation": "Todas las Resonance Liberations",
+    "forteCircuit":        "Todas las Forte Circuits",
+    "introSkill":          "Intro Skill",
+    "outroSkill":          "Outro Skill",
+    "echoSkill":           "Echo Skill"
+  }
+}

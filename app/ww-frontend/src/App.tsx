@@ -3,37 +3,44 @@ import { Menu, X, Moon, Sun, Users, Hexagon, Sword, Zap } from 'lucide-react';
 import { ResonatorSetup } from './pages/ResonatorSetup';
 import { WeaponsSetup } from './pages/WeaponsSetup';
 import { Placeholder } from './pages/Placeholder';
-import { loadJson5Glob } from './engine/loadJson5';
 
-// ─── Carga de datos con JSON5 (tolera comentarios, trailing commas, etc.) ───
+// ─── Carga de datos con Vite-plugin-json5 (tolera comentarios JSON5) ───
 
-// Resonadores: todos los .json de la carpeta resonators
+// Resonadores: todos los .json5 de la carpeta resonators
 const resonatorModules = import.meta.glob<{ default: string }>(
-  '../../../libs/ww/stats/src/resonators/*.json',
-  { eager: true, as: 'raw' }
-) as Record<string, string>;
-const allResonators = loadJson5Glob<any>(resonatorModules);
+  '../../../libs/ww/stats/src/resonators/*.json5',
+  { eager: true }
+) as Record<string, any>;
+const allResonators: Record<string, any> = {};
+for (const [fp, mod] of Object.entries(resonatorModules)) {
+  const key = mod.metadata?.id || fp.split('/').pop()?.replace(/\.json5$/, '') || '';
+  allResonators[key] = mod;
+}
 
-// Armas: todos los .json de la carpeta weapons (solo顶层, no subcarpetas)
-const weaponModules = import.meta.glob<{ default: string }>(
-  '../../../libs/ww/stats/src/weapons/*.json',
-  { eager: true, as: 'raw' }
-) as Record<string, string>;
-const allWeapons = loadJson5Glob<any>(weaponModules);
+// Armas: todos los .json5 de la carpeta weapons
+const weaponModules = import.meta.glob<Record<string, any>>(
+  '../../../libs/ww/stats/src/weapons/*.json5',
+  { eager: true }
+) as Record<string, any>;
+const allWeapons: Record<string, any> = {};
+for (const [fp, mod] of Object.entries(weaponModules)) {
+  const key = mod.metadata?.id || fp.split('/').pop()?.replace(/\.json5$/, '') || '';
+  allWeapons[key] = mod;
+}
 
-// Filtra armas válidas (que tengan id, name, weaponType) y excluye templates
+// Filtra armas válidas (que tengan id, name, weaponType) en metadata o raíz
 const weaponsDB = Object.values(allWeapons).filter(
-  (w: any) => w && w.id && w.name && w.weaponType
+  (w: any) => w && (w.metadata?.id || w.id) && (w.metadata?.name || w.name) && (w.metadata?.weaponType || w.weaponType)
 );
 
-// Imágenes de armas (.webp)
+// Imágenes de armas (.webp y .png) — se cargan por nombre de archivo, que debe coincidir con metadata.id
 const weaponImageModules = import.meta.glob<{ default: string }>(
-  '../../../libs/ww/stats/src/weapons/*.webp',
+  '../../../libs/ww/stats/src/weapons/*.{webp,png}',
   { eager: true, query: '?url' }
-);
+) as Record<string, { default: string }>;
 const weaponImages: Record<string, string> = {};
 for (const [filePath, mod] of Object.entries(weaponImageModules)) {
-  const id = filePath.split('/').pop()?.replace(/\..+$/, '') || '';
+  const id = filePath.split('/').pop()?.replace(/\.[^.]+$/, '') || '';
   weaponImages[id] = mod.default;
 }
 
@@ -57,15 +64,21 @@ export default function App() {
   const [weaponStacks, setWeaponStacks] = useState(0);
 
   const charData = allResonators[selectedChar] || allResonators.Shorekeeper;
-  const charElement = charData?.element || 'Spectro';
+  // Leer de metadata (nuevo formato) con fallback a raíz (formato legacy)
+  const charMeta = charData?.metadata || charData;
+  const charElement = charMeta?.element || 'Spectro';
   const accentColor = elementColors[charElement] || elementColors.Spectro;
 
-  // Filtro case-insensitive de armas por tipo
+  // Filtro case-insensitive de armas por tipo (metadata o raíz)
   const filteredWeapons = useMemo(() => {
-    if (!charData?.weaponType) return [];
-    const targetType = charData.weaponType.toLowerCase();
+    const wt = charMeta?.weaponType;
+    if (!wt) return [];
+    const targetType = wt.toLowerCase();
     return weaponsDB.filter(
-      (w: any) => w.weaponType && w.weaponType.toLowerCase() === targetType
+      (w: any) => {
+        const wType = w.metadata?.weaponType || w.weaponType;
+        return wType && wType.toLowerCase() === targetType;
+      }
     );
   }, [charData?.weaponType]);
 
@@ -137,9 +150,10 @@ export default function App() {
             <select value={selectedChar} onChange={(e) => setSelectedChar(e.target.value)}
               className="p-2 rounded-lg border outline-none font-bold cursor-pointer"
               style={{ backgroundColor: 'var(--bg-main)', borderColor: 'var(--border)', color: 'var(--text-main)' }}>
-              {Object.keys(allResonators).map(key => (
-                allResonators[key]?.name ? <option key={key} value={key}>{allResonators[key].name}</option> : null
-              ))}
+              {Object.entries(allResonators).map(([key, r]: [string, any]) => {
+                const name = r?.metadata?.name || r?.name;
+                return name ? <option key={key} value={key}>{name}</option> : null;
+              })}
             </select>
           </div>
           <button onClick={() => setIsDarkMode(!isDarkMode)} className="p-2 rounded-full" style={{ backgroundColor: 'var(--bg-main)' }}>

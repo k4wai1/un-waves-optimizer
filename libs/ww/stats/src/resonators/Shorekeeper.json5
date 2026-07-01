@@ -1,0 +1,915 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "Shorekeeper",
+    "name": "Shorekeeper",
+    "entityType": "resonator",
+    "rarity": 5,
+    "version": "1.0",
+    "element": "Spectro",
+    "weaponType": "Rectifier",
+    "tags": [
+      "support",
+      "healer",
+      "energy"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": {
+      "1": 1337,
+      "20": 3476.2,
+      "40": 6621.49,
+      "50": 8637.02,
+      "60": 10655.89,
+      "70": 12677.17,
+      "80": 14693.63,
+      "90": 16712.5
+    },
+    "atk": {
+      "1": 23,
+      "20": 59.8,
+      "40": 115,
+      "50": 152.03,
+      "60": 189.06,
+      "70": 226.09,
+      "80": 256.83,
+      "90": 287.5
+    },
+    "def": {
+      "1": 90,
+      "20": 230.4,
+      "40": 437.4,
+      "50": 570.6,
+      "60": 702,
+      "70": 835.31,
+      "80": 967.5,
+      "90": 1099.98
+    },
+    "secondaryAttribute": null,
+    "statNodes": [
+      {
+        "id": "node_hp_l1",
+        "name": "HP +1.8%",
+        "buffs": {
+          "hp_": 0.018
+        }
+      },
+      {
+        "id": "node_hp_l2",
+        "name": "HP +1.8%",
+        "buffs": {
+          "hp_": 0.018
+        }
+      },
+      {
+        "id": "node_hp_h1",
+        "name": "HP +4.2%",
+        "buffs": {
+          "hp_": 0.042
+        }
+      },
+      {
+        "id": "node_hp_h2",
+        "name": "HP +4.2%",
+        "buffs": {
+          "hp_": 0.042
+        }
+      },
+      {
+        "id": "node_heal_l1",
+        "name": "Healing Bonus +1.8%",
+        "buffs": {
+          "healing_bonus_": 0.018
+        }
+      },
+      {
+        "id": "node_heal_l2",
+        "name": "Healing Bonus +1.8%",
+        "buffs": {
+          "healing_bonus_": 0.018
+        }
+      },
+      {
+        "id": "node_heal_h1",
+        "name": "Healing Bonus +4.2%",
+        "buffs": {
+          "healing_bonus_": 0.042
+        }
+      },
+      {
+        "id": "node_heal_h2",
+        "name": "Healing Bonus +4.2%",
+        "buffs": {
+          "healing_bonus_": 0.042
+        }
+      }
+    ],
+    "tuneBreakBoost": 10,
+    "offTuneBuildupRate": 1.2
+  },
+  "actions": [
+    {
+      "id": "shorekeeper_basic1",
+      "name": "Stage 1 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1599,
+            0.173,
+            0.1861,
+            0.2045,
+            0.2176,
+            0.2326,
+            0.2536,
+            0.2746,
+            0.2955,
+            0.3164
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_basic2",
+      "name": "Stage 2 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.12,
+            0.1299,
+            0.1397,
+            0.1535,
+            0.1633,
+            0.1747,
+            0.1904,
+            0.2061,
+            0.2219,
+            0.2377
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_basic3",
+      "name": "Stage 3 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1173,
+            0.1269,
+            0.1366,
+            0.15,
+            0.1596,
+            0.1707,
+            0.1861,
+            0.2015,
+            0.2169,
+            0.2323
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_basic4",
+      "name": "Stage 4 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.3658,
+            0.3958,
+            0.4258,
+            0.4678,
+            0.4978,
+            0.5323,
+            0.5803,
+            0.6282,
+            0.6762,
+            0.7242
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_heavy",
+      "name": "Heavy Attack DMG",
+      "type": "heavyAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.2304,
+            0.2493,
+            0.2682,
+            0.2947,
+            0.3136,
+            0.3353,
+            0.3655,
+            0.3958,
+            0.426,
+            0.4562
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_plunging",
+      "name": "Plunging Attack DMG",
+      "type": "plungingAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.372,
+            0.4026,
+            0.4331,
+            0.4758,
+            0.5063,
+            0.5413,
+            0.5902,
+            0.639,
+            0.6878,
+            0.7366
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_dodge",
+      "name": "Dodge Counter DMG",
+      "type": "dodgeCounter",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.44,
+            0.4761,
+            0.5122,
+            0.5627,
+            0.5988,
+            0.6403,
+            0.698,
+            0.7557,
+            0.8135,
+            0.8713
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_skill_dmg",
+      "name": "Dim Star Butterfly DMG",
+      "type": "resonanceSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1575,
+            0.1704,
+            0.1833,
+            0.2014,
+            0.2143,
+            0.2291,
+            0.2498,
+            0.2705,
+            0.2911,
+            0.3117
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_skill_heal_pct",
+      "name": "Dim Star Butterfly Heal (% Max HP)",
+      "type": "resonanceSkill",
+      "scaling": [
+        {
+          "stat": "HP",
+          "multiplier": [
+            0.03,
+            0.0325,
+            0.035,
+            0.0384,
+            0.0409,
+            0.0437,
+            0.0476,
+            0.0516,
+            0.0555,
+            0.0594
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    },
+    {
+      "id": "shorekeeper_skill_heal_flat",
+      "name": "Dim Star Butterfly Heal (Flat)",
+      "type": "resonanceSkill",
+      "scaling": [
+        {
+          "stat": "FLAT",
+          "multiplier": [
+            660,
+            715,
+            769,
+            845,
+            899,
+            961,
+            1047,
+            1134,
+            1221,
+            1308
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    },
+    {
+      "id": "shorekeeper_forte_flare",
+      "name": "Flare Star Butterfly DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1876,
+            0.2029,
+            0.2183,
+            0.2399,
+            0.2552,
+            0.2729,
+            0.2975,
+            0.3221,
+            0.3467,
+            0.3713
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_forte_illation",
+      "name": "Illation DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.0954,
+            0.1033,
+            0.1111,
+            0.122,
+            0.1299,
+            0.1389,
+            0.1514,
+            0.1639,
+            0.1764,
+            0.1889
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_forte_transmutation",
+      "name": "Transmutation DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.372,
+            0.4026,
+            0.4331,
+            0.4758,
+            0.5063,
+            0.5413,
+            0.5902,
+            0.639,
+            0.6878,
+            0.7366
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_liberation_heal_pct",
+      "name": "Liberation Heal (% Max HP)",
+      "type": "resonanceLiberation",
+      "scaling": [
+        {
+          "stat": "HP",
+          "multiplier": [
+            0.012,
+            0.013,
+            0.014,
+            0.0154,
+            0.0164,
+            0.0175,
+            0.0191,
+            0.0207,
+            0.0222,
+            0.0237
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    },
+    {
+      "id": "shorekeeper_liberation_heal_flat",
+      "name": "Liberation Heal (Flat)",
+      "type": "resonanceLiberation",
+      "scaling": [
+        {
+          "stat": "FLAT",
+          "multiplier": [
+            220,
+            239,
+            257,
+            282,
+            300,
+            321,
+            349,
+            378,
+            407,
+            436
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    },
+    {
+      "id": "shorekeeper_intro_enlightenment",
+      "name": "Enlightenment DMG",
+      "type": "introSkill",
+      "scaling": [
+        {
+          "stat": "HP",
+          "multiplier": [
+            0.2279,
+            0.2466,
+            0.2653,
+            0.2914,
+            0.3101,
+            0.3316,
+            0.3615,
+            0.3914,
+            0.4213,
+            0.4512
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_intro_enlightenment_heal_pct",
+      "name": "Enlightenment Heal (% HP)",
+      "type": "introSkill",
+      "scaling": [
+        {
+          "stat": "HP",
+          "multiplier": [
+            0.006,
+            0.0065,
+            0.007,
+            0.0077,
+            0.0082,
+            0.0088,
+            0.0096,
+            0.0104,
+            0.0111,
+            0.0118
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    },
+    {
+      "id": "shorekeeper_intro_enlightenment_heal_flat",
+      "name": "Enlightenment Heal (Flat)",
+      "type": "introSkill",
+      "scaling": [
+        {
+          "stat": "FLAT",
+          "multiplier": [
+            130,
+            141,
+            152,
+            167,
+            177,
+            190,
+            207,
+            224,
+            241,
+            258
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    },
+    {
+      "id": "shorekeeper_intro_discernment",
+      "name": "Discernment DMG",
+      "type": "introSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.0988,
+            0.1069,
+            0.115,
+            0.1264,
+            0.1345,
+            0.1438,
+            0.1567,
+            0.1697,
+            0.1826,
+            0.1955
+          ]
+        }
+      ],
+      "tags": [
+        "spectro"
+      ]
+    },
+    {
+      "id": "shorekeeper_intro_discernment_heal_pct",
+      "name": "Discernment Heal (% HP)",
+      "type": "introSkill",
+      "scaling": [
+        {
+          "stat": "HP",
+          "multiplier": [
+            0.0066,
+            0.0072,
+            0.0077,
+            0.0085,
+            0.009,
+            0.0097,
+            0.0105,
+            0.0114,
+            0.0123,
+            0.0132
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    },
+    {
+      "id": "shorekeeper_intro_discernment_heal_flat",
+      "name": "Discernment Heal (Flat)",
+      "type": "introSkill",
+      "scaling": [
+        {
+          "stat": "FLAT",
+          "multiplier": [
+            145,
+            157,
+            169,
+            186,
+            198,
+            211,
+            231,
+            250,
+            269,
+            288
+          ]
+        }
+      ],
+      "tags": [
+        "heal"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "shorekeeper_life_entwined",
+      "name": "Life Entwined",
+      "operation": "enable",
+      "value": [
+        1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "preventFatalStrike"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            1
+          ]
+        }
+      ],
+      "descriptionTemplate": "Prevents fatal strike and heals Shorekeeper for {value}% of Max HP"
+    },
+    {
+      "id": "shorekeeper_self_gravitation",
+      "name": "Self Gravitation",
+      "operation": "add",
+      "value": [
+        0.1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "energyRegen_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.1
+          ]
+        }
+      ],
+      "descriptionTemplate": "Within Stellar Realm, Energy Regen increased by {value}%"
+    },
+    {
+      "id": "shorekeeper_destined_synergy",
+      "name": "Destined Synergy (Rover)",
+      "operation": "add",
+      "value": [
+        0.1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "energyRegen_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.1
+          ]
+        }
+      ],
+      "descriptionTemplate": "When paired with Rover, increase Energy Regen by {value}%"
+    },
+    {
+      "id": "shorekeeper_s1",
+      "name": "S1: Unspoken Conjecture",
+      "operation": "multiply",
+      "value": [
+        1.5
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "stellarealmDuration"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Multiply",
+          "valueType": "Percent",
+          "value": [
+            1.5
+          ]
+        }
+      ],
+      "descriptionTemplate": "Increases Stellar Realm duration by {value}% and extends its range"
+    },
+    {
+      "id": "shorekeeper_s2",
+      "name": "S2: Night's Gift and Refusal",
+      "operation": "add",
+      "value": [
+        0.03
+      ],
+      "maxStacks": 5,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "allDmgBonus_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.03
+          ]
+        }
+      ],
+      "descriptionTemplate": "Upon hitting with Dim Star Butterfly, increases all DMG Bonus by {value}% per stack for {value}s, up to {value} stacks. Flare Star Butterfly self-heals {value}% HP on hit."
+    },
+    {
+      "id": "shorekeeper_s3",
+      "name": "S3: Infinity Awaits Me",
+      "operation": "add",
+      "value": [
+        20
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "concertoEnergy"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Flat",
+          "value": [
+            20
+          ]
+        }
+      ],
+      "descriptionTemplate": "When an ally uses Intro Skill, regenerate {value} Concerto Energy"
+    },
+    {
+      "id": "shorekeeper_s4",
+      "name": "S4: Overflowing Quietude",
+      "operation": "add",
+      "value": [
+        0.1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "allDmgBonus_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.1
+          ]
+        }
+      ],
+      "descriptionTemplate": "After Outro Skill, increase all party members' DMG Bonus by {value}% for {value}s"
+    },
+    {
+      "id": "shorekeeper_s5",
+      "name": "S5: Echoes in Silence",
+      "operation": "add",
+      "value": [
+        0.3
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "basic3Range"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.3
+          ]
+        }
+      ],
+      "descriptionTemplate": "Extends Basic Attack Stage {value} range by {value}%"
+    },
+    {
+      "id": "shorekeeper_s6_discernment",
+      "name": "S6: To the New World - Discernment",
+      "operation": "add",
+      "value": [
+        0.42
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "introDiscernmentDmg_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.42
+          ]
+        }
+      ],
+      "descriptionTemplate": "After Intro Skill Discernment, increase Discernment multiplier by {value}%"
+    },
+    {
+      "id": "shorekeeper_s6_crit",
+      "name": "S6: To the New World - CRIT DMG",
+      "operation": "add",
+      "value": [
+        2
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "critDmg_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            2
+          ]
+        }
+      ],
+      "descriptionTemplate": "After Intro Skill Discernment, increase CRIT DMG by {value}%"
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "The keeper of the shore between worlds, she guides lost souls through the stellar sea. Her presence alone brings calm to the most turbulent of waters.",
+    "quote": "The tide waits for no one. But I can slow it down."
+  }
+}

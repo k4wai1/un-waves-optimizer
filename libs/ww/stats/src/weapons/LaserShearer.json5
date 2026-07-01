@@ -1,0 +1,99 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "LaserShearer",
+    "name": "Laser Shearer",
+    "entityType": "weapon",
+    "rarity": 5,
+    "version": "1.0",
+    "weaponType": "Sword",
+    "tags": [
+      "mainDps",
+      "skill",
+      "burst"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": {
+      "1": 47,
+      "20": 122.25,
+      "40": 232.8,
+      "50": 303.74,
+      "60": 374.68,
+      "70": 445.62,
+      "80": 516.56,
+      "90": 587.5
+    },
+    "def": null,
+    "secondaryAttribute": {
+      "key": "energyRegen_",
+      "values": {
+        "1": 0.0864,
+        "20": 0.1536,
+        "40": 0.2208,
+        "50": 0.2544,
+        "60": 0.288,
+        "70": 0.3216,
+        "80": 0.3552,
+        "90": 0.3888
+      }
+    },
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "lasershearer_atk",
+      "name": "ATK Boost",
+      "descriptionTemplate": "ATK +{value}%",
+      "target": "stat.atk",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.12,
+            0.15,
+            0.18,
+            0.21,
+            0.24
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "lasershearer_skill_dmg_temp",
+      "name": "Skill DMG vs Tune Strain",
+      "descriptionTemplate": "Vs Tune Strain-Interfered targets: Resonance Skill DMG +{value}% for 3s",
+      "target": "stat.skillDmg",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.24,
+            0.27,
+            0.3,
+            0.33,
+            0.36
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "Spacetrek Collective \"Synth Armament\" Series Model: SCSA-LHRi-SWD201052 Forged from compound technology that fuses Exostrider biomorphic components with Tacetite, this weapon offers two core features: frequency auto-adaptation and user binding. Its power scales directly with the wielder's Forte, growing sharper through dedicated Forte training. The light patterns along the blade shift in response to the wielder's frequency fluctuations. Each strike expresses a refined intuition, a \"razor\" that cuts away unnecessary possibilities. Ideal for the signal catchers who discern the greater picture from the smallest details and make sound judgments.",
+    "quote": null
+  }
+}

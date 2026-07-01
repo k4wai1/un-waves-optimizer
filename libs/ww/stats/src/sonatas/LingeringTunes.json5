@@ -1,0 +1,87 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "LingeringTunes",
+    "name": "Lingering Tunes",
+    "entityType": "sonata",
+    "rarity": 5,
+    "version": "1.0",
+    "element": null,
+    "weaponType": null,
+    "tags": [
+      "sonata"
+    ],
+    "aliases": []
+  },
+  "stats": {
+    "hp": null,
+    "atk": null,
+    "def": null,
+    "secondaryAttribute": null,
+    "statNodes": [],
+    "tuneBreakBoost": null,
+    "offTuneBuildupRate": null
+  },
+  "actions": [],
+  "effects": [
+    {
+      "id": "LingeringTunes_2pc",
+      "name": "LingeringTunes 2pc Bonus",
+      "description": "ATK +10%",
+      "type": "stat",
+      "operation": "add",
+      "stat": "atk_",
+      "value": [
+        0.1
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 2 Echoes of this Sonata set",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "LingeringTunes_5pc_passive",
+      "name": "LingeringTunes 5pc Passive",
+      "description": "While on the field, ATK increases by 5% every 1.5s. This effect stacks up to 4 stacks. Outro Skill DMG +60%.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "outroDmg_",
+      "value": [
+        0.6
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 5 Echoes of this Sonata set",
+      "maxStacks": 1,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
+      "id": "LingeringTunes_5pc",
+      "name": "LingeringTunes 5pc Conditional",
+      "description": "While on the field, ATK increases by 5% every 1.5s. This effect stacks up to 4 stacks. Outro Skill DMG +60%.",
+      "type": "stat",
+      "operation": "add",
+      "stat": "atk_",
+      "value": [
+        0.05
+      ],
+      "affects": "self",
+      "howToActivate": "Equip 5 Echoes: onFieldTime_1_5s",
+      "maxStacks": 4,
+      "durationSeconds": null,
+      "cooldownSeconds": null,
+      "exclusive": false,
+      "enabledByDefault": false
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": null,
+    "quote": null
+  }
+}

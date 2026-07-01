@@ -1,0 +1,89 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "EnemyName",
+    "name": "Enemy Name",
+    "entityType": "enemy",
+    "rarity": null,
+    "version": "1.0",
+    "element": null,
+    "weaponType": null,
+    "tags": ["enemy"],
+    "aliases": []
+  },
+
+
+  "stats": {
+
+    "level": 100,
+
+
+    "hp": 100000,
+
+
+    "defense": 792,
+
+
+
+
+    "elementalResistances": {
+      "glacio": 0.10,
+      "fusion": 0.10,
+      "electro": 0.10,
+      "aero": 0.10,
+      "havoc": 0.10,
+      "spectro": 0.10
+    },
+
+
+    "physicalResistance": 0.10,
+
+
+
+
+    "damageTaken": 1.0
+  },
+
+
+
+
+
+
+
+  "effects": [
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ],
+
+
+  "mechanics": [
+
+  ],
+
+  "lore": { "about": null, "quote": null }
+}
