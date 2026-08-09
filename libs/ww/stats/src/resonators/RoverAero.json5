@@ -19,7 +19,48 @@
     atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
     def: { "1": 93, "20": 238, "40": 452, "50": 589, "60": 725, "70": 862, "80": 999, "90": 1136 },
     secondaryAttribute: null,
-    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    statNodes: [
+      {
+        id: "node_heal_l1",
+        name: "Healing Bonus +1.8%",
+        buffs: { "healing_bonus_": 0.018 },
+      },
+      {
+        id: "node_heal_l2",
+        name: "Healing Bonus +1.8%",
+        buffs: { "healing_bonus_": 0.018 },
+      },
+      {
+        id: "node_heal_h1",
+        name: "Healing Bonus +4.2%",
+        buffs: { "healing_bonus_": 0.042 },
+      },
+      {
+        id: "node_heal_h2",
+        name: "Healing Bonus +4.2%",
+        buffs: { "healing_bonus_": 0.042 },
+      },
+      {
+        id: "node_atk_l1",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_l2",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_h1",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+      {
+        id: "node_atk_h2",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+    ],
     tuneBreakBoost: 0,
     offTuneBuildupRate: 1,
   },

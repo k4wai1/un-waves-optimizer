@@ -19,7 +19,48 @@
     atk: { "1": 18, "20": 46, "40": 90, "50": 119, "60": 147, "70": 176, "80": 200, "90": 225 },
     def: { "1": 128, "20": 328, "40": 622, "50": 810, "60": 999, "70": 1187, "80": 1376, "90": 1564 },
     secondaryAttribute: null,
-    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    statNodes: [
+      {
+        id: "node_havoc_l1",
+        name: "Havoc DMG Bonus +1.8%",
+        buffs: { "havoc_dmg_": 0.018 },
+      },
+      {
+        id: "node_havoc_l2",
+        name: "Havoc DMG Bonus +1.8%",
+        buffs: { "havoc_dmg_": 0.018 },
+      },
+      {
+        id: "node_havoc_h1",
+        name: "Havoc DMG Bonus +4.2%",
+        buffs: { "havoc_dmg_": 0.042 },
+      },
+      {
+        id: "node_havoc_h2",
+        name: "Havoc DMG Bonus +4.2%",
+        buffs: { "havoc_dmg_": 0.042 },
+      },
+      {
+        id: "node_def_l1",
+        name: "DEF +2.28%",
+        buffs: { "def_": 0.0228 },
+      },
+      {
+        id: "node_def_l2",
+        name: "DEF +2.28%",
+        buffs: { "def_": 0.0228 },
+      },
+      {
+        id: "node_def_h1",
+        name: "DEF +5.32%",
+        buffs: { "def_": 0.0532 },
+      },
+      {
+        id: "node_def_h2",
+        name: "DEF +5.32%",
+        buffs: { "def_": 0.0532 },
+      },
+    ],
     tuneBreakBoost: 0,
     offTuneBuildupRate: 1,
   },

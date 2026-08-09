@@ -19,7 +19,48 @@
     atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
     def: { "1": 107, "20": 274, "40": 520, "50": 677, "60": 835, "70": 992, "80": 1150, "90": 1307 },
     secondaryAttribute: null,
-    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    statNodes: [
+      {
+        id: "node_critRate_l1",
+        name: "Crit. Rate +1.2%",
+        buffs: { "critRate_": 0.012 },
+      },
+      {
+        id: "node_critRate_l2",
+        name: "Crit. Rate +1.2%",
+        buffs: { "critRate_": 0.012 },
+      },
+      {
+        id: "node_critRate_h1",
+        name: "Crit. Rate +2.8%",
+        buffs: { "critRate_": 0.028 },
+      },
+      {
+        id: "node_critRate_h2",
+        name: "Crit. Rate +2.8%",
+        buffs: { "critRate_": 0.028 },
+      },
+      {
+        id: "node_atk_l1",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_l2",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_h1",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+      {
+        id: "node_atk_h2",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+    ],
     tuneBreakBoost: 0,
     offTuneBuildupRate: 1,
   },

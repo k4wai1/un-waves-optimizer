@@ -19,7 +19,48 @@
     atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
     def: { "1": 112, "20": 287, "40": 544, "50": 709, "60": 874, "70": 1039, "80": 1204, "90": 1368 },
     secondaryAttribute: null,
-    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    statNodes: [
+      {
+        id: "node_spectro_l1",
+        name: "Spectro DMG Bonus +1.8%",
+        buffs: { "spectro_dmg_": 0.018 },
+      },
+      {
+        id: "node_spectro_l2",
+        name: "Spectro DMG Bonus +1.8%",
+        buffs: { "spectro_dmg_": 0.018 },
+      },
+      {
+        id: "node_spectro_h1",
+        name: "Spectro DMG Bonus +4.2%",
+        buffs: { "spectro_dmg_": 0.042 },
+      },
+      {
+        id: "node_spectro_h2",
+        name: "Spectro DMG Bonus +4.2%",
+        buffs: { "spectro_dmg_": 0.042 },
+      },
+      {
+        id: "node_atk_l1",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_l2",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_h1",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+      {
+        id: "node_atk_h2",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+    ],
     tuneBreakBoost: 0,
     offTuneBuildupRate: 1,
   },

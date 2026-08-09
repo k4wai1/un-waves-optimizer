@@ -19,7 +19,48 @@
     atk: { "1": 20, "20": 52, "40": 100, "50": 132, "60": 164, "70": 196, "80": 223, "90": 250 },
     def: { "1": 90, "20": 230, "40": 437, "50": 570, "60": 702, "70": 835, "80": 967, "90": 1099 },
     secondaryAttribute: null,
-    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    statNodes: [
+      {
+        id: "node_atk_l1",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_l2",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_h1",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+      {
+        id: "node_atk_h2",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+      {
+        id: "node_aero_l1",
+        name: "Aero DMG Bonus +1.8%",
+        buffs: { "aero_dmg_": 0.018 },
+      },
+      {
+        id: "node_aero_l2",
+        name: "Aero DMG Bonus +1.8%",
+        buffs: { "aero_dmg_": 0.018 },
+      },
+      {
+        id: "node_aero_h1",
+        name: "Aero DMG Bonus +4.2%",
+        buffs: { "aero_dmg_": 0.042 },
+      },
+      {
+        id: "node_aero_h2",
+        name: "Aero DMG Bonus +4.2%",
+        buffs: { "aero_dmg_": 0.042 },
+      },
+    ],
     tuneBreakBoost: 0,
     offTuneBuildupRate: 1,
   },

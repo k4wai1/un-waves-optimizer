@@ -19,7 +19,48 @@
     atk: { "1": 22, "20": 57, "40": 110, "50": 145, "60": 180, "70": 215, "80": 245, "90": 275 },
     def: { "1": 77, "20": 197, "40": 374, "50": 487, "60": 601, "70": 714, "80": 827, "90": 941 },
     secondaryAttribute: null,
-    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    statNodes: [
+      {
+        id: "node_glacio_l1",
+        name: "Glacio DMG Bonus +1.8%",
+        buffs: { "glacio_dmg_": 0.018 },
+      },
+      {
+        id: "node_glacio_l2",
+        name: "Glacio DMG Bonus +1.8%",
+        buffs: { "glacio_dmg_": 0.018 },
+      },
+      {
+        id: "node_glacio_h1",
+        name: "Glacio DMG Bonus +4.2%",
+        buffs: { "glacio_dmg_": 0.042 },
+      },
+      {
+        id: "node_glacio_h2",
+        name: "Glacio DMG Bonus +4.2%",
+        buffs: { "glacio_dmg_": 0.042 },
+      },
+      {
+        id: "node_atk_l1",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_l2",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_h1",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+      {
+        id: "node_atk_h2",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+    ],
     tuneBreakBoost: 0,
     offTuneBuildupRate: 1,
   },

@@ -126,30 +126,29 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
 
     // Stat nodes
     const nodes = stats.statNodes || charData.statNodes || [];
+    // Acumular los % de hp/atk/def de TODOS los nodos activos (no sobrescribir por nodo)
+    let hpPct = 0, atkPct = 0, defPct = 0;
     for (const node of nodes) {
-      if (activeNodes[node.id] && node.buffs) {
-        // hp_/atk_/def_ handled at end
-        let hpPct = 0, atkPct = 0, defPct = 0;
-        Object.entries(node.buffs).forEach(([bk, bv]) => {
-          const val = bv as number;
-          if (bk === 'hp_') { hpPct += val; return; }
-          if (bk === 'atk_') { atkPct += val; return; }
-          if (bk === 'def_') { defPct += val; return; }
-          const map: Record<string, string> = {
-            critRate_: 'critRate_', critDmg_: 'critDmg_', energyRegen_: 'energyRegen_',
-            glacio_dmg_: 'glacioDmgBonus_', fusion_dmg_: 'fusionDmgBonus_',
-            electro_dmg_: 'electroDmgBonus_', aero_dmg_: 'aeroDmgBonus_',
-            spectro_dmg_: 'spectroDmgBonus_', havoc_dmg_: 'havocDmgBonus_',
-            healing_bonus_: 'healingBonus_',
-          };
-          const ck = map[bk];
-          if (ck && ck in ctx) (ctx as any)[ck] += val;
-        });
-        if (hpPct) ctx.hp = baseHp * (1 + hpPct);
-        if (atkPct) ctx.atk = (baseAtk + weaponAtk) * (1 + atkPct);
-        if (defPct) ctx.def = baseDef * (1 + defPct);
-      }
+      if (!activeNodes[node.id] || !node.buffs) continue;
+      Object.entries(node.buffs).forEach(([bk, bv]) => {
+        const val = bv as number;
+        if (bk === 'hp_') { hpPct += val; return; }
+        if (bk === 'atk_') { atkPct += val; return; }
+        if (bk === 'def_') { defPct += val; return; }
+        const map: Record<string, string> = {
+          critRate_: 'critRate_', critDmg_: 'critDmg_', energyRegen_: 'energyRegen_',
+          glacio_dmg_: 'glacioDmgBonus_', fusion_dmg_: 'fusionDmgBonus_',
+          electro_dmg_: 'electroDmgBonus_', aero_dmg_: 'aeroDmgBonus_',
+          spectro_dmg_: 'spectroDmgBonus_', havoc_dmg_: 'havocDmgBonus_',
+          healing_bonus_: 'healingBonus_',
+        };
+        const ck = map[bk];
+        if (ck && ck in ctx) (ctx as any)[ck] += val;
+      });
     }
+    if (hpPct) ctx.hp = baseHp * (1 + hpPct);
+    if (atkPct) ctx.atk = (baseAtk + weaponAtk) * (1 + atkPct);
+    if (defPct) ctx.def = baseDef * (1 + defPct);
 
     const activeList = Object.values(effectStates).filter(ae => ae.enabled);
     return resolveEffects(ctx, activeList, effectsDb);

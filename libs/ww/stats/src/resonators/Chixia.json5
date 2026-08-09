@@ -19,7 +19,48 @@
     atk: { "1": 24, "20": 62, "40": 120, "50": 159, "60": 197, "70": 235, "80": 267, "90": 300 },
     def: { "1": 78, "20": 200, "40": 379, "50": 494, "60": 608, "70": 723, "80": 838, "90": 953 },
     secondaryAttribute: null,
-    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    statNodes: [
+      {
+        id: "node_fusion_l1",
+        name: "Fusion DMG Bonus +1.8%",
+        buffs: { "fusion_dmg_": 0.018 },
+      },
+      {
+        id: "node_fusion_l2",
+        name: "Fusion DMG Bonus +1.8%",
+        buffs: { "fusion_dmg_": 0.018 },
+      },
+      {
+        id: "node_fusion_h1",
+        name: "Fusion DMG Bonus +4.2%",
+        buffs: { "fusion_dmg_": 0.042 },
+      },
+      {
+        id: "node_fusion_h2",
+        name: "Fusion DMG Bonus +4.2%",
+        buffs: { "fusion_dmg_": 0.042 },
+      },
+      {
+        id: "node_atk_l1",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_l2",
+        name: "ATK +1.8%",
+        buffs: { "atk_": 0.018 },
+      },
+      {
+        id: "node_atk_h1",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+      {
+        id: "node_atk_h2",
+        name: "ATK +4.2%",
+        buffs: { "atk_": 0.042 },
+      },
+    ],
     tuneBreakBoost: 0,
     offTuneBuildupRate: 1,
   },

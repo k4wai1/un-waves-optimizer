@@ -47,63 +47,47 @@
       "90": 1099.98
     },
     "secondaryAttribute": null,
-    "statNodes": [
+    statNodes: [
       {
-        "id": "node_hp_l1",
-        "name": "HP +1.8%",
-        "buffs": {
-          "hp_": 0.018
-        }
+        id: "node_heal_l1",
+        name: "Healing Bonus +1.8%",
+        buffs: { "healing_bonus_": 0.018 },
       },
       {
-        "id": "node_hp_l2",
-        "name": "HP +1.8%",
-        "buffs": {
-          "hp_": 0.018
-        }
+        id: "node_heal_l2",
+        name: "Healing Bonus +1.8%",
+        buffs: { "healing_bonus_": 0.018 },
       },
       {
-        "id": "node_hp_h1",
-        "name": "HP +4.2%",
-        "buffs": {
-          "hp_": 0.042
-        }
+        id: "node_heal_h1",
+        name: "Healing Bonus +4.2%",
+        buffs: { "healing_bonus_": 0.042 },
       },
       {
-        "id": "node_hp_h2",
-        "name": "HP +4.2%",
-        "buffs": {
-          "hp_": 0.042
-        }
+        id: "node_heal_h2",
+        name: "Healing Bonus +4.2%",
+        buffs: { "healing_bonus_": 0.042 },
       },
       {
-        "id": "node_heal_l1",
-        "name": "Healing Bonus +1.8%",
-        "buffs": {
-          "healing_bonus_": 0.018
-        }
+        id: "node_hp_l1",
+        name: "HP +1.8%",
+        buffs: { "hp_": 0.018 },
       },
       {
-        "id": "node_heal_l2",
-        "name": "Healing Bonus +1.8%",
-        "buffs": {
-          "healing_bonus_": 0.018
-        }
+        id: "node_hp_l2",
+        name: "HP +1.8%",
+        buffs: { "hp_": 0.018 },
       },
       {
-        "id": "node_heal_h1",
-        "name": "Healing Bonus +4.2%",
-        "buffs": {
-          "healing_bonus_": 0.042
-        }
+        id: "node_hp_h1",
+        name: "HP +4.2%",
+        buffs: { "hp_": 0.042 },
       },
       {
-        "id": "node_heal_h2",
-        "name": "Healing Bonus +4.2%",
-        "buffs": {
-          "healing_bonus_": 0.042
-        }
-      }
+        id: "node_hp_h2",
+        name: "HP +4.2%",
+        buffs: { "hp_": 0.042 },
+      },
     ],
     "tuneBreakBoost": 10,
     "offTuneBuildupRate": 1.2
