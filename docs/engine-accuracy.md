@@ -1,0 +1,225 @@
+# Motor: fidelidad a la formula del juego
+
+> Referencia: `Wuthering_Waves_Multiplicadores.md` en la raiz del proyecto.
+>
+> Este documento lista los bugs encontrados al comparar el motor (`calculator.ts`)
+> con la formula oficial, y como fixearlos.
+
+---
+
+## Formula oficial (resumen)
+
+```
+D_final = (S * MV + D_flat + D_bonus) * M_RES * M_DEF * M_DR * M_ER
+          * (1 + sum(B_i)) * (1 + sum(A_j)) * (1 + sum(P_k)) * M_crit
+```
+
+Donde:
+- **S** = stat de escalado (ATK, HP, DEF)
+- **MV** = multiplier de la habilidad
+- **D_flat** = dano flat adicional
+- **M_RES** = multiplicador de resistencia
+- **M_DEF** = multiplicador de defensa
+- **M_DR** = multiplicador de reduccion de dano
+- **M_ER** = multiplicador de elemento
+- **B_i** = bonus de dano aditivo (DMG Bonus %, elemental, por tipo)
+- **A_j** = amplificacion / Deepen (multiplicativo separado)
+- **P_k** = bonos especiales (multiplicativo, raro)
+- **M_crit** = multiplicador critico (1 o CD)
+
+---
+
+## Bug 1: DEF del enemigo por defecto incorrecta
+
+**Severidad: Alta** -- todos los numeros de dano estan mal.
+
+### El problema
+
+`Wuthering_Waves_Multiplicadores.md` dice:
+
+> A niveles iguales (Lc = Le) y sin Ignorar Defensa, el multiplicador resultante es
+> exactamente **0.5** (el enemigo reduce tu dano base a la mitad).
+
+La formula: `M_DEF = (800 + 8*Lc) / [(800 + 8*Lc) + (800 + 8*Le)*(1-d)]`
+
+A Lc=Le=100, sin def ignore: `M_DEF = 1600 / (1600 + 1600) = 0.5`
+
+### En el motor
+
+`calculator.ts` linea 87:
+```typescript
+export const DEFAULT_ENEMY: EnemyStats = {
+  defense: 792,  // <-- INCORRECTO
+  ...
+};
+```
+
+El motor calcula: `defMultiplier = defNum / (defNum + enemy.defense)`
+- `defNum = 800 + 8*100 = 1600`
+- `enemy.defense = 792`
+- `M_DEF = 1600 / (1600 + 792) = 0.669` (deberia ser 0.5)
+
+### Fix
+
+```typescript
+export const DEFAULT_ENEMY: EnemyStats = {
+  defense: 1600,  // 800 + 8 * 100 (enemigo nivel 100)
+  ...
+};
+```
+
+### Nota
+
+El `EnemySchema.md` dice "DEF 792" en la seccion del enemigo por defecto. Tambien
+hay que actualizarlo. El valor 792 podria ser la DEF real de un enemigo especifico
+a nivel 100, pero no produce el M_DEF=0.5 que la formula oficial garantiza a
+niveles iguales. Para el dummy estandar, usar 1600.
+
+---
+
+## Bug 2: Bonus de dano por tipo NO se aplica
+
+**Severidad: Alta** -- efectos como "Basic Attack DMG +10%" no afectan el dano.
+
+### El problema
+
+`Wuthering_Waves_Multiplicadores.md` seccion 3 dice:
+
+> En esta bolsa caen **todos** los bonos que tengan la coletilla "DMG Bonus %".
+> Esto incluye Bono de Dano Elemental, Bono de Ataque Basico, Ataque Pesado,
+> Habilidad de Resonancia, etc.
+
+### En el motor
+
+`CombatContext` tiene estos campos:
+```typescript
+basicAttackDmgBonus_: number;
+heavyAttackDmgBonus_: number;
+resonanceSkillDmgBonus_: number;
+resonanceLiberationDmgBonus_: number;
+echoSkillDmgBonus_: number;
+coordinatedDmgBonus_: number;
+outroSkillDmgBonus_: number;
+```
+
+Pero `calculateDamage()` solo usa:
+```typescript
+const totalDmgBonus = context.allDmgBonus_ + elementalBonus;
+```
+
+**Falta sumar el bonus por tipo de accion.** Si un echo da "Basic Attack DMG +10%",
+se guarda en `basicAttackDmgBonus_` pero el motor nunca lo lee.
+
+### Fix
+
+`calculateDamage()` necesita recibir el `actionType` (o el action completo) para
+saber que bonus por tipo aplicar:
+
+```typescript
+export function calculateDamage(
+  context: CombatContext,
+  mv: number,
+  scaler: string = 'atk',
+  element?: string,
+  flat: number = 0,
+  actionType?: string,  // <-- NUEVO
+) {
+  // ...
+  let typeBonus = 0;
+  if (actionType === 'basicAttack') typeBonus = context.basicAttackDmgBonus_;
+  else if (actionType === 'heavyAttack') typeBonus = context.heavyAttackDmgBonus_;
+  else if (actionType === 'resonanceSkill') typeBonus = context.resonanceSkillDmgBonus_;
+  else if (actionType === 'resonanceLiberation') typeBonus = context.resonanceLiberationDmgBonus_;
+  else if (actionType === 'echoSkill') typeBonus = context.echoSkillDmgBonus_;
+  else if (actionType === 'introSkill') typeBonus = context.introSkillDmgBonus_; // si existe
+  // ...
+
+  const totalDmgBonus = context.allDmgBonus_ + elementalBonus + typeBonus;
+  // ...
+}
+```
+
+Tambien actualizar `calculateActionDamage()` en `effectResolver.ts` para pasar
+`action.type` a `calculateDamageFn`.
+
+### Mapeo actionType -> bonus
+
+| actionType | Context key |
+|---|---|
+| `basicAttack` | `basicAttackDmgBonus_` |
+| `heavyAttack` | `heavyAttackDmgBonus_` |
+| `plungingAttack` | (no hay bonus especifico, usar 0) |
+| `dodgeCounter` | (no hay bonus especifico, usar 0) |
+| `resonanceSkill` | `resonanceSkillDmgBonus_` |
+| `resonanceLiberation` | `resonanceLiberationDmgBonus_` |
+| `forteCircuit` | (no hay bonus especifico, usar 0) |
+| `introSkill` | (no hay bonus especifico, usar 0) |
+| `outroSkill` | `outroSkillDmgBonus_` |
+| `echoSkill` | `echoSkillDmgBonus_` |
+
+---
+
+## Bug 3: Falta la categoria P_k (bonos especiales)
+
+**Severidad: Baja** -- pocos personajes usan esta categoria.
+
+### El problema
+
+La formula oficial tiene tres categorias multiplicativas:
+```
+(1 + sum(B_i)) * (1 + sum(A_j)) * (1 + sum(P_k))
+```
+
+El motor solo tiene dos:
+```typescript
+const bonusMult = (1 + totalDmgBonus) * (1 + context.dmgAmplify_);
+//                                 ^^^ B_i                ^^^ A_j (Deepen)
+```
+
+Falta `P_k` (bonos especiales multiplicativos). Es "extremadamente raro" segun el
+.md, pero deberia existir en el motor para futuros personajes.
+
+### Fix
+
+Anadir `specialDmgMult_` al `CombatContext`:
+
+```typescript
+specialDmgMult_: number;  // P_k: bonos especiales multiplicativos (raro)
+```
+
+Y en `calculateDamage()`:
+```typescript
+const bonusMult = (1 + totalDmgBonus) * (1 + context.dmgAmplify_) * (1 + context.specialDmgMult_);
+```
+
+---
+
+## Bug 4: dmgAmplify_ vs Deepen
+
+**Severidad: Informativo** -- verificar semantica.
+
+El motor usa `dmgAmplify_` como la categoria A_j (Deepen). Esto parece correcto:
+los Outro Skills de Verina (+15% All Type DMG Deepen), Mortefi (+38% Heavy DMG
+Deepen), etc. deberian mapear a `dmgAmplify_`.
+
+Pero hay que verificar:
+- Deepen por tipo (ej. "Heavy Attack DMG Deepen") no deberia aplicar a todas las
+  acciones, solo a las del tipo correcto.
+- Actualmente `dmgAmplify_` es global. Si Mortefi da +38% Heavy Deepen, deberia
+  aplicar solo a `heavyAttack`, no a `resonanceSkill`.
+
+Esto requiere el mismo fix que Bug 2: pasar el actionType al calculo y usar un
+Deepen por tipo en lugar de uno global.
+
+---
+
+## Checklist de verificacion
+
+Despues de aplicar los fixes:
+
+- [ ] A niveles iguales (Lc=Le=100), M_DEF = 0.5 exacto
+- [ ] Un echo con "Basic Attack DMG +10%" aumenta el dano de basic attacks en ~10%
+- [ ] Un echo con "Skill DMG +10%" NO aumenta el dano de basic attacks
+- [ ] Deepen de Mortefi (+38% Heavy) solo aplica a heavy attacks
+- [ ] Los numeros coinciden con calculadoras externas (ej. wutheringlab)
+- [ ] Tests actualizados para cubrir los nuevos casos

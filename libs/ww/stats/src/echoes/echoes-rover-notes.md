@@ -1,3 +1,10 @@
+# Notas sobre Echoes de Rover (Havoc)
+
+> Notas de referencia sobre el sistema de echoes de WuWa.
+> Extraido de `text/echoes-rover1.txt`.
+
+---
+
 el nombre del set es "Havoc Eclipse", algo interesante de los echoes de wuwa es que tienen habilidades distintas si estan en el primer slot. Solo trabajaremos con echoes de 5*; olvidaremos que existen otras rarezas por simplicidad. te pasaré 5 que usaremos como referencia en nuestra primera implementación con rover. punto 1 los cost(4: Calamity Class, 3: Elite Class, 1: Common Class), un personaje tiene un limite de 12, que permite configuraciones como 4-4-1-1-1 o 4-3-3-1-1  que la ultima es la que usaremos al ser la mas optima en este caso: "-
 |
 Calamity Class

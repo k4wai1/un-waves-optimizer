@@ -1,3 +1,10 @@
+# Sanhua: datos crudos de combate
+
+> Datos extraidos manualmente como referencia. El spec JSON5 oficial
+> esta en `Sanhua.json5`.
+
+---
+
 Tabla de Estadísticas por Fase de Ascensión y Nivel
 Fase 0:
 
