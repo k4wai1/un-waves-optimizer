@@ -81,4 +81,4 @@ Los efectos pueden modificar stats del enemigo usando `target.type: "Stat"` con 
 
 ## Enemigo por defecto
 
-`EnemyBase.json5` es el dummy de训练. Todas las resistencias al 10%, DEF 792, nivel 100.
+`EnemyBase.json5` es el dummy de práctica. Todas las resistencias al 10%, DEF 1600 (= 800 + 8×100, produce M_DEF = 0.5 a niveles iguales), nivel 100.

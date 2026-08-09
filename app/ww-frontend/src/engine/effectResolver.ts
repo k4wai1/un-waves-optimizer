@@ -133,6 +133,13 @@ const PATH_TO_CTX: Record<string, string> = {
   healingBonus: 'healingBonus_',
   shieldBonus: 'shieldBonus_',
   defIgnore: 'defIgnore_',
+  specialDmgMult: 'specialDmgMult_',
+  // Deepen/Amplify por tipo (A_j específico)
+  basicAmplify: 'basicAmplify_',
+  heavyAmplify: 'heavyAmplify_',
+  skillAmplify: 'skillAmplify_',
+  liberationAmplify: 'liberationAmplify_',
+  coordinatedAmplify: 'coordinatedAmplify_',
   glacioDmg: 'glacioDmgBonus_',
   fusionDmg: 'fusionDmgBonus_',
   electroDmg: 'electroDmgBonus_',
@@ -155,12 +162,15 @@ function legacyTargetToPath(effect: Effect): string | null {
         hp_: 'stat.hp', atk_: 'stat.atk', def_: 'stat.def',
         critRate_: 'stat.critRate', critDmg_: 'stat.critDmg',
         energyRegen_: 'stat.energyRegen', allDmgBonus_: 'stat.allDmgBonus',
-        dmgAmplify_: 'stat.dmgAmplify',
+        dmgAmplify_: 'stat.dmgAmplify', specialDmgMult_: 'stat.specialDmgMult',
         skillDmg_: 'stat.skillDmg', basicDmg_: 'stat.basicDmg',
         heavyDmg_: 'stat.heavyDmg', liberationDmg_: 'stat.liberationDmg',
         echoDmg_: 'stat.echoDmg', coordinated_dmg_: 'stat.coordinatedDmg',
         outroDmg_: 'stat.outroDmg', healing_bonus_: 'stat.healingBonus',
         defIgnore_: 'stat.defIgnore',
+        basicAmplify_: 'stat.basicAmplify', heavyAmplify_: 'stat.heavyAmplify',
+        skillAmplify_: 'stat.skillAmplify', liberationAmplify_: 'stat.liberationAmplify',
+        coordinatedAmplify_: 'stat.coordinatedAmplify',
         glacio_dmg_: 'stat.glacioDmg', fusion_dmg_: 'stat.fusionDmg',
         electro_dmg_: 'stat.electroDmg', aero_dmg_: 'stat.aeroDmg',
         spectro_dmg_: 'stat.spectroDmg', havoc_dmg_: 'stat.havocDmg',
@@ -379,7 +389,7 @@ export function resolveActionModifiers(
 /**
  * Tipado de la función de daño inyectable.
  */
-export type DamageFn = (ctx: CombatContext, mv: number, scaler: string, element?: string, flat?: number) => { normal: number; average: number; crit: number };
+export type DamageFn = (ctx: CombatContext, mv: number, scaler: string, element?: string, flat?: number, actionType?: string) => { normal: number; average: number; crit: number };
 
 /**
  * Calcula el daño de una acción aplicando todos los modifiers activos.
@@ -418,7 +428,11 @@ export function calculateActionDamage(
   // damageMultiplier: suma (ej: varios efectos dan +20% cada uno)
   finalMv *= 1 + mods.damageMultiplier;
 
-  return calculateDamageFn(context, finalMv, scalerStat, element, action.flat ?? 0);
+  // actionType: para que calculateDamage aplique el bonus aditivo por tipo (B_i)
+  // y el Deepen por tipo (A_j). Las acciones coordinated usan "coordinated".
+  const actionType = kind === 'coordinated' ? 'coordinated' : action.type;
+
+  return calculateDamageFn(context, finalMv, scalerStat, element, action.flat ?? 0, actionType);
 }
 
 /**

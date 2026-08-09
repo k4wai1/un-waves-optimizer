@@ -114,10 +114,10 @@ describe('calculateDamage con flat', () => {
     // contribución del flat llega atenuada por defMult*resMult (< 1).
     expect(withFlat.normal).toBeGreaterThan(base.normal);
     const delta = withFlat.normal - base.normal;
-    // defMult(90 vs def 792) = 1520/2312 ≈ 0.657; res spectro = 0.90
-    // contribución ≈ 400 * 0.657 * 0.90 ≈ 236.6 (redondeos por ambos lados)
-    expect(delta).toBeGreaterThanOrEqual(230);
-    expect(delta).toBeLessThanOrEqual(245);
+    // defMult(90 vs def 1600) = 1520/3120 ≈ 0.487; res spectro = 0.90
+    // contribución ≈ 400 * 0.487 * 0.90 ≈ 175.4 (redondeos por ambos lados)
+    expect(delta).toBeGreaterThanOrEqual(170);
+    expect(delta).toBeLessThanOrEqual(185);
   });
 
   it('mantiene la firma con 4 argumentos (retrocompat)', () => {
@@ -270,5 +270,86 @@ describe('formId (formas / modos)', () => {
     const withoutForm = calculateActionDamage(BASE_CONTEXT, plain, 0.5, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
     expect(incarn.formId).toBe('incarnation');
     expect(withForm).toEqual(withoutForm);
+  });
+});
+
+// ─── Fixes de fidelidad a la fórmula oficial (docs/engine-accuracy.md) ────────
+
+describe('Bug 1: DEF del enemigo por defecto (M_DEF = 0.5 a niveles iguales)', () => {
+  it('DEFAULT_ENEMY.defense = 1600 (800 + 8·100)', () => {
+    expect(DEFAULT_ENEMY.defense).toBe(1600);
+  });
+
+  it('a niveles iguales (Lc=Le=100) el multiplicador de DEF es exactamente 0.5', () => {
+    const ctx = { ...BASE_CONTEXT, attackerLvl: 100 };
+    ctx.enemy = { ...cloneEnemy(), defense: 1600 }; // mismo nivel 100
+    // Fórmula oficial: defNum / (defNum + enemyDef) = 1600 / 3200 = 0.5
+    const base = calculateDamage(ctx, 1.0, 'atk', 'spectro');
+    // Sin bonus: baseDmg = 1000 * 1.0, res spectro = 0.90, damageTaken = 1
+    // preCrit = 1000 * 0.5 * 0.90 = 450
+    expect(base.normal).toBe(450);
+  });
+});
+
+describe('Bug 2: bonus de daño por tipo de acción (B_i específico)', () => {
+  it('stat.basicDmg aumenta el daño de basicAttack pero no de resonanceSkill', () => {
+    const basic: Action = { id: 'b1', type: 'basicAttack', tags: [] };
+    const skill: Action = { id: 's1', type: 'resonanceSkill', tags: [] };
+    const ctx = { ...BASE_CONTEXT, basicAttackDmgBonus_: 0.2 };
+
+    const baseBasic = calculateActionDamage(BASE_CONTEXT, basic, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    const buffedBasic = calculateActionDamage(ctx, basic, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    const buffedSkill = calculateActionDamage(ctx, skill, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+
+    expect(buffedBasic.normal / baseBasic.normal).toBeCloseTo(1.2, 2);
+    // el skill NO recibe el bonus de basic attack
+    const baseSkill = calculateActionDamage(BASE_CONTEXT, skill, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    expect(buffedSkill.normal).toBe(baseSkill.normal);
+  });
+
+  it('resonanceSkillDmgBonus_ se aplica vía calculateDamage con actionType', () => {
+    const ctx = { ...BASE_CONTEXT, resonanceSkillDmgBonus_: 0.15 };
+    const base = calculateDamage(BASE_CONTEXT, 1.0, 'atk', 'spectro', 0, 'resonanceSkill');
+    const buffed = calculateDamage(ctx, 1.0, 'atk', 'spectro', 0, 'resonanceSkill');
+    expect(buffed.normal / base.normal).toBeCloseTo(1.15, 2);
+  });
+});
+
+describe('Bug 3: categoría P_k (specialDmgMult_)', () => {
+  it('specialDmgMult_ multiplica separado de los bonus aditivos', () => {
+    const ctx = { ...BASE_CONTEXT, specialDmgMult_: 0.1 };
+    const base = calculateDamage(BASE_CONTEXT, 1.0, 'atk', 'spectro');
+    const buffed = calculateDamage(ctx, 1.0, 'atk', 'spectro');
+    expect(buffed.normal / base.normal).toBeCloseTo(1.1, 2);
+  });
+});
+
+describe('Bug 4: Deepen por tipo (A_j específico)', () => {
+  it('skillAmplify_ aplica solo a resonanceSkill, no a basicAttack', () => {
+    const ctx = { ...BASE_CONTEXT, skillAmplify_: 0.38 }; // ej. Mortefi Heavy Deepen sería heavyAmplify_
+    const skill: Action = { id: 's1', type: 'resonanceSkill', tags: [] };
+    const basic: Action = { id: 'b1', type: 'basicAttack', tags: [] };
+
+    const baseSkill = calculateActionDamage(BASE_CONTEXT, skill, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    const buffedSkill = calculateActionDamage(ctx, skill, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    const buffedBasic = calculateActionDamage(ctx, basic, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+
+    expect(buffedSkill.normal / baseSkill.normal).toBeCloseTo(1.38, 2);
+    const baseBasic = calculateActionDamage(BASE_CONTEXT, basic, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    expect(buffedBasic.normal).toBe(baseBasic.normal);
+  });
+
+  it('dmgAmplify_ global sigue aplicando a todos los tipos', () => {
+    const ctx = { ...BASE_CONTEXT, dmgAmplify_: 0.15 }; // ej. Verina Outro +15% All DMG Deepen
+    const basic: Action = { id: 'b1', type: 'basicAttack', tags: [] };
+    const skill: Action = { id: 's1', type: 'resonanceSkill', tags: [] };
+
+    const baseBasic = calculateActionDamage(BASE_CONTEXT, basic, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    const baseSkill = calculateActionDamage(BASE_CONTEXT, skill, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    const buffedBasic = calculateActionDamage(ctx, basic, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+    const buffedSkill = calculateActionDamage(ctx, skill, 1.0, 'atk', 'spectro', NO_EFFECTS, EMPTY_DB);
+
+    expect(buffedBasic.normal / baseBasic.normal).toBeCloseTo(1.15, 2);
+    expect(buffedSkill.normal / baseSkill.normal).toBeCloseTo(1.15, 2);
   });
 });

@@ -46,7 +46,10 @@ export interface CombatContext {
 
   // Bonus de daño
   allDmgBonus_: number;
+  /** Amplificación global (Deepen All-Type, Outro de Verina, etc.). Categoría A_j. */
   dmgAmplify_: number;
+  /** Bonos especiales multiplicativos (categoría P_k, extremadamente raros). */
+  specialDmgMult_?: number;
   offTuneBuildupRate_: number;
   resonanceSkillDmgBonus_: number;
   basicAttackDmgBonus_: number;
@@ -55,6 +58,13 @@ export interface CombatContext {
   echoSkillDmgBonus_: number;
   coordinatedDmgBonus_: number;
   outroSkillDmgBonus_: number;
+
+  // Deepen/Amplify por tipo de acción (A_j específico, ej. Mortefi Heavy DMG Deepen)
+  basicAmplify_?: number;
+  heavyAmplify_?: number;
+  skillAmplify_?: number;
+  liberationAmplify_?: number;
+  coordinatedAmplify_?: number;
 
   // Bonus de daño elemental
   physicalDmgBonus_: number;
@@ -87,7 +97,10 @@ export interface CombatContext {
 export const DEFAULT_ENEMY: EnemyStats = {
   level: 100,
   hp: 100000,
-  defense: 792,
+  // Fórmula oficial: M_DEF = (800+8·Lc) / [(800+8·Lc) + (800+8·Le)·(1-δ)]
+  // A niveles iguales (Lc=Le=100): 1600/(1600+1600) = 0.5 exacto.
+  // defense = 800 + 8·level = 1600 (no 792, que daba M_DEF ≈ 0.669).
+  defense: 1600,
   elementalResistances: {
     glacio: 0.10, fusion: 0.10, electro: 0.10,
     aero: 0.10, havoc: 0.10, spectro: 0.10,
@@ -121,24 +134,66 @@ function computeBaseAmount(context: CombatContext, mv: number, scaler: string, f
 
 // ─── Cálculo de daño ────────────────────────────────────────────────────
 
+// Mapeo actionType → key del bonus aditivo (categoría B_i por tipo de acción)
+const TYPE_BONUS_KEYS: Record<string, keyof CombatContext> = {
+  basicAttack: 'basicAttackDmgBonus_',
+  heavyAttack: 'heavyAttackDmgBonus_',
+  resonanceSkill: 'resonanceSkillDmgBonus_',
+  resonanceLiberation: 'resonanceLiberationDmgBonus_',
+  echoSkill: 'echoSkillDmgBonus_',
+  outroSkill: 'outroSkillDmgBonus_',
+  coordinated: 'coordinatedDmgBonus_',
+};
+
+// Mapeo actionType → key del Deepen por tipo (categoría A_j específica)
+const TYPE_AMPLIFY_KEYS: Record<string, keyof CombatContext> = {
+  basicAttack: 'basicAmplify_',
+  heavyAttack: 'heavyAmplify_',
+  resonanceSkill: 'skillAmplify_',
+  resonanceLiberation: 'liberationAmplify_',
+  coordinated: 'coordinatedAmplify_',
+};
+
+/** Bonus aditivo por tipo de acción (B_i específico, ej. "Basic Attack DMG +10%"). */
+function actionTypeBonus(context: CombatContext, actionType?: string): number {
+  if (!actionType) return 0;
+  const key = TYPE_BONUS_KEYS[actionType];
+  if (!key) return 0;
+  return (context[key] as number) || 0;
+}
+
+/** Deepen/Amplify por tipo de acción (A_j específico, ej. "Heavy DMG Deepen +38%"). */
+function actionTypeAmplify(context: CombatContext, actionType?: string): number {
+  if (!actionType) return 0;
+  const key = TYPE_AMPLIFY_KEYS[actionType];
+  if (!key) return 0;
+  return (context[key] as number) || 0;
+}
+
 export function calculateDamage(
   context: CombatContext,
   mv: number,
   scaler: string = 'atk',
   element?: string, // "glacio" | "fusion" | "electro" | "aero" | "spectro" | "havoc" | "physical"
-  flat: number = 0
+  flat: number = 0,
+  actionType?: string, // "basicAttack" | "resonanceSkill" | ... | "coordinated"
 ) {
   // 1. Base Damage (incremento flat, ej. "X% ATK + Y"; para scaler 'flat', mv es el valor plano)
   const baseDmg = computeBaseAmount(context, mv, scaler, flat);
 
-  // 2. Bonus & Amplify Multiplier
+  // 2. Bonus & Amplify Multiplier (fórmula oficial: (1+ΣB_i) × (1+ΣA_j) × (1+ΣP_k))
   let elementalBonus = 0;
   if (element) {
     const key = `${element}DmgBonus_` as keyof CombatContext;
     elementalBonus = (context[key] as number) || 0;
   }
-  const totalDmgBonus = context.allDmgBonus_ + elementalBonus;
-  const bonusMult = (1 + totalDmgBonus) * (1 + context.dmgAmplify_);
+  // B_i = allDmgBonus + elemental + bonus por tipo de acción
+  const totalDmgBonus = (context.allDmgBonus_ || 0) + elementalBonus + actionTypeBonus(context, actionType);
+  // A_j = dmgAmplify global + Deepen por tipo de acción
+  const totalAmplify = (context.dmgAmplify_ || 0) + actionTypeAmplify(context, actionType);
+  // P_k = bonos especiales (raro, multiplicativo)
+  const specialMult = (context.specialDmgMult_ || 0);
+  const bonusMult = (1 + totalDmgBonus) * (1 + totalAmplify) * (1 + specialMult);
 
   // 3. Defense Multiplier (Fórmula oficial de WuWa)
   const enemy = context.enemy || DEFAULT_ENEMY;

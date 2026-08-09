@@ -34,7 +34,7 @@
     "hp": 100000,
 
 
-    "defense": 792,
+    "defense": 1600, // 800 + 8·100 → M_DEF = 0.5 a niveles iguales
 
 
 

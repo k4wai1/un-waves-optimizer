@@ -7,6 +7,20 @@
 
 ---
 
+## Estado: FIXEADO (2026-08-09)
+
+Los 4 bugs documentados abajo fueron corregidos y verificados:
+- **Bug 1** (DEF 1600): verificado en navegador — M_DEF = 0.5 a niveles iguales
+- **Bug 2** (bonus por tipo): verificado — Basic DMG +16% sube Stage 1 de 40 a 46,
+  sin afectar skill/forte/liberation/heal
+- **Bug 3** (P_k): verificado — `specialDmgMult_` multiplica separado (ratio 1.10)
+- **Bug 4** (Deepen por tipo): verificado — `skillAmplify_` da 1.38 solo a skills,
+  1.0 a basic attacks
+
+Tests: 43/43 verdes (`combatMechanics.spec.ts` 27 + `effectResolver.spec.ts` 16).
+
+---
+
 ## Formula oficial (resumen)
 
 ```
@@ -30,6 +44,8 @@ Donde:
 ---
 
 ## Bug 1: DEF del enemigo por defecto incorrecta
+
+**Estado: FIXEADO** ✅
 
 **Severidad: Alta** -- todos los numeros de dano estan mal.
 
@@ -78,6 +94,8 @@ niveles iguales. Para el dummy estandar, usar 1600.
 ---
 
 ## Bug 2: Bonus de dano por tipo NO se aplica
+
+**Estado: FIXEADO** ✅
 
 **Severidad: Alta** -- efectos como "Basic Attack DMG +10%" no afectan el dano.
 
@@ -161,6 +179,8 @@ Tambien actualizar `calculateActionDamage()` en `effectResolver.ts` para pasar
 
 ## Bug 3: Falta la categoria P_k (bonos especiales)
 
+**Estado: FIXEADO** ✅
+
 **Severidad: Baja** -- pocos personajes usan esta categoria.
 
 ### El problema
@@ -195,6 +215,8 @@ const bonusMult = (1 + totalDmgBonus) * (1 + context.dmgAmplify_) * (1 + context
 ---
 
 ## Bug 4: dmgAmplify_ vs Deepen
+
+**Estado: FIXEADO** ✅ (ahora hay `basicAmplify_`, `heavyAmplify_`, `skillAmplify_`, `liberationAmplify_`, `coordinatedAmplify_`)
 
 **Severidad: Informativo** -- verificar semantica.
 

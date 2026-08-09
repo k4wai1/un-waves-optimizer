@@ -26,7 +26,9 @@
   "stats": {
     "level": 100,
     "hp": 100000,
-    "defense": 792,
+    // Fórmula oficial: M_DEF = (800+8·Lc) / [(800+8·Lc) + (800+8·Le)·(1-δ)]
+    // A niveles iguales (Lc=Le=100): defense = 800 + 8·100 = 1600 → M_DEF = 0.5
+    "defense": 1600,
     "elementalResistances": {
       "glacio": 0.10,
       "fusion": 0.10,
