@@ -1,0 +1,611 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Denia | elemento Fusion | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Denia",
+    name: "Denia",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Rectifier",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 882, "20": 2294, "40": 4368, "50": 5699, "60": 7031, "70": 8362, "80": 9693, "90": 11025 },
+    atk: { "1": 34, "20": 88, "40": 171, "50": 225, "60": 279, "70": 333, "80": 379, "90": 425 },
+    def: { "1": 94, "20": 241, "40": 456, "50": 595, "60": 733, "70": 872, "80": 1010, "90": 1148 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Denia_basicAttack_basic_attack_stagecraft_form_stage_1_dmg",
+      name: "Basic Attack - Stagecraft Form Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1644, 0.1779, 0.1914, 0.2103, 0.2238, 0.2393, 0.2608, 0.2824, 0.304, 0.3269],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_stagecraft_form_stage_2_dmg",
+      name: "Basic Attack - Stagecraft Form Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1518, 0.1643, 0.1767, 0.1942, 0.2066, 0.2209, 0.2409, 0.2608, 0.2807, 0.3018],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_stagecraft_form_stage_3_dmg",
+      name: "Basic Attack - Stagecraft Form Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1282, 0.1388, 0.1493, 0.164, 0.1745, 0.1866, 0.2034, 0.2202, 0.2371, 0.2549],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_stagecraft_form_stage_4_dmg",
+      name: "Basic Attack - Stagecraft Form Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6438, 0.6966, 0.7494, 0.8233, 0.8761, 0.9368, 1.0213, 1.1058, 1.1902, 1.28],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_heavyAttack_heavy_attack_stagecraft_form_dmg",
+      name: "Heavy Attack - Stagecraft Form DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4062, 0.4396, 0.4729, 0.5195, 0.5528, 0.5911, 0.6444, 0.6977, 0.751, 0.8076],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_stagecraft_form_dmg_hit_1",
+      name: "Mid-air Attack - Stagecraft Form DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1488, 0.1611, 0.1733, 0.1903, 0.2025, 0.2166, 0.2361, 0.2556, 0.2751, 0.2959],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_stagecraft_form_dmg_hit_2",
+      name: "Mid-air Attack - Stagecraft Form DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2232, 0.2416, 0.2599, 0.2855, 0.3038, 0.3248, 0.3541, 0.3834, 0.4127, 0.4438],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_dodgeCounter_dodge_counter_stagecraft_form_dmg",
+      name: "Dodge Counter - Stagecraft Form DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2482, 0.2686, 0.289, 0.3174, 0.3378, 0.3612, 0.3938, 0.4263, 0.4589, 0.4935],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_breakdown_form_stage_1_dmg",
+      name: "Basic Attack - Breakdown Form Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1836, 0.1987, 0.2138, 0.2348, 0.2499, 0.2672, 0.2913, 0.3154, 0.3395, 0.3651],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_breakdown_form_stage_2_dmg_",
+      name: "Basic Attack - Breakdown Form Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1887, 0.2042, 0.2196, 0.2413, 0.2568, 0.2745, 0.2993, 0.324, 0.3488, 0.3751],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_breakdown_form_stage_2_dmg__1",
+      name: "Basic Attack - Breakdown Form Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0708, 0.0766, 0.0824, 0.0905, 0.0963, 0.103, 0.1123, 0.1215, 0.1308, 0.1407],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_breakdown_form_stage_3_dmg",
+      name: "Basic Attack - Breakdown Form Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3138, 0.3396, 0.3653, 0.4013, 0.4271, 0.4567, 0.4978, 0.539, 0.5802, 0.6239],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_breakdown_form_stage_4_dmg_",
+      name: "Basic Attack - Breakdown Form Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1788, 0.1934, 0.2081, 0.2286, 0.2433, 0.2601, 0.2836, 0.307, 0.3305, 0.3554],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_basicAttack_basic_attack_breakdown_form_stage_4_dmg__1",
+      name: "Basic Attack - Breakdown Form Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4171, 0.4513, 0.4855, 0.5334, 0.5676, 0.6069, 0.6616, 0.7164, 0.7711, 0.8292],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_heavyAttack_heavy_attack_breakdown_form_dmg",
+      name: "Heavy Attack - Breakdown Form DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6894, 0.746, 0.8025, 0.8817, 0.9382, 1.0032, 1.0936, 1.1841, 1.2745, 1.3706],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_breakdown_form_stage_1_dmg",
+      name: "Mid-air Attack - Breakdown Form Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1836, 0.1987, 0.2138, 0.2348, 0.2499, 0.2672, 0.2913, 0.3154, 0.3395, 0.3651],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_breakdown_form_stage_2_dmg",
+      name: "Mid-air Attack - Breakdown Form Stage 2 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1887, 0.2042, 0.2196, 0.2413, 0.2568, 0.2745, 0.2993, 0.324, 0.3488, 0.3751],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_breakdown_form_stage_2_dmg_1",
+      name: "Mid-air Attack - Breakdown Form Stage 2 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0708, 0.0766, 0.0824, 0.0905, 0.0963, 0.103, 0.1123, 0.1215, 0.1308, 0.1407],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_breakdown_form_stage_3_dmg",
+      name: "Mid-air Attack - Breakdown Form Stage 3 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3138, 0.3396, 0.3653, 0.4013, 0.4271, 0.4567, 0.4978, 0.539, 0.5802, 0.6239],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_breakdown_form_stage_4_dmg",
+      name: "Mid-air Attack - Breakdown Form Stage 4 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1788, 0.1934, 0.2081, 0.2286, 0.2433, 0.2601, 0.2836, 0.307, 0.3305, 0.3554],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_attack_breakdown_form_stage_4_dmg_1",
+      name: "Mid-air Attack - Breakdown Form Stage 4 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4171, 0.4513, 0.4855, 0.5334, 0.5676, 0.6069, 0.6616, 0.7164, 0.7711, 0.8292],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_heavy_attack_breakdown_form_dmg_h",
+      name: "Mid-air Heavy Attack - Breakdown Form DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1488, 0.1611, 0.1733, 0.1903, 0.2025, 0.2166, 0.2361, 0.2556, 0.2751, 0.2959],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_plungingAttack_midair_heavy_attack_breakdown_form_dmg_h_1",
+      name: "Mid-air Heavy Attack - Breakdown Form DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2232, 0.2416, 0.2599, 0.2855, 0.3038, 0.3248, 0.3541, 0.3834, 0.4127, 0.4438],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_dodgeCounter_dodge_counter_breakdown_form_dmg",
+      name: "Dodge Counter - Breakdown Form DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5436, 0.5882, 0.6328, 0.6952, 0.7398, 0.791, 0.8624, 0.9337, 1.005, 1.0808],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceSkill_phantom_bubble_stagecraft_form_dmg_hit_1",
+      name: "Phantom Bubble - Stagecraft Form DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0876, 0.0948, 0.102, 0.1121, 0.1193, 0.1275, 0.139, 0.1505, 0.162, 0.1742],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceSkill_phantom_bubble_stagecraft_form_dmg_hit_2",
+      name: "Phantom Bubble - Stagecraft Form DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2628, 0.2844, 0.3059, 0.3361, 0.3577, 0.3825, 0.4169, 0.4514, 0.4859, 0.5225],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceSkill_beckon_breakdown_form_dmg_hit_1",
+      name: "Beckon - Breakdown Form DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1565, 0.1693, 0.1821, 0.2001, 0.2129, 0.2277, 0.2482, 0.2687, 0.2892, 0.311],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceSkill_beckon_breakdown_form_dmg_hit_2",
+      name: "Beckon - Breakdown Form DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.073, 0.079, 0.085, 0.0934, 0.0994, 0.1063, 0.1158, 0.1254, 0.135, 0.1452],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceSkill_banish_breakdown_form_stage_1_dmg",
+      name: "Banish - Breakdown Form Stage 1 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1744, 0.1888, 0.2031, 0.2231, 0.2374, 0.2538, 0.2767, 0.2996, 0.3225, 0.3468],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceSkill_banish_breakdown_form_stage_2_dmg",
+      name: "Banish - Breakdown Form Stage 2 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5634, 0.6096, 0.6558, 0.7205, 0.7667, 0.8199, 0.8938, 0.9677, 1.0416, 1.1201],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceLiberation_final_act_stagecraft_form_dmg",
+      name: "Final Act - Stagecraft Form DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2, 2.164, 2.328, 2.5576, 2.7216, 2.9102, 3.1726, 3.435, 3.6974, 3.9762],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceLiberation_final_act_breakdown_form_dmg",
+      name: "Final Act - Breakdown Form DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_resonanceLiberation_final_act_stagecraft_form_resonance_ener",
+      name: "Final Act - Stagecraft Form Resonance Energy Cost",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_introSkill_its_been_a_while_dmg",
+      name: "It's Been A While! DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5262, 0.5694, 0.6125, 0.673, 0.7161, 0.7657, 0.8348, 0.9038, 0.9728, 1.0462],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Denia_introSkill_knock_knock_dmg",
+      name: "Knock Knock DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2602, 0.2816, 0.3029, 0.3328, 0.3541, 0.3787, 0.4128, 0.4469, 0.4811, 0.5174],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Denia_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Denia Vestiges of FalsehoodWhen Denia engages in combat in Stagecraft Form: restore Dark Cores to 2 if she has fewer than 2; restore Void Particle to 20  if she has fewer than 20.",
+    },
+    {
+      id: "Denia_passive_1",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect can be triggered once every 12s.Etched ColorsWhile in the Entropy Shift states, Denia obtains the following effects based on her current Resonance Mode:\n- Resonance Mode - Fusion Burst: All Resonators in the team gain 30% Fusion DMG Bonus.",
+    },
+    {
+      id: "Denia_passive_2",
+      name: "Passive 3",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- Resonance Mode - Tune Strain: All Resonators in the team gain 10 Tune Break Boost.",
+    },
+    {
+      id: "Denia_passive_3",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When a Resonator in the team has an Off-Tune Buildup Rate over 100%, every 10% that runs over increases the Resonator's Tune Break Boost by 8, up to 40.",
+    },
+    {
+      id: "Denia_s1",
+      name: "S1: Silent Glows in a Dimlit Dream",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Crit. DMG is increased by 30%.  When performing Resonance Skill Phantom Bubble - Stagecraft Form, or Resonance Skill Banish - Breakdown Form, Basic Attack - Breakdown Form Stage 3, Basic Attack - Breakdown Form Stage 4, Mid-air Attack - Breakdown Form Stage 3, and Mid-air Attack - Breakdown Form Stage 4,  Denia becomes immune to interruption.  When Denia enters combat in Stagecraft Form, she obtains the Entropy Shift: Stagecraft Form effect for 30s. When Denia enters combat in Breakdown Form, she obtains the Entropy Shift: Breakdown Form effect for 12s.",
+    },
+    {
+      id: "Denia_s2",
+      name: "S2: Tossed in the Tides of Reality",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Denia is in Resonance Mode - Fusion Burst, after a Resonator in the team inflicts Fusion Burst on the target, they gain 50% Fusion DMG Bonus for 15s. After Fusion Burst is triggered on enemies near the active Resonator in the team, Denia gains 1  of Degenerate Voidmatter for 15s, up to 10 stacks. Each stack of Degenerate Voidmatter causes Denia to ignore 1% of the target's Fusion RES. This effect ends when Denia switches modes.  When Denia is in Resonance Mode - Tune Strain, her Forte Circuit effect is enhanced: After a Resonator in the team inflicts Tune Strain - Shifting on the target, their Tune Break Boost is increased by 20 for 15s, and the target's Off-Tune Level is increased by 100% of the max. This effect can only be triggered once per 300s on the same target. This effect ends when Denia switches forms.  The DMG Multiplier of Resonance Skill Banish - Breakdown Form is increased by 40%.",
+    },
+    {
+      id: "Denia_s3",
+      name: "S3: Through Dark and Wind, the Erlking Follows",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Final Act - Breakdown Form is increased by 80%.  Denia now holds up to 5 Dark Cores. While in Entropy Shift,  the shortest interval at which she can obtain Dark Core is reduced to 6s. The Entropy Shift: Stagecraft Form effect is enhanced and now grants 4 points of Void Particle per second. The Entropy Shift: Breakdown Form effect is enhanced: Casting Resonance Liberation Final Act - Breakdown Form additionally restores 30 points of Concerto Energy.  Denia's Inherent Skill Vestiges of Falsehood is enhanced: Upon entering combat, Dark Core and Void Particle are restored to the max. This effect can be triggered once every 12s.   When the number of Dark Cores reaches the limit, casting Basic Attack - Stagecraft Form Stage 4 or Resonance Skill Phantom Bubble - Stagecraft Form consumes all Dark Cores and increases the DMG Multiplier of this skill by 1200%. The DMG dealt is considered Resonance Liberation DMG.",
+    },
+    {
+      id: "Denia_s4",
+      name: "S4: From the Far Beyond, to the Far Beyond",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The attack interval of Erosion Field is reduced to 3s.",
+    },
+    {
+      id: "Denia_s5_if_lies_patch_up_a_heart",
+      name: "S5: If Lies Patch Up a Heart",
+      operation: "add",
+      value: [1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1],
+        },
+      ],
+      descriptionTemplate: "The DMG of Resonance Liberation Final Act -  Stagecraft Form is increased by 100%.",
+    },
+    {
+      id: "Denia_s6",
+      name: "S6: May You Find Your Sun in the Silence",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "While in Entropy Shift states, gain 60% ATK increase and 60% Fusion DMG Bonus.  While Denia is in Resonance Mode - Fusion Burst,  after Erosion Field deals damage, trigger Fusion Burst on the target based on its max limit. The Fusion Burst DMG triggered gains a 200% DMG Multiplier increase against the main target and does not remove the Fusion Burst stacks on the targets hit. The effect can be triggered on the same target up to 1 . When the target is damaged by Resonance Liberation Final Act: Breakdown Form, the effect's trigger count is reset. The trigger count can be reset for the same target once every 2s.  While Denia is in Resonance Mode - Tune Strain, when Resonators in the team deal Tune Break DMG to Mistuned enemies in Tune Strain - Shifting, they additionally inflict 1  of Tune Strain - Interfered on the target. This effect can only be triggered on the same target once every 3s.",
+    },
+  ],
+  mechanics: [],
+}

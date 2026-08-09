@@ -1,0 +1,378 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Phoebe | elemento Spectro | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Phoebe",
+    name: "Phoebe",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Rectifier",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 866, "20": 2252, "40": 4289, "50": 5596, "60": 6903, "70": 8210, "80": 9517, "90": 10825 },
+    atk: { "1": 33, "20": 85, "40": 166, "50": 218, "60": 271, "70": 323, "80": 368, "90": 412 },
+    def: { "1": 103, "20": 264, "40": 500, "50": 652, "60": 803, "70": 955, "80": 1107, "90": 1258 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Phoebe_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1485, 0.1607, 0.1729, 0.19, 0.2021, 0.2161, 0.2356, 0.2551, 0.2746, 0.2953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_basicAttack_stage_2_dmg_hit_1",
+      name: "Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1125, 0.1218, 0.131, 0.1439, 0.1531, 0.1637, 0.1785, 0.1933, 0.208, 0.2237],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_basicAttack_stage_2_dmg_hit_2",
+      name: "Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1375, 0.1488, 0.1601, 0.1759, 0.1872, 0.2001, 0.2182, 0.2362, 0.2542, 0.2734],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0717, 0.0775, 0.0834, 0.0916, 0.0975, 0.1043, 0.1137, 0.1231, 0.1325, 0.1424],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.208, 0.225, 0.2421, 0.266, 0.283, 0.3026, 0.3299, 0.3572, 0.3845, 0.4135],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2325, 0.2516, 0.2707, 0.2974, 0.3164, 0.3384, 0.3689, 0.3994, 0.4299, 0.4623],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1086, 0.1175, 0.1264, 0.1389, 0.1478, 0.158, 0.1722, 0.1865, 0.2007, 0.2158],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_dodgeCounter_chamuels_star_dodge_counter_dmg",
+      name: "Chamuel's Star: Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2205, 0.2386, 0.2567, 0.282, 0.3001, 0.3209, 0.3498, 0.3788, 0.4077, 0.4384],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.315, 0.3409, 0.3667, 0.4029, 0.4287, 0.4584, 0.4997, 0.5411, 0.5824, 0.6263],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_resonanceSkill_ring_of_mirrors_refracted_holy_light_dmg",
+      name: "Ring of Mirrors: Refracted Holy Light DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.075, 0.0812, 0.0873, 0.096, 0.1021, 0.1092, 0.119, 0.1289, 0.1387, 0.1492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_resonanceSkill_chamuels_star_stage_1_dmg",
+      name: "Chamuel's Star: Stage 1 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2985, 0.323, 0.3475, 0.3818, 0.4062, 0.4344, 0.4736, 0.5127, 0.5519, 0.5935],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_resonanceSkill_chamuels_star_stage_2_dmg",
+      name: "Chamuel's Star: Stage 2 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_resonanceSkill_chamuels_star_stage_3_dmg",
+      name: "Chamuel's Star: Stage 3 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1455, 0.1575, 0.1694, 0.1861, 0.198, 0.2118, 0.2309, 0.2499, 0.269, 0.2893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.02, 2.1857, 2.3513, 2.5832, 2.7489, 2.9394, 3.2044, 3.4694, 3.7344, 4.016],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_forteCircuit_absolution_litany_dmg",
+      name: "Absolution Litany DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.21, 3.4733, 3.7365, 4.105, 4.3682, 4.6709, 5.0921, 5.5132, 5.9344, 6.3819],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_forteCircuit_utter_confession_dmg",
+      name: "Utter Confession DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.945, 1.0225, 1.1, 1.2085, 1.286, 1.3751, 1.4991, 1.6231, 1.7471, 1.8788],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_heavyAttack_heavy_attack_starflash_dmg",
+      name: "Heavy Attack: Starflash DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4159, 0.45, 0.4841, 0.5319, 0.566, 0.6052, 0.6598, 0.7143, 0.7689, 0.8269],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phoebe_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Phoebe_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillKnock back nearby targets and deal Spectro DMG.Show Skill DetailsLevel 20Skill DMG362.81%Concerto Regen10Attentive Heart",
+    },
+    {
+      id: "Phoebe_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Phoebe PresenceMid-air Heavy Attack can be cast 1 more .RevelationWhen in the Absolution status and Confession status, Spectro DMG Bonus is increased by 12%.",
+    },
+    {
+      id: "Phoebe_s1",
+      name: "S1: Warm Light and Bedside Wishes",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When in Absolution, Resonance Liberation Dawn of Enlightenment now increases DMG Multiplier by 480% instead of 255%.  When in Confession, Resonance Liberation Dawn of Enlightenment  increases DMG Multiplier by 90% and applies Spectro Frazzle to the targets with the maximum stack the targets can receive.",
+    },
+    {
+      id: "Phoebe_s2",
+      name: "S2: A Boat Adrift in Tears",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When in Absolution, DMG dealt by Outro Skills to targets with Spectro Frazzle is Amplified by 120%. When in Confession, Silent Prayer grants 120% more DMG Amplification for Spectro Frazzle.",
+    },
+    {
+      id: "Phoebe_s3",
+      name: "S3: Daisy Wreaths and Dreams",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When in Absolution, the DMG Multiplier of Heavy Attack Starflash is increased by 91%. When in Confession, the DMG Multiplier of Heavy Attack Starflash is increased by 249%.",
+    },
+    {
+      id: "Phoebe_s4",
+      name: "S4: Ringing Bells on Wings Aloft",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Basic Attack, Basic Attack Chamuel's Star, Dodge Counter, or Chamuel's Star: Dodge Counter hits, the target's Spectro RES is reduced by 10% for 30s.",
+    },
+    {
+      id: "Phoebe_s5_prayer_to_the_distant_light",
+      name: "S5: Prayer to the Distant Light",
+      operation: "add",
+      value: [0.12],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "spectro_dmg_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.12],
+        },
+      ],
+      descriptionTemplate: "Casting Intro Skill Golden Grace increases Phoebe's Spectro DMG Bonus by 12% for 15s.",
+    },
+    {
+      id: "Phoebe_s6",
+      name: "S6: Whispering Chirps in Silence",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Targets entering the Ring of Mirrors are stagnated for an additional 2s. The stagnation effect affects all targets entering the Ring of Mirrors and can be applied to 12 targets max for each Ring of Mirrors. Each target will only be affected by this effect once. When in Absolution or Confession, summoning a Ring of Mirrors with Resonance Skill increases Phoebe's ATK by 10% for 20s, and triggers an extra Heavy Attack Starflash at the Ring of Mirrors' location. This Heavy Attack Starflash does not consume Divine Voice and is not considered as casting a Heavy Attack.",
+    },
+  ],
+  mechanics: [],
+}

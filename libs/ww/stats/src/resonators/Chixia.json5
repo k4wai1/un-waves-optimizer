@@ -1,0 +1,388 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Chixia | elemento Fusion | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Chixia",
+    name: "Chixia",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Pistols",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 727, "20": 1890, "40": 3600, "50": 4698, "60": 5795, "70": 6892, "80": 7990, "90": 9087 },
+    atk: { "1": 24, "20": 62, "40": 120, "50": 159, "60": 197, "70": 235, "80": 267, "90": 300 },
+    def: { "1": 78, "20": 200, "40": 379, "50": 494, "60": 608, "70": 723, "80": 838, "90": 953 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Chixia_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.333, 0.3604, 0.3877, 0.4259, 0.4532, 0.4846, 0.5283, 0.572, 0.6157, 0.6621],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.243, 0.263, 0.2829, 0.3108, 0.3307, 0.3536, 0.3855, 0.4174, 0.4493, 0.4832],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1688, 0.1826, 0.1965, 0.2158, 0.2297, 0.2456, 0.2677, 0.2899, 0.312, 0.3355],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.17, 1.266, 1.3619, 1.4962, 1.5922, 1.7025, 1.856, 2.0095, 2.163, 2.3261],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.18, 0.1948, 0.2096, 0.2302, 0.245, 0.262, 0.2856, 0.3092, 0.3328, 0.3579],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_heavyAttack_full_charge_heavy_attack_dmg",
+      name: "Full Charge Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.405, 0.4383, 0.4715, 0.518, 0.5512, 0.5894, 0.6425, 0.6956, 0.7488, 0.8052],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.162, 0.1753, 0.1886, 0.2072, 0.2205, 0.2358, 0.257, 0.2783, 0.2995, 0.3221],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.71, 1.8503, 1.9905, 2.1868, 2.327, 2.4883, 2.7126, 2.937, 3.1613, 3.3997],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.16, 0.1732, 0.1863, 0.2047, 0.2178, 0.2329, 0.2539, 0.2748, 0.2958, 0.3181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_resonanceLiberation_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.8, 5.1936, 5.5872, 6.1383, 6.5319, 6.9845, 7.6143, 8.244, 8.8738, 9.5429],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_resonanceLiberation_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.291, 0.3148, 0.3387, 0.3721, 0.3959, 0.4234, 0.4615, 0.4997, 0.5379, 0.5784],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_forteCircuit_thermobaric_bullets_damage",
+      name: "Thermobaric Bullets Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_forteCircuit_boom_boom_damage",
+      name: "Boom Boom Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.2, 2.3804, 2.5608, 2.8134, 2.9938, 3.2013, 3.4899, 3.7785, 4.0672, 4.3739],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2475, 0.2678, 0.2881, 0.3166, 0.3368, 0.3602, 0.3927, 0.4251, 0.4576, 0.4921],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chixia_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1238, 0.1339, 0.1441, 0.1583, 0.1684, 0.1801, 0.1964, 0.2126, 0.2288, 0.2461],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Chixia_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillChixia makes a heroic entrance and fires rapidly with her dual pistols at the target, dealing Fusion DMG.Show Skill DetailsLevel 20Skill DMG89.80%*2+44.90%*4Concerto Regen10Leaping Flames",
+    },
+    {
+      id: "Chixia_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillChixia releases a shock wave surrounding the target, dealing Fusion DMG equal to 530.00% of Chixia's ATK to enemies within the range.",
+    },
+    {
+      id: "Chixia_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Chixia Scorching MagazineMax Thermobaric Bullets is increased by 10 rounds.",
+    },
+    {
+      id: "Chixia_passive_3",
+      name: "The",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "The damage of Resonance Skill Boom Boom is increased by 50%.Numbingly Spicy!Each Thermobaric Bullet that hits a target during Resonance Skill DAKA DAKA!",
+    },
+    {
+      id: "Chixia_passive_4",
+      name: "increases",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "increases ATK by 1% for 10s, stacking up to 30 times.",
+    },
+    {
+      id: "Chixia_s1",
+      name: "S1: No.1 Hero Play Fan",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Skill Boom Boom hits will always be Critical Hits.",
+    },
+    {
+      id: "Chixia_s2",
+      name: "S2: Leaping Sparkles",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "During Resonance Liberation Blazing Flames, for every 1 target defeated, Chixia recovers 5 Resonance Energy, up to 20 each time.",
+    },
+    {
+      id: "Chixia_s3",
+      name: "S3: Eternal Flames",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation Blazing Flames deals 40% more DMG to targets whose HP is below 50%.",
+    },
+    {
+      id: "Chixia_s4",
+      name: "S4: Hero’s Ultimate Move",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation Blazing Flames grants 60 \"Thermobaric Bullets\" and immediately resets the Cooldown of Resonance Skill Whizzing Fight Spirit.",
+    },
+    {
+      id: "Chixia_s5",
+      name: "S5: Triumphant Explosions",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When the Inherent Skill Numbingly Spicy! reaches max stacks, ATK is additionally increased by 30%.",
+    },
+    {
+      id: "Chixia_s6_easter_egg_performance",
+      name: "S6: Easter Egg Performance",
+      operation: "add",
+      value: [0.25],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.25],
+        },
+      ],
+      descriptionTemplate: "Resonance Skill Boom Boom increases the Basic Attack DMG Bonus of all team members by 25% for 15s.",
+    },
+  ],
+  mechanics: [],
+}

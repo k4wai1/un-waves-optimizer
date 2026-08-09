@@ -1,0 +1,542 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Zani | elemento Spectro | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Zani",
+    name: "Zani",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Gauntlets",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 862, "20": 2242, "40": 4269, "50": 5570, "60": 6871, "70": 8172, "80": 9473, "90": 10775 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 93, "20": 238, "40": 452, "50": 589, "60": 725, "70": 862, "80": 999, "90": 1136 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Zani_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.296, 0.3203, 0.3446, 0.3786, 0.4028, 0.4308, 0.4696, 0.5084, 0.5473, 0.5885],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2134, 0.2309, 0.2484, 0.2729, 0.2904, 0.3105, 0.3385, 0.3664, 0.3944, 0.4242],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.34, 0.3679, 0.3958, 0.4348, 0.4627, 0.4948, 0.5394, 0.584, 0.6286, 0.676],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_basicAttack_breakthrough_dmg_hit_1",
+      name: "Breakthrough DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3094, 0.3347, 0.3601, 0.3956, 0.421, 0.4502, 0.4907, 0.5313, 0.5719, 0.615],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_basicAttack_breakthrough_dmg_hit_2",
+      name: "Breakthrough DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0884, 0.0957, 0.1029, 0.1131, 0.1203, 0.1287, 0.1402, 0.1518, 0.1634, 0.1758],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2066, 0.2236, 0.2405, 0.2643, 0.2812, 0.3007, 0.3278, 0.3549, 0.382, 0.4108],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_plungingAttack_plunging_attack_dmg",
+      name: "Plunging Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.528, 0.5713, 0.6146, 0.6753, 0.7186, 0.7683, 0.8376, 0.9069, 0.9762, 1.0498],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3734, 0.404, 0.4346, 0.4775, 0.5081, 0.5433, 0.5923, 0.6412, 0.6902, 0.7423],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_standard_defense_protocol_dmg",
+      name: "Standard Defense Protocol DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "DEF",
+          multiplier: [0.3216, 0.348, 0.3744, 0.4113, 0.4377, 0.468, 0.5102, 0.5524, 0.5946, 0.6394],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_pinpoint_strike_dmg_hit_1",
+      name: "Pinpoint Strike DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3068, 0.332, 0.3572, 0.3924, 0.4175, 0.4465, 0.4867, 0.527, 0.5672, 0.61],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_pinpoint_strike_dmg_hit_2",
+      name: "Pinpoint Strike DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6136, 0.664, 0.7143, 0.7847, 0.835, 0.8929, 0.9734, 1.0539, 1.1344, 1.2199],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_targeted_action_dmg_hit_1",
+      name: "Targeted Action DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4335, 0.4691, 0.5046, 0.5544, 0.59, 0.6308, 0.6877, 0.7446, 0.8015, 0.8619],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_targeted_action_dmg_hit_2",
+      name: "Targeted Action DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1445, 0.1564, 0.1682, 0.1848, 0.1967, 0.2103, 0.2293, 0.2482, 0.2672, 0.2873],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_targeted_action_dmg_hit_3",
+      name: "Targeted Action DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.867, 0.9381, 1.0092, 1.1088, 1.1799, 1.2616, 1.3754, 1.4891, 1.6029, 1.7237],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_forcible_riposte_dmg_hit_1",
+      name: "Forcible Riposte DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4335, 0.4691, 0.5046, 0.5544, 0.59, 0.6308, 0.6877, 0.7446, 0.8015, 0.8619],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_forcible_riposte_dmg_hit_2",
+      name: "Forcible Riposte DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1445, 0.1564, 0.1682, 0.1848, 0.1967, 0.2103, 0.2293, 0.2482, 0.2672, 0.2873],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceSkill_forcible_riposte_dmg_hit_3",
+      name: "Forcible Riposte DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.867, 0.9381, 1.0092, 1.1088, 1.1799, 1.2616, 1.3754, 1.4891, 1.6029, 1.7237],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceLiberation_rekindle_dmg",
+      name: "Rekindle DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.6022, 1.7335, 1.8649, 2.0488, 2.1802, 2.3313, 2.5415, 2.7517, 2.9619, 3.1852],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceLiberation_the_last_stand_dmg_hit_1",
+      name: "The Last Stand DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9613, 1.0401, 1.119, 1.2293, 1.3081, 1.3988, 1.5249, 1.651, 1.7772, 1.9112],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceLiberation_the_last_stand_dmg_hit_2",
+      name: "The Last Stand DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [5.4473, 5.8939, 6.3406, 6.9659, 7.4126, 7.9263, 8.641, 9.3556, 10.0703, 10.8296],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_resonanceLiberation_basic_attack_multiplier_increase",
+      name: "Basic Attack Multiplier Increase",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_heavyAttack_heavy_slash_daybreak_dmg",
+      name: "Heavy Slash - Daybreak DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_heavyAttack_heavy_slash_dawning_dmg",
+      name: "Heavy Slash - Dawning DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.133, 2.308, 2.4829, 2.7277, 2.9026, 3.1038, 3.3836, 3.6635, 3.9433, 4.2407],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_heavyAttack_heavy_slash_nightfall_dmg_hit_1",
+      name: "Heavy Slash - Nightfall DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.68, 0.7358, 0.7916, 0.8696, 0.9254, 0.9895, 1.0787, 1.1679, 1.2572, 1.352],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_heavyAttack_heavy_slash_nightfall_dmg_hit_2",
+      name: "Heavy Slash - Nightfall DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.32, 1.4283, 1.5365, 1.6881, 1.7963, 1.9208, 2.094, 2.2671, 2.4403, 2.6243],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_heavyAttack_heavy_slash_lightsmash_dmg",
+      name: "Heavy Slash - Lightsmash DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.133, 2.308, 2.4829, 2.7277, 2.9026, 3.1038, 3.3836, 3.6635, 3.9433, 4.2407],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_forteCircuit_max_heliacal_ember_stacks",
+      name: "Max Heliacal Ember Stacks",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6, 0.6],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.122, 0.132, 0.142, 0.156, 0.166, 0.1775, 0.1935, 0.2094, 0.2254, 0.2424],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zani_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4064, 0.4398, 0.4731, 0.5198, 0.5531, 0.5914, 0.6447, 0.698, 0.7514, 0.808],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Zani_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Spectro DMG.Show Skill DetailsLevel 20Skill DMG44.24%*5+147.45%Concerto Regen10Beacon For the Future",
+    },
+    {
+      id: "Zani_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillAttack the target, dealing Spectro DMG equal to 150% of Zani's ATK and removing all stacks of Heliacal Ember inflicted upon the target. Each stack increases the DMG dealt by 10%. This DMG is considered Spectro Frazzle DMG. The Spectro DMG dealt by other Resonators in the team to the target marked by Heliacal Ember is Amplified by 20% for 20s.",
+    },
+    {
+      id: "Zani_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Zani Quick ResponseCasting Intro Skill Immediate Execution gives 12% Spectro DMG Bonus for 14s.Fear No PainWhen in Ready Stance, all DMG taken is reduced by 40%.",
+    },
+    {
+      id: "Zani_s1_when_the_alarm_clock_rings",
+      name: "S1: When the Alarm Clock Rings",
+      operation: "add",
+      value: [0.5],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "spectro_dmg_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.5],
+        },
+      ],
+      descriptionTemplate: "Casting Targeted Action or Forcible Riposte gives a 50% Spectro DMG Bonus for 14s. Resonance Skill Heavy Slash - Nightfall can't be interrupted.",
+    },
+    {
+      id: "Zani_s2",
+      name: "S2: Stale Bread With Energy Drink",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Crit. Rate is increased by 20%. The DMG Multiplier of Targeted Action and Forcible Riposte is increased by 80%.",
+    },
+    {
+      id: "Zani_s3",
+      name: "S3: Each Day A New Commute",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When in Inferno Mode, every 1 Blazes consumed increases the last stage DMG Multiplier of the subsequent Resonance Liberation The Last Stand by 8%, maxed at 1200%.",
+    },
+    {
+      id: "Zani_s4",
+      name: "S4: More Efficiency, Less Drama",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Intro Skill Immediate Execution is cast, the ATK of all Resonators in the team is increased by 20% for 30s.",
+    },
+    {
+      id: "Zani_s5_delivered_in_full_on_time",
+      name: "S5: Delivered In Full On Time",
+      operation: "add",
+      value: [1.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1.2],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Rekindle is increased by 120%.",
+    },
+    {
+      id: "Zani_s6",
+      name: "S6: First Things First? Clock Out!",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of Heavy Slash - Daybreak, Heavy Slash- Dawning, Heavy Slash - Nightfall, and Heavy Slash - Lightsmash are increased by 40%. Every Blaze consumed increases the DMG Multiplier of Heavy Slash - Nightfall by 40% on hit. Gain following effects when in Inferno Mode:  - When Blaze is lower than 70, restore 70 Blazes immediately. This effect is triggered once in Inferno Mode. - Within 8s after entering Inferno Mode, Zani will remain standing with at least 1 HP if hit by a fatal blow.",
+    },
+  ],
+  mechanics: [],
+}

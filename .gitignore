@@ -56,6 +56,9 @@ Thumbs.db
 .env.test.local
 .env.production.local
 
+# sesión de la herramienta (puede contener credenciales/tokens)
+.opencode/
+
 # nx
 .nx/cache
 .nx/workspace-data

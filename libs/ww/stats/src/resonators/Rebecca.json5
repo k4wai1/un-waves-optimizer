@@ -1,0 +1,979 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Rebecca | elemento Electro | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Rebecca",
+    name: "Rebecca",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Pistols",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 928, "20": 2413, "40": 4596, "50": 5997, "60": 7397, "70": 8798, "80": 10199, "90": 11600 },
+    atk: { "1": 32, "20": 83, "40": 161, "50": 212, "60": 263, "70": 314, "80": 357, "90": 400 },
+    def: { "1": 96, "20": 246, "40": 466, "50": 608, "60": 749, "70": 890, "80": 1032, "90": 1173 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Rebecca_basicAttack_basic_attack_huntress_stage_1_dmg_hit_1",
+      name: "Basic Attack - Huntress Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1849, 0.2001, 0.2152, 0.2365, 0.2516, 0.2691, 0.2933, 0.3176, 0.3418, 0.3676],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_huntress_stage_1_dmg_hit_2",
+      name: "Basic Attack - Huntress Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1849, 0.2001, 0.2152, 0.2365, 0.2516, 0.2691, 0.2933, 0.3176, 0.3418, 0.3676],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_huntress_stage_2_dmg_hit_1",
+      name: "Basic Attack - Huntress Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0963, 0.1042, 0.1121, 0.1231, 0.131, 0.1401, 0.1527, 0.1653, 0.1779, 0.1913],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_huntress_stage_2_dmg_hit_2",
+      name: "Basic Attack - Huntress Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0963, 0.1042, 0.1121, 0.1231, 0.131, 0.1401, 0.1527, 0.1653, 0.1779, 0.1913],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_huntress_stage_3_dmg",
+      name: "Basic Attack - Huntress Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5525, 0.5979, 0.6432, 0.7066, 0.7519, 0.804, 0.8765, 0.949, 1.0215, 1.0985],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_heavyAttack_heavy_attack_huntress_dmg_hit_1",
+      name: "Heavy Attack - Huntress DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.085, 0.092, 0.099, 0.1087, 0.1157, 0.1237, 0.1349, 0.146, 0.1572, 0.169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_heavyAttack_heavy_attack_huntress_dmg_hit_2",
+      name: "Heavy Attack - Huntress DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.085, 0.092, 0.099, 0.1087, 0.1157, 0.1237, 0.1349, 0.146, 0.1572, 0.169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_heavyAttack_heavy_attack_eat_lead_huntress_dmg_hit_1",
+      name: "Heavy Attack - Eat Lead!: Huntress DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.306, 0.3311, 0.3562, 0.3914, 0.4165, 0.4453, 0.4855, 0.5256, 0.5658, 0.6084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_heavyAttack_heavy_attack_eat_lead_huntress_dmg_hit_2",
+      name: "Heavy Attack - Eat Lead!: Huntress DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.306, 0.3311, 0.3562, 0.3914, 0.4165, 0.4453, 0.4855, 0.5256, 0.5658, 0.6084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_plungingAttack_midair_attack_huntress_dmg",
+      name: "Mid-air Attack - Huntress DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6843, 0.7404, 0.7965, 0.8751, 0.9312, 0.9957, 1.0855, 1.1752, 1.265, 1.3604],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_dodgeCounter_dodge_counter_huntress_dmg",
+      name: "Dodge Counter - Huntress DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.0625, 1.1497, 1.2368, 1.3588, 1.4459, 1.5461, 1.6855, 1.8249, 1.9643, 2.1124],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_dodgeCounter_tactical_dodge_huntress_dmg_hit_1",
+      name: "Tactical Dodge - Huntress DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.085, 0.092, 0.099, 0.1087, 0.1157, 0.1237, 0.1349, 0.146, 0.1572, 0.169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_dodgeCounter_tactical_dodge_huntress_dmg_hit_2",
+      name: "Tactical Dodge - Huntress DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.085, 0.092, 0.099, 0.1087, 0.1157, 0.1237, 0.1349, 0.146, 0.1572, 0.169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_dodgeCounter_tactical_dodge_huntress_successful_dodge",
+      name: "Tactical Dodge - Huntress Successful Dodge DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.748, 0.8094, 0.8707, 0.9566, 1.0179, 1.0885, 1.1866, 1.2847, 1.3829, 1.4871],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_guts_stage_1_dmg_hit_1",
+      name: "Basic Attack - Guts Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3103, 0.3357, 0.3612, 0.3968, 0.4222, 0.4515, 0.4922, 0.5329, 0.5736, 0.6169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_guts_stage_1_dmg_hit_2",
+      name: "Basic Attack - Guts Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3103, 0.3357, 0.3612, 0.3968, 0.4222, 0.4515, 0.4922, 0.5329, 0.5736, 0.6169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_guts_stage_2_dmg",
+      name: "Basic Attack - Guts Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.425, 0.4599, 0.4947, 0.5435, 0.5784, 0.6185, 0.6742, 0.73, 0.7857, 0.845],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_guts_stage_3_dmg_hit_1",
+      name: "Basic Attack - Guts Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1699, 0.1838, 0.1977, 0.2172, 0.2312, 0.2472, 0.2695, 0.2917, 0.314, 0.3377],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_guts_stage_3_dmg_hit_2",
+      name: "Basic Attack - Guts Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1699, 0.1838, 0.1977, 0.2172, 0.2312, 0.2472, 0.2695, 0.2917, 0.314, 0.3377],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_basicAttack_basic_attack_guts_stage_3_dmg_hit_3",
+      name: "Basic Attack - Guts Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7926, 0.8576, 0.9226, 1.0136, 1.0785, 1.1533, 1.2573, 1.3612, 1.4652, 1.5757],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_heavyAttack_heavy_attack_guts_dmg",
+      name: "Heavy Attack - Guts DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_plungingAttack_midair_attack_guts_dmg",
+      name: "Mid-air Attack - Guts DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_dodgeCounter_dodge_counter_guts_dmg",
+      name: "Dodge Counter - Guts DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.3005, 1.4072, 1.5138, 1.6631, 1.7698, 1.8924, 2.063, 2.2337, 2.4043, 2.5856],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_dodgeCounter_tactical_dodge_guts_dmg",
+      name: "Tactical Dodge - Guts DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.51, 0.5519, 0.5937, 0.6522, 0.6941, 0.7422, 0.8091, 0.876, 0.9429, 1.014],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_dodgeCounter_tactical_dodge_guts_successful_dodge_dmg",
+      name: "Tactical Dodge - Guts Successful Dodge DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.748, 0.8094, 0.8707, 0.9566, 1.0179, 1.0885, 1.1866, 1.2847, 1.3829, 1.4871],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg_",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.119, 0.1288, 0.1386, 0.1522, 0.162, 0.1732, 0.1888, 0.2044, 0.22, 0.2366],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg__1",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.119, 0.1288, 0.1386, 0.1522, 0.162, 0.1732, 0.1888, 0.2044, 0.22, 0.2366],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg__1_2",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.119, 0.1288, 0.1386, 0.1522, 0.162, 0.1732, 0.1888, 0.2044, 0.22, 0.2366],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg__1_2_3",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 4",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.119, 0.1288, 0.1386, 0.1522, 0.162, 0.1732, 0.1888, 0.2044, 0.22, 0.2366],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg__1_2_3_4",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 5",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1785, 0.1932, 0.2078, 0.2283, 0.243, 0.2598, 0.2832, 0.3066, 0.33, 0.3549],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg__1_2_3_4_5",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 6",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1785, 0.1932, 0.2078, 0.2283, 0.243, 0.2598, 0.2832, 0.3066, 0.33, 0.3549],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg__1_2_3_4_5_6",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 7",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1785, 0.1932, 0.2078, 0.2283, 0.243, 0.2598, 0.2832, 0.3066, 0.33, 0.3549],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_its_big_boomin_time_dmg__1_2_3_4_5_6_7",
+      name: "Resonance Skill - It's Big Boomin' Time! DMG - Hit 8",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1785, 0.1932, 0.2078, 0.2283, 0.243, 0.2598, 0.2832, 0.3066, 0.33, 0.3549],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_come_n_get_me_dmg_hit_1",
+      name: "Resonance Skill - Come 'n' Get Me! DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.119, 0.1288, 0.1386, 0.1522, 0.162, 0.1732, 0.1888, 0.2044, 0.22, 0.2366],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_come_n_get_me_dmg_hit_2",
+      name: "Resonance Skill - Come 'n' Get Me! DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0238, 0.0258, 0.0278, 0.0305, 0.0324, 0.0347, 0.0378, 0.0409, 0.044, 0.0474],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_come_n_get_me_dmg_hit_3",
+      name: "Resonance Skill - Come 'n' Get Me! DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.119, 0.1288, 0.1386, 0.1522, 0.162, 0.1732, 0.1888, 0.2044, 0.22, 0.2366],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_come_n_get_me_dmg_hit_4",
+      name: "Resonance Skill - Come 'n' Get Me! DMG - Hit 4",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.119, 0.1288, 0.1386, 0.1522, 0.162, 0.1732, 0.1888, 0.2044, 0.22, 0.2366],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_come_n_get_me_dmg_hit_5",
+      name: "Resonance Skill - Come 'n' Get Me! DMG - Hit 5",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6902, 0.7468, 0.8034, 0.8827, 0.9393, 1.0044, 1.0949, 1.1855, 1.276, 1.3722],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_come_n_get_me_dmg_hit_6",
+      name: "Resonance Skill - Come 'n' Get Me! DMG - Hit 6",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0595, 0.0644, 0.0693, 0.0761, 0.081, 0.0866, 0.0944, 0.1022, 0.11, 0.1183],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceSkill_resonance_skill_come_n_get_me_dmg_hit_7",
+      name: "Resonance Skill - Come 'n' Get Me! DMG - Hit 7",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0595, 0.0644, 0.0693, 0.0761, 0.081, 0.0866, 0.0944, 0.1022, 0.11, 0.1183],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceLiberation_mk_31_hmg_dmg",
+      name: "Mk. 31 HMG DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1223, 0.1323, 0.1423, 0.1563, 0.1664, 0.1779, 0.1939, 0.21, 0.226, 0.243],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceLiberation_mk_31_hmg_1st_enhancement_dmg",
+      name: "Mk. 31 HMG 1st Enhancement DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2445, 0.2645, 0.2846, 0.3126, 0.3327, 0.3557, 0.3878, 0.4199, 0.452, 0.486],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceLiberation_mk_31_hmg_2nd_enhancement_dmg",
+      name: "Mk. 31 HMG 2nd Enhancement DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3667, 0.3968, 0.4268, 0.4689, 0.499, 0.5336, 0.5817, 0.6298, 0.6779, 0.729],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceLiberation_boom_fireworks_dmg_hit_1",
+      name: "BOOM! Fireworks! DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.32, 0.3463, 0.3725, 0.4093, 0.4355, 0.4657, 0.5077, 0.5496, 0.5916, 0.6362],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_resonanceLiberation_boom_fireworks_dmg_hit_2",
+      name: "BOOM! Fireworks! DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.88, 3.1162, 3.3524, 3.683, 3.9192, 4.1907, 4.5686, 4.9464, 5.3243, 5.7258],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_forteCircuit_hack_response_meltdown_dmg",
+      name: "Hack Response - Meltdown DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [11.865, 12.838, 13.8109, 15.173, 16.1459, 17.2648, 18.8215, 20.3782, 21.9349, 23.5889],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_forteCircuit_rattattat_huntress_dmg_hit_1",
+      name: "Rat-tat-tat!: Huntress DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_forteCircuit_rattattat_huntress_dmg_hit_2",
+      name: "Rat-tat-tat!: Huntress DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_forteCircuit_rattattat_huntress_dmg_hit_3",
+      name: "Rat-tat-tat!: Huntress DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_forteCircuit_rattattat_huntress_dmg_hit_4",
+      name: "Rat-tat-tat!: Huntress DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.6, 1.7312, 1.8624, 2.0461, 2.1773, 2.3282, 2.5381, 2.748, 2.958, 3.181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_forteCircuit_rattattat_huntress_dmg_hit_5",
+      name: "Rat-tat-tat!: Huntress DMG - Hit 5",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_forteCircuit_bangbangbang_guts_dmg",
+      name: "Bang-bang-bang!: Guts DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.4, 1.5148, 1.6296, 1.7904, 1.9052, 2.0372, 2.2209, 2.4045, 2.5882, 2.7834],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_1",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.136, 0.1472, 0.1584, 0.174, 0.1851, 0.1979, 0.2158, 0.2336, 0.2515, 0.2704],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_2",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.136, 0.1472, 0.1584, 0.174, 0.1851, 0.1979, 0.2158, 0.2336, 0.2515, 0.2704],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_3",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 3",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.136, 0.1472, 0.1584, 0.174, 0.1851, 0.1979, 0.2158, 0.2336, 0.2515, 0.2704],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_4",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 4",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.136, 0.1472, 0.1584, 0.174, 0.1851, 0.1979, 0.2158, 0.2336, 0.2515, 0.2704],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_5",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 5",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.136, 0.1472, 0.1584, 0.174, 0.1851, 0.1979, 0.2158, 0.2336, 0.2515, 0.2704],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_6",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 6",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.136, 0.1472, 0.1584, 0.174, 0.1851, 0.1979, 0.2158, 0.2336, 0.2515, 0.2704],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_7",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 7",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.204, 0.2208, 0.2375, 0.2609, 0.2777, 0.2969, 0.3237, 0.3504, 0.3772, 0.4056],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_yo_its_big_boomin_time_dmg_hit_8",
+      name: "Yo, It's Big Boomin' Time! DMG - Hit 8",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.34, 0.3679, 0.3958, 0.4348, 0.4627, 0.4948, 0.5394, 0.584, 0.6286, 0.676],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_hey_leadhead_come_n_get_me_dmg_hit_1",
+      name: "Hey, Leadhead, Come 'n' Get Me! DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.051, 0.0552, 0.0594, 0.0653, 0.0695, 0.0743, 0.081, 0.0876, 0.0943, 0.1014],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_hey_leadhead_come_n_get_me_dmg_hit_2",
+      name: "Hey, Leadhead, Come 'n' Get Me! DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.153, 0.1656, 0.1781, 0.1957, 0.2083, 0.2227, 0.2428, 0.2628, 0.2829, 0.3042],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_hey_leadhead_come_n_get_me_dmg_hit_3",
+      name: "Hey, Leadhead, Come 'n' Get Me! DMG - Hit 3",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.204, 0.2208, 0.2375, 0.2609, 0.2777, 0.2969, 0.3237, 0.3504, 0.3772, 0.4056],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_hey_leadhead_come_n_get_me_dmg_hit_4",
+      name: "Hey, Leadhead, Come 'n' Get Me! DMG - Hit 4",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.204, 0.2208, 0.2375, 0.2609, 0.2777, 0.2969, 0.3237, 0.3504, 0.3772, 0.4056],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_hey_leadhead_come_n_get_me_dmg_hit_5",
+      name: "Hey, Leadhead, Come 'n' Get Me! DMG - Hit 5",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.204, 0.2208, 0.2375, 0.2609, 0.2777, 0.2969, 0.3237, 0.3504, 0.3772, 0.4056],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Rebecca_introSkill_hey_leadhead_come_n_get_me_dmg_hit_6",
+      name: "Hey, Leadhead, Come 'n' Get Me! DMG - Hit 6",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.204, 0.2208, 0.2375, 0.2609, 0.2777, 0.2969, 0.3237, 0.3504, 0.3772, 0.4056],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Rebecca_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Rebecca Tag, You're It!ATK is increased by 10% for 12s when A Girl Gets What She Wants!",
+    },
+    {
+      id: "Rebecca_passive_1",
+      name: "is",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "is triggered, or when Heavy Attack - Rat-tat-tat!: Huntress or Heavy Attack - Bang-bang-bang!: Guts is cast, stacking up to 2 times.",
+    },
+    {
+      id: "Rebecca_passive_2",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When a Resonator in the team inflicts Hack - Shifting, their Tune Break Boost is increased by 30 for 30s.Left an Opening!Heavy Attack - Rat-tat-tat!: Huntress and Heavy Attack - Bang-bang-bang!: Guts gain increased resistance to interruption.",
+    },
+    {
+      id: "Rebecca_passive_3",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Rebecca casts Resonance Liberation - Party 'til Dawn!, the ATK of all nearby Resonators in the team is increased by 20% for 30s.",
+    },
+    {
+      id: "Rebecca_s1",
+      name: "S1: Try Not to Get in the Way!",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of the following skills are increased by 50%:  - Basic Attack - Huntress, Heavy Attack - Huntress, Tactical Dodge - Huntress, and Dodge Counter - Huntress - Basic Attack - Guts, Tactical Dodge - Guts, Dodge Counter - Guts. When A Girl Gets What She Wants! is triggered, Rebecca gains 3 additional  of Street Smarts for 12s. Upon performing Tactical Dodge - Huntress or Tactical Dodge - Guts, if Rebecca has sufficient Street Smarts stacks, 1  will be consumed to restore 20 STA. Resonance Liberation BOOM! Fireworks! is immune to interruption.",
+    },
+    {
+      id: "Rebecca_s2",
+      name: "S2: Oh, Hey Choom!",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Intro Skill - Yo, It's Big Boomin' Time!, Intro Skill - Hey, Leadhead, Come 'n' Get Me!, or Resonance Liberation - Party 'til Dawn! grants 20% All-Attribute DMG Bonus for all Resonators in the team for 30s. When Resonators in the team inflict Hack - Shifting, they gain 15% All DMG Amplification for 30s. Hot Hand regenerates twice as fast when Rebecca is out of combat.",
+    },
+    {
+      id: "Rebecca_s3",
+      name: "S3: Don't Sweat Your Six!",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Rebecca's Resonance Liberation - Party 'til Dawn!, and Resonance Liberation - BOOM! Fireworks! gain 60% DMG Multiplier increase. Rebecca's Resonance Liberation - Party 'til Dawn! gains 30% more explosion range. Casting Intro Skill - Yo, It's Big Boomin' Time! or Intro Skill - Hey, Leadhead, Come 'n' Get Me! grants 120 points of Hot Hand.",
+    },
+    {
+      id: "Rebecca_s4",
+      name: "S4: Got Ya Covered!",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Rebecca gains an additional 60% Stat Bonus increase from the A Girl Gets What She Wants! effect.",
+    },
+    {
+      id: "Rebecca_s5",
+      name: "S5: Dreamin' on the Edge",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Rebecca gains 20% Basic Attack DMG Bonus for 8s when she inflicts Hack - Shifting.",
+    },
+    {
+      id: "Rebecca_s6",
+      name: "S6: Maybe, Just Maybe...",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Rebecca's Basic Attack DMG Bonus from every source is increased by 40%. During Heavy Attack - Rat-tat-tat!: Huntress or Heavy Attack - Bang-bang-bang!: Guts, Rebecca deals an additional instance of Electro DMG equal to 900% of her ATK, considered Basic Attack DMG. Rebecca recovers an additional 20 points of Hot Hand when she is casting Heavy Attack - Rat-tat-tat!: Huntress or Heavy Attack - Bang-bang-bang!: Guts. When Rebecca takes a fatal blow, she does not fall to the damage and instead restores fixed 2077 HP for 5 times immediately. This effect is triggered once every 10 min. When Rebecca stays out of combat for more than 4s, she restores 120  of Fervor. This effect is triggered once every 4s.",
+    },
+  ],
+  mechanics: [],
+}

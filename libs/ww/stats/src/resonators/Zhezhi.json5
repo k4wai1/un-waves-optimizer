@@ -1,0 +1,377 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Zhezhi | elemento Glacio | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Zhezhi",
+    name: "Zhezhi",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Glacio",
+    weaponType: "Rectifier",
+    tags: ["glacio"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 980, "20": 2549, "40": 4854, "50": 6333, "60": 7812, "70": 9291, "80": 10770, "90": 12250 },
+    atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
+    def: { "1": 98, "20": 251, "40": 476, "50": 620, "60": 764, "70": 909, "80": 1053, "90": 1197 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Zhezhi_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.21, 0.2273, 0.2445, 0.2686, 0.2858, 0.3056, 0.3332, 0.3607, 0.3883, 0.4176],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1034, 0.1118, 0.1203, 0.1322, 0.1406, 0.1504, 0.1639, 0.1775, 0.1911, 0.2055],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.672, 0.7272, 0.7823, 0.8594, 0.9145, 0.9779, 1.066, 1.1542, 1.2424, 1.3361],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_basicAttack_ha_dmg",
+      name: "HA DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.567, 0.6135, 0.66, 0.7251, 0.7716, 0.825, 0.8994, 0.9738, 1.0482, 1.1272],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_plungingAttack_midair_attack_dmg_hit_1",
+      name: "Mid-air Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1255, 0.1358, 0.1461, 0.1605, 0.1708, 0.1826, 0.1991, 0.2155, 0.232, 0.2495],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_plungingAttack_midair_attack_dmg_hit_2",
+      name: "Mid-air Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1462, 0.1582, 0.1702, 0.187, 0.199, 0.2128, 0.232, 0.2511, 0.2703, 0.2907],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_resonanceSkill_press_dmg",
+      name: "Press DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.495, 0.5356, 0.5762, 0.6331, 0.6736, 0.7203, 0.7853, 0.8502, 0.9152, 0.9842],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_resonanceSkill_hold_dmg",
+      name: "Hold DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.495, 0.5356, 0.5762, 0.6331, 0.6736, 0.7203, 0.7853, 0.8502, 0.9152, 0.9842],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_resonanceSkill_midair_press_dmg",
+      name: "Mid-air Press DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.495, 0.5356, 0.5762, 0.6331, 0.6736, 0.7203, 0.7853, 0.8502, 0.9152, 0.9842],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_resonanceLiberation_inklit_spirit_dmg",
+      name: "Inklit Spirit DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.328, 0.3549, 0.3818, 0.4195, 0.4464, 0.4773, 0.5204, 0.5634, 0.6064, 0.6521],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_forteCircuit_ha_conjuration_dmg",
+      name: "HA - Conjuration DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4175, 0.4518, 0.486, 0.5339, 0.5682, 0.6076, 0.6623, 0.7171, 0.7719, 0.8301],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_forteCircuit_stroke_of_genius_dmg",
+      name: "Stroke of Genius DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5, 1.623, 1.746, 1.9182, 2.0412, 2.1827, 2.3795, 2.5763, 2.7731, 2.9822],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_forteCircuit_creations_zenith_dmg",
+      name: "Creation's Zenith DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6, 0.6492, 0.6984, 0.7673, 0.8165, 0.8731, 0.9518, 1.0305, 1.1093, 1.1929],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Zhezhi_introSkill_dmg",
+      name: "DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4334, 0.4689, 0.5044, 0.5542, 0.5897, 0.6306, 0.6874, 0.7443, 0.8012, 0.8616],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Zhezhi_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Glacio DMG.Show Skill DetailsLevel 20DMG150.12%*3Concerto Regen10Carve and Draw",
+    },
+    {
+      id: "Zhezhi_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Glacio DMG Amplified by 20% and Resonance Skill DMG Amplified by 25% for 14s or until they are switched out.",
+    },
+    {
+      id: "Zhezhi_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Zhezhi Calligrapher's TouchWhen casting Resonance Skill Stroke of Genius or Resonance Skill Creation's Zenith, ATK is increased by 6% for 27s.",
+    },
+    {
+      id: "Zhezhi_passive_3",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This can be stacked up to 3 time(s).FlourishAfter Outro Skill is cast, restore 15 Resonance Energy for the incoming Resonator.",
+    },
+    {
+      id: "Zhezhi_s1_brushworks_finish",
+      name: "S1: Brushwork's Finish",
+      operation: "add",
+      value: [0.1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.1],
+        },
+      ],
+      descriptionTemplate: "Casting Resonance Skill Creation's Zenith restores 15 Resonance Energy and increases Crit. Rate by 10% for 27s.",
+    },
+    {
+      id: "Zhezhi_s2",
+      name: "S2: Vivid Strokes",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Max Inklit Spirits summoned by Resonance Liberation Living Canvas increases by 6.",
+    },
+    {
+      id: "Zhezhi_s3",
+      name: "S3: Reflection's Grace",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Skill Manifestation, Resonance Skill Stroke of Genius, or Resonance Skill Creation's Zenith increases ATK by 15% for 27s, stacking up to 3 time(s).",
+    },
+    {
+      id: "Zhezhi_s4_hues_spectrum",
+      name: "S4: Hue's Spectrum",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "atk_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Casting Resonance Liberation Living Canvas increases ATK of Resonators on the team 20% for 30s.",
+    },
+    {
+      id: "Zhezhi_s5",
+      name: "S5: Composition's Clue",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "For every 3 Inklit Spirits summoned by Resonance Liberation Living Canvas, 1 extra Inklit Spirit is summoned to perform a Coordinated Attack, dealing DMG equal to 140% of Inklit Spirit's DMG, considered as Basic Attack DMG. This damage dealt will not further summon Inklit Spirit.",
+    },
+    {
+      id: "Zhezhi_s6",
+      name: "S6: Infinite Legacy",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Skill Stroke of Genius or Resonance Skill Creation's Zenith summons an extra Ivory Herald to deal DMG equal to 120% of Resonance Skill Stroke of Genius's DMG, considered as Basic Attack DMG.",
+    },
+  ],
+  mechanics: [],
+}

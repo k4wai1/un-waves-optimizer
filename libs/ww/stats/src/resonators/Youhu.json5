@@ -1,0 +1,526 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Youhu | elemento Glacio | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Youhu",
+    name: "Youhu",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Glacio",
+    weaponType: "Gauntlets",
+    tags: ["glacio"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 798, "20": 2075, "40": 3952, "50": 5157, "60": 6361, "70": 7565, "80": 8770, "90": 9975 },
+    atk: { "1": 21, "20": 54, "40": 105, "50": 139, "60": 172, "70": 206, "80": 234, "90": 262 },
+    def: { "1": 86, "20": 220, "40": 418, "50": 544, "60": 671, "70": 797, "80": 924, "90": 1051 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Youhu_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2383, 0.2579, 0.2774, 0.3048, 0.3243, 0.3468, 0.378, 0.4093, 0.4405, 0.4738],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_basicAttack_stage_2_dmg_hit_1",
+      name: "Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1605, 0.1737, 0.1869, 0.2053, 0.2184, 0.2336, 0.2546, 0.2757, 0.2967, 0.3191],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_basicAttack_stage_2_dmg_hit_2",
+      name: "Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2981, 0.3225, 0.347, 0.3812, 0.4056, 0.4337, 0.4728, 0.5119, 0.551, 0.5926],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_basicAttack_stage_3_dmg_hit_1",
+      name: "Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1915, 0.2072, 0.2229, 0.2449, 0.2606, 0.2786, 0.3037, 0.3288, 0.354, 0.3806],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_basicAttack_stage_3_dmg_hit_2",
+      name: "Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.234, 0.2532, 0.2724, 0.2993, 0.3184, 0.3405, 0.3712, 0.4019, 0.4326, 0.4652],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5853, 0.6333, 0.6813, 0.7484, 0.7964, 0.8516, 0.9284, 1.0052, 1.082, 1.1635],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_heavyAttack_heavy_attack_frostfall_dmg",
+      name: "Heavy Attack: Frostfall DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0727, 0.0787, 0.0846, 0.0929, 0.0989, 0.1058, 0.1153, 0.1248, 0.1343, 0.1445],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6709, 0.7217, 0.7929, 0.8437, 0.9022, 0.9836, 1.0649, 1.1462, 1.2327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1453, 0.1573, 0.1692, 0.1858, 0.1978, 0.2115, 0.2305, 0.2496, 0.2686, 0.2889],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.787, 0.8516, 0.9161, 1.0064, 1.071, 1.1452, 1.2484, 1.3517, 1.4549, 1.5646],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_scroll_divination_healing_flat",
+      name: "Scroll Divination Healing (Flat)",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [1041, 1097, 1162, 1302, 1469, 1627, 1655, 1692, 1720, 1767],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_scroll_divination_healing",
+      name: "Scroll Divination Healing",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.39, 0.4056, 0.4212, 0.4446, 0.4758, 0.507, 0.5655, 0.6318, 0.702, 0.819],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_chime_dmg_hit_1",
+      name: "Chime DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2065, 0.2234, 0.2404, 0.2641, 0.281, 0.3005, 0.3276, 0.3546, 0.3817, 0.4105],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_chime_dmg_hit_2",
+      name: "Chime DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2507, 0.2713, 0.2919, 0.3206, 0.3412, 0.3648, 0.3977, 0.4306, 0.4635, 0.4985],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_chime_dmg_hit_3",
+      name: "Chime DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5162, 0.5585, 0.6008, 0.6601, 0.7024, 0.7511, 0.8188, 0.8865, 0.9542, 1.0262],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_ruyi_dmg_hit_1",
+      name: "Ruyi DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6891, 0.7456, 0.8021, 0.8813, 0.9378, 1.0027, 1.0931, 1.1836, 1.274, 1.37],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_ruyi_dmg_hit_2",
+      name: "Ruyi DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8423, 0.9113, 0.9804, 1.0771, 1.1461, 1.2256, 1.3361, 1.4466, 1.5571, 1.6745],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_ding_dmg_hit_1",
+      name: "Ding DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1438, 0.1555, 0.1673, 0.1838, 0.1956, 0.2092, 0.228, 0.2469, 0.2657, 0.2857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_ding_dmg_hit_2",
+      name: "Ding DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5749, 0.622, 0.6691, 0.7351, 0.7823, 0.8365, 0.9119, 0.9873, 1.0627, 1.1428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_mask_dmg_hit_1",
+      name: "Mask DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0577, 0.0624, 0.0671, 0.0737, 0.0785, 0.0839, 0.0915, 0.099, 0.1066, 0.1146],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceSkill_mask_dmg_hit_2",
+      name: "Mask DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2223, 0.2406, 0.2588, 0.2843, 0.3025, 0.3235, 0.3527, 0.3818, 0.411, 0.442],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.6458, 1.7807, 1.9157, 2.1046, 2.2395, 2.3947, 2.6106, 2.8266, 3.0425, 3.2719],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_forteCircuit_poetic_essence_skill_dmg",
+      name: "Poetic Essence Skill DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1872, 0.2026, 0.2179, 0.2394, 0.2547, 0.2724, 0.2969, 0.3215, 0.346, 0.3721],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_forteCircuit_poetic_essence_healing_flat",
+      name: "Poetic Essence Healing (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [1180, 1243, 1317, 1475, 1665, 1844, 1876, 1918, 1949, 2002],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_forteCircuit_poetic_essence_healing",
+      name: "Poetic Essence Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.442, 0.4597, 0.4774, 0.5039, 0.5392, 0.5746, 0.6409, 0.716, 0.7956, 0.9282],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_forteCircuit_double_pun_bonus_healing_flat",
+      name: "Double Pun Bonus Healing (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [694, 731, 775, 868, 979, 1085, 1103, 1128, 1147, 1178],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_forteCircuit_double_pun_bonus_healing",
+      name: "Double Pun Bonus Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.26, 0.2704, 0.2808, 0.2964, 0.3172, 0.338, 0.377, 0.4212, 0.468, 0.546],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.45, 0.4869, 0.5238, 0.5755, 0.6124, 0.6548, 0.7139, 0.7729, 0.832, 0.8947],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Youhu_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.55, 0.5951, 0.6402, 0.7034, 0.7485, 0.8004, 0.8725, 0.9447, 1.0168, 1.0935],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Youhu_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillToss out the scroll and perform Lucky Draw once.Show Skill DetailsLevel 20Skill DMG163.27%+199.55%Concerto Regen10Timeless Classics",
+    },
+    {
+      id: "Youhu_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Coordinated Attack DMG Amplified by 100% for 28s.",
+    },
+    {
+      id: "Youhu_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Youhu Treasured PieceRestore HP for all nearby party members based on 30% of the healing provided by Resonance Skill Scroll Divination when Resonance Skill Antique Appraisal is cast.Rare FindGain 15% Glacio DMG Bonus for 14s upon casting Intro Skill Scroll of Wonders.",
+    },
+    {
+      id: "Youhu_s1",
+      name: "S1: Waterside Respite",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Youhu has a 10% chance to gain immunity to damage and interruption after casting Lucky Draw. This effect lasts for 5s or until she is switched out.",
+    },
+    {
+      id: "Youhu_s2",
+      name: "S2: Sunroom Siesta",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG bonus of Antithesis, Triplet and Perfect Rhyme on Poetic Essence is doubled.",
+    },
+    {
+      id: "Youhu_s3_restless_sleep",
+      name: "S3: Restless Sleep",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "atk_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Youhu's ATK is increased by 20%.",
+    },
+    {
+      id: "Youhu_s4",
+      name: "S4: Frosted Lullaby",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Every time Resonance Skill Scroll Divination is cast, there is a 20% chance that the skill will not enter Cooldown.",
+    },
+    {
+      id: "Youhu_s5",
+      name: "S5: Dreamland Meander",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Intro Skill Scroll of Wonders is cast, Youhu's Crit. Rate is increased by 15% for 14s.",
+    },
+    {
+      id: "Youhu_s6",
+      name: "S6: Slumber Evermore",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Resonance Skill Antique Appraisal, gain 1 stack of Sky Blue, stackable up to 4 times, lasting for 7s. Each stack increases Youhu's Crit. DMG by 15%.",
+    },
+  ],
+  mechanics: [],
+}

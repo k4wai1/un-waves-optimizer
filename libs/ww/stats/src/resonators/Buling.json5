@@ -1,0 +1,433 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Buling | elemento Electro | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Buling",
+    name: "Buling",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Rectifier",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 850, "20": 2210, "40": 4210, "50": 5493, "60": 6776, "70": 8059, "80": 9342, "90": 10625 },
+    atk: { "1": 18, "20": 46, "40": 90, "50": 119, "60": 147, "70": 176, "80": 200, "90": 225 },
+    def: { "1": 103, "20": 264, "40": 500, "50": 652, "60": 803, "70": 955, "80": 1107, "90": 1258 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Buling_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1043, 0.1128, 0.1214, 0.1334, 0.1419, 0.1517, 0.1654, 0.1791, 0.1928, 0.2073],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1683, 0.1821, 0.1959, 0.2152, 0.229, 0.2449, 0.2669, 0.289, 0.3111, 0.3345],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1183, 0.128, 0.1377, 0.1513, 0.161, 0.1721, 0.1876, 0.2031, 0.2187, 0.2351],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.471, 0.5097, 0.5483, 0.6024, 0.641, 0.6854, 0.7472, 0.809, 0.8708, 0.9364],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.372, 0.4026, 0.4331, 0.4758, 0.5063, 0.5413, 0.5902, 0.639, 0.6878, 0.7396],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1183, 0.128, 0.1377, 0.1513, 0.161, 0.1721, 0.1876, 0.2031, 0.2187, 0.2351],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_heavyAttack_heavy_attack_mountain_over_thunder_dmg",
+      name: "Heavy Attack - Mountain Over Thunder DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.9738, 1.0476, 1.151, 1.2248, 1.3096, 1.4277, 1.5458, 1.6639, 1.7893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_heavyAttack_heavy_attack_thunder_over_mountain_dmg",
+      name: "Heavy Attack - Thunder Over Mountain DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.45, 0.4869, 0.5238, 0.5755, 0.6124, 0.6548, 0.7139, 0.7729, 0.832, 0.8947],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_heavyAttack_heavy_attack_twin_mountains_healing_flat",
+      name: "Heavy Attack - Twin Mountains Healing (Flat)",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [360, 390, 420, 461, 490, 524, 572, 619, 666, 716],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_heavyAttack_heavy_attack_twin_mountains_healing",
+      name: "Heavy Attack - Twin Mountains Healing",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.68, 0.7358, 0.7916, 0.8696, 0.9254, 0.9895, 1.0787, 1.1679, 1.2572, 1.352],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_heavyAttack_heavy_attack_twin_thunders_healing_flat",
+      name: "Heavy Attack - Twin Thunders Healing (Flat)",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [85, 92, 99, 109, 116, 124, 135, 146, 158, 169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_heavyAttack_heavy_attack_twin_thunders_healing",
+      name: "Heavy Attack - Twin Thunders Healing",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.092, 0.0996, 0.1071, 0.1177, 0.1252, 0.1339, 0.146, 0.1581, 0.1701, 0.183],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_resonanceSkill_thunder_talisman_dmg",
+      name: "Thunder Talisman DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2937, 0.3178, 0.3419, 0.3756, 0.3997, 0.4274, 0.4659, 0.5045, 0.543, 0.584],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_resonanceSkill_pullin_effect_continuous_dmg",
+      name: "Pull-in Effect Continuous DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0294, 0.0318, 0.0342, 0.0376, 0.04, 0.0428, 0.0466, 0.0505, 0.0543, 0.0584],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_resonanceLiberation_flashing_thunder_spell_dmg",
+      name: "Flashing Thunder Spell DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.8, 1.9476, 2.0952, 2.3019, 2.4495, 2.6192, 2.8554, 3.0915, 3.3277, 3.5786],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_forteCircuit_flashing_thunder_spell_harmony_dmg",
+      name: "Flashing Thunder Spell - Harmony DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.7, 2.9214, 3.1428, 3.4528, 3.6742, 3.9288, 4.2831, 4.6373, 4.9915, 5.3679],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_forteCircuit_five_thunders_spell_array_continuous_dmg",
+      name: "Five Thunders Spell Array Continuous DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6594, 0.7135, 0.7676, 0.8433, 0.8974, 0.9595, 1.0461, 1.1326, 1.2191, 1.311],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_introSkill_skill_healing_flat",
+      name: "Skill Healing (Flat)",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [350, 379, 408, 448, 477, 510, 556, 602, 648, 696],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Buling_introSkill_skill_healing",
+      name: "Skill Healing",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Buling_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Electro DMG and healing all nearby Resonators in the team.Show Skill DetailsLevel 20Skill DMG239.24%Skill Healing1270+145.13%Concerto Regen10Exorcism Spell",
+    },
+    {
+      id: "Buling_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillHeal the active Resonator in the team by 18% of Buling's ATK per second for 16s. All nearby Resonators in the team have their DMG Amplified by 15% for 30s.",
+    },
+    {
+      id: "Buling_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Buling Time Arrives, Evil DeclinesBuling gains 25% Healing Bonus when restoring HP for Resonators with less than 50% HP.Earthly Immortal is Here!Targets damaged by Intro Skill - Summon and Smite obtain 4 stacks of Electro Flare.",
+    },
+    {
+      id: "Buling_passive_3",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect is triggered once every 10s.",
+    },
+    {
+      id: "Buling_s1",
+      name: "S1: Exorcist Gadgets, Lend Me Your Power",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The Crit. Rate of Resonance Liberation - Flashing Thunder Spell: Harmony is increased by 20% upon dealing damage.",
+    },
+    {
+      id: "Buling_s2",
+      name: "S2: Talisman Burns, Spirits Turn",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Buling restores 25 points of Resonance Energy when she enters the Yin-Yang Balance state. This effect is triggered once every 24s.",
+    },
+    {
+      id: "Buling_s3",
+      name: "S3: Summoner of Spirits, Seeker of Fate",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "While Five Thunders Spell Array lasts, whenever the HP of Resonators in the team drops below 50%, immediately restore their HP by 350+150% of Buling's ATK. This effect can be triggered once every 24s.",
+    },
+    {
+      id: "Buling_s4_wanderer_of_solaris_blessed",
+      name: "S4: Wanderer of Solaris, Blessed by Fortune",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "healing_bonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Buling gains 20% Healing Bonus.",
+    },
+    {
+      id: "Buling_s5",
+      name: "S5: Forum Ban? New Account!",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Five Thunders Spell Array instantly inflicts another 6 stacks of Electro Flare on all targets within its range upon generation.",
+    },
+    {
+      id: "Buling_s6",
+      name: "S6: \"Almighty Forum Lord of Thunder Spell\"",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The Thunder Spell - Heaven, Earth, Mind state now grants 50% Resonance Skill DMG Bonus to the active Resonator in the team.",
+    },
+  ],
+  mechanics: [],
+}

@@ -1,0 +1,369 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Mortefi | elemento Fusion | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Mortefi",
+    name: "Mortefi",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Pistols",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 802, "20": 2086, "40": 3972, "50": 5182, "60": 6393, "70": 7603, "80": 8814, "90": 10025 },
+    atk: { "1": 20, "20": 52, "40": 100, "50": 132, "60": 164, "70": 196, "80": 223, "90": 250 },
+    def: { "1": 93, "20": 238, "40": 452, "50": 589, "60": 725, "70": 862, "80": 999, "90": 1136 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Mortefi_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2429, 0.2629, 0.2828, 0.3107, 0.3306, 0.3535, 0.3854, 0.4172, 0.4491, 0.483],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2051, 0.222, 0.2388, 0.2623, 0.2792, 0.2985, 0.3254, 0.3523, 0.3792, 0.4078],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5397, 0.584, 0.6283, 0.6902, 0.7345, 0.7854, 0.8562, 0.927, 0.9978, 1.073],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1057, 0.1144, 0.1231, 0.1352, 0.1439, 0.1539, 0.1677, 0.1816, 0.1955, 0.2102],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6384, 0.6908, 0.7431, 0.8164, 0.8688, 0.929, 1.0127, 1.0965, 1.1803, 1.2693],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_basicAttack_aimed_shot_damage",
+      name: "Aimed Shot Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4914, 0.5317, 0.572, 0.6285, 0.6687, 0.7151, 0.7796, 0.844, 0.9085, 0.977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_basicAttack_fully_charged_aimed_shot_damage",
+      name: "Fully Charged Aimed Shot Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.84, 0.9089, 0.9778, 1.0742, 1.1431, 1.2223, 1.3325, 1.4427, 1.553, 1.6701],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_plungingAttack_midair_attack_stage_1_dmg",
+      name: "Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1169, 0.1265, 0.1361, 0.1495, 0.1591, 0.1702, 0.1855, 0.2008, 0.2162, 0.2325],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_plungingAttack_midair_attack_stage_2_dmg",
+      name: "Mid-air Attack Stage 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1169, 0.1265, 0.1361, 0.1495, 0.1591, 0.1702, 0.1855, 0.2008, 0.2162, 0.2325],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9807, 1.0612, 1.1416, 1.2542, 1.3346, 1.4271, 1.5557, 1.6844, 1.8131, 1.9498],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.05, 1.1361, 1.2222, 1.3428, 1.4289, 1.5279, 1.6657, 1.8034, 1.9412, 2.0876],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_resonanceLiberation_violent_finale_damage",
+      name: "Violent Finale Damage",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.8656, 0.9312, 1.0231, 1.0887, 1.1641, 1.2691, 1.374, 1.479, 1.5905],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_resonanceLiberation_marcato_damage",
+      name: "Marcato Damage",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.16, 0.1732, 0.1863, 0.2047, 0.2178, 0.2329, 0.2539, 0.2748, 0.2958, 0.3181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_forteCircuit_fury_fugue_damage",
+      name: "Fury Fugue Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.64, 1.7745, 1.909, 2.0973, 2.2318, 2.3864, 2.6016, 2.8167, 3.0319, 3.2605],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mortefi_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.85, 0.9197, 0.9894, 1.087, 1.1567, 1.2369, 1.3484, 1.4599, 1.5714, 1.6899],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Mortefi_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Fusion DMG.Show Skill DetailsLevel 20Skill DMG308.39%Concerto Regen10Rage Transposition",
+    },
+    {
+      id: "Mortefi_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator gains 38% Heavy Attack DMG Amplification for 14s or until they are switched out.",
+    },
+    {
+      id: "Mortefi_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Mortefi Harmonic ControlAfter casting Resonance Skill Passionate Variation, the damage of Resonance Skill Fury Fugue is increased by 25% for 8s.Rhythmic VibratoDuring Resonance Liberation Burning Rhapsody, each hit of Resonance Liberation Marcato will increase the DMG of the next Resonance Liberation Marcato by 1.5%, which can be triggered once every 0.35s, stacking up to 50 times.",
+    },
+    {
+      id: "Mortefi_passive_3",
+      name: "The",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "The effect will be reset after Resonance Liberation Burning Rhapsody ends.",
+    },
+    {
+      id: "Mortefi_s1",
+      name: "S1: Solitary Etude",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "During Resonance Liberation Burning Rhapsody, Mortefi launches Coordinated Attacks when the on-field character performs their Resonance Skills, firing 2 Resonance Liberation's Marcato hits, dealing Fusion DMG.",
+    },
+    {
+      id: "Mortefi_s2",
+      name: "S2: Hypocritical Hymn",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After using the Echo Skill, Mortefi restores an additional 10 Resonance Energy. This can be triggered once every 20 second.",
+    },
+    {
+      id: "Mortefi_s3",
+      name: "S3: Flaming Recitativo",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "During Resonance Liberation Burning Rhapsody, the Crit. DMG of Resonance Liberation's Marcato is increased by 30%.",
+    },
+    {
+      id: "Mortefi_s4",
+      name: "S4: Cathartic Waltz",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The duration of Resonance Liberation Burning Rhapsody is extended by 7s.",
+    },
+    {
+      id: "Mortefi_s5",
+      name: "S5: Funerary Quartet",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Resonance Skill Passionate Variation or Resonance Skill Fury Fugue hits a target, Coordinated Attacks will be triggered to fire 4 Resonance Liberation's Marcato hit(s), dealing Fusion Damage. DMG of Resonance Liberation's Marcato fired in this way is reduced by 50%.",
+    },
+    {
+      id: "Mortefi_s6",
+      name: "S6: Apoplectic Instrumental",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Resonance Liberation Violent Finale is cast, ATK of all team members is increased by 20% for 20s.",
+    },
+  ],
+  mechanics: [],
+}

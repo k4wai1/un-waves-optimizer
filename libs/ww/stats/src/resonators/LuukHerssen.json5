@@ -1,0 +1,668 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Luuk Herssen | elemento Spectro | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "LuukHerssen",
+    name: "Luuk Herssen",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Gauntlets",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 824, "20": 2143, "40": 4081, "50": 5325, "60": 6568, "70": 7812, "80": 9056, "90": 10300 },
+    atk: { "1": 37, "20": 96, "40": 186, "50": 245, "60": 304, "70": 363, "80": 412, "90": 462 },
+    def: { "1": 91, "20": 233, "40": 442, "50": 576, "60": 710, "70": 844, "80": 978, "90": 1112 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "LuukHerssen_basicAttack_basic_attack_stage_1_dmg_hit_1",
+      name: "Basic Attack Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.204, 0.2208, 0.2375, 0.2609, 0.2777, 0.2969, 0.3237, 0.3504, 0.3772, 0.4056],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_basicAttack_basic_attack_stage_1_dmg_hit_2",
+      name: "Basic Attack Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.204, 0.2208, 0.2375, 0.2609, 0.2777, 0.2969, 0.3237, 0.3504, 0.3772, 0.4056],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_basicAttack_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3026, 0.3275, 0.3523, 0.387, 0.4118, 0.4404, 0.4801, 0.5198, 0.5595, 0.6016],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_basicAttack_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4539, 0.4912, 0.5284, 0.5805, 0.6177, 0.6605, 0.7201, 0.7796, 0.8392, 0.9024],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_basicAttack_basic_attack_stage_3_dmg",
+      name: "Basic Attack Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0253, 0.0273, 0.0294, 0.0323, 0.0344, 0.0367, 0.0401, 0.0434, 0.0467, 0.0502],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_basicAttack_basic_attack_stage_4_dmg",
+      name: "Basic Attack Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4845, 0.5243, 0.564, 0.6196, 0.6594, 0.705, 0.7686, 0.8322, 0.8957, 0.9633],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.459, 0.4967, 0.5343, 0.587, 0.6247, 0.6679, 0.7282, 0.7884, 0.8486, 0.9126],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_1_dmg",
+      name: "Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.289, 0.3127, 0.3364, 0.3696, 0.3933, 0.4206, 0.4585, 0.4964, 0.5343, 0.5746],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_2_scythe_dissection_",
+      name: "Mid-air Attack Stage 2 Scythe: Dissection DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.142, 0.1536, 0.1653, 0.1816, 0.1932, 0.2066, 0.2252, 0.2438, 0.2625, 0.2823],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_2_scythe_dissection__1",
+      name: "Mid-air Attack Stage 2 Scythe: Dissection DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.142, 0.1536, 0.1653, 0.1816, 0.1932, 0.2066, 0.2252, 0.2438, 0.2625, 0.2823],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_2_scythe_dissection__1_2",
+      name: "Mid-air Attack Stage 2 Scythe: Dissection DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1893, 0.2048, 0.2204, 0.2421, 0.2576, 0.2755, 0.3003, 0.3251, 0.3499, 0.3763],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_3_scythe_dissection_",
+      name: "Mid-air Attack Stage 3 Scythe: Dissection DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2159, 0.2337, 0.2514, 0.2761, 0.2938, 0.3142, 0.3425, 0.3709, 0.3992, 0.4293],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_3_scythe_dissection__1",
+      name: "Mid-air Attack Stage 3 Scythe: Dissection DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2159, 0.2337, 0.2514, 0.2761, 0.2938, 0.3142, 0.3425, 0.3709, 0.3992, 0.4293],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_3_scythe_dissection__1_2",
+      name: "Mid-air Attack Stage 3 Scythe: Dissection DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2879, 0.3115, 0.3351, 0.3682, 0.3918, 0.4189, 0.4567, 0.4945, 0.5322, 0.5724],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_2_scythe_resction_dm",
+      name: "Mid-air Attack Stage 2 Scythe: Resction DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2536, 0.2744, 0.2952, 0.3243, 0.3451, 0.369, 0.4023, 0.4356, 0.4688, 0.5042],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_2_scythe_resction_dm_1",
+      name: "Mid-air Attack Stage 2 Scythe: Resction DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2536, 0.2744, 0.2952, 0.3243, 0.3451, 0.369, 0.4023, 0.4356, 0.4688, 0.5042],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_3_scythe_resction_dm",
+      name: "Mid-air Attack Stage 3 Scythe: Resction DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3769, 0.4078, 0.4387, 0.4819, 0.5128, 0.5484, 0.5978, 0.6473, 0.6967, 0.7492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_3_scythe_resction_dm_1",
+      name: "Mid-air Attack Stage 3 Scythe: Resction DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3769, 0.4078, 0.4387, 0.4819, 0.5128, 0.5484, 0.5978, 0.6473, 0.6967, 0.7492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_attack_stage_4_dmg",
+      name: "Mid-air Attack Stage 4 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_dodgeCounter_ground_dodge_counter_dmg_hit_1",
+      name: "Ground Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6333, 0.6852, 0.7372, 0.8099, 0.8618, 0.9215, 1.0046, 1.0877, 1.1707, 1.259],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_dodgeCounter_ground_dodge_counter_dmg_hit_2",
+      name: "Ground Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6333, 0.6852, 0.7372, 0.8099, 0.8618, 0.9215, 1.0046, 1.0877, 1.1707, 1.259],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_plungingAttack_midair_dodge_counter_dmg",
+      name: "Mid-air Dodge Counter DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.292, 1.398, 1.5039, 1.6523, 1.7582, 1.88, 2.0495, 2.2191, 2.3886, 2.5687],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceSkill_golden_reflux_dmg",
+      name: "Golden Reflux DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.012, 1.095, 1.178, 1.2942, 1.3772, 1.4726, 1.6054, 1.7382, 1.8709, 2.012],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceSkill_aureole_of_execution_ring_dmg_hit_1",
+      name: "Aureole of Execution: Ring DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1336, 0.1446, 0.1555, 0.1709, 0.1818, 0.1944, 0.212, 0.2295, 0.247, 0.2656],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceSkill_aureole_of_execution_ring_dmg_hit_2",
+      name: "Aureole of Execution: Ring DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4453, 0.4818, 0.5184, 0.5695, 0.606, 0.648, 0.7064, 0.7648, 0.8232, 0.8853],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceSkill_aureole_of_execution_breach_dmg",
+      name: "Aureole of Execution: Breach DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4824, 0.522, 0.5615, 0.6169, 0.6565, 0.702, 0.7653, 0.8285, 0.8918, 0.9591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceSkill_aureole_of_execution_glare_dmg",
+      name: "Aureole of Execution: Glare DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.7812, 1.9272, 2.0733, 2.2777, 2.4238, 2.5918, 2.8254, 3.0591, 3.2928, 3.5411],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceSkill_basic_attack_golden_impale_dmg",
+      name: "Basic Attack - Golden Impale DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.782, 0.8462, 0.9103, 1.0001, 1.0642, 1.1379, 1.2405, 1.3431, 1.4457, 1.5547],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceSkill_ichor_deposit_dmg",
+      name: "Ichor Deposit DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7719, 0.8352, 0.8984, 0.9871, 1.0503, 1.1231, 1.2244, 1.3256, 1.4269, 1.5345],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceLiberation_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.75, 4.0575, 4.365, 4.7955, 5.103, 5.4567, 5.9487, 6.4407, 6.9327, 7.4554],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceLiberation_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.25, 0.2705, 0.291, 0.3197, 0.3402, 0.3638, 0.3966, 0.4294, 0.4622, 0.4971],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_resonanceLiberation_resonance_energy_cost",
+      name: "Resonance Energy Cost",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_forteCircuit_gavel_of_earthshaker_dmg",
+      name: "Gavel of Earthshaker DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5437, 1.6703, 1.7968, 1.9741, 2.1006, 2.2462, 2.4487, 2.6512, 2.8538, 3.069],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_forteCircuit_ichor_blade_dmg_per_015s",
+      name: "Ichor Blade DMG (per 0.15s)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "LuukHerssen_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3655, 0.3955, 0.4255, 0.4675, 0.4974, 0.5319, 0.5798, 0.6278, 0.6757, 0.7267],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "LuukHerssen_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillDeal Spectro DMG equal to 500% of Luuk Herssen's ATK.",
+    },
+    {
+      id: "LuukHerssen_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Luuk Herssen Pulses Under the SnowWhen Resonators in the team directly damage and defeat targets, if the targets are affected by Tune Strain - Interfered:\n- If Luuk Herssen has no Perpetuating Daytime, gain stacks of Perpetuating Daytime equal to the stacks of Tune Strain - Interfered.",
+    },
+    {
+      id: "LuukHerssen_passive_2",
+      name: "Passive 2",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- If Luuk Herssen already has Perpetuating Daytime, and the target's stacks of Tune Strain - Interfered exceed the current stacks of Perpetuating Daytime, increase Perpetuating Daytime's stacks to match the target's Tune Strain - Interfered stacks.",
+    },
+    {
+      id: "LuukHerssen_passive_3",
+      name: "Perpetuating",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Perpetuating Daytime\n- When Resonators in the team casts Tune Break, if the target is affected by Tune Strain - Shifting,  Luuk Herssen loses all stacks of Perpetuating Daytime, then apply equal stacks of Tune Strain - Interfered on the target, up to the target's current Tune Strain - Interfered stack cap.",
+    },
+    {
+      id: "LuukHerssen_passive_4",
+      name: "Passive 4",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Cooldown: 1s.",
+    },
+    {
+      id: "LuukHerssen_passive_5",
+      name: "Luuk",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Luuk Herssen loses all stacks of Perpetuating Daytime and will not be able to obtain any new stacks when knocked out.",
+    },
+    {
+      id: "LuukHerssen_passive_6",
+      name: "Passive 6",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- Perpetuating Daytime stacks up to 2 times.Uncaused DiagnosisWhen Luuk Herssen's skills directly damage targets affected by Tune Strain - Interfered, every 10 points of Tune Break Boost he has Amplifies this instance of damage by 5%, up to 30%.",
+    },
+    {
+      id: "LuukHerssen_passive_7",
+      name: "After",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "After any nearby Resonator in the team inflicts Tune Strain - Shifting on the enemies or deals Tune Break DMG, Luuk Herssen's ATK increases by 25% for 20s.",
+    },
+    {
+      id: "LuukHerssen_s1",
+      name: "S1: Gold Kindled in Ash",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Luuk Herssen gains 150% Mid-air Attack DMG Bonus. The max stack limit of Dawnlit Keep is increased by 1. When in the Aureate Judge state, casting Resonance Skill Aureole of Execution grants 1  of Dawnlit Keep.",
+    },
+    {
+      id: "LuukHerssen_s2",
+      name: "S2: Avalanche Roaring in Eyes",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Rewritten in Winter's Margins is increased by 60%. This DMG Multiplier increase effect is stackable with that of Endnotes on the Endgame. Inherent Skill Uncaused Diagnosis is enhanced: When Luuk Herssen deals damage to targets inflicted with Tune Strain - Interfered, every 10 points of Tune Break Boost he has now Amplify this instance of damage by 10%. This effect now increases the DMG Amplification up to 60% instead of 30%.",
+    },
+    {
+      id: "LuukHerssen_s3",
+      name: "S3: Spine Tempered by Golden Rain",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of all forms of Resonance Skill Aureole of Execution are increased by 136% in the Aureate Judge state. Casting Aureole of Execution: Glare increases the DMG Multipliers of the next Mid-Attack - Gavel of Earthshaker and Ichor Deposit by 136%. Inherent Skill Pulses Under the Snow is enhanced: Perpetuating Daytime now stacks up to 4 times.",
+    },
+    {
+      id: "LuukHerssen_s4",
+      name: "S4: Pulse Thrumming Under Rime",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After a Resonator in the team deals Tune Break DMG, all Resonators in the team deal 20% more DMG for 20s. This effect is unstackable.",
+    },
+    {
+      id: "LuukHerssen_s5",
+      name: "S5: Through the Stillness of Snowstorm",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Intro Skill Before Injection of Dawn and Outro Skill Bow to the Last Light gain 80% DMG Bonus. Resonance Skill Golden Reflux has its DMG Multiplier increased by 50% and Cooldown reduced by 2s, and gains 1 more charge.",
+    },
+    {
+      id: "LuukHerssen_s6",
+      name: "S6: Dawn Unfurling over Frostlands",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When nearby Resonators in the team deal Tune Break DMG, all forms of Resonance Skill Aureole of Execution, Ichor Deposit, and Mid-air Attack - Gavel of Earthshaker deal 30% more DMG to the target for 25s. Each stack of Endnotes on the Endgame additionally grants Resonance Liberation Rewritten in Winter's Margins 40% DMG Bonus, up to 120%. When Luuk Herssen deals damage to targets inflicted with Tune Strain - Interfered, the stack count of Tune Strain - Interfered on the target is increased by 2. This effect ignores the max stack limit.",
+    },
+  ],
+  mechanics: [],
+}

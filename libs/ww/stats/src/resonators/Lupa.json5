@@ -1,0 +1,800 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Lupa | elemento Fusion | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Lupa",
+    name: "Lupa",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Broadblade",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 953, "20": 2478, "40": 4720, "50": 6158, "60": 7597, "70": 9035, "80": 10474, "90": 11912 },
+    atk: { "1": 31, "20": 80, "40": 156, "50": 205, "60": 254, "70": 304, "80": 345, "90": 387 },
+    def: { "1": 97, "20": 248, "40": 471, "50": 614, "60": 757, "70": 899, "80": 1042, "90": 1185 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Lupa_basicAttack_stage_1_dmg_hit_1",
+      name: "Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1133, 0.1226, 0.1319, 0.1449, 0.1542, 0.1649, 0.1797, 0.1946, 0.2094, 0.2252],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_1_dmg_hit_2",
+      name: "Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1133, 0.1226, 0.1319, 0.1449, 0.1542, 0.1649, 0.1797, 0.1946, 0.2094, 0.2252],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_1_dmg_hit_3",
+      name: "Stage 1 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2266, 0.2452, 0.2637, 0.2897, 0.3083, 0.3297, 0.3594, 0.3891, 0.4188, 0.4504],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4531, 0.4903, 0.5274, 0.5794, 0.6166, 0.6593, 0.7187, 0.7782, 0.8376, 0.9008],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_3_dmg_hit_1",
+      name: "Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3966, 0.4291, 0.4616, 0.5071, 0.5396, 0.577, 0.6291, 0.6811, 0.7331, 0.7884],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_3_dmg_hit_2",
+      name: "Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0661, 0.0716, 0.077, 0.0846, 0.09, 0.0962, 0.1049, 0.1136, 0.1222, 0.1314],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3716, 0.4021, 0.4325, 0.4752, 0.5056, 0.5407, 0.5894, 0.6382, 0.6869, 0.7387],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3716, 0.4021, 0.4325, 0.4752, 0.5056, 0.5407, 0.5894, 0.6382, 0.6869, 0.7387],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_stage_4_dmg_hit_3",
+      name: "Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2477, 0.2681, 0.2884, 0.3168, 0.3371, 0.3605, 0.393, 0.4255, 0.458, 0.4925],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_heavyAttack_heavy_attack_hit_1",
+      name: "Heavy Attack - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2835, 0.3068, 0.33, 0.3626, 0.3858, 0.4125, 0.4497, 0.4869, 0.5241, 0.5636],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_heavyAttack_heavy_attack_hit_2",
+      name: "Heavy Attack - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2835, 0.3068, 0.33, 0.3626, 0.3858, 0.4125, 0.4497, 0.4869, 0.5241, 0.5636],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_heavyAttack_heavy_attack_wolfs_gnawing_dmg_hit_1",
+      name: "Heavy Attack - Wolf's Gnawing DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2822, 0.3054, 0.3285, 0.3609, 0.3841, 0.4107, 0.4477, 0.4847, 0.5218, 0.5611],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_heavyAttack_heavy_attack_wolfs_gnawing_dmg_hit_2",
+      name: "Heavy Attack - Wolf's Gnawing DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2822, 0.3054, 0.3285, 0.3609, 0.3841, 0.4107, 0.4477, 0.4847, 0.5218, 0.5611],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_heavyAttack_heavy_attack_wolfs_claw_dmg_hit_1",
+      name: "Heavy Attack - Wolf's Claw DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3629, 0.3927, 0.4224, 0.4641, 0.4938, 0.5281, 0.5757, 0.6233, 0.6709, 0.7215],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_heavyAttack_heavy_attack_wolfs_claw_dmg_hit_2",
+      name: "Heavy Attack - Wolf's Claw DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0908, 0.0982, 0.1056, 0.1161, 0.1235, 0.1321, 0.144, 0.1559, 0.1678, 0.1804],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_heavyAttack_heavy_attack_wolfs_claw_dmg_hit_3",
+      name: "Heavy Attack - Wolf's Claw DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4839, 0.5235, 0.5632, 0.6188, 0.6584, 0.7041, 0.7675, 0.831, 0.8945, 0.9619],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_midair_attack_stage_1_dmg",
+      name: "Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3859, 0.4176, 0.4492, 0.4935, 0.5252, 0.5616, 0.6122, 0.6628, 0.7135, 0.7673],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_midair_attack_stage_2_dmg_hit_1",
+      name: "Mid-air Attack Stage 2 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3885, 0.4204, 0.4522, 0.4968, 0.5287, 0.5653, 0.6162, 0.6672, 0.7182, 0.7723],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_midair_attack_stage_2_dmg_hit_2",
+      name: "Mid-air Attack Stage 2 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0972, 0.1051, 0.1131, 0.1242, 0.1322, 0.1414, 0.1541, 0.1668, 0.1796, 0.1931],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_midair_attack_stage_3_dmg_hit_1",
+      name: "Mid-air Attack Stage 3 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1433, 0.155, 0.1668, 0.1832, 0.195, 0.2085, 0.2272, 0.246, 0.2648, 0.2848],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_midair_attack_stage_3_dmg_hit_2",
+      name: "Mid-air Attack Stage 3 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1433, 0.155, 0.1668, 0.1832, 0.195, 0.2085, 0.2272, 0.246, 0.2648, 0.2848],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_midair_attack_firestrike_dmg_hit_1",
+      name: "Mid-air Attack - Firestrike DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1433, 0.155, 0.1668, 0.1832, 0.195, 0.2085, 0.2272, 0.246, 0.2648, 0.2848],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_midair_attack_firestrike_dmg_hit_2",
+      name: "Mid-air Attack - Firestrike DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1433, 0.155, 0.1668, 0.1832, 0.195, 0.2085, 0.2272, 0.246, 0.2648, 0.2848],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_plunging_attack_dmg_hit_1",
+      name: "Plunging Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1318, 0.1426, 0.1534, 0.1685, 0.1793, 0.1918, 0.209, 0.2263, 0.2436, 0.262],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_plunging_attack_dmg_hit_2",
+      name: "Plunging Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2635, 0.2852, 0.3068, 0.337, 0.3586, 0.3835, 0.418, 0.4526, 0.4872, 0.5239],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_plungingAttack_plunging_attack_dmg_hit_3",
+      name: "Plunging Attack DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1318, 0.1426, 0.1534, 0.1685, 0.1793, 0.1918, 0.209, 0.2263, 0.2436, 0.262],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_basic_attack_starfall_dmg_hit_1",
+      name: "Basic Attack - Starfall DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0637, 0.0689, 0.0741, 0.0814, 0.0866, 0.0926, 0.101, 0.1093, 0.1177, 0.1265],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_basicAttack_basic_attack_starfall_dmg_hit_2",
+      name: "Basic Attack - Starfall DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5939, 0.6426, 0.6912, 0.7594, 0.8081, 0.8641, 0.942, 1.0199, 1.0978, 1.1806],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.172, 0.1861, 0.2002, 0.2199, 0.234, 0.2502, 0.2728, 0.2953, 0.3179, 0.3418],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6877, 0.7441, 0.8005, 0.8794, 0.9358, 1.0006, 1.0909, 1.1811, 1.2713, 1.3672],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_resonanceSkill_skill_damage",
+      name: "Skill Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7081, 0.7662, 0.8242, 0.9055, 0.9636, 1.0303, 1.1232, 1.2161, 1.309, 1.4077],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_resonanceSkill_feral_fang_dmg",
+      name: "Feral Fang DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5774, 1.7068, 1.8361, 2.0172, 2.1466, 2.2953, 2.5023, 2.7092, 2.9162, 3.1361],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_resonanceLiberation_skill_damage",
+      name: "Skill Damage",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.1268, 4.4652, 4.8036, 5.2773, 5.6157, 6.0048, 6.5463, 7.0877, 7.6291, 8.2044],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_resonanceLiberation_foebreaker_dmg",
+      name: "Foebreaker DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5314, 1.657, 1.7826, 1.9584, 2.084, 2.2284, 2.4293, 2.6302, 2.8311, 3.0446],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_dance_with_the_wolf_dmg_hit_1",
+      name: "Dance With the Wolf DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2818, 0.3049, 0.328, 0.3604, 0.3835, 0.41, 0.447, 0.484, 0.5209, 0.5602],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_dance_with_the_wolf_dmg_hit_2",
+      name: "Dance With the Wolf DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2114, 0.2287, 0.246, 0.2703, 0.2876, 0.3075, 0.3353, 0.363, 0.3907, 0.4202],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_dance_with_the_wolf_dmg_hit_3",
+      name: "Dance With the Wolf DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.6906, 1.8293, 1.9679, 2.162, 2.3006, 2.46, 2.6818, 2.9036, 3.1254, 3.3611],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_dance_with_the_wolf_climax_dmg_hit_1",
+      name: "Dance With the Wolf: Climax DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3804, 0.4116, 0.4428, 0.4865, 0.5177, 0.5535, 0.6034, 0.6534, 0.7033, 0.7563],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_dance_with_the_wolf_climax_dmg_hit_2",
+      name: "Dance With the Wolf: Climax DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2853, 0.3087, 0.3321, 0.3649, 0.3883, 0.4152, 0.4526, 0.49, 0.5275, 0.5672],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_dance_with_the_wolf_climax_dmg_hit_3",
+      name: "Dance With the Wolf: Climax DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.2823, 2.4695, 2.6566, 2.9186, 3.1058, 3.321, 3.6204, 3.9199, 4.2193, 4.5375],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_set_the_arena_ablaze_dmg_hit_1",
+      name: "Set the Arena Ablaze DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2131, 0.2305, 0.248, 0.2725, 0.2899, 0.31, 0.338, 0.3659, 0.3938, 0.4235],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_forteCircuit_set_the_arena_ablaze_dmg_hit_2",
+      name: "Set the Arena Ablaze DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8521, 0.922, 0.9918, 1.0897, 1.1595, 1.2399, 1.3517, 1.4634, 1.5752, 1.694],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_introSkill_skill_damage_hit_1",
+      name: "Skill Damage - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1497, 0.162, 0.1743, 0.1915, 0.2037, 0.2179, 0.2375, 0.2571, 0.2768, 0.2976],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_introSkill_skill_damage_hit_2",
+      name: "Skill Damage - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2121, 0.2295, 0.2469, 0.2712, 0.2886, 0.3086, 0.3364, 0.3643, 0.3921, 0.4216],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_introSkill_nowhere_to_run_dmg_hit_1",
+      name: "Nowhere to Run! DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.9916, 4.319, 4.6463, 5.1045, 5.4318, 5.8082, 6.3319, 6.8556, 7.3793, 7.9357],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lupa_introSkill_nowhere_to_run_dmg_hit_2",
+      name: "Nowhere to Run! DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2495, 0.27, 0.2904, 0.3191, 0.3395, 0.3631, 0.3958, 0.4285, 0.4613, 0.496],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Lupa_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator will have their Fusion DMG Amplified by 20% and Basic Attack DMG Amplified by 25% for 14s or until the Resonator is switched out.",
+    },
+    {
+      id: "Lupa_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Lupa Remember My NameAfter dashing for 2.5s, Lupa enters Sprint state.",
+    },
+    {
+      id: "Lupa_passive_2",
+      name: "The",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "The next Basic Attack is replaced with Basic Attack - Starfall.",
+    },
+    {
+      id: "Lupa_passive_3",
+      name: "Gain",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Gain increased resistance to interruptions while casting Heavy Attack - Wolf's Gnawing, Heavy Attack - Wolf's Claw, and Mid-air Attack - Firestrike.Applause of VictoryDefeating a marked target resets the cooldown of Resonance Skill Shewolf's Hunt.",
+    },
+    {
+      id: "Lupa_passive_4",
+      name: "Resonance",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Resonance Liberation - Glory\nCasting Resonance Liberation Fire-Kissed Glory grants Glory.",
+    },
+    {
+      id: "Lupa_passive_5",
+      name: "Within",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Within 35s:\nAttacks of all Resonators in the team ignore 3% of the target's Fusion RES.",
+    },
+    {
+      id: "Lupa_passive_6",
+      name: "For",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "For each Fusion Resonator in the team other than Lupa, this effect increases by 3%, up to the maximum of 9%.",
+    },
+    {
+      id: "Lupa_passive_7",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When there are 3 Fusion Resonators in the team, Resonators' attacks further ignore 6% Fusion RES.",
+    },
+    {
+      id: "Lupa_s1",
+      name: "S1: Behold the Nameless One",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Performing Resonance Liberation Fire-Kissed Glory recovers 10 Concerto Energy for Lupa and increases Lupa's Crit. Rate by 20% for 10s. Gain immunity to interruption when casting Dance With the Wolf: Climax.",
+    },
+    {
+      id: "Lupa_s2",
+      name: "S2: Every Ground, Her Hunting Field",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Performing Fire-Kissed Glory, Heavy Attack - Wolf's Gnawing,  Heavy Attack - Wolf's Claw, or Mid-air Attack - Firestrike gives 20% Fusion DMG Bonus to all Resonators in the team for 30s, stacking up to 2 times.",
+    },
+    {
+      id: "Lupa_s3",
+      name: "S3: Wolflame Howls in Her Wake",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Intro Skill Nowhere to Run! increases by 100%. - The Pack Hunt effect of Resonance Liberation now no longer requires 3 Fusion Resonators. - The Glory effect of Resonance Liberation is now modified as: Casting Resonance Liberation Fire-Kissed Glory additionally grants Glory: Resonators in the team ignore 15% Fusion RES of targets for 35s.",
+    },
+    {
+      id: "Lupa_s4",
+      name: "S4: High and Aflame Is Her Banner",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Dance With the Wolf: Climax increases by 125%.",
+    },
+    {
+      id: "Lupa_s5",
+      name: "S5: Embrace the Thunderous Triumph",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Performing Intro Skill Try Focusing, Eh? or Nowhere to Run! gives 15% Resonance Liberation DMG Bonus for 10s.",
+    },
+    {
+      id: "Lupa_s6",
+      name: "S6: To the Brightest Flaming Star",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "- The damage dealt by Forte Circuit Dance With the Wolf: Climax, Resonance Liberation Fire-Kissed Glory, and Intro Skill Nowhere to Run! ignores 30% of the target's DEF. - Resonance Skill Feral Fang restores 100 points of Wolflame on hit, triggered once per 20s. - Forte Circuit Dance With the Wolf is replaced with Dance With the Wolf: Climax. Dance With the Wolf: Climax can be performed when Lupa is not in Burning Matchpoint state. - Casting Intro Skill Nowhere to Run! no longer ends Pack Hunt and Glory.",
+    },
+  ],
+  mechanics: [],
+}

@@ -1,0 +1,901 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Cartethyia | elemento Aero | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Cartethyia",
+    name: "Cartethyia",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Aero",
+    weaponType: "Sword",
+    tags: ["aero"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 1184, "20": 3079, "40": 5864, "50": 7651, "60": 9438, "70": 11225, "80": 13012, "90": 14800 },
+    atk: { "1": 25, "20": 65, "40": 125, "50": 165, "60": 205, "70": 245, "80": 278, "90": 312 },
+    def: { "1": 50, "20": 128, "40": 243, "50": 316, "60": 390, "70": 463, "80": 537, "90": 611 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Cartethyia_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0241, 0.026, 0.028, 0.0308, 0.0327, 0.035, 0.0382, 0.0413, 0.0445, 0.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_2_dmg_hit_1",
+      name: "Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0198, 0.0214, 0.0231, 0.0253, 0.027, 0.0288, 0.0314, 0.034, 0.0366, 0.0394],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_2_dmg_hit_2",
+      name: "Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0198, 0.0214, 0.0231, 0.0253, 0.027, 0.0288, 0.0314, 0.034, 0.0366, 0.0394],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_2_dmg_hit_3",
+      name: "Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0264, 0.0286, 0.0307, 0.0338, 0.0359, 0.0384, 0.0419, 0.0453, 0.0488, 0.0525],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_3_dmg_hit_1",
+      name: "Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0215, 0.0233, 0.0251, 0.0275, 0.0293, 0.0313, 0.0341, 0.037, 0.0398, 0.0428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_3_dmg_hit_2",
+      name: "Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0215, 0.0233, 0.0251, 0.0275, 0.0293, 0.0313, 0.0341, 0.037, 0.0398, 0.0428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_3_dmg_hit_3",
+      name: "Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0215, 0.0233, 0.0251, 0.0275, 0.0293, 0.0313, 0.0341, 0.037, 0.0398, 0.0428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_3_dmg_hit_4",
+      name: "Stage 3 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0215, 0.0233, 0.0251, 0.0275, 0.0293, 0.0313, 0.0341, 0.037, 0.0398, 0.0428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0127, 0.0137, 0.0148, 0.0162, 0.0173, 0.0184, 0.0201, 0.0218, 0.0234, 0.0252],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.038, 0.0411, 0.0442, 0.0485, 0.0517, 0.0552, 0.0602, 0.0652, 0.0702, 0.0754],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0345, 0.0373, 0.0401, 0.0441, 0.0469, 0.0502, 0.0547, 0.0592, 0.0637, 0.0685],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0345, 0.0373, 0.0401, 0.0441, 0.0469, 0.0502, 0.0547, 0.0592, 0.0637, 0.0685],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_3",
+      name: "Dodge Counter DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0345, 0.0373, 0.0401, 0.0441, 0.0469, 0.0502, 0.0547, 0.0592, 0.0637, 0.0685],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_4",
+      name: "Dodge Counter DMG - Hit 4",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0345, 0.0373, 0.0401, 0.0441, 0.0469, 0.0502, 0.0547, 0.0592, 0.0637, 0.0685],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_heavyAttack_heavy_attack_dmg_hit_1",
+      name: "Heavy Attack DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0105, 0.0114, 0.0122, 0.0134, 0.0143, 0.0153, 0.0166, 0.018, 0.0194, 0.0208],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_heavyAttack_heavy_attack_dmg_hit_2",
+      name: "Heavy Attack DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0314, 0.034, 0.0365, 0.0401, 0.0427, 0.0457, 0.0498, 0.0539, 0.058, 0.0624],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack",
+      name: "Mid-air Attack",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0284, 0.0308, 0.0331, 0.0364, 0.0387, 0.0414, 0.0451, 0.0488, 0.0525, 0.0565],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_1_sword_shadow_recalled",
+      name: "Mid-air Attack 1 Sword Shadow Recalled",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0284, 0.0308, 0.0331, 0.0364, 0.0387, 0.0414, 0.0451, 0.0488, 0.0525, 0.0565],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_2_sword_shadows_recalled",
+      name: "Mid-air Attack 2 Sword Shadows Recalled",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0166, 0.018, 0.0193, 0.0212, 0.0226, 0.0241, 0.0263, 0.0285, 0.0307, 0.033],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_3_sword_shadows_recalled",
+      name: "Mid-air Attack 3 Sword Shadows Recalled",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0568, 0.0615, 0.0661, 0.0727, 0.0773, 0.0827, 0.0901, 0.0976, 0.105, 0.1129],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_resonanceSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0347, 0.0375, 0.0404, 0.0444, 0.0472, 0.0505, 0.055, 0.0596, 0.0641, 0.0689],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_resonanceSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0446, 0.0483, 0.0519, 0.057, 0.0607, 0.0649, 0.0707, 0.0766, 0.0824, 0.0886],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_resonanceLiberation_blade_of_howling_squall_dmg",
+      name: "Blade of Howling Squall DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.066, 0.0714, 0.0768, 0.0844, 0.0898, 0.0961, 0.1047, 0.1134, 0.122, 0.1312],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_1_dmg",
+      name: "Basic Attack Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0327, 0.0354, 0.038, 0.0418, 0.0445, 0.0475, 0.0518, 0.0561, 0.0604, 0.0649],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0183, 0.0198, 0.0213, 0.0233, 0.0248, 0.0266, 0.0289, 0.0313, 0.0337, 0.0363],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0092, 0.0099, 0.0107, 0.0117, 0.0124, 0.0133, 0.0145, 0.0157, 0.0169, 0.0182],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_2_dmg_hit_3",
+      name: "Basic Attack Stage 2 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0092, 0.0099, 0.0107, 0.0117, 0.0124, 0.0133, 0.0145, 0.0157, 0.0169, 0.0182],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_2_dmg_hit_4",
+      name: "Basic Attack Stage 2 DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0092, 0.0099, 0.0107, 0.0117, 0.0124, 0.0133, 0.0145, 0.0157, 0.0169, 0.0182],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_3_dmg_hit_1",
+      name: "Basic Attack Stage 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0108, 0.0116, 0.0125, 0.0137, 0.0146, 0.0156, 0.017, 0.0184, 0.0198, 0.0213],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_3_dmg_hit_2",
+      name: "Basic Attack Stage 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0108, 0.0116, 0.0125, 0.0137, 0.0146, 0.0156, 0.017, 0.0184, 0.0198, 0.0213],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_3_dmg_hit_3",
+      name: "Basic Attack Stage 3 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0108, 0.0116, 0.0125, 0.0137, 0.0146, 0.0156, 0.017, 0.0184, 0.0198, 0.0213],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_3_dmg_hit_4",
+      name: "Basic Attack Stage 3 DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0215, 0.0232, 0.025, 0.0274, 0.0292, 0.0312, 0.034, 0.0368, 0.0396, 0.0426],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_4_dmg",
+      name: "Basic Attack Stage 4 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0138, 0.0149, 0.0161, 0.0177, 0.0188, 0.0201, 0.0219, 0.0237, 0.0255, 0.0274],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_5_dmg_hit_1",
+      name: "Basic Attack Stage 5 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0363, 0.0392, 0.0422, 0.0463, 0.0493, 0.0527, 0.0575, 0.0622, 0.067, 0.072],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_basic_attack_stage_5_dmg_hit_2",
+      name: "Basic Attack Stage 5 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1449, 0.1567, 0.1686, 0.1852, 0.1971, 0.2108, 0.2298, 0.2488, 0.2678, 0.288],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_1_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0161, 0.0174, 0.0187, 0.0206, 0.0219, 0.0234, 0.0255, 0.0276, 0.0297, 0.032],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_2_1",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0161, 0.0174, 0.0187, 0.0206, 0.0219, 0.0234, 0.0255, 0.0276, 0.0297, 0.032],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_3_1",
+      name: "Dodge Counter DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0161, 0.0174, 0.0187, 0.0206, 0.0219, 0.0234, 0.0255, 0.0276, 0.0297, 0.032],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_dodgeCounter_dodge_counter_dmg_hit_4_1",
+      name: "Dodge Counter DMG - Hit 4",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0322, 0.0348, 0.0374, 0.0411, 0.0438, 0.0468, 0.051, 0.0552, 0.0594, 0.0639],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_upward_cut_dmg",
+      name: "Upward Cut DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0229, 0.0248, 0.0266, 0.0292, 0.0311, 0.0333, 0.0363, 0.0393, 0.0423, 0.0454],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_heavyAttack_heavy_attack_dmg_hit_1_1",
+      name: "Heavy Attack DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0215, 0.0233, 0.0251, 0.0275, 0.0293, 0.0313, 0.0341, 0.0369, 0.0398, 0.0428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_heavyAttack_heavy_attack_dmg_hit_2_1",
+      name: "Heavy Attack DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0502, 0.0543, 0.0584, 0.0641, 0.0683, 0.073, 0.0796, 0.0861, 0.0927, 0.0997],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_heavyAttack_enhanced_heavy_attack_dmg_hit_1",
+      name: "Enhanced Heavy Attack DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0391, 0.0423, 0.0455, 0.05, 0.0532, 0.0569, 0.0621, 0.0672, 0.0723, 0.0778],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_heavyAttack_enhanced_heavy_attack_dmg_hit_2",
+      name: "Enhanced Heavy Attack DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0196, 0.0212, 0.0228, 0.025, 0.0266, 0.0285, 0.0311, 0.0336, 0.0362, 0.0389],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_1_dmg_hit_1",
+      name: "Mid-air Attack 1 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.015, 0.0163, 0.0175, 0.0192, 0.0205, 0.0219, 0.0238, 0.0258, 0.0278, 0.0299],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_1_dmg_hit_2",
+      name: "Mid-air Attack 1 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.015, 0.0163, 0.0175, 0.0192, 0.0205, 0.0219, 0.0238, 0.0258, 0.0278, 0.0299],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_1_dmg_hit_3",
+      name: "Mid-air Attack 1 DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0155, 0.0168, 0.018, 0.0198, 0.0211, 0.0225, 0.0246, 0.0266, 0.0286, 0.0308],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_2_dmg_hit_1",
+      name: "Mid-air Attack 2 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0372, 0.0402, 0.0433, 0.0475, 0.0506, 0.0541, 0.0589, 0.0638, 0.0687, 0.0739],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_2_dmg_hit_2",
+      name: "Mid-air Attack 2 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0372, 0.0402, 0.0433, 0.0475, 0.0506, 0.0541, 0.0589, 0.0638, 0.0687, 0.0739],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_2_dmg_hit_3",
+      name: "Mid-air Attack 2 DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0743, 0.0804, 0.0865, 0.095, 0.1011, 0.1081, 0.1178, 0.1276, 0.1373, 0.1477],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_plungingAttack_midair_attack_3_dmg",
+      name: "Mid-air Attack 3 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0111, 0.012, 0.0129, 0.0142, 0.0151, 0.0161, 0.0176, 0.019, 0.0205, 0.022],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_sword_to_answer_waves_call_dmg_hit_1",
+      name: "Sword to Answer Waves' Call DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0094, 0.0102, 0.0109, 0.012, 0.0128, 0.0137, 0.0149, 0.0161, 0.0173, 0.0186],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_sword_to_answer_waves_call_dmg_hit_2",
+      name: "Sword to Answer Waves' Call DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0873, 0.0945, 0.1017, 0.1117, 0.1188, 0.1271, 0.1385, 0.15, 0.1614, 0.1736],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_may_tempest_break_the_tides_dmg_hit_1",
+      name: "May Tempest Break the Tides DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0094, 0.0102, 0.0109, 0.012, 0.0128, 0.0137, 0.0149, 0.0161, 0.0173, 0.0186],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_forteCircuit_may_tempest_break_the_tides_dmg_hit_2",
+      name: "May Tempest Break the Tides DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0354, 0.0383, 0.0412, 0.0452, 0.0481, 0.0515, 0.0561, 0.0607, 0.0654, 0.0703],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_introSkill_sword_to_mark_tides_trace_dmg_hit_1",
+      name: "Sword to Mark Tide's Trace DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0105, 0.0114, 0.0122, 0.0134, 0.0143, 0.0153, 0.0166, 0.018, 0.0194, 0.0208],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_introSkill_sword_to_mark_tides_trace_dmg_hit_2",
+      name: "Sword to Mark Tide's Trace DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0314, 0.034, 0.0365, 0.0401, 0.0427, 0.0457, 0.0498, 0.0539, 0.058, 0.0624],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_introSkill_sword_to_call_for_freedom_dmg_hit_1",
+      name: "Sword to Call for Freedom DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0215, 0.0233, 0.0251, 0.0275, 0.0293, 0.0313, 0.0341, 0.0369, 0.0398, 0.0428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cartethyia_introSkill_sword_to_call_for_freedom_dmg_hit_2",
+      name: "Sword to Call for Freedom DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0502, 0.0543, 0.0584, 0.0641, 0.0683, 0.073, 0.0796, 0.0861, 0.0927, 0.0997],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Cartethyia_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillAero DMG dealt by the active Resonator in the team other than Cartethyia/Fleurdelys to targets with Negative Statuses is Amplified by 17.5% for 20s.",
+    },
+    {
+      id: "Cartethyia_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Stat", id: "healing_bonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "> Cartethyia A Heart's Truest WishesThe healing received by all Resonators other than Cartethyia/Fleurdelys in the team is increased by 20% and their resistance to interruption is enhanced.",
+    },
+    {
+      id: "Cartethyia_passive_2",
+      name: "If",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "If Rover: Aero is in the team, Rover: Aero additionally restores 25 Windstrings upon casting Omega Storm.Wind's Indelible ImprintTargets with 1 to 3 stacks of Aero Erosion take 30% more DMG from Cartethyia and Fleurdelys.",
+    },
+    {
+      id: "Cartethyia_passive_3",
+      name: "Targets",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Targets with more than 3 stacks of Aero Erosion additionally take 10% more DMG from Cartethyia and Fleurdelys for each stack of Aero Erosion they have, up to 3 stacks.",
+    },
+    {
+      id: "Cartethyia_s1",
+      name: "S1: Crown Destined by Fate",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Gain Zeal that lasts for 10s when Cartethyia's or Fleurdelys's attacks directly damage and defeat targets inflicted with Aero Erosion. In the Zeal state, upon defeating enemies, the next move that directly damages targets raises the Aero Erosion stacks on the targets to the highest count among the targets defeated. This will not exceed the current max Aero Erosion stack limit. Zeal is removed afterward and enters a 1s cooldown. When Fleurdelys's Conviction hits 30/60/90/120, Fleurdelys's Crit. DMG is increased by 25% for 15s, up to 4 stacks. The duration of this effect does not reset upon gaining new stacks. After casting Resonance Liberation - Blade of Howling Squall, the increased Crit. DMG is removed.",
+    },
+    {
+      id: "Cartethyia_s2",
+      name: "S2: Blade Broken by Tempest",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Liberation - A Knight's Heartfelt Prayers increases the max stack limit of Aero Erosion on targets within a certain range by 3 . The next attack that directly damages the target inflicts 3  of Aero Erosion on all targets within a certain range and immediately triggers the Aero Erosion DMG on the targets hit once without consuming the Aero Erosion stacks. The DMG Multipliers of Cartethyia's Basic Attack, Heavy Attack, Dodge Counter, and Intro Skill are increased by 50% and the DMG Multiplier of her Mid-air Attack is increased by 200%. After casting Mid-air Attack - Cartethyia, every 1 type of Sword Shadow recalled reduces the cooldown of Resonance Skill - Cartethyia by 1s.",
+    },
+    {
+      id: "Cartethyia_s3",
+      name: "S3: Prisoner Hanged in the Tower",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Basic Attack - Fleurdelys Stage 5, Mid-air Attack - Fleurdelys Stage 2, Enhanced Heavy Attack - Fleurdelys, and Resonance Skill - May Tempest Break the Tides now inflict 2  of Aero Erosion on the targets hit. The DMG Multiplier of Resonance Liberation - Blade of Howling Squall is increased by 100%.",
+    },
+    {
+      id: "Cartethyia_s4",
+      name: "S4: Sacrifice Made for Salvation",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After Resonators in the team inflict Havoc Bane, Fusion Burst, Spectro Frazzle, Electro Flare, Glacio Chafe, orAero Erosion, all Resonators in the team gain 20% DMG Bonus for all Attributes for 20s.",
+    },
+    {
+      id: "Cartethyia_s5",
+      name: "S5: Hope Reshaped in Storms",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Cartethyia or Fleurdelys takes a fatal blow, they will not be downed by this instance of damage, but instead gain a Shield equal to 20% of Cartethyia's Max HP for 10s. This effect can be triggered once every 10 min. The HP cost for casting Resonance Liberation - A Knight's Heartfelt Prayers is reduced to 25% of Max HP.",
+    },
+    {
+      id: "Cartethyia_s6",
+      name: "S6: Freedom Found in Storm's Wake",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After casting Resonance Liberation - Blade of Howling Squall, raise the Aero Erosion stacks on the target hit to max. Casting Resonance Liberation - Blade of Howling Squall no longer removes the Aero Erosion stacks on the target. Within 30s after casting Intro Skill - Sword to Mark Tide's Trace, Intro Skill - Sword to Call for Freedom, Resonance Liberation - A Knight's Heartfelt Prayers, and Resonance Liberation - Blade of Howling Squall, when any Resonator in the team inflicts Aero Erosion on the targets with max stacks of Aero Erosion, immediately trigger the Aero Erosion DMG once. The targets take 40% more DMG from Fleurdelys.",
+    },
+  ],
+  mechanics: [],
+}

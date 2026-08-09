@@ -1,0 +1,818 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Hiyuki | elemento Glacio | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Hiyuki",
+    name: "Hiyuki",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Glacio",
+    weaponType: "Sword",
+    tags: ["glacio"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 824, "20": 2143, "40": 4081, "50": 5325, "60": 6568, "70": 7812, "80": 9056, "90": 10300 },
+    atk: { "1": 37, "20": 96, "40": 186, "50": 245, "60": 304, "70": 363, "80": 412, "90": 462 },
+    def: { "1": 91, "20": 233, "40": 442, "50": 576, "60": 710, "70": 844, "80": 978, "90": 1112 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Hiyuki_basicAttack_basic_attack_present_self_stage_1_dmg_hi",
+      name: "Basic Attack - Present Self Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1897, 0.2053, 0.2209, 0.2426, 0.2582, 0.2761, 0.301, 0.3259, 0.3507, 0.3772],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_present_self_stage_1_dmg_hi_1",
+      name: "Basic Attack - Present Self Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1897, 0.2053, 0.2209, 0.2426, 0.2582, 0.2761, 0.301, 0.3259, 0.3507, 0.3772],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_present_self_stage_2_dmg",
+      name: "Basic Attack - Present Self Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.454, 0.4912, 0.5284, 0.5806, 0.6178, 0.6606, 0.7202, 0.7797, 0.8393, 0.9025],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_present_self_stage_3_dmg_hi",
+      name: "Basic Attack - Present Self Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0248, 0.0268, 0.0288, 0.0317, 0.0337, 0.036, 0.0393, 0.0425, 0.0458, 0.0492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_present_self_stage_3_dmg_hi_1",
+      name: "Basic Attack - Present Self Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4948, 0.5354, 0.576, 0.6327, 0.6733, 0.72, 0.7849, 0.8498, 0.9147, 0.9837],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_heavyAttack_heavy_attack_frost_splinter_present_self",
+      name: "Heavy Attack - Frost Splinter: Present Self DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3989, 0.4316, 0.4643, 0.5101, 0.5428, 0.5805, 0.6328, 0.6851, 0.7375, 0.7931],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_heavyAttack_heavy_attack_frost_splinter_present_self_1",
+      name: "Heavy Attack - Frost Splinter: Present Self DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7978, 0.8632, 0.9286, 1.0202, 1.0856, 1.1609, 1.2655, 1.3702, 1.4749, 1.5861],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_present_self_dmg",
+      name: "Mid-air Attack - Present Self DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6447, 0.6976, 0.7505, 0.8245, 0.8774, 0.9382, 1.0227, 1.1073, 1.1919, 1.2818],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_dodgeCounter_dodge_counter_present_self_dmg",
+      name: "Dodge Counter - Present Self DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.874, 0.9457, 1.0173, 1.1177, 1.1893, 1.2717, 1.3864, 1.5011, 1.6157, 1.7375],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_1_dm",
+      name: "Basic Attack - Foreclaimed Self Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2478, 0.2682, 0.2885, 0.3169, 0.3373, 0.3606, 0.3931, 0.4256, 0.4582, 0.4927],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_2_dm",
+      name: "Basic Attack - Foreclaimed Self Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2013, 0.2178, 0.2343, 0.2574, 0.2739, 0.2929, 0.3193, 0.3457, 0.3721, 0.4002],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_2_dm_1",
+      name: "Basic Attack - Foreclaimed Self Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2013, 0.2178, 0.2343, 0.2574, 0.2739, 0.2929, 0.3193, 0.3457, 0.3721, 0.4002],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_3_dm",
+      name: "Basic Attack - Foreclaimed Self Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1266, 0.137, 0.1473, 0.1619, 0.1722, 0.1842, 0.2008, 0.2174, 0.234, 0.2516],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_3_dm_1",
+      name: "Basic Attack - Foreclaimed Self Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3374, 0.3651, 0.3928, 0.4315, 0.4592, 0.491, 0.5353, 0.5795, 0.6238, 0.6708],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_4_dm",
+      name: "Basic Attack - Foreclaimed Self Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1505, 0.1629, 0.1752, 0.1925, 0.2049, 0.219, 0.2388, 0.2585, 0.2783, 0.2993],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_4_dm_1",
+      name: "Basic Attack - Foreclaimed Self Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1505, 0.1629, 0.1752, 0.1925, 0.2049, 0.219, 0.2388, 0.2585, 0.2783, 0.2993],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_4_dm_1_2",
+      name: "Basic Attack - Foreclaimed Self Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1505, 0.1629, 0.1752, 0.1925, 0.2049, 0.219, 0.2388, 0.2585, 0.2783, 0.2993],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_4_dm_1_2_3",
+      name: "Basic Attack - Foreclaimed Self Stage 4 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1505, 0.1629, 0.1752, 0.1925, 0.2049, 0.219, 0.2388, 0.2585, 0.2783, 0.2993],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_4_dm_1_2_3_4",
+      name: "Basic Attack - Foreclaimed Self Stage 4 DMG - Hit 5",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1505, 0.1629, 0.1752, 0.1925, 0.2049, 0.219, 0.2388, 0.2585, 0.2783, 0.2993],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_5_dm",
+      name: "Basic Attack - Foreclaimed Self Stage 5 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0612, 0.0662, 0.0713, 0.0783, 0.0833, 0.0891, 0.0971, 0.1051, 0.1132, 0.1217],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_basicAttack_basic_attack_foreclaimed_self_stage_5_dm_1",
+      name: "Basic Attack - Foreclaimed Self Stage 5 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5507, 0.5958, 0.641, 0.7042, 0.7493, 0.8013, 0.8735, 0.9457, 1.018, 1.0947],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_heavyAttack_heavy_attack_foreclaimed_self_dmg",
+      name: "Heavy Attack - Foreclaimed Self DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.539, 0.5832, 0.6274, 0.6893, 0.7335, 0.7843, 0.8551, 0.9258, 0.9965, 1.0716],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_heavyAttack_heavy_attack_bitterfrost_foreclaimed_sel",
+      name: "Heavy Attack - Bitterfrost: Foreclaimed Self DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0775, 0.0839, 0.0903, 0.0992, 0.1055, 0.1128, 0.123, 0.1332, 0.1433, 0.1541],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_heavyAttack_heavy_attack_bitterfrost_foreclaimed_sel_1",
+      name: "Heavy Attack - Bitterfrost: Foreclaimed Self DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.48, 2.6834, 2.8868, 3.1715, 3.3748, 3.6087, 3.9341, 4.2594, 4.5848, 4.9305],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_foreclaimed_self_stage_1_d",
+      name: "Mid-air Attack - Foreclaimed Self Stage 1 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.145, 0.1569, 0.1688, 0.1854, 0.1973, 0.211, 0.23, 0.249, 0.268, 0.2883],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_foreclaimed_self_stage_1_d_1",
+      name: "Mid-air Attack - Foreclaimed Self Stage 1 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.145, 0.1569, 0.1688, 0.1854, 0.1973, 0.211, 0.23, 0.249, 0.268, 0.2883],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_foreclaimed_self_stage_1_d_1_2",
+      name: "Mid-air Attack - Foreclaimed Self Stage 1 DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1933, 0.2092, 0.225, 0.2472, 0.2631, 0.2813, 0.3067, 0.332, 0.3574, 0.3843],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_foreclaimed_self_stage_2_d",
+      name: "Mid-air Attack - Foreclaimed Self Stage 2 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1312, 0.142, 0.1528, 0.1678, 0.1786, 0.191, 0.2082, 0.2254, 0.2426, 0.2609],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_foreclaimed_self_stage_2_d_1",
+      name: "Mid-air Attack - Foreclaimed Self Stage 2 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1312, 0.142, 0.1528, 0.1678, 0.1786, 0.191, 0.2082, 0.2254, 0.2426, 0.2609],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_foreclaimed_self_stage_2_d_1_2",
+      name: "Mid-air Attack - Foreclaimed Self Stage 2 DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1312, 0.142, 0.1528, 0.1678, 0.1786, 0.191, 0.2082, 0.2254, 0.2426, 0.2609],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_attack_foreclaimed_self_stage_2_d_1_2_3",
+      name: "Mid-air Attack - Foreclaimed Self Stage 2 DMG - Hit 4",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1312, 0.142, 0.1528, 0.1678, 0.1786, 0.191, 0.2082, 0.2254, 0.2426, 0.2609],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_plungingAttack_midair_plunging_attack_foreclaimed_self_",
+      name: "Mid-air Plunging Attack - Foreclaimed Self DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5614, 0.6074, 0.6534, 0.7179, 0.7639, 0.8168, 0.8905, 0.9641, 1.0378, 1.116],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_dodgeCounter_dodge_counter_foreclaimed_self_dmg_hit_1",
+      name: "Dodge Counter - Foreclaimed Self DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4113, 0.445, 0.4787, 0.526, 0.5597, 0.5985, 0.6524, 0.7064, 0.7603, 0.8177],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_dodgeCounter_dodge_counter_foreclaimed_self_dmg_hit_2",
+      name: "Dodge Counter - Foreclaimed Self DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4113, 0.445, 0.4787, 0.526, 0.5597, 0.5985, 0.6524, 0.7064, 0.7603, 0.8177],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceSkill_resonance_skill_present_self_dmg_hit_1",
+      name: "Resonance Skill - Present Self DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1232, 0.1334, 0.1435, 0.1576, 0.1677, 0.1793, 0.1955, 0.2116, 0.2278, 0.245],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceSkill_resonance_skill_present_self_dmg_hit_2",
+      name: "Resonance Skill - Present Self DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4928, 0.5333, 0.5737, 0.6302, 0.6707, 0.7171, 0.7818, 0.8464, 0.9111, 0.9798],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceSkill_frostblight_jade_cleave_dmg",
+      name: "Frostblight: Jade Cleave DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.332, 0.3593, 0.3865, 0.4246, 0.4518, 0.4831, 0.5267, 0.5703, 0.6138, 0.6601],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceSkill_frostblight_petalfall_dmg_hit_1",
+      name: "Frostblight: Petalfall DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.322, 0.3485, 0.3749, 0.4118, 0.4382, 0.4686, 0.5108, 0.5531, 0.5953, 0.6402],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceSkill_frostblight_petalfall_dmg_hit_2",
+      name: "Frostblight: Petalfall DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.322, 0.3485, 0.3749, 0.4118, 0.4382, 0.4686, 0.5108, 0.5531, 0.5953, 0.6402],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceLiberation_foreclaiming_inward_vision_dmg",
+      name: "Foreclaiming: Inward Vision DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2, 2.164, 2.328, 2.5576, 2.7216, 2.9102, 3.1726, 3.435, 3.6974, 3.9762],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceLiberation_foreclaiming_blade_liberation_base_dmg_h",
+      name: "Foreclaiming: Blade Liberation Base DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_resonanceLiberation_foreclaiming_blade_liberation_base_dmg_h_1",
+      name: "Foreclaiming: Blade Liberation Base DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4, 4.328, 4.656, 5.1152, 5.4432, 5.8204, 6.3452, 6.87, 7.3948, 7.9524],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_forteCircuit_basic_attack_iai_dmg_hit_1",
+      name: "Basic Attack - Iai DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.4276, 1.5447, 1.6618, 1.8256, 1.9427, 2.0773, 2.2646, 2.4519, 2.6392, 2.8382],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_forteCircuit_basic_attack_iai_dmg_hit_2",
+      name: "Basic Attack - Iai DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.238, 0.2575, 0.277, 0.3043, 0.3238, 0.3463, 0.3775, 0.4087, 0.4399, 0.4731],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Hiyuki_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7854, 0.8499, 0.9143, 1.0044, 1.0688, 1.1429, 1.2459, 1.349, 1.452, 1.5615],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Hiyuki_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillGlacio DMG dealt by nearby Resonators other than Hiyuki in the team is Amplified by 20% against targets affected by Glacio Chafe for 20s.",
+    },
+    {
+      id: "Hiyuki_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Hiyuki Fine SnowWhen a Resonator in the team applies Glacio Chafe or Havoc Bane, Hiyuki gains 1 stack of Snow Rust.",
+    },
+    {
+      id: "Hiyuki_passive_2",
+      name: "Snow",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Snow Rust stacks up to 3 times.",
+    },
+    {
+      id: "Hiyuki_passive_3",
+      name: "Each",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Each Resonator can trigger this effect only once in this way.",
+    },
+    {
+      id: "Hiyuki_passive_4",
+      name: "Based",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Based on Hiyuki's current stacks of Snow Rust, the following bonuses are unlocked:\n1 stack of Snow Rust: When Hiyuki is the active Resonator in the team, Glacio Bite DMG is Amplified by 30% against targets within a certain range.",
+    },
+    {
+      id: "Hiyuki_passive_5",
+      name: "Hiyuki's",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Hiyuki's Crit.",
+    },
+    {
+      id: "Hiyuki_passive_6",
+      name: "DMG",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "DMG is increased by 40%.",
+    },
+    {
+      id: "Hiyuki_passive_7",
+      name: "Passive 7",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "2 stacks of Snow Rust: When Hiyuki is the active Resonator in the team, each time she applies Glacio Chafe, she additionally deals an instance of Glacio Bite DMG with a fixed DMG Multiplier of 102%.",
+    },
+    {
+      id: "Hiyuki_passive_8",
+      name: "Passive 8",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "3 stacks of Snow Rust: When Hiyuki is the active Resonator in the team, Glacio Bite DMG is additionally Amplified by 30% against targets within a certain range.",
+    },
+    {
+      id: "Hiyuki_passive_9",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect resets when new Resonators are added to the team.Ephemeral RealmOnce Hiyuki leaves the combat state or recovers after being knocked out, when she stays out of combat for 4s with fewer than 1 point of Snowforged Blade, restore 1 point.",
+    },
+    {
+      id: "Hiyuki_s1",
+      name: "S1: Springless",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of Basic Attack - Foreclaimed Self, Heavy Attack - Foreclaimed Self, Mid-air Attack - Foreclaimed Self, and Dodge Counter - Foreclaimed Self are increased by 120%.  Basic Attack - Foreclaimed Self Stage 3 now has an increased range and pulls enemies within range toward the center. Hiyuki is immune to interruptions while casting  Basic Attack - Foreclaimed Self Stage 4 & 5.  Casting Foreclaiming: Inward Vision enhances the next Basic Attack - Foreclaimed Self Stage 1 & 2, which now inflict Glacio Chafe 1 time on hit.",
+    },
+    {
+      id: "Hiyuki_s2",
+      name: "S2: To Burn Cold in Silence",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Basic Attack - Iai's DMG Multiplier is increased by 125%.  Inherent Skill Ephemeral Realm's effect becomes the following one: Once Hiyuki leaves the combat state or recovers from being knocked out, after staying out of combat for 4s, restore 3  of Snowforged Blade.  Once Hiyuki leaves the combat state or recovers from being knocked out, after staying out of combat for 4s, the following effects are triggered once: - While in Foreclaimed Self, restore 3  points of Frostharden Iai. - Reset the Cooldown of 2  of Frostblight: Jade Cleave. - Restore an additional 50 points of Frostheart for the next 2  of Frostblight: Jade Cleave or Frostblight: Petalfall.",
+    },
+    {
+      id: "Hiyuki_s3",
+      name: "S3: No Self, No Bound",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Inherent Skill Fine Snow gains the following effect: 2s after a Resonator joins the team or Hiyuki is revived, Hiyuki gains 1 stack of Snow Rust. Hiyuki can obtain up to 1 stack of Snow Rust in this way.  The DMG Multipliers of Heavy Attack - Frost Splinter: Present Self and Heavy Attack - Bitterfrost: Foreclaimed Self are increased by 160%.  At 2 stacks of Snow Rust, while Hiyuki is the active Resonator in the team, the DMG Multiplier of the additionally applied Glacio Bite DMG each time she inflicts Glacio Chafe is increased by 488%.",
+    },
+    {
+      id: "Hiyuki_s4",
+      name: "S4: Like Reeds on Tides",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Skill - Present Self, Frostblight: Jade Cleave, or Frostblight: Petalfall increases the DMG dealt by all nearby Resonators in the team by 20% for 30s.  Restore 18% of Max HP while casting Frostblight: Jade Cleave or Frostblight: Petalfall.",
+    },
+    {
+      id: "Hiyuki_s5",
+      name: "S5: Vessel of Thousand Wishes",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of Resonance Skill - Present Self, Frostblight: Jade Cleave, and Frostblight: Petalfall are increased by 80%.",
+    },
+    {
+      id: "Hiyuki_s6",
+      name: "S6: Into a Night Without End",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The Crit. DMG of Foreclaiming: Inward Vision and Foreclaiming: Blade Liberation is increased by 500%.  At 2 stacks of Snow Rust, the effect \"While Hiyuki is the active Resonator in the team, each time she applies Glacio Chafe, she additionally deals an instance of Glacio Bite DMG with a fixed DMG Multiplier\" changes to \"While Hiyuki is the active Resonator in the team, each time a Resonator in the team applies Glacio Chafe, she additionally deals an instance of Glacio Bite DMG with a fixed DMG Multiplier.\" At 2 stacks of Snow Rust, Hiyuki's Crit. DMG is increased by 40%. At 3 stacks of Snow Rust, the total Glacio Bite DMG taken by targets within a certain range of the active Resonator in the team is increased by 25%.",
+    },
+  ],
+  mechanics: [],
+}

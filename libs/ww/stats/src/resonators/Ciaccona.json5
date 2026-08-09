@@ -1,0 +1,403 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Ciaccona | elemento Aero | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Ciaccona",
+    name: "Ciaccona",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Aero",
+    weaponType: "Pistols",
+    tags: ["aero"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 979, "20": 2546, "40": 4849, "50": 6326, "60": 7804, "70": 9282, "80": 10759, "90": 12237 },
+    atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
+    def: { "1": 98, "20": 251, "40": 476, "50": 620, "60": 764, "70": 909, "80": 1053, "90": 1197 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Ciaccona_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.287, 0.3106, 0.3341, 0.3671, 0.3906, 0.4177, 0.4553, 0.493, 0.5306, 0.5706],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_basicAttack_stage_2_dmg_hit_1",
+      name: "Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.246, 0.2662, 0.2864, 0.3146, 0.3348, 0.358, 0.3903, 0.4226, 0.4548, 0.4891],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_basicAttack_stage_2_dmg_hit_2",
+      name: "Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.123, 0.1331, 0.1432, 0.1573, 0.1674, 0.179, 0.1952, 0.2113, 0.2274, 0.2446],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_basicAttack_stage_2_dmg_hit_3",
+      name: "Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.328, 0.3549, 0.3818, 0.4195, 0.4464, 0.4773, 0.5204, 0.5634, 0.6064, 0.6521],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1661, 0.1797, 0.1933, 0.2124, 0.226, 0.2417, 0.2635, 0.2852, 0.307, 0.3302],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3075, 0.3328, 0.358, 0.3933, 0.4185, 0.4475, 0.4878, 0.5282, 0.5685, 0.6114],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5412, 0.5856, 0.63, 0.6921, 0.7365, 0.7876, 0.8586, 0.9296, 1.0006, 1.076],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_basicAttack_aimed_shot_dmg",
+      name: "Aimed Shot DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.164, 0.1775, 0.1909, 0.2098, 0.2232, 0.2387, 0.2602, 0.2817, 0.3032, 0.3261],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_basicAttack_fully_charged_aimed_shot_dmg",
+      name: "Fully Charged Aimed Shot DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.369, 0.3993, 0.4296, 0.4719, 0.5022, 0.537, 0.5854, 0.6338, 0.6822, 0.7337],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_plungingAttack_midair_attack_stage_1_dmg",
+      name: "Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2788, 0.3017, 0.3246, 0.3566, 0.3794, 0.4057, 0.4423, 0.4789, 0.5155, 0.5543],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_plungingAttack_midair_attack_stage_2_dmg",
+      name: "Mid-air Attack Stage 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.123, 0.1331, 0.1432, 0.1573, 0.1674, 0.179, 0.1952, 0.2113, 0.2274, 0.2446],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2876, 0.3112, 0.3348, 0.3678, 0.3913, 0.4185, 0.4562, 0.4939, 0.5316, 0.5717],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2032, 0.2198, 0.2365, 0.2598, 0.2765, 0.2956, 0.3223, 0.3489, 0.3756, 0.4039],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_resonanceLiberation_improvised_symphonic_poem_skill_dmg",
+      name: "Improvised Symphonic Poem Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [5.535, 5.9889, 6.4428, 7.0782, 7.5321, 8.054, 8.7802, 9.5064, 10.2326, 11.0042],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_resonanceLiberation_symphonic_poem_tonic_dmg",
+      name: "Symphonic Poem: Tonic DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0308, 0.0333, 0.0358, 0.0394, 0.0419, 0.0448, 0.0488, 0.0529, 0.0569, 0.0612],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_forteCircuit_quadruple_downbeat_dmg_hit_1",
+      name: "Quadruple Downbeat DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.158, 0.171, 0.1839, 0.202, 0.215, 0.2299, 0.2506, 0.2713, 0.2921, 0.3141],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_forteCircuit_quadruple_downbeat_dmg_hit_2",
+      name: "Quadruple Downbeat DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5795, 1.7091, 1.8386, 2.0199, 2.1494, 2.2984, 2.5056, 2.7128, 2.9201, 3.1403],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Ciaccona_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9512, 1.0292, 1.1072, 1.2164, 1.2944, 1.3841, 1.5089, 1.6337, 1.7585, 1.8911],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Ciaccona_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillAero Erosion DMG dealt to targets near the active Resonator is Amplified by 100% for 30s.",
+    },
+    {
+      id: "Ciaccona_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Stat", id: "hp_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1],
+        },
+      ],
+      descriptionTemplate: "> Ciaccona Interlude TuneCasting Resonance Liberation Singer's Triple Cadenza grants Ciaccona a Shield equal to 100% of her Max HP for 4s.",
+    },
+    {
+      id: "Ciaccona_switching",
+      name: "Switching",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Category", id: "heavyAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "Switching out Ciaccona removes the Shield.Winds of RinascitaIncrease Heavy Attack - Quadruple Downbeat's DMG by 30%.",
+    },
+    {
+      id: "Ciaccona_s1_where_wind_sings",
+      name: "S1: Where Wind Sings",
+      operation: "add",
+      value: [0.35],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "basicAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.35],
+        },
+      ],
+      descriptionTemplate: "Casting Resonance Skill Harmonic Allegro grants Ciaccona immunity to interruption for 3s. Casting Basic Attack increases Ciaccona's ATK by 35% for 10s.",
+    },
+    {
+      id: "Ciaccona_s2",
+      name: "S2: Song of the Four Seasons",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "During Resonance Liberation Singer's Triple Cadenza, Resonators in the team gain 40% Aero DMG Bonus.",
+    },
+    {
+      id: "Ciaccona_s3",
+      name: "S3: Starlit Improv",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Basic Attack Stage 4 additionally grants 1  of Musical Essence. Resonance Skill Harmonic Allegro gains 1 more charge.",
+    },
+    {
+      id: "Ciaccona_s4",
+      name: "S4: Toccata and Fugue",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Ciaccona ignores 45% of the targets' DEF when dealing damage with Heavy Attack Quadruple Downbeat; Ciaccona ignores 45% of the targets' DEF when dealing Resonance Liberation DMG.",
+    },
+    {
+      id: "Ciaccona_s5",
+      name: "S5: Eternal Idyll to Lasting Summer",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Gain 40% Resonance Liberation DMG Bonus; DMG taken by Resonators within and around the range of Resonance Liberation Singer's Triple Cadenza is reduced by 30%.",
+    },
+    {
+      id: "Ciaccona_s6",
+      name: "S6: Unending Cadence",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When in Solo Concert, Ciaccona or Ensemble Sylph deals Aero DMG equal to 220% of Ciaccona's ATK to nearby targets, considered Resonance Liberation DMG.",
+    },
+  ],
+  mechanics: [],
+}

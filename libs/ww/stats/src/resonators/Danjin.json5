@@ -1,0 +1,437 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Danjin | elemento Havoc | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Danjin",
+    name: "Danjin",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Sword",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 755, "20": 1963, "40": 3739, "50": 4879, "60": 6018, "70": 7158, "80": 8297, "90": 9437 },
+    atk: { "1": 21, "20": 54, "40": 105, "50": 139, "60": 172, "70": 206, "80": 234, "90": 262 },
+    def: { "1": 94, "20": 241, "40": 456, "50": 595, "60": 733, "70": 872, "80": 1010, "90": 1148 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Danjin_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.288, 0.3117, 0.3353, 0.3683, 0.392, 0.4191, 0.4569, 0.4947, 0.5325, 0.5726],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.296, 0.3203, 0.3446, 0.3786, 0.4028, 0.4308, 0.4696, 0.5084, 0.5473, 0.5885],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1867, 0.202, 0.2173, 0.2388, 0.2541, 0.2717, 0.2962, 0.3206, 0.3451, 0.3712],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.496, 0.5367, 0.5774, 0.6343, 0.675, 0.7218, 0.7869, 0.8519, 0.917, 0.9861],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.32, 0.3463, 0.3725, 0.4093, 0.4355, 0.4657, 0.5077, 0.5496, 0.5916, 0.6362],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceSkill_carmine_gleam_damage",
+      name: "Carmine Gleam Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.192, 0.2078, 0.2235, 0.2456, 0.2613, 0.2794, 0.3046, 0.3298, 0.355, 0.3818],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceSkill_crimson_erosion_stage_1_dmg",
+      name: "Crimson Erosion Stage 1 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.324, 0.3506, 0.3772, 0.4144, 0.4409, 0.4715, 0.514, 0.5565, 0.599, 0.6442],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceSkill_crimson_erosion_stage_2_dmg",
+      name: "Crimson Erosion Stage 2 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceSkill_sanguine_pulse_stage_1_dmg",
+      name: "Sanguine Pulse Stage 1 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.282, 0.3052, 0.3283, 0.3607, 0.3838, 0.4104, 0.4474, 0.4844, 0.5214, 0.5607],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceSkill_sanguine_pulse_stage_2_dmg",
+      name: "Sanguine Pulse Stage 2 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.216, 0.2338, 0.2515, 0.2763, 0.294, 0.3144, 0.3427, 0.371, 0.3994, 0.4295],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceSkill_sanguine_pulse_stage_3_dmg",
+      name: "Sanguine Pulse Stage 3 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.324, 0.3506, 0.3772, 0.4144, 0.4409, 0.4715, 0.514, 0.5565, 0.599, 0.6442],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceLiberation_consecutive_attack_dmg",
+      name: "Consecutive Attack DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2469, 0.2672, 0.2874, 0.3158, 0.336, 0.3593, 0.3917, 0.4241, 0.4564, 0.4909],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_resonanceLiberation_scarlet_burst_damage",
+      name: "Scarlet Burst Damage",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.975, 2.137, 2.2989, 2.5257, 2.6876, 2.8739, 3.133, 3.3921, 3.6512, 3.9265],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_forteCircuit_chaoscleave_damage",
+      name: "Chaoscleave Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_forteCircuit_scatterbloom_damage",
+      name: "Scatterbloom Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.9738, 1.0476, 1.151, 1.2248, 1.3096, 1.4277, 1.5458, 1.6639, 1.7893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_forteCircuit_full_energy_chaoscleave_damage",
+      name: "Full Energy Chaoscleave Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.72, 0.7791, 0.8381, 0.9208, 0.9798, 1.0477, 1.1422, 1.2366, 1.3311, 1.4315],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_forteCircuit_full_energy_scatterbloom_damage",
+      name: "Full Energy Scatterbloom Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.16, 2.3372, 2.5143, 2.7623, 2.9394, 3.1431, 3.4265, 3.7098, 3.9932, 4.2943],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_forteCircuit_chaoscleave_healing",
+      name: "Chaoscleave Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36, 0.36],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Danjin_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.25, 0.2705, 0.291, 0.3197, 0.3402, 0.3638, 0.3966, 0.4294, 0.4622, 0.4971],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Danjin_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillWith unwavering determination, Danjin unleashes a strike, dealing Havoc DMG.Show Skill DetailsLevel 20Skill DMG90.71%*4Concerto Regen10Duality",
+    },
+    {
+      id: "Danjin_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Havoc DMG Amplified by 23% for 14s or until they are switched out.",
+    },
+    {
+      id: "Danjin_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Danjin Crimson LightDamage of Resonance Skill Crimson Erosion triggered by Dodge Counter: Ruby Shades is increased by 20%.",
+    },
+    {
+      id: "Danjin_passive_3",
+      name: "The",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "The HP cost and stacks of Ruby Blossom recovered are doubled.OverflowAfter casting the Resonance Skill Sanguine Pulse, Danjin's Heavy Attack DMG is increased by 30% for 5s.",
+    },
+    {
+      id: "Danjin_s1",
+      name: "S1: Crimson Heart of Justice",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Danjin attacks a target with Resonance Skill's Incinerating Will, her ATK is increased by 5% for 6s, stacking up to 6 times. Danjin loses 1 stacks of this effect each time she takes damage.",
+    },
+    {
+      id: "Danjin_s2",
+      name: "S2: Dusted Mirror",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Danjin attacks a target with Resonance Skill's Incinerating Will, her damage dealt is increased by 20%.",
+    },
+    {
+      id: "Danjin_s3_fleeting_blossom",
+      name: "S3: Fleeting Blossom",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "Resonance Liberation DMG Bonus is increased by 30%.",
+    },
+    {
+      id: "Danjin_s4",
+      name: "S4: Solitary Carnation",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Danjin has more than 60 \"Ruby Blossom\", her Crit. Rate is increased by 15%. This effect lasts until the end of Heavy Attack: Scatterbloom even after all \"Ruby Blossom\" is consumed when casting Heavy Attack: Chaoscleave.",
+    },
+    {
+      id: "Danjin_s5",
+      name: "S5: Reigning Blade",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Danjin's Havoc DMG Bonus is increased by 15%, and further increased by another 15% when her HP is lower than 60%.",
+    },
+    {
+      id: "Danjin_s6_bloodied_jade",
+      name: "S6: Bloodied Jade",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "heavyAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Heavy Attack Chaoscleave increases the ATK of all team members by 20% for 20s.",
+    },
+  ],
+  mechanics: [],
+}

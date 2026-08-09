@@ -1,0 +1,595 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Phrolova | elemento Havoc | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Phrolova",
+    name: "Phrolova",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Rectifier",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 862, "20": 2242, "40": 4269, "50": 5570, "60": 6871, "70": 8172, "80": 9473, "90": 10775 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 93, "20": 238, "40": 452, "50": 589, "60": 725, "70": 862, "80": 999, "90": 1136 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Phrolova_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2688, 0.2909, 0.3129, 0.3438, 0.3658, 0.3912, 0.4264, 0.4617, 0.497, 0.5345],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.48, 0.5194, 0.5588, 0.6139, 0.6532, 0.6985, 0.7615, 0.8244, 0.8874, 0.9543],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1644, 0.1779, 0.1914, 0.2103, 0.2238, 0.2393, 0.2608, 0.2824, 0.304, 0.3269],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4016, 0.4346, 0.4675, 0.5136, 0.5465, 0.5844, 0.6371, 0.6898, 0.7425, 0.7985],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_basicAttack_scarlet_coda_dmg_hit_1",
+      name: "Scarlet Coda DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1661, 0.1797, 0.1933, 0.2124, 0.226, 0.2416, 0.2634, 0.2852, 0.307, 0.3301],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_basicAttack_scarlet_coda_dmg_hit_2",
+      name: "Scarlet Coda DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0623, 0.0674, 0.0725, 0.0797, 0.0848, 0.0906, 0.0988, 0.107, 0.1151, 0.1238],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_basicAttack_scarlet_coda_dmg_hit_3",
+      name: "Scarlet Coda DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.4903, 2.6946, 2.8988, 3.1846, 3.3889, 3.6237, 3.9504, 4.2771, 4.6039, 4.951],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.64, 0.6925, 0.745, 0.8185, 0.871, 0.9313, 1.0153, 1.0992, 1.1832, 1.2724],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6136, 0.664, 0.7143, 0.7847, 0.835, 0.8929, 0.9734, 1.0539, 1.1344, 1.2199],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.533, 0.5768, 0.6205, 0.6817, 0.7254, 0.7756, 0.8455, 0.9155, 0.9854, 1.0597],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_basic_attack_hecate_stage_1_dmg",
+      name: "Basic Attack - Hecate Stage 1 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.14, 0.1515, 0.163, 0.1791, 0.1906, 0.2038, 0.2221, 0.2405, 0.2589, 0.2784],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_basic_attack_hecate_stage_2_dmg",
+      name: "Basic Attack - Hecate Stage 2 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.07, 0.0758, 0.0815, 0.0896, 0.0953, 0.1019, 0.1111, 0.1203, 0.1295, 0.1392],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_enhanced_attack_hecate_strings_dmg_hit_1",
+      name: "Enhanced Attack - Hecate: Strings DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.525, 0.5681, 0.6111, 0.6714, 0.7145, 0.764, 0.8329, 0.9017, 0.9706, 1.0438],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_enhanced_attack_hecate_strings_dmg_hit_2",
+      name: "Enhanced Attack - Hecate: Strings DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.225, 1.3255, 1.4259, 1.5666, 1.667, 1.7825, 1.9433, 2.104, 2.2647, 2.4355],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_enhanced_attack_hecate_winds_dmg_hit_1",
+      name: "Enhanced Attack - Hecate: Winds DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4988, 0.5397, 0.5806, 0.6379, 0.6787, 0.7258, 0.7912, 0.8567, 0.9221, 0.9916],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_enhanced_attack_hecate_winds_dmg_hit_2",
+      name: "Enhanced Attack - Hecate: Winds DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1638, 1.2592, 1.3547, 1.4883, 1.5837, 1.6934, 1.8461, 1.9988, 2.1515, 2.3137],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_enhanced_attack_hecate_cadenza_dmg_hit_1",
+      name: "Enhanced Attack - Hecate: Cadenza DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.525, 0.5681, 0.6111, 0.6714, 0.7145, 0.764, 0.8329, 0.9017, 0.9706, 1.0438],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_enhanced_attack_hecate_cadenza_dmg_hit_2",
+      name: "Enhanced Attack - Hecate: Cadenza DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.225, 1.3255, 1.4259, 1.5666, 1.667, 1.7825, 1.9433, 2.104, 2.2647, 2.4355],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_resonanceLiberation_curtain_call_dmg",
+      name: "Curtain Call DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.34, 2.5319, 2.7238, 2.9924, 3.1843, 3.405, 3.712, 4.019, 4.326, 4.6522],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_forteCircuit_movement_of_fate_and_finality_dmg_hit_1",
+      name: "Movement of Fate and Finality DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1905, 0.2062, 0.2218, 0.2437, 0.2593, 0.2772, 0.3022, 0.3272, 0.3522, 0.3788],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_forteCircuit_movement_of_fate_and_finality_dmg_hit_2",
+      name: "Movement of Fate and Finality DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5927, 0.6413, 0.6899, 0.758, 0.8066, 0.8624, 0.9402, 1.018, 1.0957, 1.1783],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_forteCircuit_murmurs_in_a_haunting_dream_dmg_hit_1",
+      name: "Murmurs in a Haunting Dream DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1167, 0.1263, 0.1359, 0.1493, 0.1589, 0.1699, 0.1852, 0.2005, 0.2158, 0.2321],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_forteCircuit_murmurs_in_a_haunting_dream_dmg_hit_2",
+      name: "Murmurs in a Haunting Dream DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2334, 0.2526, 0.2717, 0.2985, 0.3177, 0.3397, 0.3703, 0.4009, 0.4315, 0.4641],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_forteCircuit_murmurs_in_a_haunting_dream_dmg_hit_3",
+      name: "Murmurs in a Haunting Dream DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.6338, 1.7678, 1.9018, 2.0894, 2.2233, 2.3774, 2.5917, 2.8061, 3.0205, 3.2482],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_introSkill_suite_of_quietus_dmg_hit_1",
+      name: "Suite of Quietus DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4055, 0.4387, 0.472, 0.5185, 0.5518, 0.59, 0.6432, 0.6964, 0.7496, 0.8061],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_introSkill_suite_of_quietus_dmg_hit_2",
+      name: "Suite of Quietus DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6082, 0.6581, 0.7079, 0.7778, 0.8276, 0.885, 0.9648, 1.0446, 1.1244, 1.2091],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Phrolova_introSkill_suite_of_immortality_dmg",
+      name: "Suite of Immortality DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3, 3.246, 3.492, 3.8364, 4.0824, 4.3653, 4.7589, 5.1525, 5.5461, 5.9643],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Phrolova_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "> Phrolova AccidentalCasting Echo Skill grants increased resistance to interruption and reduces damage taken by 30% for 15s.",
+    },
+    {
+      id: "Phrolova_passive_1",
+      name: "After",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "After casting Suite of Quietus, Suite of Immortality, and Echo Skill, the next Volatile Note becomes Volatile Note - Cadenza.OctetObtain 10 stacks of Aftersound upon entering battle.",
+    },
+    {
+      id: "Phrolova_passive_2",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect cannot be triggered again within 4s after exiting the combat state.",
+    },
+    {
+      id: "Phrolova_passive_3",
+      name: "For",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "For every 1 stacks of Aftersound, Crit.",
+    },
+    {
+      id: "Phrolova_passive_4",
+      name: "DMG",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "DMG is increased by 2.5%.",
+    },
+    {
+      id: "Phrolova_passive_5",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Aftersound reaches the max, each new stack of Aftersound increases Phrolova's Crit.",
+    },
+    {
+      id: "Phrolova_passive_6",
+      name: "DMG",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "DMG by 1%, up to 100%.",
+    },
+    {
+      id: "Phrolova_passive_7",
+      name: "The",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "The increased Crit.",
+    },
+    {
+      id: "Phrolova_passive_8",
+      name: "DMG",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "DMG is removed when Aftersound stacks are cleared.",
+    },
+    {
+      id: "Phrolova_s1",
+      name: "S1: A Key to Netherworld's Secrets",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Movement of Fate and Finality is increased by 80%. The DMG Multiplier of Murmurs in a Haunting Dream is increased by 80%. If Phrolova has less than 2 Volatile Notes when she is not in the Maestro state and stays out of combat for 4s, she gains Volatile Note - Cadenza until she has at least 2 Volatile Notes.",
+    },
+    {
+      id: "Phrolova_s2",
+      name: "S2: A Rope Tied to a Life Beyond",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Scarlet Coda is increased by 75%. Aftersound now additionally increases the DMG Multiplier of Scarlet Coda by 75%. Casting Scarlet Coda grants 14  of Aftersound.",
+    },
+    {
+      id: "Phrolova_s3",
+      name: "S3: A Dagger to Cut Clean Obsessions",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Echo Skill DMG is Amplified by 80%. Casting Scarlet Coda will convert all Volatile Notes to Volatile Notes - Cadenza in turn. Targets hit by Enhanced Attack - Hecate: Cadenza will have their ATK reduced by 20% for 15s.",
+    },
+    {
+      id: "Phrolova_s4_a_torch_illuminating_the_pa",
+      name: "S4: A Torch Illuminating the Path",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Casting Echo Skill grants 20% Attribute DMG Bonus for all Resonators in the team for 30s.",
+    },
+    {
+      id: "Phrolova_s5",
+      name: "S5: A Forked Road in Fate's Heartland",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Upon entering the Maestro state, generate a field to Stagnate the nearby targets, which lasts for 4s. Leaving the Maestro state or switching to other Resonators removes the Stagnation effect early. Damage taken during the Maestro state is reduced by 30%.",
+    },
+    {
+      id: "Phrolova_s6",
+      name: "S6: A Night to Depart From Eternal Rest",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Enhanced Attack - Hecate is increased by 24%.   During Movement of Fate and Finality and Murmurs in a Haunting Dream, command Hecate to cast 1 Apparition of Beyond - Hecate, dealing Havoc DMG equal to 216.42% of Phrolova's ATK (considered Echo Skill DMG) and granting 8  of Aftersound on hit.  If Phrolova is not the active Resonator during the Maestro state, targets take 40% more DMG from Hecate and Phrolova. If Phrolova is the active Resonator during the Maestro state, gain 60% Havoc DMG Bonus.",
+    },
+  ],
+  mechanics: [],
+}

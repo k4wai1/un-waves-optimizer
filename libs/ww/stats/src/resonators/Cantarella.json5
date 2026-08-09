@@ -1,0 +1,482 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Cantarella | elemento Havoc | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Cantarella",
+    name: "Cantarella",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Rectifier",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 928, "20": 2413, "40": 4596, "50": 5997, "60": 7397, "70": 8798, "80": 10199, "90": 11600 },
+    atk: { "1": 32, "20": 83, "40": 161, "50": 212, "60": 263, "70": 314, "80": 357, "90": 400 },
+    def: { "1": 90, "20": 230, "40": 437, "50": 570, "60": 702, "70": 835, "80": 967, "90": 1099 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Cantarella_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1833, 0.1983, 0.2134, 0.2344, 0.2494, 0.2667, 0.2907, 0.3148, 0.3388, 0.3644],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.365, 0.395, 0.4249, 0.4668, 0.4967, 0.5312, 0.579, 0.6269, 0.6748, 0.7257],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2876, 0.3112, 0.3348, 0.3678, 0.3914, 0.4185, 0.4563, 0.494, 0.5317, 0.5718],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_basicAttack_delusive_dive_dmg",
+      name: "Delusive Dive DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2668, 0.2887, 0.3106, 0.3412, 0.3631, 0.3883, 0.4233, 0.4583, 0.4933, 0.5305],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_plungingAttack_midair_attack_dmg_hit_1",
+      name: "Mid-air Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2112, 0.2286, 0.2459, 0.2701, 0.2875, 0.3074, 0.3351, 0.3628, 0.3905, 0.4199],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_plungingAttack_midair_attack_dmg_hit_2",
+      name: "Mid-air Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3168, 0.3428, 0.3688, 0.4052, 0.4312, 0.461, 0.5026, 0.5442, 0.5857, 0.6299],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2666, 0.2885, 0.3104, 0.341, 0.3628, 0.388, 0.423, 0.4579, 0.4929, 0.5301],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_resonanceSkill_graceful_step_dmg",
+      name: "Graceful Step DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3702, 0.4006, 0.431, 0.4735, 0.5038, 0.5387, 0.5873, 0.6359, 0.6844, 0.736],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_resonanceSkill_flickering_reverie_dmg",
+      name: "Flickering Reverie DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.987, 1.068, 1.1489, 1.2622, 1.3432, 1.4362, 1.5657, 1.6952, 1.8247, 1.9623],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_resonanceSkill_jolt_dmg",
+      name: "Jolt DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_resonanceLiberation_flowing_suffocation_dmg",
+      name: "Flowing Suffocation DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.8913, 2.0464, 2.2015, 2.4186, 2.5737, 2.752, 3.0001, 3.2483, 3.4964, 3.76],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_resonanceLiberation_diffusion_dmg",
+      name: "Diffusion DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0731, 0.0791, 0.0851, 0.0935, 0.0995, 0.1064, 0.116, 0.1256, 0.1352, 0.1454],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_phantom_sting_stage_1_dmg",
+      name: "Phantom Sting Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1777, 0.1923, 0.2069, 0.2273, 0.2418, 0.2586, 0.2819, 0.3052, 0.3285, 0.3533],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_phantom_sting_stage_2_dmg",
+      name: "Phantom Sting Stage 2 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3165, 0.3425, 0.3685, 0.4048, 0.4307, 0.4606, 0.5021, 0.5436, 0.5852, 0.6293],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_phantom_sting_stage_3_dmg",
+      name: "Phantom Sting Stage 3 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.325, 0.3517, 0.3783, 0.4157, 0.4423, 0.473, 0.5156, 0.5582, 0.6009, 0.6462],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_abysmal_vortex_dmg_hit_1",
+      name: "Abysmal Vortex DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2112, 0.2286, 0.2459, 0.2701, 0.2875, 0.3074, 0.3351, 0.3628, 0.3905, 0.4199],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_abysmal_vortex_dmg_hit_2",
+      name: "Abysmal Vortex DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3168, 0.3428, 0.3688, 0.4052, 0.4312, 0.461, 0.5026, 0.5442, 0.5857, 0.6299],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_perception_drain_dmg",
+      name: "Perception Drain DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.36, 3.6355, 3.911, 4.2967, 4.5722, 4.8891, 5.3299, 5.7707, 6.2115, 6.6799],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_shadowy_sweep_dmg",
+      name: "Shadowy Sweep DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3777, 0.4087, 0.4397, 0.483, 0.514, 0.5496, 0.5991, 0.6487, 0.6982, 0.7509],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_healing_by_consuming_trance_flat",
+      name: "Healing by Consuming Trance (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [90, 100, 112, 126, 142, 157, 160, 163, 166, 171],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_healing_by_consuming_trance",
+      name: "Healing by Consuming Trance",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.216, 0.2246, 0.2333, 0.2462, 0.2635, 0.2808, 0.3132, 0.3499, 0.3888, 0.4536],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_perception_drain_healing_flat",
+      name: "Perception Drain Healing (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [375, 420, 468, 525, 592, 656, 667, 682, 693, 712],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_forteCircuit_perception_drain_healing",
+      name: "Perception Drain Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.936, 0.972, 1.026, 1.098, 1.17, 1.305, 1.458, 1.62, 1.89],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_introSkill_ripple_dmg",
+      name: "Ripple DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2125, 0.23, 0.2474, 0.2718, 0.2892, 0.3093, 0.3371, 0.365, 0.3929, 0.4225],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_introSkill_tidal_surge_dmg_hit_1",
+      name: "Tidal Surge DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.085, 0.092, 0.099, 0.1087, 0.1157, 0.1237, 0.1349, 0.146, 0.1572, 0.169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Cantarella_introSkill_tidal_surge_dmg_hit_2",
+      name: "Tidal Surge DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.595, 0.6438, 0.6926, 0.7609, 0.8097, 0.8658, 0.9439, 1.022, 1.1, 1.183],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Cantarella_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillAmplify the incoming Resonator's Havoc DMG by 20% and Resonance Skill DMG by 25% for 14s. Switching Resonators ends this effect.",
+    },
+    {
+      id: "Cantarella_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Cantarella \"Cure\"Increase Healing Bonus by 20%.\"Poison\"Casting Echo Skill gives 6% Havoc DMG Bonus for 10s, stacking up to 2 times.",
+    },
+    {
+      id: "Cantarella_s1",
+      name: "S1: Embrace the Endless Waves",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Skill recovers 1  of Trance. The DMG Multiplier of Resonance Skill Graceful Step, Resonance Skill Flickering Reverie, and Forte Circuit Perception Drain is increased by 50%. Immune to interruptions while casting Perception Drain.",
+    },
+    {
+      id: "Cantarella_s2",
+      name: "S2: Surrender to the Illusive Reverie",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation Flowing Suffocation now sends the target into Hazy Dream. The DMG Multiplier of Jolt triggered by Cantarella is increased by 245%.",
+    },
+    {
+      id: "Cantarella_s3",
+      name: "S3: Gaze into the Abyss",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Flowing Suffocation is increased by 370%. After casting Resonance Liberation Flowing Suffocation, enter into Mirage. If already in Mirage, casting Resonance Liberation Flowing Suffocation does not activate the Mirage state again.",
+    },
+    {
+      id: "Cantarella_s4",
+      name: "S4: Behold Your Own Soul",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When in Mirage, Healing Bonus is increased by 25%.",
+    },
+    {
+      id: "Cantarella_s5",
+      name: "S5: Rest in Your Reflection",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The maximum number of Dreamweavers Cantarella can summon through Resonance Liberation Diffusion is increased by 5.",
+    },
+    {
+      id: "Cantarella_s6",
+      name: "S6: Fall, Fall... and Fall Deeper into the Dream",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Increase the DMG Multiplier of Basic Attack Phantom Sting by 80%. Casting Resonance Liberation Flowing Suffocation makes Cantarella's DMG ignore 30% of the target's DEF for 10s. For the first 1.2s of Hazy Dream, when the target takes an instance of DMG that does not inflict Hazy Dream, Jolt will not be triggered on the target.",
+    },
+  ],
+  mechanics: [],
+}

@@ -1,0 +1,466 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Taoqi | elemento Havoc | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Taoqi",
+    name: "Taoqi",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Broadblade",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 716, "20": 1862, "40": 3546, "50": 4627, "60": 5707, "70": 6788, "80": 7869, "90": 8950 },
+    atk: { "1": 18, "20": 46, "40": 90, "50": 119, "60": 147, "70": 176, "80": 200, "90": 225 },
+    def: { "1": 128, "20": 328, "40": 622, "50": 810, "60": 999, "70": 1187, "80": 1376, "90": 1564 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Taoqi_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4534, 0.4906, 0.5278, 0.5799, 0.617, 0.6598, 0.7193, 0.7788, 0.8383, 0.9015],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4267, 0.4617, 0.4967, 0.5457, 0.5807, 0.6209, 0.6769, 0.7329, 0.7889, 0.8484],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.56, 0.606, 0.6519, 0.7162, 0.7621, 0.8149, 0.8884, 0.9618, 1.0353, 1.1134],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.36, 1.4716, 1.5831, 1.7392, 1.8507, 1.979, 2.1574, 2.3358, 2.5143, 2.7039],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1084, 1.1993, 1.2902, 1.4175, 1.5084, 1.6129, 1.7583, 1.9037, 2.0491, 2.2037],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_heavyAttack_heavy_attack_dmg_reduction",
+      name: "Heavy Attack DMG Reduction",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35, 0.35],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_basicAttack_strategic_parry_damage",
+      name: "Strategic Parry Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3959, 0.4284, 0.4608, 0.5063, 0.5387, 0.5761, 0.628, 0.6799, 0.7319, 0.787],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6709, 0.7217, 0.7929, 0.8437, 0.9022, 0.9836, 1.0649, 1.1462, 1.2327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.25, 1.3525, 1.455, 1.5985, 1.701, 1.8189, 1.9829, 2.1469, 2.3109, 2.4852],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6786, 0.7343, 0.7899, 0.8678, 0.9235, 0.9875, 1.0765, 1.1655, 1.2546, 1.3492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_resonanceSkill_hp_recovery_flat",
+      name: "HP recovery (Flat)",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [950, 1064, 1187, 1330, 1501, 1662, 1691, 1729, 1757, 1805],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_resonanceSkill_hp_recovery",
+      name: "HP recovery",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "HP",
+          multiplier: [0.45, 0.468, 0.486, 0.513, 0.549, 0.585, 0.6525, 0.729, 0.81, 0.945],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_resonanceSkill_rocksteady_shield_damage_reduction",
+      name: "Rocksteady Shield Damage Reduction",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15, 0.15],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.262, 2.4475, 2.633, 2.8927, 3.0782, 3.2915, 3.5883, 3.885, 4.1818, 4.4971],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_1_dmg",
+      name: "Timed Counters Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4336, 0.4692, 0.5047, 0.5545, 0.59, 0.6309, 0.6878, 0.7447, 0.8016, 0.862],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_2_dmg",
+      name: "Timed Counters Stage 2 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.558, 0.6038, 0.6495, 0.7136, 0.7593, 0.8119, 0.8851, 0.9583, 1.0316, 1.1093],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_3_dmg",
+      name: "Timed Counters Stage 3 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7314, 0.7914, 0.8514, 0.9353, 0.9953, 1.0643, 1.1602, 1.2562, 1.3522, 1.4541],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_1_shield_flat",
+      name: "Timed Counters Stage 1 Shield (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [300, 336, 375, 420, 474, 525, 534, 546, 555, 570],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_1_shield",
+      name: "Timed Counters Stage 1 Shield",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1125, 0.117, 0.1215, 0.1282, 0.1372, 0.1462, 0.1631, 0.1822, 0.2025, 0.2362],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_2_shield_flat",
+      name: "Timed Counters Stage 2 Shield (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [450, 504, 562, 630, 711, 787, 801, 819, 832, 855],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_2_shield",
+      name: "Timed Counters Stage 2 Shield",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1687, 0.1755, 0.1822, 0.1923, 0.2058, 0.2193, 0.2446, 0.2733, 0.3037, 0.3543],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_3_shield_flat",
+      name: "Timed Counters Stage 3 Shield (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [750, 840, 937, 1050, 1185, 1312, 1335, 1365, 1387, 1425],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_forteCircuit_timed_counters_stage_3_shield",
+      name: "Timed Counters Stage 3 Shield",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2812, 0.2925, 0.3037, 0.3206, 0.3431, 0.3656, 0.4078, 0.4556, 0.5062, 0.5906],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Taoqi_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.05, 1.1361, 1.2222, 1.3428, 1.4289, 1.5279, 1.6657, 1.8034, 1.9412, 2.0876],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Taoqi_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Havoc DMG.Show Skill DetailsLevel 20Skill DMG380.96%Concerto Regen10Iron Will",
+    },
+    {
+      id: "Taoqi_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Resonance Skill DMG Amplified by 38% for 14s or until they are switched out.",
+    },
+    {
+      id: "Taoqi_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Taoqi Steadfast ProtectionWhile Resonance Skill Rocksteady Shield lasts, the Character's DEF is increased by 15%.UnyieldingAfter Heavy Attack Strategic Parry is successfully triggered, 25 STA is recovered.",
+    },
+    {
+      id: "Taoqi_s1",
+      name: "S1: Essense of Tranquility",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Forte Circuit Power Shift's Shield is increased by 40%.",
+    },
+    {
+      id: "Taoqi_s2",
+      name: "S2: Silent Strength",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The Crit. Rate and Crit. DMG of Resonance Liberation Unmovable is increased by 20% and 20%, respectively.",
+    },
+    {
+      id: "Taoqi_s3",
+      name: "S3: Keen",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "eyed Observer — The duration of Resonance Skill Rocksteady Shield is extended to 30s.",
+    },
+    {
+      id: "Taoqi_s4",
+      name: "S4: Heavylifting Duty",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Taoqi successfully triggers Heavy Attack Strategic Parry, she restores 25% HP and increases her DEF by 50% for 5s. This can be triggered once every 15s.",
+    },
+    {
+      id: "Taoqi_s5",
+      name: "S5: Benevolent Guardian",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The damage of Forte Circuit Power Shift is increased by 50%. When Forte Circuit Power Shift hits a target, restore 20 Resonance Energy.",
+    },
+    {
+      id: "Taoqi_s6_defender_of_peace",
+      name: "S6: Defender of Peace",
+      operation: "add",
+      value: [0.4],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "basicAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.4],
+        },
+      ],
+      descriptionTemplate: "The damage of Taoqi's Basic Attack and Heavy Attack is increased by 40% while the Shield granted by Resonance Skill Rocksteady Shield holds.",
+    },
+  ],
+  mechanics: [],
+}

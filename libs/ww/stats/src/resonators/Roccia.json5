@@ -1,0 +1,391 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Roccia | elemento Havoc | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Roccia",
+    name: "Roccia",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Gauntlets",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 980, "20": 2549, "40": 4854, "50": 6333, "60": 7812, "70": 9291, "80": 10770, "90": 12250 },
+    atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
+    def: { "1": 98, "20": 251, "40": 476, "50": 620, "60": 764, "70": 909, "80": 1053, "90": 1197 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Roccia_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3681, 0.3983, 0.4285, 0.4707, 0.5009, 0.5356, 0.5839, 0.6322, 0.6805, 0.7318],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1919, 0.2076, 0.2233, 0.2453, 0.2611, 0.2792, 0.3043, 0.3295, 0.3547, 0.3814],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_basicAttack_stage_3_dmg_hit_1",
+      name: "Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.17, 0.184, 0.1979, 0.2174, 0.2314, 0.2474, 0.2697, 0.292, 0.3143, 0.338],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_basicAttack_stage_3_dmg_hit_2",
+      name: "Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.51, 0.5519, 0.5937, 0.6522, 0.6941, 0.7422, 0.8091, 0.876, 0.9429, 1.014],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5241, 0.567, 0.61, 0.6702, 0.7131, 0.7626, 0.8313, 0.9001, 0.9688, 1.0419],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.85, 0.9197, 0.9894, 1.087, 1.1567, 1.2369, 1.3484, 1.4599, 1.5714, 1.6899],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3466, 0.375, 0.4034, 0.4432, 0.4716, 0.5043, 0.5497, 0.5952, 0.6407, 0.689],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3092, 0.3346, 0.3599, 0.3954, 0.4207, 0.4499, 0.4905, 0.531, 0.5716, 0.6147],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.4, 1.5148, 1.6296, 1.7904, 1.9052, 2.0372, 2.2209, 2.4045, 2.5882, 2.7834],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_forteCircuit_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.62, 1.7529, 1.8857, 2.0717, 2.2045, 2.3573, 2.5699, 2.7824, 2.9949, 3.2208],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_forteCircuit_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.71, 1.8503, 1.9905, 2.1868, 2.327, 2.4883, 2.7126, 2.937, 3.1613, 3.3997],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_forteCircuit_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.8, 1.9476, 2.0952, 2.3019, 2.4495, 2.6192, 2.8554, 3.0915, 3.3277, 3.5786],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Roccia_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.85, 0.9197, 0.9894, 1.087, 1.1567, 1.2369, 1.3484, 1.4599, 1.5714, 1.6899],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Roccia_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Havoc DMG. Use Basic Attack right after casting this skill to cast Basic Attack Stage 4.Show Skill DetailsLevel 20Skill DMG308.39%Concerto Regen10Applause, Please!",
+    },
+    {
+      id: "Roccia_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Havoc DMG Amplified by 20% and Basic Attack DMG Amplified by 25% for 14s or until the Resonator is switched out.",
+    },
+    {
+      id: "Roccia_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Roccia Immersive PerformanceCasting Resonance Skill or Heavy Attack increases Roccia's ATK by 20% for 12s.Super Attractive Magic BoxAfter casting Outro Skill, the Utility of the incoming Resonator is replaced with Magic Box.",
+    },
+    {
+      id: "Roccia_passive_3",
+      name: "Magic",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Magic Box\n- Upon use, pull nearby targets toward the Magic Box, dealing 100 points of Havoc DMG.",
+    },
+    {
+      id: "Roccia_passive_4",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This skill is considered Echo Skill that deals Utility DMG.",
+    },
+    {
+      id: "Roccia_passive_5",
+      name: "Passive 4",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- The Magic Box lasts for 14s or until the Resonator is switched out.",
+    },
+    {
+      id: "Roccia_s1",
+      name: "S1: When Shadows Engulf the Hull",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Skill Acrobatic Trick grants 100 additional Imagination and 10 Concerto Energy. Immune to interruptions when casting Basic Attack Real Fantasy",
+    },
+    {
+      id: "Roccia_s2",
+      name: "S2: When the Luceanite Gleams",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Basic Attack Real Fantasy grants all Resonators in the team 10% Havoc DMG Bonus for 30s, stacking up to 3 . Upon reaching the max stacks, it grants all Resonators in the team 10% additional Havoc DMG Bonus for 30s.",
+    },
+    {
+      id: "Roccia_s3",
+      name: "S3: When the Heart Sees and Hands Feel",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Intro Skill Pero, Help increases Roccia's Crit. Rate by 10% and Crit. DMG by 30% for 15s.",
+    },
+    {
+      id: "Roccia_s4_when_wonders_gather_in_the_",
+      name: "S4: When Wonders Gather in the Box",
+      operation: "add",
+      value: [0.6],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "basicAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.6],
+        },
+      ],
+      descriptionTemplate: "Casting Resonance Skill Acrobatic Trick increases Basic Attack Real Fantasy's DMG Multiplier by 60% for 12s.",
+    },
+    {
+      id: "Roccia_s5",
+      name: "S5: When Dreams Are Reborn on Stage",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Increase Resonance Liberation Commedia Improvviso!'s DMG Multiplier by 20% and Heavy Attack's DMG Multiplier by 80%.",
+    },
+    {
+      id: "Roccia_s6",
+      name: "S6: When the Golden Wings Fly",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Liberation Commedia Improvviso! grants the following effects for 12s: - Basic Attack Real Fantasy ignores enemies' DEF by 60%. - When Roccia lands after performing Basic Attack Real Fantasy Stage 3, she is launched into mid-air, activating Beyond Imagination. In this state, Basic Attack becomes Basic Attack Reality Recreation, dealing DMG equal to 100% of Basic Attack Real Fantasy Stage 3 DMG, considered Heavy Attack DMG. Roccia is immune to interruptions while casting Basic Attack Reality Recreation. - When Roccia lands after performing Basic Attack Reality Recreation, she is launched into mid-air, activating Beyond Imagination. Basic Attack Reality Recreation is only available in the Beyond Imagination state.",
+    },
+  ],
+  mechanics: [],
+}

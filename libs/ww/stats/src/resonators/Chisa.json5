@@ -1,0 +1,700 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Chisa | elemento Havoc | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Chisa",
+    name: "Chisa",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Broadblade",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 862, "20": 2242, "40": 4269, "50": 5570, "60": 6871, "70": 8172, "80": 9473, "90": 10775 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 93, "20": 238, "40": 452, "50": 589, "60": 725, "70": 862, "80": 999, "90": 1136 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Chisa_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.084, 0.0909, 0.0978, 0.1075, 0.1144, 0.1223, 0.1333, 0.1443, 0.1553, 0.1671],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_stage_2_dmg_hit_1",
+      name: "Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.048, 0.052, 0.0559, 0.0614, 0.0654, 0.0699, 0.0762, 0.0825, 0.0888, 0.0955],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_stage_2_dmg_hit_2",
+      name: "Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.096, 0.1039, 0.1118, 0.1228, 0.1307, 0.1397, 0.1523, 0.1649, 0.1775, 0.1909],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_stage_2_dmg_hit_3",
+      name: "Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.336, 0.3636, 0.3912, 0.4297, 0.4573, 0.489, 0.533, 0.5771, 0.6212, 0.6681],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_death_snip_dmg_hit_1",
+      name: "Death Snip DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.15, 0.1623, 0.1746, 0.1918, 0.2041, 0.2182, 0.2379, 0.2576, 0.2772, 0.2981],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_death_snip_dmg_hit_2",
+      name: "Death Snip DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.075, 0.0812, 0.0873, 0.0959, 0.1021, 0.1091, 0.119, 0.1288, 0.1386, 0.1491],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_death_snip_dmg_hit_3",
+      name: "Death Snip DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5248, 0.5679, 0.6109, 0.6712, 0.7142, 0.7637, 0.8325, 0.9014, 0.9702, 1.0434],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_death_snip_additional_dmg",
+      name: "Death Snip Additional DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2403, 0.2601, 0.2798, 0.3073, 0.3271, 0.3497, 0.3812, 0.4128, 0.4443, 0.4778],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_death_snip_healing_flat",
+      name: "Death Snip Healing (Flat)",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [600, 672, 750, 840, 948, 1050, 1068, 1092, 1110, 1140],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_death_snip_healing",
+      name: "Death Snip Healing",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.24, 0.2496, 0.2592, 0.2736, 0.2928, 0.312, 0.348, 0.3888, 0.432, 0.504],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_thread_withdrawn_dmg_hit_1",
+      name: "Thread Withdrawn DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0511, 0.0553, 0.0594, 0.0653, 0.0695, 0.0743, 0.081, 0.0877, 0.0944, 0.1015],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_thread_withdrawn_dmg_hit_2",
+      name: "Thread Withdrawn DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2382, 0.2577, 0.2772, 0.3046, 0.3241, 0.3466, 0.3778, 0.4091, 0.4403, 0.4735],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_rending_lunge_dmg_hit_1",
+      name: "Rending Lunge DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0761, 0.0823, 0.0885, 0.0972, 0.1035, 0.1106, 0.1206, 0.1306, 0.1406, 0.1511],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_rending_lunge_dmg_hit_2",
+      name: "Rending Lunge DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4561, 0.4935, 0.5308, 0.5832, 0.6206, 0.6636, 0.7234, 0.7833, 0.8431, 0.9066],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.18, 0.1948, 0.2096, 0.2302, 0.245, 0.262, 0.2856, 0.3092, 0.3328, 0.3579],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.372, 0.4026, 0.4331, 0.4758, 0.5063, 0.5413, 0.5902, 0.639, 0.6878, 0.7396],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_severed_facet_dmg",
+      name: "Severed Facet DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.225, 0.2435, 0.2619, 0.2878, 0.3062, 0.3274, 0.357, 0.3865, 0.416, 0.4474],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_hanging_finality_dmg_hit_1",
+      name: "Hanging Finality DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.06, 0.065, 0.0699, 0.0768, 0.0817, 0.0874, 0.0952, 0.1031, 0.111, 0.1193],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_hanging_finality_dmg_hit_2",
+      name: "Hanging Finality DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.12, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2386],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_hanging_finality_dmg_hit_3",
+      name: "Hanging Finality DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.12, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2386],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.24, 0.2597, 0.2794, 0.307, 0.3266, 0.3493, 0.3808, 0.4122, 0.4437, 0.4772],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_dodgeCounter_dodge_counter_dmg_hit_3",
+      name: "Dodge Counter DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.84, 0.9089, 0.9778, 1.0742, 1.1431, 1.2223, 1.3325, 1.4427, 1.553, 1.6701],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_basicAttack_eye_of_unraveling_retraction_dmg",
+      name: "Eye of Unraveling - Retraction DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.9738, 1.0476, 1.151, 1.2248, 1.3096, 1.4277, 1.5458, 1.6639, 1.7893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_resonanceSkill_eye_of_unraveling_dmg",
+      name: "Eye of Unraveling DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.18, 0.1948, 0.2096, 0.2302, 0.245, 0.262, 0.2856, 0.3092, 0.3328, 0.3579],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_resonanceSkill_serrated_loop_dmg",
+      name: "Serrated Loop DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0878, 0.095, 0.1022, 0.1122, 0.1194, 0.1277, 0.1392, 0.1507, 0.1622, 0.1745],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_resonanceSkill_serrated_loop_hold_dmg",
+      name: "Serrated Loop Hold DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0376, 0.0406, 0.0437, 0.048, 0.0511, 0.0546, 0.0596, 0.0645, 0.0694, 0.0746],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.8, 5.1936, 5.5872, 6.1383, 6.5319, 6.9845, 7.6143, 8.244, 8.8738, 9.5429],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_resonanceLiberation_healing_flat",
+      name: "Healing (Flat)",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [1400, 1568, 1750, 1960, 2212, 2450, 2492, 2548, 2590, 2660],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_resonanceLiberation_healing",
+      name: "Healing",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.56, 0.5824, 0.6048, 0.6384, 0.6832, 0.728, 0.812, 0.9072, 1.008, 1.176],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_blitz_stage_1_dmg",
+      name: "Sawring - Blitz Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0578, 0.0625, 0.0673, 0.0739, 0.0786, 0.0841, 0.0917, 0.0992, 0.1068, 0.1149],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_blitz_stage_2_dmg",
+      name: "Sawring - Blitz Stage 2 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0535, 0.0579, 0.0623, 0.0685, 0.0729, 0.0779, 0.0849, 0.0919, 0.099, 0.1064],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_blitz_stage_2_hold_dmg",
+      name: "Sawring - Blitz Stage 2 Hold DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0535, 0.0579, 0.0623, 0.0685, 0.0729, 0.0779, 0.0849, 0.0919, 0.099, 0.1064],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_blitz_stage_2_discordance_dmg",
+      name: "Sawring - Blitz Stage 2: Discordance DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.018, 0.0195, 0.021, 0.0231, 0.0245, 0.0262, 0.0286, 0.031, 0.0333, 0.0358],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_blitz_stage_3_dmg",
+      name: "Sawring - Blitz Stage 3 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0804, 0.087, 0.0936, 0.1028, 0.1094, 0.117, 0.1275, 0.1381, 0.1486, 0.1598],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_blitz_stage_3_hold_dmg",
+      name: "Sawring - Blitz Stage 3 Hold DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0804, 0.087, 0.0936, 0.1028, 0.1094, 0.117, 0.1275, 0.1381, 0.1486, 0.1598],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_blitz_stage_3_falltone_dmg",
+      name: "Sawring - Blitz Stage 3: Falltone DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.018, 0.0195, 0.021, 0.0231, 0.0245, 0.0262, 0.0286, 0.031, 0.0333, 0.0358],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_dodgeCounter_chainsaw_mode_dodge_counter_dmg",
+      name: "Chainsaw Mode - Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0535, 0.0579, 0.0623, 0.0685, 0.0729, 0.0779, 0.0849, 0.0919, 0.099, 0.1064],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_dodgeCounter_chainsaw_mode_dodge_counter_hold_dmg",
+      name: "Chainsaw Mode - Dodge Counter Hold DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0535, 0.0579, 0.0623, 0.0685, 0.0729, 0.0779, 0.0849, 0.0919, 0.099, 0.1064],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_eradication_dmg_hit_1",
+      name: "Sawring - Eradication DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2592, 0.2805, 0.3018, 0.3315, 0.3528, 0.3772, 0.4112, 0.4452, 0.4792, 0.5154],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_eradication_dmg_hit_2",
+      name: "Sawring - Eradication DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.0368, 1.1219, 1.2069, 1.3259, 1.4109, 1.5087, 1.6447, 1.7808, 1.9168, 2.0613],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_eradication_shield_flat",
+      name: "Sawring - Eradication Shield (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [2000, 2240, 2500, 2800, 3160, 3500, 3560, 3640, 3700, 3800],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_forteCircuit_sawring_eradication_shield",
+      name: "Sawring - Eradication Shield",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.832, 0.864, 0.912, 0.976, 1.04, 1.16, 1.296, 1.44, 1.68],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Chisa_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.48, 0.5194, 0.5588, 0.6139, 0.6532, 0.6985, 0.7615, 0.8244, 0.8874, 0.9543],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Chisa_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Chisa Inescapable FateWhen a Resonator in the team defeats a target marked by Unseen Snare, the Cooldown of Chisa's Resonance Skill Eye of Unraveling is reset, triggered up to once every 3s.All Ends HereCasting Intro Skill Reverberance - Return or Resonance Liberation Moment of Nihility grants 20% Havoc DMG Bonus and 20% Healing Bonus for 12s.",
+    },
+    {
+      id: "Chisa_passive_1",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Resonators in the team with Thread of Bane defeat a target marked by Unseen Snare, Chisa gains Sight of Unraveling, lasting 3s.",
+    },
+    {
+      id: "Chisa_passive_2",
+      name: "While",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "While in Sight of Unraveling, Chisa inflicts Unseen Snare that lasts for 30s on the targets damaged by Resonators in the team with Thread of Bane.",
+    },
+    {
+      id: "Chisa_s1",
+      name: "S1: Wandering Through the Desolate Corridors",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Chisa is immune to interruption during Sawring - Blitz,  Sawring - Eradication, and Chainsaw Mode - Dodge Counter  Inflicting Unseen Snare grants the following additional effects: - Chisa's ATK is increased by 30% for 15s. - Deal fixed 61803 points of Havoc DMG. The target's HP can be reduced to 61.80% at most and each target can take this damage only once. This instance of damage is considered Basic Attack DMG that does not bear any effect from damage bonuses.",
+    },
+    {
+      id: "Chisa_s2",
+      name: "S2: Into the Web of Endless Bonds",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Ignore 10% of the target's Havoc RES when dealing damage. Nearby Resonators in the team with Thread of Bane gain 50% All-Attribute DMG Bonus.",
+    },
+    {
+      id: "Chisa_s3",
+      name: "S3: Across the Confusion of the Long Night",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of Sawring - Blitz, Chainsaw Mode - Dodge Counter and Sawring - Eradication are increased by 120%. This effect is mutually stackable with that of Woven Myriad - Convergence. The bonus DMG Multiplier for Sawring - Eradication granted by Sawring- Blitz and Chainsaw Mode - Dodge Counter when Ring of Chainsaw is consumed is increased by 120%. This effect is mutually stackable with that of Woven Myriad - Convergence. The Vibration Strength Reduction Rate of Sawring - Blitz, Chainsaw Mode - Dodge Counter and Sawring - Eradication is increased by 50%.",
+    },
+    {
+      id: "Chisa_s4",
+      name: "S4: Severing the Endless Cycle of Tragic Fate",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The effect of Unseen Snare becomes: When targets marked by Unseen Snare take direct damage from Resonators, Chisa inflicts 1  of Havoc Bane on them. This effect is triggered up to once every 1s.",
+    },
+    {
+      id: "Chisa_s5",
+      name: "S5: Thousands of Lights to Guide the Way Home",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation Moment of Nihility gains 100% DMG Bonus. Lifethread - Glide costs 50% less Lifethread - Jetstream.",
+    },
+    {
+      id: "Chisa_s6",
+      name: "S6: Thus, Hope is Rekindled with the Rising Dawn",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Chisa takes a fatal blow during Sawring - Blitz, Sawring - Eradication, and Chainsaw Mode - Dodge Counter, she will remain standing with at least 1 HP.  Unseen Snare becomes Unseen Snare - Finality, which has the following effects: - Unseen Snare - Finality has all the effects of Unseen Snare. - Targets affected by Unseen Snare - Finality takes 30% Amplified DMG from Negative Statuses. - Targets affected by Unseen Snare - Finality takes 40% increased DMG from Chisa.",
+    },
+  ],
+  mechanics: [],
+}

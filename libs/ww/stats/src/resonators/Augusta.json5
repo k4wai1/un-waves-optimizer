@@ -1,0 +1,559 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Augusta | elemento Electro | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Augusta",
+    name: "Augusta",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Broadblade",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 824, "20": 2143, "40": 4081, "50": 5325, "60": 6568, "70": 7812, "80": 9056, "90": 10300 },
+    atk: { "1": 37, "20": 96, "40": 186, "50": 245, "60": 304, "70": 363, "80": 412, "90": 462 },
+    def: { "1": 91, "20": 233, "40": 442, "50": 576, "60": 710, "70": 844, "80": 978, "90": 1112 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Augusta_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.289, 0.3127, 0.3364, 0.3696, 0.3933, 0.4206, 0.4585, 0.4964, 0.5343, 0.5746],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.337, 0.3647, 0.3923, 0.431, 0.4586, 0.4904, 0.5346, 0.5788, 0.6231, 0.67],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.33, 0.3571, 0.3842, 0.4221, 0.4491, 0.4802, 0.5235, 0.5668, 0.6101, 0.6561],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3251, 0.3518, 0.3784, 0.4157, 0.4424, 0.473, 0.5157, 0.5583, 0.601, 0.6463],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_heavyAttack_heavy_attack_steelclash_dmg",
+      name: "Heavy Attack: Steelclash DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2334, 0.2525, 0.2716, 0.2984, 0.3176, 0.3396, 0.3702, 0.4008, 0.4314, 0.4639],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.337, 0.3647, 0.3923, 0.431, 0.4586, 0.4904, 0.5346, 0.5788, 0.6231, 0.67],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_plungingAttack_midair_dodge_counter_dmg",
+      name: "Mid-air Dodge Counter DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_heavyAttack_heavy_attack_thunderoar_backstep_dmg",
+      name: "Heavy Attack - Thunderoar: Backstep DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.27, 0.2922, 0.3143, 0.3453, 0.3675, 0.3929, 0.4284, 0.4638, 0.4992, 0.5368],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_heavyAttack_heavy_attack_thunderoar_spinslash_dmg",
+      name: "Heavy Attack - Thunderoar: Spinslash DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7128, 0.7713, 0.8297, 0.9116, 0.97, 1.0372, 1.1308, 1.2243, 1.3178, 1.4172],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_heavyAttack_heavy_attack_thunderoar_uppercut_dmg",
+      name: "Heavy Attack - Thunderoar: Uppercut DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.9738, 1.0476, 1.151, 1.2248, 1.3096, 1.4277, 1.5458, 1.6639, 1.7893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_dodgeCounter_dodge_counter_heavy_attack_steelclash_dm",
+      name: "Dodge Counter - Heavy Attack: Steelclash DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2334, 0.2525, 0.2716, 0.2984, 0.3176, 0.3396, 0.3702, 0.4008, 0.4314, 0.4639],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_dodgeCounter_dodge_counter_thunderoar_backstep_dmg",
+      name: "Dodge Counter - Thunderoar: Backstep DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.27, 0.2922, 0.3143, 0.3453, 0.3675, 0.3929, 0.4284, 0.4638, 0.4992, 0.5368],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1, 1.1902, 1.2804, 1.4067, 1.4969, 1.6007, 1.745, 1.8893, 2.0336, 2.187],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_resonance_liberation_sword_of_eternal_oa",
+      name: "Resonance Liberation - Sword of Eternal Oath DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1659, 0.1796, 0.1932, 0.2122, 0.2258, 0.2415, 0.2632, 0.285, 0.3067, 0.3299],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_resonance_liberation_sword_of_eternal_oa_1",
+      name: "Resonance Liberation - Sword of Eternal Oath DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6636, 0.7181, 0.7725, 0.8487, 0.9031, 0.9657, 1.0527, 1.1398, 1.2268, 1.3194],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_resonance_liberation_sword_of_eternal_oa_1_2",
+      name: "Resonance Liberation - Sword of Eternal Oath DMG - Hit 3",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1659, 0.1796, 0.1932, 0.2122, 0.2258, 0.2415, 0.2632, 0.285, 0.3067, 0.3299],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_resonance_liberation_sword_of_eternal_oa_1_2_3",
+      name: "Resonance Liberation - Sword of Eternal Oath DMG - Hit 4",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.8756, 3.1114, 3.3472, 3.6774, 3.9132, 4.1843, 4.5616, 4.9389, 5.3162, 5.717],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_sublime_is_the_sun_sunborne_dmg",
+      name: "Sublime is the Sun - Sunborne DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6, 0.6492, 0.6984, 0.7673, 0.8165, 0.8731, 0.9518, 1.0305, 1.1093, 1.1929],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_sublime_is_the_sun_everbright_protector_",
+      name: "Sublime is the Sun - Everbright Protector DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.2, 1.2984, 1.3968, 1.5346, 1.633, 1.7462, 1.9036, 2.061, 2.2185, 2.3858],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_sublime_is_the_sun_everbright_protector__1",
+      name: "Sublime is the Sun - Everbright Protector DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.5, 4.869, 5.238, 5.7546, 6.1236, 6.548, 7.1384, 7.7288, 8.3192, 8.9465],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_resonanceLiberation_sublime_is_the_sun_everbright_protector__1_2",
+      name: "Sublime is the Sun - Everbright Protector DMG - Hit 3",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.03, 0.0325, 0.035, 0.0384, 0.0409, 0.0437, 0.0476, 0.0516, 0.0555, 0.0597],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_forteCircuit_resonance_skill_undying_sunlight_strike_",
+      name: "Resonance Skill - Undying Sunlight: Strike DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7, 0.7574, 0.8148, 0.8952, 0.9526, 1.0186, 1.1105, 1.2023, 1.2941, 1.3917],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_forteCircuit_resonance_skill_undying_sunlight_leap_dm",
+      name: "Resonance Skill - Undying Sunlight: Leap DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.12, 1.2119, 1.3037, 1.4323, 1.5241, 1.6298, 1.7767, 1.9236, 2.0706, 2.2267],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_forteCircuit_resonance_skill_undying_sunlight_leap_dm_1",
+      name: "Resonance Skill - Undying Sunlight: Leap DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.14, 0.1515, 0.163, 0.1791, 0.1906, 0.2038, 0.2221, 0.2405, 0.2589, 0.2784],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_plungingAttack_resonance_skill_undying_sunlight_plunge_",
+      name: "Resonance Skill - Undying Sunlight: Plunge DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4355, 0.4713, 0.507, 0.557, 0.5927, 0.6337, 0.6909, 0.748, 0.8052, 0.8659],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_plungingAttack_resonance_skill_undying_sunlight_plunge__1",
+      name: "Resonance Skill - Undying Sunlight: Plunge DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.9195, 4.2409, 4.5623, 5.0123, 5.3337, 5.7033, 6.2176, 6.7318, 7.246, 7.7924],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_plungingAttack_midair_dodge_counter_undying_sunlight_st",
+      name: "Mid-air Dodge Counter - Undying Sunlight: Strike DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7, 0.7574, 0.8148, 0.8952, 0.9526, 1.0186, 1.1105, 1.2023, 1.2941, 1.3917],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Augusta_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5, 0.541, 0.582, 0.6394, 0.6804, 0.7276, 0.7932, 0.8588, 0.9244, 0.9941],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Augusta_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillDeal Electro DMG.Show Skill DetailsLevel 20Skill DMG181.41%*2Concerto Regen10Battlesong of the Unyielding",
+    },
+    {
+      id: "Augusta_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Augusta Glory's FavorWhen Augusta deals damage, she gains a shield equal to 350 + 2.5% of her Max HP for 5s, triggered once every 0.5s.",
+    },
+    {
+      id: "Augusta_passive_2",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect is unstackable.",
+    },
+    {
+      id: "Augusta_passive_3",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This Shield will not be passed on to the incoming Resonator.Blazing ValorWhen Augusta is out of combat for over 4s, she gains the following effects that can be triggered once every 4s:\n- If Majesty is less than 1 stack, restore 1 stack.",
+    },
+    {
+      id: "Augusta_passive_4",
+      name: "Passive 4",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- Fully restore Crown of Wills.",
+    },
+    {
+      id: "Augusta_s1",
+      name: "S1: Stained in Scorched Earth",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "- Each stack of Crown of Wills additionally increases Augusta's Crit. DMG by 15%.  - The max stack of Crown of Wills is increased to 2. - Casting Intro Skill - Stride of Goldenflare now grants 1  of Crown of Wills.  - Resonance Skill - Undying Sunlight: Strike, Resonance Skill - Undying Sunlight: Leap, and Resonance Skill - Undying Sunlight: Plunge are now immune to interruption.",
+    },
+    {
+      id: "Augusta_s2",
+      name: "S2: Cleansed in Crimson War",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "- Crown of Wills provides additional effects: Each stack increases Augusta's Crit. Rate by 20%. - For every 1% of Crit. Rate over 100%, Augusta gains 2% Crit. DMG increase, up to 100%.",
+    },
+    {
+      id: "Augusta_s3",
+      name: "S3: Forged in Rot and Ruin",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The following skills have their DMG Multiplier increased by 25%:  - Heavy Attack - Thunderoar: Backstep, Dodge Counter - Thunderoar: Backstep, Heavy Attack - Thunderoar: Spinslash, Heavy Attack - Thunderoar: Uppercut. - Resonance Skill - Undying Sunlight: Plunge. - Resonance Liberation - Sublime is the Sun: Sunborne, Resonance Liberation - Sublime is the Sun: Everbright Protector.",
+    },
+    {
+      id: "Augusta_s4_ascent_in_sun_and_glory",
+      name: "S4: Ascent in Sun and Glory",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Casting Intro Skill - Stride of Goldenflare increases the ATK of all Resonators in the team by 20% for 30s.",
+    },
+    {
+      id: "Augusta_s5_unshaken_in_wrathful_tides",
+      name: "S5: Unshaken in Wrathful Tides",
+      operation: "add",
+      value: [0.5],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.5],
+        },
+      ],
+      descriptionTemplate: "The Shield provided by Inherent Skill - Glory's Favor is increased by 50%.",
+    },
+    {
+      id: "Augusta_s6",
+      name: "S6: Engraved in Radiant Light",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "- Augusta can now hold up to 4 stacks of Crown of Wills.  - For every 1% of Crit. Rate over 150%, Augusta gains 2% Crit. DMG increase, up to 50%. - When Augusta performs Heavy Attack - Thunderoar: Spinslash or Heavy Attack - Thunderoar: Uppercut, she obtains 2  of Crown of Wills. Augusta can only obtain 2  of Crown of Wills every 1s via Engraved in Radiant Light.  - While casting Heavy Attack - Thunderoar: Spinslash or Heavy Attack - Thunderoar: Uppercut, Thunder Rage is triggered at the spot, dealing two instances of Electro DMG, with each instance equal to 100% of Augusta's ATK, considered as Heavy Attack DMG.",
+    },
+  ],
+  mechanics: [],
+}

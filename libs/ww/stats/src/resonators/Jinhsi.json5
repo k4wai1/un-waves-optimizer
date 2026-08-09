@@ -1,0 +1,670 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Jinhsi | elemento Spectro | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Jinhsi",
+    name: "Jinhsi",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Broadblade",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 866, "20": 2252, "40": 4289, "50": 5596, "60": 6903, "70": 8210, "80": 9517, "90": 10825 },
+    atk: { "1": 33, "20": 85, "40": 166, "50": 218, "60": 271, "70": 323, "80": 368, "90": 412 },
+    def: { "1": 103, "20": 264, "40": 500, "50": 652, "60": 803, "70": 955, "80": 1107, "90": 1258 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Jinhsi_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3343, 0.3618, 0.3892, 0.4275, 0.455, 0.4865, 0.5303, 0.5742, 0.6181, 0.6647],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_basicAttack_stage_2_dmg_hit_1",
+      name: "Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1961, 0.2122, 0.2283, 0.2508, 0.2669, 0.2854, 0.3111, 0.3368, 0.3626, 0.3899],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_basicAttack_stage_2_dmg_hit_2",
+      name: "Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0981, 0.1061, 0.1142, 0.1254, 0.1335, 0.1427, 0.1556, 0.1684, 0.1813, 0.195],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_basicAttack_stage_3_dmg_hit_1",
+      name: "Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0536, 0.058, 0.0624, 0.0685, 0.0729, 0.078, 0.085, 0.092, 0.099, 0.1065],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_basicAttack_stage_3_dmg_hit_2",
+      name: "Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1607, 0.1739, 0.187, 0.2055, 0.2186, 0.2338, 0.2549, 0.2759, 0.297, 0.3194],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3174, 0.3434, 0.3694, 0.4058, 0.4319, 0.4618, 0.5034, 0.545, 0.5867, 0.6309],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.476, 0.5151, 0.5541, 0.6087, 0.6478, 0.6926, 0.7551, 0.8175, 0.88, 0.9463],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_heavyAttack_heavy_attack_dmg_hit_1",
+      name: "Heavy Attack DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.12, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2386],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_heavyAttack_heavy_attack_dmg_hit_2",
+      name: "Heavy Attack DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.18, 0.1948, 0.2096, 0.2302, 0.245, 0.262, 0.2856, 0.3092, 0.3328, 0.3579],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_heavyAttack_heavy_attack_dmg_hit_3",
+      name: "Heavy Attack DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.42, 0.4545, 0.4889, 0.5371, 0.5716, 0.6112, 0.6663, 0.7214, 0.7765, 0.8351],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_plungingAttack_midair_attack_dmg_hit_1",
+      name: "Mid-air Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.062, 0.0671, 0.0722, 0.0793, 0.0844, 0.0903, 0.0984, 0.1065, 0.1147, 0.1233],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_plungingAttack_midair_attack_dmg_hit_2",
+      name: "Mid-air Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.124, 0.1342, 0.1444, 0.1586, 0.1688, 0.1805, 0.1968, 0.213, 0.2293, 0.2466],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_plungingAttack_midair_attack_dmg_hit_3",
+      name: "Mid-air Attack DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.434, 0.4696, 0.5052, 0.555, 0.5906, 0.6316, 0.6885, 0.7454, 0.8024, 0.8629],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0738, 0.0799, 0.0859, 0.0944, 0.1005, 0.1074, 0.1171, 0.1268, 0.1365, 0.1468],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2214, 0.2396, 0.2577, 0.2832, 0.3013, 0.3222, 0.3512, 0.3803, 0.4093, 0.4402],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_resonanceSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0979, 0.106, 0.114, 0.1252, 0.1332, 0.1425, 0.1553, 0.1682, 0.181, 0.1946],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_resonanceSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3915, 0.4237, 0.4558, 0.5007, 0.5328, 0.5697, 0.6211, 0.6725, 0.7238, 0.7784],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_resonanceSkill_overflowing_radiance_dmg_hit_1",
+      name: "Overflowing Radiance DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0496, 0.0537, 0.0578, 0.0635, 0.0675, 0.0722, 0.0787, 0.0852, 0.0917, 0.0987],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_resonanceSkill_overflowing_radiance_dmg_hit_2",
+      name: "Overflowing Radiance DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1488, 0.1611, 0.1733, 0.1903, 0.2025, 0.2166, 0.2361, 0.2556, 0.2751, 0.2959],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_resonanceSkill_overflowing_radiance_dmg_hit_3",
+      name: "Overflowing Radiance DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1984, 0.2147, 0.231, 0.2538, 0.27, 0.2887, 0.3148, 0.3408, 0.3668, 0.3945],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_resonanceLiberation_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.514, 2.7202, 2.9263, 3.215, 3.4211, 3.6582, 3.988, 4.3178, 4.6477, 4.9981],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_resonanceLiberation_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [5.866, 6.3471, 6.8281, 7.5015, 7.9825, 8.5357, 9.3053, 10.0749, 10.8445, 11.6622],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_1_dmg",
+      name: "Incarnation - Basic Attack 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4458, 0.4823, 0.5189, 0.57, 0.6066, 0.6486, 0.7071, 0.7656, 0.8241, 0.8862],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_2_dmg_hit_1",
+      name: "Incarnation - Basic Attack 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3922, 0.4244, 0.4565, 0.5016, 0.5337, 0.5707, 0.6222, 0.6736, 0.7251, 0.7797],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_2_dmg_hit_2",
+      name: "Incarnation - Basic Attack 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1308, 0.1415, 0.1522, 0.1672, 0.1779, 0.1903, 0.2074, 0.2246, 0.2417, 0.2599],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_2_dmg_hit_3",
+      name: "Incarnation - Basic Attack 2 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1308, 0.1415, 0.1522, 0.1672, 0.1779, 0.1903, 0.2074, 0.2246, 0.2417, 0.2599],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_3_dmg_hit_1",
+      name: "Incarnation - Basic Attack 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5002, 0.5412, 0.5823, 0.6397, 0.6807, 0.7279, 0.7935, 0.8591, 0.9247, 0.9944],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_3_dmg_hit_2",
+      name: "Incarnation - Basic Attack 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3335, 0.3608, 0.3882, 0.4265, 0.4538, 0.4853, 0.529, 0.5728, 0.6165, 0.663],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_4_dmg_hit_1",
+      name: "Incarnation - Basic Attack 4 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0939, 0.1016, 0.1093, 0.1201, 0.1278, 0.1367, 0.149, 0.1613, 0.1736, 0.1867],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_incarnation_basic_attack_4_dmg_hit_2",
+      name: "Incarnation - Basic Attack 4 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3756, 0.4064, 0.4372, 0.4803, 0.5111, 0.5465, 0.5958, 0.6451, 0.6944, 0.7467],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_heavyAttack_incarnation_heavy_attack_dmg_hit_1",
+      name: "Incarnation - Heavy Attack DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.24, 0.2597, 0.2794, 0.307, 0.3266, 0.3493, 0.3808, 0.4122, 0.4437, 0.4772],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_heavyAttack_incarnation_heavy_attack_dmg_hit_2",
+      name: "Incarnation - Heavy Attack DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.56, 0.606, 0.6519, 0.7162, 0.7621, 0.8149, 0.8884, 0.9618, 1.0353, 1.1134],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_dodgeCounter_incarnation_dodge_counter_dmg_hit_1",
+      name: "Incarnation - Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2208, 0.2389, 0.257, 0.2823, 0.3004, 0.3212, 0.3502, 0.3791, 0.4081, 0.4389],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_dodgeCounter_incarnation_dodge_counter_dmg_hit_2",
+      name: "Incarnation - Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1656, 0.1792, 0.1927, 0.2117, 0.2253, 0.2409, 0.2627, 0.2844, 0.3061, 0.3292],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_dodgeCounter_incarnation_dodge_counter_dmg_hit_3",
+      name: "Incarnation - Dodge Counter DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5519, 0.5971, 0.6424, 0.7057, 0.751, 0.803, 0.8754, 0.9478, 1.0202, 1.0971],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_crescent_divinity_dmg_hit_1",
+      name: "Crescent Divinity DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5068, 0.5484, 0.59, 0.6481, 0.6897, 0.7375, 0.804, 0.8705, 0.937, 1.0076],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_crescent_divinity_dmg_hit_2",
+      name: "Crescent Divinity DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3801, 0.4113, 0.4425, 0.4861, 0.5173, 0.5531, 0.603, 0.6529, 0.7027, 0.7557],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_crescent_divinity_dmg_hit_3",
+      name: "Crescent Divinity DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.267, 1.3709, 1.4748, 1.6203, 1.7242, 1.8437, 2.0099, 2.1761, 2.3424, 2.519],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_illuminous_epiphany_solar_flare_dmg",
+      name: "Illuminous Epiphany: Solar Flare DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_forteCircuit_illuminous_epiphany_stella_glamor_dmg",
+      name: "Illuminous Epiphany: Stella Glamor DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.75, 1.8935, 2.037, 2.2379, 2.3814, 2.5465, 2.7761, 3.0057, 3.2353, 3.4792],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jinhsi_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.8656, 0.9312, 1.0231, 1.0887, 1.1641, 1.2691, 1.374, 1.479, 1.5905],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Jinhsi_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Spectro DMG.Show Skill DetailsLevel 19Skill DMG277.13%Concerto Regen10Temporal Bender",
+    },
+    {
+      id: "Jinhsi_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillSummoning the power homologous with the Sentinel, Jinhsi may now gain Incandescence via Eras in Unity from damage of the same Attribute more effectively, at 1 time(s) every 1s for 20s.",
+    },
+    {
+      id: "Jinhsi_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Jinhsi Radiant SurgeJinhsi gains 20% Spectro DMG Bonus.Converged FlashDMG Multiplier of Intro Skill Loong's Halo is increased by 50%.",
+    },
+    {
+      id: "Jinhsi_s1",
+      name: "S1: Abyssal Ascension",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Basic Attack \"Incarnation - Basic Attack\" or Resonance Skill Crescent Divinity, Jinhsi gains one stack of Herald of Revival, stacking up to 4 times and lasting for 6s. When casting Resonance Skill Illuminous Epiphany, Jinhsi consumes all stacks of Herald of Revival. Each stack increases the damage of Resonance Skill Illuminous Epiphany by 20%.",
+    },
+    {
+      id: "Jinhsi_s2",
+      name: "S2: Chronofrost Repose",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Jinhsi restores 50 Incandescence while staying out of combat for more than 4s. This effect can only be triggered 1 time(s) every 4s.",
+    },
+    {
+      id: "Jinhsi_s3",
+      name: "S3: Celestial Incarnate",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Jinhsi gains one stack of Immortal's Descendancy after casting Intro Skill Loong's Halo. Each stack of Immortal's Descendancy increases Jinhsi's ATK by 25%, stacking up to 2 time(s) and lasting for 20s.",
+    },
+    {
+      id: "Jinhsi_s4",
+      name: "S4: Benevolent Grace",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Jinhsi casts Resonance Liberation Purge of Light or Resonance Skill Illuminous Epiphany, all nearby Resonators on the team gain 20% Attribute DMG Bonus for 20s.",
+    },
+    {
+      id: "Jinhsi_s5_frostfire_illumination",
+      name: "S5: Frostfire Illumination",
+      operation: "add",
+      value: [1.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1.2],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Purge of Light is increased by 120%.",
+    },
+    {
+      id: "Jinhsi_s6",
+      name: "S6: Thawing Triumph",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Resonance Skill Illuminous Epiphany is increased by 45% and the additional DMG Multiplier gained by consuming Incandescence is increased by 45%.",
+    },
+  ],
+  mechanics: [],
+}

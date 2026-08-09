@@ -1,0 +1,346 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Yangyang | elemento Aero | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Yangyang",
+    name: "Yangyang",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Aero",
+    weaponType: "Sword",
+    tags: ["aero"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 816, "20": 2122, "40": 4041, "50": 5273, "60": 6505, "70": 7736, "80": 8968, "90": 10200 },
+    atk: { "1": 20, "20": 52, "40": 100, "50": 132, "60": 164, "70": 196, "80": 223, "90": 250 },
+    def: { "1": 90, "20": 230, "40": 437, "50": 570, "60": 702, "70": 835, "80": 967, "90": 1099 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Yangyang_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.225, 0.2434, 0.2618, 0.2877, 0.3061, 0.3273, 0.3569, 0.3864, 0.4159, 0.4473],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3836, 0.4082, 0.4365, 0.4758, 0.5152, 0.5546, 0.5964],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2355, 0.2548, 0.2741, 0.3011, 0.3204, 0.3426, 0.3735, 0.4044, 0.4353, 0.4681],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2986, 0.3231, 0.3476, 0.3819, 0.4064, 0.4345, 0.4737, 0.5129, 0.552, 0.5936],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3981, 0.4307, 0.4633, 0.509, 0.5417, 0.5792, 0.6315, 0.6837, 0.7359, 0.7914],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1278, 0.136, 0.1455, 0.1586, 0.1717, 0.1848, 0.1988],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.465, 0.5031, 0.5412, 0.5946, 0.6327, 0.6766, 0.7376, 0.7986, 0.8596, 0.9244],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_basicAttack_zephyr_song_damage",
+      name: "Zephyr Song Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5362, 0.5802, 0.6241, 0.6857, 0.7297, 0.7802, 0.8506, 0.921, 0.9913, 1.0661],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.438, 0.4739, 0.5098, 0.5601, 0.596, 0.6373, 0.6947, 0.7522, 0.8097, 0.8707],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_resonanceSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1737, 0.1879, 0.2021, 0.2221, 0.2363, 0.2527, 0.2755, 0.2983, 0.3211, 0.3453],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_resonanceSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.0422, 1.1276, 1.2131, 1.3327, 1.4182, 1.5165, 1.6532, 1.7899, 1.9267, 2.0719],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_resonanceLiberation_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2343, 0.2535, 0.2727, 0.2996, 0.3188, 0.3409, 0.3717, 0.4024, 0.4332, 0.4658],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_resonanceLiberation_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.8746, 2.0283, 2.1821, 2.3973, 2.551, 2.7278, 2.9737, 3.2197, 3.4656, 3.727],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_forteCircuit_stormy_strike_damage",
+      name: "Stormy Strike Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1912, 0.2069, 0.2226, 0.2445, 0.2602, 0.2782, 0.3033, 0.3284, 0.3535, 0.3802],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_forteCircuit_feather_release_damage_hit_1",
+      name: "Feather Release Damage - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1093, 0.1183, 0.1272, 0.1398, 0.1488, 0.1591, 0.1734, 0.1878, 0.2021, 0.2173],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_forteCircuit_feather_release_damage_hit_2",
+      name: "Feather Release Damage - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6378, 0.6901, 0.7424, 0.8157, 0.868, 0.9281, 1.0118, 1.0955, 1.1792, 1.2681],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yangyang_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5115, 0.5443, 0.582, 0.6345, 0.687, 0.7394, 0.7952],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Yangyang_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillYangyang sends the target into the air, dealing Aero DMG.Show Skill DetailsLevel 20Skill DMG145.12%*2Concerto Regen10Whispering Breeze",
+    },
+    {
+      id: "Yangyang_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillRestore 4 Resonance Energy per second for 5s for the incoming Resonator.",
+    },
+    {
+      id: "Yangyang_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Yangyang CompassionYangyang recovers 30 STA after she casts a Mid-air Attack Feather Release.Lazuline MercyYangyang's Aero DMG Bonus is increased by 8% for 8s after casting Intro Skill Cerulean Song.",
+    },
+    {
+      id: "Yangyang_s3",
+      name: "S3: Nature Sings in Symphony",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Skill DMG Bonus is increased by 40%. The Wind Field's pulling effect on surrounding targets is enhanced, and the pulling range is expanded by 33%.",
+    },
+    {
+      id: "Yangyang_s4",
+      name: "S4: Close Your Eyes and Listen in",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Mid-air Attack Feather Release's damage is increased by 95%.",
+    },
+    {
+      id: "Yangyang_s5",
+      name: "S5: Winds Whisper in Harmony",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation Wind Spirals's damage is increased by 85%.",
+    },
+    {
+      id: "Yangyang_s6",
+      name: "S6: A Tribute to Life's Sweet Hymn",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After casting Mid-air Attack Feather Release, the ATK of all team members is increased by 20% for 20s.",
+    },
+  ],
+  mechanics: [],
+}

@@ -1,0 +1,883 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Yangyang: Xuanling | elemento Havoc | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "YangyangXuanling",
+    name: "Yangyang: Xuanling",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Sword",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 882, "20": 2294, "40": 4368, "50": 5699, "60": 7031, "70": 8362, "80": 9693, "90": 11025 },
+    atk: { "1": 34, "20": 88, "40": 171, "50": 225, "60": 279, "70": 333, "80": 379, "90": 425 },
+    def: { "1": 94, "20": 241, "40": 456, "50": 595, "60": 733, "70": 872, "80": 1010, "90": 1148 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_1_",
+      name: "Basic Attack - Azure Sword Stance Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.24, 0.2597, 0.2794, 0.307, 0.3266, 0.3493, 0.3808, 0.4122, 0.4437, 0.4772],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_2_",
+      name: "Basic Attack - Azure Sword Stance Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1013, 0.1096, 0.1179, 0.1296, 0.1379, 0.1474, 0.1607, 0.174, 0.1873, 0.2014],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_2__1",
+      name: "Basic Attack - Azure Sword Stance Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1013, 0.1096, 0.1179, 0.1296, 0.1379, 0.1474, 0.1607, 0.174, 0.1873, 0.2014],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_2__1_2",
+      name: "Basic Attack - Azure Sword Stance Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3039, 0.3288, 0.3537, 0.3886, 0.4135, 0.4422, 0.482, 0.5219, 0.5618, 0.6041],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_3_",
+      name: "Basic Attack - Azure Sword Stance Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.152, 0.1644, 0.1769, 0.1943, 0.2068, 0.2211, 0.241, 0.261, 0.2809, 0.3021],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_3__1",
+      name: "Basic Attack - Azure Sword Stance Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3545, 0.3836, 0.4127, 0.4534, 0.4824, 0.5159, 0.5624, 0.6089, 0.6554, 0.7048],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_4_",
+      name: "Basic Attack - Azure Sword Stance Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0934, 0.1011, 0.1087, 0.1194, 0.1271, 0.1359, 0.1481, 0.1604, 0.1726, 0.1857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_4__1",
+      name: "Basic Attack - Azure Sword Stance Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0934, 0.1011, 0.1087, 0.1194, 0.1271, 0.1359, 0.1481, 0.1604, 0.1726, 0.1857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_azure_sword_stance_stage_4__1_2",
+      name: "Basic Attack - Azure Sword Stance Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7469, 0.8082, 0.8694, 0.9552, 1.0164, 1.0868, 1.1848, 1.2828, 1.3808, 1.4849],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage_",
+      name: "Basic Attack - Feather Sword Stance Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1",
+      name: "Basic Attack - Feather Sword Stance Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1_2",
+      name: "Basic Attack - Feather Sword Stance Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1688, 0.1827, 0.1965, 0.2159, 0.2298, 0.2457, 0.2678, 0.29, 0.3121, 0.3356],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1_2_3",
+      name: "Basic Attack - Feather Sword Stance Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0748, 0.0809, 0.087, 0.0956, 0.1017, 0.1088, 0.1186, 0.1284, 0.1382, 0.1486],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1_2_3_4",
+      name: "Basic Attack - Feather Sword Stance Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0374, 0.0405, 0.0435, 0.0478, 0.0509, 0.0544, 0.0593, 0.0642, 0.0691, 0.0743],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1_2_3_4_5",
+      name: "Basic Attack - Feather Sword Stance Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1868, 0.2022, 0.2175, 0.2389, 0.2542, 0.2719, 0.2964, 0.3209, 0.3454, 0.3714],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1_2_3_4_5_6",
+      name: "Basic Attack - Feather Sword Stance Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.36, 0.3896, 0.4191, 0.4604, 0.4899, 0.5239, 0.5711, 0.6183, 0.6656, 0.7158],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1_2_3_4_5_6_7",
+      name: "Basic Attack - Feather Sword Stance Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.36, 0.3896, 0.4191, 0.4604, 0.4899, 0.5239, 0.5711, 0.6183, 0.6656, 0.7158],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_basicAttack_basic_attack_feather_sword_stance_stage__1_2_3_4_5_6_7_8",
+      name: "Basic Attack - Feather Sword Stance Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.48, 0.5194, 0.5588, 0.6139, 0.6532, 0.6985, 0.7615, 0.8244, 0.8874, 0.9543],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_plungingAttack_midair_attack_azure_sword_stance_dmg",
+      name: "Mid-air Attack - Azure Sword Stance DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.496, 0.5367, 0.5774, 0.6343, 0.675, 0.7218, 0.7869, 0.8519, 0.917, 0.9861],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_plungingAttack_midair_attack_feather_sword_stance_dmg",
+      name: "Mid-air Attack - Feather Sword Stance DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.496, 0.5367, 0.5774, 0.6343, 0.675, 0.7218, 0.7869, 0.8519, 0.917, 0.9861],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_azure_sword_stance_dmg_hit",
+      name: "Dodge Counter - Azure Sword Stance DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1973, 0.2135, 0.2297, 0.2523, 0.2685, 0.2871, 0.313, 0.3389, 0.3648, 0.3923],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_azure_sword_stance_dmg_hit_1",
+      name: "Dodge Counter - Azure Sword Stance DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1973, 0.2135, 0.2297, 0.2523, 0.2685, 0.2871, 0.313, 0.3389, 0.3648, 0.3923],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_azure_sword_stance_dmg_hit_1_2",
+      name: "Dodge Counter - Azure Sword Stance DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5919, 0.6404, 0.689, 0.7569, 0.8054, 0.8612, 0.9389, 1.0165, 1.0942, 1.1767],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_feather_sword_stance_dmg",
+      name: "Dodge Counter - Feather Sword Stance DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3288, 0.3558, 0.3828, 0.4205, 0.4475, 0.4785, 0.5216, 0.5648, 0.6079, 0.6537],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_resonanceSkill_sword_stance_switch_azure_dmg_hit_1",
+      name: "Sword Stance Switch: Azure DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3519, 0.3807, 0.4096, 0.45, 0.4788, 0.512, 0.5582, 0.6043, 0.6505, 0.6995],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_resonanceSkill_sword_stance_switch_azure_dmg_hit_2",
+      name: "Sword Stance Switch: Azure DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0782, 0.0846, 0.0911, 0.1, 0.1064, 0.1138, 0.1241, 0.1343, 0.1446, 0.1555],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_resonanceSkill_sword_stance_switch_feather_dmg",
+      name: "Sword Stance Switch: Feather DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1688, 0.1827, 0.1965, 0.2159, 0.2298, 0.2457, 0.2678, 0.29, 0.3121, 0.3356],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_resonanceLiberation_hush_of_a_thousand_voices_dmg",
+      name: "Hush of a Thousand Voices DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [10, 10.82, 11.64, 12.788, 13.608, 14.551, 15.863, 17.175, 18.487, 19.881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_resonanceLiberation_shadow_of_xuanling_dmg",
+      name: "Shadow of Xuanling DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.7, 1.8394, 1.9788, 2.174, 2.3134, 2.4737, 2.6968, 2.9198, 3.1428, 3.3798],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_resonance_skill_sword_stance_flow_azure_",
+      name: "Resonance Skill - Sword Stance Flow: Azure DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3519, 0.3807, 0.4096, 0.45, 0.4788, 0.512, 0.5582, 0.6043, 0.6505, 0.6995],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_resonance_skill_sword_stance_flow_azure__1",
+      name: "Resonance Skill - Sword Stance Flow: Azure DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0782, 0.0846, 0.0911, 0.1, 0.1064, 0.1138, 0.1241, 0.1343, 0.1446, 0.1555],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_resonance_skill_sword_stance_flow_feathe",
+      name: "Resonance Skill - Sword Stance Flow: Feather DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1688, 0.1827, 0.1965, 0.2159, 0.2298, 0.2457, 0.2678, 0.29, 0.3121, 0.3356],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_heavyAttack_heavy_attack_azure_sword_stance_dmg_hit_",
+      name: "Heavy Attack - Azure Sword Stance DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6799, 0.7356, 0.7914, 0.8694, 0.9252, 0.9893, 1.0785, 1.1677, 1.2569, 1.3516],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_heavyAttack_heavy_attack_azure_sword_stance_dmg_hit__1",
+      name: "Heavy Attack - Azure Sword Stance DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6799, 0.7356, 0.7914, 0.8694, 0.9252, 0.9893, 1.0785, 1.1677, 1.2569, 1.3516],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_heavyAttack_heavy_attack_azure_sword_stance_dmg_hit__1_2",
+      name: "Heavy Attack - Azure Sword Stance DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9065, 0.9808, 1.0551, 1.1592, 1.2335, 1.319, 1.4379, 1.5569, 1.6758, 1.8021],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_heavyAttack_heavy_attack_feather_sword_stance_dmg_hi",
+      name: "Heavy Attack - Feather Sword Stance DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1092, 0.1182, 0.1271, 0.1397, 0.1486, 0.1589, 0.1732, 0.1875, 0.2019, 0.2171],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_heavyAttack_heavy_attack_feather_sword_stance_dmg_hi_1",
+      name: "Heavy Attack - Feather Sword Stance DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9826, 1.0631, 1.1437, 1.2565, 1.3371, 1.4297, 1.5586, 1.6875, 1.8165, 1.9534],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_plungingAttack_midair_attack_feather_sword_stance_feath",
+      name: "Mid-air Attack - Feather Sword Stance: Feather Fall DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0744, 0.0806, 0.0867, 0.0952, 0.1013, 0.1083, 0.1181, 0.1278, 0.1376, 0.148],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_plungingAttack_midair_attack_feather_sword_stance_feath_1",
+      name: "Mid-air Attack - Feather Sword Stance: Feather Fall DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3348, 0.3623, 0.3898, 0.4282, 0.4556, 0.4872, 0.5311, 0.5751, 0.619, 0.6657],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_basic_attack_havoc_in_bloom_stage_1_dmg",
+      name: "Basic Attack - Havoc in Bloom Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2001, 0.2166, 0.233, 0.2559, 0.2723, 0.2912, 0.3175, 0.3437, 0.37, 0.3979],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_basic_attack_havoc_in_bloom_stage_2_dmg_",
+      name: "Basic Attack - Havoc in Bloom Stage 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.449, 0.4858, 0.5226, 0.5741, 0.6109, 0.6533, 0.7122, 0.7711, 0.83, 0.8925],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_basic_attack_havoc_in_bloom_stage_2_dmg__1",
+      name: "Basic Attack - Havoc in Bloom Stage 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3367, 0.3643, 0.392, 0.4306, 0.4582, 0.49, 0.5341, 0.5783, 0.6225, 0.6694],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_basic_attack_havoc_in_bloom_stage_2_dmg__1_2",
+      name: "Basic Attack - Havoc in Bloom Stage 2 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3367, 0.3643, 0.392, 0.4306, 0.4582, 0.49, 0.5341, 0.5783, 0.6225, 0.6694],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_basic_attack_havoc_in_bloom_stage_3_dmg_",
+      name: "Basic Attack - Havoc in Bloom Stage 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1206, 0.1305, 0.1404, 0.1543, 0.1641, 0.1755, 0.1913, 0.2071, 0.223, 0.2398],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_basic_attack_havoc_in_bloom_stage_3_dmg__1",
+      name: "Basic Attack - Havoc in Bloom Stage 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.4068, 1.5222, 1.6376, 1.7991, 1.9144, 2.0471, 2.2316, 2.4162, 2.6008, 2.7969],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_havoc_in_bloom_stage_1_dmg",
+      name: "Dodge Counter - Havoc in Bloom Stage 1 DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2001, 0.2166, 0.233, 0.2559, 0.2723, 0.2912, 0.3175, 0.3437, 0.37, 0.3979],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_havoc_in_bloom_stage_2_dmg",
+      name: "Dodge Counter - Havoc in Bloom Stage 2 DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.449, 0.4858, 0.5226, 0.5741, 0.6109, 0.6533, 0.7122, 0.7711, 0.83, 0.8925],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_havoc_in_bloom_stage_2_dmg_1",
+      name: "Dodge Counter - Havoc in Bloom Stage 2 DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3367, 0.3643, 0.392, 0.4306, 0.4582, 0.49, 0.5341, 0.5783, 0.6225, 0.6694],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_havoc_in_bloom_stage_2_dmg_1_2",
+      name: "Dodge Counter - Havoc in Bloom Stage 2 DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3367, 0.3643, 0.392, 0.4306, 0.4582, 0.49, 0.5341, 0.5783, 0.6225, 0.6694],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_havoc_in_bloom_stage_3_dmg",
+      name: "Dodge Counter - Havoc in Bloom Stage 3 DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1206, 0.1305, 0.1404, 0.1543, 0.1641, 0.1755, 0.1913, 0.2071, 0.223, 0.2398],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_dodgeCounter_dodge_counter_havoc_in_bloom_stage_3_dmg_1",
+      name: "Dodge Counter - Havoc in Bloom Stage 3 DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.4068, 1.5222, 1.6376, 1.7991, 1.9144, 2.0471, 2.2316, 2.4162, 2.6008, 2.7969],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_forteCircuit_wraith_of_sound_dmg",
+      name: "Wraith of Sound DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [5.23, 5.23, 5.23, 5.23, 5.23, 5.23, 5.23, 5.23, 5.23, 5.23],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "YangyangXuanling_introSkill_skybound_feather_dmg",
+      name: "Skybound Feather DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5864, 0.6345, 0.6826, 0.7499, 0.798, 0.8533, 0.9303, 1.0072, 1.0841, 1.1659],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "YangyangXuanling_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Yangyang: Xuanling Unbroken VowWhen a target has 1 to 3 stacks of Havoc Bane, each stack of Havoc Bane Amplifies the DMG from Yangyang: Xuanling by 10%, up to 30%.",
+    },
+    {
+      id: "YangyangXuanling_passive_1",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When a target has 4 to 6 stacks of Havoc Bane, each stack of Havoc Bane Amplifies the DMG from Yangyang: Xuanling by 12%, up to 36%.One Life, One BladeResonance Liberation Hush of a Thousand Voices raises the Havoc Bane stacks on the targets to the maximum on hit.",
+    },
+    {
+      id: "YangyangXuanling_passive_2",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When nearby Resonators in the team inflict Havoc Bane, Yangyang: Xuanling gains 1 stack of Windbound.",
+    },
+    {
+      id: "YangyangXuanling_passive_3",
+      name: "Windbound",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Windbound can be gained once every 1s, stacking up to 6 times.",
+    },
+    {
+      id: "YangyangXuanling_passive_4",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Windbound reaches 6 stacks, Yangyang: Xuanling removes all Windbound and gains One with the Wind.",
+    },
+    {
+      id: "YangyangXuanling_passive_5",
+      name: "While",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "While One with the Wind lasts, when Yangyang: Xuanling casts Resonance Skill - Sword Stance Flow: Azure or Resonance Skill - Sword Stance Flow: Feather, she summons Feather Release: Xuanling to attack the target, applying 6  of Havoc Bane to the target.",
+    },
+    {
+      id: "YangyangXuanling_passive_6",
+      name: "Windbound",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Windbound cannot be obtained while One with the Wind lasts.",
+    },
+    {
+      id: "YangyangXuanling_passive_7",
+      name: "Once",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Once Feather Release: Xuanling is summoned, the One with the Wind state is removed.",
+    },
+    {
+      id: "YangyangXuanling_s1",
+      name: "S1: At the Wind's Breath, the Blossoms Wake",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Skill - Sword Stance Flow: Azure or Resonance Skill - Sword Stance Flow: Feather summons a Shadow of Xuanling: Unfaltering to attack the target, dealing Havoc DMG equal to 337.98% of Yangyang: Xuanling's ATK. This DMG is considered Heavy Attack DMG. Casting Resonance Skill - Sword Stance Flow: Azure or Resonance Skill - Sword Stance Flow: Feather Stagnates nearby enemies.  Heavy Attack - Azure Sword Stance, Basic Attack - Havoc in Bloom and Dodge Counter - Havoc in Bloom are immune to interruption.",
+    },
+    {
+      id: "YangyangXuanling_s2",
+      name: "S2: River Carries Her Song Away",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG dealt by Heavy Attack - Azure Sword Stance, Heavy Attack - Feather Sword Stance, Mid-air Attack - Feather Fall,  Basic Attack - Havoc in Bloom, and Dodge Counter - Havoc in Bloom is increased by 100%.  Every time Yangyang: Xuanling remains out of combat for more than 4s after she leaves the combat state or revives, she gains the following effects once: - Gain Strung Notes, up to 1 stack. Casting Basic Attack - Azure Sword Stance or Basic Attack - Feather Sword Stance summons Shadow of Xuanling: Strung Notes to attack the target, dealing Havoc DMG equal to 337.98% of Yangyang: Xuanling's ATK, considered Heavy Attack DMG. Strung Notes is removed after Shadow of Xuanling: Strung Notes is summoned. - Restore 2 points of Azure Plume. - Reset the Cooldown of gaining Bated Breath and Streaming Storm.",
+    },
+    {
+      id: "YangyangXuanling_s3",
+      name: "S3: My Grief Follows You into the Clouds",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG dealt via Resonance Liberation Hush of a Thousand Voices is Amplified by 175%.  After casting Intro Skill - Skybound Feather, Resonance Skill - Sword Stance Flow: Azure, or Resonance Skill - Sword Stance Flow: Feather, increase the maximum Havoc Bane stacks on targets within a certain range by 3, lasting 20s. This effect does not stack.  Basic Attack - Azure Sword Stance Stage 4, Basic Attack - Feather Sword Stance Stage 4, Heavy Attack - Azure Sword Stance, and Heavy Attack - Feather Sword Stance inflict 1 additional stack of Havoc Bane on the target.",
+    },
+    {
+      id: "YangyangXuanling_s4",
+      name: "S4: Across the Miles, a Letter and My Longing",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Intro Skill - Skybound Feather, Resonance Skill - Sword Stance Switch: Azure, Resonance Skill - Sword Stance Switch: Feather, Resonance Skill - Sword Stance Flow: Azure, or Resonance Skill - Sword Stance Flow: Feather, the ATK of Resonators in the team is increased by 20% for 20s.",
+    },
+    {
+      id: "YangyangXuanling_s5",
+      name: "S5: Take Wing. Take Wing.",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Yangyang: Xuanling takes a fatal blow, she will not be downed, but instead recover HP equal to 50% of her Max HP while becoming immune to DMG and interruption for 3s. This effect can be triggered once every 10 min.",
+    },
+    {
+      id: "YangyangXuanling_s6",
+      name: "S6: Let the Azure Keep Its Light",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After Yangyang: Xuanling inflicts Havoc Bane on a target, gain Voice Flux for 30s. While Voice Flux is active, the Heavy Attack DMG from Yangyang: Xuanling is increased by 40%.  Casting Resonance Skill - Sword Stance Flow: Azure or Resonance Skill - Sword Stance Flow: Feather grants Still as Withered Wood for 30s. While Still as Withered Wood is active, if Yangyang: Xuanling is on the field, then after nearby Resonators in the team inflict Glacio Chafe, Fusion Burst, Electro Flare, Aero Erosion, Spectro Frazzle, or Havoc Bane, Yangyang: Xuanling summons Shadow of Xuanling: Still as Withered Wood to attack the target, dealing Havoc DMG equal to 337.98% of Yangyang: Xuanling's ATK. The DMG of Shadow of Xuanling: Still as Withered Wood is considered Heavy Attack DMG and is guaranteed to be a critical hit.  Shadow of Xuanling: Still as Withered Wood can be summoned once every 1s, and Still as Withered Wood expires after it is summoned 5 times. When Still as Withered Wood expires or is removed, reset the available summon charges of Shadow of Xuanling: Still as Withered Wood. Still as Withered Wood has a Cooldown of 25s.",
+    },
+  ],
+  mechanics: [],
+}

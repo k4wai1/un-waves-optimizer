@@ -1,0 +1,857 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Rover (Electro) | elemento Electro | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "RoverElectro",
+    name: "Rover (Electro)",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Sword",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 862, "20": 2242, "40": 4269, "50": 5570, "60": 6871, "70": 8172, "80": 9473, "90": 10775 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 93, "20": 238, "40": 452, "50": 589, "60": 725, "70": 862, "80": 999, "90": 1136 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "RoverElectro_basicAttack_basic_attack_stage_1_dmg",
+      name: "Basic Attack Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2569, 0.278, 0.2991, 0.3286, 0.3496, 0.3739, 0.4076, 0.4413, 0.475, 0.5108],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_basicAttack_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1308, 0.1415, 0.1523, 0.1673, 0.178, 0.1903, 0.2075, 0.2246, 0.2418, 0.26],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_basicAttack_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1962, 0.2123, 0.2284, 0.2509, 0.267, 0.2855, 0.3112, 0.3369, 0.3627, 0.39],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_basicAttack_basic_attack_stage_3_dmg",
+      name: "Basic Attack Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0667, 0.0722, 0.0777, 0.0853, 0.0908, 0.0971, 0.1059, 0.1146, 0.1234, 0.1327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_basicAttack_basic_attack_stage_4_dmg_hit_1",
+      name: "Basic Attack Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3663, 0.3963, 0.4264, 0.4684, 0.4984, 0.533, 0.581, 0.6291, 0.6771, 0.7282],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_basicAttack_basic_attack_stage_4_dmg_hit_2",
+      name: "Basic Attack Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5494, 0.5945, 0.6395, 0.7026, 0.7476, 0.7994, 0.8715, 0.9436, 1.0157, 1.0922],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_basicAttack_basic_attack_riposte_strike_dmg",
+      name: "Basic Attack - Riposte Strike DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2814, 0.3045, 0.3276, 0.3599, 0.383, 0.4095, 0.4464, 0.4834, 0.5203, 0.5595],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_basicAttack_basic_attack_riposte_strike_crumble_dmg",
+      name: "Basic Attack - Riposte Strike: Crumble DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2989, 0.3235, 0.348, 0.3823, 0.4068, 0.435, 0.4742, 0.5134, 0.5526, 0.5943],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_midair_attack_havoc_stage_1_dmg",
+      name: "Mid-air Attack - Havoc Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1631, 0.1765, 0.1899, 0.2086, 0.222, 0.2374, 0.2588, 0.2802, 0.3016, 0.3243],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_midair_attack_havoc_stage_2_dmg",
+      name: "Mid-air Attack - Havoc Stage 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1869, 0.2023, 0.2176, 0.2391, 0.2544, 0.272, 0.2965, 0.3211, 0.3456, 0.3716],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_midair_attack_havoc_stage_3_dmg_hit_1",
+      name: "Mid-air Attack - Havoc Stage 3 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1888, 0.2043, 0.2198, 0.2415, 0.257, 0.2748, 0.2995, 0.3243, 0.3491, 0.3754],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_midair_attack_havoc_stage_3_dmg_hit_2",
+      name: "Mid-air Attack - Havoc Stage 3 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1888, 0.2043, 0.2198, 0.2415, 0.257, 0.2748, 0.2995, 0.3243, 0.3491, 0.3754],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_midair_attack_havoc_stage_3_dmg_hit_3",
+      name: "Mid-air Attack - Havoc Stage 3 DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1946, 0.2105, 0.2265, 0.2488, 0.2647, 0.2831, 0.3086, 0.3341, 0.3597, 0.3868],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5278, 0.5711, 0.6144, 0.675, 0.7183, 0.7681, 0.8373, 0.9065, 0.9758, 1.0494],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3735, 0.4041, 0.4347, 0.4776, 0.5082, 0.5435, 0.5925, 0.6415, 0.6904, 0.7425],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3735, 0.4041, 0.4347, 0.4776, 0.5082, 0.5435, 0.5925, 0.6415, 0.6904, 0.7425],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_midair_dodge_counter_dmg",
+      name: "Mid-air Dodge Counter DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9478, 1.0256, 1.1033, 1.2121, 1.2898, 1.3792, 1.5035, 1.6279, 1.7522, 1.8844],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.504, 0.5453, 0.5867, 0.6445, 0.6859, 0.7334, 0.7995, 0.8656, 0.9317, 1.002],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_resonanceSkill_basic_attack_repel_dmg_hit_1",
+      name: "Basic Attack - Repel DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2823, 0.3054, 0.3286, 0.361, 0.3841, 0.4107, 0.4478, 0.4848, 0.5218, 0.5612],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_resonanceSkill_basic_attack_repel_dmg_hit_2",
+      name: "Basic Attack - Repel DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4234, 0.4581, 0.4928, 0.5414, 0.5762, 0.6161, 0.6716, 0.7272, 0.7827, 0.8417],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [6, 6.492, 6.984, 7.6728, 8.1648, 8.7306, 9.5178, 10.305, 11.0922, 11.9286],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_overshock_dmg_hit_1",
+      name: "Overshock DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.406, 0.4393, 0.4726, 0.5192, 0.5525, 0.5908, 0.6441, 0.6974, 0.7506, 0.8072],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_overshock_dmg_hit_2",
+      name: "Overshock DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.1315, 2.3063, 2.4811, 2.7258, 2.9006, 3.1016, 3.3812, 3.6609, 3.9406, 4.2377],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_overshock_dmg_hit_3",
+      name: "Overshock DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.1315, 2.3063, 2.4811, 2.7258, 2.9006, 3.1016, 3.3812, 3.6609, 3.9406, 4.2377],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_spectro_stage_1_dmg",
+      name: "Thrum of All Sounds: Spectro Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4986, 0.5395, 0.5804, 0.6376, 0.6785, 0.7255, 0.7909, 0.8563, 0.9217, 0.9912],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_spectro_stage_2_dmg_",
+      name: "Thrum of All Sounds: Spectro Stage 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2468, 0.267, 0.2873, 0.3156, 0.3358, 0.3591, 0.3915, 0.4238, 0.4562, 0.4906],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_spectro_stage_2_dmg__1",
+      name: "Thrum of All Sounds: Spectro Stage 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2468, 0.267, 0.2873, 0.3156, 0.3358, 0.3591, 0.3915, 0.4238, 0.4562, 0.4906],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_spectro_stage_2_dmg__1_2",
+      name: "Thrum of All Sounds: Spectro Stage 2 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.329, 0.356, 0.383, 0.4208, 0.4477, 0.4788, 0.5219, 0.5651, 0.6082, 0.6541],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_spectro_stage_3_dmg_",
+      name: "Thrum of All Sounds: Spectro Stage 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5134, 0.5554, 0.5975, 0.6565, 0.6986, 0.747, 0.8143, 0.8817, 0.949, 1.0206],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_spectro_stage_3_dmg__1",
+      name: "Thrum of All Sounds: Spectro Stage 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.77, 0.8331, 0.8963, 0.9847, 1.0478, 1.1204, 1.2214, 1.3225, 1.4235, 1.5308],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_1_dmg_hi",
+      name: "Thrum of All Sounds: Havoc Stage 1 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0754, 0.0815, 0.0877, 0.0964, 0.1025, 0.1096, 0.1195, 0.1294, 0.1393, 0.1498],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_1_dmg_hi_1",
+      name: "Thrum of All Sounds: Havoc Stage 1 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5273, 0.5705, 0.6138, 0.6743, 0.7175, 0.7672, 0.8364, 0.9056, 0.9748, 1.0482],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_2_dmg_hi",
+      name: "Thrum of All Sounds: Havoc Stage 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0696, 0.0753, 0.081, 0.089, 0.0947, 0.1013, 0.1104, 0.1195, 0.1287, 0.1383],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_2_dmg_hi_1",
+      name: "Thrum of All Sounds: Havoc Stage 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4174, 0.4517, 0.4859, 0.5338, 0.568, 0.6074, 0.6621, 0.7169, 0.7717, 0.8298],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_3_dmg_hi",
+      name: "Thrum of All Sounds: Havoc Stage 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3145, 0.3402, 0.366, 0.4021, 0.4279, 0.4575, 0.4988, 0.5401, 0.5813, 0.6251],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_3_dmg_hi_1",
+      name: "Thrum of All Sounds: Havoc Stage 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3145, 0.3402, 0.366, 0.4021, 0.4279, 0.4575, 0.4988, 0.5401, 0.5813, 0.6251],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_3_dmg_hi_1_2",
+      name: "Thrum of All Sounds: Havoc Stage 3 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1049, 0.1134, 0.122, 0.1341, 0.1427, 0.1525, 0.1663, 0.1801, 0.1938, 0.2084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_3_dmg_hi_1_2_3",
+      name: "Thrum of All Sounds: Havoc Stage 3 DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1049, 0.1134, 0.122, 0.1341, 0.1427, 0.1525, 0.1663, 0.1801, 0.1938, 0.2084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_3_dmg_hi_1_2_3_4",
+      name: "Thrum of All Sounds: Havoc Stage 3 DMG - Hit 5",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1049, 0.1134, 0.122, 0.1341, 0.1427, 0.1525, 0.1663, 0.1801, 0.1938, 0.2084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_havoc_stage_3_dmg_hi_1_2_3_4_5",
+      name: "Thrum of All Sounds: Havoc Stage 3 DMG - Hit 6",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1049, 0.1134, 0.122, 0.1341, 0.1427, 0.1525, 0.1663, 0.1801, 0.1938, 0.2084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_silencing_blade_dmg_",
+      name: "Thrum of All Sounds: Silencing Blade DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2368, 0.2562, 0.2756, 0.3028, 0.3222, 0.3445, 0.3756, 0.4066, 0.4377, 0.4707],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_silencing_blade_dmg__1",
+      name: "Thrum of All Sounds: Silencing Blade DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1837, 1.2808, 1.3779, 1.5137, 1.6108, 1.7224, 1.8777, 2.033, 2.1883, 2.3533],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thrum_of_all_sounds_aero_dmg",
+      name: "Thrum of All Sounds: Aero DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7952, 0.8604, 0.9256, 1.0169, 1.0821, 1.1571, 1.2614, 1.3657, 1.47, 1.5809],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_havoc_midair_attack_",
+      name: "Thrum of All Sounds: Havoc Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2547, 0.2756, 0.2965, 0.3257, 0.3466, 0.3706, 0.404, 0.4374, 0.4708, 0.5063],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_havoc_midair_attack__1",
+      name: "Thrum of All Sounds: Havoc Mid-air Attack Stage 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.321, 0.3474, 0.3737, 0.4105, 0.4368, 0.4671, 0.5092, 0.5513, 0.5935, 0.6382],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_havoc_midair_attack__1_2",
+      name: "Thrum of All Sounds: Havoc Mid-air Attack Stage 3 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4603, 0.4981, 0.5358, 0.5886, 0.6264, 0.6698, 0.7302, 0.7906, 0.851, 0.9151],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_havoc_midair_attack__1_2_3",
+      name: "Thrum of All Sounds: Havoc Mid-air Attack Stage 3 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4603, 0.4981, 0.5358, 0.5886, 0.6264, 0.6698, 0.7302, 0.7906, 0.851, 0.9151],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_havoc_midair_attack__1_2_3_4",
+      name: "Thrum of All Sounds: Havoc Mid-air Attack Stage 3 DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4743, 0.5132, 0.552, 0.6065, 0.6454, 0.6901, 0.7523, 0.8145, 0.8767, 0.9428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_aero_midair_attack_s",
+      name: "Thrum of All Sounds: Aero Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4256, 0.4605, 0.4954, 0.5443, 0.5792, 0.6193, 0.6751, 0.731, 0.7868, 0.8461],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_aero_midair_attack_s_1",
+      name: "Thrum of All Sounds: Aero Mid-air Attack Stage 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.49, 0.5302, 0.5704, 0.6266, 0.6668, 0.713, 0.7773, 0.8416, 0.9058, 0.9741],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_aero_midair_attack_h",
+      name: "Thrum of All Sounds: Aero Mid-air Attack Healing (Flat)",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [330, 369, 412, 462, 521, 577, 587, 600, 610, 627],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_aero_midair_attack_h_1",
+      name: "Thrum of All Sounds: Aero Mid-air Attack Healing",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.11, 0.1144, 0.1188, 0.1254, 0.1342, 0.143, 0.1595, 0.1782, 0.198, 0.231],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_plungingAttack_thrum_of_all_sounds_aero_plunging_attack",
+      name: "Thrum of All Sounds: Aero Plunging Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.4209, 1.5374, 1.6539, 1.817, 1.9335, 2.0675, 2.2539, 2.4403, 2.6267, 2.8248],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_forteCircuit_thunder_bane_dmg",
+      name: "Thunder Bane DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverElectro_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.504, 0.5454, 0.5867, 0.6446, 0.6859, 0.7334, 0.7995, 0.8657, 0.9318, 1.0021],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "RoverElectro_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Electro DMG.Show Skill DetailsLevel 20Skill DMG60.96%*2+182.86%Concerto Regen10Rumbling Thunders",
+    },
+    {
+      id: "RoverElectro_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Rover (Electro) DecipherResonance Skill Overshock inflicts 10  of Electro Flare on the target it damages.RegressionWhen Resonance Skill Overshock is cast by holding down the button, gain 20% Resonance Skill DMG Bonus for 20s.",
+    },
+    {
+      id: "RoverElectro_passive_2",
+      name: "Switching",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Switching to another Resonator ends this effect.",
+    },
+    {
+      id: "RoverElectro_s1",
+      name: "S1: Celestial Ingenuity",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "While casting Normal Attack and Resonance Skill Thrum of All Sounds, gain increased resistance to interruption for 0.5s.",
+    },
+    {
+      id: "RoverElectro_s2",
+      name: "S2: Thousandfold Artifice",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Inflict 5  of Electro Flare on the targets hit after Resonance Liberation Ultimate Tactics deals damage.",
+    },
+    {
+      id: "RoverElectro_s3_alchemy_of_wonders",
+      name: "S3: Alchemy of Wonders",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Skill Overshock is increased by 20%.",
+    },
+    {
+      id: "RoverElectro_s4_earthquaking_rumble",
+      name: "S4: Earthquaking Rumble",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Ultimate Tactics is increased by 20%.",
+    },
+    {
+      id: "RoverElectro_s5",
+      name: "S5: Principle of Change",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Crit. DMG is increased by 20% while in Apex Resonance.",
+    },
+    {
+      id: "RoverElectro_s6_minds_depths_in_a_casket",
+      name: "S6: Mind's Depths in a Casket",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Skill Thrum of All Sounds and Thunder Bane is increased by 20%.",
+    },
+  ],
+  mechanics: [],
+}

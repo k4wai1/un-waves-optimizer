@@ -1,0 +1,446 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Camellya | elemento Havoc | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Camellya",
+    name: "Camellya",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Havoc",
+    weaponType: "Sword",
+    tags: ["havoc"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 826, "20": 2148, "40": 4091, "50": 5338, "60": 6584, "70": 7831, "80": 9078, "90": 10325 },
+    atk: { "1": 36, "20": 93, "40": 181, "50": 238, "60": 295, "70": 353, "80": 401, "90": 450 },
+    def: { "1": 95, "20": 243, "40": 461, "50": 601, "60": 741, "70": 881, "80": 1021, "90": 1161 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Camellya_basicAttack_basic_attack_1_dmg",
+      name: "Basic Attack 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3145, 0.3403, 0.3661, 0.4022, 0.428, 0.4577, 0.4989, 0.5402, 0.5815, 0.6253],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_basicAttack_basic_attack_2_dmg",
+      name: "Basic Attack 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2338, 0.253, 0.2721, 0.299, 0.3181, 0.3402, 0.3708, 0.4015, 0.4322, 0.4648],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_basicAttack_basic_attack_3_dmg",
+      name: "Basic Attack 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.255, 0.2759, 0.2968, 0.3261, 0.347, 0.3711, 0.4045, 0.438, 0.4714, 0.507],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_basicAttack_basic_attack_4_dmg",
+      name: "Basic Attack 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1242, 0.1344, 0.1446, 0.1589, 0.1691, 0.1808, 0.1971, 0.2134, 0.2297, 0.247],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_basicAttack_basic_attack_5_dmg",
+      name: "Basic Attack 5 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2423, 0.2622, 0.282, 0.3098, 0.3297, 0.3525, 0.3843, 0.4161, 0.4479, 0.4817],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4433, 0.4797, 0.516, 0.5669, 0.6033, 0.6451, 0.7032, 0.7614, 0.8196, 0.8814],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.33, 0.3571, 0.3842, 0.4221, 0.4491, 0.4802, 0.5235, 0.5668, 0.6101, 0.6561],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5, 0.541, 0.582, 0.6394, 0.6804, 0.7275, 0.7931, 0.8587, 0.9243, 0.994],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_crimson_blossom_dmg",
+      name: "Crimson Blossom DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5715, 0.6184, 0.6653, 0.7309, 0.7777, 0.8316, 0.9066, 0.9816, 1.0566, 1.1362],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_vining_waltz_1_dmg",
+      name: "Vining Waltz 1 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4845, 0.5243, 0.564, 0.6196, 0.6594, 0.705, 0.7686, 0.8322, 0.8957, 0.9633],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_vining_waltz_2_dmg",
+      name: "Vining Waltz 2 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2295, 0.2484, 0.2672, 0.2935, 0.3124, 0.334, 0.3641, 0.3942, 0.4243, 0.4563],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_vining_waltz_3_dmg",
+      name: "Vining Waltz 3 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1104, 0.1195, 0.1286, 0.1412, 0.1503, 0.1607, 0.1752, 0.1897, 0.2041, 0.2195],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_vining_waltz_4_dmg",
+      name: "Vining Waltz 4 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.34, 0.3679, 0.3958, 0.4348, 0.4627, 0.4947, 0.5393, 0.5839, 0.6285, 0.6759],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_blazing_waltz_dmg",
+      name: "Blazing Waltz DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1104, 0.1195, 0.1286, 0.1412, 0.1503, 0.1607, 0.1752, 0.1897, 0.2041, 0.2195],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_floral_ravage_dmg",
+      name: "Floral Ravage DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2646, 0.2863, 0.308, 0.3384, 0.3601, 0.3851, 0.4198, 0.4545, 0.4892, 0.5261],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_vining_ronde_dmg",
+      name: "Vining Ronde DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2664, 0.2882, 0.31, 0.3406, 0.3624, 0.3876, 0.4225, 0.4574, 0.4924, 0.5295],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceSkill_atonement_dmg",
+      name: "Atonement DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.57, 0.6168, 0.6635, 0.729, 0.7757, 0.8295, 0.9042, 0.979, 1.0538, 1.1333],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [6.05, 6.5461, 7.0422, 7.7368, 8.2329, 8.8034, 9.5972, 10.3909, 11.1847, 12.0281],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_forteCircuit_ephemeral_dmg",
+      name: "Ephemeral DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [6.35, 6.8707, 7.3914, 8.1204, 8.6411, 9.2399, 10.0731, 10.9062, 11.7393, 12.6245],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Camellya_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Camellya_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Havoc DMG.Show Skill DetailsLevel 20Skill DMG362.81%Concerto Regen10Twining",
+    },
+    {
+      id: "Camellya_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [0.15],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Stat", id: "havoc_dmg_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.15],
+        },
+      ],
+      descriptionTemplate: "> Camellya SeedbedGain 15% Havoc DMG Bonus.",
+    },
+    {
+      id: "Camellya_dmg",
+      name: "DMG",
+      operation: "add",
+      value: [0.15],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.15],
+        },
+      ],
+      descriptionTemplate: "DMG dealt by Heavy Attack Pruning is now considered Basic Attack DMG.EpiphyteGain 15% Basic DMG Bonus.",
+    },
+    {
+      id: "Camellya_passive_3",
+      name: "Gain",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Gain increased resistance to interruption when casting Basic Attack, Basic Attack Vining Waltz, and Basic Attack Blazing Waltz.",
+    },
+    {
+      id: "Camellya_s1",
+      name: "S1: Somewhere No One Travelled",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Intro Skill Everblooming increases Camellya's Crit. DMG by 28% for 18s. This effect can be triggered once every 25s. Immune to interruptions while casting Ephemeral.",
+    },
+    {
+      id: "Camellya_s2_calling_upon_the_silent_ros",
+      name: "S2: Calling Upon the Silent Rose",
+      operation: "add",
+      value: [1.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1.2],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Skill Ephemeral is increased by 120%.",
+    },
+    {
+      id: "Camellya_s3",
+      name: "S3: A Bud Adorned by Thorns",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Fervor Efflorescent is increased by 50%. When in Budding Mode, Camellya's ATK is increased by 58%.",
+    },
+    {
+      id: "Camellya_s4_roots_set_deep_in_eternity",
+      name: "S4: Roots Set Deep In Eternity",
+      operation: "add",
+      value: [0.25],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.25],
+        },
+      ],
+      descriptionTemplate: "Casting Everblooming gives all team members 25% Basic Attack DMG Bonus for 30s.",
+    },
+    {
+      id: "Camellya_s5",
+      name: "S5: Infinity Held in Your Palm",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of Intro Skill Everblooming is increased by 303% and Outro Skill Twining is increased by 68%.",
+    },
+    {
+      id: "Camellya_s6",
+      name: "S6: Bloom For You Thousand Times Over",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Forte Circuit's Sweet Dream is additionally increased by 150%.  Forte Circuit Perennial: Within 15s after casting Ephemeral, if Concerto Energy is full and Perennial is not on cooldown, Resonance Skill is replaced with Perennial. Casting Perennial consumes 50 Concerto Energy and recovers 50 Crimson Pistils, dealing Havoc DMG equal to 100% of Ephemeral DMG, considered Basic Attack DMG. This skill can be cast once every 25s. Camellya enters Budding Mode after casting Perennial and removes all Crimson Buds. The bonus DMG Multiplier granted by Forte Circuit's Sweet Dream is increased to 250%. Immune to interruptions when casting Perennial.",
+    },
+  ],
+  mechanics: [],
+}

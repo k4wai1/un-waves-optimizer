@@ -1,0 +1,470 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Xiangli Yao | elemento Electro | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "XiangliYao",
+    name: "Xiangli Yao",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Gauntlets",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 850, "20": 2210, "40": 4210, "50": 5493, "60": 6776, "70": 8059, "80": 9342, "90": 10625 },
+    atk: { "1": 34, "20": 88, "40": 171, "50": 225, "60": 279, "70": 333, "80": 379, "90": 425 },
+    def: { "1": 100, "20": 256, "40": 486, "50": 633, "60": 780, "70": 927, "80": 1075, "90": 1222 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "XiangliYao_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1665, 0.1802, 0.1939, 0.213, 0.2266, 0.2423, 0.2642, 0.286, 0.3079, 0.3311],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.501, 0.5421, 0.5832, 0.6407, 0.6818, 0.7291, 0.7948, 0.8605, 0.9262, 0.9961],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.291, 0.3173, 0.3435, 0.3698, 0.3976],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2668, 0.2887, 0.3106, 0.3412, 0.3631, 0.3883, 0.4233, 0.4583, 0.4933, 0.5305],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1334, 0.1444, 0.1553, 0.1706, 0.1816, 0.1942, 0.2117, 0.2292, 0.2467, 0.2653],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_basicAttack_stage_5_dmg",
+      name: "Stage 5 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_basicAttack_ha_dmg",
+      name: "HA DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4165, 0.4507, 0.4849, 0.5327, 0.5668, 0.6061, 0.6607, 0.7154, 0.77, 0.8281],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6709, 0.7217, 0.7929, 0.8437, 0.9022, 0.9836, 1.0649, 1.1462, 1.2327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.2, 1.2984, 1.3968, 1.5346, 1.633, 1.7462, 1.9036, 2.061, 2.2185, 2.3858],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_cogitation_model_dmg",
+      name: "Cogitation Model DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [7.3742, 7.9789, 8.5835, 9.4301, 10.0348, 10.7302, 11.6976, 12.6651, 13.6326, 14.6606],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_pivot_impale_stage_1_dmg",
+      name: "Pivot - Impale Stage 1 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6019, 0.6513, 0.7006, 0.7697, 0.8191, 0.8759, 0.9548, 1.0338, 1.1128, 1.1967],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_pivot_impale_stage_2_dmg",
+      name: "Pivot - Impale Stage 2 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3065, 0.3316, 0.3567, 0.3919, 0.417, 0.4459, 0.4861, 0.5263, 0.5665, 0.6092],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_pivot_impale_stage_3_dmg",
+      name: "Pivot - Impale Stage 3 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6703, 0.7252, 0.7802, 0.8571, 0.9121, 0.9753, 1.0632, 1.1512, 1.2391, 1.3325],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_divergence_dmg_hit_1",
+      name: "Divergence DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2494, 0.2699, 0.2904, 0.319, 0.3394, 0.363, 0.3957, 0.4284, 0.4611, 0.4959],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_divergence_dmg_hit_2",
+      name: "Divergence DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8729, 0.9445, 1.0161, 1.1163, 1.1879, 1.2702, 1.3847, 1.4993, 1.6138, 1.7355],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_unfathomed_dmg_hit_1",
+      name: "Unfathomed DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1953, 0.2113, 0.2273, 0.2498, 0.2658, 0.2842, 0.3098, 0.3354, 0.361, 0.3883],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_resonanceLiberation_unfathomed_dmg_hit_2",
+      name: "Unfathomed DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5622, 1.6903, 1.8184, 1.9977, 2.1258, 2.2731, 2.4781, 2.683, 2.888, 3.1058],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_forteCircuit_decipher_dmg",
+      name: "Decipher DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.001, 2.1651, 2.3292, 2.5589, 2.723, 2.9117, 3.1742, 3.4368, 3.6993, 3.9782],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_forteCircuit_law_of_reigns_dmg_hit_1",
+      name: "Law of Reigns DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4815, 0.521, 0.5605, 0.6158, 0.6553, 0.7007, 0.7639, 0.827, 0.8902, 0.9573],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_forteCircuit_law_of_reigns_dmg_hit_2",
+      name: "Law of Reigns DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.284, 1.3893, 1.4946, 1.642, 1.7473, 1.8684, 2.0369, 2.2053, 2.3738, 2.5528],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_forteCircuit_revamp_dmg_hit_1",
+      name: "Revamp DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.11, 0.1191, 0.1281, 0.1407, 0.1497, 0.1601, 0.1745, 0.189, 0.2034, 0.2187],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_forteCircuit_revamp_dmg_hit_2",
+      name: "Revamp DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.33, 0.3571, 0.3842, 0.4221, 0.4491, 0.4802, 0.5235, 0.5668, 0.6101, 0.6561],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "XiangliYao_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5, 0.541, 0.582, 0.6394, 0.6804, 0.7276, 0.7932, 0.8588, 0.9244, 0.9941],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "XiangliYao_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Electro DMG.Show Skill DetailsLevel 20Skill DMG181.41%*2Concerto Regen10Chain Rule",
+    },
+    {
+      id: "XiangliYao_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillXiangli Yao will call down a laser beam upon the first target the incoming Resonator's Basic Attack hits, dealing Electro DMG equal to 237.63% of Xiangli Yao's ATK to an area. This effect lasts for 8s and can be triggered once every 2s, up to 3 times.",
+    },
+    {
+      id: "XiangliYao_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Xiangli Yao KnowingGain 5% Electro DMG Bonus after casting Resonance Skill for 8s, stackable for up to 4 times.FocusWhen in Intuition triggered by Resonance Liberation, Xiangli Yao's resistance to interruption is enhanced.",
+    },
+    {
+      id: "XiangliYao_s1",
+      name: "S1: Prodigy of Protégés",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Skill Law of Reigns additionally launches 6 Convolution Matrices at enemies, each dealing Resonance Liberation DMG equal to 8% of the skill's DMG Multiplier.",
+    },
+    {
+      id: "XiangliYao_s2_traces_of_predecessors",
+      name: "S2: Traces of Predecessors",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "Casting Resonance Skill or Resonance Liberation Cogitation Model increases Crit. DMG by 30% for 8s.",
+    },
+    {
+      id: "XiangliYao_s3",
+      name: "S3: Ruins of Ancient",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Liberation Cogitation Model increases the DMG of the following Resonance Skill moves by 63% for 24s: Decipher, Deduction, Divergence, and Law of Reigns. This effect can be triggered up to 5 times.",
+    },
+    {
+      id: "XiangliYao_s4_vessel_of_rebirth",
+      name: "S4: Vessel of Rebirth",
+      operation: "add",
+      value: [0.25],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.25],
+        },
+      ],
+      descriptionTemplate: "Casting Resonance Liberation Cogitation Model grants a 25% DMG Bonus to all team members' Resonance Liberation for 30s.",
+    },
+    {
+      id: "XiangliYao_s5",
+      name: "S5: End of Stars",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Outro Skill Chain Rule is increased by 222%. The DMG Multiplier of Resonance Liberation Cogitation Model is increased by 100%.",
+    },
+    {
+      id: "XiangliYao_s6",
+      name: "S6: Solace of the Ordinary",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The Hypercubes obtained from Resonance Liberation Cogitation Model are enhanced, increasing the DMG Multiplier of Resonance Skill Law of Reigns by 76%.",
+    },
+  ],
+  mechanics: [],
+}

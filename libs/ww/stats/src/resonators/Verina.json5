@@ -1,0 +1,517 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Verina | elemento Spectro | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Verina",
+    name: "Verina",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Rectifier",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 1139, "20": 2962, "40": 5641, "50": 7360, "60": 9079, "70": 10799, "80": 12518, "90": 14237 },
+    atk: { "1": 27, "20": 70, "40": 135, "50": 178, "60": 221, "70": 264, "80": 301, "90": 337 },
+    def: { "1": 90, "20": 230, "40": 437, "50": 570, "60": 702, "70": 835, "80": 967, "90": 1099 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Verina_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1904, 0.2061, 0.2217, 0.2435, 0.2591, 0.2771, 0.3021, 0.327, 0.352, 0.3786],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2573, 0.2784, 0.2995, 0.3291, 0.3502, 0.3744, 0.4082, 0.4419, 0.4757, 0.5116],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1287, 0.1392, 0.1498, 0.1646, 0.1751, 0.1872, 0.2041, 0.221, 0.2379, 0.2558],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3386, 0.3664, 0.3942, 0.433, 0.4608, 0.4927, 0.5372, 0.5816, 0.626, 0.6732],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_basicAttack_stage_5_dmg",
+      name: "Stage 5 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3603, 0.3898, 0.4193, 0.4607, 0.4902, 0.5242, 0.5714, 0.6187, 0.666, 0.7162],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5, 0.541, 0.582, 0.6394, 0.6804, 0.7276, 0.7932, 0.8588, 0.9244, 0.9941],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_plungingAttack_midair_attack_stage_1_dmg",
+      name: "Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2835, 0.3068, 0.33, 0.3626, 0.3858, 0.4126, 0.4498, 0.487, 0.5242, 0.5637],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_plungingAttack_midair_attack_stage_2_dmg",
+      name: "Mid-air Attack Stage 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2675, 0.2895, 0.3114, 0.3421, 0.3641, 0.3893, 0.4244, 0.4595, 0.4946, 0.5319],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_plungingAttack_midair_attack_stage_3_dmg",
+      name: "Mid-air Attack Stage 3 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1279, 0.1384, 0.1488, 0.1635, 0.174, 0.1861, 0.2028, 0.2196, 0.2364, 0.2542],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_plungingAttack_midair_heavy_attack_dmg",
+      name: "Mid-air Heavy Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.31, 0.3355, 0.3609, 0.3965, 0.4219, 0.4511, 0.4918, 0.5325, 0.5731, 0.6164],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.65, 0.7033, 0.7566, 0.8313, 0.8846, 0.9459, 1.0311, 1.1164, 1.2017, 1.2923],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.18, 0.1948, 0.2096, 0.2302, 0.245, 0.262, 0.2856, 0.3092, 0.3328, 0.3579],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.36, 0.3896, 0.4191, 0.4604, 0.4899, 0.5239, 0.5711, 0.6183, 0.6656, 0.7158],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceLiberation_arboreal_flourish_healing_flat",
+      name: "Arboreal Flourish Healing (Flat)",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [500, 600, 700, 800, 825, 890, 900, 915, 930, 950],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceLiberation_arboreal_flourish_healing",
+      name: "Arboreal Flourish Healing",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1133, 0.1303, 0.1417, 0.1587, 0.17, 0.1813, 0.1927, 0.204, 0.2153, 0.238],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceLiberation_coordinated_attack_dmg",
+      name: "Coordinated Attack DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.05, 0.0541, 0.0582, 0.064, 0.0681, 0.0728, 0.0794, 0.0859, 0.0925, 0.0995],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceLiberation_coordinated_attack_healing_flat",
+      name: "Coordinated Attack Healing (Flat)",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [225, 270, 315, 360, 372, 401, 405, 412, 419, 428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_resonanceLiberation_coordinated_attack_healing",
+      name: "Coordinated Attack Healing",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.051, 0.0587, 0.0638, 0.0714, 0.0765, 0.0816, 0.0867, 0.0918, 0.0969, 0.1071],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_heavyAttack_heavy_attack_starflower_blooms_damage_hi",
+      name: "Heavy Attack: Starflower Blooms Damage - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3267, 0.3535, 0.3803, 0.4178, 0.4446, 0.4754, 0.5182, 0.5611, 0.604, 0.6495],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_heavyAttack_heavy_attack_starflower_blooms_damage_hi_1",
+      name: "Heavy Attack: Starflower Blooms Damage - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.49, 0.5302, 0.5704, 0.6267, 0.6668, 0.713, 0.7773, 0.8416, 0.9059, 0.9742],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_plungingAttack_midair_attack_starflower_blooms_stage_1_",
+      name: "Mid-air Attack: Starflower Blooms Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3402, 0.3681, 0.396, 0.4351, 0.463, 0.4951, 0.5397, 0.5843, 0.629, 0.6764],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_plungingAttack_midair_attack_starflower_blooms_stage_2_",
+      name: "Mid-air Attack: Starflower Blooms Stage 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.321, 0.3474, 0.3737, 0.4105, 0.4369, 0.4671, 0.5093, 0.5514, 0.5935, 0.6382],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_plungingAttack_midair_attack_starflower_blooms_stage_3_",
+      name: "Mid-air Attack: Starflower Blooms Stage 3 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1534, 0.166, 0.1786, 0.1962, 0.2088, 0.2233, 0.2434, 0.2635, 0.2836, 0.305],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_forteCircuit_starflower_blooms_healing_flat",
+      name: "Starflower Blooms Healing (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [625, 750, 875, 1000, 1032, 1113, 1125, 1144, 1163, 1188],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_forteCircuit_starflower_blooms_healing",
+      name: "Starflower Blooms Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1417, 0.1629, 0.1771, 0.1983, 0.2125, 0.2267, 0.2408, 0.255, 0.2692, 0.2975],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Verina_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5, 0.541, 0.582, 0.6394, 0.6804, 0.7276, 0.7932, 0.8588, 0.9244, 0.9941],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Verina_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillVerina attacks the target, dealing Spectro DMG.Show Skill DetailsLevel 20Skill DMG181.41%Concerto Regen10Blossom",
+    },
+    {
+      id: "Verina_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillHeal the incoming Resonator by 19% of Verina's ATK per second for 6s. All Resonators on nearby teams have their DMG Amplified by 15% for 30s.",
+    },
+    {
+      id: "Verina_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Verina Grace of LifeVerina protects a team member from fatal damage and grants a shield with strength equal to 120% of Verina's ATK, lasting for 10s.",
+    },
+    {
+      id: "Verina_passive_3",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This can be triggered 1 time every 10 minutes.Gift of NatureWhen Verina casts Heavy Attack Starflower Blooms, Mid-air Attack Starflower Blooms, Resonance Liberation Arboreal Flourish or Outro Skill Blossom, all team members' ATK are increased by 20% for 20s.",
+    },
+    {
+      id: "Verina_s1",
+      name: "S1: Moment of Emergence",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Outro Skill Blossom grants the next character a continuous Healing effect, recovering HP by 20% of Verina's ATK every 5s for 30s.",
+    },
+    {
+      id: "Verina_s2",
+      name: "S2: Sprouting Reflections",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Skill Botany Experiment additionally grants 1 [Photosynthesis Energy] and 10 Concerto Energy.",
+    },
+    {
+      id: "Verina_s3_the_choice_to_flourish",
+      name: "S3: The Choice to Flourish",
+      operation: "add",
+      value: [0.12],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "healing_bonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.12],
+        },
+      ],
+      descriptionTemplate: "Healing of Resonance Liberation's Photosynthesis Mark is increased by 12%.",
+    },
+    {
+      id: "Verina_s4",
+      name: "S4: Blossoming Embrace",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Heavy Attack Starflower Blooms, Mid-Air Attack Starflower Blooms, Resonance Liberation Arboreal Flourish and Outro Skill Blossom increases the Spectro DMG Bonus of all team members by 15% for 24s.",
+    },
+    {
+      id: "Verina_s5",
+      name: "S5: Miraculous Blooms",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Verina heals a team member with HP less than 50%, her Healing is increased by 20%.",
+    },
+    {
+      id: "Verina_s6",
+      name: "S6: Joyous Harvest",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Heavy Attack Starflower Blooms and Mid-air Attack Starflower Blooms deal 20% more DMG. They will trigger Coordinated Attack 1 time and heal all characters nearby. The damage of this Coordinated Attack and the Healing are equal to those of the Resonance Liberation's Photosynthesis Mark.",
+    },
+  ],
+  mechanics: [],
+}

@@ -1,0 +1,823 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Galbrena | elemento Fusion | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Galbrena",
+    name: "Galbrena",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Pistols",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 824, "20": 2143, "40": 4081, "50": 5325, "60": 6568, "70": 7812, "80": 9056, "90": 10300 },
+    atk: { "1": 37, "20": 96, "40": 186, "50": 245, "60": 304, "70": 363, "80": 412, "90": 462 },
+    def: { "1": 91, "20": 233, "40": 442, "50": 576, "60": 710, "70": 844, "80": 978, "90": 1112 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_1_dmg",
+      name: "Basic Attack Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2977, 0.3221, 0.3465, 0.3807, 0.4051, 0.4331, 0.4722, 0.5112, 0.5503, 0.5918],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1323, 0.1432, 0.154, 0.1692, 0.1801, 0.1926, 0.2099, 0.2273, 0.2446, 0.2631],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1323, 0.1432, 0.154, 0.1692, 0.1801, 0.1926, 0.2099, 0.2273, 0.2446, 0.2631],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_2_dmg_hit_3",
+      name: "Basic Attack Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3969, 0.4295, 0.462, 0.5076, 0.5402, 0.5776, 0.6297, 0.6817, 0.7338, 0.7891],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_3_dmg_hit_1",
+      name: "Basic Attack Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1439, 0.1557, 0.1675, 0.184, 0.1958, 0.2093, 0.2282, 0.2471, 0.2659, 0.286],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_3_dmg_hit_2",
+      name: "Basic Attack Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1439, 0.1557, 0.1675, 0.184, 0.1958, 0.2093, 0.2282, 0.2471, 0.2659, 0.286],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_3_dmg_hit_3",
+      name: "Basic Attack Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2158, 0.2335, 0.2512, 0.2759, 0.2936, 0.314, 0.3423, 0.3706, 0.3989, 0.4289],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_3_dmg_hit_4",
+      name: "Basic Attack Stage 3 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2158, 0.2335, 0.2512, 0.2759, 0.2936, 0.314, 0.3423, 0.3706, 0.3989, 0.4289],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_basicAttack_basic_attack_stage_4_dmg",
+      name: "Basic Attack Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8946, 0.968, 1.0414, 1.1441, 1.2174, 1.3018, 1.4192, 1.5365, 1.6539, 1.7786],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_dodgeCounter_dodge_counter_blood_for_blood_dmg_hit_1",
+      name: "Dodge Counter - Blood for Blood DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2065, 0.2234, 0.2404, 0.2641, 0.281, 0.3005, 0.3276, 0.3546, 0.3817, 0.4105],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_dodgeCounter_dodge_counter_blood_for_blood_dmg_hit_2",
+      name: "Dodge Counter - Blood for Blood DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2065, 0.2234, 0.2404, 0.2641, 0.281, 0.3005, 0.3276, 0.3546, 0.3817, 0.4105],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_dodgeCounter_dodge_counter_blood_for_blood_dmg_hit_3",
+      name: "Dodge Counter - Blood for Blood DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3097, 0.3351, 0.3605, 0.3961, 0.4215, 0.4507, 0.4913, 0.5319, 0.5726, 0.6157],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_dodgeCounter_dodge_counter_blood_for_blood_dmg_hit_4",
+      name: "Dodge Counter - Blood for Blood DMG - Hit 4",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3097, 0.3351, 0.3605, 0.3961, 0.4215, 0.4507, 0.4913, 0.5319, 0.5726, 0.6157],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_plungingAttack_midair_attack_ashfall_barrage_plunging_a",
+      name: "Mid-air Attack - Ashfall Barrage Plunging Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.72, 0.7791, 0.8381, 0.9208, 0.9798, 1.0477, 1.1422, 1.2366, 1.3311, 1.4315],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_plungingAttack_midair_attack_ashfall_barrage_sustained_",
+      name: "Mid-air Attack - Ashfall Barrage Sustained Fire DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.135, 0.1461, 0.1572, 0.1727, 0.1838, 0.1965, 0.2142, 0.2319, 0.2496, 0.2684],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_volley_of_death_stage_1_dmg",
+      name: "Heavy Attack - Volley of Death Stage 1 DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2681, 0.2901, 0.3121, 0.3429, 0.3648, 0.3901, 0.4253, 0.4605, 0.4956, 0.533],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_volley_of_death_stage_1_dmg_1",
+      name: "Heavy Attack - Volley of Death Stage 1 DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2681, 0.2901, 0.3121, 0.3429, 0.3648, 0.3901, 0.4253, 0.4605, 0.4956, 0.533],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_volley_of_death_stage_2_dmg",
+      name: "Heavy Attack - Volley of Death Stage 2 DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.174, 0.1883, 0.2026, 0.2225, 0.2368, 0.2532, 0.276, 0.2988, 0.3217, 0.3459],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_volley_of_death_stage_3_dmg",
+      name: "Heavy Attack - Volley of Death Stage 3 DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0844, 0.0913, 0.0982, 0.1079, 0.1148, 0.1228, 0.1339, 0.1449, 0.156, 0.1677],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_volley_of_death_stage_3_dmg_1",
+      name: "Heavy Attack - Volley of Death Stage 3 DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5905, 0.6389, 0.6873, 0.7551, 0.8035, 0.8592, 0.9367, 1.0141, 1.0916, 1.1739],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_resonanceSkill_resonance_skill_encroach_dmg_hit_1",
+      name: "Resonance Skill - Encroach DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.054, 0.0585, 0.0629, 0.0691, 0.0735, 0.0786, 0.0857, 0.0928, 0.0998, 0.1074],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_resonanceSkill_resonance_skill_encroach_dmg_hit_2",
+      name: "Resonance Skill - Encroach DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.126, 0.1363, 0.1466, 0.1611, 0.1714, 0.1833, 0.1998, 0.2164, 0.2329, 0.2504],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_resonanceSkill_resonance_skill_ascent_of_malice_dmg_hit",
+      name: "Resonance Skill - Ascent of Malice DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2594, 0.2807, 0.302, 0.3317, 0.353, 0.3775, 0.4115, 0.4455, 0.4796, 0.5157],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_resonanceSkill_resonance_skill_ascent_of_malice_dmg_hit_1",
+      name: "Resonance Skill - Ascent of Malice DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2594, 0.2807, 0.302, 0.3317, 0.353, 0.3775, 0.4115, 0.4455, 0.4796, 0.5157],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_resonanceLiberation_resonance_liberation_hellfire_absolution",
+      name: "Resonance Liberation - Hellfire Absolution DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5579, 0.6036, 0.6493, 0.7134, 0.7591, 0.8117, 0.8849, 0.9581, 1.0313, 1.109],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_resonanceLiberation_resonance_liberation_hellfire_absolution_1",
+      name: "Resonance Liberation - Hellfire Absolution DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4564, 0.4939, 0.5313, 0.5837, 0.6211, 0.6641, 0.724, 0.7839, 0.8438, 0.9074],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_hellstride_dmg",
+      name: "Hellstride DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66, 6.66],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_1_",
+      name: "Basic Attack - Seraphic Execution Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2967, 0.3211, 0.3454, 0.3795, 0.4038, 0.4318, 0.4707, 0.5096, 0.5486, 0.5899],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_2_",
+      name: "Basic Attack - Seraphic Execution Stage 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.14, 0.1515, 0.163, 0.1791, 0.1906, 0.2038, 0.2221, 0.2405, 0.2589, 0.2784],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_2__1",
+      name: "Basic Attack - Seraphic Execution Stage 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.14, 0.1515, 0.163, 0.1791, 0.1906, 0.2038, 0.2221, 0.2405, 0.2589, 0.2784],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_2__1_2",
+      name: "Basic Attack - Seraphic Execution Stage 2 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.42, 0.4545, 0.4889, 0.5371, 0.5716, 0.6112, 0.6663, 0.7214, 0.7765, 0.8351],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_3_",
+      name: "Basic Attack - Seraphic Execution Stage 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1223, 0.1324, 0.1424, 0.1564, 0.1665, 0.178, 0.1941, 0.2101, 0.2261, 0.2432],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_3__1",
+      name: "Basic Attack - Seraphic Execution Stage 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8561, 0.9264, 0.9966, 1.0948, 1.165, 1.2458, 1.3581, 1.4704, 1.5827, 1.7021],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_4_",
+      name: "Basic Attack - Seraphic Execution Stage 4 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0913, 0.0988, 0.1063, 0.1168, 0.1243, 0.1329, 0.1448, 0.1568, 0.1688, 0.1815],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_4__1",
+      name: "Basic Attack - Seraphic Execution Stage 4 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6389, 0.6913, 0.7437, 0.8171, 0.8695, 0.9297, 1.0135, 1.0973, 1.1812, 1.2702],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_5_",
+      name: "Basic Attack - Seraphic Execution Stage 5 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3384, 0.3662, 0.3939, 0.4328, 0.4605, 0.4925, 0.5369, 0.5813, 0.6257, 0.6728],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_basic_attack_seraphic_execution_stage_5__1",
+      name: "Basic Attack - Seraphic Execution Stage 5 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7896, 0.8544, 0.9191, 1.0098, 1.0745, 1.149, 1.2526, 1.3562, 1.4598, 1.5699],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_flamewing_verdict_stage_1_d",
+      name: "Heavy Attack - Flamewing Verdict Stage 1 DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2979, 0.3223, 0.3467, 0.3809, 0.4054, 0.4335, 0.4725, 0.5116, 0.5507, 0.5922],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_flamewing_verdict_stage_1_d_1",
+      name: "Heavy Attack - Flamewing Verdict Stage 1 DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2979, 0.3223, 0.3467, 0.3809, 0.4054, 0.4335, 0.4725, 0.5116, 0.5507, 0.5922],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_flamewing_verdict_stage_2_d",
+      name: "Heavy Attack - Flamewing Verdict Stage 2 DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1929, 0.2087, 0.2245, 0.2467, 0.2625, 0.2807, 0.306, 0.3313, 0.3566, 0.3835],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_flamewing_verdict_stage_3_d",
+      name: "Heavy Attack - Flamewing Verdict Stage 3 DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.089, 0.0963, 0.1036, 0.1138, 0.1211, 0.1295, 0.1411, 0.1528, 0.1645, 0.1769],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_heavyAttack_heavy_attack_flamewing_verdict_stage_3_d_1",
+      name: "Heavy Attack - Flamewing Verdict Stage 3 DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6226, 0.6736, 0.7247, 0.7962, 0.8472, 0.9059, 0.9876, 1.0693, 1.1509, 1.2377],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_dodgeCounter_dodge_counter_purgatory_scourge_hit_1",
+      name: "Dodge Counter - Purgatory Scourge - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1615, 0.1747, 0.188, 0.2065, 0.2198, 0.235, 0.2562, 0.2774, 0.2985, 0.321],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_dodgeCounter_dodge_counter_purgatory_scourge_hit_2",
+      name: "Dodge Counter - Purgatory Scourge - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1303, 1.2229, 1.3156, 1.4454, 1.5381, 1.6446, 1.7929, 1.9412, 2.0895, 2.247],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_plungingAttack_midair_attack_hellsent_barrage_plunging_",
+      name: "Mid-air Attack - Hellsent Barrage Plunging Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.8656, 0.9312, 1.0231, 1.0887, 1.1641, 1.2691, 1.374, 1.479, 1.5905],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_plungingAttack_midair_attack_hellsent_barrage_sustained",
+      name: "Mid-air Attack - Hellsent Barrage Sustained Fire DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.15, 0.1623, 0.1746, 0.1919, 0.2042, 0.2183, 0.238, 0.2577, 0.2774, 0.2983],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_resonance_skill_ravage_dmg_hit_1",
+      name: "Resonance Skill - Ravage DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.054, 0.0585, 0.0629, 0.0691, 0.0735, 0.0786, 0.0857, 0.0928, 0.0998, 0.1074],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_resonance_skill_ravage_dmg_hit_2",
+      name: "Resonance Skill - Ravage DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.126, 0.1363, 0.1466, 0.1611, 0.1714, 0.1833, 0.1998, 0.2164, 0.2329, 0.2504],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_introSkill_intro_skill_hellflare_overload_dmg",
+      name: "Intro Skill - Hellflare Overload DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4734, 0.5123, 0.5511, 0.6054, 0.6443, 0.6889, 0.751, 0.8131, 0.8752, 0.9412],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_outro_skill_dmg_hit_1",
+      name: "Outro Skill DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3999, 0.4327, 0.4655, 0.5114, 0.5442, 0.5819, 0.6344, 0.6868, 0.7393, 0.795],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Galbrena_forteCircuit_outro_skill_dmg_hit_2",
+      name: "Outro Skill DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.7992, 3.0287, 3.2583, 3.5796, 3.8091, 4.0731, 4.4403, 4.8076, 5.1748, 5.565],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Galbrena_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillAttack the target, dealing Fusion DMG equal to 79.5%*3+556.5% of Galbrena's ATK.Show Skill DetailsLevel 20Outro Skill DMG145.09%*3+1015.57%",
+    },
+    {
+      id: "Galbrena_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Galbrena Oathbound Hunt1 stack of Fated End is inflicted on the target when the following skills hit: Intro Skill, Basic Attack, Basic Attack - Seraphic Execution, Dodge Counter, Heavy Attack - Volley of Death, Heavy Attack - Flamewing Verdict, Mid-air Attack, Hellstride, Resonance Skill - Encroach, Resonance Skill - Ascent of Malice, Resonance Skill - Ravage and Resonance Liberation, up to 4 stacks.",
+    },
+    {
+      id: "Galbrena_passive_2",
+      name: "Each",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Each stack Amplifies the DMG directly dealt by Galbrena's Normal Attack, Resonance Skill, Forte Circuit, Resonance Liberation, Intro Skill, and Outro Skill by 5% for 5.5s.",
+    },
+    {
+      id: "Galbrena_passive_3",
+      name: "The",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "The same type of skill can trigger this effect on the same target once every 5s.",
+    },
+    {
+      id: "Galbrena_passive_4",
+      name: "Resonance",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Resonance Skill - Encroach and Resonance Skill - Ravage are considered the same type of skill.Sin FeasterCasting Basic Attack  Stage 4, Basic Attack - Seraphic Execution Stage 5, Heavy Attack - Volley of Death Stage 3, and Heavy Attack - Flamewing Verdict Stage 3 recovers 10 points of STA.",
+    },
+    {
+      id: "Galbrena_s1",
+      name: "S1: Heart of Defiance Ever Ablaze",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Resonance Skill - Ascent of Malice, each point of Afterflame additionally grants 2% Crit. DMG to Basic Attack - Seraphic Execution, Heavy Attack - Flamewing Verdict, Mid-air Attack - Hellsent Barrage,  Resonance Skill - Ravage, and Dodge Counter  - Purgatory Scourge, up to 80%. This effect is removed upon exiting Demon Hypostasis. While in Demon Hypostasis, Basic Attack - Seraphic Execution Stage 5, Heavy Attack - Flamewing Verdict Stage 3, and Mid-air Attack - Hellsent Barrage are immune to interruption.",
+    },
+    {
+      id: "Galbrena_s2_hellbound_dive_of_fire_and_",
+      name: "S2: Hellbound Dive of Fire and Abyss",
+      operation: "add",
+      value: [3.5],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "atk_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [3.5],
+        },
+      ],
+      descriptionTemplate: "Burning Drive grants 350% more ATK Bonus.",
+    },
+    {
+      id: "Galbrena_s3_hunters_blood_oath_rekindle",
+      name: "S3: Hunter’s Blood Oath Rekindled",
+      operation: "add",
+      value: [1.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1.3],
+        },
+      ],
+      descriptionTemplate: "Resonance Liberation DMG Multiplier is increased by 130%.",
+    },
+    {
+      id: "Galbrena_s4",
+      name: "S4: Carry Forth This Fading Spark",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Resonators in the team cast Echo Skill, all Resonators in the team gain 20% all-Attribute DMG Bonus for 20s.",
+    },
+    {
+      id: "Galbrena_s5",
+      name: "S5: Though Light Fades, Torment Consumes",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of Resonance Skill - Encroach, Resonance Skill - Ascent of Malice, and Resonance Skill - Ravage are increased by 150%.",
+    },
+    {
+      id: "Galbrena_s6",
+      name: "S6: I Remain Who I am, Eternal My Flame",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Demon Hypostasis becomes Eternal Hypostasis. Eternal Hypostasis retains all effects of Demon Hypostasis. Additionally, Eternal Hypostasis lasts, the DMG Multipliers of Basic Attack - Seraphic Execution, Heavy Attack - Flamewing Verdict,  Mid-air Attack - Hellsent Barrage, and Dodge Counter -Purgatory Scourge are additionally increased by 60%.  When casting Resonance Skill - Ascent of Malice, for every 1 point of Afterflame consumed, Galbrena's Basic Attack - Seraphic Execution, Heavy Attack - Flamewing Verdict, Mid-air Attack - Hellsent Barrage, Resonance Skill - Ravage, and Dodge Counter -Purgatory Scourge gain 0.875% Fusion DMG Amplification, up to 35%, which is removed upon exiting Eternal Hypostasis.",
+    },
+  ],
+  mechanics: [],
+}

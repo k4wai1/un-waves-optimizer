@@ -1,0 +1,645 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Iuno | elemento Aero | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Iuno",
+    name: "Iuno",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Aero",
+    weaponType: "Gauntlets",
+    tags: ["aero"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 842, "20": 2190, "40": 4170, "50": 5441, "60": 6712, "70": 7983, "80": 9254, "90": 10525 },
+    atk: { "1": 36, "20": 93, "40": 181, "50": 238, "60": 295, "70": 353, "80": 401, "90": 450 },
+    def: { "1": 92, "20": 236, "40": 447, "50": 582, "60": 718, "70": 853, "80": 989, "90": 1124 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Iuno_basicAttack_moonring_basic_attack_1_dmg",
+      name: "Moonring - Basic Attack 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.441, 0.4772, 0.5134, 0.564, 0.6002, 0.6417, 0.6996, 0.7575, 0.8153, 0.8768],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_basicAttack_moonring_basic_attack_2_dmg_hit_1",
+      name: "Moonring - Basic Attack 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2317, 0.2507, 0.2697, 0.2963, 0.3153, 0.3371, 0.3675, 0.3979, 0.4283, 0.4606],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_basicAttack_moonring_basic_attack_2_dmg_hit_2",
+      name: "Moonring - Basic Attack 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2387, 0.2583, 0.2779, 0.3053, 0.3248, 0.3474, 0.3787, 0.41, 0.4413, 0.4746],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_basicAttack_moonring_basic_attack_3_dmg_hit_1",
+      name: "Moonring - Basic Attack 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4426, 0.4789, 0.5152, 0.566, 0.6022, 0.644, 0.702, 0.7601, 0.8182, 0.8798],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_basicAttack_moonring_basic_attack_3_dmg_hit_2",
+      name: "Moonring - Basic Attack 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.456, 0.4934, 0.5308, 0.5831, 0.6205, 0.6635, 0.7233, 0.7831, 0.8429, 0.9065],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_plungingAttack_midair_attack",
+      name: "Mid-air Attack",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.27, 0.2922, 0.3143, 0.3453, 0.3675, 0.3929, 0.4284, 0.4638, 0.4992, 0.5368],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_dodgeCounter_moonring_dodge_counter_hit_1",
+      name: "Moonring - Dodge Counter - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4129, 0.4467, 0.4806, 0.528, 0.5618, 0.6008, 0.6549, 0.7091, 0.7632, 0.8208],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_dodgeCounter_moonring_dodge_counter_hit_2",
+      name: "Moonring - Dodge Counter - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4254, 0.4603, 0.4951, 0.544, 0.5789, 0.619, 0.6748, 0.7306, 0.7864, 0.8457],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_basicAttack_moonbow_basic_attack_1_dmg",
+      name: "Moonbow - Basic Attack 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.636, 0.6882, 0.7404, 0.8134, 0.8655, 0.9255, 1.0089, 1.0924, 1.1758, 1.2645],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_basicAttack_moonbow_basic_attack_2_dmg",
+      name: "Moonbow - Basic Attack 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.28, 0.303, 0.326, 0.3581, 0.3811, 0.4075, 0.4442, 0.4809, 0.5177, 0.5567],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_basicAttack_moonbow_basic_attack_3_dmg",
+      name: "Moonbow - Basic Attack 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.84, 0.9089, 0.9778, 1.0742, 1.1431, 1.2223, 1.3325, 1.4427, 1.553, 1.6701],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_dodgeCounter_moonbow_dodge_counter_dmg",
+      name: "Moonbow - Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.52, 0.5627, 0.6053, 0.665, 0.7077, 0.7567, 0.8249, 0.8931, 0.9614, 1.0339],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceSkill_pulse_of_origins_dmg_hit_1",
+      name: "Pulse of Origins DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0938, 0.1015, 0.1092, 0.12, 0.1277, 0.1365, 0.1488, 0.1611, 0.1734, 0.1865],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceSkill_pulse_of_origins_dmg_hit_2",
+      name: "Pulse of Origins DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6565, 0.7104, 0.7642, 0.8396, 0.8934, 0.9553, 1.0415, 1.1276, 1.2137, 1.3052],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceSkill_closing_refrain_dmg_hit_1",
+      name: "Closing Refrain DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7079, 0.7659, 0.824, 0.9052, 0.9633, 1.03, 1.1229, 1.2158, 1.3087, 1.4073],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceSkill_closing_refrain_dmg_hit_2",
+      name: "Closing Refrain DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7293, 0.7892, 0.849, 0.9327, 0.9925, 1.0613, 1.1569, 1.2526, 1.3483, 1.45],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceSkill_unfinished_refrain_dmg_hit_1",
+      name: "Unfinished Refrain DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7079, 0.7659, 0.824, 0.9052, 0.9633, 1.03, 1.1229, 1.2158, 1.3087, 1.4073],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceSkill_unfinished_refrain_dmg_hit_2",
+      name: "Unfinished Refrain DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7293, 0.7892, 0.849, 0.9327, 0.9925, 1.0613, 1.1569, 1.2526, 1.3483, 1.45],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceSkill_arc_beyond_the_edge_dmg",
+      name: "Arc Beyond the Edge DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1055, 1.1962, 1.2869, 1.4138, 1.5044, 1.6087, 1.7537, 1.8987, 2.0438, 2.1979],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [5.5, 5.951, 6.402, 7.0334, 7.4844, 8.0031, 8.7247, 9.4463, 10.1679, 10.9346],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_flux_moonbow_dmg",
+      name: "Flux - Moonbow DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.26, 1.3634, 1.4667, 1.6113, 1.7147, 1.8335, 1.9988, 2.1641, 2.3294, 2.5051],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_flux_moonring_dmg",
+      name: "Flux - Moonring DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3983, 0.431, 0.4636, 0.5093, 0.542, 0.5795, 0.6318, 0.684, 0.7363, 0.7918],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_enhanced_moonbow_basic_attack_1_dmg",
+      name: "Enhanced Moonbow - Basic Attack 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.036, 1.121, 1.206, 1.3249, 1.4098, 1.5075, 1.6435, 1.7794, 1.9153, 2.0597],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_enhanced_moonbow_basic_attack_2_dmg",
+      name: "Enhanced Moonbow - Basic Attack 2 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.48, 0.5194, 0.5588, 0.6139, 0.6532, 0.6985, 0.7615, 0.8244, 0.8874, 0.9543],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_enhanced_moonbow_basic_attack_3_dmg",
+      name: "Enhanced Moonbow - Basic Attack 3 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.34, 1.4499, 1.5598, 1.7136, 1.8235, 1.9499, 2.1257, 2.3015, 2.4773, 2.6641],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_dodgeCounter_enhanced_moonbow_dodge_counter_dmg",
+      name: "Enhanced Moonbow - Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7867, 0.8512, 0.9157, 1.006, 1.0705, 1.1447, 1.2479, 1.3511, 1.4544, 1.564],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_enhanced_arc_beyond_the_edge_dmg",
+      name: "Enhanced Arc Beyond the Edge DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.6055, 1.7372, 1.8689, 2.0532, 2.1848, 2.3362, 2.5469, 2.7575, 2.9681, 3.1919],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_moonbow_basic_attack_1_healing",
+      name: "Moonbow - Basic Attack 1 Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1303, 0.141, 0.1517, 0.1667, 0.1773, 0.1896, 0.2067, 0.2238, 0.2409, 0.2591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_moonbow_basic_attack_2_healing",
+      name: "Moonbow - Basic Attack 2 Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1303, 0.141, 0.1517, 0.1667, 0.1773, 0.1896, 0.2067, 0.2238, 0.2409, 0.2591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_moonbow_basic_attack_3_healing",
+      name: "Moonbow - Basic Attack 3 Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2443, 0.2644, 0.2844, 0.3124, 0.3325, 0.3555, 0.3875, 0.4196, 0.4516, 0.4857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_dodgeCounter_moonbow_dodge_counter_healing",
+      name: "Moonbow - Dodge Counter Healing",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1629, 0.1763, 0.1896, 0.2083, 0.2217, 0.237, 0.2584, 0.2797, 0.3011, 0.3238],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_arc_beyond_the_edge_healing",
+      name: "Arc Beyond the Edge Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2443, 0.2644, 0.2844, 0.3124, 0.3325, 0.3555, 0.3875, 0.4196, 0.4516, 0.4857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_absolute_fullness_dmg",
+      name: "Absolute Fullness DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.8656, 0.9312, 1.0231, 1.0887, 1.1641, 1.2691, 1.374, 1.479, 1.5905],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_absolute_fullness_healing",
+      name: "Absolute Fullness Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9771, 1.0573, 1.1374, 1.2496, 1.3297, 1.4218, 1.55, 1.6782, 1.8064, 1.9426],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_full_moon_domain_interval",
+      name: "Full Moon Domain Interval",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_full_moon_domain_healing",
+      name: "Full Moon Domain Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1629, 0.1763, 0.1896, 0.2083, 0.2217, 0.237, 0.2584, 0.2797, 0.3011, 0.3238],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_forteCircuit_full_moon_domain_sta_regen",
+      name: "Full Moon Domain STA Regen",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2, 0.2],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.08, 0.0866, 0.0932, 0.1024, 0.1089, 0.1165, 0.127, 0.1374, 0.1479, 0.1591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Iuno_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.24, 0.2597, 0.2794, 0.307, 0.3266, 0.3493, 0.3808, 0.4122, 0.4437, 0.4772],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Iuno_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillDeal Aero DMG.Show Skill DetailsLevel 20Skill DMG29.03%*7+87.08%Concerto Regen10From Gloom to Gleam",
+    },
+    {
+      id: "Iuno_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Iuno Waxing AscentEvery time Iuno casts Basic Attack, Heavy Attack, Dodge Counter, Resonance Skill, Resonance Liberation, or Intro Skill, she gains 1 Shield equal to 32% of her ATK for 15s.",
+    },
+    {
+      id: "Iuno_passive_2",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This Shield will not be passed on to the incoming Resonator.DerivationWhen Iuno casts Intro Skill or Resonance Liberation, she immediately gains 5 stacks of Blessing of the Wan Light.",
+    },
+    {
+      id: "Iuno_s1",
+      name: "S1: Wax or Wane, All Gild the Bough",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Iuno is in Lunar Cycle, her ATK is increased by 40%. When Iuno is inside the Full Moon Domain, she additionally restores 1 point of Resonance Energy per second. Resonance Skill - Arc Beyond the Edge and Heavy Attack - Absolute Fullness become immune to interruption.",
+    },
+    {
+      id: "Iuno_s2",
+      name: "S2: Day or Night, Let This Be Eternal",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonators in the team with 10 stacks of Blessing of the Wan Light gain an additional 40% all DMG Amplification.",
+    },
+    {
+      id: "Iuno_s3",
+      name: "S3: I Drink Deep of Their Forgetting",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Iuno is in Lunar Cycle, DMG dealt by Moonbow - Basic Attack, Resonance Skill - Arc Beyond the Edge, and Moonbow - Dodge Counter is Amplified by 65%. Within a certain period after performing Moonbow - Basic Attack or  Moonbow - Dodge Counter, casting Resonance Skill - Arc Beyond the Edge does not reset the cycle of Moonbow - Basic Attack.",
+    },
+    {
+      id: "Iuno_s4",
+      name: "S4: Rainy Season Dwell in My Eyes",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Heavy Attack - Absolute Fullness grants a Shield equal to 160% of Iuno's ATK to all Resonators in the team for 30s, which cannot be passed on to the incoming Resonator.",
+    },
+    {
+      id: "Iuno_s5_a_thousand_futile_glimpses",
+      name: "S5: A Thousand Futile Glimpses",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Iuno gains 20% Resonance Liberation DMG Bonus.",
+    },
+    {
+      id: "Iuno_s6",
+      name: "S6: I Am the Constant in the Chaos",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Heavy Attack - Absolute Fullness is increased by 1600%. Upon casting this skill, Iuno re-enters Lunar Cycle - New Moon, gains 100 points of Sentience, and resets all the cooldown of Resonance Skill - Arc Beyond the Edge.",
+    },
+  ],
+  mechanics: [],
+}

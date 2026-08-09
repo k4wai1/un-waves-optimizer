@@ -1,0 +1,757 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Lynae | elemento Spectro | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Lynae",
+    name: "Lynae",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Pistols",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 979, "20": 2546, "40": 4849, "50": 6326, "60": 7804, "70": 9282, "80": 10759, "90": 12237 },
+    atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
+    def: { "1": 98, "20": 251, "40": 476, "50": 620, "60": 764, "70": 909, "80": 1053, "90": 1197 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Lynae_basicAttack_basic_attack_stage_1_dmg",
+      name: "Basic Attack Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4335, 0.4691, 0.5046, 0.5544, 0.59, 0.6308, 0.6877, 0.7446, 0.8015, 0.8619],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2635, 0.2852, 0.3068, 0.337, 0.3586, 0.3835, 0.418, 0.4526, 0.4872, 0.5239],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2635, 0.2852, 0.3068, 0.337, 0.3586, 0.3835, 0.418, 0.4526, 0.4872, 0.5239],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_basic_attack_stage_2_dmg_hit_3",
+      name: "Basic Attack Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2635, 0.2852, 0.3068, 0.337, 0.3586, 0.3835, 0.418, 0.4526, 0.4872, 0.5239],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_basic_attack_stage_3_dmg",
+      name: "Basic Attack Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6205, 0.6714, 0.7223, 0.7935, 0.8444, 0.9029, 0.9843, 1.0658, 1.1472, 1.2337],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.207, 1.306, 1.405, 1.5436, 1.6425, 1.7564, 1.9147, 2.0731, 2.2314, 2.3997],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_plungingAttack_midair_attack_dmg_hit_1",
+      name: "Mid-air Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0723, 0.0782, 0.0841, 0.0924, 0.0984, 0.1052, 0.1147, 0.1241, 0.1336, 0.1437],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_plungingAttack_midair_attack_dmg_hit_2",
+      name: "Mid-air Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6503, 0.7036, 0.7569, 0.8316, 0.8849, 0.9462, 1.0315, 1.1169, 1.2022, 1.2928],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_basic_attack_spark_collision_lv_1_dmg",
+      name: "Basic Attack - Spark Collision Lv. 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2795, 0.3024, 0.3253, 0.3574, 0.3803, 0.4067, 0.4433, 0.48, 0.5166, 0.5556],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_basic_attack_spark_collision_lv_2_dmg",
+      name: "Basic Attack - Spark Collision Lv. 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8384, 0.9071, 0.9758, 1.0721, 1.1408, 1.2199, 1.3299, 1.4399, 1.5498, 1.6667],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_basic_attack_spark_collision_lv_3_dmg",
+      name: "Basic Attack - Spark Collision Lv. 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.3972, 1.5118, 1.6264, 1.7868, 1.9013, 2.0331, 2.2164, 2.3997, 2.583, 2.7778],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage_",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4165, 0.4507, 0.4849, 0.5327, 0.5668, 0.6061, 0.6607, 0.7154, 0.77, 0.8281],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1955, 0.2116, 0.2276, 0.2501, 0.2661, 0.2845, 0.3102, 0.3358, 0.3615, 0.3887],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1_2",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1899, 0.2054, 0.221, 0.2428, 0.2584, 0.2763, 0.3012, 0.3261, 0.351, 0.3775],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1_2_3",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1496, 0.1619, 0.1742, 0.1914, 0.2036, 0.2177, 0.2374, 0.257, 0.2766, 0.2975],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1_2_3_4",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2244, 0.2429, 0.2613, 0.287, 0.3054, 0.3266, 0.356, 0.3855, 0.4149, 0.4462],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1_2_3_4_5",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2244, 0.2429, 0.2613, 0.287, 0.3054, 0.3266, 0.356, 0.3855, 0.4149, 0.4462],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1_2_3_4_5_6",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 5 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.38, 0.4112, 0.4423, 0.4859, 0.5171, 0.5529, 0.6028, 0.6526, 0.7025, 0.7554],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1_2_3_4_5_6_7",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 5 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.076, 0.0823, 0.0885, 0.0972, 0.1035, 0.1106, 0.1206, 0.1306, 0.1405, 0.1511],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_basic_attack_stage__1_2_3_4_5_6_7_8",
+      name: "Kaleidoscopic Parade - Basic Attack Stage 5 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5066, 0.5482, 0.5897, 0.6479, 0.6894, 0.7372, 0.8037, 0.8701, 0.9366, 1.0072],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_dodgeCounter_kaleidoscopic_parade_dodge_counter",
+      name: "Kaleidoscopic Parade - Dodge Counter",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9265, 1.0025, 1.0785, 1.1849, 1.2608, 1.3482, 1.4698, 1.5913, 1.7129, 1.842],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_heavyAttack_kaleidoscopic_parade_ground_heavy_attack",
+      name: "Kaleidoscopic Parade - Ground Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0887, 0.096, 0.1032, 0.1134, 0.1207, 0.129, 0.1407, 0.1523, 0.1639, 0.1763],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_basicAttack_kaleidoscopic_parade_graffiti_blast_dmg",
+      name: "Kaleidoscopic Parade - Graffiti Blast DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_plungingAttack_kaleidoscopic_parade_midair_attack_dmg_h",
+      name: "Kaleidoscopic Parade - Mid-Air Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0723, 0.0782, 0.0841, 0.0924, 0.0984, 0.1052, 0.1147, 0.1241, 0.1336, 0.1437],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_plungingAttack_kaleidoscopic_parade_midair_attack_dmg_h_1",
+      name: "Kaleidoscopic Parade - Mid-Air Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6503, 0.7036, 0.7569, 0.8316, 0.8849, 0.9462, 1.0315, 1.1169, 1.2022, 1.2928],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_plungingAttack_kaleidoscopic_parade_midair_heavy_attack",
+      name: "Kaleidoscopic Parade - Mid-air Heavy Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1749, 0.1892, 0.2036, 0.2237, 0.238, 0.2545, 0.2774, 0.3004, 0.3233, 0.3477],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_resonanceSkill_lynaestyle_palettes_dmg_hit_1",
+      name: "Lynae-Style Palettes DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7008, 0.7582, 0.8157, 0.8961, 0.9536, 1.0197, 1.1116, 1.2035, 1.2955, 1.3931],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_resonanceSkill_lynaestyle_palettes_dmg_hit_2",
+      name: "Lynae-Style Palettes DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2336, 0.2528, 0.2719, 0.2987, 0.3179, 0.3399, 0.3706, 0.4012, 0.4319, 0.4644],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_resonanceSkill_additive_color_dmg",
+      name: "Additive Color DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.585, 0.633, 0.681, 0.7481, 0.7961, 0.8513, 0.928, 1.0048, 1.0815, 1.1631],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_resonanceLiberation_prismatic_overblast_dmg",
+      name: "Prismatic Overblast DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.44, 0.4761, 0.5122, 0.5627, 0.5988, 0.6403, 0.698, 0.7557, 0.8135, 0.8748],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_resonanceLiberation_basic_attack_to_a_vivid_tomorrow_dmg_hit",
+      name: "Basic Attack - To a Vivid Tomorrow! DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0422, 0.0456, 0.0491, 0.0539, 0.0573, 0.0613, 0.0668, 0.0724, 0.0779, 0.0838],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_resonanceLiberation_basic_attack_to_a_vivid_tomorrow_dmg_hit_1",
+      name: "Basic Attack - To a Vivid Tomorrow! DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0506, 0.0547, 0.0589, 0.0647, 0.0688, 0.0736, 0.0802, 0.0868, 0.0935, 0.1005],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_resonanceLiberation_resonance_energy_cost",
+      name: "Resonance Energy Cost",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25, 1.25],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_forteCircuit_spectral_analysis_discorded_tune_dmg",
+      name: "Spectral Analysis - Discorded Tune DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [9.46, 10.2358, 11.0115, 12.0975, 12.8732, 13.7653, 15.0064, 16.2476, 17.4888, 18.8075],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_introSkill_basic_attack_iridescent_splash_dmg",
+      name: "Basic Attack - Iridescent Splash DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.53, 1.6555, 1.781, 1.9566, 2.0821, 2.2264, 2.4271, 2.6278, 2.8286, 3.0418],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_introSkill_basic_attack_visual_impact_dmg",
+      name: "Basic Attack - Visual Impact DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [6.12, 6.6219, 7.1237, 7.8263, 8.3281, 8.9053, 9.7082, 10.5111, 11.3141, 12.1672],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_introSkill_basic_attack_polychrome_leap_1",
+      name: "Basic Attack - Polychrome Leap 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.17, 0.184, 0.1979, 0.2174, 0.2314, 0.2474, 0.2697, 0.292, 0.3143, 0.338],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_introSkill_basic_attack_polychrome_leap_2",
+      name: "Basic Attack - Polychrome Leap 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.085, 0.092, 0.099, 0.1087, 0.1157, 0.1237, 0.1349, 0.146, 0.1572, 0.169],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_introSkill_basic_attack_polychrome_leap_3",
+      name: "Basic Attack - Polychrome Leap 3",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0659, 0.0713, 0.0767, 0.0843, 0.0897, 0.0959, 0.1045, 0.1132, 0.1218, 0.131],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_introSkill_tune_rupture_response_spectral_analysis_",
+      name: "Tune Rupture Response - Spectral Analysis DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [9.46, 10.2358, 11.0115, 12.0975, 12.8732, 13.7653, 15.0064, 16.2476, 17.4888, 18.8075],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lynae_forteCircuit_time_to_show_some_colors_dmg",
+      name: "Time to Show Some Colors! DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1131, 0.1224, 0.1316, 0.1446, 0.1539, 0.1645, 0.1794, 0.1942, 0.209, 0.2248],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Lynae_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Lynae Colors Never Fade!After casting Basic Attack - Visual Impact, Lynae leaves Spray Paint on the ground and continuously inflicts Photochromic Flux on targets within the Spray Paint for 5s, triggered once every 2s.",
+    },
+    {
+      id: "Lynae_passive_1",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Spray Paint is on the ground, switching to another Resonance Mode doesn't affect the Photochromic Flux effects inflicted by the Spray Paint.",
+    },
+    {
+      id: "Lynae_passive_2",
+      name: "With",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "With Lynae in the team, the expedition motorbike's Energy Tank expands by 600 points.",
+    },
+    {
+      id: "Lynae_lynae",
+      name: "Lynae",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Lynae enters Kaleidoscopic Parade automatically while on the expedition motorbike and restores 20% of Lumiflow per second.\"Adaptive Optics: Everyday Applications\"Casting Intro Skill - Time to Show Some Colors!",
+    },
+    {
+      id: "Lynae_increases",
+      name: "increases",
+      operation: "add",
+      value: [0.25],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Stat", id: "spectro_dmg_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.25],
+        },
+      ],
+      descriptionTemplate: "increases Lynae's Spectro DMG Bonus by 25% for 9s.",
+    },
+    {
+      id: "Lynae_passive_5",
+      name: "During",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "During Kaleidoscopic Parade, if Lynae isn't in combat, dodging without directional input grants her Optic Camo for 15s, which will be removed when Lynae casts any skill other than dodging or is switched off the field.",
+    },
+    {
+      id: "Lynae_passive_6",
+      name: "Performing",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Performing environmental, gameplay or functional interactions, or entering combat, removes the Optic Camo.",
+    },
+    {
+      id: "Lynae_passive_7",
+      name: "With",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "With Optic Camo, Lynae may enter the enemy's aggro range without triggering combat.",
+    },
+    {
+      id: "Lynae_s1",
+      name: "S1: Days to be Painted Like a Canvas",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Basic Attack - Polychrome Leap is increased by 120%. The duration of Spray Paint is increased by 100%. Targets within the range of Spray Paint are pulled in towards the center every 6s. Lynae is now immune to interruptions during Basic Attack - Polychrome Leap and Basic Attack - Visual Impact. During Optical Sampling Stage, after staying in a non-combat state for 2s, restore 120 points of Overflow every 2s.",
+    },
+    {
+      id: "Lynae_s2",
+      name: "S2: Into Lights' Vanishing Point",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Gain 25% All DMG Amplification. Outro Skill gains the following effect: Casting Outro Skill now additionally grants the incoming Resonator 25% All DMG Amplification for 14s or until the Resonator is switched out.",
+    },
+    {
+      id: "Lynae_s3",
+      name: "S3: For One Brilliant Moment",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Basic Attack - Visual Impact and Basic Attack - Iridescent Splash is increased by 90%. While Lynae is in combat, when Lumiflow is at least 120 points, gain 1 stack of Premixed Hue every 1s, up to 25 stacks. Each stack of Premixed Hue increases the Spectro DMG Bonus of Additive Color by 55%. No Premixed Hue is gained while casting Additive Color. When Additive Color ends, remove all stacks of Premixed Hue. Lynae loses a stack of Premixed Hue every 0.5s when Lumiflow is below 120 points. While Lynae is out of combat, with at least 120 points of Lumiflow, gain 1 stack of Premixed Hue every 0.5s; when Lumiflow is below 120 points, lose 1 stack of Premixed Hue every 1s.",
+    },
+    {
+      id: "Lynae_s4_shadows_of_a_wind_racer",
+      name: "S4: Shadows of a Wind Racer",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "atk_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "ATK is increased by 20%.",
+    },
+    {
+      id: "Lynae_s5_visions_of_a_future_unbound",
+      name: "S5: Visions of a Future Unbound",
+      operation: "add",
+      value: [0.7],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.7],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation - Prismatic Overblast is increased by 70%.",
+    },
+    {
+      id: "Lynae_s6",
+      name: "S6: Painted in My True Color",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Each time Kaleidoscopic Parade - Graffiti Blast or Kaleidoscopic Parade - Mid-air Heavy Attack is cast, Lynae gains 1 stack of Color of Soul, up to 3 stacks. Each stack of Color of Soul increases the DMG the target takes from Basic Attack - Iridescent Splash and Basic Attack - Visual Impact by 30%. After casting Basic Attack - Iridescent Splash or Basic Attack - Visual Impact, all stacks of Color of Soul are removed. Casting Basic Attack - Polychrome Leap resets the charges of Kaleidoscopic Parade - Mid-air Heavy Attack. Lynae is immune to interruptions, and DMG taken is reduced by 30% during Kaleidoscopic Parade - Mid-air Heavy Attack. Lynae now stays in Kaleidoscopic Parade after casting Outro Skill - Let's Hit the Road!. The Lumiflow upper limit is increased from 120 to 360. At the max limit, Lynae's roller skating speed further increases. If Intro Skill is cast during Kaleidoscopic Parade, restore 120 points of Lumiflow.",
+    },
+  ],
+  mechanics: [],
+}

@@ -1,0 +1,466 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Rover (Spectro) | elemento Spectro | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "RoverSpectro",
+    name: "Rover (Spectro)",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Sword",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 912, "20": 2372, "40": 4517, "50": 5893, "60": 7270, "70": 8646, "80": 10023, "90": 11400 },
+    atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
+    def: { "1": 112, "20": 287, "40": 544, "50": 709, "60": 874, "70": 1039, "80": 1204, "90": 1368 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "RoverSpectro_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2975, 0.3219, 0.3463, 0.3805, 0.4049, 0.4329, 0.472, 0.511, 0.55, 0.5915],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3825, 0.4139, 0.4453, 0.4892, 0.5206, 0.5566, 0.6068, 0.657, 0.7072, 0.7605],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0765, 0.0828, 0.0891, 0.0979, 0.1042, 0.1114, 0.1214, 0.1314, 0.1415, 0.1521],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6545, 0.7082, 0.7619, 0.837, 0.8907, 0.9524, 1.0383, 1.1242, 1.21, 1.3013],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9825, 1.0631, 1.1437, 1.2565, 1.337, 1.4297, 1.5586, 1.6875, 1.8164, 1.9534],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0969, 0.1049, 0.1128, 0.124, 0.1319, 0.141, 0.1538, 0.1665, 0.1792, 0.1927],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_heavyAttack_heavy_attack_resonance_dmg",
+      name: "Heavy Attack - Resonance DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3825, 0.4139, 0.4453, 0.4892, 0.5206, 0.5566, 0.6068, 0.657, 0.7072, 0.7605],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_heavyAttack_heavy_attack_aftertune_dmg",
+      name: "Heavy Attack - Aftertune DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6375, 0.6898, 0.7421, 0.8153, 0.8676, 0.9277, 1.0113, 1.095, 1.1786, 1.2675],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.188, 1.2855, 1.3829, 1.5193, 1.6167, 1.7287, 1.8846, 2.0404, 2.1963, 2.3619],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_resonanceLiberation_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_resonanceLiberation_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.4, 3.6788, 3.9576, 4.348, 4.6268, 4.9474, 5.3935, 5.8395, 6.2856, 6.7596],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_forteCircuit_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_forteCircuit_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.4, 3.6788, 3.9576, 4.348, 4.6268, 4.9474, 5.3935, 5.8395, 6.2856, 6.7596],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_introSkill_resonating_spin_dmg",
+      name: "Resonating Spin DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6493, 0.7025, 0.7558, 0.8303, 0.8835, 0.9448, 1.03, 1.1151, 1.2003, 1.2908],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_introSkill_resonating_whirl_dmg",
+      name: "Resonating Whirl DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_introSkill_resonating_echoes_stage_1_dmg",
+      name: "Resonating Echoes Stage 1 DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_introSkill_resonating_echoes_stage_2_dmg",
+      name: "Resonating Echoes Stage 2 DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.8656, 0.9312, 1.0231, 1.0887, 1.1641, 1.2691, 1.374, 1.479, 1.5905],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_forteCircuit_resonating_spin_dmg",
+      name: "Resonating Spin DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6493, 0.7025, 0.7558, 0.8303, 0.8835, 0.9448, 1.03, 1.1151, 1.2003, 1.2908],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_forteCircuit_resonating_whirl_dmg",
+      name: "Resonating Whirl DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_forteCircuit_resonating_echoes_stage_1_dmg",
+      name: "Resonating Echoes Stage 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_forteCircuit_resonating_echoes_stage_2_dmg",
+      name: "Resonating Echoes Stage 2 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.8656, 0.9312, 1.0231, 1.0887, 1.1641, 1.2691, 1.374, 1.479, 1.5905],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "RoverSpectro_forteCircuit_skill_dmg",
+      name: "Skill DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.85, 0.9197, 0.9894, 1.087, 1.1567, 1.2369, 1.3484, 1.4599, 1.5714, 1.6899],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "RoverSpectro_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillRover attacks the target, dealing Spectro DMG.Show Skill DetailsLevel 20Skill DMG308.39%Concerto Regen10Instant",
+    },
+    {
+      id: "RoverSpectro_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillGenerate an area of stasis centered around the incoming Resonator, lasting for 3s.",
+    },
+    {
+      id: "RoverSpectro_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Rover (Spectro) ReticenceDMG dealt by Rover's Basic Attack Resonating Echoes is increased by 60%.Silent ListenerRover gains 15% ATK increase for 5s upon casting Heavy Attack Resonance.",
+    },
+    {
+      id: "RoverSpectro_s1",
+      name: "S1: Odyssey of Beginnings",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Rover's Crit. Rate is increased by 15% for 7s when casting Resonance Skill Resonating Slashes or Resonance Skill Resonating Spin.",
+    },
+    {
+      id: "RoverSpectro_s2_microcosmic_murmurs",
+      name: "S2: Microcosmic Murmurs",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "spectro_dmg_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Rover's Spectro DMG Bonus is increased by 20%.",
+    },
+    {
+      id: "RoverSpectro_s3_visages_of_dust",
+      name: "S3: Visages of Dust",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "energyRegen_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Rover's Energy Regen is increased by 20%.",
+    },
+    {
+      id: "RoverSpectro_s4",
+      name: "S4: Resonating Lamella",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Resonance Liberation Echoing Resonance, Rover continuously restores HP for all team members: HP equal to 20% of Rover's ATK will be restored every second for 5s.",
+    },
+    {
+      id: "RoverSpectro_s5_temporal_virtuoso",
+      name: "S5: Temporal Virtuoso",
+      operation: "add",
+      value: [0.4],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.4],
+        },
+      ],
+      descriptionTemplate: "Rover's Resonance Liberation DMG Bonus is increased by 40%.",
+    },
+    {
+      id: "RoverSpectro_s6_echoes_of_wanderlust",
+      name: "S6: Echoes of Wanderlust",
+      operation: "add",
+      value: [0.1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.1],
+        },
+      ],
+      descriptionTemplate: "Resonance Skill Resonating Slashes and Resonance Skill Resonating Spin reduces the target's Spectro RES by 10% on hit for 20s.",
+    },
+  ],
+  mechanics: [],
+}

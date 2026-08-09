@@ -1,0 +1,664 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Suisui | elemento Glacio | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Suisui",
+    name: "Suisui",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Glacio",
+    weaponType: "Rectifier",
+    tags: ["glacio"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 1337, "20": 3477, "40": 6622, "50": 8640, "60": 10658, "70": 12676, "80": 14694, "90": 16712 },
+    atk: { "1": 23, "20": 59, "40": 115, "50": 152, "60": 189, "70": 225, "80": 256, "90": 287 },
+    def: { "1": 90, "20": 230, "40": 437, "50": 570, "60": 702, "70": 835, "80": 967, "90": 1099 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stance_stage_1_dmg",
+      name: "Basic Attack - Zephyr Stance Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3176, 0.3437, 0.3697, 0.4062, 0.4322, 0.4622, 0.5039, 0.5455, 0.5872, 0.6315],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stancestage_2_dmg_hi",
+      name: "Basic Attack - Zephyr StanceStage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3068, 0.332, 0.3572, 0.3924, 0.4175, 0.4465, 0.4867, 0.527, 0.5672, 0.61],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stancestage_2_dmg_hi_1",
+      name: "Basic Attack - Zephyr StanceStage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3068, 0.332, 0.3572, 0.3924, 0.4175, 0.4465, 0.4867, 0.527, 0.5672, 0.61],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stance_stage_3_dmg_h",
+      name: "Basic Attack - Zephyr Stance Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2103, 0.2275, 0.2448, 0.2689, 0.2861, 0.306, 0.3336, 0.3611, 0.3887, 0.418],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stance_stage_3_dmg_h_1",
+      name: "Basic Attack - Zephyr Stance Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2103, 0.2275, 0.2448, 0.2689, 0.2861, 0.306, 0.3336, 0.3611, 0.3887, 0.418],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stance_stage_3_dmg_h_1_2",
+      name: "Basic Attack - Zephyr Stance Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2804, 0.3034, 0.3263, 0.3585, 0.3815, 0.4079, 0.4447, 0.4815, 0.5183, 0.5574],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stance_stage_4_dmg_h",
+      name: "Basic Attack - Zephyr Stance Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_basicAttack_basic_attack_zephyr_stance_stage_4_dmg_h_1",
+      name: "Basic Attack - Zephyr Stance Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.08, 0.0866, 0.0932, 0.1024, 0.1089, 0.1165, 0.127, 0.1374, 0.1479, 0.1591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_plungingAttack_midair_attack_zephyr_stance_dmg",
+      name: "Mid-air Attack - Zephyr Stance DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3557, 0.3849, 0.4141, 0.4549, 0.4841, 0.5176, 0.5643, 0.6109, 0.6576, 0.7072],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_dodgeCounter_dodge_counter_zephyr_stance_dmg_hit_1",
+      name: "Dodge Counter - Zephyr Stance DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2576, 0.2787, 0.2998, 0.3294, 0.3505, 0.3748, 0.4086, 0.4423, 0.4761, 0.512],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_dodgeCounter_dodge_counter_zephyr_stance_dmg_hit_2",
+      name: "Dodge Counter - Zephyr Stance DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2576, 0.2787, 0.2998, 0.3294, 0.3505, 0.3748, 0.4086, 0.4423, 0.4761, 0.512],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_dodgeCounter_dodge_counter_zephyr_stance_dmg_hit_3",
+      name: "Dodge Counter - Zephyr Stance DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3434, 0.3716, 0.3997, 0.4391, 0.4673, 0.4997, 0.5447, 0.5898, 0.6348, 0.6827],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_resonanceSkill_resonance_skill_zephyr_stance_dmg",
+      name: "Resonance Skill - Zephyr Stance DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.12, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2386],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_resonanceSkill_awakening_spring_dmg",
+      name: "Awakening Spring DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.144, 0.1559, 0.1677, 0.1842, 0.196, 0.2096, 0.2285, 0.2474, 0.2663, 0.2863],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_resonanceSkill_resonance_skill_drizzle_stance_dmg_hit_1",
+      name: "Resonance Skill - Drizzle Stance DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.06, 0.065, 0.0699, 0.0768, 0.0817, 0.0874, 0.0952, 0.1031, 0.111, 0.1193],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_resonanceSkill_resonance_skill_drizzle_stance_dmg_hit_2",
+      name: "Resonance Skill - Drizzle Stance DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.36, 0.3896, 0.4191, 0.4604, 0.4899, 0.5239, 0.5711, 0.6183, 0.6656, 0.7158],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_resonanceSkill_enrichment_healing_flat",
+      name: "Enrichment Healing (Flat)",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [330, 369, 412, 462, 521, 577, 587, 600, 610, 627],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_resonanceSkill_enrichment_healing",
+      name: "Enrichment Healing",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0162, 0.0169, 0.0175, 0.0185, 0.0198, 0.0211, 0.0236, 0.0263, 0.0293, 0.0342],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_1_dmg_",
+      name: "Basic Attack - Drizzle Stance Stage 1 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0984, 0.1065, 0.1146, 0.1259, 0.134, 0.1432, 0.1561, 0.1691, 0.182, 0.1957],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_1_dmg__1",
+      name: "Basic Attack - Drizzle Stance Stage 1 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0984, 0.1065, 0.1146, 0.1259, 0.134, 0.1432, 0.1561, 0.1691, 0.182, 0.1957],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_2_dmg_",
+      name: "Basic Attack - Drizzle Stance Stage 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.16, 0.1732, 0.1863, 0.2047, 0.2178, 0.2329, 0.2539, 0.2748, 0.2958, 0.3181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_2_dmg__1",
+      name: "Basic Attack - Drizzle Stance Stage 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.08, 0.0866, 0.0932, 0.1024, 0.1089, 0.1165, 0.127, 0.1374, 0.1479, 0.1591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_2_dmg__1_2",
+      name: "Basic Attack - Drizzle Stance Stage 2 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.08, 0.0866, 0.0932, 0.1024, 0.1089, 0.1165, 0.127, 0.1374, 0.1479, 0.1591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_2_dmg__1_2_3",
+      name: "Basic Attack - Drizzle Stance Stage 2 DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.16, 0.1732, 0.1863, 0.2047, 0.2178, 0.2329, 0.2539, 0.2748, 0.2958, 0.3181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_2_dmg__1_2_3_4",
+      name: "Basic Attack - Drizzle Stance Stage 2 DMG - Hit 5",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.16, 0.1732, 0.1863, 0.2047, 0.2178, 0.2329, 0.2539, 0.2748, 0.2958, 0.3181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_3_dmg_",
+      name: "Basic Attack - Drizzle Stance Stage 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0692, 0.0749, 0.0806, 0.0885, 0.0942, 0.1007, 0.1098, 0.1189, 0.128, 0.1376],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_3_dmg__1",
+      name: "Basic Attack - Drizzle Stance Stage 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0692, 0.0749, 0.0806, 0.0885, 0.0942, 0.1007, 0.1098, 0.1189, 0.128, 0.1376],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_3_dmg__1_2",
+      name: "Basic Attack - Drizzle Stance Stage 3 DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0692, 0.0749, 0.0806, 0.0885, 0.0942, 0.1007, 0.1098, 0.1189, 0.128, 0.1376],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_3_dmg__1_2_3",
+      name: "Basic Attack - Drizzle Stance Stage 3 DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0692, 0.0749, 0.0806, 0.0885, 0.0942, 0.1007, 0.1098, 0.1189, 0.128, 0.1376],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_basic_attack_drizzle_stance_stage_4_dmg",
+      name: "Basic Attack - Drizzle Stance Stage 4 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8, 0.8656, 0.9312, 1.0231, 1.0887, 1.1641, 1.2691, 1.374, 1.479, 1.5905],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_heavyAttack_heavy_attack_drizzle_stance_hit_1",
+      name: "Heavy Attack - Drizzle Stance - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.06, 0.065, 0.0699, 0.0768, 0.0817, 0.0874, 0.0952, 0.1031, 0.111, 0.1193],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_heavyAttack_heavy_attack_drizzle_stance_hit_2",
+      name: "Heavy Attack - Drizzle Stance - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6, 0.6492, 0.6984, 0.7673, 0.8165, 0.8731, 0.9518, 1.0305, 1.1093, 1.1929],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_illuminating_dew_dmg",
+      name: "Illuminating Dew DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.528, 0.5713, 0.6146, 0.6753, 0.7186, 0.7683, 0.8376, 0.9069, 0.9762, 1.0498],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_forteCircuit_swallows_cut_dmg",
+      name: "Swallow's Cut DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5415, 0.5859, 0.6303, 0.6924, 0.7368, 0.7879, 0.8589, 0.93, 1.001, 1.0765],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Suisui_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.144, 0.1559, 0.1677, 0.1842, 0.196, 0.2096, 0.2285, 0.2474, 0.2663, 0.2863],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Suisui_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Suisui Sky Over WaterConsuming Enrichment grants the Resonator 10  of Spring's Birth, up to 10 stacks.",
+    },
+    {
+      id: "Suisui_passive_1",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When the Resonator with Spring's Birth is not at full HP, restore their HP by 62 + 0.34% of Suisui's Max HP at the cost of 1 stack of Spring's Birth every 2s.",
+    },
+    {
+      id: "Suisui_passive_2",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Resonance Skill - Awakening Spring and Intro Skill - Tinkling Jade hit a target, they additionally restore 18 points of Concerto Energy and 13 points of Resonance Energy, and increase the attack's Crit.",
+    },
+    {
+      id: "Suisui_passive_3",
+      name: "Rate",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Rate by 80% and Glacio DMG by 240%.",
+    },
+    {
+      id: "Suisui_passive_4",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect can be triggered up to once every 25s.Glimmering GoldWhen a Resonator other than Suisui takes a fatal blow, they will not be knocked out but will instead regain 50% of Suisui's current HP, while Suisui herself loses the same amount of HP.",
+    },
+    {
+      id: "Suisui_passive_5",
+      name: "Suisui's",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Suisui's HP will not go below 1 from this effect.",
+    },
+    {
+      id: "Suisui_passive_6",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect can be triggered once every 10 .",
+    },
+    {
+      id: "Suisui_s1",
+      name: "S1: Mountains Washed Into Paintings",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonators with Undulating Mist also gain ATK increase after inflicting Negative Status or dealing Negative Status DMG. The duration of Reflecting Shadows obtained through the third Plume Step is extended by 100%. Basic Attack - Drizzle Stance, Heavy Attack - Drizzle Stance, Plunging Attack - Illuminating Dew and Plunging Attack - Swallow's Cut are immune to interruption.",
+    },
+    {
+      id: "Suisui_s2",
+      name: "S2: Clouds Pour Like Molten Gold",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "All nearby Resonators in the team within the Ceaseless Landscape have their Crit. DMG increased by 50% for 30s after performing the following actions: - Inflicting Spectro Frazzle, Fusion Burst, Glacio Chafe, Aero Erosion, and Electro Flare, or dealing the corresponding Negative Status DMG. - Consuming Havoc Bane stacks on the target. When the active Resonator is not in the Ceaseless Landscape, this Crit. DMG bonus effect is disabled.",
+    },
+    {
+      id: "Suisui_s3",
+      name: "S3: Sparse Curtains Invite Evening Glow",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Normal Attack shortly after casting Resonance Skill - Drizzle Stance to cast Basic Attack - Drizzle Stance Stage 4.  Casting Resonance Skill - Drizzle Stance grants Kingfisher. Switching to another Resonator ends this effect. Casting Basic Attack - Drizzle Stance Stage 4 consumes Kingfisher to restore 20 points of Concerto Energy and 350 points of Floral Epistle. Kingfisher can be consumed up to once every 25s.",
+    },
+    {
+      id: "Suisui_s4_autumn_mountains_in_choir_s",
+      name: "S4: Autumn Mountains in Choir Sing",
+      operation: "add",
+      value: [0.5],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "healing_bonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.5],
+        },
+      ],
+      descriptionTemplate: "Healing provided by Enrichment and  Spring's Birth are increased by 50%.",
+    },
+    {
+      id: "Suisui_s5_i_long_to_ride_the_eastern_",
+      name: "S5: I Long To Ride The Eastern Wind",
+      operation: "add",
+      value: [1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "basicAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1],
+        },
+      ],
+      descriptionTemplate: "The DMG Multipliers of Basic Attack - Drizzle Stance and Heavy Attack - Drizzle Stance are increased by 100%.",
+    },
+    {
+      id: "Suisui_s6_staying_true_to_this_splend",
+      name: "S6: Staying True To This Splendid Realm",
+      operation: "add",
+      value: [5],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [5],
+        },
+      ],
+      descriptionTemplate: "The Crit. DMG of Intro Skill - Tinkling Jade and Resonance Skill - Awakening Spring is increased by 500%.",
+    },
+  ],
+  mechanics: [],
+}

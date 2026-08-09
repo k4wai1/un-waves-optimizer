@@ -1,0 +1,358 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Lingyang | elemento Glacio | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Lingyang",
+    name: "Lingyang",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Glacio",
+    weaponType: "Gauntlets",
+    tags: ["glacio"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 831, "20": 2161, "40": 4116, "50": 5370, "60": 6624, "70": 7878, "80": 9133, "90": 10387 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 99, "20": 253, "40": 481, "50": 627, "60": 772, "70": 918, "80": 1064, "90": 1209 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Lingyang_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3665, 0.3966, 0.4267, 0.4687, 0.4988, 0.5333, 0.5814, 0.6295, 0.6776, 0.7287],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1027, 0.1111, 0.1195, 0.1313, 0.1397, 0.1494, 0.1628, 0.1763, 0.1898, 0.2041],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2199, 0.238, 0.256, 0.2813, 0.2993, 0.32, 0.3489, 0.3777, 0.4066, 0.4372],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_basicAttack_stage_5_dmg",
+      name: "Stage 5 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.767, 0.8299, 0.8928, 0.9809, 1.0438, 1.1161, 1.2167, 1.3174, 1.418, 1.5249],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_basicAttack_feral_roars_damage",
+      name: "Feral Roars Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.733, 0.7932, 0.8533, 0.9374, 0.9975, 1.0666, 1.1628, 1.259, 1.3551, 1.4573],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6709, 0.7217, 0.7929, 0.8437, 0.9022, 0.9836, 1.0649, 1.1462, 1.2327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.634, 0.686, 0.738, 0.8108, 0.8628, 0.9226, 1.0058, 1.0889, 1.1721, 1.2605],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_resonanceSkill_ancient_arts_damage",
+      name: "Ancient Arts Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.667, 0.7217, 0.7764, 0.853, 0.9077, 0.9706, 1.0581, 1.1456, 1.2331, 1.3261],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_resonanceSkill_furious_punches_damage",
+      name: "Furious Punches Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3835, 0.415, 0.4464, 0.4905, 0.5219, 0.5581, 0.6084, 0.6587, 0.709, 0.7625],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2, 2.164, 2.328, 2.5576, 2.7216, 2.9102, 3.1726, 3.435, 3.6974, 3.9762],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_plungingAttack_glorious_plunge_damage",
+      name: "Glorious Plunge Damage",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.867, 0.9381, 1.0092, 1.1088, 1.1799, 1.2616, 1.3754, 1.4891, 1.6029, 1.7237],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_forteCircuit_feral_gyrate_stage_1_dmg_hit_1",
+      name: "Feral Gyrate Stage 1 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.438, 0.474, 0.5099, 0.5602, 0.5961, 0.6374, 0.6948, 0.7523, 0.8098, 0.8708],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_forteCircuit_feral_gyrate_stage_1_dmg_hit_2",
+      name: "Feral Gyrate Stage 1 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.584, 0.6319, 0.6798, 0.7469, 0.7948, 0.8498, 0.9264, 1.0031, 1.0797, 1.1611],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_forteCircuit_feral_gyrate_stage_2_dmg",
+      name: "Feral Gyrate Stage 2 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1598, 0.1729, 0.186, 0.2044, 0.2175, 0.2326, 0.2535, 0.2745, 0.2955, 0.3177],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_forteCircuit_mountain_roamer_damage",
+      name: "Mountain Roamer Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4169, 0.4511, 0.4853, 0.5331, 0.5673, 0.6066, 0.6613, 0.716, 0.7707, 0.8288],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_forteCircuit_stormy_kicks_damage_hit_1",
+      name: "Stormy Kicks Damage - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1813, 0.1961, 0.211, 0.2318, 0.2467, 0.2637, 0.2875, 0.3113, 0.3351, 0.3603],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_forteCircuit_stormy_kicks_damage_hit_2",
+      name: "Stormy Kicks Damage - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9665, 1.0458, 1.1251, 1.236, 1.3153, 1.4064, 1.5332, 1.66, 1.7868, 1.9215],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_forteCircuit_tail_strike_damage",
+      name: "Tail Strike Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.88, 0.9522, 1.0244, 1.1254, 1.1976, 1.2805, 1.396, 1.5114, 1.6269, 1.7496],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lingyang_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5, 0.541, 0.582, 0.6394, 0.6804, 0.7276, 0.7932, 0.8588, 0.9244, 0.9941],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Lingyang_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillLingyang enters the battlefield, dealing Glacio DMG.Show Skill DetailsLevel 20Skill DMG181.41%*2Concerto Regen10Frosty Marks",
+    },
+    {
+      id: "Lingyang_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillLingyang releases a shock wave centered on the skill target, dealing Glacio DMG equal to 587.94% of Lingyang's ATK to targets within the range.",
+    },
+    {
+      id: "Lingyang_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Lingyang Lion's PrideDMG of the Intro Skill Lion Awakens is increased by 50%.Diligent PracticeUnder the Forte Circuit Striding Lion state, within 3s after each Basic Attack, the next Forte Circuit Mountain Roamer will deal an additional Glacio DMG, equal to 150% of Mountain Roamer DMG, considered as Resonance Skill DMG.",
+    },
+    {
+      id: "Lingyang_s1",
+      name: "S1: Lion of Light, Blessings Abound",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "During Resonance Liberation Lion's Vigor, Lingyang's Anti-Interruption is enhanced.",
+    },
+  ],
+  mechanics: [],
+}

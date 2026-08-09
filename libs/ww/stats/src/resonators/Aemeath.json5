@@ -1,0 +1,913 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Aemeath | elemento Fusion | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Aemeath",
+    name: "Aemeath",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Sword",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 882, "20": 2294, "40": 4368, "50": 5699, "60": 7031, "70": 8362, "80": 9693, "90": 11025 },
+    atk: { "1": 34, "20": 88, "40": 171, "50": 225, "60": 279, "70": 333, "80": 379, "90": 425 },
+    def: { "1": 94, "20": 241, "40": 456, "50": 595, "60": 733, "70": 872, "80": 1010, "90": 1148 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_1_dmg",
+      name: "Basic Attack - Aemeath Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2331, 0.2523, 0.2714, 0.2981, 0.3173, 0.3392, 0.3698, 0.4004, 0.431, 0.4635],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_2_dmg_hit_1",
+      name: "Basic Attack - Aemeath Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0699, 0.0756, 0.0814, 0.0894, 0.0951, 0.1017, 0.1109, 0.12, 0.1292, 0.1389],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_2_dmg_hit_2",
+      name: "Basic Attack - Aemeath Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1048, 0.1134, 0.122, 0.1341, 0.1426, 0.1525, 0.1663, 0.18, 0.1938, 0.2084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_2_dmg_hit_3",
+      name: "Basic Attack - Aemeath Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1747, 0.189, 0.2033, 0.2234, 0.2377, 0.2542, 0.2771, 0.3, 0.3229, 0.3473],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_3_dmg_hit_1",
+      name: "Basic Attack - Aemeath Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0469, 0.0507, 0.0546, 0.0599, 0.0638, 0.0682, 0.0743, 0.0805, 0.0866, 0.0932],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_3_dmg_hit_2",
+      name: "Basic Attack - Aemeath Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0937, 0.1014, 0.1091, 0.1198, 0.1275, 0.1363, 0.1486, 0.1609, 0.1732, 0.1863],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_3_dmg_hit_3",
+      name: "Basic Attack - Aemeath Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2342, 0.2534, 0.2726, 0.2995, 0.3187, 0.3408, 0.3715, 0.4022, 0.4329, 0.4656],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_4_dmg_hit_1",
+      name: "Basic Attack - Aemeath Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0339, 0.0367, 0.0394, 0.0433, 0.0461, 0.0493, 0.0537, 0.0582, 0.0626, 0.0673],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_basicAttack_basic_attack_aemeath_stage_4_dmg_hit_2",
+      name: "Basic Attack - Aemeath Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5077, 0.5494, 0.591, 0.6493, 0.6909, 0.7388, 0.8054, 0.872, 0.9386, 1.0094],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_heavyAttack_heavy_attack_aemeath_charged_i_dmg_hit_1",
+      name: "Heavy Attack - Aemeath Charged I DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0934, 0.1011, 0.1087, 0.1195, 0.1271, 0.1359, 0.1482, 0.1604, 0.1727, 0.1857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_heavyAttack_heavy_attack_aemeath_charged_i_dmg_hit_2",
+      name: "Heavy Attack - Aemeath Charged I DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3736, 0.4042, 0.4348, 0.4777, 0.5083, 0.5436, 0.5926, 0.6416, 0.6906, 0.7426],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_heavyAttack_heavy_attack_aemeath_charged_ii_dmg_hit_",
+      name: "Heavy Attack - Aemeath Charged II DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0584, 0.0632, 0.068, 0.0747, 0.0794, 0.0849, 0.0926, 0.1003, 0.1079, 0.116],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_heavyAttack_heavy_attack_aemeath_charged_ii_dmg_hit__1",
+      name: "Heavy Attack - Aemeath Charged II DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9336, 1.0101, 1.0867, 1.1938, 1.2704, 1.3584, 1.4809, 1.6034, 1.7258, 1.856],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_plungingAttack_midair_attack_aemeath_dmg",
+      name: "Mid-air Attack - Aemeath DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.434, 0.4696, 0.5052, 0.555, 0.5906, 0.6316, 0.6885, 0.7454, 0.8024, 0.8629],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_dodgeCounter_dodge_counter_aemeath_dmg_hit_1",
+      name: "Dodge Counter - Aemeath DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1309, 0.1416, 0.1523, 0.1674, 0.1781, 0.1904, 0.2076, 0.2248, 0.2419, 0.2602],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_dodgeCounter_dodge_counter_aemeath_dmg_hit_2",
+      name: "Dodge Counter - Aemeath DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2617, 0.2832, 0.3046, 0.3347, 0.3561, 0.3808, 0.4151, 0.4495, 0.4838, 0.5203],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_dodgeCounter_dodge_counter_aemeath_dmg_hit_3",
+      name: "Dodge Counter - Aemeath DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6542, 0.7078, 0.7615, 0.8366, 0.8902, 0.9519, 1.0377, 1.1236, 1.2094, 1.3006],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_sync_strike_armament_merge_dmg_hit_1",
+      name: "Sync Strike: Armament Merge DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1354, 0.1465, 0.1576, 0.1732, 0.1843, 0.197, 0.2148, 0.2326, 0.2503, 0.2692],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_sync_strike_armament_merge_dmg_hit_2",
+      name: "Sync Strike: Armament Merge DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2031, 0.2198, 0.2364, 0.2597, 0.2764, 0.2955, 0.3222, 0.3488, 0.3755, 0.4038],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_sync_strike_armament_merge_dmg_hit_3",
+      name: "Sync Strike: Armament Merge DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3385, 0.3663, 0.394, 0.4329, 0.4606, 0.4925, 0.5369, 0.5813, 0.6257, 0.6729],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_sync_strike_call_of_dawn_dmg_hit_1",
+      name: "Sync Strike: Call of Dawn DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0822, 0.0889, 0.0956, 0.1051, 0.1118, 0.1195, 0.1303, 0.1411, 0.1518, 0.1633],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_sync_strike_call_of_dawn_dmg_hit_2",
+      name: "Sync Strike: Call of Dawn DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5748, 0.622, 0.6691, 0.7351, 0.7822, 0.8364, 0.9118, 0.9872, 1.0626, 1.1428],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_1_dmg",
+      name: "Basic Attack - Mech Stage 1 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1167, 0.1263, 0.1358, 0.1492, 0.1588, 0.1698, 0.1851, 0.2004, 0.2157, 0.232],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_2_dmg_hit_1",
+      name: "Basic Attack - Mech Stage 2 DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0934, 0.1011, 0.1087, 0.1195, 0.1271, 0.1359, 0.1482, 0.1604, 0.1727, 0.1857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_2_dmg_hit_2",
+      name: "Basic Attack - Mech Stage 2 DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3736, 0.4042, 0.4348, 0.4777, 0.5083, 0.5436, 0.5926, 0.6416, 0.6906, 0.7426],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_3_dmg_hit_1",
+      name: "Basic Attack - Mech Stage 3 DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0196, 0.0212, 0.0228, 0.025, 0.0266, 0.0285, 0.031, 0.0336, 0.0362, 0.0389],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_3_dmg_hit_2",
+      name: "Basic Attack - Mech Stage 3 DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4102, 0.4438, 0.4774, 0.5245, 0.5582, 0.5968, 0.6506, 0.7044, 0.7583, 0.8154],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_3_dmg_hit_3",
+      name: "Basic Attack - Mech Stage 3 DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0586, 0.0634, 0.0682, 0.075, 0.0798, 0.0853, 0.093, 0.1007, 0.1084, 0.1165],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_4_dmg_hit_1",
+      name: "Basic Attack - Mech Stage 4 DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2031, 0.2198, 0.2364, 0.2597, 0.2764, 0.2955, 0.3222, 0.3488, 0.3755, 0.4038],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_basic_attack_mech_stage_4_dmg_hit_2",
+      name: "Basic Attack - Mech Stage 4 DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4739, 0.5127, 0.5516, 0.606, 0.6448, 0.6895, 0.7517, 0.8139, 0.876, 0.9421],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_heavy_attack_mech_charged_i_dmg",
+      name: "Heavy Attack - Mech Charged I DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4669, 0.5052, 0.5435, 0.5971, 0.6354, 0.6794, 0.7407, 0.802, 0.8632, 0.9283],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_heavy_attack_mech_charged_ii_dmg",
+      name: "Heavy Attack - Mech Charged II DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1669, 1.2626, 1.3583, 1.4923, 1.588, 1.698, 1.8511, 2.0042, 2.1573, 2.32],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_midair_attack_mech_dmg_hit_1",
+      name: "Mid-air Attack - Mech DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3689, 0.3992, 0.4294, 0.4718, 0.502, 0.5368, 0.5852, 0.6336, 0.682, 0.7335],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_midair_attack_mech_dmg_hit_2",
+      name: "Mid-air Attack - Mech DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0217, 0.0235, 0.0253, 0.0278, 0.0296, 0.0316, 0.0345, 0.0373, 0.0402, 0.0432],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_dodge_counter_mech_dmg_hit_1",
+      name: "Dodge Counter - Mech DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0476, 0.0515, 0.0554, 0.0608, 0.0647, 0.0692, 0.0754, 0.0817, 0.0879, 0.0945],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_dodge_counter_mech_dmg_hit_2",
+      name: "Dodge Counter - Mech DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9982, 1.08, 1.1619, 1.2765, 1.3583, 1.4524, 1.5834, 1.7143, 1.8453, 1.9844],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceSkill_dodge_counter_mech_dmg_hit_3",
+      name: "Dodge Counter - Mech DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1426, 0.1543, 0.166, 0.1824, 0.1941, 0.2075, 0.2262, 0.2449, 0.2637, 0.2835],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceLiberation_heavenfall_edict_overdrive_dmg_hit_1",
+      name: "Heavenfall Edict: Overdrive DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.01, 1.0929, 1.1757, 1.2916, 1.3745, 1.4697, 1.6022, 1.7347, 1.8672, 2.008],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceLiberation_heavenfall_edict_overdrive_dmg_hit_2",
+      name: "Heavenfall Edict: Overdrive DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.3467, 1.4571, 1.5676, 1.7222, 1.8326, 1.9596, 2.1363, 2.3129, 2.4896, 2.6774],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_resonanceLiberation_heavenfall_edict_finale_dmg",
+      name: "Heavenfall Edict: Finale DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [9, 9.738, 10.476, 11.5092, 12.2472, 13.0959, 14.2767, 15.4575, 16.6383, 17.8929],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_encore_dmg_hit_1",
+      name: "Seraphic Duet: Encore DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.09, 0.0974, 0.1048, 0.1151, 0.1225, 0.131, 0.1428, 0.1546, 0.1664, 0.179],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_encore_dmg_hit_2",
+      name: "Seraphic Duet: Encore DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.18, 0.1948, 0.2096, 0.2302, 0.245, 0.262, 0.2856, 0.3092, 0.3328, 0.3579],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_encore_dmg_hit_3",
+      name: "Seraphic Duet: Encore DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.9738, 1.0476, 1.151, 1.2248, 1.3096, 1.4277, 1.5458, 1.6639, 1.7893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_overture_dmg_hit_1",
+      name: "Seraphic Duet: Overture DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.09, 0.0974, 0.1048, 0.1151, 0.1225, 0.131, 0.1428, 0.1546, 0.1664, 0.179],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_overture_dmg_hit_2",
+      name: "Seraphic Duet: Overture DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.075, 0.0812, 0.0873, 0.096, 0.1021, 0.1092, 0.119, 0.1289, 0.1387, 0.1492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_overture_dmg_hit_3",
+      name: "Seraphic Duet: Overture DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.12, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2386],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_overture_dmg_hit_4",
+      name: "Seraphic Duet: Overture DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_tune_rupture_response_starburst_dmg",
+      name: "Tune Rupture Response - Starburst DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3, 3.246, 3.492, 3.8364, 4.0824, 4.3653, 4.7589, 5.1525, 5.5461, 5.9643],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_forteCircuit_seraphic_duet_bonus_dmg_per_instance",
+      name: "Seraphic Duet Bonus DMG (Per Instance)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.55, 0.5951, 0.6402, 0.7034, 0.7485, 0.8004, 0.8725, 0.9447, 1.0168, 1.0935],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_introSkill_songs_across_the_universe_dmg_hit_1",
+      name: "Songs Across the Universe DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0677, 0.0733, 0.0788, 0.0866, 0.0922, 0.0985, 0.1074, 0.1163, 0.1252, 0.1346],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_introSkill_songs_across_the_universe_dmg_hit_2",
+      name: "Songs Across the Universe DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5416, 0.586, 0.6304, 0.6925, 0.737, 0.788, 0.8591, 0.9301, 1.0012, 1.0766],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_introSkill_debut_of_meteoric_radiance_dmg_hit_1",
+      name: "Debut of Meteoric Radiance DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3285, 0.3554, 0.3824, 0.4201, 0.447, 0.478, 0.5211, 0.5641, 0.6072, 0.653],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aemeath_introSkill_debut_of_meteoric_radiance_dmg_hit_2",
+      name: "Debut of Meteoric Radiance DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4927, 0.5331, 0.5735, 0.6301, 0.6705, 0.7169, 0.7816, 0.8462, 0.9108, 0.9795],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Aemeath_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Aemeath Before All SoundsIn Instant Response, Heavy Attack - Aemeath and Heavy Attack - Mech gain 200% DMG Amplification.Between the StarsIn Resonance Mode - Tune Rupture, when Resonators in the team inflict Tune Rupture - Shifting or deal Tune Rupture DMG, Aemeath's Crit.",
+    },
+    {
+      id: "Aemeath_passive_1",
+      name: "DMG",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "DMG increases by 20%, up to 3 times.",
+    },
+    {
+      id: "Aemeath_passive_2",
+      name: "Each",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Each Resonator can only trigger this effect once.",
+    },
+    {
+      id: "Aemeath_passive_3",
+      name: "With",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "With 3 stacks, Resonance Liberation Heavenfall Edict: Finale DMG is Amplified by 25%.",
+    },
+    {
+      id: "Aemeath_passive_4",
+      name: "Resonators",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Resonators joining the team or switching Resonance Mode resets this effect.",
+    },
+    {
+      id: "Aemeath_passive_5",
+      name: "In",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "In Resonance Mode - Fusion Burst, when Resonators in the team inflict Fusion Burst, Aemeath's Crit.",
+    },
+    {
+      id: "Aemeath_passive_6",
+      name: "DMG",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "DMG increases by 30%, up to 2 times.",
+    },
+    {
+      id: "Aemeath_passive_7",
+      name: "Each",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Each Resonator can only trigger this effect once.",
+    },
+    {
+      id: "Aemeath_passive_8",
+      name: "With",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "With 2 stacks, Resonance Liberation Heavenfall Edict: Finale DMG is Amplified by 25%.",
+    },
+    {
+      id: "Aemeath_passive_9",
+      name: "Resonators",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Resonators joining the team or switching Resonance Mode resets this effect.",
+    },
+    {
+      id: "Aemeath_s1",
+      name: "S1: Gilded Glimmer of the First Dawn",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "In Instant Response, Heavy Attack - Aemeath and Heavy Attack - Mech gain 300% Crit. DMG increase and continuously pull in nearby target while charging.  When Aemeath remains in a state that meets all of the following conditions for over 4s, she enters Instant Response - Brilliance: - Out of combat; - Not performing Heavy Attack - Aemeath, Heavy Attack - Mech, or Resonance Liberation Heavenfall Edict: Finale. Instant Response: Brilliance inherits all effects of Instant Response and remains active even when out of the duration of Heavenfall Edict: Unbound.  When in Instant Response - Brilliance and not in Heavenfall Edict: Unbound, casting Heavy Attack - Aemeath Charged II or Heavy Attack - Mech Charged II grants 100 points of Synchronization Rate.  In Resonance Mode - Tune Rupture or Resonance Mode - Fusion Burst, when Aemeath defeats a target affected by Rupturous Trail/Fusion Trail, she enters Sealed Trail - Tune Rupture/Sealed Trail - Fusion Burst for 10s. While in Sealed Trail - Tune Rupture or Sealed Trail - Fusion Burst, Aemeath records the highest stack count of Rupturous Trail/Fusion Trail among the targets defeated. Her next skill that directly damages the target immediately inflicts the targets with the recorded stacks of Rupturous Trail/Fusion Trail, up to the current max limit of Rupturous Trail/Fusion Trail. This ends Sealed Trail - Tune Rupture/Sealed Trail - Fusion Burst and Aemeath cannot enter Sealed Trail - Tune Rupture or Sealed Trail - Fusion Burst for 1s.",
+    },
+    {
+      id: "Aemeath_s2",
+      name: "S2: Downy Notes of Snowfluff",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Resonance Skill Seraphic Duet: Overture is increased by 100%. The DMG Multiplier of Resonance Skill Seraphic Duet: Encore is increased by 100%.  While in Resonance Mode - Tune Rupture, when the additional instances Tune Rupture DMG triggered by Resonance Skill Seraphic Duet hit the same target, the DMG Multiplier of the Tune Rupture DMG triggered by Resonance Skill Seraphic Duet against this target is increased by 20% for 1s, stacking up to 5 times.  While in Resonance Mode - Fusion Burst, gain the following effects: - In the Stardust Resonance state, the DMG Multiplier of Fusion Burst triggered by Resonance Skill Seraphic Duet is further increased to 400% against the main target of the Fusion Burst. - Fusion Trail now additionally increases the DMG Multiplier of Fusion Trail triggered by Resonance Skill Seraphic Duet. Each stack of Fusion Trail removed now provides a 15% DMG Multiplier increase to Fusion Burst on the main target. - In combat state, when a target near the active Resonator in the team is defeated, immediately trigger Fusion Burst based on the target's current stack limit of Fusion Burst.",
+    },
+    {
+      id: "Aemeath_s3",
+      name: "S3: Fervor Sightly Burns Bright as New",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation Heavenfall Edict: Finale's DMG Multiplier is increased by 100%. Resonance Liberation Heavenfall Edict: Overdrive's DMG Multiplier is increased by 40%.  In Instant Response, Aemeath now inflicts Tune Rupture - Shifting or Fusion Burst on nearby targets while casting Heavy Attack - Aemeath or Heavy Attack - Mech, based on her current Resonance Mode.  Inherent Skill Between the Stars is replaced with the following effects:  - In Resonance Mode - Tune Rupture, when Resonators in the team inflict Tune Rupture - Shifting or deal Tune Rupture DMG, Aemeath's Crit. DMG is increased by 60%, and Resonance Liberation Heavenfall Edict: Finale DMG is now Amplified by 25%. Resonators joining the team or switching Resonance Mode resets this effect.  - In Resonance Mode - Fusion Burst, when Resonators in the team inflict Fusion Burst, Aemeath's Crit. DMG is increased by 60%, and Resonance Liberation Heavenfall Edict: Finale DMG is now Amplified by 25%. Resonators joining the team or switching Resonance Mode resets this effect.",
+    },
+    {
+      id: "Aemeath_s4",
+      name: "S4: Ethereal Waltz on Binary Tides",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Intro Skill Songs Across the Universe, Intro Skill Debut of Meteoric Radiance, Resonance Skill Sync Strike and Resonance Skill Seraphic Duet, Resonators in the team gain 20% All-Attribute DMG Bonus for 30s.",
+    },
+    {
+      id: "Aemeath_s5",
+      name: "S5: Voyage to the Astral Shore",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Aemeath defeats a target directly with her skills, Starflux is reset to 100%.  When taking fatal damage, Aemeath is knocked out and turns into 2D Digital Ghost for 5s. In the 2D Digital Ghost state, Aemeath grants Resonators in the team a Shield equal to 360% of her ATK for 5s. As she exits from the 2D Digital Ghost state, she revives and recovers 100% of her Max HP and 30 points of Resonance Energy. This effect can be triggered once every 10 min. When Aemeath revives, she exits the 2D Digital Ghost state and removes the Shield provided.",
+    },
+    {
+      id: "Aemeath_s6",
+      name: "S6: A Zephyr",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Kissed Journey to You — Targets take 40% more Resonance Liberation DMG from Aemeath.  When in Resonance Mode - Tune Rupture, Aemeath's Tune Rupture DMG can critically hit, with a fixed Crit. Rate of 80%, and fixed Crit. DMG of 275%.  When in Resonance Mode - Fusion Burst and in combat state, Fusion Burst DMG triggered on targets near the active Resonator in the team can critically hit, with a fixed Crit. Rate of 80%, and fixed Crit. DMG of 275%.  The stacks of Rupturous Trail and Fusion Trail inflicted on the target through Forte Circuit To Sculpt the Silence is doubled.  In Resonance Mode - Tune Rupture/Resonance Mode - Fusion Burst and in combat, the max stack limit of Rupturous Trail/Fusion Trail on the targets near the active Resonator in the team is increased to 60. While casting Resonance Skill Seraphic Duet, inflict 10 stacks of Rupturous Trail/Fusion Trail on targets within range for 30s.",
+    },
+  ],
+  mechanics: [],
+}

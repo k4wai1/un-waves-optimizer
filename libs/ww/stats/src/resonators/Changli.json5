@@ -1,0 +1,494 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Changli | elemento Fusion | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Changli",
+    name: "Changli",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Sword",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 831, "20": 2161, "40": 4116, "50": 5370, "60": 6624, "70": 7878, "80": 9133, "90": 10387 },
+    atk: { "1": 37, "20": 96, "40": 186, "50": 245, "60": 304, "70": 363, "80": 412, "90": 462 },
+    def: { "1": 90, "20": 230, "40": 437, "50": 570, "60": 702, "70": 835, "80": 967, "90": 1099 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Changli_basicAttack_basic_attack_1_dmg",
+      name: "Basic Attack 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1484, 0.1605, 0.1727, 0.1897, 0.2019, 0.2159, 0.2353, 0.2548, 0.2743, 0.2949],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_basicAttack_basic_attack_2_dmg",
+      name: "Basic Attack 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1785, 0.1932, 0.2078, 0.2283, 0.243, 0.2598, 0.2832, 0.3066, 0.33, 0.3549],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_basicAttack_basic_attack_3_dmg",
+      name: "Basic Attack 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1834, 0.1984, 0.2134, 0.2345, 0.2495, 0.2668, 0.2908, 0.3149, 0.3389, 0.3645],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_basicAttack_basic_attack_4_dmg_hit_1",
+      name: "Basic Attack 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.255, 0.276, 0.2969, 0.3261, 0.3471, 0.3711, 0.4046, 0.438, 0.4715, 0.507],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_basicAttack_basic_attack_4_dmg_hit_2",
+      name: "Basic Attack 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1488, 0.161, 0.1732, 0.1903, 0.2025, 0.2165, 0.236, 0.2555, 0.275, 0.2958],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_plungingAttack_midair_attack_1_dmg",
+      name: "Mid-air Attack 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3086, 0.3339, 0.3592, 0.3946, 0.4199, 0.449, 0.4895, 0.53, 0.5705, 0.6135],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_plungingAttack_midair_attack_2_dmg",
+      name: "Mid-air Attack 2 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2559, 0.2769, 0.2979, 0.3272, 0.3482, 0.3723, 0.4059, 0.4395, 0.473, 0.5087],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_plungingAttack_midair_attack_3_dmg",
+      name: "Mid-air Attack 3 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2213, 0.2395, 0.2576, 0.283, 0.3012, 0.322, 0.3511, 0.3801, 0.4091, 0.44],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_plungingAttack_midair_attack_4_dmg_hit_1",
+      name: "Mid-air Attack 4 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1913, 0.207, 0.2227, 0.2446, 0.2603, 0.2783, 0.3034, 0.3285, 0.3536, 0.3803],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_plungingAttack_midair_attack_4_dmg_hit_2",
+      name: "Mid-air Attack 4 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1116, 0.1208, 0.1299, 0.1427, 0.1519, 0.1624, 0.177, 0.1917, 0.2063, 0.2218],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_heavyAttack_heavy_attack_hit_1",
+      name: "Heavy Attack - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1458, 0.1578, 0.1697, 0.1865, 0.1984, 0.2122, 0.2313, 0.2504, 0.2695, 0.2899],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_heavyAttack_heavy_attack_hit_2",
+      name: "Heavy Attack - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1875, 0.2028, 0.2182, 0.2397, 0.2551, 0.2728, 0.2974, 0.322, 0.3465, 0.3727],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_plungingAttack_midair_heavy_attack",
+      name: "Mid-air Heavy Attack",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6709, 0.7217, 0.7929, 0.8437, 0.9022, 0.9836, 1.0649, 1.1462, 1.2327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_dodgeCounter_dodge_counter",
+      name: "Dodge Counter",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4157, 0.4498, 0.4839, 0.5316, 0.5657, 0.6049, 0.6594, 0.714, 0.7685, 0.8264],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceSkill_true_sight_capture_dmg_hit_1",
+      name: "True Sight: Capture DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4119, 0.4457, 0.4794, 0.5267, 0.5605, 0.5993, 0.6534, 0.7074, 0.7614, 0.8188],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceSkill_true_sight_capture_dmg_hit_2",
+      name: "True Sight: Capture DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8237, 0.8913, 0.9588, 1.0534, 1.1209, 1.1986, 1.3067, 1.4147, 1.5228, 1.6376],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceSkill_true_sight_conquest_dmg_hit_1",
+      name: "True Sight: Conquest DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2965, 0.3208, 0.3451, 0.3792, 0.4035, 0.4314, 0.4703, 0.5092, 0.5481, 0.5895],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceSkill_true_sight_conquest_dmg_hit_2",
+      name: "True Sight: Conquest DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4151, 0.4491, 0.4832, 0.5308, 0.5649, 0.604, 0.6585, 0.7129, 0.7674, 0.8252],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceSkill_true_sight_conquest_dmg_hit_3",
+      name: "True Sight: Conquest DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4744, 0.5133, 0.5522, 0.6067, 0.6456, 0.6903, 0.7525, 0.8148, 0.877, 0.9431],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceSkill_true_sight_charge_dmg_hit_1",
+      name: "True Sight: Charge DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3656, 0.3956, 0.4256, 0.4675, 0.4975, 0.532, 0.58, 0.6279, 0.6759, 0.7268],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceSkill_true_sight_charge_dmg_hit_2",
+      name: "True Sight: Charge DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5484, 0.5934, 0.6383, 0.7013, 0.7462, 0.798, 0.8699, 0.9418, 1.0138, 1.0902],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [6.1, 6.6002, 7.1004, 7.8007, 8.3009, 8.8762, 9.6765, 10.4768, 11.2771, 12.1275],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_forteCircuit_flaming_sacrifice_dmg_hit_1",
+      name: "Flaming Sacrifice DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1974, 0.2136, 0.2298, 0.2525, 0.2687, 0.2873, 0.3132, 0.3391, 0.365, 0.3925],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_forteCircuit_flaming_sacrifice_dmg_hit_2",
+      name: "Flaming Sacrifice DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.303, 2.4918, 2.6807, 2.9451, 3.1339, 3.3511, 3.6532, 3.9554, 4.2575, 4.5785],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2238, 0.2422, 0.2606, 0.2862, 0.3046, 0.3257, 0.3551, 0.3844, 0.4138, 0.445],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Changli_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1306, 0.1413, 0.152, 0.167, 0.1777, 0.19, 0.2071, 0.2243, 0.2414, 0.2596],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Changli_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillChangli appears in mid-air, attacks the target, and enters True Sight, lasting for 12s.Show Skill DetailsLevel 20Skill DMG77.53%+45.23%*4Concerto Regen10Strategy of Duality",
+    },
+    {
+      id: "Changli_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Fusion DMG Amplified by 20% and Resonance Liberation DMG Amplified by 25% for 10s or until the Resonator is switched out.",
+    },
+    {
+      id: "Changli_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Changli Secret StrategistWhen casting Basic Attack: True Sight - Conquest or Basic Attack: True Sight - Charge, each stack of Enflamement will increase Fusion DMG Bonus by 5%.Sweeping ForceCasting Heavy Attack Flaming Sacrifice or Resonance Liberation Radiance of Fealty gives 20% Fusion DMG Bonus and ignores 15% of the target's DEF when dealing damage.",
+    },
+    {
+      id: "Changli_s1_hidden_thoughts",
+      name: "S1: Hidden Thoughts",
+      operation: "add",
+      value: [0.1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.1],
+        },
+      ],
+      descriptionTemplate: "Resonance Skill Tripartite Flames and Heavy Attack Flaming Sacrifice increase Changli's DMG dealt by 10% and resistance to interruption.",
+    },
+    {
+      id: "Changli_s2",
+      name: "S2: Pursuit of Desires",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Enflamement increases Changli's Crit. Rate by 25% for 8s.",
+    },
+    {
+      id: "Changli_s3_learned_secrets",
+      name: "S3: Learned Secrets",
+      operation: "add",
+      value: [0.8],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.8],
+        },
+      ],
+      descriptionTemplate: "Resonance Liberation Radiance of Fealty DMG is increased by 80%.",
+    },
+    {
+      id: "Changli_s4",
+      name: "S4: Polished Words",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After Intro Skill is cast, all team members' ATK is increased by 20% for 30s.",
+    },
+    {
+      id: "Changli_s5",
+      name: "S5: Sacrificed Gains",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Heavy Attack Flaming Sacrifice's Multiplier is increased by 50% and its DMG dealt is increased by 50%.",
+    },
+    {
+      id: "Changli_s6",
+      name: "S6: Realized Plans",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Skill Tripartite Flames, Heavy Attack Flaming Sacrifice, and Resonance Liberation Radiance of Fealty ignore an additional 40% of the target's DEF when dealing damage.",
+    },
+  ],
+  mechanics: [],
+}

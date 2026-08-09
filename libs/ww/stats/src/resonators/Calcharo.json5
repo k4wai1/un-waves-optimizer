@@ -1,0 +1,574 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Calcharo | elemento Electro | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Calcharo",
+    name: "Calcharo",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Broadblade",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 840, "20": 2184, "40": 4160, "50": 5428, "60": 6696, "70": 7964, "80": 9232, "90": 10500 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 97, "20": 248, "40": 471, "50": 614, "60": 757, "70": 899, "80": 1042, "90": 1185 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Calcharo_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.23, 0.2489, 0.2678, 0.2942, 0.313, 0.3347, 0.3649, 0.3951, 0.4253, 0.4573],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5, 0.541, 0.582, 0.6394, 0.6804, 0.7276, 0.7932, 0.8588, 0.9244, 0.9941],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_basicAttack_stage_3_dmg_hit_1",
+      name: "Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4284, 0.4636, 0.4987, 0.5479, 0.583, 0.6234, 0.6796, 0.7358, 0.792, 0.8518],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_basicAttack_stage_3_dmg_hit_2",
+      name: "Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2142, 0.2318, 0.2494, 0.274, 0.2915, 0.3117, 0.3398, 0.3679, 0.396, 0.4259],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3999, 0.4327, 0.4655, 0.5114, 0.5442, 0.5819, 0.6344, 0.6869, 0.7393, 0.7951],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5332, 0.577, 0.6207, 0.6819, 0.7256, 0.7759, 0.8459, 0.9158, 0.9858, 1.0601],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.208, 0.2251, 0.2422, 0.266, 0.2831, 0.3027, 0.33, 0.3573, 0.3846, 0.4136],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6709, 0.7217, 0.7929, 0.8437, 0.9022, 0.9836, 1.0649, 1.1462, 1.2327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3344, 0.3618, 0.3893, 0.4276, 0.4551, 0.4866, 0.5305, 0.5743, 0.6182, 0.6648],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4299, 0.4652, 0.5005, 0.5498, 0.5851, 0.6256, 0.682, 0.7384, 0.7948, 0.8547],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceSkill_extermination_order_stage_1_dmg_hit_1",
+      name: "Extermination Order Stage 1 DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2594, 0.2807, 0.302, 0.3317, 0.353, 0.3775, 0.4115, 0.4455, 0.4796, 0.5157],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceSkill_extermination_order_stage_1_dmg_hit_2",
+      name: "Extermination Order Stage 1 DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3459, 0.3742, 0.4026, 0.4423, 0.4707, 0.5033, 0.5487, 0.594, 0.6394, 0.6876],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceSkill_extermination_order_stage_2_dmg_hit_1",
+      name: "Extermination Order Stage 2 DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3891, 0.421, 0.4529, 0.4976, 0.5295, 0.5662, 0.6172, 0.6683, 0.7193, 0.7736],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceSkill_extermination_order_stage_2_dmg_hit_2",
+      name: "Extermination Order Stage 2 DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5188, 0.5613, 0.6039, 0.6634, 0.706, 0.7549, 0.823, 0.891, 0.9591, 1.0314],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceSkill_extermination_order_stage_3_dmg",
+      name: "Extermination Order Stage 3 DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.0808, 1.1694, 1.258, 1.3821, 1.4707, 1.5726, 1.7144, 1.8562, 1.998, 2.1487],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3, 3.246, 3.492, 3.8364, 4.0824, 4.3653, 4.7589, 5.1525, 5.5461, 5.9643],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_necessary_means_damage",
+      name: "\"Necessary Means\" Damage",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_hounds_roar_stage_1",
+      name: "Hounds Roar Stage 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.443, 0.4793, 0.5156, 0.5665, 0.6028, 0.6446, 0.7027, 0.7608, 0.8189, 0.8807],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_hounds_roar_stage_2_hit_1",
+      name: "Hounds Roar Stage 2 - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1772, 0.1918, 0.2063, 0.2266, 0.2411, 0.2579, 0.2811, 0.3043, 0.3276, 0.3523],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_hounds_roar_stage_2_hit_2",
+      name: "Hounds Roar Stage 2 - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2658, 0.2876, 0.3094, 0.3399, 0.3617, 0.3868, 0.4216, 0.4565, 0.4914, 0.5284],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_hounds_roar_stage_3",
+      name: "Hounds Roar Stage 3",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8241, 0.8917, 0.9593, 1.0539, 1.1214, 1.1992, 1.3073, 1.4154, 1.5235, 1.6384],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_hounds_roar_stage_4",
+      name: "Hounds Roar Stage 4",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1752, 0.1895, 0.2039, 0.224, 0.2383, 0.2549, 0.2778, 0.3008, 0.3238, 0.3482],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_hounds_roar_stage_5",
+      name: "Hounds Roar Stage 5",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7554, 0.8174, 0.8793, 0.9661, 1.028, 1.0992, 1.1983, 1.2974, 1.3966, 1.5019],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.312, 0.3376, 0.3632, 0.399, 0.4246, 0.454, 0.495, 0.5359, 0.5768, 0.6203],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_resonanceLiberation_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2867, 0.3102, 0.3337, 0.3666, 0.3901, 0.4172, 0.4548, 0.4924, 0.53, 0.5699],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_forteCircuit_mercy_damage_hit_1",
+      name: "\"Mercy\" Damage - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1967, 0.2129, 0.229, 0.2516, 0.2677, 0.2863, 0.3121, 0.3379, 0.3637, 0.3911],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_forteCircuit_mercy_damage_hit_2",
+      name: "\"Mercy\" Damage - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3934, 0.4257, 0.458, 0.5031, 0.5354, 0.5725, 0.6241, 0.6757, 0.7273, 0.7822],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_forteCircuit_death_messenger_damage_hit_1",
+      name: "\"Death Messenger\" Damage - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4918, 0.5321, 0.5724, 0.6289, 0.6692, 0.7156, 0.7801, 0.8446, 0.9091, 0.9777],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_forteCircuit_death_messenger_damage_hit_2",
+      name: "\"Death Messenger\" Damage - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9835, 1.0642, 1.1448, 1.2577, 1.3384, 1.4311, 1.5602, 1.6892, 1.8182, 1.9553],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_forteCircuit_mercy_resonance_regen",
+      name: "\"Mercy\" Resonance Regen",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0.06, 0.06],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_forteCircuit_death_messenger_resonance_regen",
+      name: "\"Death Messenger\" Resonance Regen",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Calcharo_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Calcharo_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Electro DMG.Show Skill DetailsLevel 20Skill DMG72.57%*2+108.85%*2Concerto Regen10Shadowy Raid",
+    },
+    {
+      id: "Calcharo_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillCalcharo summons Phantom to support the active Resonator, clearing the targets in front with a slash. The Phantom's attack deals Electro DMG equal to 195.98%+391.96% of Calcharo's ATK.",
+    },
+    {
+      id: "Calcharo_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Calcharo Bloodshed AwakenCasting Heavy Attack Mercy gives Calcharo 10% Resonance Liberation DMG Bonus for 15s.Revenant RushWhen Heavy Attack \"Death Messenger\" hits the target, the damage taken by Calcharo is reduced by 15% for 5s.",
+    },
+    {
+      id: "Calcharo_s1",
+      name: "S1: Covert Negotiation",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Resonance Skill Extermination Order hits a target, it additionally recovers 10 Resonance Energy. This can be triggered once every 20s.",
+    },
+    {
+      id: "Calcharo_s2",
+      name: "S2: Zero",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Sum Game — After Calcharo casts Intro Skill Wanted Criminal or Intro Skill \"Necessary Means\", his Resonance Skill DMG Bonus is increased by 30% for 15s.",
+    },
+    {
+      id: "Calcharo_s3",
+      name: "S3: Iron Fist Diplomacy",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "During the Resonance Liberation Deathblade Gear state, Calcharo's Electro DMG Bonus is increased by 25%.",
+    },
+    {
+      id: "Calcharo_s4",
+      name: "S4: Dark Alliance",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After casting Outro Skill Shadowy Raid, Electro DMG Bonus of all team members is increased by 20% for 30s.",
+    },
+    {
+      id: "Calcharo_s5_unconventional_compact",
+      name: "S5: Unconventional Compact",
+      operation: "add",
+      value: [0.5],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.5],
+        },
+      ],
+      descriptionTemplate: "Intro Skill Wanted Criminal and Intro Skill \"Necessary Means\" deal 50% more DMG.",
+    },
+    {
+      id: "Calcharo_s6",
+      name: "S6: The Ultimatum",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Resonance Liberation \"Death Messenger\", Calcharo will summon 2 Phantoms to perform Coordinated Attacks. Each Phantom deals Electro DMG equal to 100.00% of Calcharo's ATK, which is considered Resonance Liberation DMG.",
+    },
+  ],
+  mechanics: [],
+}

@@ -1,0 +1,1208 @@
+{
+  "metadata": {
+    "schemaVersion": "2.0",
+    "id": "RoverHavoc",
+    "name": "Rover (Havoc)",
+    "entityType": "resonator",
+    "rarity": 5,
+    "version": "1.0",
+    "element": "Havoc",
+    "weaponType": "Sword",
+    "tags": [
+      "mainDps",
+      "havoc",
+      "burst",
+      "skill"
+    ],
+    "aliases": [
+      "Rover",
+      "Havoc Rover"
+    ]
+  },
+  "stats": {
+    "hp": {
+      "1": 866,
+      "20": 2251.6,
+      "40": 4288.87,
+      "50": 5594.36,
+      "60": 6902.02,
+      "70": 8211.24,
+      "80": 9517.34,
+      "90": 10825
+    },
+    "atk": {
+      "1": 33,
+      "20": 85.8,
+      "40": 165,
+      "50": 218.13,
+      "60": 271.26,
+      "70": 324.39,
+      "80": 368.5,
+      "90": 412.5
+    },
+    "def": {
+      "1": 103,
+      "20": 263.68,
+      "40": 500.58,
+      "50": 653.02,
+      "60": 803.4,
+      "70": 955.97,
+      "80": 1107.25,
+      "90": 1258.87
+    },
+    "secondaryAttribute": null,
+    "statNodes": [
+      {
+        "id": "node_atk_l1",
+        "name": "ATK +1.8%",
+        "buffs": {
+          "atk_": 0.018
+        }
+      },
+      {
+        "id": "node_atk_l2",
+        "name": "ATK +1.8%",
+        "buffs": {
+          "atk_": 0.018
+        }
+      },
+      {
+        "id": "node_atk_h1",
+        "name": "ATK +4.2%",
+        "buffs": {
+          "atk_": 0.042
+        }
+      },
+      {
+        "id": "node_atk_h2",
+        "name": "ATK +4.2%",
+        "buffs": {
+          "atk_": 0.042
+        }
+      },
+      {
+        "id": "node_havoc_l1",
+        "name": "Havoc DMG +1.8%",
+        "buffs": {
+          "havoc_dmg_": 0.018
+        }
+      },
+      {
+        "id": "node_havoc_l2",
+        "name": "Havoc DMG +1.8%",
+        "buffs": {
+          "havoc_dmg_": 0.018
+        }
+      },
+      {
+        "id": "node_havoc_h1",
+        "name": "Havoc DMG +4.2%",
+        "buffs": {
+          "havoc_dmg_": 0.042
+        }
+      },
+      {
+        "id": "node_havoc_h2",
+        "name": "Havoc DMG +4.2%",
+        "buffs": {
+          "havoc_dmg_": 0.042
+        }
+      }
+    ],
+    "tuneBreakBoost": 0,
+    "offTuneBuildupRate": 1
+  },
+  "actions": [
+    {
+      "id": "rover_basic1",
+      "name": "Stage 1 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.285,
+            0.3084,
+            0.3318,
+            0.3645,
+            0.3879,
+            0.4148,
+            0.4521,
+            0.4895,
+            0.5269,
+            0.5667
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_basic2",
+      "name": "Stage 2 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.285,
+            0.3084,
+            0.3318,
+            0.3645,
+            0.3879,
+            0.4148,
+            0.4521,
+            0.4895,
+            0.5269,
+            0.5667
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_basic3",
+      "name": "Stage 3 DMG",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.4275,
+            0.4626,
+            0.4977,
+            0.5467,
+            0.5818,
+            0.6221,
+            0.6782,
+            0.7343,
+            0.7904,
+            0.85
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_basic4_hit1",
+      "name": "Stage 4 DMG - Hit 1",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.2027,
+            0.2193,
+            0.236,
+            0.2592,
+            0.2758,
+            0.295,
+            0.3215,
+            0.3481,
+            0.3747,
+            0.403
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_basic4_hit2",
+      "name": "Stage 4 DMG - Hit 2",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.2027,
+            0.2193,
+            0.236,
+            0.2592,
+            0.2758,
+            0.295,
+            0.3215,
+            0.3481,
+            0.3747,
+            0.403
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_basic4_hit3",
+      "name": "Stage 4 DMG - Hit 3",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.2027,
+            0.2193,
+            0.236,
+            0.2592,
+            0.2758,
+            0.295,
+            0.3215,
+            0.3481,
+            0.3747,
+            0.403
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_basic5_hit1",
+      "name": "Stage 5 DMG - Hit 1",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.475,
+            0.514,
+            0.5529,
+            0.6075,
+            0.6464,
+            0.6912,
+            0.7535,
+            0.8159,
+            0.8782,
+            0.9444
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_basic5_hit2",
+      "name": "Stage 5 DMG - Hit 2",
+      "type": "basicAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.475,
+            0.514,
+            0.5529,
+            0.6075,
+            0.6464,
+            0.6912,
+            0.7535,
+            0.8159,
+            0.8782,
+            0.9444
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_heavy",
+      "name": "Heavy Attack DMG",
+      "type": "heavyAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.48,
+            0.5194,
+            0.5588,
+            0.6139,
+            0.6532,
+            0.6985,
+            0.7615,
+            0.8244,
+            0.8874,
+            0.9543
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_midair",
+      "name": "Mid-air Attack DMG",
+      "type": "heavyAttack",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.589,
+            0.6373,
+            0.6856,
+            0.7533,
+            0.8016,
+            0.8571,
+            0.9344,
+            1.0117,
+            1.0889,
+            1.171
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_dodge",
+      "name": "Dodge Counter DMG",
+      "type": "dodgeCounter",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.9025,
+            0.9766,
+            1.0506,
+            1.1542,
+            1.2282,
+            1.3133,
+            1.4317,
+            1.5501,
+            1.6685,
+            1.7943
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_skill_hit1",
+      "name": "Wingblade - Hit 1",
+      "type": "resonanceSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            1.44,
+            1.5581,
+            1.6762,
+            1.8415,
+            1.9596,
+            2.0954,
+            2.2843,
+            2.4732,
+            2.6622,
+            2.8629
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_skill_hit2",
+      "name": "Wingblade - Hit 2",
+      "type": "resonanceSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            1.44,
+            1.5581,
+            1.6762,
+            1.8415,
+            1.9596,
+            2.0954,
+            2.2843,
+            2.4732,
+            2.6622,
+            2.8629
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_liberation",
+      "name": "Deadening Abyss DMG",
+      "type": "resonanceLiberation",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            7.65,
+            8.2773,
+            8.9046,
+            9.7829,
+            10.4102,
+            11.131,
+            12.1352,
+            13.1389,
+            14.1426,
+            15.209
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_devastation",
+      "name": "Devastation DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            1.1475,
+            2.2814
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic1",
+      "name": "Umbra: Basic Attack Stage 1 DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.2835,
+            0.5637
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic2",
+      "name": "Umbra: Basic Attack Stage 2 DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.4725,
+            0.9394
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic3",
+      "name": "Umbra: Basic Attack Stage 3 DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.783,
+            1.5567
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic4_hit1",
+      "name": "Umbra: Basic Attack Stage 4 - Hit 1",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1868,
+            0.3713
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic4_hit2",
+      "name": "Umbra: Basic Attack Stage 4 - Hit 2",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1868,
+            0.3713
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic4_hit3",
+      "name": "Umbra: Basic Attack Stage 4 - Hit 3",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1868,
+            0.3713
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic4_hit4",
+      "name": "Umbra: Basic Attack Stage 4 - Hit 4",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.5603,
+            1.1139
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic5_hit1",
+      "name": "Umbra: Basic Attack Stage 5 - Hit 1",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1435,
+            0.2852
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic5_hit2",
+      "name": "Umbra: Basic Attack Stage 5 - Hit 2",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1435,
+            0.2852
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic5_hit3",
+      "name": "Umbra: Basic Attack Stage 5 - Hit 3",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1435,
+            0.2852
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic5_hit4",
+      "name": "Umbra: Basic Attack Stage 5 - Hit 4",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.1435,
+            0.2852
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_basic5_hit5",
+      "name": "Umbra: Basic Attack Stage 5 - Hit 5",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.5738,
+            1.1407
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_heavy",
+      "name": "Umbra: Heavy Attack DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.648,
+            1.2883
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_thwackblade_base",
+      "name": "Umbra: Thwackblade Base DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.637,
+            1.2665
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_thwackblade_hit1",
+      "name": "Umbra: Thwackblade Extra - Hit 1",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_thwackblade_hit2",
+      "name": "Umbra: Thwackblade Extra - Hit 2",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_thwackblade_hit3",
+      "name": "Umbra: Thwackblade Extra - Hit 3",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_thwackblade_hit4",
+      "name": "Umbra: Thwackblade Extra - Hit 4",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_plunging",
+      "name": "Umbra: Plunging Attack DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.62,
+            1.2327
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_dodge",
+      "name": "Umbra: Dodge Counter DMG",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            1.593,
+            3.1671
+          ]
+        }
+      ],
+      "tags": [
+        "melee",
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_lifetaker_hit1",
+      "name": "Umbra: Lifetaker DMG - Hit 1",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            1.39,
+            2.7635
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_lifetaker_hit2",
+      "name": "Umbra: Lifetaker DMG - Hit 2",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            1.39,
+            2.7635
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_lifetaker_extra1",
+      "name": "Umbra: Lifetaker Extra - Hit 1",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_lifetaker_extra2",
+      "name": "Umbra: Lifetaker Extra - Hit 2",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_lifetaker_extra3",
+      "name": "Umbra: Lifetaker Extra - Hit 3",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_forte_umbra_lifetaker_extra4",
+      "name": "Umbra: Lifetaker Extra - Hit 4",
+      "type": "forteCircuit",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.05,
+            0.0995
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_intro",
+      "name": "Instant of Annihilation DMG",
+      "type": "introSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            0.5,
+            1
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    },
+    {
+      "id": "rover_outro",
+      "name": "Soundweaver DMG DoT",
+      "type": "outroSkill",
+      "scaling": [
+        {
+          "stat": "ATK",
+          "multiplier": [
+            1.433
+          ]
+        }
+      ],
+      "tags": [
+        "havoc"
+      ]
+    }
+  ],
+  "effects": [
+    {
+      "id": "rover_metamorph",
+      "name": "Metamorph",
+      "operation": "add",
+      "value": [
+        0.2
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "havoc_dmg_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.2
+          ]
+        }
+      ],
+      "descriptionTemplate": "When Dark Surge is active, increase Havoc DMG by {value}%"
+    },
+    {
+      "id": "rover_bleak_crescendo",
+      "name": "Bleak Crescendo",
+      "operation": "add",
+      "value": [
+        1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "concertoEnergy"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            1
+          ]
+        }
+      ],
+      "descriptionTemplate": "When Dark Surge is active, regenerate {value} Concerto Energy per second"
+    },
+    {
+      "id": "rover_s1",
+      "name": "S1: Cryptic Insight",
+      "operation": "add",
+      "value": [
+        0.3
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Category",
+          "id": "resonanceSkill"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.3
+          ]
+        }
+      ],
+      "descriptionTemplate": "Increase Resonance Skill DMG by {value}%"
+    },
+    {
+      "id": "rover_s2",
+      "name": "S2: Waning Crescent",
+      "description": "Using Devastation resets Resonance Skill cooldown",
+      "operation": "enable",
+      "value": [
+        1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "resetSkillCooldownOnDevastation"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rover_s3",
+      "name": "S3: Surging Resonance",
+      "operation": "add",
+      "value": [
+        0.1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "healOnUmbraStage5"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.1
+          ]
+        }
+      ],
+      "descriptionTemplate": "Using Umbra Stage {value} heals {value}% of Max HP"
+    },
+    {
+      "id": "rover_s4",
+      "name": "S4: Annihilated Silence",
+      "operation": "add",
+      "value": [
+        -0.1
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "havocRes_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            -0.1
+          ]
+        }
+      ],
+      "descriptionTemplate": "Upon hitting with Devastation or Liberation, reduce enemy Havoc RES by {value}% for {value}s"
+    },
+    {
+      "id": "rover_s5",
+      "name": "S5: Aeon Symphony",
+      "operation": "add",
+      "value": [
+        0.5
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "umbraA5Multiplier_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.5
+          ]
+        }
+      ],
+      "descriptionTemplate": "When Dark Surge is active, increase Umbra Stage {value} multiplier by {value}%"
+    },
+    {
+      "id": "rover_s6",
+      "name": "S6: Ebbing Undercurrent",
+      "operation": "add",
+      "value": [
+        0.25
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": false,
+      "targets": [
+        {
+          "type": "Stat",
+          "id": "critRate_"
+        }
+      ],
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.25
+          ]
+        }
+      ],
+      "descriptionTemplate": "When Dark Surge is active, increase Crit Rate by {value}%"
+    }
+  ],
+  "mechanics": [],
+  "lore": {
+    "about": "The Rover, a mysterious traveler from beyond the stars, wields the power of Havoc to shatter the fabric of reality. As the Resonance of destruction and rebirth, they stand against the inevitable decay of the world.",
+    "quote": "Every ending is a new beginning. I've seen enough of both."
+  }
+}

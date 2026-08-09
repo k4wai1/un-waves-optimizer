@@ -1,0 +1,502 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Lumi | elemento Electro | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Lumi",
+    name: "Lumi",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Broadblade",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 680, "20": 1768, "40": 3368, "50": 4394, "60": 5420, "70": 6447, "80": 7473, "90": 8500 },
+    atk: { "1": 27, "20": 70, "40": 135, "50": 178, "60": 221, "70": 264, "80": 301, "90": 337 },
+    def: { "1": 72, "20": 184, "40": 350, "50": 456, "60": 562, "70": 668, "80": 774, "90": 879 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Lumi_basicAttack_yellow_light_basic_attack",
+      name: "Yellow Light: Basic Attack",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.16, 0.1732, 0.1863, 0.2047, 0.2178, 0.2329, 0.2539, 0.2748, 0.2958, 0.3181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_basicAttack_glitter",
+      name: "Glitter",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.32, 0.3463, 0.3725, 0.4093, 0.4355, 0.4657, 0.5077, 0.5496, 0.5916, 0.6362],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_plungingAttack_yellow_light_plunging_attack",
+      name: "Yellow Light: Plunging Attack",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.48, 0.5194, 0.5588, 0.6139, 0.6532, 0.6985, 0.7615, 0.8244, 0.8874, 0.9543],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_basicAttack_red_light_basic_attack_1_dmg",
+      name: "Red Light: Basic Attack 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.456, 0.4934, 0.5308, 0.5832, 0.6206, 0.6636, 0.7234, 0.7832, 0.8431, 0.9066],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_basicAttack_red_light_basic_attack_2_dmg_hit_1",
+      name: "Red Light: Basic Attack 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5415, 0.586, 0.6304, 0.6925, 0.7369, 0.788, 0.859, 0.9301, 1.0011, 1.0766],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_basicAttack_red_light_basic_attack_2_dmg_hit_2",
+      name: "Red Light: Basic Attack 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1083, 0.1172, 0.1261, 0.1385, 0.1474, 0.1576, 0.1718, 0.1861, 0.2003, 0.2154],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_basicAttack_red_light_basic_attack_3_dmg_hit_1",
+      name: "Red Light: Basic Attack 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3249, 0.3516, 0.3782, 0.4155, 0.4422, 0.4728, 0.5154, 0.5581, 0.6007, 0.646],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_basicAttack_red_light_basic_attack_3_dmg_hit_2",
+      name: "Red Light: Basic Attack 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7581, 0.8203, 0.8825, 0.9695, 1.0317, 1.1032, 1.2026, 1.3021, 1.4015, 1.5072],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_heavyAttack_red_light_heavy_attack_dmg",
+      name: "Red Light: Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3325, 0.3598, 0.3871, 0.4253, 0.4525, 0.4839, 0.5275, 0.5711, 0.6147, 0.6611],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_plungingAttack_red_light_plunging_attack_dmg",
+      name: "Red Light: Plunging Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.57, 0.6168, 0.6635, 0.729, 0.7757, 0.8295, 0.9042, 0.979, 1.0538, 1.1333],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_dodgeCounter_red_light_dodge_counter_dmg_hit_1",
+      name: "Red Light: Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8415, 0.9106, 0.9796, 1.0762, 1.1452, 1.2245, 1.3349, 1.4453, 1.5557, 1.673],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_dodgeCounter_red_light_dodge_counter_dmg_hit_2",
+      name: "Red Light: Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1683, 0.1822, 0.196, 0.2153, 0.2291, 0.2449, 0.267, 0.2891, 0.3112, 0.3346],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_resonanceSkill_pounce_dmg",
+      name: "Pounce DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.912, 0.9868, 1.0616, 1.1663, 1.2411, 1.3271, 1.4468, 1.5664, 1.6861, 1.8132],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_resonanceSkill_rebound_dmg",
+      name: "Rebound DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.874, 0.9457, 1.0174, 1.1177, 1.1894, 1.2718, 1.3865, 1.5011, 1.6158, 1.7376],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.8, 5.1936, 5.5872, 6.1383, 6.5319, 6.9845, 7.6143, 8.244, 8.8738, 9.5429],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_glare_dmg",
+      name: "Glare DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.41, 0.4437, 0.4773, 0.5244, 0.558, 0.5966, 0.6504, 0.7042, 0.758, 0.8152],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_red_spotlight_basic_attack_1_dmg",
+      name: "Red Spotlight: Basic Attack 1 DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6048, 0.6544, 0.704, 0.7735, 0.8231, 0.8801, 0.9594, 1.0388, 1.1181, 1.2025],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_red_spotlight_basic_attack_2_dmg_hit_1",
+      name: "Red Spotlight: Basic Attack 2 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6957, 0.7528, 0.8098, 0.8897, 0.9468, 1.0124, 1.1036, 1.1949, 1.2862, 1.3832],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_red_spotlight_basic_attack_2_dmg_hit_2",
+      name: "Red Spotlight: Basic Attack 2 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1392, 0.1506, 0.162, 0.178, 0.1894, 0.2025, 0.2208, 0.239, 0.2573, 0.2767],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_red_spotlight_basic_attack_3_dmg_hit_1",
+      name: "Red Spotlight: Basic Attack 3 DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4715, 0.5101, 0.5488, 0.6029, 0.6416, 0.686, 0.7479, 0.8097, 0.8716, 0.9373],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_red_spotlight_basic_attack_3_dmg_hit_2",
+      name: "Red Spotlight: Basic Attack 3 DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.1, 1.1902, 1.2804, 1.4067, 1.4969, 1.6006, 1.7449, 1.8893, 2.0336, 2.1869],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_heavyAttack_red_spotlight_heavy_attack_dmg",
+      name: "Red Spotlight: Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4435, 0.4799, 0.5163, 0.5672, 0.6036, 0.6454, 0.7036, 0.7618, 0.8199, 0.8818],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_energized_pounce_dmg",
+      name: "Energized Pounce DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.922, 0.9977, 1.0733, 1.1791, 1.2547, 1.3417, 1.4626, 1.5836, 1.7046, 1.8331],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_energized_rebound_dmg",
+      name: "Energized Rebound DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.266, 1.3699, 1.4737, 1.619, 1.7228, 1.8422, 2.0083, 2.1744, 2.3405, 2.517],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_forteCircuit_single_laser_beam_dmg",
+      name: "Single Laser Beam DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.375, 0.4058, 0.4365, 0.4796, 0.5103, 0.5457, 0.5949, 0.6441, 0.6933, 0.7456],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lumi_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2834, 0.3066, 0.3298, 0.3624, 0.3856, 0.4123, 0.4495, 0.4867, 0.5238, 0.5633],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Lumi_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillEnter Yellow Light Mode and attack the target, dealing Electro DMG.Show Skill DetailsLevel 20Skill DMG102.80%*3Concerto Regen10Escorting",
+    },
+    {
+      id: "Lumi_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Resonance Skill DMG Amplified by 38% for 10s or until they are switched out.",
+    },
+    {
+      id: "Lumi_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Lumi PathfindingGain 10% Electro DMG Bonus when in Red Light Mode.ExpeditingCasting Energized Pounce or Energized Rebound increases ATK by 10% for 5s.",
+    },
+    {
+      id: "Lumi_s1",
+      name: "S1: Parcel To Be Delivered",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After casting Energized Rebound, additionally recovers 60 STA within 3s.",
+    },
+    {
+      id: "Lumi_s2_lollo_logistics_ready_to_he",
+      name: "S2: Lollo Logistics, Ready to Help",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "defIgnore_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Energized Pounce and Energized Rebound ignore 20% of the target's DEF.",
+    },
+    {
+      id: "Lumi_s3_priority_parcel_in_transit",
+      name: "S3: Priority Parcel In Transit",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "The DMG of Resonance Liberation Squeakie Express is increased by 30%.",
+    },
+    {
+      id: "Lumi_s4_captain_lumi_at_your_servic",
+      name: "S4: Captain Lumi, At Your Service",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "Gain 30% Basic Attack DMG Bonus.",
+    },
+    {
+      id: "Lumi_s5",
+      name: "S5: Parcel Collected On Time",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Spark is fully recovered, Laser DMG Multiplier is increased by 100%.",
+    },
+    {
+      id: "Lumi_s6_give_me_a_five",
+      name: "S6: Give Me A Five",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "atk_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "star Rating — Casting Resonance Liberation Squeakie Express increases all team members' ATK by 20% for 20s.",
+    },
+  ],
+  mechanics: [],
+}

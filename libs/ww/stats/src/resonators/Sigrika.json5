@@ -1,0 +1,758 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Sigrika | elemento Aero | arma Gauntlets.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Sigrika",
+    name: "Sigrika",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Aero",
+    weaponType: "Gauntlets",
+    tags: ["aero"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 862, "20": 2242, "40": 4269, "50": 5570, "60": 6871, "70": 8172, "80": 9473, "90": 10775 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 93, "20": 238, "40": 452, "50": 589, "60": 725, "70": 862, "80": 999, "90": 1136 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_1_dmg",
+      name: "Basic Attack Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2664, 0.2883, 0.3101, 0.3407, 0.3626, 0.3877, 0.4226, 0.4576, 0.4925, 0.5297],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2532, 0.274, 0.2948, 0.3238, 0.3446, 0.3685, 0.4017, 0.4349, 0.4681, 0.5034],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2532, 0.274, 0.2948, 0.3238, 0.3446, 0.3685, 0.4017, 0.4349, 0.4681, 0.5034],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_3_dmg_hit_1",
+      name: "Basic Attack Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_3_dmg_hit_2",
+      name: "Basic Attack Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_3_dmg_hit_3",
+      name: "Basic Attack Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.224, 0.2424, 0.2608, 0.2865, 0.3049, 0.326, 0.3554, 0.3848, 0.4142, 0.4454],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_4_dmg_hit_1",
+      name: "Basic Attack Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.208, 0.2251, 0.2422, 0.266, 0.2831, 0.3027, 0.33, 0.3573, 0.3846, 0.4136],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_4_dmg_hit_2",
+      name: "Basic Attack Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.26, 0.2814, 0.3027, 0.3325, 0.3539, 0.3784, 0.4125, 0.4466, 0.4807, 0.517],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_4_dmg_hit_3",
+      name: "Basic Attack Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.26, 0.2814, 0.3027, 0.3325, 0.3539, 0.3784, 0.4125, 0.4466, 0.4807, 0.517],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_stage_4_dmg_hit_4",
+      name: "Basic Attack Stage 4 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.312, 0.3376, 0.3632, 0.399, 0.4246, 0.454, 0.495, 0.5359, 0.5768, 0.6203],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_elucidated_dmg_hit_1",
+      name: "Basic Attack - Elucidated DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3096, 0.335, 0.3604, 0.396, 0.4214, 0.4505, 0.4912, 0.5318, 0.5724, 0.6156],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_basicAttack_basic_attack_elucidated_dmg_hit_2",
+      name: "Basic Attack - Elucidated DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6192, 0.67, 0.7208, 0.7919, 0.8427, 0.901, 0.9823, 1.0635, 1.1448, 1.2311],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2924, 0.3164, 0.3404, 0.374, 0.3979, 0.4255, 0.4639, 0.5022, 0.5406, 0.5814],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3315, 0.3587, 0.3859, 0.424, 0.4512, 0.4824, 0.5259, 0.5694, 0.6129, 0.6591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3315, 0.3587, 0.3859, 0.424, 0.4512, 0.4824, 0.5259, 0.5694, 0.6129, 0.6591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_dodgeCounter_dodge_counter_dmg_hit_3",
+      name: "Dodge Counter DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.442, 0.4783, 0.5145, 0.5653, 0.6015, 0.6432, 0.7012, 0.7592, 0.8172, 0.8788],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_plungingAttack_midair_dodge_counter_dmg",
+      name: "Mid-air Dodge Counter DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.037, 1.1221, 1.2071, 1.3262, 1.4112, 1.509, 1.645, 1.7811, 1.9172, 2.0617],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_dodgeCounter_dodge_counter_decipher_dmg_hit_1",
+      name: "Dodge Counter - Decipher DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3096, 0.335, 0.3604, 0.396, 0.4214, 0.4505, 0.4912, 0.5318, 0.5724, 0.6156],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_dodgeCounter_dodge_counter_decipher_dmg_hit_2",
+      name: "Dodge Counter - Decipher DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6192, 0.67, 0.7208, 0.7919, 0.8427, 0.901, 0.9823, 1.0635, 1.1448, 1.2311],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_boomy_boom_dmg_hit_1",
+      name: "BOOMY BOOM! DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.144, 0.1559, 0.1677, 0.1842, 0.196, 0.2096, 0.2285, 0.2474, 0.2663, 0.2863],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_boomy_boom_dmg_hit_2",
+      name: "BOOMY BOOM! DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.144, 0.1559, 0.1677, 0.1842, 0.196, 0.2096, 0.2285, 0.2474, 0.2663, 0.2863],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_boomy_boom_dmg_hit_3",
+      name: "BOOMY BOOM! DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.144, 0.1559, 0.1677, 0.1842, 0.196, 0.2096, 0.2285, 0.2474, 0.2663, 0.2863],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_boomy_boom_dmg_hit_4",
+      name: "BOOMY BOOM! DMG - Hit 4",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.288, 0.3117, 0.3353, 0.3683, 0.392, 0.4191, 0.4569, 0.4947, 0.5325, 0.5726],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_big_boomy_boom_dmg_hit_1",
+      name: "BIG BOOMY BOOM! DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1449, 0.1568, 0.1687, 0.1853, 0.1972, 0.2109, 0.2299, 0.2489, 0.2679, 0.2881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_big_boomy_boom_dmg_hit_2",
+      name: "BIG BOOMY BOOM! DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.8694, 0.9407, 1.012, 1.1118, 1.1831, 1.2651, 1.3792, 1.4932, 1.6073, 1.7285],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_soliskin_to_the_aid_dmg_hit_1",
+      name: "Soliskin to the Aid DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.14, 0.1515, 0.163, 0.179, 0.1905, 0.2037, 0.2221, 0.2404, 0.2588, 0.2783],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceSkill_soliskin_to_the_aid_dmg_hit_2",
+      name: "Soliskin to the Aid DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9797, 1.06, 1.1404, 1.2528, 1.3332, 1.4255, 1.5541, 1.6826, 1.8111, 1.9477],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.3329, 4.6882, 5.0435, 5.541, 5.8963, 6.3049, 6.8733, 7.4418, 8.0103, 8.6143],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_heavyAttack_heavy_attack_schemata_of_runes_dmg",
+      name: "Heavy Attack - Schemata of Runes DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6665, 0.7212, 0.7759, 0.8524, 0.907, 0.9699, 1.0573, 1.1448, 1.2322, 1.3251],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_outburst_dmg_hit_1",
+      name: "Runic Outburst DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5919, 0.6404, 0.689, 0.7569, 0.8054, 0.8613, 0.9389, 1.0166, 1.0942, 1.1767],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_outburst_dmg_hit_2",
+      name: "Runic Outburst DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.0358, 1.1207, 1.2057, 1.3246, 1.4095, 1.5072, 1.643, 1.7789, 1.9148, 2.0592],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_outburst_dmg_hit_3",
+      name: "Runic Outburst DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.3317, 1.4409, 1.5501, 1.703, 1.8122, 1.9378, 2.1125, 2.2872, 2.4619, 2.6475],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_chain_whip_dmg_hit_1",
+      name: "Runic Chain Whip DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.25, 0.2705, 0.291, 0.3197, 0.3402, 0.3637, 0.3965, 0.4293, 0.4621, 0.497],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_chain_whip_dmg_hit_2",
+      name: "Runic Chain Whip DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3333, 0.3606, 0.388, 0.4262, 0.4535, 0.485, 0.5287, 0.5724, 0.6161, 0.6626],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_soliskin_dmg_hit_1",
+      name: "Runic Soliskin DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2557, 0.2721, 0.291, 0.3172, 0.3435, 0.3697, 0.3976],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_soliskin_dmg_hit_2",
+      name: "Runic Soliskin DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3836, 0.4082, 0.4365, 0.4758, 0.5152, 0.5545, 0.5963],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_runic_soliskin_dmg_hit_3",
+      name: "Runic Soliskin DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5999, 0.6491, 0.6983, 0.7671, 0.8163, 0.8729, 0.9516, 1.0303, 1.109, 1.1926],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_forte_circuit_learn_my_true_name_dmg_hit",
+      name: "Forte Circuit - Learn My True Name DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5235, 1.6484, 1.7733, 1.9482, 2.0731, 2.2168, 2.4166, 2.6165, 2.8164, 3.0287],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_forteCircuit_forte_circuit_learn_my_true_name_dmg_hit_1",
+      name: "Forte Circuit - Learn My True Name DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.5703, 4.945, 5.3198, 5.8444, 6.2192, 6.6502, 7.2498, 7.8494, 8.449, 9.0861],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Sigrika_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.822, 0.8894, 0.9568, 1.0512, 1.1186, 1.1961, 1.3039, 1.4117, 1.5196, 1.6342],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Sigrika_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Sigrika True Names InvokedCasting Intro Skill - Solsworn Etymology grants Convergent for 20s.",
+    },
+    {
+      id: "Sigrika_passive_1",
+      name: "Convergent",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Convergent\nThe next time Sigrika obtains a Rune, she additionally obtains a Rune of the same type and removes Convergent.",
+    },
+    {
+      id: "Sigrika_passive_2",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Sigrika holds Divergent and Convergent at the same time, Convergent takes priority.",
+    },
+    {
+      id: "Sigrika_passive_3",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Sigrika holds 100  of Full Stop, Convergent doesn't take effect.True Names AlignedWhen any nearby Resonators in the team cast Echo Skill, Sigrika gains a stack of Blessing of Runes, up to 6 stacks.",
+    },
+    {
+      id: "Sigrika_passive_4",
+      name: "Echoes",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Echoes with the same name can only trigger this effect once.",
+    },
+    {
+      id: "Sigrika_passive_5",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect resets upon a lineup change.",
+    },
+    {
+      id: "Sigrika_passive_6",
+      name: "Blessing",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Blessing of Runes\nEach stack of Blessing of Runes grants the active Resonator in the team 3% Aero DMG Bonus and 3% Echo Skill DMG Bonus.",
+    },
+    {
+      id: "Sigrika_passive_7",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Blessing of Runes reaches 6 stacks, Sigrika additionally gains 30% Aero DMG Bonus and Echo Skill DMG Bonus.",
+    },
+    {
+      id: "Sigrika_passive_8",
+      name: "For",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "For every 1% of Sigrika's Energy Regen over 125%, Sigrika gains 2% Echo Skill DMG Bonus for up to 50%.",
+    },
+    {
+      id: "Sigrika_s1",
+      name: "S1: The Gleam Meant for Radiance",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multipliers of Basic Attack - Elucidated, Dodge Counter - Decipher, Resonance Skill - BIG BOOMY BOOM!, and Resonance Skill - Soliskin to the Aid are increased by 70%. Sigrika becomes immune to interruptions while casting Basic Attack - Elucidated, Resonance Skill - BIG BOOMY BOOM!, and Resonance Skill - Soliskin to the Aid. Encapsulated now stacks up to 3 times. After casting Outro Skill In This Very Moment, Sigrika obtains 1 additional .",
+    },
+    {
+      id: "Sigrika_s2",
+      name: "S2: The Bitterness Steeped in Hope",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Forte Circuit - Learn My True Name is increased by 120%.  When not in combat for over 4s, Sigrika gains Divergent. This effect is active for up to 1  every 4s.",
+    },
+    {
+      id: "Sigrika_s3",
+      name: "S3: I Flee, Yet I Seek",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Innate Gift? now stacks up to 4 times and is no longer removed after Sigrika casts Forte Circuit - Learn My True Name or is switched off the field. When not in combat, all Innate Gift? stacks are removed every 30s.",
+    },
+    {
+      id: "Sigrika_s4",
+      name: "S4: I Lose, Yet I Gain",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When a Resonator in the team casts Echo Skill, all Resonators in the team gain an 20% ATK increase for 20s.",
+    },
+    {
+      id: "Sigrika_s5_until_submerged_by_the_dark",
+      name: "S5: Until Submerged by the Dark",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Where Trust Leads Me! is increased by 30%.",
+    },
+    {
+      id: "Sigrika_s6",
+      name: "S6: True Names Resurfaced, Rising in Light",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Targets take 30% more DMG from Sigrika. Innate Gift? gains following effects: - Each stack additionally grants Runic Outburst, Runic Chain Whip, Runic Soliskin, and Forte Circuit - Learn My True Name 15% DMG Amplification, up to 60%. - Each stack causes Runic Outburst, Runic Chain Whip, Runic Soliskin, and Forte Circuit - Learn My True Name to ignore 7.5% of the target's DEF when dealing damage, up to 30%.",
+    },
+  ],
+  mechanics: [],
+}

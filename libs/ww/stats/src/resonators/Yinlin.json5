@@ -1,0 +1,381 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Yinlin | elemento Electro | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Yinlin",
+    name: "Yinlin",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Electro",
+    weaponType: "Rectifier",
+    tags: ["electro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 880, "20": 2288, "40": 4358, "50": 5687, "60": 7015, "70": 8343, "80": 9671, "90": 11000 },
+    atk: { "1": 32, "20": 83, "40": 161, "50": 212, "60": 263, "70": 314, "80": 357, "90": 400 },
+    def: { "1": 105, "20": 269, "40": 510, "50": 665, "60": 819, "70": 974, "80": 1128, "90": 1283 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Yinlin_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1449, 0.1568, 0.1687, 0.1853, 0.1972, 0.2109, 0.2299, 0.2489, 0.2679, 0.2881],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1701, 0.1841, 0.198, 0.2176, 0.2315, 0.2476, 0.2699, 0.2922, 0.3145, 0.3382],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0704, 0.0762, 0.0819, 0.09, 0.0958, 0.1024, 0.1116, 0.1209, 0.1301, 0.1399],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.378, 0.409, 0.44, 0.4834, 0.5144, 0.5501, 0.5997, 0.6493, 0.6989, 0.7516],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.15, 0.1623, 0.1746, 0.1919, 0.2042, 0.2183, 0.238, 0.2577, 0.2774, 0.2983],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6709, 0.7217, 0.7929, 0.8437, 0.9022, 0.9836, 1.0649, 1.1462, 1.2327],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1218, 0.1318, 0.1418, 0.1558, 0.1658, 0.1772, 0.1932, 0.2092, 0.2252, 0.2422],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_heavyAttack_heavy_attack_sta_consumption",
+      name: "Heavy Attack STA Consumption",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25, 0.25],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_resonanceSkill_magnetic_roar_damage",
+      name: "Magnetic Roar Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_resonanceSkill_lightning_execution_damage",
+      name: "Lightning Execution Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.45, 0.4869, 0.5238, 0.5755, 0.6124, 0.6548, 0.7139, 0.7729, 0.832, 0.8947],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_resonanceSkill_electromagnetic_blast_damage",
+      name: "Electromagnetic Blast Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1082, 0.1164, 0.1279, 0.1361, 0.1456, 0.1587, 0.1718, 0.1849, 0.1989],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5863, 0.6344, 0.6825, 0.7498, 0.7979, 0.8532, 0.9301, 1.007, 1.0839, 1.1656],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_forteCircuit_chameleon_cipher_damage",
+      name: "Chameleon Cipher Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.9738, 1.0476, 1.151, 1.2248, 1.3096, 1.4277, 1.5458, 1.6639, 1.7893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_forteCircuit_judgment_strike_damage",
+      name: "Judgment Strike Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3956, 0.428, 0.4605, 0.5059, 0.5383, 0.5756, 0.6275, 0.6794, 0.7313, 0.7864],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Yinlin_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.072, 0.078, 0.0839, 0.0921, 0.098, 0.1048, 0.1143, 0.1237, 0.1332, 0.1432],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Yinlin_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillCommand puppet \"Zapstring\" to attack, dealing Electro DMG in a large range.Show Skill DetailsLevel 20Skill DMG26.13%*10Concerto Regen10Strategist",
+    },
+    {
+      id: "Yinlin_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Electro DMG Amplified by 20% and Resonance Liberation DMG Amplified by 25% for 14s or until they are switched out.",
+    },
+    {
+      id: "Yinlin_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Yinlin Pain ImmersionAfter using Resonance Skill Magnetic Roar, Yinlin's Crit.",
+    },
+    {
+      id: "Yinlin_passive_3",
+      name: "Rate",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Rate is increased by 15% for 5s.Deadly FocusThe damage of Resonance Skill Lightning Execution is increased by 10% when hitting targets marked with Sinner's Mark, and Yinlin's ATK is increased by 10% for 4s when this is triggered.",
+    },
+    {
+      id: "Yinlin_s1_moralitys_crossroads",
+      name: "S1: Morality's Crossroads",
+      operation: "add",
+      value: [0.7],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceSkill" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.7],
+        },
+      ],
+      descriptionTemplate: "Resonance Skill Magnetic Roar and Lightning Execution deal 70% more DMG.",
+    },
+    {
+      id: "Yinlin_s2",
+      name: "S2: Ensnarled by Rapport",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Skill Electromagnetic Blast recovers an additional 5 Judgement Point(s) and 5 Resonance Energy on hit.",
+    },
+    {
+      id: "Yinlin_s3_unyielding_verdict",
+      name: "S3: Unyielding Verdict",
+      operation: "add",
+      value: [0.55],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "forteCircuit" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.55],
+        },
+      ],
+      descriptionTemplate: "Forte Circuit Judgment Strike's DMG multiplier is increased by 55%.",
+    },
+    {
+      id: "Yinlin_s4",
+      name: "S4: Steadfast Conviction",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Forte Circuit Judgment Strike hits a target, the ATK of all team members is increased by 20% for 12s.",
+    },
+    {
+      id: "Yinlin_s5_resounding_will",
+      name: "S5: Resounding Will",
+      operation: "add",
+      value: [1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1],
+        },
+      ],
+      descriptionTemplate: "Resonance Liberation Thundering Wrath deals 100% extra DMG to targets with Forte Circuit's Sinner's Mark or Punishment Mark.",
+    },
+    {
+      id: "Yinlin_s6",
+      name: "S6: Pursuit of Justice",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "In the first 30s after casting Resonance Liberation Thundering Wrath, when Yinlin's Basic Attack hits a target, Furious Thunder will be triggered, dealing Electro DMG equal to 419.59% of Yinlin's ATK. Every Basic Attack hit can trigger Furious Thunder 1 time, up to 4 times. This is considered Resonance Skill DMG.",
+    },
+  ],
+  mechanics: [],
+}

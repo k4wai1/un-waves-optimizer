@@ -1,0 +1,366 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Aalto | elemento Aero | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Aalto",
+    name: "Aalto",
+    entityType: "resonator",
+    rarity: 4,
+    version: "1.0",
+    element: "Aero",
+    weaponType: "Pistols",
+    tags: ["aero"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 788, "20": 2049, "40": 3903, "50": 5092, "60": 6281, "70": 7471, "80": 8660, "90": 9850 },
+    atk: { "1": 21, "20": 54, "40": 105, "50": 139, "60": 172, "70": 206, "80": 234, "90": 262 },
+    def: { "1": 88, "20": 225, "40": 427, "50": 557, "60": 686, "70": 816, "80": 946, "90": 1075 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Aalto_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.16, 0.1732, 0.1863, 0.2047, 0.2178, 0.2329, 0.2539, 0.2748, 0.2958, 0.3181],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2667, 0.2886, 0.3104, 0.3411, 0.3629, 0.3881, 0.4231, 0.458, 0.493, 0.5302],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.24, 0.2597, 0.2794, 0.307, 0.3266, 0.3493, 0.3808, 0.4122, 0.4437, 0.4772],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2534, 0.2742, 0.2949, 0.324, 0.3448, 0.3687, 0.4019, 0.4351, 0.4684, 0.5037],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_basicAttack_stage_5_dmg",
+      name: "Stage 5 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.904, 0.9782, 1.0523, 1.1561, 1.2302, 1.3155, 1.4341, 1.5527, 1.6713, 1.7973],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_plungingAttack_midair_attack",
+      name: "Mid-air Attack",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_basicAttack_aimed_shot_damage",
+      name: "Aimed Shot Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.18, 0.1948, 0.2096, 0.2302, 0.245, 0.262, 0.2856, 0.3092, 0.3328, 0.3579],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_basicAttack_fully_charged_aimed_shot_damage",
+      name: "Fully Charged Aimed Shot Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.405, 0.4383, 0.4715, 0.518, 0.5512, 0.5894, 0.6425, 0.6956, 0.7488, 0.8052],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.077, 1.1654, 1.2537, 1.3773, 1.4656, 1.5672, 1.7085, 1.8498, 1.9911, 2.1412],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_resonanceSkill_mist_bullet_damage",
+      name: "Mist Bullet Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_resonanceSkill_mist_avatar_hp",
+      name: "Mist Avatar HP",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "HP",
+          multiplier: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2, 2.164, 2.328, 2.5576, 2.7216, 2.9102, 3.1726, 3.435, 3.6974, 3.9762],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_resonanceLiberation_gate_of_quandary_atk_increase",
+      name: "Gate Of Quandary ATK Increase",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_forteCircuit_mist_bullet_dmg",
+      name: "Mist Bullet DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_forteCircuit_movement_speed_increase",
+      name: "Movement Speed Increase",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4, 0.4],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Aalto_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3334, 0.3607, 0.388, 0.4263, 0.4536, 0.4851, 0.5288, 0.5725, 0.6163, 0.6627],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Aalto_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAalto shows up out of thin air to perform rapid continuous shooting, dealing Aero DMG.Show Skill DetailsLevel 20Skill DMG120.94%*3Concerto Regen10Dissolving Mist",
+    },
+    {
+      id: "Aalto_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillThe incoming Resonator has their Aero DMG Amplified by 23% for 14s or until they are switched out.",
+    },
+    {
+      id: "Aalto_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Aalto Perfect PerformanceAalto's Heavy Attack will always critically hit, triggered once every 30s.Mid-game BreakAalto will continuously recover STA when he is in the Forte Circuit Mistcloak Dash state.",
+    },
+    {
+      id: "Aalto_s1",
+      name: "S1: Trickster's Opening Show",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The cooldown of Resonance Skill Shift Trick is reduced by 4s.",
+    },
+    {
+      id: "Aalto_s2",
+      name: "S2: Mistweaver's Debut",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "\"Mist Avatar\" inherits 100% more HP from Aalto. When Aalto attacks targets taunted by the \"Mist Avatar(s)\", his ATK is increased by 15%.",
+    },
+    {
+      id: "Aalto_s3",
+      name: "S3: Hazey Transition",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Aalto's Basic Attack or Mid-air Attack passes through the Mist, 2 more bullets will be generated, dealing 50% of the DMG of Basic Attack or Mid-air Attack.",
+    },
+    {
+      id: "Aalto_s4",
+      name: "S4: Blake Bloom for Finale",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The damage of Resonance Skill Mist Bullets is increased by 30%; Aalto receives 30% less DMG in his Forte Circuit Mistcloak Dash state.",
+    },
+    {
+      id: "Aalto_s5",
+      name: "S5: Applause of the Lost",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "In the Forte Circuit Mistcloak Dash state, Aalto's Aero DMG Bonus is increased by 25% for 6s.",
+    },
+    {
+      id: "Aalto_s6",
+      name: "S6: Broker's Secrets",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation Flower in the Mist now additionally increases Crit. Rate by 8%. When Aalto's Heavy Attack passes through the Gate of Quandary, the damage dealt is additionally increased by 50%.",
+    },
+  ],
+  mechanics: [],
+}

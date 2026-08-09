@@ -1,0 +1,438 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Encore | elemento Fusion | arma Rectifier.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Encore",
+    name: "Encore",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Rectifier",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 841, "20": 2187, "40": 4165, "50": 5434, "60": 6704, "70": 7973, "80": 9243, "90": 10512 },
+    atk: { "1": 34, "20": 88, "40": 171, "50": 225, "60": 279, "70": 333, "80": 379, "90": 425 },
+    def: { "1": 102, "20": 261, "40": 495, "50": 646, "60": 796, "70": 946, "80": 1096, "90": 1246 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Encore_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.28, 0.3029, 0.3259, 0.358, 0.381, 0.4074, 0.4441, 0.4809, 0.5176, 0.5566],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.333, 0.3603, 0.3876, 0.4258, 0.4531, 0.4845, 0.5282, 0.5719, 0.6156, 0.662],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3335, 0.3608, 0.3881, 0.4264, 0.4538, 0.4852, 0.529, 0.5727, 0.6165, 0.663],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1925, 0.2082, 0.224, 0.2461, 0.2619, 0.2801, 0.3053, 0.3306, 0.3558, 0.3827],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_basicAttack_woolies_damage",
+      name: "Woolies Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.2, 1.2984, 1.3967, 1.5345, 1.6329, 1.7461, 1.9035, 2.061, 2.2184, 2.3857],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.941, 1.0181, 1.0953, 1.2033, 1.2805, 1.3692, 1.4927, 1.6161, 1.7396, 1.8708],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_plungingAttack_midair_attack",
+      name: "Mid-air Attack",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6708, 0.7216, 0.7928, 0.8436, 0.9021, 0.9835, 1.0648, 1.1461, 1.2326],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6334, 0.6854, 0.7373, 0.8101, 0.862, 0.9218, 1.0049, 1.088, 1.1711, 1.2594],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceSkill_flaming_woolies_damage",
+      name: "Flaming Woolies Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3853, 0.4169, 0.4485, 0.4928, 0.5244, 0.5607, 0.6113, 0.6618, 0.7124, 0.7661],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceSkill_energetic_welcome_damage",
+      name: "Energetic Welcome Damage",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.706, 1.8458, 1.9857, 2.1816, 2.3215, 2.4824, 2.7062, 2.93, 3.1538, 3.3916],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceLiberation_cosmos_frolicking_stage_1_dmg",
+      name: "Cosmos: Frolicking Stage 1 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4536, 0.4908, 0.528, 0.5801, 0.6173, 0.6601, 0.7196, 0.7791, 0.8386, 0.9018],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceLiberation_cosmos_frolicking_stage_2_dmg",
+      name: "Cosmos: Frolicking Stage 2 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2837, 0.307, 0.3302, 0.3628, 0.3861, 0.4128, 0.45, 0.4872, 0.5245, 0.564],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceLiberation_cosmos_frolicking_stage_3_dmg",
+      name: "Cosmos: Frolicking Stage 3 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3319, 0.3592, 0.3864, 0.4245, 0.4517, 0.483, 0.5265, 0.5701, 0.6136, 0.6599],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceLiberation_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9759, 1.0559, 1.1359, 1.2479, 1.3279, 1.42, 1.548, 1.676, 1.804, 1.9401],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceLiberation_cosmos_heavy_attack_dmg",
+      name: "Cosmos: Heavy Attack DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.0944, 1.1842, 1.2739, 1.3996, 1.4893, 1.5925, 1.7361, 1.8797, 2.0232, 2.1758],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceLiberation_cosmos_rampage_damage",
+      name: "Cosmos Rampage Damage",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3185, 0.3446, 0.3707, 0.4072, 0.4334, 0.4634, 0.5052, 0.547, 0.5888, 0.6332],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_resonanceLiberation_cosmos_dodge_counter_dmg",
+      name: "Cosmos: Dodge Counter DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3319, 0.3592, 0.3864, 0.4245, 0.4517, 0.483, 0.5265, 0.5701, 0.6136, 0.6599],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_forteCircuit_cloudy_frenzy_damage",
+      name: "Cloudy Frenzy Damage",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.68, 1.8177, 1.9555, 2.1483, 2.2861, 2.4445, 2.6649, 2.8853, 3.1058, 3.34],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_forteCircuit_cosmos_rupture_damage_hit_1",
+      name: "Cosmos Rupture Damage - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2335, 0.2526, 0.2718, 0.2986, 0.3177, 0.3397, 0.3704, 0.401, 0.4317, 0.4642],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_forteCircuit_cosmos_rupture_damage_hit_2",
+      name: "Cosmos Rupture Damage - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.4908, 2.6951, 2.8993, 3.1853, 3.3895, 3.6244, 3.9512, 4.278, 4.6048, 4.9521],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Encore_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Encore_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillEncore pounces at the enemies with Cosmos, dealing Fusion DMG.Show Skill DetailsLevel 20Skill DMG362.81%Concerto Regen10Thermal Field",
+    },
+    {
+      id: "Encore_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillEncore generates a Thermal Field centered around skill target, with a radius of 3m. Targets inside the Thermal Field are continuously burned, suffering Fusion DMG equal to 176.76% of Encore's ATK every 1.5s for 6s.",
+    },
+    {
+      id: "Encore_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Encore Angry CosmosDuring the Resonance Liberation Cosmos Rave, when Encore's HP is above 70%, DMG dealt is increased by 10%.Woolies Cheer DanceWhen Resonance Skill Flaming Woolies or Resonance Skill Cosmos - Rampage is cast, Encore's Fusion DMG Bonus is increased by 10% for 10s.",
+    },
+    {
+      id: "Encore_s1",
+      name: "S1: Wooly's Fairy Tale",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Basic Attack hits a target, Encore's Fusion DMG Bonus is increased by 3%, stacking up to 4 time(s) for 6s.",
+    },
+    {
+      id: "Encore_s2",
+      name: "S2: Sheep",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "counting Lullaby — Encore additionally restores 10 Resonance Energy when casting Basic Attack Wooly Strike or Resonance Skill Energetic Welcome. This can be triggered once every 10s.",
+    },
+    {
+      id: "Encore_s3_fog_the_black_shores",
+      name: "S3: Fog? The Black Shores!",
+      operation: "add",
+      value: [0.4],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "heavyAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.4],
+        },
+      ],
+      descriptionTemplate: "The DMG multiplier of Heavy Attack Cloudy Frenzy and Heavy Attack Cosmos Rupture is increased by 40%.",
+    },
+    {
+      id: "Encore_s4_adventure_lets_go",
+      name: "S4: Adventure? Let's go!",
+      operation: "add",
+      value: [0.2],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "fusion_dmg_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.2],
+        },
+      ],
+      descriptionTemplate: "Heavy Attack Cosmos Rupture increases the Fusion DMG Bonus of all team members by 20% for 30s.",
+    },
+    {
+      id: "Encore_s5_hero_takes_the_stage",
+      name: "S5: Hero Takes the Stage!",
+      operation: "add",
+      value: [0.35],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.35],
+        },
+      ],
+      descriptionTemplate: "Resonance Skill DMG Bonus is increased by 35%.",
+    },
+    {
+      id: "Encore_s6",
+      name: "S6: Woolies Save the World!",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "During Resonance Liberation Cosmos Rave, Encore gains 1 stack(s) of \"Lost Lamb\" every time she deals damage, each stack increasing her ATK by 5% for 10s, stacking up to 5 time(s).",
+    },
+  ],
+  mechanics: [],
+}

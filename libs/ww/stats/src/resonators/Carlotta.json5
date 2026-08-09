@@ -1,0 +1,593 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Carlotta | elemento Glacio | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Carlotta",
+    name: "Carlotta",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Glacio",
+    weaponType: "Pistols",
+    tags: ["glacio"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 996, "20": 2590, "40": 4933, "50": 6436, "60": 7940, "70": 9443, "80": 10946, "90": 12450 },
+    atk: { "1": 37, "20": 96, "40": 186, "50": 245, "60": 304, "70": 363, "80": 412, "90": 462 },
+    def: { "1": 98, "20": 251, "40": 476, "50": 620, "60": 764, "70": 909, "80": 1053, "90": 1197 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Carlotta_basicAttack_basic_attack_stage_1",
+      name: "Basic Attack Stage 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.272, 0.2944, 0.3167, 0.3479, 0.3702, 0.3958, 0.4315, 0.4672, 0.5029, 0.5408],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_basic_attack_stage_2_hit_1",
+      name: "Basic Attack Stage 2 - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1989, 0.2153, 0.2316, 0.2544, 0.2707, 0.2895, 0.3156, 0.3417, 0.3678, 0.3955],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_basic_attack_stage_2_hit_2",
+      name: "Basic Attack Stage 2 - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1989, 0.2153, 0.2316, 0.2544, 0.2707, 0.2895, 0.3156, 0.3417, 0.3678, 0.3955],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_basic_attack_stage_2_hit_3",
+      name: "Basic Attack Stage 2 - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2652, 0.287, 0.3087, 0.3392, 0.3609, 0.3859, 0.4207, 0.4555, 0.4903, 0.5273],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_necessary_measures_stage_1_dmg",
+      name: "Necessary Measures Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3315, 0.3587, 0.3859, 0.424, 0.4512, 0.4824, 0.5259, 0.5694, 0.6129, 0.6591],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_necessary_measures_stage_2_dmg_hit_1",
+      name: "Necessary Measures Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3022, 0.327, 0.3518, 0.3865, 0.4112, 0.4397, 0.4794, 0.519, 0.5587, 0.6008],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_necessary_measures_stage_2_dmg_hit_2",
+      name: "Necessary Measures Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3694, 0.3997, 0.4299, 0.4723, 0.5026, 0.5375, 0.5859, 0.6344, 0.6828, 0.7343],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_necessary_measures_stage_3_dmg_hit_1",
+      name: "Necessary Measures Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7038, 0.7616, 0.8193, 0.9001, 0.9578, 1.0241, 1.1165, 1.2088, 1.3012, 1.3993],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_necessary_measures_stage_3_dmg_hit_2",
+      name: "Necessary Measures Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1173, 0.127, 0.1366, 0.1501, 0.1597, 0.1707, 0.1861, 0.2015, 0.2169, 0.2333],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_heavyAttack_heavy_attack_dmg_hit_1",
+      name: "Heavy Attack DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1148, 0.1242, 0.1336, 0.1468, 0.1562, 0.167, 0.1821, 0.1971, 0.2122, 0.2282],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_heavyAttack_heavy_attack_dmg_hit_2",
+      name: "Heavy Attack DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1148, 0.1242, 0.1336, 0.1468, 0.1562, 0.167, 0.1821, 0.1971, 0.2122, 0.2282],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_heavyAttack_heavy_attack_dmg_hit_3",
+      name: "Heavy Attack DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.306, 0.3311, 0.3562, 0.3914, 0.4165, 0.4453, 0.4855, 0.5256, 0.5658, 0.6084],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_containment_tactics_dmg_hit_1",
+      name: "Containment Tactics DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1722, 0.1863, 0.2004, 0.2202, 0.2343, 0.2505, 0.2731, 0.2957, 0.3183, 0.3423],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_containment_tactics_dmg_hit_2",
+      name: "Containment Tactics DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1722, 0.1863, 0.2004, 0.2202, 0.2343, 0.2505, 0.2731, 0.2957, 0.3183, 0.3423],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_containment_tactics_dmg_hit_3",
+      name: "Containment Tactics DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.459, 0.4967, 0.5343, 0.587, 0.6247, 0.6679, 0.7282, 0.7884, 0.8486, 0.9126],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_customary_greetings_dmg_hit_1",
+      name: "Customary Greetings DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5432, 0.5877, 0.6323, 0.6946, 0.7392, 0.7904, 0.8616, 0.9329, 1.0042, 1.0799],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_basicAttack_customary_greetings_dmg_hit_2",
+      name: "Customary Greetings DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6639, 0.7183, 0.7728, 0.849, 0.9034, 0.966, 1.0531, 1.1402, 1.2273, 1.3199],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.522, 0.5648, 0.6076, 0.6675, 0.7103, 0.7595, 0.828, 0.8965, 0.9649, 1.0377],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6919, 0.7486, 0.8054, 0.8848, 0.9415, 1.0068, 1.0976, 1.1883, 1.2791, 1.3755],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7249, 0.7843, 0.8437, 0.9269, 0.9864, 1.0547, 1.1498, 1.2449, 1.34, 1.4411],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7249, 0.7843, 0.8437, 0.9269, 0.9864, 1.0547, 1.1498, 1.2449, 1.34, 1.4411],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceSkill_chromatic_splendor_dmg_hit_1",
+      name: "Chromatic Splendor DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.567, 0.6135, 0.66, 0.7251, 0.7716, 0.8251, 0.8995, 0.9739, 1.0483, 1.1273],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceSkill_chromatic_splendor_dmg_hit_2",
+      name: "Chromatic Splendor DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.567, 0.6135, 0.66, 0.7251, 0.7716, 0.8251, 0.8995, 0.9739, 1.0483, 1.1273],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceSkill_chromatic_splendor_dmg_hit_3",
+      name: "Chromatic Splendor DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.701, 1.8405, 1.98, 2.1753, 2.3148, 2.4752, 2.6983, 2.9215, 3.1447, 3.3818],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.0256, 2.1917, 2.3578, 2.5903, 2.7564, 2.9474, 3.2132, 3.4789, 3.7447, 4.0271],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceLiberation_death_knell_dmg_hit_1",
+      name: "Death Knell DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9237, 0.9994, 1.0752, 1.1812, 1.257, 1.3441, 1.4652, 1.5864, 1.7076, 1.8364],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceLiberation_death_knell_dmg_hit_2",
+      name: "Death Knell DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.073, 0.0789, 0.0849, 0.0933, 0.0993, 0.1062, 0.1157, 0.1253, 0.1349, 0.145],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_resonanceLiberation_fatal_finale_dmg",
+      name: "Fatal Finale DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.2409, 3.5067, 3.7724, 4.1445, 4.4103, 4.7159, 5.1411, 5.5663, 5.9915, 6.4433],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_forteCircuit_imminent_oblivion_dmg_hit_1",
+      name: "Imminent Oblivion DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3362, 0.3638, 0.3913, 0.4299, 0.4575, 0.4892, 0.5333, 0.5774, 0.6215, 0.6683],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_forteCircuit_imminent_oblivion_dmg_hit_2",
+      name: "Imminent Oblivion DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.5211, 2.7278, 2.9345, 3.2239, 3.4307, 3.6684, 3.9992, 4.3299, 4.6607, 5.0121],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9, 0.9738, 1.0476, 1.151, 1.2248, 1.3096, 1.4277, 1.5458, 1.6639, 1.7893],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Carlotta_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Carlotta_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target, dealing Glacio DMG.Show Skill DetailsLevel 20Skill DMG326.53%+108.85%*2Concerto Regen10Closing Remark",
+    },
+    {
+      id: "Carlotta_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillAttack the target, dealing Glacio DMG equal to 794.2% of Carlotta's ATK.",
+    },
+    {
+      id: "Carlotta_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Carlotta Flawless PurityAfter casting Resonance Skill Chromatic Splendor, Carlotta can perform Mid-air Attacks while being immune to any DMG or interruptions before the Mid-air Attack deals DMG.",
+    },
+    {
+      id: "Carlotta_passive_3",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Carlotta is on the team, the active Resonator's Flight STA cost is reduced by 20%.Ars Gratia ArtisIntro Skill Wintertime Aria, Resonance Skill Chromatic Splendor, Resonance Liberation Death Knell, and Heavy Attack Imminent Oblivion can inflict Deconstruction.",
+    },
+    {
+      id: "Carlotta_s1",
+      name: "S1: Beauty Blazes Brightest Before It Fades",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Carlotta deals DMG to a target inflicted with Deconstruction, the Crit. Rate of this instance of DMG is increased by 12.5%. When Resonance Skill Chromatic Splendor hits a target inflicted with Dispersion, Carlotta additionally restores 30 points of Substance.",
+    },
+    {
+      id: "Carlotta_s2_fallen_petals_give_life_to_",
+      name: "S2: Fallen Petals Give Life to New Blooms",
+      operation: "add",
+      value: [1.26],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "resonanceLiberation" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [1.26],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation Fatal Finale is increased by 126%.",
+    },
+    {
+      id: "Carlotta_s3",
+      name: "S3: Adelante, Cortado, Spinning in Grace",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Enable Outro Skill Kaleidoscope Sparks: Deal 1 additional strike at the end of Outro Skill Closing Remark, dealing Glacio DMG equal to 1032.18% of Carlotta's ATK. The DMG Multiplier of Resonance Skill Art of Violence and Resonance Skill Chromatic Splendor is increased by 93%.",
+    },
+    {
+      id: "Carlotta_s4",
+      name: "S4: Yesterday's Raindrops Make Finest Wine",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Heavy Attack, Heavy Attack Containment Tactics, and Heavy Attack Imminent Oblivion grants all Resonators in the team 25% Resonance Skill DMG Bonus for 30s.",
+    },
+    {
+      id: "Carlotta_s5_toast_to_past_today_and_eve",
+      name: "S5: Toast to Past, Today, and Every Day to Come",
+      operation: "add",
+      value: [0.47],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Category", id: "heavyAttack" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.47],
+        },
+      ],
+      descriptionTemplate: "The DMG Multiplier of Heavy Attack Imminent Oblivion is increased by 47%.",
+    },
+    {
+      id: "Carlotta_s6",
+      name: "S6: As the Curtain Falls, I Remain What I Am",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Shots of Resonance Liberation Death Knell deal higher DMG and shoot out double the number of crystal shards, representing a total increase of 186.6% in the DMG Multiplier of Resonance Liberation Death Knell. Shots of Resonance Liberation Death Knell inflict Scattering on targets when hit, during which the target is immobilized. This effect is removed after 1.5s or when the target receives DMG.",
+    },
+  ],
+  mechanics: [],
+}

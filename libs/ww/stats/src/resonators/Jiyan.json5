@@ -1,0 +1,429 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Jiyan | elemento Aero | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Jiyan",
+    name: "Jiyan",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Aero",
+    weaponType: "Broadblade",
+    tags: ["aero"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 839, "20": 2182, "40": 4155, "50": 5422, "60": 6688, "70": 7954, "80": 9221, "90": 10487 },
+    atk: { "1": 35, "20": 91, "40": 176, "50": 232, "60": 287, "70": 343, "80": 390, "90": 437 },
+    def: { "1": 97, "20": 248, "40": 471, "50": 614, "60": 757, "70": 899, "80": 1042, "90": 1185 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Jiyan_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.368, 0.3981, 0.4283, 0.4705, 0.5007, 0.5354, 0.5837, 0.632, 0.6803, 0.7316],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_stage_2_dmg",
+      name: "Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.22, 0.238, 0.256, 0.2813, 0.2993, 0.3201, 0.3489, 0.3778, 0.4067, 0.4373],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_stage_3_dmg",
+      name: "Stage 3 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.183, 0.198, 0.213, 0.234, 0.249, 0.2662, 0.2902, 0.3143, 0.3383, 0.3638],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_stage_4_dmg",
+      name: "Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.333, 0.3603, 0.3876, 0.4258, 0.4531, 0.4845, 0.5282, 0.5719, 0.6156, 0.662],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_stage_5_dmg_hit_1",
+      name: "Stage 5 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1187, 0.1284, 0.1382, 0.1518, 0.1615, 0.1727, 0.1883, 0.2039, 0.2195, 0.236],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_stage_5_dmg_hit_2",
+      name: "Stage 5 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7718, 0.8351, 0.8984, 0.987, 1.0503, 1.1231, 1.2244, 1.3256, 1.4269, 1.5345],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1116, 0.1208, 0.1299, 0.1427, 0.1519, 0.1624, 0.1771, 0.1917, 0.2064, 0.222],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_windborne_strike_damage",
+      name: "Windborne Strike Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.533, 0.5767, 0.6204, 0.6816, 0.7253, 0.7755, 0.8454, 0.9154, 0.9853, 1.0596],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_abyssal_slash_damage",
+      name: "Abyssal Slash Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.411, 0.4447, 0.4784, 0.5255, 0.5592, 0.598, 0.6519, 0.7058, 0.7598, 0.8171],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.62, 0.6708, 0.7216, 0.7928, 0.8436, 0.9021, 0.9835, 1.0648, 1.1461, 1.2326],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_basicAttack_banner_of_triumph_damage",
+      name: "Banner Of Triumph Damage",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5115, 0.5443, 0.582, 0.6345, 0.687, 0.7394, 0.7952],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_plungingAttack_midair_attack_followup_dmg",
+      name: "Mid-air Attack Follow-Up DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.783, 0.8472, 0.9114, 1.0013, 1.0655, 1.1393, 1.242, 1.3448, 1.4475, 1.5566],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.633, 0.6849, 0.7368, 0.8094, 0.8613, 0.921, 1.0041, 1.0871, 1.1702, 1.2584],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_resonanceSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.535, 0.5788, 0.6227, 0.6841, 0.728, 0.7784, 0.8486, 0.9188, 0.989, 1.0636],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_resonanceLiberation_lance_of_qingloong_stage_1_dmg",
+      name: "Lance of Qingloong Stage 1 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3295, 0.3566, 0.3836, 0.4214, 0.4484, 0.4795, 0.5228, 0.566, 0.6093, 0.6552],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_resonanceLiberation_lance_of_qingloong_stage_2_dmg",
+      name: "Lance Of Qingloong Stage 2 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3096, 0.3349, 0.3603, 0.3959, 0.4213, 0.4505, 0.4911, 0.5317, 0.5723, 0.6155],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_resonanceLiberation_lance_of_qingloong_stage_3_dmg",
+      name: "Lance Of Qingloong Stage 3 DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3358, 0.3633, 0.3908, 0.4294, 0.4569, 0.4886, 0.5327, 0.5767, 0.6208, 0.6676],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_forteCircuit_emerald_storm_finale_damage_hit_1",
+      name: "Emerald Storm: Finale Damage - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.7188, 0.7777, 0.8367, 0.9192, 0.9781, 1.0459, 1.1402, 1.2345, 1.3288, 1.4291],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_forteCircuit_emerald_storm_finale_damage_hit_2",
+      name: "Emerald Storm: Finale Damage - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.1564, 2.3333, 2.5101, 2.7577, 2.9345, 3.1378, 3.4208, 3.7037, 3.9866, 4.2873],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Jiyan_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1, 1.082, 1.164, 1.2788, 1.3608, 1.4551, 1.5863, 1.7175, 1.8487, 1.9881],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Jiyan_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillJiyan pierces the target in mid-air, dealing Aero DMG.Show Skill DetailsLevel 20Skill DMG362.81%Concerto Regen10Discipline",
+    },
+    {
+      id: "Jiyan_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillWhen the incoming Resonator's Heavy Attack hits a target, Jiyan will summon a lance to launch a coordinated attack, dealing Aero DMG equal to 313.40% of Jiyan's ATK. This attack lasts for 8s and can be triggered once every 1s, up to 2 times.",
+    },
+    {
+      id: "Jiyan_passive_2",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Jiyan Heavenly BalanceAfter casting the Intro Skill Tactical Strike, Jiyan's ATK is increased by 10% for 15s.Tempest TamingWhen Jiyan's attacks hit a target, Jiyan's Crit.",
+    },
+    {
+      id: "Jiyan_passive_3",
+      name: "DMG",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "DMG is increased by 12% for 8s.",
+    },
+    {
+      id: "Jiyan_s1",
+      name: "S1: Benevolence",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Skill Windqueller can be used 1 more time.  When casting Resonance Skill Windqueller, the Resolve cost is decreased by 15.",
+    },
+    {
+      id: "Jiyan_s2",
+      name: "S2: Versatility",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "After casting Intro Skill Tactical Strike, Jiyan gains 30 Resolve and his ATK is increased by 28% for 15s. This can be triggered once every 15s.",
+    },
+    {
+      id: "Jiyan_s3",
+      name: "S3: Spectation",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Resonance Skill Windqueller, Resonance Liberation Emerald Storm: Prelude, Resonance Skill Emerald Storm: Finale or Intro Skill Tactical Strike, Jiyan's Crit. Rate is increased by 16% and Crit. DMG is increased by 32% for 8s.",
+    },
+    {
+      id: "Jiyan_s4",
+      name: "S4: Prudence",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When casting Resonance Liberation Emerald Storm: Prelude or Resonance Liberation Emerald Storm: Finale, the Heavy Attack DMG Bonus of all team members is increased by 25% for 30s.",
+    },
+    {
+      id: "Jiyan_s5",
+      name: "S5: Resolution",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Outro Skill Discipline gains an additional DMG Multiplier of 120%.  When Jiyan's attacks hit a target, his ATK is increased by 3% for 8s, stacking up to 15 times; this effect is immediately maxed after he casts Intro Skill Tactical Strike.",
+    },
+    {
+      id: "Jiyan_s6",
+      name: "S6: Fortitude",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Every time Heavy Attack, Intro Skill Tactical Strike or Resonance Skill Windqueller is used, Jiyan gains 1 stack(s) of \"Momentum\", stacking up to 2 times. Resonance Liberation Emerald Storm: Finale will consume all \"Momentum\", and each stack consumed increases the DMG multiplier of Resonance Liberation Emerald Storm: Finale by 120%.",
+    },
+  ],
+  mechanics: [],
+}

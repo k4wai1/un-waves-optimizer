@@ -1,0 +1,1267 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Lucy | elemento Spectro | arma Pistols.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Lucy",
+    name: "Lucy",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Spectro",
+    weaponType: "Pistols",
+    tags: ["spectro"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 882, "20": 2294, "40": 4368, "50": 5699, "60": 7031, "70": 8362, "80": 9693, "90": 11025 },
+    atk: { "1": 34, "20": 88, "40": 171, "50": 225, "60": 279, "70": 333, "80": 379, "90": 425 },
+    def: { "1": 94, "20": 241, "40": 456, "50": 595, "60": 733, "70": 872, "80": 1010, "90": 1148 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_1_dmg_hit_1",
+      name: "Basic Attack Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0611, 0.0662, 0.0712, 0.0782, 0.0832, 0.089, 0.097, 0.105, 0.113, 0.1215],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_1_dmg_hit_2",
+      name: "Basic Attack Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2444, 0.2645, 0.2845, 0.3126, 0.3326, 0.3557, 0.3877, 0.4198, 0.4519, 0.4859],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1039, 0.1124, 0.121, 0.1329, 0.1414, 0.1512, 0.1648, 0.1784, 0.1921, 0.2066],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1009, 0.1091, 0.1174, 0.129, 0.1372, 0.1467, 0.16, 0.1732, 0.1864, 0.2005],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_3_dmg_hit_1",
+      name: "Basic Attack Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1814, 0.1963, 0.2111, 0.232, 0.2468, 0.2639, 0.2877, 0.3115, 0.3353, 0.3606],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_3_dmg_hit_2",
+      name: "Basic Attack Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1814, 0.1963, 0.2111, 0.232, 0.2468, 0.2639, 0.2877, 0.3115, 0.3353, 0.3606],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_3_dmg_hit_3",
+      name: "Basic Attack Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2418, 0.2617, 0.2815, 0.3093, 0.3291, 0.3519, 0.3836, 0.4153, 0.4471, 0.4808],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_4_dmg_hit_1",
+      name: "Basic Attack Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.156, 0.1688, 0.1816, 0.1995, 0.2123, 0.227, 0.2475, 0.268, 0.2884, 0.3102],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_4_dmg_hit_2",
+      name: "Basic Attack Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.078, 0.0844, 0.0908, 0.0998, 0.1062, 0.1135, 0.1238, 0.134, 0.1442, 0.1551],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_4_dmg_hit_3",
+      name: "Basic Attack Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.195, 0.211, 0.227, 0.2494, 0.2654, 0.2838, 0.3094, 0.335, 0.3605, 0.3877],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_stage_4_dmg_hit_4",
+      name: "Basic Attack Stage 4 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.195, 0.211, 0.227, 0.2494, 0.2654, 0.2838, 0.3094, 0.335, 0.3605, 0.3877],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_1_dmg_hit_1",
+      name: "Heavy Attack 1 DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1112, 0.1203, 0.1294, 0.1422, 0.1513, 0.1618, 0.1764, 0.191, 0.2055, 0.221],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_1_dmg_hit_2",
+      name: "Heavy Attack 1 DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1112, 0.1203, 0.1294, 0.1422, 0.1513, 0.1618, 0.1764, 0.191, 0.2055, 0.221],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_1_dmg_hit_3",
+      name: "Heavy Attack 1 DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1482, 0.1604, 0.1726, 0.1896, 0.2017, 0.2157, 0.2351, 0.2546, 0.274, 0.2947],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_2_dmg_hit_1",
+      name: "Heavy Attack 2 DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.286, 0.3095, 0.333, 0.3658, 0.3892, 0.4162, 0.4537, 0.4913, 0.5288, 0.5686],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_2_dmg_hit_2",
+      name: "Heavy Attack 2 DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0954, 0.1032, 0.111, 0.122, 0.1298, 0.1388, 0.1513, 0.1638, 0.1763, 0.1896],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_2_dmg_hit_3",
+      name: "Heavy Attack 2 DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.286, 0.3095, 0.333, 0.3658, 0.3892, 0.4162, 0.4537, 0.4913, 0.5288, 0.5686],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_2_dmg_hit_4",
+      name: "Heavy Attack 2 DMG - Hit 4",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.286, 0.3095, 0.333, 0.3658, 0.3892, 0.4162, 0.4537, 0.4913, 0.5288, 0.5686],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_plungingAttack_plunging_attack_dmg_hit_1",
+      name: "Plunging Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2925, 0.3165, 0.3405, 0.3741, 0.3981, 0.4257, 0.464, 0.5024, 0.5408, 0.5816],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_plungingAttack_plunging_attack_dmg_hit_2",
+      name: "Plunging Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2925, 0.3165, 0.3405, 0.3741, 0.3981, 0.4257, 0.464, 0.5024, 0.5408, 0.5816],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2984, 0.3229, 0.3473, 0.3816, 0.406, 0.4342, 0.4733, 0.5125, 0.5516, 0.5932],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3978, 0.4305, 0.4631, 0.5088, 0.5414, 0.5789, 0.6311, 0.6833, 0.7355, 0.7909],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_dmg_hit_3",
+      name: "Dodge Counter DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2984, 0.3229, 0.3473, 0.3816, 0.406, 0.4342, 0.4733, 0.5125, 0.5516, 0.5932],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_plungingAttack_midair_attack_algorithm_compaction_dmg_h",
+      name: "Mid-air Attack - Algorithm Compaction DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.315, 0.3409, 0.3667, 0.4029, 0.4287, 0.4584, 0.4997, 0.5411, 0.5824, 0.6263],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_plungingAttack_midair_attack_algorithm_compaction_dmg_h_1",
+      name: "Mid-air Attack - Algorithm Compaction DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.315, 0.3409, 0.3667, 0.4029, 0.4287, 0.4584, 0.4997, 0.5411, 0.5824, 0.6263],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_algorithm_compaction_dmg_h",
+      name: "Dodge Counter - Algorithm Compaction DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.196, 0.2121, 0.2282, 0.2507, 0.2668, 0.2852, 0.311, 0.3367, 0.3624, 0.3897],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_algorithm_compaction_dmg_h_1",
+      name: "Dodge Counter - Algorithm Compaction DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.196, 0.2121, 0.2282, 0.2507, 0.2668, 0.2852, 0.311, 0.3367, 0.3624, 0.3897],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_algorithm_compaction_dmg_h_1_2",
+      name: "Dodge Counter - Algorithm Compaction DMG - Hit 3",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.196, 0.2121, 0.2282, 0.2507, 0.2668, 0.2852, 0.311, 0.3367, 0.3624, 0.3897],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_algorithm_compaction_dmg_h_1_2_3",
+      name: "Dodge Counter - Algorithm Compaction DMG - Hit 4",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.196, 0.2121, 0.2282, 0.2507, 0.2668, 0.2852, 0.311, 0.3367, 0.3624, 0.3897],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_dodgeCounter_dodge_counter_algorithm_compaction_dmg_h_1_2_3_4",
+      name: "Dodge Counter - Algorithm Compaction DMG - Hit 5",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.196, 0.2121, 0.2282, 0.2507, 0.2668, 0.2852, 0.311, 0.3367, 0.3624, 0.3897],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_1_dm",
+      name: "Basic Attack - Thread Shredding Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.098, 0.1061, 0.1141, 0.1254, 0.1334, 0.1426, 0.1555, 0.1684, 0.1812, 0.1949],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_1_dm_1",
+      name: "Basic Attack - Thread Shredding Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.098, 0.1061, 0.1141, 0.1254, 0.1334, 0.1426, 0.1555, 0.1684, 0.1812, 0.1949],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_1_dm_1_2",
+      name: "Basic Attack - Thread Shredding Stage 1 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.098, 0.1061, 0.1141, 0.1254, 0.1334, 0.1426, 0.1555, 0.1684, 0.1812, 0.1949],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_1_dm_1_2_3",
+      name: "Basic Attack - Thread Shredding Stage 1 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.098, 0.1061, 0.1141, 0.1254, 0.1334, 0.1426, 0.1555, 0.1684, 0.1812, 0.1949],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_2_dm",
+      name: "Basic Attack - Thread Shredding Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.112, 0.1212, 0.1304, 0.1433, 0.1525, 0.163, 0.1777, 0.1924, 0.2071, 0.2227],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_2_dm_1",
+      name: "Basic Attack - Thread Shredding Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.112, 0.1212, 0.1304, 0.1433, 0.1525, 0.163, 0.1777, 0.1924, 0.2071, 0.2227],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_2_dm_1_2",
+      name: "Basic Attack - Thread Shredding Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.112, 0.1212, 0.1304, 0.1433, 0.1525, 0.163, 0.1777, 0.1924, 0.2071, 0.2227],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_2_dm_1_2_3",
+      name: "Basic Attack - Thread Shredding Stage 2 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.112, 0.1212, 0.1304, 0.1433, 0.1525, 0.163, 0.1777, 0.1924, 0.2071, 0.2227],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_2_dm_1_2_3_4",
+      name: "Basic Attack - Thread Shredding Stage 2 DMG - Hit 5",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.112, 0.1212, 0.1304, 0.1433, 0.1525, 0.163, 0.1777, 0.1924, 0.2071, 0.2227],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_3_dm",
+      name: "Basic Attack - Thread Shredding Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1414, 0.153, 0.1646, 0.1809, 0.1925, 0.2058, 0.2244, 0.2429, 0.2615, 0.2812],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_3_dm_1",
+      name: "Basic Attack - Thread Shredding Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1414, 0.153, 0.1646, 0.1809, 0.1925, 0.2058, 0.2244, 0.2429, 0.2615, 0.2812],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_3_dm_1_2",
+      name: "Basic Attack - Thread Shredding Stage 3 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1414, 0.153, 0.1646, 0.1809, 0.1925, 0.2058, 0.2244, 0.2429, 0.2615, 0.2812],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_3_dm_1_2_3",
+      name: "Basic Attack - Thread Shredding Stage 3 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1414, 0.153, 0.1646, 0.1809, 0.1925, 0.2058, 0.2244, 0.2429, 0.2615, 0.2812],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_3_dm_1_2_3_4",
+      name: "Basic Attack - Thread Shredding Stage 3 DMG - Hit 5",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1414, 0.153, 0.1646, 0.1809, 0.1925, 0.2058, 0.2244, 0.2429, 0.2615, 0.2812],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_4_dm",
+      name: "Basic Attack - Thread Shredding Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.126, 0.1364, 0.1467, 0.1612, 0.1715, 0.1834, 0.1999, 0.2165, 0.233, 0.2506],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_4_dm_1",
+      name: "Basic Attack - Thread Shredding Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.126, 0.1364, 0.1467, 0.1612, 0.1715, 0.1834, 0.1999, 0.2165, 0.233, 0.2506],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_4_dm_1_2",
+      name: "Basic Attack - Thread Shredding Stage 4 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.126, 0.1364, 0.1467, 0.1612, 0.1715, 0.1834, 0.1999, 0.2165, 0.233, 0.2506],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_4_dm_1_2_3",
+      name: "Basic Attack - Thread Shredding Stage 4 DMG - Hit 4",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.126, 0.1364, 0.1467, 0.1612, 0.1715, 0.1834, 0.1999, 0.2165, 0.233, 0.2506],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_basicAttack_basic_attack_thread_shredding_stage_4_dm_1_2_3_4",
+      name: "Basic Attack - Thread Shredding Stage 4 DMG - Hit 5",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.126, 0.1364, 0.1467, 0.1612, 0.1715, 0.1834, 0.1999, 0.2165, 0.233, 0.2506],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_single_threading_dmg_hit_1",
+      name: "Heavy Attack - Single Threading DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1176, 0.1273, 0.1369, 0.1504, 0.1601, 0.1712, 0.1866, 0.202, 0.2175, 0.2339],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_single_threading_dmg_hit_2",
+      name: "Heavy Attack - Single Threading DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1176, 0.1273, 0.1369, 0.1504, 0.1601, 0.1712, 0.1866, 0.202, 0.2175, 0.2339],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_single_threading_dmg_hit_3",
+      name: "Heavy Attack - Single Threading DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1176, 0.1273, 0.1369, 0.1504, 0.1601, 0.1712, 0.1866, 0.202, 0.2175, 0.2339],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_single_threading_dmg_hit_4",
+      name: "Heavy Attack - Single Threading DMG - Hit 4",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1176, 0.1273, 0.1369, 0.1504, 0.1601, 0.1712, 0.1866, 0.202, 0.2175, 0.2339],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_single_threading_dmg_hit_5",
+      name: "Heavy Attack - Single Threading DMG - Hit 5",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1176, 0.1273, 0.1369, 0.1504, 0.1601, 0.1712, 0.1866, 0.202, 0.2175, 0.2339],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_dual_threading_dmg_hit_1",
+      name: "Heavy Attack - Dual Threading DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_dual_threading_dmg_hit_2",
+      name: "Heavy Attack - Dual Threading DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_dual_threading_dmg_hit_3",
+      name: "Heavy Attack - Dual Threading DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_dual_threading_dmg_hit_4",
+      name: "Heavy Attack - Dual Threading DMG - Hit 4",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_dual_threading_dmg_hit_5",
+      name: "Heavy Attack - Dual Threading DMG - Hit 5",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.168, 0.1818, 0.1956, 0.2149, 0.2287, 0.2445, 0.2665, 0.2886, 0.3106, 0.3341],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_multithreading_dmg_hit_1",
+      name: "Heavy Attack - Multithreading DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_heavyAttack_heavy_attack_multithreading_dmg_hit_2",
+      name: "Heavy Attack - Multithreading DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3, 0.3246, 0.3492, 0.3837, 0.4083, 0.4366, 0.4759, 0.5153, 0.5547, 0.5965],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_payload_charge_dmg_hit_1",
+      name: "Resonance Skill - Payload Charge DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1008, 0.1091, 0.1174, 0.129, 0.1372, 0.1467, 0.1599, 0.1732, 0.1864, 0.2005],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_payload_charge_dmg_hit_2",
+      name: "Resonance Skill - Payload Charge DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0504, 0.0546, 0.0587, 0.0645, 0.0686, 0.0734, 0.08, 0.0866, 0.0932, 0.1003],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_payload_followup_attack_",
+      name: "Resonance Skill - Payload Follow-Up Attack DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2016, 0.2182, 0.2347, 0.2579, 0.2744, 0.2934, 0.3198, 0.3463, 0.3727, 0.4009],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_payload_followup_attack__1",
+      name: "Resonance Skill - Payload Follow-Up Attack DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0504, 0.0546, 0.0587, 0.0645, 0.0686, 0.0734, 0.08, 0.0866, 0.0932, 0.1003],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_payload_followup_attack__1_2",
+      name: "Resonance Skill - Payload Follow-Up Attack DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1008, 0.1091, 0.1174, 0.129, 0.1372, 0.1467, 0.1599, 0.1732, 0.1864, 0.2005],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_pulse_interference_dmg_h",
+      name: "Resonance Skill - Pulse Interference DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1552, 0.168, 0.1807, 0.1985, 0.2112, 0.2259, 0.2462, 0.2666, 0.287, 0.3086],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_pulse_interference_dmg_h_1",
+      name: "Resonance Skill - Pulse Interference DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3104, 0.3359, 0.3614, 0.397, 0.4224, 0.4517, 0.4924, 0.5332, 0.5739, 0.6172],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_pulse_interference_dmg_h_1_2",
+      name: "Resonance Skill - Pulse Interference DMG - Hit 3",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3104, 0.3359, 0.3614, 0.397, 0.4224, 0.4517, 0.4924, 0.5332, 0.5739, 0.6172],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_deadlock_dmg_hit_1",
+      name: "Resonance Skill - Deadlock DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.26, 0.2814, 0.3027, 0.3325, 0.3539, 0.3784, 0.4125, 0.4466, 0.4807, 0.517],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceSkill_resonance_skill_deadlock_dmg_hit_2",
+      name: "Resonance Skill - Deadlock DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.04, 1.1253, 1.2106, 1.33, 1.4153, 1.5134, 1.6498, 1.7862, 1.9227, 2.0677],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceLiberation_resonance_liberation_netrunner_override_",
+      name: "Resonance Liberation - Netrunner: Override DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.5, 4.869, 5.238, 5.7546, 6.1236, 6.548, 7.1384, 7.7288, 8.3192, 8.9465],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceLiberation_spoofing_program_ping_dmg",
+      name: "Spoofing Program: Ping DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceLiberation_spoofing_program_synapse_burnout_dmg",
+      name: "Spoofing Program: Synapse Burnout DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4, 0.4328, 0.4656, 0.5116, 0.5444, 0.5821, 0.6346, 0.687, 0.7395, 0.7953],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceLiberation_spoofing_program_cripple_movement_dmg",
+      name: "Spoofing Program: Cripple Movement DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [4.5864, 4.9625, 5.3386, 5.8651, 6.2412, 6.6737, 7.2755, 7.8772, 8.4789, 9.1183],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_resonanceLiberation_resonance_liberation_old_net_deep_dive_o",
+      name: "Resonance Liberation - Old Net Deep Dive: Override DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [9, 9.738, 10.476, 11.5092, 12.2472, 13.0959, 14.2767, 15.4575, 16.6383, 17.8929],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_forteCircuit_hack_response_data_crash_dmg_hit_1",
+      name: "Hack Response - Data Crash DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [5.5037, 5.955, 6.4063, 7.0382, 7.4895, 8.0085, 8.7305, 9.4526, 10.1747, 10.9419],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_forteCircuit_hack_response_data_crash_dmg_hit_2",
+      name: "Hack Response - Data Crash DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.344, 0.3722, 0.4004, 0.4399, 0.4681, 0.5006, 0.5457, 0.5908, 0.636, 0.6839],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_introSkill_intro_skill_outdated_hallucination_dmg_h",
+      name: "Intro Skill - Outdated Hallucination DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3478, 0.3763, 0.4048, 0.4448, 0.4733, 0.5061, 0.5517, 0.5973, 0.6429, 0.6914],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Lucy_introSkill_intro_skill_outdated_hallucination_dmg_h_1",
+      name: "Intro Skill - Outdated Hallucination DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3478, 0.3763, 0.4048, 0.4448, 0.4733, 0.5061, 0.5517, 0.5973, 0.6429, 0.6914],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Lucy_passive_0",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Lucy Ghost CyberwareWhen Lucy is the active Resonator in the team, if she takes no damage for 8s, she gains 1  of Optical Illusion.",
+    },
+    {
+      id: "Lucy_passive_1",
+      name: "Max",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Max 1  by default.",
+    },
+    {
+      id: "Lucy_passive_2",
+      name: "Optical",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Optical Illusion: When attacked, reduce this instance of DMG by 100%.",
+    },
+    {
+      id: "Lucy_passive_3",
+      name: "If",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "If Lucy is hit or launched from the attack, she immediately recovers and triggers a successful Dodge if she's on the ground.",
+    },
+    {
+      id: "Lucy_passive_4",
+      name: "After",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "After this effect is triggered, remove 1  of Optical Illusion.",
+    },
+    {
+      id: "Lucy_passive_5",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect can be triggered up to 1  every 0.5s.Function CrackingWhen Resonance Skill - Payload, Resonance Skill - Pulse Interference, or Resonance Skill - Deadlock damages an Overlord Class or Calamity Class enemy, Lucy applies Botnet Mark on them for 2 min.",
+    },
+    {
+      id: "Lucy_passive_6",
+      name: "While",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "While Botnet Mark is active, when a Resonator in the team defeats that target with direct damage, Lucy gains the Network Backdoor effect.",
+    },
+    {
+      id: "Lucy_passive_7",
+      name: "If",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "If Rebecca is in the team, she gains the same effect.",
+    },
+    {
+      id: "Lucy_passive_8",
+      name: "Network",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Network Backdoor\nGrants 10% All DMG Amplification and 10% additional Hack DMG Multiplier.",
+    },
+    {
+      id: "Lucy_passive_9",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect lasts for 2 min and stacks up to 2 times.",
+    },
+    {
+      id: "Lucy_passive_10",
+      name: "At",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "At 2 stacks, additionally increases All DMG Amplification by 5% and Hack DMG Multiplier by 5%.",
+    },
+    {
+      id: "Lucy_passive_11",
+      name: "When",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "When Lucy is downed, she can no longer gain Network Backdoor, and any existing Network Backdoor effects become invalid.",
+    },
+    {
+      id: "Lucy_s1",
+      name: "S1: The Moon, a Ticket, and a Dream",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Lucy is now immune to interruptions during Resonance Skill - Payload, Resonance Skill - Pulse Inteference, Heavy Attack - Dual Threading, and Heavy Attack - Multi-Threading Casting Intro Skill - Outdated Hallucination increases ATK by 20% for 14s. When a Resonator in the team defeats a target affected by Spoofing Program with direct damage, Lucy records the effect triggered and activates the corresponding Quick Action on that Resonator for 6s. The record expires when Lucy is knocked out. Quick Action: When activated, inflict the recorded Spoofing Program effects on targets within a certain distance from the active Resonator in the team, effective once only on each target. The following Spoofing Program effects can be recorded: Spoofing Program: Cyberware Malfunction, Spoofing Program: Breach Protocol, Spoofing Program: Cripple Movement, Spoofing Program: Weapon Glitch, and Spoofing Program: Cyberpsychosis. When applying Spoofing Program effects via Quick Action, only the continuous status effects are applied.",
+    },
+    {
+      id: "Lucy_s2",
+      name: "S2: The Blackwall, the Past, the Escape",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "While casting Resonance Liberation - Netrunner and Resonance Liberation - Old Net Deep Dive, Lucy's starting RAM is increased to 32. After casting Resonance Skill - Pulse Interference, deal 1 additional  of Spectro DMG equal to 450% of Lucy's ATK, considered Heavy Attack DMG. When this instance of damage hits the target, apply all of the following Spoofing Program effects: Spoofing Program: Cyberware Malfunction,  Spoofing Program: Breach Protocol, Spoofing Program: Cripple Movement, Spoofing Program: Weapon Glitch, and Spoofing Program: Cyberpsychosis. Only the continuous status effects are applied. Forte Circuit - Depths of Blackwall is enhanced: When casting Heavy Attack - Multi-threading, if Lucy has SQL, the DMG Multiplier increase is raised from 270% to 560%.",
+    },
+    {
+      id: "Lucy_s3",
+      name: "S3: Cyberpunk",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Override from Resonance Liberation - Netrunner and Resonance Liberation - Old Net Deep Dive is increased by 50%, and its Crit. DMG is increased by 100%. The DMG Multiplier of Spoofing Program: Cripple Movement is increased by 65%. The DMG Multiplier of Hack Response - Data Crash is increased by 65%.",
+    },
+    {
+      id: "Lucy_s4",
+      name: "S4: No Living Legends in Night City",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "When Resonators in the team inflict Hack - Shifting, Resonators in the team gain 20% All-Attribute DMG Bonus for 20s.",
+    },
+    {
+      id: "Lucy_s5",
+      name: "S5: A Broken Path to Hell",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The stack limit of Optical Illusion obtainable via Inherent Skill - Ghost Cyberware is increased to 2. Inherent Skill - Ghost Cyberware is now enhanced: When Lucy's HP falls below 50%, she immediately gains 1  of Optical Illusion upon being hit. This effect has a Cooldown of 180s. When Optical Illusion is triggered, Lucy gains a Shield equal to 150% of ATK for 10s.",
+    },
+    {
+      id: "Lucy_s6",
+      name: "S6: I Really Want to Stay At Your House",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Targets with Hack - Shifting or in the Hack - Interfered state take 40% increased Heavy Attack DMG from Lucy. Targets with Hack - Shifting or in the Hack - Interfered state take 60% increased Hack DMG from Lucy. The Stagnation triggered by Hack Response - Data Crash now lasts for 1.5s.",
+    },
+  ],
+  mechanics: [],
+}

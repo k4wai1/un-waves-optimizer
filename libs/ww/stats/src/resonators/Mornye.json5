@@ -1,0 +1,726 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Mornye | elemento Fusion | arma Broadblade.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Mornye",
+    name: "Mornye",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Broadblade",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 1230, "20": 3199, "40": 6092, "50": 7948, "60": 9805, "70": 11661, "80": 13518, "90": 15375 },
+    atk: { "1": 23, "20": 59, "40": 115, "50": 152, "60": 189, "70": 225, "80": 256, "90": 287 },
+    def: { "1": 111, "20": 284, "40": 539, "50": 703, "60": 866, "70": 1029, "80": 1193, "90": 1356 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_1_dmg_hit_1",
+      name: "Basic Attack Stage 1 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.112, 0.1212, 0.1304, 0.1433, 0.1525, 0.163, 0.1777, 0.1924, 0.2071, 0.2227],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_1_dmg_hit_2",
+      name: "Basic Attack Stage 1 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.084, 0.0909, 0.0978, 0.1075, 0.1144, 0.1223, 0.1333, 0.1443, 0.1553, 0.1671],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_2_dmg_hit_1",
+      name: "Basic Attack Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.12, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2386],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_2_dmg_hit_2",
+      name: "Basic Attack Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.12, 0.1299, 0.1397, 0.1535, 0.1633, 0.1747, 0.1904, 0.2061, 0.2219, 0.2386],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_2_dmg_hit_3",
+      name: "Basic Attack Stage 2 DMG - Hit 3",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.09, 0.0974, 0.1048, 0.1151, 0.1225, 0.131, 0.1428, 0.1546, 0.1664, 0.179],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_3_dmg_hit_1",
+      name: "Basic Attack Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.208, 0.2251, 0.2422, 0.266, 0.2831, 0.3027, 0.33, 0.3573, 0.3846, 0.4136],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_3_dmg_hit_2",
+      name: "Basic Attack Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.052, 0.0563, 0.0606, 0.0665, 0.0708, 0.0757, 0.0825, 0.0894, 0.0962, 0.1034],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_stage_4_dmg",
+      name: "Basic Attack Stage 4 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.68, 0.7358, 0.7916, 0.8696, 0.9254, 0.9895, 1.0787, 1.1679, 1.2572, 1.352],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_wide_field_observation_mode",
+      name: "Basic Attack - Wide Field Observation Mode Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.07, 0.0758, 0.0815, 0.0896, 0.0953, 0.1019, 0.1111, 0.1203, 0.1295, 0.1392],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_wide_field_observation_mode_1",
+      name: "Basic Attack - Wide Field Observation Mode Stage 2 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.13, 0.1407, 0.1514, 0.1663, 0.177, 0.1892, 0.2063, 0.2233, 0.2404, 0.2585],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_wide_field_observation_mode_1_2",
+      name: "Basic Attack - Wide Field Observation Mode Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0468, 0.0507, 0.0545, 0.0599, 0.0637, 0.0681, 0.0743, 0.0804, 0.0866, 0.0931],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_basicAttack_basic_attack_wide_field_observation_mode_1_2_3",
+      name: "Basic Attack - Wide Field Observation Mode Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1664, 0.1801, 0.1937, 0.2128, 0.2265, 0.2422, 0.264, 0.2858, 0.3077, 0.3309],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_heavyAttack_heavy_attack_dmg_hit_1",
+      name: "Heavy Attack DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0558, 0.0604, 0.065, 0.0714, 0.076, 0.0812, 0.0886, 0.0959, 0.1032, 0.111],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_heavyAttack_heavy_attack_dmg_hit_2",
+      name: "Heavy Attack DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0558, 0.0604, 0.065, 0.0714, 0.076, 0.0812, 0.0886, 0.0959, 0.1032, 0.111],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_heavyAttack_heavy_attack_dmg_hit_3",
+      name: "Heavy Attack DMG - Hit 3",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0744, 0.0806, 0.0867, 0.0952, 0.1013, 0.1083, 0.1181, 0.1278, 0.1376, 0.148],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_plungingAttack_midair_attack_dmg",
+      name: "Mid-air Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.496, 0.5367, 0.5774, 0.6343, 0.675, 0.7218, 0.7869, 0.8519, 0.917, 0.9861],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_dodgeCounter_dodge_counter_dmg",
+      name: "Dodge Counter DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.816, 0.883, 0.9499, 1.0436, 1.1105, 1.1874, 1.2945, 1.4015, 1.5086, 1.6223],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_dodgeCounter_dodge_counter_wide_field_observation_mod",
+      name: "Dodge Counter - Wide Field Observation Mode DMG",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.13, 0.1407, 0.1514, 0.1663, 0.177, 0.1892, 0.2063, 0.2233, 0.2404, 0.2585],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceSkill_distributed_array_healing_flat",
+      name: "Distributed Array Healing (Flat)",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [225, 252, 281, 315, 355, 393, 400, 409, 416, 427],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceSkill_distributed_array_healing",
+      name: "Distributed Array Healing",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.54, 0.5616, 0.5832, 0.6156, 0.6588, 0.702, 0.783, 0.8748, 0.972, 1.134],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceSkill_expectation_error_healing_flat",
+      name: "Expectation Error Healing (Flat)",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [49, 55, 61, 69, 78, 86, 88, 90, 91, 94],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceSkill_expectation_error_healing",
+      name: "Expectation Error Healing",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1188, 0.1235, 0.1283, 0.1354, 0.1449, 0.1544, 0.1722, 0.1924, 0.2138, 0.2494],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceSkill_optimal_solution_dmg",
+      name: "Optimal Solution DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.904, 0.9782, 1.0523, 1.1561, 1.2302, 1.3155, 1.4341, 1.5527, 1.6713, 1.7973],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceSkill_distributed_array_dmg",
+      name: "Distributed Array DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceLiberation_skill_dmg",
+      name: "Skill DMG",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [2.6273, 2.8427, 3.0582, 3.3598, 3.5752, 3.823, 4.1677, 4.5124, 4.857, 5.2233],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_resonanceLiberation_resonance_energy_cost",
+      name: "Resonance Energy Cost",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75, 1.75],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_forteCircuit_syntony_field_healing_flat",
+      name: "Syntony Field Healing (Flat)",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "FLAT",
+          multiplier: [40, 44, 50, 56, 63, 70, 71, 73, 74, 76],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_forteCircuit_syntony_field_healing",
+      name: "Syntony Field Healing",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0963, 0.1002, 0.1041, 0.1098, 0.1175, 0.1253, 0.1397, 0.1561, 0.1735, 0.2024],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_forteCircuit_syntony_field_dmg",
+      name: "Syntony Field DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2, 0.2164, 0.2328, 0.2558, 0.2722, 0.2911, 0.3173, 0.3435, 0.3698, 0.3977],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_heavyAttack_heavy_attack_geopotential_shift_dmg_hit_",
+      name: "Heavy Attack - Geopotential Shift DMG - Hit 1",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.222, 0.2402, 0.2584, 0.2839, 0.3021, 0.323, 0.3522, 0.3813, 0.4104, 0.4414],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_heavyAttack_heavy_attack_geopotential_shift_dmg_hit__1",
+      name: "Heavy Attack - Geopotential Shift DMG - Hit 2",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4981, 0.5389, 0.5797, 0.6369, 0.6778, 0.7247, 0.7901, 0.8554, 0.9207, 0.9902],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_heavyAttack_heavy_attack_inversion_dmg",
+      name: "Heavy Attack - Inversion DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.3, 1.4066, 1.5132, 1.6625, 1.7691, 1.8917, 2.0622, 2.2328, 2.4034, 2.5846],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_forteCircuit_tune_rupture_response_particle_jet_dmg",
+      name: "Tune Rupture Response - Particle Jet DMG",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.5, 1.623, 1.746, 1.9182, 2.0412, 2.1827, 2.3795, 2.5763, 2.7731, 2.9822],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Mornye_introSkill_skill_dmg",
+      name: "Skill DMG",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.02, 1.1037, 1.1873, 1.3044, 1.3881, 1.4843, 1.6181, 1.7519, 1.8857, 2.0279],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Mornye_intro_0",
+      name: "Intro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Intro SkillAttack the target to deal Fusion DMG, then jump into mid-air, clearing all Rest Mass Energy and entering Wide Field Observation Mode.Show Skill DetailsLevel 20Skill DMG370.07%Concerto Regen10Recursion",
+    },
+    {
+      id: "Mornye_outro_1",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillResonators in the team gain 25% All DMG Amplification for 30s.",
+    },
+    {
+      id: "Mornye_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [0.1],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+        { type: "Stat", id: "energyRegen_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.1],
+        },
+      ],
+      descriptionTemplate: "> Mornye BlueprintMornye's Energy Regen is increased by 10%.",
+    },
+    {
+      id: "Mornye_passive_3",
+      name: "Casting",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Casting Intro Skill - Convergence restores 20 points of Concerto Energy, triggered once every 20s.",
+    },
+    {
+      id: "Mornye_passive_4",
+      name: "Casting",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Casting Basic Attack - Wide Field Observation Mode Stage 3 restores 20 points of Concerto Energy, triggered once every 20s.BoundednessCasting Resonance Skill - Expectation Error or Resonance Skill - Distributed Array grants Proof of Boundedness to all Resonators in the team:\n- Proof of Boundedness lasts for 60s and can be gained once every 5 min.",
+    },
+    {
+      id: "Mornye_passive_5",
+      name: "Passive 4",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- When the active Resonator takes DMG greater than 30% of their Max HP, they instead take DMG equal to 30% of their Max HP.",
+    },
+    {
+      id: "Mornye_passive_6",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect can trigger up to 3 .",
+    },
+    {
+      id: "Mornye_passive_7",
+      name: "Proof",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Proof of Boundedness is removed after triggering it 3 .",
+    },
+    {
+      id: "Mornye_passive_8",
+      name: "Passive 7",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- When the active Resonator takes a fatal blow, they are not downed by this instance of damage.",
+    },
+    {
+      id: "Mornye_passive_9",
+      name: "This",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "This effect can trigger up to 1 .",
+    },
+    {
+      id: "Mornye_passive_10",
+      name: "Proof",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "Proof of Boundedness is removed after triggering it 1 .",
+    },
+    {
+      id: "Mornye_passive_11",
+      name: "Passive 10",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "- When Proof of Boundedness is removed, the active Resonator restores HP equal to 150% of Mornye's DEF.",
+    },
+    {
+      id: "Mornye_s1",
+      name: "S1: The Silent Observer",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Basic Attack – Wide Field Observation Mode becomes immune to interruption. The duration of Interfered Marker is extended by 150%. Interfered Marker now grants DMG increase even when the target is not affected by Tune Rupture - Interfered or Tune Strain - Interfered. When Mornye applies Observation Marker on a target, she also inflicts Interfered Marker.",
+    },
+    {
+      id: "Mornye_s2",
+      name: "S2: Morning Star of Entropy",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "All nearby Resonators in the team gain Crit. DMG increase against targets with Interfered Marker: Every 1% of Mornye's Energy Regen over 100% grants 0.2% Crit. DMG increase, up to 32%. Syntony Field and High Syntony Field further increase the Off-Tune Buildup Rate of all nearby Resonators in the team by 20%.",
+    },
+    {
+      id: "Mornye_s3",
+      name: "S3: Blueprint of Recursion",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Resonance Skill - Distributed Array additionally restores 25 points of Concerto Energy and 100 Relative Momentum, triggered once every 25s.",
+    },
+    {
+      id: "Mornye_s4_latent_variables_of_the_cos",
+      name: "S4: Latent Variables of the Cosmos",
+      operation: "add",
+      value: [0.3],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "healing_bonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.3],
+        },
+      ],
+      descriptionTemplate: "The healing of High Syntony Field is increased by 30%.",
+    },
+    {
+      id: "Mornye_s5",
+      name: "S5: Time Dilation Effect",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Resonance Liberation - Critical Protocol is increased by 40%. The DMG Multiplier of Tune Rupture Response - Particle Jet is increased by 160%.",
+    },
+    {
+      id: "Mornye_s6",
+      name: "S6: To the Far Shores of the Stars",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Resonance Liberation - Critical Protocol deals 400% more DMG. If Mornye has not engaged in combat for over 4s, she restores Resonance Energy equal to 10% of her Max Resonance Energy every 0.2s.",
+    },
+  ],
+  mechanics: [],
+}

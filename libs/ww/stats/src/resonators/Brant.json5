@@ -1,0 +1,714 @@
+{
+  // GENERADO por tools/md2json5/generator.ts desde combate-personajes/*.md
+  // Fuente: Brant | elemento Fusion | arma Sword.
+  // multipliers[] = nivel real de habilidad (Lv1..LvN). N=10 detectado en el .md.
+  metadata: {
+    schemaVersion: "2.0",
+    id: "Brant",
+    name: "Brant",
+    entityType: "resonator",
+    rarity: 5,
+    version: "1.0",
+    element: "Fusion",
+    weaponType: "Sword",
+    tags: ["fusion"],
+    aliases: [],
+  },
+  stats: {
+    hp: { "1": 934, "20": 2429, "40": 4626, "50": 6035, "60": 7445, "70": 8855, "80": 10265, "90": 11675 },
+    atk: { "1": 30, "20": 78, "40": 151, "50": 198, "60": 246, "70": 294, "80": 334, "90": 375 },
+    def: { "1": 107, "20": 274, "40": 520, "50": 677, "60": 835, "70": 992, "80": 1150, "90": 1307 },
+    secondaryAttribute: null,
+    statNodes: [], // TODO: el .md no expone el árbol de nodos de ascensión; rellenar a mano.
+    tuneBreakBoost: 0,
+    offTuneBuildupRate: 1,
+  },
+  actions: [
+    {
+      id: "Brant_basicAttack_stage_1_dmg",
+      name: "Stage 1 DMG",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2542, 0.275, 0.2959, 0.3251, 0.3459, 0.3699, 0.4032, 0.4366, 0.4699, 0.5053],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_basicAttack_stage_2_dmg_hit_1",
+      name: "Stage 2 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.255, 0.276, 0.2969, 0.3261, 0.3471, 0.3711, 0.4046, 0.438, 0.4715, 0.507],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_basicAttack_stage_2_dmg_hit_2",
+      name: "Stage 2 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.255, 0.276, 0.2969, 0.3261, 0.3471, 0.3711, 0.4046, 0.438, 0.4715, 0.507],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_basicAttack_stage_3_dmg_hit_1",
+      name: "Stage 3 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.111, 0.1201, 0.1292, 0.1419, 0.151, 0.1615, 0.176, 0.1906, 0.2051, 0.2206],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_basicAttack_stage_3_dmg_hit_2",
+      name: "Stage 3 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1664, 0.1801, 0.1937, 0.2128, 0.2265, 0.2422, 0.264, 0.2858, 0.3077, 0.3308],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_basicAttack_stage_4_dmg_hit_1",
+      name: "Stage 4 DMG - Hit 1",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.141, 0.1525, 0.1641, 0.1803, 0.1918, 0.2051, 0.2236, 0.2421, 0.2606, 0.2802],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_basicAttack_stage_4_dmg_hit_2",
+      name: "Stage 4 DMG - Hit 2",
+      type: "basicAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1128, 0.122, 0.1313, 0.1442, 0.1535, 0.1641, 0.1789, 0.1937, 0.2085, 0.2242],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_heavyAttack_heavy_attack_dmg",
+      name: "Heavy Attack DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.9937, 1.0752, 1.1567, 1.2707, 1.3522, 1.4459, 1.5763, 1.7066, 1.837, 1.9755],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_heavyAttack_heavy_attack_rhapsodic_riff_dmg",
+      name: "Heavy Attack - Rhapsodic Riff DMG",
+      type: "heavyAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.85, 0.9197, 0.9894, 1.087, 1.1567, 1.2369, 1.3484, 1.4599, 1.5714, 1.6899],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_1_dmg",
+      name: "Mid-air Attack Stage 1 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.618, 0.6687, 0.7193, 0.7903, 0.841, 0.8992, 0.9803, 1.0614, 1.1425, 1.2286],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_1_charged_attack_dmg",
+      name: "Mid-air Attack Stage 1: Charged Attack DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1672, 0.181, 0.1947, 0.2139, 0.2276, 0.2433, 0.2653, 0.2872, 0.3091, 0.3325],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_1_charged_attack_dmg_1",
+      name: "Mid-air Attack Stage 1: Charged Attack DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2508, 0.2714, 0.292, 0.3208, 0.3413, 0.365, 0.3979, 0.4308, 0.4637, 0.4987],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_1_charged_attack_dmg_1_2",
+      name: "Mid-air Attack Stage 1: Charged Attack DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.209, 0.2262, 0.2433, 0.2673, 0.2844, 0.3042, 0.3316, 0.359, 0.3864, 0.4156],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_1_flip_dmg_hit_1",
+      name: "Mid-air Attack Stage 1: Flip DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.17, 0.184, 0.1979, 0.2174, 0.2314, 0.2474, 0.2697, 0.292, 0.3143, 0.338],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_1_flip_dmg_hit_2",
+      name: "Mid-air Attack Stage 1: Flip DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2975, 0.3219, 0.3463, 0.3805, 0.4049, 0.4329, 0.472, 0.511, 0.55, 0.5915],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_1_slash_dmg",
+      name: "Mid-air Attack Stage 1 Slash DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1417, 0.1533, 0.1649, 0.1812, 0.1928, 0.2062, 0.2248, 0.2434, 0.2619, 0.2817],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_2_dmg_hit_1",
+      name: "Mid-air Attack Stage 2 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4272, 0.4622, 0.4972, 0.5463, 0.5813, 0.6216, 0.6776, 0.7336, 0.7897, 0.8492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_2_dmg_hit_2",
+      name: "Mid-air Attack Stage 2 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4272, 0.4622, 0.4972, 0.5463, 0.5813, 0.6216, 0.6776, 0.7336, 0.7897, 0.8492],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_2_charged_attack_dmg",
+      name: "Mid-air Attack Stage 2: Charged Attack DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1654, 0.1789, 0.1925, 0.2115, 0.225, 0.2406, 0.2623, 0.284, 0.3057, 0.3287],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_2_flip_dmg_hit_1",
+      name: "Mid-air Attack Stage 2: Flip DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.17, 0.184, 0.1979, 0.2174, 0.2314, 0.2474, 0.2697, 0.292, 0.3143, 0.338],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_2_flip_dmg_hit_2",
+      name: "Mid-air Attack Stage 2: Flip DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2975, 0.3219, 0.3463, 0.3805, 0.4049, 0.4329, 0.472, 0.511, 0.55, 0.5915],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_3_dmg",
+      name: "Mid-air Attack Stage 3 DMG",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1417, 0.1533, 0.1649, 0.1812, 0.1928, 0.2062, 0.2248, 0.2434, 0.2619, 0.2817],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_3_flip_dmg_hit_1",
+      name: "Mid-air Attack Stage 3: Flip DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.17, 0.184, 0.1979, 0.2174, 0.2314, 0.2474, 0.2697, 0.292, 0.3143, 0.338],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_3_flip_dmg_hit_2",
+      name: "Mid-air Attack Stage 3: Flip DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2975, 0.3219, 0.3463, 0.3805, 0.4049, 0.4329, 0.472, 0.511, 0.55, 0.5915],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_4_dmg_hit_1",
+      name: "Mid-air Attack Stage 4 DMG - Hit 1",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.5107, 0.5526, 0.5945, 0.6531, 0.695, 0.7431, 0.8101, 0.8771, 0.9441, 1.0153],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_4_dmg_hit_2",
+      name: "Mid-air Attack Stage 4 DMG - Hit 2",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1277, 0.1382, 0.1487, 0.1633, 0.1738, 0.1858, 0.2026, 0.2193, 0.2361, 0.2539],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_plungingAttack_midair_attack_stage_4_dmg_hit_3",
+      name: "Mid-air Attack Stage 4 DMG - Hit 3",
+      type: "plungingAttack",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.3831, 0.4145, 0.4459, 0.4898, 0.5213, 0.5574, 0.6076, 0.6579, 0.7081, 0.7615],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_dodgeCounter_dodge_counter_dmg_hit_1",
+      name: "Dodge Counter DMG - Hit 1",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.1913, 0.207, 0.2227, 0.2446, 0.2603, 0.2783, 0.3034, 0.3285, 0.3536, 0.3803],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_dodgeCounter_dodge_counter_dmg_hit_2",
+      name: "Dodge Counter DMG - Hit 2",
+      type: "dodgeCounter",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2869, 0.3104, 0.334, 0.3669, 0.3904, 0.4175, 0.4551, 0.4928, 0.5304, 0.5704],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_resonanceSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.0077, 1.0904, 1.173, 1.2887, 1.3713, 1.4664, 1.5986, 1.7308, 1.863, 2.0035],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_resonanceSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.6718, 0.7269, 0.782, 0.8591, 0.9142, 0.9776, 1.0657, 1.1539, 1.242, 1.3357],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_resonanceSkill_plunging_attack_dmg",
+      name: "Plunging Attack DMG",
+      type: "resonanceSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.527, 0.5703, 0.6135, 0.674, 0.7172, 0.7669, 0.836, 0.9052, 0.9743, 1.0478],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_resonanceLiberation_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.4278, 0.4629, 0.498, 0.5471, 0.5822, 0.6225, 0.6787, 0.7348, 0.7909, 0.8506],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_resonanceLiberation_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.7112, 1.8516, 1.9919, 2.1883, 2.3287, 2.49, 2.7145, 2.939, 3.1635, 3.4021],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_resonanceLiberation_healing_hit_1",
+      name: "Healing - Hit 1",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [5, 5.6, 6.25, 7, 7.9, 8.75, 8.9, 9.1, 9.25, 9.5],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_resonanceLiberation_healing_hit_2",
+      name: "Healing - Hit 2",
+      type: "resonanceLiberation",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0175, 0.0196, 0.0218, 0.0245, 0.0276, 0.0306, 0.0311, 0.0318, 0.0323, 0.0332],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_returned_from_ashes_dmg_hit_1",
+      name: "Returned from Ashes DMG - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.2375, 0.257, 0.2765, 0.3038, 0.3232, 0.3456, 0.3768, 0.408, 0.4391, 0.4722],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_returned_from_ashes_dmg_hit_2",
+      name: "Returned from Ashes DMG - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.475, 0.514, 0.5529, 0.6075, 0.6464, 0.6912, 0.7535, 0.8159, 0.8782, 0.9444],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_returned_from_ashes_dmg_hit_3",
+      name: "Returned from Ashes DMG - Hit 3",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.95, 1.0279, 1.1058, 1.2149, 1.2928, 1.3824, 1.507, 1.6317, 1.7563, 1.8887],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_returned_from_ashes_dmg_hit_4",
+      name: "Returned from Ashes DMG - Hit 4",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [6.65, 7.1953, 7.7406, 8.5041, 9.0494, 9.6765, 10.5489, 11.4214, 12.2939, 13.2209],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_waves_of_acclaims_healing_hit_1",
+      name: "Waves of Acclaims Healing - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [3.12, 3.5, 3.9, 4.37, 4.93, 5.46, 5.56, 5.68, 5.78, 5.93],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_waves_of_acclaims_healing_hit_2",
+      name: "Waves of Acclaims Healing - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.0109, 0.0122, 0.0136, 0.0153, 0.0172, 0.0191, 0.0194, 0.0199, 0.0202, 0.0207],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_shield_hit_1",
+      name: "Shield - Hit 1",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [25, 28, 31.25, 35, 39.5, 43.75, 44.5, 45.5, 46.25, 47.5],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_forteCircuit_shield_hit_2",
+      name: "Shield - Hit 2",
+      type: "forteCircuit",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.09, 0.1008, 0.1125, 0.126, 0.1422, 0.1575, 0.1602, 0.1638, 0.1665, 0.171],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_introSkill_skill_dmg_hit_1",
+      name: "Skill DMG - Hit 1",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [1.02, 1.1037, 1.1873, 1.3044, 1.3881, 1.4843, 1.6181, 1.7519, 1.8857, 2.0279],
+        },
+      ],
+      tags: [],
+    },
+    {
+      id: "Brant_introSkill_skill_dmg_hit_2",
+      name: "Skill DMG - Hit 2",
+      type: "introSkill",
+      scaling: [
+        {
+          stat: "ATK",
+          multiplier: [0.255, 0.276, 0.2969, 0.3261, 0.3471, 0.3711, 0.4046, 0.438, 0.4715, 0.507],
+        },
+      ],
+      tags: [],
+    },
+  ],
+  effects: [
+    {
+      id: "Brant_outro_0",
+      name: "Outro",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: true,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Intro/Outro: el % de daño propio ya está en actions[]; buffs a aliados requieren modelado manual.
+      descriptionTemplate: "— Outro SkillAmplify the incoming Resonator's Fusion DMG by 20% and Resonance Skill DMG by 25% for 14s or until the Resonator is switched out.",
+    },
+    {
+      id: "Brant_passive_1",
+      name: "Passive 1",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      descriptionTemplate: "> Brant Voyager's BlazeHealing provided by Waves of Acclaims is increased by 20%.Trial by Fire and TideBrant's resistance to interruption is increased during Mid-air Attacks and gains 15% Fusion DMG Bonus.",
+    },
+    {
+      id: "Brant_s1",
+      name: "S1: By Currents and Winds",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Returned from Ashes temporarily causes nearby targets to stagnate while casting. The stagnation effect is removed when Brant is switched off the field. After casting Intro Skill Applaud for Me! or each flip following Mid-air Attack, Brant's DMG dealt is increased by 20% for 5s, stacking up to 3 times.",
+    },
+    {
+      id: "Brant_s2",
+      name: "S2: For Smiles and Cheers",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Casting Mid-air Attack and Returned from Ashes increases Brant's Crit. Rate by 30%.  Brant's Outro Skill The Course is Set! gains a new enhancement: When Resonance Skill cast by the incoming Resonator (or nearby Resonators who activate Brant's Outro Skill) hits a target within 20s after Brant's Outro Skill, Brant blasts the hit target, dealing Fusion DMG equal to 440% of Brant's ATK (considered Basic Attack DMG). This explosion can be triggered 1  per second, up to 2 explosions in total. - This effect remains active when Brant is switched off the field.",
+    },
+    {
+      id: "Brant_s3",
+      name: "S3: Through Storms I Sail",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The DMG Multiplier of Returned from Ashes is increased by 42%.",
+    },
+    {
+      id: "Brant_s4",
+      name: "S4: To Freedom I Sing",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "The Shield obtained from Returned from Ashes is increased by 20%. Casting Returned from Ashes restores HP for all nearby Resonators in the team (6.60 HP for every 1% Energy Regen).",
+    },
+    {
+      id: "Brant_s5_all_the_worlds_an_actors_st",
+      name: "S5: All the World's an Actor's Stage",
+      operation: "add",
+      value: [0.15],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+        { type: "Stat", id: "allDmgBonus_" },
+      ],
+      modifiers: [
+        {
+          operation: "Add",
+          valueType: "Percent",
+          value: [0.15],
+        },
+      ],
+      descriptionTemplate: "Dealing Basic Attack DMG gives Brant 15% Basic Attack DMG Bonus for 10s.",
+    },
+    {
+      id: "Brant_s6",
+      name: "S6: All the World's a Captain's Carnevale",
+      operation: "add",
+      value: [],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      targets: [
+      ],
+      modifiers: [
+      ],
+      // [REVISAR] No pudo traducirse a modifier automaticamente.
+      // [NO SOPORTADO] Mecánica/secuencia condicional: requiere modelado manual.
+      descriptionTemplate: "Mid-air Attack's DMG Multiplier is increased by 30%. Casting Returned from Ashes causes a secondary blast, dealing Fusion DMG equal to 30% of the DMG dealt by Returned from Ashes, considered Basic Attack DMG.",
+    },
+  ],
+  mechanics: [],
+}
