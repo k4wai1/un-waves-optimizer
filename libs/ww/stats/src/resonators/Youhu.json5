@@ -148,6 +148,7 @@
       id: "Youhu_resonanceSkill_scroll_divination_healing_flat",
       name: "Scroll Divination Healing (Flat)",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -160,6 +161,7 @@
       id: "Youhu_resonanceSkill_scroll_divination_healing",
       name: "Scroll Divination Healing",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -304,6 +306,7 @@
       id: "Youhu_forteCircuit_poetic_essence_healing_flat",
       name: "Poetic Essence Healing (Flat)",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -316,6 +319,7 @@
       id: "Youhu_forteCircuit_poetic_essence_healing",
       name: "Poetic Essence Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -328,6 +332,7 @@
       id: "Youhu_forteCircuit_double_pun_bonus_healing_flat",
       name: "Double Pun Bonus Healing (Flat)",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -340,6 +345,7 @@
       id: "Youhu_forteCircuit_double_pun_bonus_healing",
       name: "Double Pun Bonus Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

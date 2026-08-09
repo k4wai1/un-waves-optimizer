@@ -17,6 +17,7 @@
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import type { CombatContext } from './calculator';
+import { calculateDamage, calculateHealing, calculateShield } from './calculator';
 
 // ═════════════════════════════════════════════════════════════════════════════
 // TIPOS DEL CONTRATO
@@ -74,6 +75,23 @@ export interface Action {
   id: string;
   type: string;
   tags: string[];
+  /**
+   * Qué forma de cálculo usa esta acción (declarativo, v2.1).
+   * - "damage"      → calculateDamage (atk/hp/def * mv + flat, con def/res/crit/enemigo)
+   * - "heal"        → calculateHealing (flat + stat*mv, ×healingBonus; sin enemigo/crit)
+   * - "shield"      → calculateShield (flat + stat*mv, ×shieldBonus; sin enemigo/crit)
+   * - "coordinated" → igual que "damage" pero se suma en la categoría coordinated.
+   * Por defecto "damage".
+   */
+  kind?: 'damage' | 'heal' | 'shield' | 'coordinated';
+  /** Flat adicional al resultado base (ej. "X% ATK + Y"). No se critica para heal/shield. */
+  flat?: number;
+  /**
+   * Agrupa esta acción dentro de una forma/modo del personaje
+   * (ej. "incarnation", "darkSurge", "aureole"). Solo metadata declarativa;
+   * el motor no asume ningún comportamiento, solo lo expone para filtrado/UI.
+   */
+  formId?: string;
 }
 
 
@@ -113,6 +131,7 @@ const PATH_TO_CTX: Record<string, string> = {
   coordinatedDmg: 'coordinatedDmgBonus_',
   outroDmg: 'outroSkillDmgBonus_',
   healingBonus: 'healingBonus_',
+  shieldBonus: 'shieldBonus_',
   defIgnore: 'defIgnore_',
   glacioDmg: 'glacioDmgBonus_',
   fusionDmg: 'fusionDmgBonus_',
@@ -214,9 +233,11 @@ export function resolveEffects(
       if (target.startsWith('stat.')) {
         const ctxKey = pathToContextKey(target.slice(5));
         if (ctxKey) {
+          const current = (result as any)[ctxKey];
+          const base = (typeof current === 'number' ? current : 0) || 0;
           switch (op) {
-            case 'Add': (result as any)[ctxKey] += totalValue; break;
-            case 'Multiply': (result as any)[ctxKey] *= 1 + totalValue; break;
+            case 'Add': (result as any)[ctxKey] = base + totalValue; break;
+            case 'Multiply': (result as any)[ctxKey] = base * (1 + totalValue); break;
             case 'Replace': (result as any)[ctxKey] = totalValue; break;
           }
         }
@@ -316,7 +337,8 @@ function effectAppliesToAction(effect: Effect, action: Action): boolean {
 export function resolveActionModifiers(
   action: Action,
   activeEffects: ActiveEffect[],
-  effectsDb: Record<string, Effect>
+  effectsDb: Record<string, Effect>,
+  options: { replaceOnly?: boolean } = {},
 ): {
   damageMultiplier: number;
   replacedMultiplier: number | null;
@@ -334,6 +356,11 @@ export function resolveActionModifiers(
 
     // Procesar modifiers del effect
     for (const mod of effect.modifiers) {
+      // Las acciones heal/shield NO deben inflar su multiplicador con
+      // buffs aditivos de daño (ej. "Skill DMG +%"). Solo un Replace
+      // explícito del multiplicador de la acción debería aplicar.
+      // options.replaceOnly: ignora los modifiers aditivos (Add/Multiply).
+      if (options.replaceOnly && mod.operation !== 'Replace') continue;
       const baseValue = mod.value[Math.min(rankIndex, mod.value.length - 1)] ?? 0;
       const stackMult = Math.min(active.stacks, effect.maxStacks);
       const totalValue = baseValue * stackMult;
@@ -350,7 +377,16 @@ export function resolveActionModifiers(
 }
 
 /**
+ * Tipado de la función de daño inyectable.
+ */
+export type DamageFn = (ctx: CombatContext, mv: number, scaler: string, element?: string, flat?: number) => { normal: number; average: number; crit: number };
+
+/**
  * Calcula el daño de una acción aplicando todos los modifiers activos.
+ * Respeta el `kind` de la acción (v2.1):
+ *   - "damage"/"coordinated"/undefined → calculateDamageFn (def/res/crit/enemigo)
+ *   - "heal"   → calculateHealing (flat + stat*mv, ×healingBonus; sin enemigo/crit)
+ *   - "shield" → calculateShield (flat + stat*mv, ×shieldBonus; sin enemigo/crit)
  */
 export function calculateActionDamage(
   context: CombatContext,
@@ -360,8 +396,20 @@ export function calculateActionDamage(
   element: string | undefined,
   activeEffects: ActiveEffect[],
   effectsDb: Record<string, Effect>,
-  calculateDamageFn: (ctx: CombatContext, mv: number, scaler: string, element?: string) => { normal: number; average: number; crit: number }
+  calculateDamageFn: DamageFn = calculateDamage,
 ): { normal: number; average: number; crit: number } {
+  const kind = action.kind ?? 'damage';
+
+  if (kind === 'heal') {
+    const h = calculateActionHealing(context, action, baseMultiplier, scalerStat, activeEffects, effectsDb);
+    return { normal: h, average: h, crit: h };
+  }
+  if (kind === 'shield') {
+    const s = calculateActionShield(context, action, baseMultiplier, scalerStat, activeEffects, effectsDb);
+    return { normal: s, average: s, crit: s };
+  }
+
+  // daño (incluye "coordinated": mismo cálculo, se suma en la categoría coordinated)
   const mods = resolveActionModifiers(action, activeEffects, effectsDb);
 
   // Reemplazo de multiplier (si aplica)
@@ -370,7 +418,42 @@ export function calculateActionDamage(
   // damageMultiplier: suma (ej: varios efectos dan +20% cada uno)
   finalMv *= 1 + mods.damageMultiplier;
 
-  return calculateDamageFn(context, finalMv, scalerStat, element);
+  return calculateDamageFn(context, finalMv, scalerStat, element, action.flat ?? 0);
+}
+
+/**
+ * Calcula la curación de una acción "heal": (flat + stat*mv) * (1+healingBonus).
+ */
+export function calculateActionHealing(
+  context: CombatContext,
+  action: Action,
+  baseMultiplier: number,
+  scalerStat: string,
+  activeEffects: ActiveEffect[],
+  effectsDb: Record<string, Effect>,
+): number {
+  // replaceOnly: los buffs aditivos de daño (actionType/action) NO inflan
+  // el multiplicador de la curación; solo un Replace explícito aplica.
+  const mods = resolveActionModifiers(action, activeEffects, effectsDb, { replaceOnly: true });
+  const finalMv = mods.replacedMultiplier ?? baseMultiplier;
+  return calculateHealing(context, finalMv, scalerStat, action.flat ?? 0);
+}
+
+/**
+ * Calcula el escudo de una acción "shield": (flat + stat*mv) * (1+shieldBonus).
+ */
+export function calculateActionShield(
+  context: CombatContext,
+  action: Action,
+  baseMultiplier: number,
+  scalerStat: string,
+  activeEffects: ActiveEffect[],
+  effectsDb: Record<string, Effect>,
+): number {
+  // replaceOnly: los buffs aditivos de daño NO inflan el escudo.
+  const mods = resolveActionModifiers(action, activeEffects, effectsDb, { replaceOnly: true });
+  const finalMv = mods.replacedMultiplier ?? baseMultiplier;
+  return calculateShield(context, finalMv, scalerStat, action.flat ?? 0);
 }
 
 // ═════════════════════════════════════════════════════════════════════════════

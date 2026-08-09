@@ -178,36 +178,59 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
     const lvl = skillLevels[type] || 1;
     const activeList = Object.values(effectStates).filter(ae => ae.enabled);
 
-    const rows: { name: string; mv: number; stat: string; act: CalcAction }[] = [];
+    const rows: { name: string; mv: number; stat: string; act: CalcAction; kind?: string }[] = [];
     for (const a of actionsList) {
       const idx = Math.min(lvl - 1, 9);
       for (const sc of a.scaling || []) {
         const mult = sc.multiplier?.[idx];
         if (mult !== undefined) {
-          rows.push({ name: a.name, mv: mult, stat: sc.stat, act: { id: a.id, type: a.type, tags: a.tags || [] } });
+          rows.push({
+            name: a.name, mv: mult, stat: sc.stat,
+            kind: a.kind,
+            act: { id: a.id, type: a.type, tags: a.tags || [], kind: a.kind, flat: a.flat, formId: a.formId },
+          });
         }
       }
     }
     if (!rows.length) return null;
+
+    // Si el grupo contiene acciones no-daño (heal/shield), la cabecera muestra un valor único.
+    const hasNonDamage = rows.some(r => r.kind === 'heal' || r.kind === 'shield');
+    const valueLabel = rows.some(r => r.kind === 'shield') && !rows.some(r => r.kind === 'heal')
+      ? 'Shield'
+      : rows.some(r => r.kind === 'heal') ? 'Healing' : 'Value';
 
     return (
       <div key={type} className="mb-6">
         <h4 className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--text-muted)' }}>{typeLabels[type] || type}</h4>
         <div className="w-full border rounded-lg overflow-hidden" style={{ borderColor: 'var(--border)' }}>
           <div className="grid grid-cols-4 text-[11px] p-2 border-b font-bold uppercase tracking-wider" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', color: 'var(--text-muted)' }}>
-            <div className="col-span-1">Move</div><div className="text-right">Normal</div><div className="text-right">Average</div><div className="text-right">Crit</div>
+            <div className="col-span-1">Move</div>
+            {hasNonDamage
+              ? <div className="text-right col-span-3">{valueLabel}</div>
+              : <><div className="text-right">Normal</div><div className="text-right">Average</div><div className="text-right">Crit</div></>}
           </div>
           {rows.map((r, i) => {
             const scaler = r.stat === 'HP' ? 'hp' : r.stat === 'FLAT' ? 'flat' : r.stat.toLowerCase();
             const dmg = calculateActionDamage(combatContext, r.act, r.mv, scaler, elementKey, activeList, effectsDb, calculateDamage);
+            const isNonDamage = r.kind === 'heal' || r.kind === 'shield';
             return (
               <div key={i} className="grid grid-cols-4 text-xs p-2 border-b last:border-0 hover:bg-white/5 transition-colors" style={{ borderColor: 'var(--border)' }}>
                 <div className="col-span-1 truncate font-medium capitalize text-gray-300" title={r.name}>
-                  {r.name}{r.stat !== 'ATK' && <span className="text-[9px] ml-1 opacity-50 uppercase">({r.stat})</span>}
+                  {r.name}{r.stat !== 'ATK' && r.stat !== 'FLAT' && <span className="text-[9px] ml-1 opacity-50 uppercase">({r.stat})</span>}
+                  {r.act.formId && <span className="text-[9px] ml-1 opacity-40 uppercase italic">[{r.act.formId}]</span>}
                 </div>
-                <div className="text-right font-mono opacity-90">{dmg.normal}</div>
-                <div className="text-right font-mono opacity-60">{dmg.average}</div>
-                <div className="text-right font-mono font-bold" style={{ color: 'var(--accent)' }}>{dmg.crit}</div>
+                {isNonDamage ? (
+                  <>
+                    <div className="text-right font-mono font-bold col-span-3" style={{ color: 'var(--accent)' }}>{dmg.normal}</div>
+                  </>
+                ) : (
+                  <>
+                    <div className="text-right font-mono opacity-90">{dmg.normal}</div>
+                    <div className="text-right font-mono opacity-60">{dmg.average}</div>
+                    <div className="text-right font-mono font-bold" style={{ color: 'var(--accent)' }}>{dmg.crit}</div>
+                  </>
+                )}
               </div>
             );
           })}

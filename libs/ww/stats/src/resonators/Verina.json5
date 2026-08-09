@@ -196,6 +196,7 @@
       id: "Verina_resonanceLiberation_arboreal_flourish_healing_flat",
       name: "Arboreal Flourish Healing (Flat)",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -208,6 +209,7 @@
       id: "Verina_resonanceLiberation_arboreal_flourish_healing",
       name: "Arboreal Flourish Healing",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -220,6 +222,7 @@
       id: "Verina_resonanceLiberation_coordinated_attack_dmg",
       name: "Coordinated Attack DMG",
       type: "resonanceLiberation",
+      "kind": "coordinated",
       scaling: [
         {
           stat: "ATK",
@@ -232,6 +235,7 @@
       id: "Verina_resonanceLiberation_coordinated_attack_healing_flat",
       name: "Coordinated Attack Healing (Flat)",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -244,6 +248,7 @@
       id: "Verina_resonanceLiberation_coordinated_attack_healing",
       name: "Coordinated Attack Healing",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -316,6 +321,7 @@
       id: "Verina_forteCircuit_starflower_blooms_healing_flat",
       name: "Starflower Blooms Healing (Flat)",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -328,6 +334,7 @@
       id: "Verina_forteCircuit_starflower_blooms_healing",
       name: "Starflower Blooms Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

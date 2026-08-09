@@ -256,6 +256,7 @@
       id: "Jianxin_forteCircuit_incomplete_minor_zhoutian_final_shield_f",
       name: "Incomplete Minor Zhoutian Final Shield (Flat)",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -268,6 +269,7 @@
       id: "Jianxin_forteCircuit_incomplete_minor_zhoutian_final_shield",
       name: "Incomplete Minor Zhoutian Final Shield",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "ATK",
@@ -280,6 +282,7 @@
       id: "Jianxin_forteCircuit_minor_zhoutian_final_shield_flat",
       name: "Minor Zhoutian Final Shield (Flat)",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -292,6 +295,7 @@
       id: "Jianxin_forteCircuit_minor_zhoutian_final_shield",
       name: "Minor Zhoutian Final Shield",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "ATK",
@@ -304,6 +308,7 @@
       id: "Jianxin_forteCircuit_major_zhoutian_inner_final_shield_flat",
       name: "Major Zhoutian: Inner Final Shield (Flat)",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -316,6 +321,7 @@
       id: "Jianxin_forteCircuit_major_zhoutian_inner_final_shield",
       name: "Major Zhoutian: Inner Final Shield",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "ATK",
@@ -328,6 +334,7 @@
       id: "Jianxin_forteCircuit_major_zhoutian_outer_final_shield_flat",
       name: "Major Zhoutian: Outer Final Shield (Flat)",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -340,6 +347,7 @@
       id: "Jianxin_forteCircuit_major_zhoutian_outer_final_shield",
       name: "Major Zhoutian: Outer Final Shield",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "ATK",
@@ -352,6 +360,7 @@
       id: "Jianxin_forteCircuit_shield_healing_flat",
       name: "Shield Healing (Flat)",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -364,6 +373,7 @@
       id: "Jianxin_forteCircuit_shield_healing",
       name: "Shield Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

@@ -26,7 +26,7 @@ import { buildEffects } from './effects';
 // ---------------------------------------------------------------
 export type StatKey = 'ATK' | 'HP' | 'DEF' | 'FLAT';
 export interface Scaling { stat: StatKey; multiplier: number[]; hits: number }
-export interface Action { id: string; name: string; type: string; scaling: Scaling[]; tags: string[]; cooldown?: number }
+export interface Action { id: string; name: string; type: string; scaling: Scaling[]; tags: string[]; cooldown?: number; kind?: 'damage' | 'heal' | 'shield' | 'coordinated' }
 export interface EffectTarget { type: 'Stat' | 'Category' | 'Action'; id: string }
 export interface Modifier { operation: string; valueType: string; value: number[] }
 export interface Effect {
@@ -229,6 +229,21 @@ function slug(s: string): string {
   return s.replace(/[^a-zA-Z0-9 ]/g, '').trim().toLowerCase().replace(/\s+/g, '_').slice(0, 26);
 }
 
+/**
+ * Deduce la forma de cálculo de una fila del .md según su nombre (declarativo v2.1).
+ * - cura: filas con Heal/Healing/Recovery/Restore/Recuperation
+ * - escudo: filas con Shield (pero NO los "Damage Reduction" de escudo, que son stats)
+ * - coordinado: filas con Coordinated/Coordination
+ * - resto: daño (undefined)
+ */
+export function deriveActionKind(rowName: string): 'damage' | 'heal' | 'shield' | 'coordinated' | undefined {
+  const n = rowName.toLowerCase();
+  if (/(coordinated|coordination)/i.test(n)) return 'coordinated';
+  if (/(shield)/i.test(n) && !/damage reduction|resist/i.test(n) && !/shield (heal)/i.test(n)) return 'shield';
+  if (/(heal|healing|recovery|restore|recuperat)/i.test(n)) return 'heal';
+  return undefined;
+}
+
 function buildActions(baseId: string, skills: SkillSection[]): Action[] {
   const actions: Action[] = [];
   const used = new Set<string>();
@@ -250,6 +265,7 @@ function buildActions(baseId: string, skills: SkillSection[]): Action[] {
     for (const row of table.rows) {
       const lower = row.name.toLowerCase();
       if (/sta cost|duration|cooldown$|concerto|resonance cost| per |requisito|level/.test(lower)) continue;
+      const rowKind = deriveActionKind(row.name);
       const statGuessed: StatKey = /HP/i.test(row.name) ? 'HP' : (/DEF/i.test(row.name) ? 'DEF' : 'ATK');
       const cells = row.values.map((v) => parseCell(v ?? '', statGuessed));
       while (cells.length < lvCount) cells.push(emptyCell(statGuessed));
@@ -266,7 +282,7 @@ function buildActions(baseId: string, skills: SkillSection[]): Action[] {
       if (hasFlat) {
         const flatMults: number[] = cells.map((c) => c.flat ?? 0);
         push({ id: '', name: `${row.name} (Flat)`, type: rowType(sec.type, row.name),
-          scaling: [{ stat: 'FLAT', multiplier: flatMults, hits: 1 }], tags: [] });
+          scaling: [{ stat: 'FLAT', multiplier: flatMults, hits: 1 }], tags: [], kind: rowKind });
       }
 
       // 2) términos % por golpe
@@ -282,7 +298,7 @@ function buildActions(baseId: string, skills: SkillSection[]): Action[] {
         }
         push({ id: '', name: nTerms > 1 ? `${row.name} - Hit ${k + 1}` : row.name,
           type: rowType(sec.type, row.name),
-          scaling: [{ stat, multiplier: mults, hits }], tags: [] });
+          scaling: [{ stat, multiplier: mults, hits }], tags: [], kind: rowKind });
       }
     }
   }
@@ -334,6 +350,7 @@ export function buildJson5(p: ParsedMd, baseId: string): string {
     L.push(`      id: "${a.id}",`);
     L.push(`      name: "${a.name.replace(/"/g, '\\"')}",`);
     L.push(`      type: "${a.type}",`);
+    if (a.kind) L.push(`      kind: "${a.kind}",`);
     L.push('      scaling: [');
     for (const s of a.scaling) {
       L.push('        {');

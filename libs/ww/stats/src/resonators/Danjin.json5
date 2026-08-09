@@ -244,6 +244,7 @@
       id: "Danjin_forteCircuit_chaoscleave_healing",
       name: "Chaoscleave Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

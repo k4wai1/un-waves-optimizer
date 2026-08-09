@@ -124,6 +124,7 @@
       id: "Iuno_basicAttack_moonbow_basic_attack_1_dmg",
       name: "Moonbow - Basic Attack 1 DMG",
       type: "basicAttack",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -136,6 +137,7 @@
       id: "Iuno_basicAttack_moonbow_basic_attack_2_dmg",
       name: "Moonbow - Basic Attack 2 DMG",
       type: "basicAttack",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -148,6 +150,7 @@
       id: "Iuno_basicAttack_moonbow_basic_attack_3_dmg",
       name: "Moonbow - Basic Attack 3 DMG",
       type: "basicAttack",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -160,6 +163,7 @@
       id: "Iuno_dodgeCounter_moonbow_dodge_counter_dmg",
       name: "Moonbow - Dodge Counter DMG",
       type: "dodgeCounter",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -268,6 +272,7 @@
       id: "Iuno_forteCircuit_flux_moonbow_dmg",
       name: "Flux - Moonbow DMG",
       type: "forteCircuit",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -292,6 +297,7 @@
       id: "Iuno_forteCircuit_enhanced_moonbow_basic_attack_1_dmg",
       name: "Enhanced Moonbow - Basic Attack 1 DMG",
       type: "forteCircuit",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -304,6 +310,7 @@
       id: "Iuno_forteCircuit_enhanced_moonbow_basic_attack_2_dmg",
       name: "Enhanced Moonbow - Basic Attack 2 DMG",
       type: "forteCircuit",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -316,6 +323,7 @@
       id: "Iuno_forteCircuit_enhanced_moonbow_basic_attack_3_dmg",
       name: "Enhanced Moonbow - Basic Attack 3 DMG",
       type: "forteCircuit",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -328,6 +336,7 @@
       id: "Iuno_dodgeCounter_enhanced_moonbow_dodge_counter_dmg",
       name: "Enhanced Moonbow - Dodge Counter DMG",
       type: "dodgeCounter",
+      "formId": "moonbow",
       scaling: [
         {
           stat: "ATK",
@@ -352,6 +361,8 @@
       id: "Iuno_forteCircuit_moonbow_basic_attack_1_healing",
       name: "Moonbow - Basic Attack 1 Healing",
       type: "forteCircuit",
+      "formId": "moonbow",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -364,6 +375,8 @@
       id: "Iuno_forteCircuit_moonbow_basic_attack_2_healing",
       name: "Moonbow - Basic Attack 2 Healing",
       type: "forteCircuit",
+      "formId": "moonbow",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -376,6 +389,8 @@
       id: "Iuno_forteCircuit_moonbow_basic_attack_3_healing",
       name: "Moonbow - Basic Attack 3 Healing",
       type: "forteCircuit",
+      "formId": "moonbow",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -388,6 +403,8 @@
       id: "Iuno_dodgeCounter_moonbow_dodge_counter_healing",
       name: "Moonbow - Dodge Counter Healing",
       type: "dodgeCounter",
+      "formId": "moonbow",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -400,6 +417,7 @@
       id: "Iuno_forteCircuit_arc_beyond_the_edge_healing",
       name: "Arc Beyond the Edge Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -424,6 +442,7 @@
       id: "Iuno_forteCircuit_absolute_fullness_healing",
       name: "Absolute Fullness Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -448,6 +467,7 @@
       id: "Iuno_forteCircuit_full_moon_domain_healing",
       name: "Full Moon Domain Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

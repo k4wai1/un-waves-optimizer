@@ -244,6 +244,7 @@
       id: "Mornye_resonanceSkill_distributed_array_healing_flat",
       name: "Distributed Array Healing (Flat)",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -256,6 +257,7 @@
       id: "Mornye_resonanceSkill_distributed_array_healing",
       name: "Distributed Array Healing",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -268,6 +270,7 @@
       id: "Mornye_resonanceSkill_expectation_error_healing_flat",
       name: "Expectation Error Healing (Flat)",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -280,6 +283,7 @@
       id: "Mornye_resonanceSkill_expectation_error_healing",
       name: "Expectation Error Healing",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -340,6 +344,7 @@
       id: "Mornye_forteCircuit_syntony_field_healing_flat",
       name: "Syntony Field Healing (Flat)",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -352,6 +357,7 @@
       id: "Mornye_forteCircuit_syntony_field_healing",
       name: "Syntony Field Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

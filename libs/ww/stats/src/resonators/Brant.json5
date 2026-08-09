@@ -436,6 +436,7 @@
       id: "Brant_resonanceLiberation_healing_hit_1",
       name: "Healing - Hit 1",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -448,6 +449,7 @@
       id: "Brant_resonanceLiberation_healing_hit_2",
       name: "Healing - Hit 2",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -508,6 +510,7 @@
       id: "Brant_forteCircuit_waves_of_acclaims_healing_hit_1",
       name: "Waves of Acclaims Healing - Hit 1",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -520,6 +523,7 @@
       id: "Brant_forteCircuit_waves_of_acclaims_healing_hit_2",
       name: "Waves of Acclaims Healing - Hit 2",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -532,6 +536,7 @@
       id: "Brant_forteCircuit_shield_hit_1",
       name: "Shield - Hit 1",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "ATK",
@@ -544,6 +549,7 @@
       id: "Brant_forteCircuit_shield_hit_2",
       name: "Shield - Hit 2",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "ATK",

@@ -220,6 +220,7 @@
       id: "RoverAero_resonanceLiberation_healing_flat",
       name: "Healing (Flat)",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -232,6 +233,7 @@
       id: "RoverAero_resonanceLiberation_healing",
       name: "Healing",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -268,6 +270,7 @@
       id: "RoverAero_forteCircuit_cloudburst_dance_healing_flat",
       name: "Cloudburst Dance Healing (Flat)",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -280,6 +283,7 @@
       id: "RoverAero_forteCircuit_cloudburst_dance_healing",
       name: "Cloudburst Dance Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

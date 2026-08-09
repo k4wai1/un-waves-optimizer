@@ -124,6 +124,7 @@
       id: "Buling_heavyAttack_heavy_attack_twin_mountains_healing_flat",
       name: "Heavy Attack - Twin Mountains Healing (Flat)",
       type: "heavyAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -136,6 +137,7 @@
       id: "Buling_heavyAttack_heavy_attack_twin_mountains_healing",
       name: "Heavy Attack - Twin Mountains Healing",
       type: "heavyAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -148,6 +150,7 @@
       id: "Buling_heavyAttack_heavy_attack_twin_thunders_healing_flat",
       name: "Heavy Attack - Twin Thunders Healing (Flat)",
       type: "heavyAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -160,6 +163,7 @@
       id: "Buling_heavyAttack_heavy_attack_twin_thunders_healing",
       name: "Heavy Attack - Twin Thunders Healing",
       type: "heavyAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -244,6 +248,7 @@
       id: "Buling_introSkill_skill_healing_flat",
       name: "Skill Healing (Flat)",
       type: "introSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -256,6 +261,7 @@
       id: "Buling_introSkill_skill_healing",
       name: "Skill Healing",
       type: "introSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

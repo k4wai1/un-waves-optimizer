@@ -220,6 +220,7 @@
       id: "Suisui_resonanceSkill_enrichment_healing_flat",
       name: "Enrichment Healing (Flat)",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -232,6 +233,7 @@
       id: "Suisui_resonanceSkill_enrichment_healing",
       name: "Enrichment Healing",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

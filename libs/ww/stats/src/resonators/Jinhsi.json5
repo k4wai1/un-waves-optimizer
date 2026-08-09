@@ -292,6 +292,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_1_dmg",
       name: "Incarnation - Basic Attack 1 DMG",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -304,6 +305,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_2_dmg_hit_1",
       name: "Incarnation - Basic Attack 2 DMG - Hit 1",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -316,6 +318,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_2_dmg_hit_2",
       name: "Incarnation - Basic Attack 2 DMG - Hit 2",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -328,6 +331,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_2_dmg_hit_3",
       name: "Incarnation - Basic Attack 2 DMG - Hit 3",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -340,6 +344,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_3_dmg_hit_1",
       name: "Incarnation - Basic Attack 3 DMG - Hit 1",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -352,6 +357,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_3_dmg_hit_2",
       name: "Incarnation - Basic Attack 3 DMG - Hit 2",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -364,6 +370,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_4_dmg_hit_1",
       name: "Incarnation - Basic Attack 4 DMG - Hit 1",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -376,6 +383,7 @@
       id: "Jinhsi_forteCircuit_incarnation_basic_attack_4_dmg_hit_2",
       name: "Incarnation - Basic Attack 4 DMG - Hit 2",
       type: "forteCircuit",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -388,6 +396,7 @@
       id: "Jinhsi_heavyAttack_incarnation_heavy_attack_dmg_hit_1",
       name: "Incarnation - Heavy Attack DMG - Hit 1",
       type: "heavyAttack",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -400,6 +409,7 @@
       id: "Jinhsi_heavyAttack_incarnation_heavy_attack_dmg_hit_2",
       name: "Incarnation - Heavy Attack DMG - Hit 2",
       type: "heavyAttack",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -412,6 +422,7 @@
       id: "Jinhsi_dodgeCounter_incarnation_dodge_counter_dmg_hit_1",
       name: "Incarnation - Dodge Counter DMG - Hit 1",
       type: "dodgeCounter",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -424,6 +435,7 @@
       id: "Jinhsi_dodgeCounter_incarnation_dodge_counter_dmg_hit_2",
       name: "Incarnation - Dodge Counter DMG - Hit 2",
       type: "dodgeCounter",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",
@@ -436,6 +448,7 @@
       id: "Jinhsi_dodgeCounter_incarnation_dodge_counter_dmg_hit_3",
       name: "Incarnation - Dodge Counter DMG - Hit 3",
       type: "dodgeCounter",
+      "formId": "incarnation",
       scaling: [
         {
           stat: "ATK",

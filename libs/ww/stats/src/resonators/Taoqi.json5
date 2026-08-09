@@ -148,6 +148,7 @@
       id: "Taoqi_resonanceSkill_hp_recovery_flat",
       name: "HP recovery (Flat)",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -160,6 +161,7 @@
       id: "Taoqi_resonanceSkill_hp_recovery",
       name: "HP recovery",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "HP",
@@ -232,6 +234,7 @@
       id: "Taoqi_forteCircuit_timed_counters_stage_1_shield_flat",
       name: "Timed Counters Stage 1 Shield (Flat)",
       type: "forteCircuit",
+      kind: "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -244,6 +247,7 @@
       id: "Taoqi_forteCircuit_timed_counters_stage_1_shield",
       name: "Timed Counters Stage 1 Shield",
       type: "forteCircuit",
+      kind: "shield",
       scaling: [
         {
           stat: "ATK",
@@ -256,6 +260,7 @@
       id: "Taoqi_forteCircuit_timed_counters_stage_2_shield_flat",
       name: "Timed Counters Stage 2 Shield (Flat)",
       type: "forteCircuit",
+      kind: "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -268,6 +273,7 @@
       id: "Taoqi_forteCircuit_timed_counters_stage_2_shield",
       name: "Timed Counters Stage 2 Shield",
       type: "forteCircuit",
+      kind: "shield",
       scaling: [
         {
           stat: "ATK",
@@ -280,6 +286,7 @@
       id: "Taoqi_forteCircuit_timed_counters_stage_3_shield_flat",
       name: "Timed Counters Stage 3 Shield (Flat)",
       type: "forteCircuit",
+      kind: "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -292,6 +299,7 @@
       id: "Taoqi_forteCircuit_timed_counters_stage_3_shield",
       name: "Timed Counters Stage 3 Shield",
       type: "forteCircuit",
+      kind: "shield",
       scaling: [
         {
           stat: "ATK",

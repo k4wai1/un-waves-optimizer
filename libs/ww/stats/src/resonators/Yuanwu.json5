@@ -160,6 +160,7 @@
       id: "Yuanwu_resonanceSkill_thunder_wedge_coordinated_attack_dmg",
       name: "Thunder Wedge Coordinated Attack DMG",
       type: "resonanceSkill",
+      "kind": "coordinated",
       scaling: [
         {
           stat: "ATK",

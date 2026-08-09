@@ -67,6 +67,8 @@ export interface CombatContext {
 
   // Otros
   healingBonus_: number;
+  /** Escudo +% (declarativo, v2.1). Opcional; escala el escudo. */
+  shieldBonus_?: number;
 
   // Datos del personaje para fórmula
   attackerLvl: number;
@@ -94,21 +96,40 @@ export const DEFAULT_ENEMY: EnemyStats = {
   damageTaken: 1.0,
 };
 
+// ─── Selección de `scaler` ──────────────────────────────────────────────
+
+/** Devuelve el stat base del personaje que corresponde a un scaler. */
+export function resolveScalerBase(context: CombatContext, scaler: string): number {
+  switch (scaler) {
+    case 'hp': return context.hp;
+    case 'def': return context.def;
+    case 'flat': return 0; // "flat": sin componente de stat; el valor va en `mv`
+    case 'atk':
+    default: return context.atk;
+  }
+}
+
+/**
+ * Suma el flat al componente escalado. Si `scaler === 'flat'`, el `mv` ES el
+ * valor plano (formato legacy de las curas/shields, ej. stat:FLAT con mv:660);
+ * en cualquier otro caso se suma como incremento al daño/cura/escudo escalado.
+ */
+function computeBaseAmount(context: CombatContext, mv: number, scaler: string, flat: number): number {
+  if (scaler === 'flat') return mv + flat;
+  return resolveScalerBase(context, scaler) * mv + flat;
+}
+
 // ─── Cálculo de daño ────────────────────────────────────────────────────
 
 export function calculateDamage(
   context: CombatContext,
   mv: number,
   scaler: string = 'atk',
-  element?: string  // "glacio" | "fusion" | "electro" | "aero" | "spectro" | "havoc" | "physical"
+  element?: string, // "glacio" | "fusion" | "electro" | "aero" | "spectro" | "havoc" | "physical"
+  flat: number = 0
 ) {
-  // Seleccionar el scaler correcto
-  let baseValue = context.atk;
-  if (scaler === 'hp') baseValue = context.hp;
-  else if (scaler === 'def') baseValue = context.def;
-
-  // 1. Base Damage
-  const baseDmg = baseValue * mv;
+  // 1. Base Damage (incremento flat, ej. "X% ATK + Y"; para scaler 'flat', mv es el valor plano)
+  const baseDmg = computeBaseAmount(context, mv, scaler, flat);
 
   // 2. Bonus & Amplify Multiplier
   let elementalBonus = 0;
@@ -161,4 +182,38 @@ export function resistanceMultiplierFn(resistance: number): number {
   if (resistance >= 0.8) return 1 / (1 + 5 * resistance);
   if (resistance >= 0) return 1 - resistance;
   return 1 - (0.5 * resistance); // resistencia negativa = más daño
+}
+
+// ─── Cálculo de curación ─────────────────────────────────────────────────
+//
+// Fórmula de curado de WuWa:
+//   amount = flat + stat * mv
+//   healed = amount * (1 + healingBonus_)
+// La curación NO se ve afectada por DEF/resistencia/daño recibido del enemigo
+// ni por el multiplicador de crítico. Solo la incrementa healingBonus_.
+export function calculateHealing(
+  context: CombatContext,
+  mv: number,
+  scaler: string = 'atk',
+  flat: number = 0,
+): number {
+  const amount = computeBaseAmount(context, mv, scaler, flat);
+  const healing = amount * (1 + (context.healingBonus_ || 0));
+  return Math.round(healing);
+}
+
+// ─── Cálculo de escudo ───────────────────────────────────────────────────
+//
+// Escudo de WuWa:
+//   shield = flat + stat * mv
+// Se escala por shieldBonus_ si existiera (declarativo, v2.1).
+// No depende de DEF/resistencia/crítico ni de healingBonus_.
+export function calculateShield(
+  context: CombatContext,
+  mv: number,
+  scaler: string = 'atk',
+  flat: number = 0,
+): number {
+  const shield = computeBaseAmount(context, mv, scaler, flat);
+  return Math.round(shield * (1 + (context.shieldBonus_ || 0)));
 }

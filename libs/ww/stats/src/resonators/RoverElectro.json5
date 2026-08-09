@@ -628,6 +628,7 @@
       id: "RoverElectro_plungingAttack_thrum_of_all_sounds_aero_midair_attack_h",
       name: "Thrum of All Sounds: Aero Mid-air Attack Healing (Flat)",
       type: "plungingAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -640,6 +641,7 @@
       id: "RoverElectro_plungingAttack_thrum_of_all_sounds_aero_midair_attack_h_1",
       name: "Thrum of All Sounds: Aero Mid-air Attack Healing",
       type: "plungingAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",

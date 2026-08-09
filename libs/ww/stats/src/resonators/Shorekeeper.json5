@@ -313,6 +313,7 @@
       "id": "shorekeeper_skill_heal_pct",
       "name": "Dim Star Butterfly Heal (% Max HP)",
       "type": "resonanceSkill",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "HP",
@@ -338,6 +339,7 @@
       "id": "shorekeeper_skill_heal_flat",
       "name": "Dim Star Butterfly Heal (Flat)",
       "type": "resonanceSkill",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "FLAT",
@@ -438,6 +440,7 @@
       "id": "shorekeeper_liberation_heal_pct",
       "name": "Liberation Heal (% Max HP)",
       "type": "resonanceLiberation",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "HP",
@@ -463,6 +466,7 @@
       "id": "shorekeeper_liberation_heal_flat",
       "name": "Liberation Heal (Flat)",
       "type": "resonanceLiberation",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "FLAT",
@@ -513,6 +517,7 @@
       "id": "shorekeeper_intro_enlightenment_heal_pct",
       "name": "Enlightenment Heal (% HP)",
       "type": "introSkill",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "HP",
@@ -538,6 +543,7 @@
       "id": "shorekeeper_intro_enlightenment_heal_flat",
       "name": "Enlightenment Heal (Flat)",
       "type": "introSkill",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "FLAT",
@@ -588,6 +594,7 @@
       "id": "shorekeeper_intro_discernment_heal_pct",
       "name": "Discernment Heal (% HP)",
       "type": "introSkill",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "HP",
@@ -613,6 +620,7 @@
       "id": "shorekeeper_intro_discernment_heal_flat",
       "name": "Discernment Heal (Flat)",
       "type": "introSkill",
+      "kind": "heal",
       "scaling": [
         {
           "stat": "FLAT",

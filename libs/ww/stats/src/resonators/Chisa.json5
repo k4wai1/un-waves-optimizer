@@ -124,6 +124,7 @@
       id: "Chisa_basicAttack_death_snip_healing_flat",
       name: "Death Snip Healing (Flat)",
       type: "basicAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -136,6 +137,7 @@
       id: "Chisa_basicAttack_death_snip_healing",
       name: "Death Snip Healing",
       type: "basicAttack",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -364,6 +366,7 @@
       id: "Chisa_resonanceLiberation_healing_flat",
       name: "Healing (Flat)",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -376,6 +379,7 @@
       id: "Chisa_resonanceLiberation_healing",
       name: "Healing",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -520,6 +524,7 @@
       id: "Chisa_forteCircuit_sawring_eradication_shield_flat",
       name: "Sawring - Eradication Shield (Flat)",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "FLAT",
@@ -532,6 +537,7 @@
       id: "Chisa_forteCircuit_sawring_eradication_shield",
       name: "Sawring - Eradication Shield",
       type: "forteCircuit",
+      "kind": "shield",
       scaling: [
         {
           stat: "ATK",

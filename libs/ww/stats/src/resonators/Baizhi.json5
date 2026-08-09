@@ -124,6 +124,7 @@
       id: "Baizhi_resonanceSkill_healing_flat",
       name: "Healing (Flat)",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -136,6 +137,7 @@
       id: "Baizhi_resonanceSkill_healing",
       name: "Healing",
       type: "resonanceSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -160,6 +162,7 @@
       id: "Baizhi_resonanceLiberation_remnant_entities_healing_flat",
       name: "Remnant Entities Healing (Flat)",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -172,6 +175,7 @@
       id: "Baizhi_resonanceLiberation_remnant_entities_healing",
       name: "Remnant Entities Healing",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -184,6 +188,7 @@
       id: "Baizhi_resonanceLiberation_momentary_union_healing_flat",
       name: "Momentary Union Healing (Flat)",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -196,6 +201,7 @@
       id: "Baizhi_resonanceLiberation_momentary_union_healing",
       name: "Momentary Union Healing",
       type: "resonanceLiberation",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -208,6 +214,7 @@
       id: "Baizhi_forteCircuit_concentration_healing_flat",
       name: "Concentration Healing (Flat)",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -220,6 +227,7 @@
       id: "Baizhi_forteCircuit_concentration_healing",
       name: "Concentration Healing",
       type: "forteCircuit",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
@@ -256,6 +264,7 @@
       id: "Baizhi_introSkill_overflowing_frost_healing_flat",
       name: "Overflowing Frost Healing (Flat)",
       type: "introSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "FLAT",
@@ -268,6 +277,7 @@
       id: "Baizhi_introSkill_overflowing_frost_healing",
       name: "Overflowing Frost Healing",
       type: "introSkill",
+      "kind": "heal",
       scaling: [
         {
           stat: "ATK",
