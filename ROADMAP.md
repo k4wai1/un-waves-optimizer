@@ -90,6 +90,10 @@ Pendiente (sub-nivel: pasivas complejas 5★):
 - [ ] Amplify (Deepen) elemental por condiciones
 - [ ] Confirmar tipos provisionales de Azure Oath y Firstlight's Herald (no en weapons.json)
 - [ ] Obtener imagenes de Azure Oath y Firstlight's Herald
+- [ ] Escalar la descripcion de la pasiva con el rango R1-R5: soportar `{value}`/`{valueN}`
+      dentro de `description_raw` (o migrar pasivas complejas a `descriptionTemplate` +
+      `modifiers`) para que el texto muestre el multiplicador del rank seleccionado.
+      Fix a futuro (no implementado).
 
 ---
 

@@ -69,18 +69,20 @@ export default function App() {
   const charElement = charMeta?.element || 'Spectro';
   const accentColor = elementColors[charElement] || elementColors.Spectro;
 
-  // Filtro case-insensitive de armas por tipo (metadata o raíz)
+  // Filtro case-insensitive de armas por tipo (metadata o raíz).
+  // Si el personaje no tiene un tipo de arma válido, se muestran todas.
   const filteredWeapons = useMemo(() => {
     const wt = charMeta?.weaponType;
-    if (!wt) return [];
+    if (!wt) return weaponsDB;
     const targetType = wt.toLowerCase();
-    return weaponsDB.filter(
+    const matches = weaponsDB.filter(
       (w: any) => {
         const wType = w.metadata?.weaponType || w.weaponType;
         return wType && wType.toLowerCase() === targetType;
       }
     );
-  }, [charData?.weaponType]);
+    return matches.length ? matches : weaponsDB;
+  }, [charMeta?.weaponType]);
 
   // Auto-equipar arma al cambiar de personaje
   useEffect(() => {
