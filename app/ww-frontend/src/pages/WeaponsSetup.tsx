@@ -125,7 +125,7 @@ export function WeaponsSetup({ availableWeapons, equippedWeapon, weaponLevel, we
               {effects.map((effect: any) => {
                 const desc = effect.descriptionTemplate
                   ? formatDescription(effect.descriptionTemplate, effect.modifiers || [], weaponRank)
-                  : effect.name;
+                  : (effect.description_raw || effect.name);
 
                 return (
                   <div key={effect.id} className="p-4 rounded-xl border" style={{ borderColor: 'var(--border)', backgroundColor: 'var(--bg-card)' }}>

@@ -26,7 +26,7 @@ build para un personaje contra un enemigo objetivo.
 | 56 personajes en JSON5 | Completos (stats, actions, effects, statNodes) |
 | Sistema de efectos declarativo | Funciona (paths, stacks, ranks) |
 | UI de Resonator | Funciona (seleccion, niveles, effects, tabla de combate) |
-| UI de Armas | Parcial (8 armas, sin selector de effects) |
+| UI de Armas | Funciona (120 armas con stats 1-90, imagenes, filtro por tipo, buff base; pasivas complejas como texto en el roadmap) |
 | UI de Echos | No existe |
 | Sistema de equipos | No existe |
 | Optimizador | No existe |
@@ -48,6 +48,26 @@ build para un personaje contra un enemigo objetivo.
 
 > Nota: el deploy a GitHub Pages se pospuso hasta que el proyecto este mas usable.
 > Queda pendiente en la seccion "Pendientes de infraestructura" al final.
+
+### Sub-fase 1b -- Armas del juego (100% stats, pasivas parciales)
+
+> **Completado 2026-08-10:** las 120 armas con stats 1-90, second stat, rareza, tipo y
+> imagenes. El buff base (siempre activo) de cada pasiva esta modelado; las pasivas
+> complejas (condiciones de estado elemental, on/off-field, team buffs, DEF/RES ignore,
+> Amplify) se guardan como `description_raw` (texto visible pero sin efecto).
+
+Pendiente (sub-nivel: pasivas complejas 5★):
+- [ ] Modelar a mano los condicionales simples de las ~44 armas 5★ (buff tras Intro/Skill/
+      Liberation/Basic/Heavy con `onAction`) — ver `tools/weapons/five_star_catalog.cjs`
+- [ ] Extension del motor para condiciones de estado elemental (Glacio Chafe, Spectro
+      Frazzle, Tune Strain, Fusion Burst, Aero Erosion, Hack, Negative Statuses)
+- [ ] Extension del motor para buffs on/off-field y de equipo
+- [ ] DEF/RES ignore condicional por tipo de accion
+- [ ] Amplify (Deepen) elemental por condiciones
+- [ ] Confirmar tipos provisionales de Azure Oath y Firstlight's Herald (no en weapons.json)
+- [ ] Obtener imagenes de Azure Oath y Firstlight's Herald
+
+---
 
 ### Fase 2 -- Ecos + enemigo (~60/100)
 

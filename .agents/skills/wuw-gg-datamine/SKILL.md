@@ -1,7 +1,7 @@
 ---
 name: wuw-gg-datamine
-version: v2.3
-description: Dataminea datos de combate de Wuthering Waves (multiplicadores de habilidades, stats base por nivel, buffs, tiempos, resonance chain) desde wuthering.gg/characters y la Fandom Wiki, extendiendo los sliders y botones "Show Skill Details" vía scripting en el navegador (chrome-devtools MCP / evaluate_script). Usa esto cuando necesites extraer los multiplicadores con decimales de los skills, las stats de ascensión 1-90, o construir un .md de referencia de combate de un personaje de WuWa, o cuando trabajar en carpetas como combate-personajes/, echoes/, weapons/ o test-combat.ts.
+version: v2.4
+description: Dataminea datos de combate de Wuthering Waves (multiplicadores de habilidades, stats base por nivel, buffs, tiempos, resonance chain, PASIVAS Y STATS DE ARMAS) desde wuthering.gg/characters y la Fandom Wiki, extendiendo los sliders y botones "Show Skill Details" vía scripting en el navegador (chrome-devtools MCP / evaluate_script / CDP directo por Node). Usa esto cuando necesites extraer los multiplicadores con decimales de los skills, las stats de ascensión 1-90, las pasivas R1-R5 y stats de armas, o construir un .md de referencia de combate de un personaje de WuWa, o cuando trabajar en carpetas como combate-personajes/, echoes/, weapons/ o test-combat.ts.
 ---
 
 # Datamining de Wuthering Waves en wuthering.gg
@@ -210,12 +210,28 @@ Si `mcp__chrome-devtools__*` no responde (p.ej. tras un reinicio del entorno, o 
    google-chrome --headless=new --no-sandbox --disable-gpu --remote-debugging-port=9222 \
      --user-data-dir=/tmp/ww-cdp-profile --noerrdialogs --no-first-run --ozone-platform=headless about:blank &
    ```
-2. En Node (v22+ tiene `WebSocket` global y `fetch`), crea una tab (`GET/PUT /json/new?<url>`), conecta al `webSocketDebuggerUrl` y usa `Runtime.evaluate` con `awaitPromise`, `returnByValue:true` para ejecutar el MISMO JS de mover sliders (2.6/2.7/2.8).
+2. En Node (v22+ tiene `WebSocket` global y `fetch`), crea una tab (`PUT /json/new?<url>` — **no GET**, que el CDP rechaza con "Using unsafe HTTP verb"), conecta al `webSocketDebuggerUrl` y usa `Runtime.evaluate` con `awaitPromise`, `returnByValue:true` para ejecutar el MISMO JS de mover sliders (2.6/2.7/2.8).
 3. Espera la **hydration de Vue** (~3.5 s) y re-busca el slider `max="90.0"` antes de recorrer.
 4. Guarda el objeto grande con `fs.writeFileSync('/tmp/ww-asc/<slug>-asc.json', ...)`; imprime solo un resumen.
 5. Se puede recorrer todos los slugs en un bucle de Node/bash, creando una tab por personaje.
 
 > Ventajas: no depende del MCP, funciona en headless, y permite procesar 56 personajes en lotes. Es la técnica con la que se completaron las ascensiones de los 56 personajes.
+
+### 2.10 Armas (sliders de nivel y rango)
+
+Las páginas de armas (`wuthering.gg/weapons/<slug>`) tienen **2 sliders**:
+- **Slider 0**: nivel de arma (1-90) — controla ATK base y second stat.
+- **Slider 1**: rango (R1-R5) — controla la pasiva.
+
+Estructura del header: `.stats.head > .item > (.text .value)`. Dos items: el 1º es ATK base, el 2º el second stat (`"Crit. Rate"`, `"Energy Regen"`, etc.). El nombre de la arma está en `.stats.head h1 span`.
+
+Para extraer stats 1-90 y pasiva R1-R5 en una sola llamada `Runtime.evaluate`, mover el slider 0 con `ArrowLeft/Right` (sleep ~3ms por nivel) y leer `.stats.head .item .value`, luego mover el slider 1 (sleep ~60ms por rango) y leer el texto `Skill <name> <pasiva>` del `body`.
+
+**Hydration de Vue**: esperar **6-8s** tras cargar la página; con 2+ workers en paralelo subir a 8s (la CPU compite). Reintentar la detección de sliders hasta 6 veces (sleep 2.5s). **No usar 4+ workers**: saturan la CPU y falla la hydration; 2 es óptimo.
+
+Los datos se guardan a `/tmp/ww-weapons-data.json` (stats + passives) y se generan los `.json5` con `tools/weapons/generate_weapons.cjs`. Ver `docs/weapons-extraction.md` y `libs/ww/stats/src/weapons/README.md`.
+
+**Cuidado con slugs especiales**: nombres con `&` (ej. "Lux & Umbra" → slug `lux-&-umbra`) o apóstrofes rompen el slugify. Ver `tools/weapons/gen_missing.cjs`.
 
 ---
 
@@ -313,5 +329,11 @@ Sigue esta estructura para un `.md` de personaje en `combate-personajes/<slug>-c
   reales de habilidad (Lv1-Lv10).** Una versión previa del skill afirmaba que `max=19` → "Lv1-Lv9 reales".
   Eso es un error: el Lv10 está al inicio de la cola teórica cuando el slider es `max=19` (Jinhsi, Jianxin).
   Se guarda la progresión completa (real + teórica); el **motor usa 10** de momento. Ver sección 2.2.1.
+
+- **v2.4 (10/08/2026):** Añadida la **sección 2.10 (Armas)**. Documentado cómo extraer stats 1-90 y pasiva
+  R1-R5 de `wuthering.gg/weapons/<slug>` con 2 sliders (nivel + rango). Corrección: la creación de tab CDP
+  usa `PUT /json/new` (el GET da "Using unsafe HTTP verb"). Hallazgos de performance: esperar 6-8s de
+  hydration Vue (8s con workers paralelos), **máx 2 workers** por CPU, slugs con `&`/apóstrofe requieren
+  manejo especial (`tools/weapons/gen_missing.cjs`).
 
 > **Cuando actualices:** describe aquí el cambio y bump de versión en la cabecera.

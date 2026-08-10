@@ -324,7 +324,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
                 const stacks = state?.stacks ?? 1;
                 const desc = effect.descriptionTemplate
                   ? formatDescription(effect.descriptionTemplate, effect.modifiers || [], state?.rank || 0)
-                  : effect.name;
+                  : (effect.description_raw || effect.name);
 
                 return (
                   <div key={effect.id} className="p-4 rounded-xl border" style={{ borderColor: isOn ? 'var(--accent)' : 'var(--border)', backgroundColor: 'var(--bg-card)', opacity: isOn ? 1 : 0.5 }}>

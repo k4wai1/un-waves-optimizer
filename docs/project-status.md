@@ -12,7 +12,7 @@
 | 56 personajes en JSON5 | Completos | Stats 1-90, actions con multipliers 1-10, effects, statNodes de encore.moe. |
 | Sistema de efectos | Funciona | Paths universales (stat.*, enemy.*, action.*, actionType.*), stacks, ranks, legacy compat. |
 | UI de Resonator | Funciona | Seleccion, nivel, S-rank, skill levels, stat nodes toggleables, effects toggleables, tabla de combate. |
-| UI de Armas | Parcial | 8 armas. Selector de arma, nivel, rank, stacks. Sin UI de effects de arma. |
+| UI de Armas | Funciona | 120 armas con stats 1-90, second stat, images, filtro por tipo de arma. Buff base modelado; pasivas complejas como texto visible. |
 | Tests | 43/43 verdes | Cubren motor, effectResolver y los 4 bugs de fidelidad. No cubren UI. |
 | Generator md2json5 | Funciona | Genera specs desde .md de wuthering.gg. Deriva kind automaticamente. |
 | Skill de datamine | Funciona | `.agents/skills/wuw-gg-datamine/` documentado y verificado en 56 personajes. |
@@ -20,11 +20,14 @@
 
 ## Lo que falta (los 68 puntos)
 
-### Armas (6 puntos)
+### Armas (3 puntos)
 
-- Solo 8 armas de 50+
-- Sin UI para activar/desactivar effects de arma
-- Los effects de arma ya se cargan en el context y se aplican al dano, pero no se muestran en la UI de armas
+- Las 120 armas estan implementadas con stats 1-90 y imagenes.
+- El buff base de cada pasiva esta modelado; las pasivas complejas (condiciones de
+  estado elemental, on/off-field, team, DEF/RES ignore, Amplify) son `description_raw`
+  (texto, sin efecto). Ver ROADMAP.md Sub-fase 1b.
+- Pendiente: modelar condicionales simples 5★, extension del motor para estados
+  elementales, tipos provisionales de Azure Oath/Firstlight's Herald.
 
 ### Ecos (15 puntos)
 
