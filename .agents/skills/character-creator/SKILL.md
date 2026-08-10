@@ -179,7 +179,23 @@ Los Outro Skills y amplificaciones usan `dmgAmplify_` (categoría multiplicativa
 }
 ```
 
-⚠️ Nota: actualmente `dmgAmplify_` es global. Deepen por tipo (ej. "Heavy Attack DMG Deepen") aún no se soporta — ver `docs/engine-accuracy.md` Bug 4.
+**Deepen por tipo (fixeado en `f97f33ac`):** si el Deepen aplica solo a un tipo de
+acción (ej. "Heavy Attack DMG Deepen"), usa el path específico en vez de `dmgAmplify_`:
+
+| Path | Aplica a |
+|---|---|
+| `stat.basicAmplify` | Basic Attacks |
+| `stat.heavyAmplify` | Heavy Attacks |
+| `stat.skillAmplify` | Resonance Skills |
+| `stat.liberationAmplify` | Resonance Liberations |
+| `stat.coordinatedAmplify` | Coordinated Attacks |
+
+```json5
+{ "target": { "type": "stat", "id": "heavyAmplify_" }, "value": [0.38] }
+```
+
+⚠️ Ojo: los paths declarativos son en forma corta sin suscriptor (`stat.basicAmplify`)
+pero el legacy usa la key del context (`basicAmplify_`). El motor mapea ambos.
 
 ## 6. StatNodes (8 nodos)
 

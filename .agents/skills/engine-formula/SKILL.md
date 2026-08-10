@@ -29,9 +29,9 @@ D_final = (S * MV + D_flat + D_bonus)
 | `M_DEF` | Defensa | `defMultiplierFn()` en calculator.ts |
 | `M_DR` | Reducción de daño | `context.enemy.damageTaken` |
 | `M_ER` | Reducción elemental | no separado; va en `damageTaken` |
-| `B_i` | DMG Bonus % aditivo | `context.allDmgBonus_ + elementalBonus + typeBonus` |
-| `A_j` | Deepen/Amplify | `context.dmgAmplify_` |
-| `P_k` | Bonos especiales | NO implementado aún (ver Bug 3) |
+| `B_i` | DMG Bonus % aditivo | `allDmgBonus_ + elementalBonus + actionTypeBonus()` |
+| `A_j` | Deepen/Amplify | `dmgAmplify_` global + `actionTypeAmplify()` por tipo (basicAmplify_, skillAmplify_, etc.) |
+| `P_k` | Bonos especiales | `specialDmgMult_` (implementado; los 4 bugs de fidelidad están FIXEADOS, ver estado abajo) |
 | `M_crit` | Crítico | `critDmg_` (crit), 1 (no crit), promedio con `critRate_` |
 
 ## Archivos clave
@@ -66,16 +66,19 @@ Shield  = (flat + stat*MV) * (1 + shieldBonus_)
 - Usan `replaceOnly: true` para ignorar Add/Multiply de actionType y solo honrar `Replace`
 - Verificado en tests: `combatMechanics.spec.ts`
 
-## Bugs conocidos (ver docs/engine-accuracy.md)
+## Bugs de fidelidad (docs/engine-accuracy.md)
 
-| Bug | Estado |
-|---|---|
-| 1. DEF enemigo por defecto 792 → debe ser 1600 (M_DEF=0.5 a niveles iguales) | NO FIXEADO |
-| 2. `basicAttackDmgBonus_` etc. no se aplican en `calculateDamage()` | NO FIXEADO |
-| 3. Falta categoría P_k (`specialDmgMult_`) | NO FIXEADO |
-| 4. `dmgAmplify_` global vs Deepen por tipo | NO FIXEADO (ver Bug 2) |
+> **Estado: FIXEADO (2026-08-09, commit `f97f33ac`, verificado en navegador).**
+> Histórico de lo que se corrigió para referencia:
 
-Antes de tocar el motor, lee `docs/engine-accuracy.md` — documenta los fixes propuestos.
+| Bug | Fix | Verificación |
+|---|---|---|
+| 1. DEF enemigo 792 → 1600 (M_DEF=0.5 a niveles iguales) | `DEFAULT_ENEMY.defense = 1600` | M_DEF = 0.5 a Lc=Le=100 |
+| 2. `basicAttackDmgBonus_` etc. no se aplicaban | `calculateDamage` recibe `actionType` y suma bonus por tipo vía `actionTypeBonus()` | Basic DMG +16% → Stage 1 40→46, sin tocar skill/heal |
+| 3. Faltaba categoría P_k | `specialDmgMult_` multiplicativa | ratio 1.10 exacto |
+| 4. `dmgAmplify_` global vs Deepen por tipo | `basicAmplify_`, `skillAmplify_`, etc. vía `actionTypeAmplify()` | `skillAmplify_` 1.38 solo a skills |
+
+Si encuentras una nueva discrepancia, lee `docs/engine-accuracy.md` y añádela ahí como Bug 5+.
 
 ## Cómo depurar una discrepancia
 

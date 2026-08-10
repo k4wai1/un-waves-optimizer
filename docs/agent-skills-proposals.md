@@ -43,7 +43,7 @@ Explica la formula de dano de WuWa y como el motor la implementa.
 Cubre:
 - La ecuacion completa (D_final)
 - Como cada multiplicador se mapea a codigo
-- Bugs conocidos y como fixearlos
+- El historial de bugs de fidelidad y sus fixes (ya resueltos, commit `f97f33ac`)
 - Como depurar discrepancias con el juego
 
 ## Ideas futuras (no implementadas)

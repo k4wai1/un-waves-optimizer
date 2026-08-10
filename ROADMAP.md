@@ -14,11 +14,15 @@ build para un personaje contra un enemigo objetivo.
 
 ---
 
-## Estado actual: ~25/100
+## Estado actual: ~32/100
+
+> **Actualizado 2026-08-09:** el motor ahora cumple la formula oficial
+> (bugs 1-4 de `docs/engine-accuracy.md` fixeados y verificados en navegador).
+> La Fase 1 queda solo con el deploy a GitHub Pages pendiente.
 
 | Componente | Estado |
 |---|---|
-| Motor de dano/cura/escudo | Funciona, pero con bugs vs la formula oficial |
+| Motor de dano/cura/escudo | Funciona, fiel a la formula oficial (def/res/crit/bonus por tipo/P_k/deepen) |
 | 56 personajes en JSON5 | Completos (stats, actions, effects, statNodes) |
 | Sistema de efectos declarativo | Funciona (paths, stacks, ranks) |
 | UI de Resonator | Funciona (seleccion, niveles, effects, tabla de combate) |
@@ -26,27 +30,24 @@ build para un personaje contra un enemigo objetivo.
 | UI de Echos | No existe |
 | Sistema de equipos | No existe |
 | Optimizador | No existe |
-| Deploy a GitHub Pages | No configurado |
-| Documentacion del formato | Parcial (READMEs en libs/) |
+| Deploy a GitHub Pages | No configurado (dejado para mas adelante) |
+| Documentacion del formato | Parcial (READMEs + engine-accuracy.md) |
 
 ---
 
 ## Fases
 
-### Fase 1 -- Motor fiel al juego + deploy basico (~40/100)
+### Fase 1 -- Motor fiel al juego (~32/100)
 
-**Objetivo:** el dano calculado coincide con el juego. La web esta publica.
+**Objetivo:** el dano calculado coincide con la formula oficial del juego.
 
-- [ ] Fix bug DEF enemigo por defecto (792 -> 1600)
-  - Ver `docs/engine-accuracy.md` seccion 1
-- [ ] Fix bug bonus de dano por tipo no se aplica
-  - `basicAttackDmgBonus_`, `heavyAttackDmgBonus_`, etc. existen pero `calculateDamage()` no los usa
-  - Ver `docs/engine-accuracy.md` seccion 2
-- [ ] Anadir categoria P_k (bonos especiales multiplicativos)
-  - Ver `docs/engine-accuracy.md` seccion 3
-- [ ] Configurar `base` path en Vite para GitHub Pages
-- [ ] Workflow de deploy automatico a GitHub Pages
-- [ ] Build estatica funcional y accesible publicamente
+- [x] Fix bug DEF enemigo por defecto (792 -> 1600) — commit `f97f33ac`
+- [x] Fix bug bonus de dano por tipo no se aplica — commit `f97f33ac`
+- [x] Anadir categoria P_k (bonos especiales multiplicativos) — commit `f97f33ac`
+- [x] Fix Deepen por tipo (basicAmplify_, skillAmplify_, etc.) — commit `f97f33ac`
+
+> Nota: el deploy a GitHub Pages se pospuso hasta que el proyecto este mas usable.
+> Queda pendiente en la seccion "Pendientes de infraestructura" al final.
 
 ### Fase 2 -- Ecos + enemigo (~60/100)
 
@@ -96,6 +97,18 @@ build para un personaje contra un enemigo objetivo.
 - [ ] Buscador de personajes con imagenes
 - [ ] Compartir builds via URL
 - [ ] Modo oscuro/claro pulido
+
+---
+
+## Pendientes de infraestructura (pospuestos)
+
+> Estas tareas se dejaron para cuando el proyecto este en un estado mas usable.
+> No bloquean el desarrollo del motor, los datos ni la UI.
+
+- [ ] Configurar `base` path en Vite para GitHub Pages
+- [ ] Workflow de deploy automatico a GitHub Pages
+- [ ] Build estatica funcional y accesible publicamente
+- [ ] Migrar/quitar el workflow del monorepo padre (`.github/workflows/deploy-frontend.yml`)
 
 ---
 
