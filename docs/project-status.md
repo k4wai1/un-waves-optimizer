@@ -1,8 +1,11 @@
-# Estado del proyecto: ~32/100
+# Estado del proyecto: ~37/100
 
-> Evaluacion honesta del estado actual. Actualizado: 2026-08-09.
-> Actualizacion clave: los 4 bugs del motor (def/res/bonus por tipo/P_k/deepen)
-> fueron fixeados y verificados en navegador (commit `f97f33ac`).
+> Evaluacion honesta del estado actual. Actualizado: 2026-08-10.
+> Actualizaciones clave:
+> - Los 4 bugs del motor (def/res/bonus por tipo/P_k/deepen) fixeados y verificados
+>   en navegador (commit `f97f33ac`). Ver `docs/engine-accuracy.md`.
+> - Las **120 armas** del juego implementadas (stats 1-90, imagenes, buff base 45/45 5★).
+>   Ver `docs/weapons-extraction.md` y `docs/engine-extensions.md`.
 
 ## Lo que funciona (los 32 puntos)
 

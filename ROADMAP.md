@@ -4,6 +4,24 @@
 > Wuthering Waves, o editar un personaje solamente editando un `.json5`.
 > Inspirado en genshin-optimizer, pero amigable para no-programadores.
 
+## Para quien lee esto por primera vez
+
+Este proyecto es un **calculador de daño de Wuthering Waves**. Funciona así:
+
+1. **Los datos** (personajes, armas, enemigos) están en archivos `.json5` dentro de
+   `libs/ww/stats/src/`. Se editan sin programar.
+2. **El motor** (`app/ww-frontend/src/engine/`) lee esos archivos y calcula daño,
+   curación y escudo.
+3. **La web** (`app/ww-frontend/`) es una interfaz para elegir personaje, arma, niveles
+   y ver los números.
+
+Dónde empezar a leer:
+- `Wuthering_Waves_Multiplicadores.md` (raíz) — la fórmula oficial del juego
+- `docs/engine-accuracy.md` — bugs del motor ya fixeados
+- `docs/engine-extensions.md` — cómo el motor soporta las armas
+- `docs/weapons-extraction.md` — de dónde salieron las 120 armas
+- `libs/ww/stats/src/weapons/README.md` — cómo crear una arma a mano
+
 ## Vision
 
 El proyecto tiene un motor declarativo: personajes, armas, ecos y enemigos se definen en
@@ -14,11 +32,12 @@ build para un personaje contra un enemigo objetivo.
 
 ---
 
-## Estado actual: ~32/100
+## Estado actual: ~37/100
 
-> **Actualizado 2026-08-09:** el motor ahora cumple la formula oficial
-> (bugs 1-4 de `docs/engine-accuracy.md` fixeados y verificados en navegador).
-> La Fase 1 queda solo con el deploy a GitHub Pages pendiente.
+> **Actualizado 2026-08-10:** el motor cumple la formula oficial (bugs 1-4 de
+> `docs/engine-accuracy.md` fixeados) y las **120 armas** del juego estan implementadas
+> (stats 1-90, imagenes, buff base modelado). Pendiente principal: ecos, equipos y el
+> optimizador (Fases 2-4).
 
 | Componente | Estado |
 |---|---|
@@ -26,12 +45,12 @@ build para un personaje contra un enemigo objetivo.
 | 56 personajes en JSON5 | Completos (stats, actions, effects, statNodes) |
 | Sistema de efectos declarativo | Funciona (paths, stacks, ranks) |
 | UI de Resonator | Funciona (seleccion, niveles, effects, tabla de combate) |
-| UI de Armas | Funciona (120 armas con stats 1-90, imagenes, filtro por tipo, buff base; pasivas complejas como texto en el roadmap) |
+| UI de Armas | Funciona (120 armas con stats 1-90, imagenes, filtro por tipo, buff base 45/45 5★; pasivas complejas como texto visible) |
 | UI de Echos | No existe |
 | Sistema de equipos | No existe |
 | Optimizador | No existe |
 | Deploy a GitHub Pages | No configurado (dejado para mas adelante) |
-| Documentacion del formato | Parcial (READMEs + engine-accuracy.md) |
+| Documentacion del formato | Parcial (READMEs + engine-accuracy.md + engine-extensions.md + weapons-extraction.md) |
 
 ---
 
@@ -52,13 +71,18 @@ build para un personaje contra un enemigo objetivo.
 ### Sub-fase 1b -- Armas del juego (100% stats, pasivas parciales)
 
 > **Completado 2026-08-10:** las 120 armas con stats 1-90, second stat, rareza, tipo y
-> imagenes. El buff base (siempre activo) de cada pasiva esta modelado; las pasivas
-> complejas (condiciones de estado elemental, on/off-field, team buffs, DEF/RES ignore,
-> Amplify) se guardan como `description_raw` (texto visible pero sin efecto).
+> imagenes. El buff base (siempre activo) de cada pasiva esta modelado como efecto real
+> (**45/45 armas 5★**). Las pasivas complejas (condiciones de estado elemental,
+> on/off-field, team buffs, DEF/RES ignore, Amplify) se guardan como `description_raw`
+> (texto visible pero sin efecto en el calculo).
+>
+> Detalles: `docs/weapons-extraction.md` (de donde salen los datos) y
+> `docs/engine-extensions.md` (que extensiones de motor se hicieron).
 
 Pendiente (sub-nivel: pasivas complejas 5★):
 - [ ] Modelar a mano los condicionales simples de las ~44 armas 5★ (buff tras Intro/Skill/
       Liberation/Basic/Heavy con `onAction`) — ver `tools/weapons/five_star_catalog.cjs`
+      y `docs/engine-extensions.md` seccion 3.3 (`condition.onAction`)
 - [ ] Extension del motor para condiciones de estado elemental (Glacio Chafe, Spectro
       Frazzle, Tune Strain, Fusion Burst, Aero Erosion, Hack, Negative Statuses)
 - [ ] Extension del motor para buffs on/off-field y de equipo
@@ -144,6 +168,9 @@ Pendiente (sub-nivel: pasivas complejas 5★):
 
 ## Como contribuir
 
+- **Primera vez leyendo:** empieza por "Para quien lee esto por primera vez" (arriba).
 - Para crear un personaje: copiar `CharacterTemplate.json5`, seguir `libs/ww/stats/src/resonators/README.md`.
+- Para crear/editar un arma: seguir `libs/ww/stats/src/weapons/README.md` y `docs/weapons-extraction.md`.
 - Para validar specs: usar el skill `spec-validator` (ver `.agents/skills/spec-validator/SKILL.md`).
-- Para entender el motor: leer `Wuthering_Waves_Multiplicadores.md` y `.agents/skills/engine-formula/SKILL.md`.
+- Para entender el motor: leer `Wuthering_Waves_Multiplicadores.md`, `docs/engine-accuracy.md`,
+  `docs/engine-extensions.md` y `.agents/skills/engine-formula/SKILL.md`.
