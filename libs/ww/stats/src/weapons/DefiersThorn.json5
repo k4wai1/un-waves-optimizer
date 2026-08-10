@@ -207,6 +207,28 @@
   "actions": [],
   "effects": [
     {
+      "id": "defiersthorn_base",
+      "name": "Defiers Thorn",
+      "descriptionTemplate": null,
+      "target": "stat.hp_",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.12,
+            0.15,
+            0.18,
+            0.21,
+            0.24
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
       "id": "defiersthorn_passive",
       "name": "Pasiva: Defiers Thorn",
       "descriptionTemplate": null,

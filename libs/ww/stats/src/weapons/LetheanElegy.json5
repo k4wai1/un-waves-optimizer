@@ -207,6 +207,28 @@
   "actions": [],
   "effects": [
     {
+      "id": "letheanelegy_base",
+      "name": "Lethean Elegy",
+      "descriptionTemplate": null,
+      "target": "stat.atk_",
+      "modifiers": [
+        {
+          "operation": "Add",
+          "valueType": "Percent",
+          "value": [
+            0.12,
+            0.15,
+            0.18,
+            0.21,
+            0.24
+          ]
+        }
+      ],
+      "maxStacks": 1,
+      "exclusive": false,
+      "enabledByDefault": true
+    },
+    {
       "id": "letheanelegy_passive",
       "name": "Pasiva: Lethean Elegy",
       "descriptionTemplate": null,

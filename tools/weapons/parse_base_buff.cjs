@@ -25,53 +25,65 @@ const COND_START = /When |After |Upon |Casting |Every |Dealing |While |Within |G
 
 const clean = (s) => (s || '').split(' About')[0].trim();
 
-// Quita el nombre de la habilidad (la descripción empieza en un verbo de buff o "<stat> is increased")
+// Quita el nombre de la habilidad (la descripción empieza en un verbo de buff).
+// Quita el nombre de la habilidad (nombres tipo "Stormy Resolution", "Thread of Fate", etc.).
+// Solo corta si hay un verbo de buff (Increases/Grants/Gain/Increase) cerca del inicio,
+// NO en condiciones posteriores ("When/Upon/Dealing" que aparecen en medio de la pasiva).
 function stripSkillName(s) {
-  const m = s.match(/(Increases?|Grants?|Gain|Increase|is increased by|Restore|Casting |When |Dealing |Provide|While |Every |Within |Equipped )/i);
-  if (m && m.index > 0) return s.slice(m.index).trim();
+  // Si ya empieza con un verbo de buff → es descripción, sin nombre que quitar.
+  if (/^(Increases?|Grants?|Gain|Increase|Restore)\b/i.test(s)) return s;
+  // Buscar "Increases/Grants/Gain/Increase" precedido por el nombre del skill.
+  const m = s.match(/[\s.;](Increases?|Grants?|Gain|Increase|Restore)\b/i);
+  if (m && m.index > 0) return s.slice(m.index + 1).trim();
+  // Si no hay verbo de buff, devolver tal cual (el parser buscará "<Stat> is increased by").
   return s;
 }
 
 // Extrae { stat, value, maxStacks } del passive
 function parseBaseBuff(passives) {
   const r1 = clean(passives['1'] || '');
-  const body = stripSkillName(r1);
-  const head = body.split(/\.\s/)[0]; // primera oración
+  // NO aplicamos stripSkillName aquí: el buff base ("X is increased by P%" o
+  // "Increases/Grants P% X") siempre aparece al inicio de la descripción, tras el
+  // nombre de la pasiva. Buscamos directamente en el texto completo.
+  const body = r1;
+  const justHead = body.split(/[.;]\s/)[0];
 
-  // ¿la primera oración es un buff incondicional? (empieza con verbo o "<stat> is increased", no con condición)
-  if (COND_START.test(head) && !/^(increases?|grants?|gain|increase|[a-z]+dmg)/i.test(head)) {
-    return null;
+  // A) "<Stat> is increased by P%" — el stat puede venir precedido del nombre del skill
+  const byPct = justHead.match(/([A-Za-z][\w .%-]{1,26}) is (?:being )?increased by ([\d.]+)%/i);
+  if (byPct) {
+    const statPath = findBestStat(byPct[1]);
+    if (statPath) return buildResult(statPath, passives, body);
   }
+  // B) "Increases <Stat> by P%" o "Grants/Gain P% <Stat>" al inicio
+  const inc = justHead.match(/^(Increases?|Grants?|Gain|Increase) ([A-Za-z][\w .%-]{1,24}?) by ([\d.]+)%/i)
+    || justHead.match(/(?:Increases?|Grants?|Gain) ([\d.]+)% ([A-Za-z][\w .%-]{1,24}?)(?:[.,]|$)/i);
+  if (inc) {
+    const statRaw = inc[2] || inc[3];
+    const statPath = findBestStat(statRaw);
+    if (statPath) return buildResult(statPath, passives, body);
+  }
+  return null;
+}
 
-  // patrón: "<Stat> is increased by P%" o "Increases <Stat> by P%" (m[1]=stat, m[2]=pct)
-  //         o "Grants/Gain P% <Stat>" (m2[1]=pct, m2[2]=stat)
-  const byPct = head.match(/^(.+?) is (?:being )?increased by ([\d.]+)%/i)
-    || head.match(/^Increases? (.+?) by ([\d.]+)%/i);
-  const grantsPct = head.match(/(?:Grants?|Gain|Increase) ([\d.]+)% (.+?)(?:[.,]|$)/i);
+// encuentra el stat de NAME_MAP que mejor matchea dentro de un texto (que puede incluir nombre del skill)
+function findBestStat(raw) {
+  const t = String(raw || '').trim().replace(/[.,]/g, '');
+  for (const [re, path] of NAME_MAP) {
+    if (re.test(t)) return path;
+  }
+  return null;
+}
 
-  let statName = null, pct = null;
-  if (byPct) { statName = byPct[1]; pct = parseFloat(byPct[2]); }
-  else if (grantsPct) { statName = grantsPct[2]; pct = parseFloat(grantsPct[1]); }
-  else return null;
-
-  // normalizar nombre del stat (quitar sufijos raros del nombre de skill)
-  statName = String(statName).trim().replace(/[.,]/g, '');
-  const matched = NAME_MAP.find(([re]) => re.test(statName));
-  if (!matched) return null;
-  const stat = matched[1];
-
-  // valor por rango
+function buildResult(stat, passives, body) {
   const vals = [];
   for (let r = 1; r <= 5; r++) {
     const pr = clean(passives[r] || '');
-    const b2 = stripSkillName(pr);
-    const vm = b2.match(/(?:increased by|Increases?|Gain|Grants?|by) (\d+(?:\.\d+)?)%/i);
+    // buscar el valor % del buff base en cada rango (el primero que aparezca tras el buff)
+    const vm = pr.match(/(?:increased by|is increased by|Increases?|Gain|Grants?|by)\s?([\d.]+)%/i);
     vals.push(vm ? parseFloat(vm[1]) / 100 : null);
   }
   if (vals.some(v => v === null)) return null;
-
-  // stacks: si el buff base dice "stacking up to N" en la primera oración
-  const stM = r1.match(/stacking up to (\d+)/i);
+  const stM = (body || '').match(/stacking up to (\d+)/i);
   return { stat, value: vals, maxStacks: stM ? parseInt(stM[1], 10) : 1 };
 }
 
