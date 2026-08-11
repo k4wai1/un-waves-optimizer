@@ -99,7 +99,7 @@ fue el punto de partida.
 
 ## Autor
 
-Hola, soy **vibre coder**. Hice esto por curiosidad y por las ganas de aportar algo al
+Hola, soy **vibe coder**. Hice esto por curiosidad y por las ganas de aportar algo al
 juego **Wuthering Waves**. No soy un equipo ni un proyecto organizado: es un pasatiempo
 personal, y lo comparto por si a alguien le resulta útil o interesante.
 
