@@ -20,7 +20,7 @@
 
 | Estado | Elemento | Tipo | Stack máx | Data |
 |---|---|---|---|---|
-| Glacio Chafe | Glacio | Daño al aplicar + slow + freeze | 10 | ❌ daño/tick sin confirmar |
+| Glacio Chafe | Glacio | Daño al aplicar + slow + freeze | 10 (13 c/Chisa·Suisui) | ✅ CONFIRMADO (Gemini) |
 | Spectro Frazzle | Spectro | DoT (escala por stack) | 10 | ⚠️ daño: muestra, no %ATK |
 | Fusion Burst | Fusion | Explosión al llegar a 10 stacks | 10 | ❌ daño de explosión sin confirmar |
 | Aero Erosion | Aero | DoT (escala por stack) | 3 (6 c/Aero Rover) | ⚠️ daño: muestra, no fórmula |
@@ -40,18 +40,36 @@
 > Resonador, DEF y RES del enemigo** (✅ Frazzle y Erosion; ❌ por verificar en los otros).
 > El daño se basa en el último personaje que aplicó un stack.
 
-### 1.1 Glacio Chafe (Glacio) — ❌ daño sin confirmar
-- **Daño:** se inflige en el **momento de aplicar cada stack** (no es DoT periódico).
-  Escala con stacks. ❌ no hay % de daño público (v2.8: el usuario marcó info previa como inútil).
-- **Stacks:** 10 por defecto. Cada stack reduce velocidad de movimiento. Al llegar a 10 → congela y elimina stacks (Frostbind en Hiyuki).
-- **Duración:** ~19 s (⚠️ aproximado). Refresca al aplicar nuevo stack.
-- **RES:** ❌ no reduce Glacio RES (solo slow + freeze).
-- **Condición:** se aplica al recibir daño Glacio de enemigos, o por ataques stackeables. Usuarios: **Hiyuki** (5★, Glacio, Sword, v3.3), **Lucilla** (5★, Glacio, Rectifier, v3.4).
+### 1.1 Glacio Chafe (Glacio) — ✅ CONFIRMADO (Gemini 2026-08-11)
+- **Daño:** se inflige **instantáneo en el momento de aplicar cada stack** (NO DoT; sin ticks).
+  NO escala con ATK ni Crit: escala con **nivel del que aplica** + DEF/RES enemigo + **Amp**.
+- **Fórmula NS determinista** (punto fijo ×10000, `Math.floor`):
+  `DMG = LevelModifier × (1+MvModifier%) × (StacksMV/10000) × DefModifier% × ResistModifier% × (1+Amp%)`
+- **Amp** = solo "NS/Glacio Chafe DMG Amplification" (Frostburn, Outros). El **DMG Bonus**
+  convencional NO aplica al NS.
+- **StacksMV** depende del **límite máximo**, no de stacks activos (1ª = 9ª aplicación):
+  - Límite 10 → **MV = 2.0377** (20377). Límite 13 (Chisa/Suisui) → **MV = 4.0753** (40753).
+- **Stacks:** 10 por defecto. Cada stack ralentiza. Al llegar al límite → **congela**, purga a 0.
+- **Duración:** ~19 s, refresca al aplicar. ✅ No reduce Glacio RES (solo slow + freeze).
 - **Personajes:**
-  - **Hiyuki:** 1 stack con varios básicos/pesados; convierte Chafe cercano en "Glacio Bite" (cuenta como Chafe; 10+ stacks → Frostbind = congelar + daño pesado ❌). Su presencia amplifica +20% Glacio DMG de aliados contra Chafe (20s).
-  - **Lucilla:** aplica consistentemente; Outro amplifica +60% daño de Chafe (30s); aplicar Chafe → +30% Glacio DMG (14s).
-  - Sinergia: Chisa sube el límite de Chafe de 10 → 13.
-- **Fuentes:** Game8 `archives/558103`, fandom `wiki/Glacio_Chafe`, Prydwen Hiyuki, Society/Sportskeeda Lucilla (⚠️ tercio).
+  - **Hiyuki** (v3.3, Sword): al entrar, reclasifica Chafe → **Glacio Bite** (hereda "Chafe DMG").
+    Con 2 "Snow Rust", cada aplicación dispara **2 instancias**: Max-Stacks Proc (MV dinámico)
+    + Fixed 102% MV. Inward Vision → 4 stacks; Iai → 3. A ≥10 Bites, Inward Vision/Iai detonan
+    **Frostbind** (consume 10, daño masivo, sin freeze default). Su arma **Frostburn**: +28%
+    Chafe Amp; si es activa, +20% Chafe Amp global.
+  - **Lucilla** (v3.4, Rectifier): Outro "Montage" **+60% Chafe Amp** (30s). Pasiva **Film Roll**:
+    si un aliado aplica Chafe, gasta 1 → aplica **2 stacks extra** off-field (crea bucles densos). Arma **Freeze Frame**: +30% Glacio DMG, +24% ATK equipo.
+  - **Chisa** ("Unraveling - Law Zero"): **+3 stack NS** (10→13, MV 2.0377→4.0753) por 15s;
+    **Thread of Bane** DEF Shred -18%. Freeze default se posterga a 13, pero Frostbind sigue consumiendo 10 (margen de 3).
+  - **Suisui** (v3.5, Rectifier): "Ceaseless Landscape" +3 stack NS; Outro **+25% All DMG Amp**
+    (30s) + ATK% por ER. Aplica Chafe con "Awakening Spring" y básico "Cleansing Rain" Stage 4.
+- **Implementación:** `StatusManager` evento-dirigido; pipeline `emit APPLY_STATUS` → interceptor
+  (Chafe→Bite, maxStacksLimit) → triggers reactivos (Film Roll) → cálculo NS entero → reconciliation
+  (`if stacks>=maxStacksLimit → FREEZE + reset`). Edge: overflow se procesa stack por stack;
+  orden DEF Shred antes de DEF Ignore; GC de Bite si Hiyuki+Lucilla salen.
+  Ver detalle completo en `docs/investigacion-estados/glacio-chafe.md`.
+- **Fuentes:** Gemini 2026-08-11 (respuesta arquitectónica/matemática); refrendar números exactos
+  (2.0377, 4.0753, 102%, 19s) contra Game8 `archives/558103` y fandom `wiki/Glacio_Chafe` antes de implementar.
 
 ### 1.2 Spectro Frazzle (Spectro) — ⚠️ muestra, sin fórmula
 - **Daño por tick (DoT):** consume 1 stack por tick. Escala con nº de stacks.
@@ -169,7 +187,6 @@ acciones de algunos Resonadores. El motor **no los modela** todavía.
 
 ## 5. Pendientes de confirmar (búsquedas profundas con IA de Google)
 
-- [ ] **Glacio Chafe:** daño por stack (número o %ATK), fórmula de escalado (¿ATK?, ¿nivel?), duración exacta (19s = aprox), ¿reduce Glacio RES?, daño de Frostbind (Hiyuki, 10+ Bite stacks).
 - [ ] **Spectro Frazzle:** confirmar la tabla por stack con fuente y en nivel fijo (la muestra es de un Guidebook con espectro específico), ¿reduce Spectro RES?
 - [ ] **Fusion Burst:** daño de la explosión (10 stacks) en %ATK o valor, ¿a cuánto sube el límite con Chisa?, confirmar que no reduce Fusion RES.
 - [ ] **Aero Erosion:** daño por tick y fórmula, confirmar que no usa ATK, duración exacta.
