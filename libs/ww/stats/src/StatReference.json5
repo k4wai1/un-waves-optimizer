@@ -74,6 +74,7 @@
     "hp":              "HP del enemigo (informativo)",
     "defense":         "DEF del enemigo (aditivo, -20% = -0.20)",
     "damageTaken":     "Multiplicador de daño recibido (multiplicativo, 1.15 = +15%)",
+    "damageReduction": "Reducción de Daño absoluta M_DR del enemigo (aditivo, 0.15 = 15%)",
     "glacioRes":       "Resistencia Glacio del enemigo (aditivo, -10% = -0.10)",
     "fusionRes":       "Resistencia Fusion del enemigo",
     "electroRes":      "Resistencia Electro del enemigo",

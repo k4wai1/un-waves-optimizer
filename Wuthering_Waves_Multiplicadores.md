@@ -44,7 +44,19 @@ Calcula la resistencia elemental base del enemigo y se le resta tu Penetración 
 3.  **Alta Resistencia ($R \geq 0.8$):** `1 / (1 + 5R)`. Fórmula que entra en juego contra entidades inmunes o híper resistentes a cierto elemento.
 
 ### Multiplicador de Reducción de Daño ($M_{DR}$) y Elemento ($M_{ER}$)
-Suelen aplicarse como barreras absolutas mecánicas propias de los *bosses* mediante $1 - (\text{Base} + \text{Adicional})$. 
+$M_{ER}$ (Elemento) **es sinónimo de $M_{RES}$** (resistencia elemental): no hay un
+término separado; la resistencia ya cubre el rol con la fórmula de 3 ramas de arriba.
+
+$M_{DR}$ (Reducción de Daño) es una **barrera absoluta** propia de los jefes, separada
+y multiplicativa de $M_{RES}$, $M_{DEF}$ y del daño recibido:
+
+$$M_{DR} = \max(0,\ 1 - \text{dmgReduction})$$
+
+- $\text{dmgReduction}$ en decimal (0.15 = 15%).
+- Las fuentes de DR se suman aditivamente antes de aplicar el multiplicador (15% ToA
+  + 35% Taoqi + ... → DR_total = suma). Sin cap documentado.
+- Ejemplos reales: ToA floors 3-4 → 15% DR (M_DR = 0.85); Bell-Borne Geochelone → 50% DR.
+- Se aplica al final de la cadena multiplicativa, junto a $M_{DEF}$ / $M_{RES}$ / daño recibido.
 
 ---
 

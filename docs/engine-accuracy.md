@@ -235,7 +235,63 @@ Deepen por tipo en lugar de uno global.
 
 ---
 
-## Checklist de verificacion
+## M_DR (Reducción de Daño) y M_ER (Elemento)
+
+**Estado: PARCIALMENTE IMPLEMENTADO (2026-08-11).**
+M_DR añadido al motor; M_ER aclarado como sinónimo de M_RES (sin campo nuevo).
+
+**Investigación web completada** (vía chat.deepseek.com, 3 búsquedas). Fuentes:
+- `wutheringwaves.fandom.com/wiki/DMG_RES`
+- `wutheringwaves.gg/damage-calculation-guide`
+- `game8.co/games/Wuthering-Waves/archives/453474` (ToA Guide)
+- `beatcopgame.com/wuthering-waves-tier-list-wuwa/` (ToA modifiers)
+- `primagames.com/gaming/wuthering-waves-elemental-weaknesses-and-resistances-explained`
+- `west-games.com/wuthering-waves-damage-calculator/`
+
+### Conclusiones
+
+- **M_ER NO existe como término separado.** Es **sinónimo de M_RES** (resistencia
+  elemental). La resistencia se calcula con la fórmula de 3 ramas ya implementada:
+  `R<0 → 1-(R/2)`, `0≤R<0.8 → 1-R`, `R≥0.8 → 1/(1+5R)`. **No se añade campo nuevo.**
+- **M_DR SÍ es real** y NO estaba implementado: es la barrera de reducción de daño
+  absoluta de los bosses, **separada y multiplicativa** de M_RES, M_DEF y `damageTaken`.
+
+```text
+M_DR = max(0, 1 - damageReduction)
+```
+
+- `damageReduction` va en **decimal** (0.15 = 15%) en `EnemyStats`.
+- Las fuentes de DR se **suman aditivamente** antes de aplicar el multiplicador
+  (p. ej. 15% ToA floors 3-4 + 35% Taoqi + ... → DR_total = suma).
+- **Sin cap documentado.** Clamp a ≥ 0 (floored en 0 para evitar multiplicador negativo).
+- **No hay evidencia de la forma `1/(1+DR)`**; todos los ejemplos reales usan `(1 - DR)`.
+
+### Casos reales confirmados
+
+| Caso | Valor | Tipo |
+|---|---|---|
+| ToA Floors 3-4 | 15% DMG reduction → M_DR = 0.85 | M_DR |
+| ToA All-Attribute RES +15% | sube M_RES, NO es M_DR | M_RES |
+| Bell-Borne Geochelone | 50% DR | M_DR |
+| Taoqi | 35% DR | M_DR |
+
+### Implementación en el motor
+
+- `calculator.ts`:
+  - `EnemyStats.damageReduction: number` (decimal, default 0).
+  - `damageReductionMultiplierFn(dr)` → `Math.max(0, 1 - dr)`.
+  - `calculateDamage` inserta `M_DR` en el `preCrit`: `baseDmg * bonusMult * defMult * resMult * damageTakenMult * drMult`.
+- `effectResolver.ts`: path `enemy.damageReduction` (aditivo, clamp ≥ 0).
+- `DEFAULT_ENEMY.damageReduction = 0` → retrocompatible.
+
+### Orden / agrupación
+
+Todo multiplicativo → el orden no cambia el resultado numérico. Por convención
+(comunidad): `Base × (1+ΣB) × (1+ΣA) × (1+ΣP) × M_crit × M_DEF × M_RES × M_DR × damageTaken`.
+
+Tests nuevos en `combatMechanics.spec.ts` (M_DR y M_ER): 10 casos añadidos, 53/53 verdes.
+
+---
 
 Despues de aplicar los fixes:
 

@@ -24,8 +24,14 @@ export interface EnemyStats {
     spectro: number;
   };
   physicalResistance: number;
-  /** Multiplicador de daño recibido. 1.0 = normal. 1.15 = +15%. 0.50 = -50%. */
+  /** Multiplicador de daño recibido. 1.0 = normal. 1.15 = +15%. 0.50 = -50%.
+   *  Representa vulnerabilidad / reducción de daño GENERAL (independiente de M_DR).
+   *  En juego (M_DR): se aplica como factor multiplicativo adicional. */
   damageTaken: number;
+  /** Reducción de Daño (M_DR): barrera absoluta del boss en DECIMAL (0.15 = 15%).
+   *  Multiplicador = max(0, 1 - damageReduction). Separada y multiplicativa con
+   *  M_RES, M_DEF y damageTaken. Default 0 = sin reducción. */
+  damageReduction: number;
 }
 
 export interface CombatContext {
@@ -107,6 +113,7 @@ export const DEFAULT_ENEMY: EnemyStats = {
   },
   physicalResistance: 0.10,
   damageTaken: 1.0,
+  damageReduction: 0,
 };
 
 // ─── Selección de `scaler` ──────────────────────────────────────────────
@@ -208,8 +215,11 @@ export function calculateDamage(
   // 5. Damage Taken Multiplier (vulnerabilidad, reducción de daño)
   const damageTakenMult = enemy.damageTaken || 1.0;
 
-  // 6. Salida Final
-  const preCrit = baseDmg * bonusMult * defMultiplier * resMultiplier * damageTakenMult;
+  // 6. M_DR Multiplier (Reducción de Daño absoluta del boss, barrera)
+  const drMultiplier = damageReductionMultiplierFn(enemy.damageReduction || 0);
+
+  // 7. Salida Final
+  const preCrit = baseDmg * bonusMult * defMultiplier * resMultiplier * damageTakenMult * drMultiplier;
   const nonCrit = Math.round(preCrit);
   const crit = Math.round(preCrit * context.critDmg_);
   const average = nonCrit + (nonCrit * context.critRate_ * (context.critDmg_ - 1));
@@ -237,6 +247,13 @@ export function resistanceMultiplierFn(resistance: number): number {
   if (resistance >= 0.8) return 1 / (1 + 5 * resistance);
   if (resistance >= 0) return 1 - resistance;
   return 1 - (0.5 * resistance); // resistencia negativa = más daño
+}
+
+/** Fórmula de Reducción de Daño (M_DR) de WuWa.
+ *  M_DR = 1 - (DR_total/100), en decimal: existe como M_DR = max(0, 1 - dr).
+ *  Barrera absoluta del boss; separada y multiplicativa de M_RES, M_DEF y damageTaken. */
+export function damageReductionMultiplierFn(damageReduction: number): number {
+  return Math.max(0, 1 - damageReduction);
 }
 
 // ─── Cálculo de curación ─────────────────────────────────────────────────

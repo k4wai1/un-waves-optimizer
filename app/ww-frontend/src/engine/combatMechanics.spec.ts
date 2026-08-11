@@ -12,6 +12,8 @@ import {
   calculateHealing,
   calculateShield,
   DEFAULT_ENEMY,
+  damageReductionMultiplierFn,
+  defMultiplierFn,
   type CombatContext,
 } from './calculator';
 import {
@@ -351,5 +353,98 @@ describe('Bug 4: Deepen por tipo (A_j específico)', () => {
 
     expect(buffedBasic.normal / baseBasic.normal).toBeCloseTo(1.15, 2);
     expect(buffedSkill.normal / baseSkill.normal).toBeCloseTo(1.15, 2);
+  });
+});
+
+// ═════════════════════════════════════════════════════════════════════════════┐
+// M_DR (Reducción de Daño absoluta) y M_ER (= M_RES) — investigación web        │
+// Fuentes: wutheringwaves.fandom.com/wiki/DMG_RES,                              │
+//          wutheringwaves.gg/damage-calculation-guide, game8 ToA, beatcopgame   │
+// ═════════════════════════════════════════════════════════════════════════════┘
+
+describe('M_DR: damageReductionMultiplierFn', () => {
+  it('dr=0 → multiplicador 1 (sin reducción)', () => {
+    expect(damageReductionMultiplierFn(0)).toBe(1);
+  });
+
+  it('dr=0.15 → multiplicador 0.85 (ToA Floors 3-4)', () => {
+    expect(damageReductionMultiplierFn(0.15)).toBeCloseTo(0.85, 6);
+  });
+
+  it('dr=0.50 → multiplicador 0.50 (ej. Bell-Borne Geochelone)', () => {
+    expect(damageReductionMultiplierFn(0.50)).toBeCloseTo(0.50, 6);
+  });
+
+  it('clampa en 0 para dr >= 1 (barrera total), nunca negativo', () => {
+    expect(damageReductionMultiplierFn(1)).toBe(0);
+    expect(damageReductionMultiplierFn(1.5)).toBe(0);
+  });
+});
+
+describe('M_DR se integra en calculateDamage (multiplicativo y separado)', () => {
+  it('con damageReduction=0.15 el daño es 0.85× el base', () => {
+    const ctx = { ...BASE_CONTEXT };
+    ctx.enemy = { ...cloneEnemy(), damageReduction: 0.15 };
+
+    const base = calculateDamage(BASE_CONTEXT, 1.0, 'atk', 'spectro');
+    const reduced = calculateDamage(ctx, 1.0, 'atk', 'spectro');
+    expect(reduced.normal / base.normal).toBeCloseTo(0.85, 2);
+  });
+
+  it('es INDEPENDIENTE de damageTaken (no se agrupan)', () => {
+    // Solo M_DR (sube 15% de reducción) no debe tocar el efecto de damageTaken
+    const drCtx = { ...BASE_CONTEXT };
+    drCtx.enemy = { ...cloneEnemy(), damageReduction: 0.15 };
+
+    const dtCtx = { ...BASE_CONTEXT };
+    dtCtx.enemy = { ...cloneEnemy(), damageTaken: 1.15 };
+
+    const base = calculateDamage(BASE_CONTEXT, 1.0, 'atk', 'spectro');
+    const drOnly = calculateDamage(drCtx, 1.0, 'atk', 'spectro');
+    const dtOnly = calculateDamage(dtCtx, 1.0, 'atk', 'spectro');
+
+    expect(drOnly.normal / base.normal).toBeCloseTo(0.85, 2);
+    expect(dtOnly.normal / base.normal).toBeCloseTo(1.15, 2);
+  });
+
+  it('con ambas (DR 0.15 y damageTaken 1.15) se multiplican (0.85 * 1.15)', () => {
+    const ctx = { ...BASE_CONTEXT };
+    ctx.enemy = { ...cloneEnemy(), damageReduction: 0.15, damageTaken: 1.15 };
+    const base = calculateDamage(BASE_CONTEXT, 1.0, 'atk', 'spectro');
+    const combo = calculateDamage(ctx, 1.0, 'atk', 'spectro');
+    expect(combo.normal / base.normal).toBeCloseTo(0.85 * 1.15, 2);
+  });
+
+  it('default (damageReduction=0) no cambia el cálculo (retrocompat)', () => {
+    const defaultCtx = { ...BASE_CONTEXT, enemy: cloneEnemy() };
+    defaultCtx.enemy.damageReduction = 0;
+    expect(calculateDamage(defaultCtx, 1.0, 'atk', 'spectro').normal)
+      .toBe(calculateDamage(BASE_CONTEXT, 1.0, 'atk', 'spectro').normal);
+  });
+});
+
+describe('M_ER = M_RES (sin término separado)', () => {
+  it('la resistencia elemental sigue la fórmula de 3 ramas (no hay campo nuevo)', () => {
+    // M_ER no es un campo: la resistencia (M_RES) ya lo cubre.
+    // Verificar que DEFAULT_ENEMY NO tiene un campo elementalReduction distinto de las resist.
+    const e = cloneEnemy() as any;
+    expect(e.damageReduction).toBe(0);          // M_DR existe
+    expect(e.elementalReduction).toBeUndefined(); // M_ER NO existe como campo
+    expect(e.elementalResistances.spectro).toBe(0.10);
+  });
+
+  it('res max alta (RES=0.9) usa la rama 1/(1+5R) = 1/5.5', () => {
+    const ctx = { ...BASE_CONTEXT };
+    ctx.enemy = { ...cloneEnemy() };
+    ctx.enemy.elementalResistances = { ...ctx.enemy.elementalResistances, spectro: 0.9 };
+
+    // Lc=90 → defNum = 800+8*90 = 1520; enemyDef 1600 → M_DEF = 1520/3120
+    const defNum = 800 + 8 * ctx.attackerLvl;
+    const defMult = defMultiplierFn(defNum, ctx.enemy.defense);
+    const resMult = 1 / (1 + 5 * 0.9); // rama de alta resistencia
+    // sin flat, sin bonus/amplify/special, sin DR, damageTaken=1, critDmg no afecta normal
+    const expected = Math.round(ctx.atk * 1.0 * defMult * resMult * 1 * 1);
+
+    expect(calculateDamage(ctx, 1.0, 'atk', 'spectro').normal).toBe(expected);
   });
 });

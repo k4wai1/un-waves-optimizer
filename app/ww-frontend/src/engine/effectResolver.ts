@@ -112,6 +112,8 @@ const ENEMY_STAT_MAP: Record<string, (e: CombatContext['enemy'], v: number) => v
   'enemy.havocRes':     (e, v) => { e.elementalResistances.havoc = clampMin(e.elementalResistances.havoc + v, 0); },
   'enemy.spectroRes':   (e, v) => { e.elementalResistances.spectro = clampMin(e.elementalResistances.spectro + v, 0); },
   'enemy.physicalRes':  (e, v) => { e.physicalResistance = clampMin(e.physicalResistance + v, 0); },
+  // Reducción de Daño (M_DR): barrera absoluta del boss, en decimal (0.15 = 15%)
+  'enemy.damageReduction': (e, v) => { e.damageReduction = clampMin((e.damageReduction || 0) + v, 0); },
 };
 
 function clampMin(val: number, min: number): number { return Math.max(min, val); }
