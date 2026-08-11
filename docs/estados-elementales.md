@@ -21,7 +21,7 @@
 | Estado | Elemento | Tipo | Stack máx | Data |
 |---|---|---|---|---|
 | Glacio Chafe | Glacio | Daño al aplicar + slow + freeze | 10 (13 c/Chisa·Suisui) | ✅ CONFIRMADO (Gemini) |
-| Spectro Frazzle | Spectro | DoT (escala por stack) | 10 | ⚠️ daño: muestra, no %ATK |
+| Spectro Frazzle | Spectro | DoT (escala por stack) | 10 | ✅ CONFIRMADO (Gemini) |
 | Fusion Burst | Fusion | Explosión al llegar a 10 stacks | 10 | ❌ daño de explosión sin confirmar |
 | Aero Erosion | Aero | DoT (escala por stack) | 3 (6 c/Aero Rover) | ⚠️ daño: muestra, no fórmula |
 | Havoc Bane | Havoc | **Reducción de DEF** (v2.8) | 3 (6 c/Chisa) | ✅ DEF -2%/stack |
@@ -71,14 +71,28 @@
 - **Fuentes:** Gemini 2026-08-11 (respuesta arquitectónica/matemática); refrendar números exactos
   (2.0377, 4.0753, 102%, 19s) contra Game8 `archives/558103` y fandom `wiki/Glacio_Chafe` antes de implementar.
 
-### 1.2 Spectro Frazzle (Spectro) — ⚠️ muestra, sin fórmula
-- **Daño por tick (DoT):** consume 1 stack por tick. Escala con nº de stacks.
-- **Muestra** (Spectro Rover, Guidebook; varía por enemigo/nivel): 1→498, 2→902, 3→1306,
-  4→1711, 5→2115, 6→2519, 7→2924, 8→3328, 9→3732, 10→4137.
-- **Intervalo:** ~3 s por tick. Termina al consumir el último stack. Máx 10 stacks.
-- **RES:** ❌ no reduce Spectro RES ni amplifica por sí (las armas sí amplifican el daño de Frazzle: BlazingJustice +50%, LuminousHymn Outro +30%).
-- **Condición:** solo ataques Spectro explícitos. Spectro Rover (Resonating Spin) → 2 stacks; Phoebe lo aplica.
-- **Fuentes:** Game8 `archives/549799`, fandom `wiki/Negative_Status`, shsta (tercio).
+### 1.2 Spectro Frazzle (Spectro) — ✅ CONFIRMADO (Gemini 2026-08-11)
+- **DoT paramétrico:** no usa ATK, no usa bonus elemental, **NO critica**. Escala por **nivel
+  del Resonador** (LUT/CurveTable: Lv60≈476 → Lv90≈4596) + Amplify específico + RES. **DEF
+  enemiga IGNORADA**.
+- **Fórmula:** `floor( MV(N_res) × [1+(n-1)·K_stack] × (1+ΣAmplify_SF) × M_RES × M_nivel )`, `K_stack≈0.811`.
+- **Muestra** (Lv90 vs Lv90): 1→498, 2→902, 3→1306, 4→1711, 5→2115, 6→2519, 7→2924,
+  8→3328, 9→3732, 10→4137 (Δ~404-405 = lineal).
+- **Tick:** ~3 s; consume 1 stack/tick; muere al consumir la última (1 stack = 3.0 s). Máx 10.
+- **Cadencia:** **Shimmer** (Rover) impide consumo → persiste indefinido; **Phoebe Outro**
+  "Silent Prayer" -50% frecuencia (3→4.5 s) + 100% Amplify + -10% Spectro RES.
+- **RES:** ❌ no reduce Spectro RES ni amplifica de forma nativa; los RES-shred vienen de estado paralelos (Rover -10%, Phoebe -10%).
+- **Resolver RES:** nativa ~10%; RES Shred resta lineal; RES<0 → ganancia a la mitad (-20%→1.10×).
+- **Applicators:** Rover Spectro (Resonating Spin → 2+gob.+Shimmer; Liberation → 6); Phoebe
+  (Absolution → 1 en buff, flag; Confession → 5/heavy, Liberation → 8); Ciaccona (QTE Yellow
+  Tonic → 1); **Zani** consume destructivamente → **Heliacal Ember** (nutre su Forte).
+- **Armas/Ecos:** Eternal Radiance (+20% Crit al aplicar Frazzle; +15% Spectro DMG a 10 stacks);
+  **Luminous Hymn** (Phoebe, "Homebuilder's Anthem": básicos/pesados escalan con el tick de
+  Frazzle; Outro +30~60% Amplify).
+- **Implementación:** ECS + FixedUpdate (20-60 Hz); componente `{stacks:uint8, nextTick, tickInterval,
+  freqModifier, amplifyRate(×100/×10000), shimmer:bool}`; LUTs por versión de balance (nerf 2.2).
+  Ver detalle en `docs/investigacion-estados/spectro-frazzle.md`.
+- **Fuentes:** Gemini 2026-08-11; refrendar (K_stack, 476/4596, 3s/4.5s) contra Game8 `archives/549799` y fandom `wiki/Spectro_Frazzle`.
 
 ### 1.3 Fusion Burst (Fusion) — ❌ daño de explosión sin confirmar
 - **Daño:** **no DoT**; al llegar a 10 stacks elimina todos y detona **explosión Fusion DMG**. Escala con stacks previos. ❌ valor de explosión no público.
@@ -187,7 +201,6 @@ acciones de algunos Resonadores. El motor **no los modela** todavía.
 
 ## 5. Pendientes de confirmar (búsquedas profundas con IA de Google)
 
-- [ ] **Spectro Frazzle:** confirmar la tabla por stack con fuente y en nivel fijo (la muestra es de un Guidebook con espectro específico), ¿reduce Spectro RES?
 - [ ] **Fusion Burst:** daño de la explosión (10 stacks) en %ATK o valor, ¿a cuánto sube el límite con Chisa?, confirmar que no reduce Fusion RES.
 - [ ] **Aero Erosion:** daño por tick y fórmula, confirmar que no usa ATK, duración exacta.
 - [ ] **Havoc Bane (v2.8):** duración exacta del estado (no se especifica oficial), confirmar que la reducción de DEF aplica a `M_DEF` (y no "por tick de daño").
