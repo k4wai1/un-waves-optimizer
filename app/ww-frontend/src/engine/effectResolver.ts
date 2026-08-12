@@ -148,6 +148,9 @@ const PATH_TO_CTX: Record<string, string> = {
   aeroDmg: 'aeroDmgBonus_',
   spectroDmg: 'spectroDmgBonus_',
   havocDmg: 'havocDmgBonus_',
+  // Tonalidad
+  tuneBreakBoost: 'tuneBreakBoost',
+  offTuneBuildupRate: 'offTuneBuildupRate_',
 };
 
 function pathToContextKey(path: string): keyof CombatContext | null {
@@ -170,6 +173,7 @@ function legacyTargetToPath(effect: Effect): string | null {
         echoDmg_: 'stat.echoDmg', coordinated_dmg_: 'stat.coordinatedDmg',
         outroDmg_: 'stat.outroDmg', healing_bonus_: 'stat.healingBonus',
         defIgnore_: 'stat.defIgnore',
+        tuneBreakBoost_: 'stat.tuneBreakBoost', offTuneBuildupRate_: 'stat.offTuneBuildupRate',
         basicAmplify_: 'stat.basicAmplify', heavyAmplify_: 'stat.heavyAmplify',
         skillAmplify_: 'stat.skillAmplify', liberationAmplify_: 'stat.liberationAmplify',
         coordinatedAmplify_: 'stat.coordinatedAmplify',
@@ -202,6 +206,7 @@ function legacyTargetToPath(effect: Effect): string | null {
       spectro_dmg_: 'stat.spectroDmg',
       healing_bonus_: 'stat.healingBonus',
       allDmgBonus_: 'stat.allDmgBonus',
+      tuneBreakBoost_: 'stat.tuneBreakBoost', offTuneBuildupRate_: 'stat.offTuneBuildupRate',
     };
     return lMap[effect.stat] ?? null;
   }

@@ -560,6 +560,20 @@
   ],
   effects: [
     {
+      // Tune Break Boost que aporta Lynae (respuesta de Tonalidad). Al activar la
+      // pasiva, el Impulso de Tonalidad sube a +40 y se refleja en Combat Statistics.
+      id: "Lynae_passive_tuneBreakBoost",
+      name: "Tune Break Boost (+40 Impulso)",
+      type: "stat",
+      operation: "add",
+      value: [40],
+      maxStacks: 1,
+      exclusive: false,
+      enabledByDefault: false,
+      target: "stat.tuneBreakBoost",
+      descriptionTemplate: "Aporta +40 de Tune Break Boost (Impulso de Tonalidad) para las respuestas de Tonalidad.",
+    },
+    {
       id: "Lynae_passive_0",
       name: "Passive 1",
       operation: "add",

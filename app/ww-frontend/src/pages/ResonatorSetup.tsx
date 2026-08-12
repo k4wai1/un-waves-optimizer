@@ -107,7 +107,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
       tuneBreakBoost: stats.tuneBreakBoost ?? 0,
       maxSTA: 0, maxFlightSTA: 0,
       critRate_: 0.05, critDmg_: 1.50, energyRegen_: 0,
-      allDmgBonus_: 0, dmgAmplify_: 0, offTuneBuildupRate_: 0,
+      allDmgBonus_: 0, dmgAmplify_: 0, offTuneBuildupRate_: stats.offTuneBuildupRate ?? 0,
       resonanceSkillDmgBonus_: 0, basicAttackDmgBonus_: 0, heavyAttackDmgBonus_: 0,
       resonanceLiberationDmgBonus_: 0, echoSkillDmgBonus_: 0,
       coordinatedDmgBonus_: 0, outroSkillDmgBonus_: 0,
@@ -168,6 +168,8 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
     { key: 'critRate_', label: 'Crit. Rate', format: 'percent', alwaysShow: true },
     { key: 'critDmg_', label: 'Crit. DMG', format: 'percent', alwaysShow: true },
     { key: 'energyRegen_', label: 'Energy Regen', format: 'percent', alwaysShow: true },
+    { key: 'tuneBreakBoost', label: 'Tune Break Boost (Impulso)', format: 'flat', alwaysShow: false },
+    { key: 'offTuneBuildupRate_', label: 'Off-Tune Buildup Rate', format: 'percent', alwaysShow: false },
     { key: elementalStatKey, label: `${meta.element || 'Spectro'} DMG Bonus`, format: 'percent', alwaysShow: true },
     { key: 'resonanceSkillDmgBonus_', label: 'Skill DMG Bonus', format: 'percent', alwaysShow: false },
     { key: 'basicAttackDmgBonus_', label: 'Basic Attack DMG Bonus', format: 'percent', alwaysShow: false },
@@ -234,6 +236,71 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
                     <div className="text-right font-mono font-bold" style={{ color: 'var(--accent)' }}>{dmg.crit}</div>
                   </>
                 )}
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  };
+
+  // ─── Tonalidad ─────────────────────────────────────────────────────────
+  // Agrupa las acciones que son respuestas a Tonalidad (Tune Rupture/Strain
+  // Response, p. ej. Spectral Analysis de Lynae, Particle Jet de Mornye) en su
+  // propia sección, y muestra el Impulso de Tonalidad (Tune Break Boost).
+  const tuneActions = actions.filter(a =>
+    /tune|rupture|strain/i.test(`${a.name || ''} ${a.id || ''}`)
+  );
+  const generateTuneTable = () => {
+    if (!tuneActions.length) return null;
+    const activeList = Object.values(effectStates).filter(ae => ae.enabled);
+    const lvlByType: Record<string, number> = {};
+    for (const a of tuneActions) lvlByType[a.type] = skillLevels[a.type] || 1;
+
+    const rows: { name: string; type: string; mv: number; stat: string; act: CalcAction }[] = [];
+    for (const a of tuneActions) {
+      const idx = Math.min((lvlByType[a.type] || 1) - 1, 9);
+      for (const sc of a.scaling || []) {
+        const mult = sc.multiplier?.[idx];
+        if (mult !== undefined) {
+          rows.push({
+            name: a.name, type: a.type, mv: mult, stat: sc.stat,
+            act: { id: a.id, type: a.type, tags: a.tags || [], kind: a.kind, flat: a.flat, formId: a.formId },
+          });
+        }
+      }
+    }
+    if (!rows.length) return null;
+
+    const tuneBoost = combatContext.tuneBreakBoost || 0;
+    return (
+      <div key="tonality" className="mb-6">
+        <h4 className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: 'var(--accent)' }}>
+          Tonalidad {tuneBoost > 0 && <span className="opacity-70 normal-case">· Impulso +{tuneBoost}</span>}
+        </h4>
+        {tuneBoost > 0 && (
+          <div className="text-[11px] font-mono mb-2" style={{ color: 'var(--text-muted)' }}>
+            Tune Strain daño base por stack: {combatContext.atk.toFixed(0)} × 0.12% × {tuneBoost} ≈ {Math.round(combatContext.atk * 0.0012 * tuneBoost).toLocaleString()} / stack
+          </div>
+        )}
+        <div className="w-full border rounded-lg overflow-hidden" style={{ borderColor: 'var(--border)' }}>
+          <div className="grid grid-cols-4 text-[11px] p-2 border-b font-bold uppercase tracking-wider" style={{ backgroundColor: 'var(--bg-card)', borderColor: 'var(--border)', color: 'var(--text-muted)' }}>
+            <div className="col-span-1">Respuesta</div>
+            <div className="text-right">Normal</div>
+            <div className="text-right">Average</div>
+            <div className="text-right">Crit</div>
+          </div>
+          {rows.map((r, i) => {
+            const scaler = r.stat === 'HP' ? 'hp' : r.stat === 'FLAT' ? 'flat' : r.stat.toLowerCase();
+            const dmg = calculateActionDamage(combatContext, r.act, r.mv, scaler, elementKey, activeList, effectsDb, calculateDamage);
+            return (
+              <div key={i} className="grid grid-cols-4 text-xs p-2 border-b last:border-0 hover:bg-white/5 transition-colors" style={{ borderColor: 'var(--border)' }}>
+                <div className="col-span-1 truncate font-medium capitalize text-gray-300" title={`${r.name} (${typeLabels[r.type] || r.type})`}>
+                  {r.name}
+                </div>
+                <div className="text-right font-mono opacity-90">{dmg.normal}</div>
+                <div className="text-right font-mono opacity-60">{dmg.average}</div>
+                <div className="text-right font-mono font-bold" style={{ color: 'var(--accent)' }}>{dmg.crit}</div>
               </div>
             );
           })}
@@ -396,8 +463,11 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
           </div>
 
           <div className="space-y-4">
+            {generateTuneTable()}
             {actions.length > 0
-              ? Object.entries(actionsByType).filter(([t]) => typeLabels[t]).map(([t, list]) => generateCombatTable(t, list))
+              ? Object.entries(actionsByType).filter(([t]) => typeLabels[t]).map(([t, list]) =>
+                  generateCombatTable(t, list.filter((a: any) => !/tune|rupture|strain/i.test(`${a.name || ''} ${a.id || ''}`)))
+                )
               : <div className="text-xs opacity-40 text-center py-8">No actions data</div>
             }
           </div>

@@ -203,9 +203,12 @@ export default function App() {
         </header>
 
         {/* ROUTER */}
+        {/* Mantener los paneles montados (ocultar con CSS en vez de desmontar) para que
+            los estados de efecto/nivel persistan al cambiar de pestaña. Solo se resetean
+            al cambiar de personaje principal (ver useEffect por charData). */}
         <div className="flex-1 overflow-auto p-4 lg:p-6">
-          {activeTab === 'character' && (
-            <ResonatorSetup 
+          <div className={activeTab === 'character' ? '' : 'hidden'}>
+            <ResonatorSetup
               charData={charData}
               equippedWeapon={equippedWeapon}
               weaponLevel={weaponLevel}
@@ -214,8 +217,8 @@ export default function App() {
               selectedEnemy={selectedEnemy ? enemiesDB[selectedEnemy] : null}
               enemyLevel={enemyLevel}
             />
-          )}
-          {activeTab === 'weapons' && (
+          </div>
+          <div className={activeTab === 'weapons' ? '' : 'hidden'}>
             <WeaponsSetup
               availableWeapons={filteredWeapons}
               equippedWeapon={equippedWeapon}
@@ -228,8 +231,8 @@ export default function App() {
               onRankChange={setWeaponRank}
               onStacksChange={setWeaponStacks}
             />
-          )}
-          {activeTab === 'enemies' && (
+          </div>
+          <div className={activeTab === 'enemies' ? '' : 'hidden'}>
             <EnemiesSetup
               enemiesDB={enemiesDB}
               enemyImages={enemyImages}
@@ -238,9 +241,9 @@ export default function App() {
               onEnemyChange={setSelectedEnemy}
               onLevelChange={setEnemyLevel}
             />
-          )}
-          {activeTab === 'echoes' && <Placeholder title="Echo Inventory" />}
-          {activeTab === 'optimizer' && <Placeholder title="Team & Optimize" />}
+          </div>
+          <div className={activeTab === 'echoes' ? '' : 'hidden'}><Placeholder title="Echo Inventory" /></div>
+          <div className={activeTab === 'optimizer' ? '' : 'hidden'}><Placeholder title="Team & Optimize" /></div>
         </div>
       </main>
     </div>
