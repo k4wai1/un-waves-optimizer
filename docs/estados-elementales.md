@@ -29,7 +29,7 @@
 | Tune Strain - Shifting | Tonalidad (Spectro) | Marcador (25s) + +8% All DMG (Blaster) | — | ✅ CONFIRMADO (Gemini) |
 | Tune Strain - Interfered | Tonalidad (Spectro) | Amplify (0.12%×boost×stacks) | hasta 4 | ✅ CONFIRMADO (Gemini) |
 | Tune Rupture - Shifting/Interfered | Tonalidad (Fusion) | Marcador (25s) + respuestas coordinadas (8s ICD) | variable | ✅ CONFIRMADO (Gemini) |
-| Hack - Shifting/Interfered | Cyberpunk | Variante Tune Rupture | 1 | ✅ confirmado |
+| Hack - Shifting/Interfered | Cyberpunk | Variante Tune Rupture (8s) | 1 (binario) | ✅ CONFIRMADO (Gemini) |
 | Hack Response (Lucy/Rebecca) | — | Daño condicional | 1 | ✅ multiplicadores confirmados |
 
 ---
@@ -241,13 +241,15 @@
 - **Fuentes:** Gemini 2026-08-11; refrendar curva de talento Lynae, Particle Jet 298%, fórmula Duet
   contra fandom `wiki/Tune_Rupture`.
 
-### Hack (Cyberpunk) ✅
-- **v3.4**, colab Cyberpunk Edgerunners. Exclusivo de **Lucy** y **Rebecca**. Idéntico a Tune Rupture: Hack - Shifting → (Tune Break) → Hack - Interfered (**8 s**) + daño masivo. No se reaplica hasta terminar Interfered.
-- **Hack Response:**
-  - **Lucy** (5★, Spectro, Pistolas): **Data Crash = 1094.19% + 68.39%×4 = 1367.75%** Tune AMP (Forte "Depths of Blackwall"). Bonus al aplicar Hack - Shifting: +25% Amplify Heavy (14s), Heavy ignora 10% DEF (14s), +35% Basic/Heavy DMG (15s), -5% ATK marcados (30s).
-  - **Rebecca** (5★, Havoc, Pistolas): **Meltdown = 2358.89%** Tune AMP (Forte "Gloves Are Comin' Off!"). Modos Huntress (+30% Crit DMG) / Guts (ignora 15% DEF). +12% Basic DMG (14s). Aplica Shifting con Intro/Heavy/Liberation, 1/3s.
-- **Sinergia:** Rebecca no activa ciertas mecánicas sin Lucy. Set "Shadow of Shattered Dreams" (1 pieza, primero del juego): al infligir Hack - Shifting +35% Basic/Heavy DMG 15s. Echo único "Adam Smasher" (solo Lucy/Rebecca). Main stat: Crit Rate/DMG.
-- **Fuentes:** fandom `wiki/Hack`, `wiki/Hack/Hack_-_Interfered`, `wiki/Hack_-_Shifting`, Game8 `archives/603091`.
+### Hack (Cyberpunk) ✅ (Gemini 2026-08-11)
+- **v3.4**, colab Cyberpunk Edgerunners. Exclusivo de **Lucy** y **Rebecca**. Flujo: Hack - Shifting → (Tune Break, Off-Tune 100%) → Hack - Interfered (**8 s fijo, inalterable**) + daño masivo. **No se reaplica Shifting hasta terminar Interfered.** Debuff **binario** (sin stacks).
+- **Hack Response:** en el MISMO frame de la transición a Interfered, todos los con respuesta disparan. Fórmula: `DMG = ATK × Mult_Forte × (1 + TuneAMP) × Mult_Crit × Mult_Element × Mult_DEF × Mult_RES`.
+  - **Lucy** (5★, Spectro, Pistolas): **Data Crash = 1094.19% + 68.39%×4 = 1367.75%** Tune AMP (Forte "Depths of Blackwall"). Aplica debuff **Data Crash**: el enemigo se **estanca 0.5s** la primera vez que ataca. Bonus al aplicar Shifting: +25% Amplify Heavy (14s), Heavy ignora 10% DEF (14s), +35% Basic/Heavy DMG (15s), -5% ATK marcados (30s). Habilidades: Protocol Breach / Payload / Pulse Interference / Deadlock.
+  - **Rebecca** (5★, Havoc, Pistolas): **Meltdown = 2358.89%** Tune AMP (Forte "Gloves Are Comin' Off!"), **ICD 8s/objetivo**. Posturas: Huntress (+30% Crit DMG) / Guts (ignora 15% DEF). Al aplicar Shifting (ICD **3.0s/habilidad**): +12% Basic DMG (14s). Aplica con Intro/Heavy "Rat-tat-tat!: Huntress" / "Bang-bang-bang!: Guts" / Liberation "BOOM! Fireworks!".
+  - **Hot Hand** (recurso máx 120): al llegar a 120, Intro/Skill disparan **"A Girl Gets What She Wants!"** → otorga **ambos** modos (+30% Crit DMG + 15% DEF ignore) por **12.0s**.
+- **Sinergia:** Rebecca no activa mecánicas sin Lucy; no activa buffs de Strain/Rupture (requiere nodos de secuencia, ej. Mornye S1). Set **"Shadow of Shattered Dreams"** (1 pieza): +5% Crit Rate + +20% Basic/Heavy DMG (14s) al aplicar Hack (configs suben a +35%/15s). Echo **"Adam Smasher"** (costo 4, solo Lucy/Rebecca): +15% Crit Rate permanente + habilidad activa de daño adaptativo.
+- **Arquitectura (TS):** `type TuneHackStatus='NONE'|'SHIFTING'|'INTERFERED'`; estado de enemigo `{tuneHackStatus, interferedTimer, shiftingAppliedBy, dataCrashDebuff}`; `ON_HACK_INTERFERED` evalúa Lucy (baseMultiplier 13.6775, Spectro) y Rebecca (23.5889, Electro, con ICD). **UI:** panel por color (gris/amarillo/rojo+temporizador), aviso "Shifting Bloqueada" durante Interfered, y timeline de rotaciones con warning si se intenta aplicar Shifting en ventana bloqueada.
+- **Fuentes:** Gemini 2026-08-11; fandom `wiki/Hack`, `wiki/Hack/Hack_-_Interfered`, `wiki/Hack_-_Shifting`, Game8 `archives/603091` (refrendar % del set y cooldowns de Lucy).
 
 ---
 
