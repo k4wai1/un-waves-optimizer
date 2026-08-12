@@ -30,8 +30,30 @@ se conservan tal cual al escalar.
 
 > **Escalado de nivel**: el motor usa `resolveEnemyStats(def, targetLevel)` (ver
 > `app/ww-frontend/src/engine/enemy.ts`). Dado el enemigo y el nivel objetivo, produce el
-> `EnemyStats` con la DEF escalada (`baseDef + 8×(target−baseLevel)`), conservando resistencias.
+> `EnemyStats` con HP/DEF escalados por la tabla `growth` (ver 3bis), conservando resistencias.
 > En la UI (pestaña Enemies) se elige un enemigo y su nivel (1–120).
+
+## 3bis. Tabla `growth` (GrowthRates por nivel 1-120)
+
+Para escalar el HP/ATK/DEF con el nivel del enemigo se usa la tabla `growth` (ratios en base
+10000 por nivel). Una entrada por nivel: `[hpRatio, atkRatio, defRatio]`.
+
+```json5
+"growth": {
+  "1":   [10000, 5000, 10000],
+  "50":  [257408, 67808, 14900],
+  "100": [6487198, 335039, 19900]
+}
+```
+
+- **Escalado** (`resolveEnemyStats`/`enemyInfo`): `valor@nv = valorBase × ratio[nv] ÷ 10000`.
+- El HP a nivel alto NO debe truncarse: a Lv100 puede ser cientos de miles o millones
+  (ej. Bell-Borne ≈ 1,045,088 @ Lv100).
+- El `AtkRatio` a Lv1 puede ser ≠ 10000 (el `Properties.Atk` ya lo descuenta; ej. 5000 →
+  ATK@1 = 120 × 0.5 = 60).
+- Las claves numéricas van **entre comillas** (`"1"`) para que sea JSON5 válido.
+- Si un enemigo no reporta `growth` (ej. Phantom: Sigillum), `resolveEnemyStats` cae a DEF
+  lineal (`base + 8×delta`) y HP/ATK informativos.
 
 ## Modificadores de enemigo (desde effects[])
 

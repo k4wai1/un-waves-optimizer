@@ -4,19 +4,19 @@
 //
 // Los enemigos se definen en `libs/ww/stats/src/enemies/*.json5` con `stats.level`,
 // `stats.hp`, `stats.atk`, `stats.defense`, `stats.elementalResistances` (decimal),
-// `stats.physicalResistance`, `stats.damageTaken`, `stats.damageReduction`.
+// `stats.physicalResistance`, `stats.damageTaken`, `stats.damageReduction`,
+// y una tabla opcional `growth` con los GrowthRates (LifeMax/Atk/Def ratios en base
+// 10000) por nivel 1-120 scrapeados de encore.moe.
 //
-// `resolveEnemyStats` escala las stats de combate (HP/ATK/DEF) desde el nivel base
-// declarado en el JSON5 hasta el nivel objetivo elegido en la UI, y produce el
-// `EnemyStats` que consume el motor (`calculateDamage`).
+// `resolveEnemyStats` escala las stats (HP/ATK/DEF) desde el nivel base hasta el
+// nivel objetivo usando los GrowthRates, y produce el `EnemyStats` (HP + DEF + RES)
+// que consume el motor (`calculateDamage`).
 //
-// Escalado de DEF (fórmula del juego): DEF_enemigo = 8×Lv + 792 (Lv1 → 800).
-// Es lineal en el nivel con pendiente 8, por lo que:
-//   DEF(nivel) = baseDef + 8 × (nivel - baseLevel)
-//
-// Escalado de HP/ATK: se usa el GrowthRate del juego (por ratio). Como la API de
-// encore no expuso GrowthRates en el scrape actual, interpolamos de forma simple
-// con el ratio base (HP/ATK son informativos; el daño NO depende del HP/ATK enemigo).
+// Escalado con GrowthRates (fórmula del juego):
+//   valor@nv = baseValor × growth[nv].ratio / 10000
+//   (el ratio a nivel base `level` es 10000 → coincide con baseValor).
+// Si no hay tabla `growth`, se usa una interpolación lineal de DEF (8×Lv) y HP/ATK
+// quedan como informativos a su valor base (solo para entidades sin datos de encore).
 // ═══════════════════════════════════════════════════════════════════════════════
 
 import { DEFAULT_ENEMY, type EnemyStats } from './calculator';
@@ -43,13 +43,40 @@ export interface EnemyDefinition {
     maxVibration?: number;
     rageLimit?: number;
   };
+  /**
+   * Tabla de GrowthRates por nivel 1-120: `{ "1": [hp, atk, def], ... }` donde cada
+   * valor es el ratio en base 10000 (10000 = ×1.00). hp/atk/def según el orden.
+   * Scrapeada de encore.moe (`GrowthRates` → `LifeMaxRatio/AtkRatio/DefRatio`).
+   */
+  growth?: Record<string, [number, number, number]>;
+}
+
+/** Obtiene los ratios de crecimiento (hp, atk, def) en base 10000 para un nivel. */
+function growthAt(
+  def: EnemyDefinition | null | undefined,
+  level: number,
+  baseLevel: number,
+): { hp: number; atk: number; def: number } {
+  const key = String(Math.max(1, level));
+  const g = def?.growth?.[key];
+  if (g) return { hp: g[0], atk: g[1], def: g[2] };
+  // Sin tabla: DEF lineal (base + 8×delta), HP/ATK al valor base (informativos).
+  const stats = def?.stats;
+  const delta = Math.max(0, level - baseLevel);
+  const baseDef = stats?.defense ?? 800;
+  return {
+    hp: 10000,
+    atk: 10000,
+    // ratio equivalente para DEF lineal: base + 8×delta
+    def: Math.round((baseDef + 8 * delta) / Math.max(1, baseDef) * 10000),
+  };
 }
 
 /**
  * Produce el `EnemyStats` del motor a partir de la definición del enemigo y el
- * nivel objetivo. Si el nivel objetivo difiere del nivel base declarado, escala
- * la DEF y el HP (alineando con la fórmula 8×Lv+792). Las resistencias, damageTaken
- * y damageReduction no cambian con el nivel (se conservan tal cual).
+ * nivel objetivo, escalando HP y DEF con los GrowthRates. Las resistencias,
+ * damageTaken y damageReduction no cambian con el nivel (se conservan tal cual).
+ * El HP a nivel alto (ej. ~1M a Lv100) se preserva sin truncar.
  *
  * Si no se pasa definición, devuelve el DEFAULT_ENEMY (training dummy).
  */
@@ -61,16 +88,16 @@ export function resolveEnemyStats(
 
   const s = def.stats;
   const baseLevel = s.level ?? 1;
-  const baseDef = s.defense ?? 800;
   const target = Math.max(1, targetLevel);
+  const g = growthAt(def, target, baseLevel);
 
-  // DEF escala lineal con el nivel: 8 por nivel desde el base.
-  const defense = baseDef + 8 * (target - baseLevel);
+  const baseHp = s.hp ?? DEFAULT_ENEMY.hp;
+  const baseDef = s.defense ?? DEFAULT_ENEMY.defense;
 
   const enemy: EnemyStats = {
     level: target,
-    hp: s.hp ?? DEFAULT_ENEMY.hp,
-    defense,
+    hp: Math.round(baseHp * g.hp / 10000),
+    defense: Math.round(baseDef * g.def / 10000),
     elementalResistances: Object.assign(
       { glacio: 0.10, fusion: 0.10, electro: 0.10, aero: 0.10, havoc: 0.10, spectro: 0.10 },
       s.elementalResistances || {},
@@ -83,16 +110,25 @@ export function resolveEnemyStats(
   return enemy;
 }
 
-/** Expone los campos extra del enemigo (ATK, Vibration, Rage) para la UI. */
-export function enemyInfo(def: EnemyDefinition | null | undefined): {
+/** Expone los campos extra del enemigo (ATK escalado, Vibration, Rage) para la UI. */
+export function enemyInfo(
+  def: EnemyDefinition | null | undefined,
+  targetLevel: number,
+): {
   atk: number;
   maxVibration: number | null;
   rageLimit: number | null;
   icon: string | null;
 } {
   const s = def?.stats;
+  let atk = s?.atk ?? 0;
+  if (s?.atk && def) {
+    const baseLevel = s.level ?? 1;
+    const g = growthAt(def, Math.max(1, targetLevel), baseLevel);
+    atk = Math.round(s.atk * g.atk / 10000);
+  }
   return {
-    atk: s?.atk ?? 0,
+    atk,
     maxVibration: s?.maxVibration ?? null,
     rageLimit: s?.rageLimit ?? null,
     icon: def?.metadata?.icon ?? null,

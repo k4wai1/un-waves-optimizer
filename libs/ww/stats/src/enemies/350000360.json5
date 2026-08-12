@@ -18,7 +18,6 @@
     hp: 100000,
     atk: 100,
     defense: 800,
-    // Fórmula de defensa del juego: 8*level + 792 (Lv1=800). El motor escala con el nivel.
     elementalResistances: {
       glacio: 0.1,
       fusion: 0.1,

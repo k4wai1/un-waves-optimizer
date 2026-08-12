@@ -78,8 +78,34 @@ Campos clave de la API (para Calamity, `RarityId`):
 ```
 
 - **Resistencias en decimal** (0.10 = 10%). El motor usa `M_RES` con estas.
-- **DEF escalable**: `resolveEnemyStats(def, targetLevel)` computa `DEF = baseDef + 8×(target−baseLevel)`.
-  Ej.: Bell-Borne baseDef 800 a Lv1 → a Lv100 = 1592.
+- **DEF escalable**: `resolveEnemyStats(def, targetLevel)` usa la tabla `growth` para escalar
+  HP/ATK/DEF por nivel. Ej.: Bell-Borne a Lv100 → HP ≈ 1,045,088, DEF 1592, ATK 4,020.
+
+## 3bis. GrowthRates (tabla de crecimiento por nivel 1-120)
+
+El HP/ATK/DEF del enemigo a niveles altos (hola dificultad) escala MUY arriba (p. ej. HP a
+Lv100 ≈ 1M). El formato JSON5 guarda la tabla `growth` con los ratios en base 10000 por nivel:
+
+```json5
+// Cada entrada es [hpRatio, atkRatio, defRatio] en base 10000 (10000 = ×1.00).
+// El ratio a `stats.level` (nivel base 1) es 10000 para HP, pero OJO: el AtkRatio a Lv1
+// suele ser ≠ 10000 (ej. Bell-Borne AtkRatio@1 = 5000 → ATK@1 = 120 × 0.5 = 60).
+"growth": {
+  "1":   [10000, 5000, 10000],
+  "50":  [257408, 67808, 14900],
+  "100": [6487198, 335039, 19900]
+}
+```
+
+- **Escalado** (`resolveEnemyStats`/`enemyInfo`): `valor@nv = valorBase × ratio[nv] ÷ 10000`.
+  IMPORTANTE: **NO truncar** el HP a un número chico; a nivel 100 puede ser cientos de miles
+  o millones (ej. ~1M para Calamity).
+- El AtkRatio a Lv1 puede diferir de 10000 (el `Properties.Atk` ya incluye ese descuento).
+- Si un enemigo no reporta `growth` (ej. Phantom: Sigillum), el helper cae a una DEF lineal
+  (`base + 8×delta`) y HP/ATK se dejan informativos.
+- La tabla completa (120 niveles) se obtiene de la API de encore: `GrowthRates` →
+  `LifeMaxRatio/AtkRatio/DefRatio` por nivel. Las claves numéricas van **entre comillas**
+  (`"1"`) porque `1:` sin comillas es JSON5 inválido.
 
 ## 4. Imagen
 
@@ -113,7 +139,11 @@ en ÷10000) y escribir el JSON5 con `id` = Id numérico.
 
 ## Ver también
 
-- `app/ww-frontend/src/engine/enemy.ts` — `resolveEnemyStats`/`enemyInfo`
+- `libs/ww/stats/src/enemies/EnemySchema.md` — **fuente de verdad del formato** de un enemigo
+  (campos de stats, resistencias, metadata). El JSON5 DEBE respetar este esquema.
+- `docs/estados-elementales.md` + `docs/investigacion-estados/` — estados negativos que afectan
+  al enemigo (Havoc Bane reduce su DEF; Frazzle/Erosion hacen DoT sobre él).
+- `app/ww-frontend/src/engine/enemy.ts` — `resolveEnemyStats`/`enemyInfo` (escalado por nivel)
 - `app/ww-frontend/src/engine/enemy.spec.ts` — tests
 - `libs/ww/stats/src/enemies/EnemyBase.json5` — dummy de práctica (Training Dummy)
 - `app/ww-frontend/src/pages/EnemiesSetup.tsx` — UI del menú de enemigos

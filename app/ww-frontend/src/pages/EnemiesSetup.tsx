@@ -38,7 +38,7 @@ export function EnemiesSetup({ enemiesDB, enemyImages, selectedEnemy, enemyLevel
   const enemy = selectedEnemy ? enemiesDB[selectedEnemy] : null;
   const meta = getMeta(enemy);
   const stats = getStats(enemy);
-  const info = enemyInfo(enemy);
+  const info = enemyInfo(enemy, enemyLevel);
   const resolved = enemy ? resolveEnemyStats(enemy, enemyLevel) : null;
   const imageUrl = enemy ? enemyImages[meta.id] : undefined;
 
