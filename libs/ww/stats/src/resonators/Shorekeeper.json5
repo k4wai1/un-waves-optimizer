@@ -89,8 +89,8 @@
         buffs: { "hp_": 0.042 },
       },
     ],
-    "tuneBreakBoost": 10,
-    "offTuneBuildupRate": 1.2
+    "tuneBreakBoost": 0,
+    "offTuneBuildupRate": 1
   },
   "actions": [
     {
