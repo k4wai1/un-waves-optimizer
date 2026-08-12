@@ -159,6 +159,61 @@ describe('Electro Flare (consume la mitad, overflow Rage)', () => {
   });
 });
 
+describe('modelo affine (Electro Flare: 155 + 674×stacks) calibrado', () => {
+  it('BaseDMG = 155 + 674×stacks (2 → 1503, 3 → 2177, 10 → 6894) sin RES/DEF', () => {
+    const cfg = getStatusConfig('electro_flare');
+    for (const [n, expected] of [[2, 1503], [3, 2177], [10, 6895]] as [number, number][]) {
+      const state = createStatusState('electro_flare', n, 60);
+      // RES 0 y DEF ignorada no; aquí hay DEF aplicada con M_DEF=1520/3120=a0.487...
+      // Para aislar el modelo affine, usamos DEF 0 (enemyDefense→0) → DEF_Mult=1.
+      const res = simulateStatusTick(cfg, state, { ...BASE_NS_CTX, enemyDefense: 0, enemyRes: 0 }, LVL_90);
+      expect(res.damage).toBe(expected);
+    }
+  });
+  it('consume la mitad: 10 → 5, 2 → 1, 1 → 0 (expira)', () => {
+    const cfg = getStatusConfig('electro_flare');
+    expect(simulateStatusTick(cfg, createStatusState('electro_flare', 10, 60), BASE_NS_CTX, LVL_90).nextStacks).toBe(5);
+    expect(simulateStatusTick(cfg, createStatusState('electro_flare', 2, 60), BASE_NS_CTX, LVL_90).nextStacks).toBe(1);
+    const last = simulateStatusTick(cfg, createStatusState('electro_flare', 1, 60), BASE_NS_CTX, LVL_90);
+    expect(last.nextStacks).toBe(0);
+    expect(last.expired).toBe(true);
+  });
+});
+
+describe('valores calibrados del registry (Gemini confirmado)', () => {
+  it('Spectro Frazzle: base 4596, kStack 0.811, tick 3s, consume 1, ignora DEF', () => {
+    const cfg = getStatusConfig('spectro_frazzle');
+    expect(cfg.baseAtRefLevel).toBe(4596);
+    expect(cfg.kStack).toBeCloseTo(0.811, 3);
+    expect(cfg.appliesDef).toBe(false);
+    expect(cfg.tickInterval).toBe(3.0);
+    expect(cfg.consumption).toBe('onePerTick');
+  });
+  it('Aero Erosion: base 5000, lineal (kStack 1), aplica DEF', () => {
+    const cfg = getStatusConfig('aero_erosion');
+    expect(cfg.baseAtRefLevel).toBe(5000);
+    expect(cfg.kStack).toBe(1);
+    expect(cfg.appliesDef).toBe(true);
+  });
+  it('Glacio Chafe: StacksMV 20377 para límite 10 (y 13→40753 vía override)', () => {
+    const cfg = getStatusConfig('glacio_chafe');
+    expect(cfg.stacksMv).toBe(20377);
+  });
+  it('Electro Flare: affine 155+674, tick 6s, consume mitad', () => {
+    const cfg = getStatusConfig('electro_flare');
+    expect(cfg.damageModel).toBe('affine');
+    expect(cfg.baseOffset).toBe(155);
+    expect(cfg.slopePerStack).toBe(674);
+    expect(cfg.tickInterval).toBe(6.0);
+    expect(cfg.consumption).toBe('halfFloor');
+  });
+  it('Havoc Bane: -2%/stack, máx 3, déficit por defecto', () => {
+    const cfg = getStatusConfig('havoc_bane');
+    expect(cfg.damageMode).toBe('defDebuff');
+    expect(cfg.maxStacks).toBe(3);
+  });
+});
+
 describe('Havoc Bane (debuff de DEF v2.8)', () => {
   it('-2% DEF por stack: 3 → -6%, 6 → -12%', () => {
     const base = 1600;

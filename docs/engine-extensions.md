@@ -188,9 +188,12 @@ tiempo real: dado un estado aplicado sobre un objetivo, expone funciones determi
 - **Havoc Bane**: `applyHavocBaneDefense` reduce DEF -2%/stack (v2.8); no produce daño.
 - **Electro Rage**: overflow → amplifica el próximo tick y se remueve.
 - **Burst/Respuestas**: `detonateStatus` para Fusion Burst y respuestas de Tonalidad/Hack.
-- **Registry de 9 estados** (`STATUS_REGISTRY`): config declarativa por estado. Los valores
-  exóticos de la investigación son *defaults de calibración*; cada personaje los sobrescribe
-  desde su campo `negativeStatuses` en JSON5.
+- **Registry de 9 estados** (`STATUS_REGISTRY`): config declarativa por estado. **Calibrado
+  (2026-08-12)** con los valores confirmados de Gemini: Spectro Frazzle (base 4596, kStack 0.811,
+  tick 3s, ignora DEF, consume 1), Aero Erosion (base 5000, lineal, aplica DEF), Electro Flare
+  (modelo `affine`: 155 + 674×stacks, tick 6s, consume la mitad), Havoc Bane (DEF -2%/stack,
+  máx 3), Glacio Chafe (StacksMV, instantáneo). Admite dos modelos de escalado del DoT:
+  **`uniform`** (`base × [1+(n-1)×kStack]`) y **`affine`** (`baseOffset + slopePerStack × n`).
 
 Los datos se declaran en JSON5 vía el campo `negativeStatuses` de un resonator/weapon/enemy
 (ver `libs/ww/stats/src/_BaseEntity.json5` y `CharacterTemplate.json5`).

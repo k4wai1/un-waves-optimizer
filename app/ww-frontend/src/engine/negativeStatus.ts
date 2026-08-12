@@ -58,6 +58,12 @@ export interface StatusConfig {
   /** Elemento del daño (para M_RES). Si 'none' no aplica resistencia elemental. */
   element: 'glacio' | 'fusion' | 'electro' | 'aero' | 'spectro' | 'havoc' | 'none';
   damageMode: StatusDamageMode;
+  /**
+   * Modelo de escalado del daño por stacks (DoT paramétrico):
+   *   - 'uniform' → `base × [1+(n-1)×kStack]` (Spectro Frazzle, Aero Erosion).
+   *   - 'affine'  → `baseOffset + slopePerStack × n` (Electro Flare: 155 + 674×n).
+   */
+  damageModel: 'uniform' | 'affine';
   /** Máximo de stacks por defecto (modificable con Chisa: +3). */
   maxStacks: number;
   /** Intervalo del tick en segundos para DoT (ignorado en 'burst'/'defDebuff'). */
@@ -65,29 +71,43 @@ export interface StatusConfig {
   /** Consumo de stacks por tick. */
   consumption: StatusConsumption;
   /**
-   * ¿Aplica la mitigación de DEF enemiga? (Spectro Frazzle y Aero Erosion IGNORAN
-   * la DEF; Glacio Chafe, Fusion Burst y Electro Flare SÍ la aplican).
+   * ¿Aplica la mitigación de DEF enemiga? (Spectro Frazzle IGNORA la DEF; Aero
+   * Erosion, Glacio Chafe, Fusion Burst y Electro Flare SÍ la aplican).
    */
   appliesDef: boolean;
   /** ¿Puede recibir DEF ignore en su mitigación? (Fusión/Electro sí, paramétrico no). */
   usesDefIgnore: boolean;
-  /**
-   * Nivel de referencia (nivel del aplicador) para `baseAtLevel`.
-   * La mayoría de estados calibran su daño base a nivel 90.
-   */
+  /** Nivel de referencia para el escalado de nivel (default 90). */
   refLevel: number;
-  /** Daño base de 1 stack al `refLevel`, ANTES de mitigación (solo 'parametric'). */
+  /**
+   * Modelo 'uniform': daño base de 1 stack al `refLevel`, ANTES de mitigación.
+   * (Spectro Frazzle ≈4596@Lv90; Aero Erosion ≈5000@Lv90.)
+   */
   baseAtRefLevel: number;
   /**
-   * Constante K_stack ~ (incremento por stack sobre el 1º).
-   *   - Spectro Frazzle: ~0.811
-   *   - (se usa en `[1 + (n-1) × K_stack]`)
+   * Modelo 'uniform': constante K_stack = incremento del daño por cada stack
+   * adicional sobre el 1º (usada en `[1 + (n-1) × K_stack]`).
+   * Frazzle ≈0.811; Aero Erosion = 1 (lineal × stacks).
    */
   kStack: number;
   /**
-   * Si el daño, además del escalado paramétrico, entra dentro de la rama generada
-   * por la configuración por-personaje (primer aplicador cambia `refLevel`/`base`).
+   * Modelo 'affine': término constante del daño base por tick.
+   * (Electro Flare: 155.)
    */
+  baseOffset?: number;
+  /**
+   * Modelo 'affine': incremento del daño por cada stack del tick.
+   * (Electro Flare: 674.)
+   */
+  slopePerStack?: number;
+  /**
+   * Glacio Chafe (daño instantáneo por aplicación, no DoT): valor del StacksMV
+   * en enteros ×10000. Límite 10 → 20377 (2.0377); límite 13 (Chisa) → 40753 (4.0753).
+   */
+  stacksMv?: number;
+  /** ¿El daño se beneficia de amplificación (NS DMG Amp) además de RES/DEF? Default true. */
+  usesAmplify?: boolean;
+
   enabledByDefault?: boolean;
 }
 
@@ -237,55 +257,62 @@ export function stackFactor(config: StatusConfig, stacks: number): number {
 export const STATUS_REGISTRY: Record<NegativeStatusKind, StatusConfig> = {
   glacio_chafe: {
     kind: 'glacio_chafe', name: 'Glacio Chafe', element: 'glacio',
-    damageMode: 'parametric', maxStacks: 10, tickInterval: 0,
+    damageMode: 'parametric', damageModel: 'affine', maxStacks: 10, tickInterval: 0,
     consumption: 'none', appliesDef: true, usesDefIgnore: true,
     refLevel: 90, baseAtRefLevel: 0, kStack: 0,
+    // Instantáneo por aplicación (NO DoT). StacksMV: Límite 10 → 20377 (2.0377);
+    // límite 13 (Chisa/Suisui) → 40753 (4.0753). Daño ≈ LevelModifier×(1+0)×StacksMV. 
+    stacksMv: 20377,
   },
   spectro_frazzle: {
     kind: 'spectro_frazzle', name: 'Spectro Frazzle', element: 'spectro',
-    damageMode: 'parametric', maxStacks: 10, tickInterval: 3.0,
+    damageMode: 'parametric', damageModel: 'uniform', maxStacks: 10, tickInterval: 3.0,
     consumption: 'onePerTick', appliesDef: false, usesDefIgnore: false,
     refLevel: 90, baseAtRefLevel: 4596, kStack: 0.811,
   },
   fusion_burst: {
     kind: 'fusion_burst', name: 'Fusion Burst', element: 'fusion',
-    damageMode: 'burst', maxStacks: 10, tickInterval: 0,
+    damageMode: 'burst', damageModel: 'uniform', maxStacks: 10, tickInterval: 0,
     consumption: 'none', appliesDef: true, usesDefIgnore: true,
     refLevel: 90, baseAtRefLevel: 0, kStack: 0,
   },
   aero_erosion: {
     kind: 'aero_erosion', name: 'Aero Erosion', element: 'aero',
-    damageMode: 'parametric', maxStacks: 3, tickInterval: 3.0,
+    damageMode: 'parametric', damageModel: 'uniform', maxStacks: 3, tickInterval: 3.0,
     consumption: 'onePerTick', appliesDef: true, usesDefIgnore: true,
     refLevel: 90, baseAtRefLevel: 5000, kStack: 1, // lineal × stacks
   },
   havoc_bane: {
     kind: 'havoc_bane', name: 'Havoc Bane', element: 'havoc',
-    damageMode: 'defDebuff', maxStacks: 3, tickInterval: 0,
+    damageMode: 'defDebuff', damageModel: 'uniform', maxStacks: 3, tickInterval: 0,
     consumption: 'none', appliesDef: false, usesDefIgnore: false,
     refLevel: 90, baseAtRefLevel: 0, kStack: 0,
   },
   electro_flare: {
     kind: 'electro_flare', name: 'Electro Flare', element: 'electro',
-    damageMode: 'parametric', maxStacks: 10, tickInterval: 6.0,
+    damageMode: 'parametric', damageModel: 'affine', maxStacks: 10, tickInterval: 6.0,
     consumption: 'halfFloor', appliesDef: true, usesDefIgnore: true,
     refLevel: 90, baseAtRefLevel: 0, kStack: 0,
+    // Modelo afín (Level Scalar @ refLevel): BaseDMG = 155 + (674 × flare_stacks).
+    // Diferencial por stack = +674. Consume la mitad (floor) del flare por tick.
+    baseOffset: 155,
+    slopePerStack: 674,
   },
   tune_strain: {
     kind: 'tune_strain', name: 'Tune Strain', element: 'none',
-    damageMode: 'parametric', maxStacks: 1, tickInterval: 0,
+    damageMode: 'parametric', damageModel: 'uniform', maxStacks: 1, tickInterval: 0,
     consumption: 'none', appliesDef: false, usesDefIgnore: false,
     refLevel: 90, baseAtRefLevel: 0, kStack: 0,
   },
   tune_rupture: {
     kind: 'tune_rupture', name: 'Tune Rupture', element: 'none',
-    damageMode: 'burst', maxStacks: 1, tickInterval: 0,
+    damageMode: 'burst', damageModel: 'uniform', maxStacks: 1, tickInterval: 0,
     consumption: 'none', appliesDef: false, usesDefIgnore: false,
     refLevel: 90, baseAtRefLevel: 0, kStack: 0,
   },
   tune_hack: {
     kind: 'tune_hack', name: 'Tune Hack', element: 'none',
-    damageMode: 'burst', maxStacks: 1, tickInterval: 0,
+    damageMode: 'burst', damageModel: 'uniform', maxStacks: 1, tickInterval: 0,
     consumption: 'none', appliesDef: false, usesDefIgnore: false,
     refLevel: 90, baseAtRefLevel: 0, kStack: 0,
   },
@@ -355,15 +382,23 @@ export function simulateStatusTick(
     return { damage: 0, nextStacks: state.currentStacks, nextRage: state.rageStacks, expired: false };
   }
 
-  // 1. Daño base de 1 stack por nivel del aplicador (paramétrico).
-  const base1 = levelValue(config, levelOptions, ctx.attackerLvl);
-
-  // 2. Multiplicador por stacks.
+  // 1-2. Daño base escalado por stacks según el modelo:
+  //   'uniform' → base(refLevel, nivel aplicador) × [1+(n-1)×kStack]
+  //             (Spectro Frazzle, Aero Erosion)
+  //   'affine'  → baseOffset + slopePerStack × n
+  //             (Electro Flare: 155 + 674×flare). SIN stack factor.
   const stacks = state.currentStacks;
-  const sf = stackFactor(config, stacks);
+  let baseDmg: number;
+  if (config.damageModel === 'affine') {
+    baseDmg = (config.baseOffset ?? 0) + (config.slopePerStack ?? 0) * stacks;
+  } else {
+    const base1 = levelValue(config, levelOptions, ctx.attackerLvl);
+    const sf = stackFactor(config, stacks);
+    baseDmg = base1 * sf;
+  }
 
   // 3. Mitigaciones: RES siempre; DEF solo si el estado la aplica.
-  let dmg = toFixed(base1) * sf; // en punto fijo escalado
+  let dmg = toFixed(baseDmg); // en punto fijo escalado
   const resM = resMultiplier(ctx.enemyRes);
   dmg = mulFixed(dmg, toFixed(resM));
 

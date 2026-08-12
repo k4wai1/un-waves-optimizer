@@ -107,10 +107,13 @@
   //
   // Campos:
   //   applies        : stacks que inflige al aplicar el estado (default 1).
-  //   tickInterval   : override del intervalo del DoT (segundos).
-  //   baseAtRefLevel : daño base de 1 stack a refLevel (estados paramétricos).
+  //   damageModel    : 'uniform' (base×stackFactor) | 'affine' (baseOffset+slope×n).
+  //                    Default 'uniform'. Solo para DoT paramétricos.
+  //   baseAtRefLevel : daño base de 1 stack a refLevel (modelo 'uniform').
   //   refLevel       : nivel de referencia para baseAtRefLevel (default 90).
   //   kStack         : incremento por stack sobre el 1º en [1+(n-1)×kStack].
+  //   baseOffset     : (modelo 'affine') término constante, p. ej. 155 (Electro Flare).
+  //   slopePerStack  : (modelo 'affine') daño extra por stack, p. ej. 674 (Electro Flare).
   //   tuneBreakBoost : (Tonalidad) puntos de Tune Break Boost que aporta.
   //   response       : (Tonalidad/Hack) { element, multiplier:[...] } de la respuesta.
   "negativeStatuses": [
