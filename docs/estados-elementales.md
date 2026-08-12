@@ -28,7 +28,7 @@
 | Electro Flare | Electro | DoT + reducción ATK | 10 (13 c/Chisa) | ✅ CONFIRMADO (Gemini) |
 | Tune Strain - Shifting | Tonalidad (Spectro) | Marcador (25s) + +8% All DMG (Blaster) | — | ✅ CONFIRMADO (Gemini) |
 | Tune Strain - Interfered | Tonalidad (Spectro) | Amplify (0.12%×boost×stacks) | hasta 4 | ✅ CONFIRMADO (Gemini) |
-| Tune Rupture - Shifting/Interfered | Tonalidad (Fusion) | Marcador + respuestas | variable | ⚠️ duración sin confirmar |
+| Tune Rupture - Shifting/Interfered | Tonalidad (Fusion) | Marcador (25s) + respuestas coordinadas (8s ICD) | variable | ✅ CONFIRMADO (Gemini) |
 | Hack - Shifting/Interfered | Cyberpunk | Variante Tune Rupture | 1 | ✅ confirmado |
 | Hack Response (Lucy/Rebecca) | — | Daño condicional | 1 | ✅ multiplicadores confirmados |
 
@@ -217,12 +217,29 @@
   Blaster) → `ON_TUNE_BREAK` (Shifting→Interfered, `S_max=min(4,1+habilitadores)`) → `CALCULATE_DAMAGE`
   (si tiene response → `Factor_Amp = 1 + 0.0012×boost×S_interfered`).
 
-### Tune Rupture - Shifting / Interfered ⚠️
-- Shifting: Aemeath (modo Tune Rupture), Lynae (según modo).
-- Interfered: dispara **ataque coordinado de alto daño** desde el equipo. Enemigos con Rupture - Shifting reciben +20% más daño total.
-- **❌ Duración no confirmada.**
-- Mornye: si el enemigo tiene Rupture/Strain - Interfered, el **equipo** hace hasta **+40%** más daño (0.25% amplif. por 1% ER sobre 100%, cap 40%).
-- Aemeath responde a Interfered infligiendo 10 stacks de "Rupturous Trail" (30s) ❌ daño sin confirmar.
+### Tune Rupture - Shifting / Interfered ✅ (Gemini 2026-08-11)
+- **Shifting:** latente **25 s**. Aplican: Aemeath (modo Tune Rupture), Lynae (modo Rupture,
+  "Photochromic Flux": Basic/Intro). Enemigos con Rupture - Shifting reciben +20% más daño total.
+- **Interfered:** **exactamente 8 s** (tras Tune Break sobre Shifting). Dispara **Tune Rupture Response**
+  (ataques coordinados off-field) con **ICD 8s/objetivo**.
+- **Regla:** no coexiste con Tune Strain (aplicar uno purga el otro; acumulaciones de Strain - Interfered
+  → 0 en el mismo frame). ⚠️ Hack - Shifting vs Rupture - Shifting: no acumulan; prevalece el más reciente.
+- **Lynae** (Spectro/Pistolas, Aplicador/Sub-DPS): Response - **Spectral Analysis = 946% → 1880.75%**
+  (Tune AMP por nivel de talento N1→N10). S2: +25% All DMG Amp propio; Outro "Let's Hit the Road!" →
+  entrante +40% All (base 15 + S2 25) + +25% RL DMG (14s). "Visual Impact" → **+40 pts Tune Break Boost** (30s).
+- **Mornye** (Fusion/Broadblade, Buffer ER/Sub-DPS): convierte Observation Marker → **Interfered Marker**
+  (8s). `Amp(ER) = min(0.40, max(0, (ER-1.00)×0.25))` (techo 40% → **260% ER**). Response - **Particle Jet /
+  298.00% Fusion DMG** (ICD 8s).
+- **Aemeath** (Fusion/Sword, Main DPS): al responder aplica **10 stacks de Rupturous Trail** (30s).
+  "Seraphic Duet" consume los stacks → **+4%/stack** (ventana 1s); bajo Stardust Resonance ejecuta **10
+  instancias** de Tune Rupture DMG. "Between the Stars": +20% Crit DMG por aliado que aplica Rupture
+  (máx 3 → **+60%**); a 3 → "Finale" +25% Amp.
+- **Fórmula:** `Daño_Rupture = ATK × Mult_Skill × Factor_CRIT × Factor_DMG_Bonus × Factor_Amp × Mitig_DEF ×
+  Mitig_RES × Escalar_TuneBoost` (Escalar_TuneBoost = `1 + (TuneBreakBoost/100)×Coef`, Lynae +40).
+- **Test unitarios (validación):** exclusión mutua, expiración Shifting 25.01s, cap Mornye (ER 200→25%,
+  260→40%, 300→40%), ICD respuesta (Tune Breaks separados 4s → respuesta solo en el primero).
+- **Fuentes:** Gemini 2026-08-11; refrendar curva de talento Lynae, Particle Jet 298%, fórmula Duet
+  contra fandom `wiki/Tune_Rupture`.
 
 ### Hack (Cyberpunk) ✅
 - **v3.4**, colab Cyberpunk Edgerunners. Exclusivo de **Lucy** y **Rebecca**. Idéntico a Tune Rupture: Hack - Shifting → (Tune Break) → Hack - Interfered (**8 s**) + daño masivo. No se reaplica hasta terminar Interfered.
@@ -236,9 +253,9 @@
 
 ## 3. Marcadores de Tonalidad: Lynae / Mornye / Aemeath
 
-- **Lynae (Lyncae):** alterna entre Tune Rupture y Tune Strain según modo ("Spectral Analysis: Flux"), habilitando respuestas de ruptura con **+1880%** de daño ⚠️. S2: +25% All DMG Amp + +70% Rupture Response.
-- **Mornye:** convierte "Observation Marker" en **Interfered Marker** por 8 s. Si el enemigo tiene Rupture/Strain - Interfered, el **equipo hace hasta +40%** más daño. Contra Tune Rupture - Interfered dispara **"Particle Jet"** (daño Fusion plano, cooldown 8s/objetivo) ❌ valor sin confirmar.
-- **Aemeath:** en modo Tune Rupture aplica el debuff; cuando el equipo responde a Interfered inflige 10 stacks de "Rupturous Trail" (30s); +20% STBK por compañero que inflige Rupture (hasta 3).
+- **Lynae (Lyncae):** alterna entre Tune Rupture y Tune Strain según modo ("Spectral Analysis: Flux"), habilitando respuestas de ruptura con **946% → 1880.75%** de daño (Tune AMP por nivel de talento N1→N10) ✅. S2: +25% All DMG Amp propio; Outro "Let's Hit the Road!" → entrante **+40% All DMG** (base 15 + S2 25) + +25% RL DMG (14s) ✅ (Gemini 2026-08-11).
+- **Mornye:** convierte "Observation Marker" en **Interfered Marker** por 8 s. Si el enemigo tiene Rupture/Strain - Interfered, el **equipo hace hasta +40%** más daño (`Amp(ER)=min(0.40, max(0,(ER-1.00)×0.25))`, techo 40% → 260% ER) ✅. Contra Tune Rupture - Interfered dispara **"Particle Jet" = 298.00% Fusion DMG** (ICD 8s/objetivo) ✅ (Gemini).
+- **Aemeath:** en modo Tune Rupture aplica el debuff; cuando el equipo responde a Interfered inflige **10 stacks de "Rupturous Trail" (30s)**; "Seraphic Duet" consume los stacks → **+4% por stack** (1s) ✅; "Between the Stars" +20% Crit DMG por compañero que inflige Rupture (hasta 3 → +60%); a 3 → "Finale" +25% Amp (Gemini).
 - **Match repo:** `Lynae.json5` (Tune Rupture Response - Spectral Analysis DMG), `Mornye.json5` (Tune Rupture Response - Particle Jet DMG). Estas acciones **solo deberían mostrarse/activarse cuando el estado está activo** en la UI (pendiente).
 
 ---
@@ -257,8 +274,6 @@ acciones de algunos Resonadores. El motor **no los modela** todavía.
 
 ## 5. Pendientes de confirmar (búsquedas profundas con IA de Google)
 
-- [ ] **Tune Rupture - Interfered:** duración exacta.
-- [ ] **Rupturous Trail (Aemeath)** y **Particle Jet (Mornye)**: daño real.
 - [ ] **Cómo representar los "Tune responses"** (Lynae/Mornye) en la UI: mostrar la acción solo cuando el estado esté activo.
 - [ ] Modelar los **intervalos/ticks** de los DoT en el motor (cada N segundos no es un solo `calculateDamage`).
 
