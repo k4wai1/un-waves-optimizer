@@ -1,450 +1,61 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 {
-
-
-
   "metadata": {
-
-
     "schemaVersion": "2.0",
-
-
-
-
     "id": "EntityId",
-
-
     "name": "Entity Name",
-
-
     "entityType": "resonator",
-
-
     "rarity": 5,
-
-
-
     "version": "1.0",
-
-
-
-
     "element": null,
-
-
-
-
     "weaponType": null,
-
-
-
-
-
-
-
     "tags": [],
-
-
     "aliases": []
   },
 
-
-
-
-
   "stats": {
-
-
-
-
-
-
-
-
     "hp": null,
-
-
-
     "atk": null,
-
-
     "def": null,
-
-
-
-
-
-
-
-
-
-
-
-
     "secondaryAttribute": null,
-
-
-
-
     "statNodes": [],
-
-
-
     "tuneBreakBoost": null,
-
-
     "offTuneBuildupRate": null
   },
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  "actions": [
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  ],
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  "actions": [],
 
   "effects": [],
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  "mechanics": [
-
+  // ─── Estados Negativos / Tonalidad ──────────────────────────────────────
+  // Declara cómo esta entidad interactúa con los estados negativos y el
+  // sistema de Tonalidad. Cada entrada CALIBRA el comportamiento declarativo
+  // descrito en `docs/estados-elementales.md` y ejecutado por el motor
+  // `app/ww-frontend/src/engine/negativeStatus.ts`.
+  //
+  // Tipos de `kind` válidos (ver `docs/estados-elementales.md`):
+  //   glacio_chafe | spectro_frazzle | fusion_burst | aero_erosion |
+  //   havoc_bane | electro_flare | tune_strain | tune_rupture | tune_hack
+  //
+  // - `applies`        : stacks que inflige esta entidad al aplicar el estado.
+  // - `tickInterval`   : (opcional) override del intervalo del DoT en segundos.
+  // - `baseAtRefLevel` : daño base de 1 stack a `refLevel` (estados paramétricos).
+  // - `refLevel`       : nivel al que está calibrado `baseAtRefLevel` (default 90).
+  // - `kStack`         : incremento por stack sobre el 1º en `[1+(n-1)×kStack]`.
+  // - `tuneBreakBoost` : (Tonalidad) puntos de Tune Break Boost que aporta.
+  // - `response`       : (Tonalidad/Hack) respuesta de daño (multiplicador + elemento).
+  "negativeStatuses": [
+    // {
+    //   "kind": "havoc_bane",
+    //   "applies": 1
+    // },
+    // {
+    //   "kind": "tune_hack",
+    //   "applies": 1,
+    //   "response": { "element": "electro", "multiplier": [23.5889] } // Meltdown (Rebecca)
+    // }
   ],
 
-
-
+  "mechanics": [],
 
   "lore": {
     "about": null,

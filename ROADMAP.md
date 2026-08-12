@@ -42,7 +42,8 @@ build para un personaje contra un enemigo objetivo.
 | Componente | Estado |
 |---|---|
 | Motor de dano/cura/escudo | Funciona, fiel a la formula oficial (def/res/crit/bonus por tipo/P_k/deepen) |
-| 56 personajes en JSON5 | Completos (stats, actions, effects, statNodes) |
+| Motor de Estados Negativos | **Nuevo (2026-08-12)**: `negativeStatus.ts` — punto fijo ×10000, LUT por nivel, ticks, registry de 9 estados, Havoc Bane DEF, Electro Rage, detonacion. Datos por-personaje pendientes de calibrar |
+| 56 personajes en JSON5 | Completos (stats, actions, effects, statNodes, campo `negativeStatuses`) |
 | Sistema de efectos declarativo | Funciona (paths, stacks, ranks) |
 | UI de Resonator | Funciona (seleccion, niveles, effects, tabla de combate) |
 | UI de Armas | Funciona (120 armas con stats 1-90, imagenes, filtro por tipo, buff base 45/45 5★; pasivas complejas como texto visible) |
@@ -83,8 +84,16 @@ Pendiente (sub-nivel: pasivas complejas 5★):
 - [ ] Modelar a mano los condicionales simples de las ~44 armas 5★ (buff tras Intro/Skill/
       Liberation/Basic/Heavy con `onAction`) — ver `tools/weapons/five_star_catalog.cjs`
       y `docs/engine-extensions.md` seccion 3.3 (`condition.onAction`)
-- [ ] Extension del motor para condiciones de estado elemental (Glacio Chafe, Spectro
-      Frazzle, Tune Strain, Fusion Burst, Aero Erosion, Hack, Negative Statuses)
+- [x] Extension del motor para condiciones de estado elemental (Glacio Chafe, Spectro
+      Frazzle, Tune Strain, Fusion Burst, Aero Erosion, Hack, Negative Statuses) — **2026-08-12**:
+      nuevo `app/ww-frontend/src/engine/negativeStatus.ts` (punto fijo ×10000, LUT por nivel,
+      ticks, registry de 9 estados, Havoc Bane DEF, Electro Rage, detonacion). Ver
+      `docs/estados-elementales.md` (confirmado) y `docs/engine-extensions.md` seccion 3.5.
+  - [ ] Calibrar los **datos por-personaje** (campo `negativeStatuses` en JSON5): daño base
+        por nivel (LUT), multiplicadores de respuesta (Meltdown, Spectral Analysis, Data Crash),
+        K_stack, etc. — hoy son defaults de calibración en `STATUS_REGISTRY`.
+  - [ ] Mostrar los **DoT por tick** en `ResonatorSetup` (usar `advanceTimer`/`simulateStatusTick`
+        para DPS por segundo de cada estado; hoy el calculador de personaje no integra `negativeStatus`).
 - [ ] Extension del motor para buffs on/off-field y de equipo
 - [ ] DEF/RES ignore condicional por tipo de accion
 - [ ] Amplify (Deepen) elemental por condiciones

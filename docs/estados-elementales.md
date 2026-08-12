@@ -14,6 +14,16 @@
 > **búsquedas profundas con IA de Google** para confirmar cada dato ambiguo. Ningún
 > número ❌/⚠️ se modela en el motor hasta estar verificado.
 
+> ✅ **Estatus de implementación (2026-08-12):** las **9 dudas** (6 estados elementales +
+> Tonalidad Strain/Rupture + Hack) fueron **confirmadas con Gemini** (ver subcarpeta
+> `docs/investigacion-estados/`). El **motor determinista** `app/ww-frontend/src/engine/`
+> nueva extensión **`negativeStatus.ts`** (punto fijo ×10000, LUT por nivel, ticks, registry
+> de 9 estados, Havoc Bane DEF-multiplicador, Electro Rage, detonación de burst/respuestas)
+> implementa la arquitectura. Los **valores exactos por-personaje** (daño base por nivel,
+> multiplicadores de respuesta, etc.) siguen siendo *datos de calibración* que se cargan
+> desde JSON5 vía el campo `negativeStatuses` (ver `libs/ww/stats/src/_BaseEntity.json5` y
+> `CharacterTemplate.json5`). Ver `docs/engine-extensions.md` sección 3.5.
+
 ---
 
 ## 0. Resumen rápido

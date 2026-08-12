@@ -35,11 +35,12 @@ la mejor build para un personaje contra un enemigo objetivo.
 | Componente | Estado |
 |---|---|
 | Motor de daño/cura/escudo | Fiel a la fórmula oficial (def/res/crit/bonus por tipo / Deepen) |
-| 56 personajes en JSON5 | Stats, acciones, efectos, stat nodes |
+| Motor de Estados Negativos | Núcleo determinista en `negativeStatus.ts`: punto fijo, LUT, ticks, 9 estados + Tonalidad |
+| 56 personajes en JSON5 | Stats, acciones, efectos, stat nodes, campo `negativeStatuses` |
 | Sistema de efectos declarativo | Paths, stacks, ranks |
 | UI de Resonator | Selección, niveles, efectos, tabla de combate |
 | UI de Armas | 120 armas (stats 1-90, imágenes, filtro por tipo del personaje) |
-| Tests | Cubren motor y effectResolver (no la UI) |
+| Tests | 79: motor, effectResolver y negativeStatus |
 
 ## Lo que falta (resumen)
 

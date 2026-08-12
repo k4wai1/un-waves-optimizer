@@ -140,5 +140,28 @@
     "introSkill":          "Intro Skill",
     "outroSkill":          "Outro Skill",
     "echoSkill":           "Echo Skill"
+  },
+
+  // ─── Estados Negativos / Tonalidad ─────────────────────────────────────
+  // Paths del subsistema de Estados Negativos (motor `negativeStatus.ts`).
+  // Los `kind` son los que se usan en el campo `negativeStatuses` de un
+  // resonator/weapon/enemy. Ver `docs/estados-elementales.md`.
+  "negativeStatus": {
+    "glacio_chafe":       "Glacio Chafe (daño al aplicar + slow + freeze; 10 → 13 con Chisa)",
+    "spectro_frazzle":    "Spectro Frazzle (DoT paramétrico por nivel, consume 1 stack/tick)",
+    "fusion_burst":       "Fusion Burst (sumidero → explosión al llegar al límite; NO DoT)",
+    "aero_erosion":       "Aero Erosion (DoT paramétrico por nivel, consume 1 stack/tick)",
+    "havoc_bane":         "Havoc Bane (debuff de reducción de DEF v2.8; -2%/stack, máx 3→6 c/Chisa)",
+    "electro_flare":      "Electro Flare (DoT consume la mitad/tick + overflow Electro Rage)",
+    "tune_strain":        "Tune Strain (amplificación 0.12% × tuneBreakBoost × stacks Interfered)",
+    "tune_rupture":       "Tune Rupture (respuesta coordinada de ráfaga tras Tune Break)",
+    "tune_hack":          "Tune Hack (v3.4; respuesta coordinada Lucy/Rebecca, Interfered 8s)"
+  },
+
+  // ─── Stats de Tonalidad (por persona) ──────────────────────────────────
+  // Se consumen vía CombatContext.tuneBreakBoost y offTuneBuildupRate_.
+  "tune": {
+    "tuneBreakBoost":   "Tune Break Boost del personaje (puntos; base + pasivas + ER/Off-Tune Buildup Rate)",
+    "offTuneBuildupRate": "Tasa de acumulación de Off-Tune Level (default 1.0)"
   }
 }

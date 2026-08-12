@@ -168,6 +168,32 @@ Con esto, **las 45 armas 5★** tienen su buff base modelado como efecto real.
 | `condition.onAction` | `effectResolver.ts` (reconoce el formato) | `VerdantSummit.json5` (si se modela) |
 | Buff base (`enabledByDefault`) | `effectResolver.ts` (aplica efectos activos) | `WoodlandAria.json5` |
 | Paths `stat.*` (atk_, hp_, def_, allDmgBonus...) | `effectResolver.ts` (`PATH_TO_CTX`) | cualquier arma/personaje |
+| `EnemyStats.damageTaken` / `damageReduction` | `calculator.ts` (M_DEF/M_DR) | `EnemyBase.json5` |
+| **Estados Negativos / Tonalidad** | **`negativeStatus.ts`** (punto fijo, LUT, ticks, registry) | `CharacterTemplate.json5` (`negativeStatuses`) |
+
+### 3.5 Estados Negativos / DoT / Tonalidad (`negativeStatus.ts`)
+
+Extensión nueva (2026-08-12). Implementa la **arquitectura** de los Estados Negativos y del
+Sistema de Tonalidad investigados en `docs/estados-elementales.md` y la subcarpeta
+`docs/investigacion-estados/` (confirmados con Gemini). No es una simulación de combate en
+tiempo real: dado un estado aplicado sobre un objetivo, expone funciones deterministas:
+
+- **Punto fijo ×10000**: `toFixed`/`fromFixed`/`mulFixed` con `Math.floor` para resultados
+  idénticos en cualquier plataforma (evita IEEE 754).
+- **LUT por nivel**: `levelValue(config, levelOptions, attackerLvl)` interpola el daño base de
+  1 stack según el nivel del aplicador (paramétrico, no ATK).
+- **Fórmula NS determinista** (`simulateStatusTick`): daño = nivel × stackFactor × RES ×
+  DEF(solo si el estado la aplica) × (1 + NS Amp). El **DMG Bonus elemental NO aplica** a NS.
+- **Consumo por tick**: `onePerTick` (Spectro Frazzle, Aero Erosion) y `halfFloor` (Electro Flare).
+- **Havoc Bane**: `applyHavocBaneDefense` reduce DEF -2%/stack (v2.8); no produce daño.
+- **Electro Rage**: overflow → amplifica el próximo tick y se remueve.
+- **Burst/Respuestas**: `detonateStatus` para Fusion Burst y respuestas de Tonalidad/Hack.
+- **Registry de 9 estados** (`STATUS_REGISTRY`): config declarativa por estado. Los valores
+  exóticos de la investigación son *defaults de calibración*; cada personaje los sobrescribe
+  desde su campo `negativeStatuses` en JSON5.
+
+Los datos se declaran en JSON5 vía el campo `negativeStatuses` de un resonator/weapon/enemy
+(ver `libs/ww/stats/src/_BaseEntity.json5` y `CharacterTemplate.json5`).
 
 ---
 
@@ -175,13 +201,15 @@ Con esto, **las 45 armas 5★** tienen su buff base modelado como efecto real.
 
 El motor aún **no** simula (está documentado en `ROADMAP.md` Sub-fase 1b):
 
-- Estados elementales (Glacio Chafe, Spectro Frazzle, Tune Strain, Fusion Burst,
-  Aero Erosion, Hack, Negative Statuses) — necesarios para pasivas de Frostburn,
-  Woodland Aria, Azure Oath, etc.
+- ⚠️ **Modelar los ticks de los DoT en el calculador de personaje** (`ResonatorSetup`): el
+  `negativeStatus.ts` ya expone `advanceTimer` y `simulateStatusTick`, pero la UI/hook todavía
+  no muestra daño por tick por segundo (cada DoT no es un solo `calculateDamage`).
 - Buffs on/off-field (si el portador está dentro o fuera del campo)
 - Buffs de equipo (que afectan a otros miembros)
 - DEF/RES ignore condicional por tipo de acción
 - Amplify (Deepen) elemental condicional
+- Conectar las pasivas de armas actualmente en `description_raw` a los paths de estado negativo
+  (para Frostburn, Woodland Aria, Azure Oath, etc.)
 
 Cuando se implementen, las pasivas actualmente en `description_raw` podrán migrar a
 `target` + `modifiers` reales.

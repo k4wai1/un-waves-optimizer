@@ -97,6 +97,43 @@
       "enabledByDefault": false
     }
   ],
+  // ─── Estados Negativos / Tonalidad ──────────────────────────────────────
+  // Opcional. Declara cómo este personaje aplica estados negativos o responde
+  // al sistema de Tonalidad. El motor lo interpreta vía
+  // `app/ww-frontend/src/engine/negativeStatus.ts`.
+  //
+  // `kind` válidos: glacio_chafe | spectro_frazzle | fusion_burst | aero_erosion
+  //   | havoc_bane | electro_flare | tune_strain | tune_rupture | tune_hack
+  //
+  // Campos:
+  //   applies        : stacks que inflige al aplicar el estado (default 1).
+  //   tickInterval   : override del intervalo del DoT (segundos).
+  //   baseAtRefLevel : daño base de 1 stack a refLevel (estados paramétricos).
+  //   refLevel       : nivel de referencia para baseAtRefLevel (default 90).
+  //   kStack         : incremento por stack sobre el 1º en [1+(n-1)×kStack].
+  //   tuneBreakBoost : (Tonalidad) puntos de Tune Break Boost que aporta.
+  //   response       : (Tonalidad/Hack) { element, multiplier:[...] } de la respuesta.
+  "negativeStatuses": [
+    // Ejemplo — personaje que aplica Havoc Bane (1 stack): Chisa / Yangyang Xuanling
+    // {
+    //   "kind": "havoc_bane",
+    //   "applies": 1
+    // }
+    //
+    // Ejemplo — Rebecca aplica Tune Hack y responde con Meltdown (2358.89% Electro):
+    // {
+    //   "kind": "tune_hack",
+    //   "applies": 1,
+    //   "response": { "element": "electro", "multiplier": [23.5889] }
+    // }
+    //
+    // Ejemplo — Lynae responde a Tune Rupture con Spectral Analysis (Spectro, 1880.75% N10):
+    // {
+    //   "kind": "tune_rupture",
+    //   "tuneBreakBoost": 40,
+    //   "response": { "element": "spectro", "multiplier": [9.46, 10.2358, 11.0115, 12.0975, 12.8732, 13.7653, 15.0064, 16.2476, 17.4888, 18.8075] }
+    // }
+  ],
   "mechanics": [],
   "lore": {
     "about": null,
