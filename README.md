@@ -34,14 +34,16 @@ la mejor build para un personaje contra un enemigo objetivo.
 
 | Componente | Estado |
 |---|---|
-| Motor de daño/cura/escudo | Fiel a la fórmula oficial (def/res/crit/bonus por tipo / Deepen) |
+| Motor de daño/cura/escudo | Fiel a la fórmula oficial (def/res/crit/bonus por tipo / Deepen). M_DEF nominal `(800+8·(Lv-1))·DefRatio`, DEF Ignore >100% → M_DEF>1 (techo 2.0) |
 | Motor de Estados Negativos | Núcleo determinista en `negativeStatus.ts`: punto fijo, LUT, ticks, 9 estados + Tonalidad |
 | 56 personajes en JSON5 | Stats, acciones, efectos, stat nodes, campo `negativeStatuses` |
 | Sistema de efectos declarativo | Paths, stacks, ranks |
 | UI de Resonator | Selección, niveles, efectos, tabla de combate |
 | UI de Armas | 120 armas (stats 1-90, imágenes, filtro por tipo del personaje) |
-| UI de Enemigos | 20 Calamity con imagen, stats, resistencias, nivel 1-120. El enemigo seleccionado afecta el daño |
-| Tests | 93: motor, effectResolver, negativeStatus y enemy |
+| UI de Enemigos | 20 Calamity con imagen, stats, resistencias, nivel 1-120. HP/ATK/DEF escalados por GrowthRates (HP@100 ≈ 1M); el enemigo seleccionado afecta el daño |
+| Docs de fidelidad | `docs/enemy-stats.md` (taxonomía A/B/C de stats del enemigo) + `Wuthering_Waves_Multiplicadores.md` |
+| Skills | `character-creator`, `enemy-creator`, `engine-formula`, `spec-validator`, `wuw-gg-datamine` |
+| Tests | 99: motor, effectResolver, negativeStatus, enemy |
 
 ## Lo que falta (resumen)
 

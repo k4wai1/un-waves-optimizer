@@ -20,7 +20,9 @@ Dónde empezar a leer:
 - `docs/engine-accuracy.md` — bugs del motor ya fixeados
 - `docs/engine-extensions.md` — cómo el motor soporta las armas
 - `docs/weapons-extraction.md` — de dónde salieron las 120 armas
+- `docs/enemy-stats.md` — qué stats del enemigo afectan al daño (taxonomía A/B/C)
 - `libs/ww/stats/src/weapons/README.md` — cómo crear una arma a mano
+- `libs/ww/stats/src/enemies/EnemySchema.md` — cómo crear un enemigo
 
 ## Vision
 
@@ -32,27 +34,30 @@ build para un personaje contra un enemigo objetivo.
 
 ---
 
-## Estado actual: ~37/100
+## Estado actual: ~40/100
 
-> **Actualizado 2026-08-10:** el motor cumple la formula oficial (bugs 1-4 de
-> `docs/engine-accuracy.md` fixeados) y las **120 armas** del juego estan implementadas
-> (stats 1-90, imagenes, buff base modelado). Pendiente principal: ecos, equipos y el
-> optimizador (Fases 2-4).
+> **Actualizado 2026-08-12:** el motor cumple la fórmula oficial (def/res/crit/bonus por
+> tipo/Deepen) y cubre también estados negativos (9) y **20 enemigos Calamity** (con
+> GrowthRates 1-120 para escalar HP/ATK/DEF por nivel). Se corrigió la fidelidad de la DEF
+> (nominal `(800+8·(Lv-1))·DefRatio` y DEF Ignore >100% → M_DEF>1 con techo 2.0). Pendiente
+> principal: ecos, equipos y el optimizador (Fases 2-4).
 
 | Componente | Estado |
 |---|---|
-| Motor de dano/cura/escudo | Funciona, fiel a la formula oficial (def/res/crit/bonus por tipo/P_k/deepen) |
-| Motor de Estados Negativos | **Nuevo (2026-08-12)**: `negativeStatus.ts` — punto fijo ×10000, LUT por nivel, ticks, registry de 9 estados, Havoc Bane DEF, Electro Rage, detonacion. Datos por-personaje pendientes de calibrar |
+| Motor de dano/cura/escudo | Fiel a la fórmula oficial (def/res/crit/bonus por tipo/P_k/deepen). **M_DEF nominal `(800+8·(Lv-1))·DefRatio`; DEF Ignore >100% → M_DEF>1 (techo 2.0)** |
+| Motor de Estados Negativos | **Nuevo (2026-08-12)**: `negativeStatus.ts` — punto fijo ×10000, LUT por nivel, ticks, registry de 9 estados, Havoc Bane DEF, Electro Rage, detonación. Datos por-personaje calibrados |
 | 56 personajes en JSON5 | Completos (stats, actions, effects, statNodes, campo `negativeStatuses`) |
 | Sistema de efectos declarativo | Funciona (paths, stacks, ranks) |
 | UI de Resonator | Funciona (seleccion, niveles, effects, tabla de combate) |
 | UI de Armas | Funciona (120 armas con stats 1-90, imagenes, filtro por tipo, buff base 45/45 5★; pasivas complejas como texto visible) |
-| UI de Enemigos | **Nuevo (2026-08-12)**: 20 Calamity de encore.moe (imagen, hp/atk/def, resistencias, nivel 1-120, descripcion). El enemigo seleccionado + nivel se aplica al dano. Helper `enemy.ts` (`resolveEnemyStats` escala DEF) |
+| UI de Enemigos | **Nuevo (2026-08-12)**: 20 Calamity de encore.moe (imagen, hp/atk/def, resistencias, nivel 1-120, descripción). HP/ATK/DEF escalados por **GrowthRates 1-120** (HP@100 ≈ 1M). Enemigo seleccionado + nivel se aplica al daño (`enemy.ts`) |
+| Docs de fidelidad | `docs/enemy-stats.md` (taxonomía A/B/C) + `Wuthering_Waves_Multiplicadores.md` (M_DEF nominal) |
+| Skills | `character-creator`, `enemy-creator`, `engine-formula`, `spec-validator`, `wuw-gg-datamine` |
 | UI de Echos | No existe |
 | Sistema de equipos | No existe |
 | Optimizador | No existe |
 | Deploy a GitHub Pages | No configurado (dejado para mas adelante) |
-| Documentacion del formato | Parcial (READMEs + engine-accuracy.md + engine-extensions.md + weapons-extraction.md) |
+| Documentacion del formato | Parcial (READMEs + engine-accuracy.md + engine-extensions.md + weapons-extraction.md + enemy-stats.md + EnemySchema.md) |
 
 ---
 
@@ -90,9 +95,10 @@ Pendiente (sub-nivel: pasivas complejas 5★):
       nuevo `app/ww-frontend/src/engine/negativeStatus.ts` (punto fijo ×10000, LUT por nivel,
       ticks, registry de 9 estados, Havoc Bane DEF, Electro Rage, detonacion). Ver
       `docs/estados-elementales.md` (confirmado) y `docs/engine-extensions.md` seccion 3.5.
-  - [ ] Calibrar los **datos por-personaje** (campo `negativeStatuses` en JSON5): daño base
+  - [x] Calibrar los **datos por-personaje** (campo `negativeStatuses` en JSON5): daño base
         por nivel (LUT), multiplicadores de respuesta (Meltdown, Spectral Analysis, Data Crash),
-        K_stack, etc. — hoy son defaults de calibración en `STATUS_REGISTRY`.
+        K_stack, etc. — hecho 2026-08-12: `STATUS_REGISTRY` calibrado (Frazzle 4596/k0.811,
+        Erosion 5000/k1, Electro 155+674×stacks, Havoc -2%/stack, Chafe stacksMv).
   - [ ] Mostrar los **DoT por tick** en `ResonatorSetup` (usar `advanceTimer`/`simulateStatusTick`
         para DPS por segundo de cada estado; hoy el calculador de personaje no integra `negativeStatus`).
 - [ ] Extension del motor para buffs on/off-field y de equipo
@@ -105,6 +111,23 @@ Pendiente (sub-nivel: pasivas complejas 5★):
       `modifiers`) para que el texto muestre el multiplicador del rank seleccionado.
       Fix a futuro (no implementado).
 
+### Sub-fase 1c -- Enemigos (20 Calamity + motor + menú)
+
+> **Completado 2026-08-12:** se scrapearon 20 enemigos Calamity desde encore.moe (API
+> `api-v2.encore.moe/api/en/monster/{Id}`), con imagen webp, HP/ATK/DEF base, resistencias
+> elementales (decimal), Max Vibration, Rage Limit y descripción. Se añadió un menú **Enemies**
+> en la UI y el motor `enemy.ts` (`resolveEnemyStats`) escala HP/ATK/DEF por nivel con
+> **GrowthRates 1-120**. Se documentó la taxonomía A/B/C en `docs/enemy-stats.md`.
+
+- [x] Scrapear 20 enemigos Calamity + 20 imágenes webp (encore.moe)
+- [x] Generar 20 archivos JSON5 (id numérico, stats, resistencias, lore)
+- [x] Helper `enemy.ts`: `resolveEnemyStats`/`enemyInfo` — escala HP/ATK/DEF por nivel con tabla `growth`
+- [x] Menú **Enemies** en la UI (imagen, stats, resistencias, nivel 1-120, M_DR, lore)
+- [x] Integrar enemigo seleccionado + nivel en `ResonatorSetup` (reemplaza DEFAULT_ENEMY)
+- [x] Fix HP: el enemigo NO quedaba en valor de Lv1; se escala por GrowthRates (HP@100 ≈ 1M)
+- [x] Docs: `docs/enemy-stats.md` (taxonomía A/B/C) + `EnemySchema.md` (formato + growth) + skill `enemy-creator`
+- [x] **Fidelidad DEF**: nominal `(800+8·(Lv-1))·DefRatio`; DEF Ignore >100% → M_DEF>1 (techo 2.0)
+
 ---
 
 ### Fase 2 -- Ecos + enemigo (~60/100)
@@ -115,7 +138,7 @@ Pendiente (sub-nivel: pasivas complejas 5★):
   - Ver `libs/ww/stats/src/echoes/echoes-rover-notes.md` para referencia inicial
 - [ ] Datos de echoes individuales (166 imagenes ya existen, falta metadata)
 - [ ] UI de inventario de ecos (crear/editar/importar)
-- [ ] Selector de enemigo (nivel, DEF, resistencias, dano recibido)
+- [x] Selector de enemigo (nivel, DEF, resistencias, dano recibido) — hecho en Sub-fase 1c (menú Enemies)
 - [ ] Equipar ecos al personaje (5 slots, cost cap 12)
 - [ ] Main stats y substats afectan CombatContext en tiempo real
 - [ ] Set bonuses (2-pc, 5-pc) aplican como effects

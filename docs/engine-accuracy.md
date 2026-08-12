@@ -293,6 +293,38 @@ Tests nuevos en `combatMechanics.spec.ts` (M_DR y M_ER): 10 casos añadidos, 53/
 
 ---
 
+## Bug 5: DEF Ignore > 100% clampeaba M_DEF a 1.0 (debía superar 1.0)
+
+### El problema
+Cuando la DEF Ignore es mayor al 100% (teórico hasta ~195.5%), el término `(1 − DEF Ignore)`
+se vuelve negativo. Eso reduce el denominador de M_DEF por debajo del numerador, permitiendo
+**M_DEF > 1.0** (la armadura del enemigo funciona como amplificador de daño) hasta un techo
+algorítmico documentado de **2.0 (200%)**. El motor clampeaba `enemyDef` a 0 (`Math.max(0, ...)`),
+forzando siempre M_DEF = 1.0.
+
+### En el motor
+- `calculator.ts::defMultiplierFn` (función pura usada por `calculateDamage`).
+- `negativeStatus.ts::defMultiplier` (para los estados negativos que usan DEF: Electro Flare,
+  Aero Erosion, Fusion Burst).
+
+### Fix (commit `84868835`, 2026-08-12)
+Ambas funciones ahora permiten `enemyDef` negativo y aplican techo máximo 2.0:
+
+```ts
+export function defMultiplierFn(atkStat: number, enemyDef: number): number {
+  const den = atkStat + enemyDef;
+  if (den <= 0) return 2.0;                 // techo algorítmico (200%)
+  return Math.min(2.0, Math.max(0, atkStat / den));
+}
+```
+
+### Verificación
+- Tests nuevos en `combatMechanics.spec.ts` (`DEF Ignore > 100%`): 4 casos (enemyDef negativa,
+  `den <= 0` → techo 2.0, `defIgnore_=1.5` en `calculateDamage`, caso extremo `defIgnore_=20`).
+- Suite completa: **99 tests verdes** + `tsc` sin errores.
+
+---
+
 Despues de aplicar los fixes:
 
 - [ ] A niveles iguales (Lc=Le=100), M_DEF = 0.5 exacto
