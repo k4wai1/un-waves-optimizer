@@ -24,7 +24,7 @@
 | Spectro Frazzle | Spectro | DoT (escala por stack) | 10 | ✅ CONFIRMADO (Gemini) |
 | Fusion Burst | Fusion | Explosión al llegar al límite (10/13) | 13 (Chisa) | ✅ CONFIRMADO (Gemini) |
 | Aero Erosion | Aero | DoT (escala por stack) | 3 (6/9 con externos) | ✅ CONFIRMADO (Gemini) |
-| Havoc Bane | Havoc | **Reducción de DEF** (v2.8) | 3 (6 c/Chisa) | ✅ DEF -2%/stack |
+| Havoc Bane | Havoc | **Reducción de DEF** (v2.8, estática) | 3 (6 c/Chisa) | ✅ CONFIRMADO (v2.8 + Gemini) |
 | Electro Flare (¿Flayer?) | Electro | DoT + reducción ATK | 10 | ⚠️ daño por tick: muestra |
 | Tune Strain - Shifting | Tonalidad (Spectro) | Marcador | — | ✅ confirmado |
 | Tune Strain - Interfered | Tonalidad (Spectro) | Amplify | hasta 4 | ✅ confirmado |
@@ -140,14 +140,16 @@
   HowlingSquall y SkyfallSeverance.
 - **Fuentes:** Gemini 2026-08-11; refrendar tick 3s, base ~5000@Lv90, DEF `8·Lv+792` contra Game8 `archives/557617` y fandom `wiki/Aero_Erosion`.
 
-### 1.5 Havoc Bane (Havoc) — ✅ CONFIRMADO (v2.8)
+### 1.5 Havoc Bane (Havoc) — ✅ CONFIRMADO (v2.8 + Gemini 2026-08-11)
 - ⚠️ **El usuario advirtió:** la info anterior a la **v2.8** (daño de explosión) es **OBSOLETA**. Desde la **v2.8** (20/11/2025) Havoc Bane es un **debuff de reducción de DEF**, NO de daño.
-- **Efecto:** reduce DEF del objetivo. **-2% DEF por stack**, máx 3 stacks (→ -6% DEF). Con **Chisa** (Outro "Unraveling – Law Zero", +3 stacks de estados negativos por 15s) → hasta **6 stacks = -12% DEF**.
-- **Intervalo:** la reducción se aplica en ticks de ~2 s (⚠️).
-- **Aplicación:** ataques Havoc stackeables. **Chisa** (v2.8, Havoc, Sword) primero marca con "Unseen Snare"; los enemigos marcados reciben 1 stack de Bane por cada golpe recibido.
-- **Implementación motor:** NO es DoT; debe reducir `M_DEF` del objetivo (vía `enemy.defense` o similar), no infligir daño.
-- **Set/arma:** Thread of Severed Fate (3p: al infligir Havoc Bane +20% ATK y +30% Liberation DMG 5s); Kumokiri (Chisa). Arma AzureOath (repo) dice "+36% Heavy Amplify + 12% DEF ignore".
-- **Fuentes:** Game8 `archives/558014`, fandom `wiki/Version/2.8` (oficial), Gematsu v2.8, Icy Veins Chisa.
+- **Efecto:** **StatModifierDebuff** de reducción de DEF. **-2% DEF por stack**, máx 3 (→ -6% DEF). Con **Chisa** ("Unraveling") → hasta **6 stacks = -12% DEF**.
+- **Resolución estática (NO ticks):** la reducción es continua mientras dura; NO procesa ticks de 2s (⚠️ el `~2s` es el **ICD de la marca Unseen Snare** de Chisa, no el estado).
+- **Integración M_DEF:** `DEF_Ajustada = DEF_base × (1 - stacks×2%)` (por `8·Lv+792`); luego `DEF_Mult = (800+8Lc)/[(800+8Lc)+DEF_ajustada×(1-DEF_Ignore)]`. Reducción (estado) y ignore (golpe) en **fases separadas**, multiplicativas en el denominador. Corresponde a reducir `enemy.defense` en el motor (defMultiplierFn ya coincide).
+- **Aplicación — Chisa (v2.8, Havoc, Sword):** marca **Unseen Snare** (30s; Skill "Eye of Unraveling", Dodge "Retraction", Lock-on). Es un listener `OnReceiveDamage`: si un aliado daña al marcado → **+1 stack Bane** (ICD 2s). **Thread of Bane** = +18% DEF Ignore al golpear a marcados (no del estado).
+- **Aplicación — Yangyang Xuanling:** Basic Stage 4 → +1 stack; Heavy → +2. **Consume 1 stack** con Skill Azure/Feather → "Bated Breath"/"Drifting Mist" (+100~125% Crit DMG al próximo Heavy). ⚠️ **Frame bug:** el Heavy no disfruta su propia aplicación (daño se resuelve antes del OnHitCallback). "Feathered Oath": bus global (cada aliado que aplica → +1, ICD 1s, hasta 6, +Crit Rate; no refresca duración).
+- **Implementación motor:** NO DoT; reducir `M_DEF`/`enemy.defense` del objetivo (método `onApply` al montar/desmontar), evento global `OnHavocBaneApplied`, clamp anti-negativa, duración inyectada (15-30s).
+- **Set/arma:** Thread of Severed Fate (3p: +20% ATK y +30% Liberation DMG 5s al infligir Bane); Song of Feathered Trace (5p: +20% Crit Rate y +35% Heavy DMG 15s). Kumokiri (Chisa). **Suisui** "Ceaseless Landscape": al consumir Bane → +6% DEF Ignore Havoc + +12% Havoc RES pen (30s).
+- **Fuentes:** Gemini 2026-08-11; Game8 `archives/558014`, fandom `wiki/Version/2.8` (oficial), Gematsu v2.8, Icy Veins Chisa.
 
 ### 1.6 Electro Flare (Electro) — ⚠️ muestra, sin fórmula
 > El usuario no estaba seguro del nombre ("electro flarer" o similar). Confirmado: **Electro Flare**.
@@ -230,7 +232,6 @@ acciones de algunos Resonadores. El motor **no los modela** todavía.
 
 ## 5. Pendientes de confirmar (búsquedas profundas con IA de Google)
 
-- [ ] **Havoc Bane (v2.8):** duración exacta del estado (no se especifica oficial), confirmar que la reducción de DEF aplica a `M_DEF` (y no "por tick de daño").
 - [ ] **Electro Flare:** nombre exacto ("Electro Flare" vs "Electro Flayer"), daño de Electro Rage por stack, duración total, ¿escala con nivel o ATK?, umbral real de Magnetized (5 vs 7).
 - [ ] **Tune Rupture - Interfered:** duración exacta.
 - [ ] **Rupturous Trail (Aemeath)** y **Particle Jet (Mornye)**: daño real.
