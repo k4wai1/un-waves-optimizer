@@ -26,8 +26,8 @@
 | Aero Erosion | Aero | DoT (escala por stack) | 3 (6/9 con externos) | ✅ CONFIRMADO (Gemini) |
 | Havoc Bane | Havoc | **Reducción de DEF** (v2.8, estática) | 3 (6 c/Chisa) | ✅ CONFIRMADO (v2.8 + Gemini) |
 | Electro Flare | Electro | DoT + reducción ATK | 10 (13 c/Chisa) | ✅ CONFIRMADO (Gemini) |
-| Tune Strain - Shifting | Tonalidad (Spectro) | Marcador | — | ✅ confirmado |
-| Tune Strain - Interfered | Tonalidad (Spectro) | Amplify | hasta 4 | ✅ confirmado |
+| Tune Strain - Shifting | Tonalidad (Spectro) | Marcador (25s) + +8% All DMG (Blaster) | — | ✅ CONFIRMADO (Gemini) |
+| Tune Strain - Interfered | Tonalidad (Spectro) | Amplify (0.12%×boost×stacks) | hasta 4 | ✅ CONFIRMADO (Gemini) |
 | Tune Rupture - Shifting/Interfered | Tonalidad (Fusion) | Marcador + respuestas | variable | ⚠️ duración sin confirmar |
 | Hack - Shifting/Interfered | Cyberpunk | Variante Tune Rupture | 1 | ✅ confirmado |
 | Hack Response (Lucy/Rebecca) | — | Daño condicional | 1 | ✅ multiplicadores confirmados |
@@ -185,18 +185,37 @@
 > interrumpe, y convierte **Transición (Shifting) → Interferencia (Interfered)**.
 > Fuente: fandom `wiki/Tune_Strain`, `wuthering.gg/es/guide/fighting/tunability`, Game8 `archives/568979`.
 
-**Regla:** solo un efecto de Transición activo a la vez; **Tune Rupture sobrescribe a Tune Strain**.
+**Regla:** solo un efecto de Transición activo a la vez; **Tune Rupture sobrescribe a Tune Strain**
+(y viceversa; en colisión en el mismo frame, **prioridad para Tune Rupture**). **Hack - Shifting**
+(Rebecca) es independiente → puede coexistir con Strain. (Gemini 2026-08-11)
 
 ### Tune Strain - Shifting ✅
-- Marca al enemigo (no daña solo). Duración **25 s**. Aplican: Denia, Luuk Herssen, Lynae (y Aemeath según modo).
-- Bonus equipo: +8% daño todos, 30s, 3 stacks (→24%).
+- Marca al enemigo (no daña solo, booleano). Duración **25 s** (re-aplicar resetea a 25 s).
+  Aplican: Denia, Luuk Herssen, Lynae (y Aemeath según modo).
+- Bonus equipo: +8% All DMG todos, 30s, 3 stacks (→24%) — con arma de **Spectrum Blaster** (pistolas)
+  vía **Ataques Básicos** (Gemini).
 
 ### Tune Strain - Interfered ✅
-- Debuff tras Tune Break en un objetivo con Strain - Shifting. Duración **30 s**.
-- Stacks: 1 base; con 3 Resonadores Strain → hasta **4 stacks**. Lynae aumenta el límite en 1.
-- **Mecánica de daño:** Resonadores con "Tune Strain Response" hacen +**0.12%** por cada
-  punto de **Tune Break Boost**, **por stack** de Interfered (con 4 stacks: 0.48%). Nameless Explorer: +4% daño recibido por stack.
+- Debuff tras **Tune Break** en un objetivo con Strain - Shifting (NO se activa si el Tune Break es
+  sobre un enemigo sin Shifting). Duración **30 s**; refrescable (Denia al golpear).
+- Stacks: **1 base**; `S_max = min(4, 1 + Resonadores_habilitadores_Strain)`. Cada habilitador
+  (Luuk Herssen, Denia, Lynae, Mornye) suma **+1** → techo **4**.
+- **Matriz de roles:**
+  - **Luuk Herssen** (aplica+responde,+1): DPS principal de Strain.
+  - **Denia** (aplica modo Strain, responde, +1): refresca Interfered; +45~80 tuneBreakBoost.
+  - **Lynae** (aplica solo modo Strain, responde, +1): híbrida Rupture/Strain; +40 tuneBreakBoost base.
+  - **Qingxiao** (aplica Básicos/Intro, responde, 0): DPS Aero v3.6; pasiva Mindlock (hasta 15) cuando aliados infligen Interfered.
+  - **Mornye** (no aplica, responde, +1): soporte universal; amplifica tuneBreakBoost por su ER.
+  - **Aemeath / Hiyuki** (no aplican Strain, no responden, 0): solo Tune Rupture, incompatibles con Strain.
+  - **Rebecca** (no aplica/ no responde, 0): Hack - Shifting, independiente.
+- **Mecánica de daño (Tune Strain Response):** `Multiplicador(%) = 0.12% × tuneBreakBoost × S_interfered`.
+  Máx 4 stacks → `0.48% × tuneBreakBoost`. **tuneBreakBoost** = stat escalar (base + pasivas + ER/Off-Tune Buildup Rate).
+  Entra como DMG Amplification total: `(1 + 0.0012×tuneBreakBoost×S_interfered)` multiplicativo.
+  Nameless Explorer: +4% daño recibido por stack. (Gemini: tabla de valores 20/40/50/85/100 boost × 1-4 stacks)
 - Responden: Denia, Luuk Herssen, Lynae, Mornye (Mornye no aplica, solo responde).
+- **Arquitectura (Gemini):** event handlers `ON_SKILL_HIT` (aplica Shifting + remove Rupture + Spectrum
+  Blaster) → `ON_TUNE_BREAK` (Shifting→Interfered, `S_max=min(4,1+habilitadores)`) → `CALCULATE_DAMAGE`
+  (si tiene response → `Factor_Amp = 1 + 0.0012×boost×S_interfered`).
 
 ### Tune Rupture - Shifting / Interfered ⚠️
 - Shifting: Aemeath (modo Tune Rupture), Lynae (según modo).
