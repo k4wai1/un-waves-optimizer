@@ -25,7 +25,7 @@
 | Fusion Burst | Fusion | Explosión al llegar al límite (10/13) | 13 (Chisa) | ✅ CONFIRMADO (Gemini) |
 | Aero Erosion | Aero | DoT (escala por stack) | 3 (6/9 con externos) | ✅ CONFIRMADO (Gemini) |
 | Havoc Bane | Havoc | **Reducción de DEF** (v2.8, estática) | 3 (6 c/Chisa) | ✅ CONFIRMADO (v2.8 + Gemini) |
-| Electro Flare (¿Flayer?) | Electro | DoT + reducción ATK | 10 | ⚠️ daño por tick: muestra |
+| Electro Flare | Electro | DoT + reducción ATK | 10 (13 c/Chisa) | ✅ CONFIRMADO (Gemini) |
 | Tune Strain - Shifting | Tonalidad (Spectro) | Marcador | — | ✅ confirmado |
 | Tune Strain - Interfered | Tonalidad (Spectro) | Amplify | hasta 4 | ✅ confirmado |
 | Tune Rupture - Shifting/Interfered | Tonalidad (Fusion) | Marcador + respuestas | variable | ⚠️ duración sin confirmar |
@@ -151,23 +151,29 @@
 - **Set/arma:** Thread of Severed Fate (3p: +20% ATK y +30% Liberation DMG 5s al infligir Bane); Song of Feathered Trace (5p: +20% Crit Rate y +35% Heavy DMG 15s). Kumokiri (Chisa). **Suisui** "Ceaseless Landscape": al consumir Bane → +6% DEF Ignore Havoc + +12% Havoc RES pen (30s).
 - **Fuentes:** Gemini 2026-08-11; Game8 `archives/558014`, fandom `wiki/Version/2.8` (oficial), Gematsu v2.8, Icy Veins Chisa.
 
-### 1.6 Electro Flare (Electro) — ⚠️ muestra, sin fórmula
-> El usuario no estaba seguro del nombre ("electro flarer" o similar). Confirmado: **Electro Flare**.
-> Usuarios: **Buling** y **Rover Electro**.
-
-- **Daño periódico (DoT):** cada tick consume **la mitad** de los stacks. Escala por stacks.
-- **Muestra** (Buling, Guidebook; varía): 1→829, 2→1503, 3→2177, 4→2851, 5→TBA, 6→4319,
-  7→4872, 8→5546, 9→6220, 10→6894.
-- **Intervalo:** ~5-6 s. Máx 10 stacks.
-- **Reducción ATK:** 1-4 stacks -5% ATK; 5-9 -7% ATK; 10 -10% ATK (al enemigo, no al daño recibido).
-- **Magnetized:** desde 5 (tutorial) o 7 (Game8) stacks ⚠️; control de movimiento.
-- **Electro Rage:** al llegar a 10 stacks, los stacks extra → Electro Rage (amplifica el
-  próximo tick). ❌ valor por stack sin confirmar.
+### 1.6 Electro Flare (Electro) — ✅ CONFIRMADO (Gemini 2026-08-11)
+- **Nombre:** **Electro Flare** (❌ "Electro Flayer" es incorrecto). "Magnetized" y "Electro Rage" son **sub-estados**, no alternativas al nombre.
+- **DoT:** tick **exactamente cada 6.0 s**. Cada tick consume **la mitad (floor)** de los stacks. Max Flare **10** (cap base).
+- **Fórmula base (afín lineal):** `BaseDMG = 155 + (674 × flare_stacks)`. Diferencial por stack = **+674**
+  (2→1503, 3→2177, 4→2851, ..., 10→6894; anomalía en 6 = error de registro, la serie retoma +674).
+  ⚠️ 155/674 son **Level Scalar** (dependientes del nivel 1-90).
+- **Fórmula final:** `DMG = [BaseDMG × RES_Mult × DEF_Mult] × (1 + rage×Constante_Rage)`. RES_Mult nativa 10%;
+  DEF_Mult WuWa `(800+8Lc)/[(800+8Lc)+DEF_enem×(1-DEF_Ignore)]` (DEF ignore sí afecta). **Constante_Rage 15-25%** (calibrar);
+  caso real: 13 Flare + 13 Rage + DEF Ignore → tick ~18,000.
+- **Reducción ATK enemigo:** 1-4 → -5%; 5-9 → -7%; 10 → **-10%**. Se actualiza en tiempo real al cambiar cargas.
+- **Magnetized:** **desde 5 stacks** (resuelto: tutorial oficial, no 7); booleano (afecta físicas/triggers, no daño).
+- **Electro Rage (overflow):** si `flare > max` → exceso → `rage` (cap 10); amplifica el **próximo tick** y se **remueve
+  (rage=0)** tras activarse.
 - **Aplicación:**
-  - **Buling** (v2.8, Electro, Rectifier, 4★/5★ disputado): RL potenciada solo con barras
-    Yin+Yang llenas; campo Five Thunders Spell Array (2 stacks cada 2s, 24s); Intro 4 stacks; S5 +6 stacks. No alcanza Electro Rage sola.
-  - **Rover Electro** (v3.5, Sword): Skill Overshock → 10 stacks; RL Ultimate Tactics → 5 stacks (S2 +5); acumula Electric Surge (120) para transformar la skill. Único que alcanza Electro Rage.
-- **Fuentes:** Game8 `archives/558124`, fandom `wiki/Tutorial/Electro_Flare_Effect`, fandom `wiki/Version/2.8`, Wutheringlab Buling, GuRu/Lootbar/wwplus (⚠️ tercio).
+  - **Buling** (v2.8, Electro, Rectifier): Intro "Summon and Smite" +4 stacks (CD 10s); campo "Five Thunders
+    Spell Array" (24s) +2 stacks/2s; **S5** +6 al instanciar (Intro 4 + Array 6 → llena 10). Mantiene debuff
+    pero NO llega a Rage sola.
+  - **Rover Electro** (v3.5, Sword): Forte "Overshock" → **+10 stacks**; Liberation "Ultimate Tactics" **S2** → +5.
+    Combo Liberation 5 + Overshock 10 = 15 → 10 Flare + **5 Rage** (único que fuerza Rage solo).
+- **Chisa:** Outro +3 cap NS → Flare/Rage **10→13**. DEF Ignore global 12-30%.
+- **Arquitectura:** máquina de estados ECS con `ReaceiveElectroFlare → ReevaluateDebuffs → TickResolutionLoop(6s)`.
+- **Fuentes:** Gemini 2026-08-11; refrendar Constante_Rage (15-25%), Level Scalar, tick 6s contra Game8
+  `archives/558124` y fandom `wiki/Tutorial/Electro_Flare_Effect`.
 
 ---
 
@@ -232,7 +238,6 @@ acciones de algunos Resonadores. El motor **no los modela** todavía.
 
 ## 5. Pendientes de confirmar (búsquedas profundas con IA de Google)
 
-- [ ] **Electro Flare:** nombre exacto ("Electro Flare" vs "Electro Flayer"), daño de Electro Rage por stack, duración total, ¿escala con nivel o ATK?, umbral real de Magnetized (5 vs 7).
 - [ ] **Tune Rupture - Interfered:** duración exacta.
 - [ ] **Rupturous Trail (Aemeath)** y **Particle Jet (Mornye)**: daño real.
 - [ ] **Cómo representar los "Tune responses"** (Lynae/Mornye) en la UI: mostrar la acción solo cuando el estado esté activo.
