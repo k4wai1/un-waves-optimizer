@@ -1,0 +1,42 @@
+{
+  metadata: {
+    schemaVersion: "2.0",
+    id: "340000251",
+    name: "Sigillum",
+    entityType: "enemy",
+    rarity: 4,
+    rarityClass: "Calamity",
+    version: "1.0",
+    element: "spectro",
+    weaponType: null,
+    icon: "340000251.webp",
+    tags: ["enemy", "calamity"],
+    aliases: [],
+  },
+  stats: {
+    level: 1,
+    hp: 2784,
+    atk: 125,
+    defense: 800,
+    // Fórmula de defensa del juego: 8*level + 792 (Lv1=800). El motor escala con el nivel.
+    elementalResistances: {
+      glacio: 0.1,
+      fusion: 0.1,
+      electro: 0.1,
+      aero: 0.1,
+      havoc: 0.1,
+      spectro: 0.4,
+    },
+    physicalResistance: 0.1,
+    damageTaken: 1.0,
+    damageReduction: 0,
+    maxVibration: 88550,
+    rageLimit: 194863,
+  },
+  effects: [],
+  mechanics: [],
+  lore: {
+    about: "This enemy has a higher RES to Spectro DMG . When hit by an Echo Skill, Sigillum gains 1 stack of Off Course, up to 5 stacks. Echoes with the same name can only trigger this effect once. Each stack of Off Course makes it take 10% more total DMG. At 5 stacks, Sigillum takes an additional 30% total DMG. Rage and tears. Suffering and joy. Sorrow and pain. All are condensed, along with her sigh, into a single golden frequency. It gazes at the sky, lost in memories worn thin by the ages. The lost voyager is still searching for the way home.",
+    undiscovered: "A wordless black mech, lost and longing to return home.",
+  },
+}

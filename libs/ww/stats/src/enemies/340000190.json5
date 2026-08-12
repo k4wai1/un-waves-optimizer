@@ -1,0 +1,42 @@
+{
+  metadata: {
+    schemaVersion: "2.0",
+    id: "340000190",
+    name: "Hecate",
+    entityType: "enemy",
+    rarity: 4,
+    rarityClass: "Calamity",
+    version: "1.0",
+    element: "havoc",
+    weaponType: null,
+    icon: "340000190.webp",
+    tags: ["enemy", "calamity"],
+    aliases: [],
+  },
+  stats: {
+    level: 1,
+    hp: 2125,
+    atk: 175,
+    defense: 800,
+    // Fórmula de defensa del juego: 8*level + 792 (Lv1=800). El motor escala con el nivel.
+    elementalResistances: {
+      glacio: 0.1,
+      fusion: 0.1,
+      electro: 0.1,
+      aero: 0.1,
+      havoc: 0.4,
+      spectro: 0.1,
+    },
+    physicalResistance: 0.1,
+    damageTaken: 1.0,
+    damageReduction: 0,
+    maxVibration: 72450,
+    rageLimit: 141692,
+  },
+  effects: [],
+  mechanics: [],
+  lore: {
+    about: "This enemy has a higher RES to Havoc DMG . A special Tacet Discord summoned by Phrolova from a Sonoro Sphere where all decaying frequencies converge, known as the \"Beyond.\" It manifests as a three-faced Witch of the Underworld. Mortals are nothing more than captives of fate, their struggles mere fleeting illusions. As the phases of the moon wax and wane, only death and oblivion remain unchanged. On a stage woven from crimson Lycorises, she performs in harmony with Phrolova's orchestration, together crafting a \"perfect\" symphony of despair.",
+    undiscovered: "A special Tacet Discord summoned by Phrolova from a Sonoro Sphere where all decaying frequencies converge, known as the \"Beyond.\" It manifests as a three-faced Witch of the Underworld.",
+  },
+}

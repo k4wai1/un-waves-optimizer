@@ -1,0 +1,42 @@
+{
+  metadata: {
+    schemaVersion: "2.0",
+    id: "340000310",
+    name: "Thousand-Puppet Pavilion",
+    entityType: "enemy",
+    rarity: 4,
+    rarityClass: "Calamity",
+    version: "1.0",
+    element: "havoc",
+    weaponType: null,
+    icon: "340000310.webp",
+    tags: ["enemy", "calamity"],
+    aliases: [],
+  },
+  stats: {
+    level: 1,
+    hp: 3000,
+    atk: 150,
+    defense: 800,
+    // Fórmula de defensa del juego: 8*level + 792 (Lv1=800). El motor escala con el nivel.
+    elementalResistances: {
+      glacio: 0.1,
+      fusion: 0.1,
+      electro: 0.4,
+      aero: 0.1,
+      havoc: 0.4,
+      spectro: 0.1,
+    },
+    physicalResistance: 0.1,
+    damageTaken: 1.0,
+    damageReduction: 0,
+    maxVibration: 15000,
+    rageLimit: 210000,
+  },
+  effects: [],
+  mechanics: [],
+  lore: {
+    about: "This enemy has a higher RES to Electro DMG , and a higher RES to Havoc DMG . The Thousand-Puppet Pavilion's Screen Armor, Left Arm, and Head can be broken. - Breaking the Thousand-Puppet Pavilion's Screen Armor increases its Vibration Strength Reduction Rate. - Breaking the Thousand-Puppet Pavilion's Left Arm temporarily reduces its damage dealt. - Breaking the Thousand-Puppet Pavilion's Head greatly increases its Off-Tune Level. The Thousand-Puppet Pavilion has a higher Off-Tune Level gauge. When the Thousand-Puppet Pavilion is hit by Tune Break while affected by Tune Strain - Shifting, it gains 2 stacks of Tune Strain - Interfered. When its Tune Strain - Interfered reaches 3 stacks, its total DMG taken is increased by 25%. The max stack limit of Tune Strain - Interfered on Thousand-Puppet Pavilion is increased by 2. Built by Muyu, a former Artisan of Zhuojun Atelier, this giant Autopuppet has absorbed structures of Censure Courts and morphed into a formidable engine of destruction powered by Reverberations of the departed. Souls bound by the battlefields of old, longing for release, have had their obsessions twisted and manipulated, now swinging their blades of resentment at the spiteful enemies before them.",
+    undiscovered: "A massive Autopuppet formed by absorbing the buildings of the Censure Court, bound by the battlefields of old, and bringing down merciless blades upon the enemies before it.",
+  },
+}

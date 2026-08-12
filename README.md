@@ -40,12 +40,12 @@ la mejor build para un personaje contra un enemigo objetivo.
 | Sistema de efectos declarativo | Paths, stacks, ranks |
 | UI de Resonator | Selección, niveles, efectos, tabla de combate |
 | UI de Armas | 120 armas (stats 1-90, imágenes, filtro por tipo del personaje) |
-| Tests | 79: motor, effectResolver y negativeStatus |
+| UI de Enemigos | 20 Calamity con imagen, stats, resistencias, nivel 1-120. El enemigo seleccionado afecta el daño |
+| Tests | 93: motor, effectResolver, negativeStatus y enemy |
 
 ## Lo que falta (resumen)
 
 - **Ecos** (datos, inventario, equipar, set bonuses) — no existe
-- **Enemigo** (selector de nivel/DEF/resistencias reales) — solo el enemigo por defecto
 - **Equipos** (3 personajes, Outro Skills / Deepen entre ellos) — no existe
 - **Optimizador** — no existe
 - **Deploy a GitHub Pages** — pendiente

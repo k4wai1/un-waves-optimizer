@@ -6,12 +6,32 @@ Los enemigos son entidades de primera clase. Usan el mismo sistema de `effects[]
 
 | Campo | Tipo | Descripción |
 |-------|------|-------------|
-| `level` | number | Nivel del enemigo. Afecta la fórmula de defensa. |
-| `hp` | number | HP total. Solo informativo (no se usa en daño). |
-| `defense` | number | DEF. Se usa en la fórmula: `DEF_Mult = (800 + 8×ATK_LVL) / (800 + 8×ATK_LVL + DEF)` |
-| `elementalResistances` | object | `{ glacio, fusion, electro, aero, havoc, spectro }` con valores 0.10 = 10% |
-| `physicalResistance` | number | Resistencia a daño físico. |
-| `damageTaken` | number | Multiplicador de daño recibido. 1.0 = normal, 1.15 = 15% más. |
+| `level` | number | Nivel base de las stats declaradas (por convención 1). El motor escala con `resolveEnemyStats`. |
+| `hp` | number | HP base a `level` (informativo, no se usa en daño). |
+| `atk` | number | ATK base a `level` (informativo). |
+| `defense` | number | DEF base a `level`. El motor computa `DEF = baseDef + 8×(nivel objetivo − level)`. |
+| `elementalResistances` | object | `{ glacio, fusion, electro, aero, havoc, spectro }` con valores decimales (0.10 = 10%). |
+| `physicalResistance` | number | Resistencia a daño físico (decimal). |
+| `damageTaken` | number | Multiplicador de daño recibido (1.0 = normal, 1.15 = 15% más). |
+| `damageReduction` | number | Reducción de daño M_DR del boss (decimal; 0.15 = barrera del 15%). Multiplicativa al final. |
+| `maxVibration` | number | Max Vibration Strength (informativo). |
+| `rageLimit` | number | Rage Limit (informativo). |
+
+Las resistencias `elementalResistances` y `physicalResistance` NO cambian con el nivel del enemigo:
+se conservan tal cual al escalar.
+
+## Metadata adicional (desde encore.moe)
+
+| Campo | Tipo | Descripción |
+|-------|------|-------------|
+| `rarityClass` | string | `Calamity` / `Overlord` / `Elite` / `Standard`. |
+| `element` | string\|null | Elemento del enemigo (ej. `glacio`, `havoc`). |
+| `icon` | string | Nombre del archivo `.webp` del ícono en `img/{id}.webp`. La UI carga imágenes por este nombre. |
+
+> **Escalado de nivel**: el motor usa `resolveEnemyStats(def, targetLevel)` (ver
+> `app/ww-frontend/src/engine/enemy.ts`). Dado el enemigo y el nivel objetivo, produce el
+> `EnemyStats` con la DEF escalada (`baseDef + 8×(target−baseLevel)`), conservando resistencias.
+> En la UI (pestaña Enemies) se elige un enemigo y su nivel (1–120).
 
 ## Modificadores de enemigo (desde effects[])
 

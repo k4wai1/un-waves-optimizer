@@ -1,7 +1,8 @@
 import { useState, useEffect, useMemo } from 'react';
-import { Menu, X, Moon, Sun, Users, Hexagon, Sword, Zap } from 'lucide-react';
+import { Menu, X, Moon, Sun, Users, Hexagon, Sword, Zap, Ghost } from 'lucide-react';
 import { ResonatorSetup } from './pages/ResonatorSetup';
 import { WeaponsSetup } from './pages/WeaponsSetup';
+import { EnemiesSetup } from './pages/EnemiesSetup';
 import { Placeholder } from './pages/Placeholder';
 
 // ─── Carga de datos con Vite-plugin-json5 (tolera comentarios JSON5) ───
@@ -44,6 +45,31 @@ for (const [filePath, mod] of Object.entries(weaponImageModules)) {
   weaponImages[id] = mod.default;
 }
 
+// ─── Enemigos: todos los .json5 reales de la carpeta enemies (excluye templates) ───
+const enemyModules = import.meta.glob<Record<string, any>>(
+  '../../../libs/ww/stats/src/enemies/*.json5',
+  { eager: true }
+) as Record<string, any>;
+const enemiesDB: Record<string, any> = {};
+for (const [fp, mod] of Object.entries(enemyModules)) {
+  const key = mod.metadata?.id || fp.split('/').pop()?.replace(/\.json5$/, '') || '';
+  const name = mod.metadata?.name || mod.name;
+  // Excluye plantillas/dummy que no tienen name real o rarityClass
+  if (!name || key === 'EnemyName' || key === 'EnemyBase') continue;
+  enemiesDB[key] = mod;
+}
+
+// Imágenes de enemigos (.webp) — se cargan por id (debe coincidir con metadata.id)
+const enemyImageModules = import.meta.glob<{ default: string }>(
+  '../../../libs/ww/stats/src/enemies/img/*.{webp,png}',
+  { eager: true, query: '?url' }
+) as Record<string, { default: string }>;
+const enemyImages: Record<string, string> = {};
+for (const [filePath, mod] of Object.entries(enemyImageModules)) {
+  const id = filePath.split('/').pop()?.replace(/\.[^.]+$/, '') || '';
+  enemyImages[id] = mod.default;
+}
+
 // ─── Constantes ───
 
 const elementColors: Record<string, string> = {
@@ -62,6 +88,18 @@ export default function App() {
   const [weaponLevel, setWeaponLevel] = useState(90);
   const [weaponRank, setWeaponRank] = useState(0);
   const [weaponStacks, setWeaponStacks] = useState(0);
+
+  // Estados de enemigo
+  const [selectedEnemy, setSelectedEnemy] = useState<string | null>(null);
+  const [enemyLevel, setEnemyLevel] = useState(100);
+
+  // Auto-seleccionar el primer enemigo disponible al iniciar
+  useEffect(() => {
+    if (!selectedEnemy && Object.keys(enemiesDB).length > 0) {
+      const first = Object.keys(enemiesDB).sort()[0];
+      setSelectedEnemy(first);
+    }
+  }, [enemiesDB]);
 
   const charData = allResonators[selectedChar] || allResonators.Shorekeeper;
   // Leer de metadata (nuevo formato) con fallback a raíz (formato legacy)
@@ -111,6 +149,7 @@ export default function App() {
   const navItems = [
     { id: 'character', icon: <Users size={20} />, label: 'Resonator Setup' },
     { id: 'weapons', icon: <Sword size={20} />, label: 'Weapons' },
+    { id: 'enemies', icon: <Ghost size={20} />, label: 'Enemies' },
     { id: 'echoes', icon: <Hexagon size={20} />, label: 'Echo Inventory' },
     { id: 'optimizer', icon: <Zap size={20} />, label: 'Team & Optimize' },
   ];
@@ -172,6 +211,8 @@ export default function App() {
               weaponLevel={weaponLevel}
               weaponRank={weaponRank}
               weaponStacks={weaponStacks}
+              selectedEnemy={selectedEnemy ? enemiesDB[selectedEnemy] : null}
+              enemyLevel={enemyLevel}
             />
           )}
           {activeTab === 'weapons' && (
@@ -186,6 +227,16 @@ export default function App() {
               onLevelChange={setWeaponLevel}
               onRankChange={setWeaponRank}
               onStacksChange={setWeaponStacks}
+            />
+          )}
+          {activeTab === 'enemies' && (
+            <EnemiesSetup
+              enemiesDB={enemiesDB}
+              enemyImages={enemyImages}
+              selectedEnemy={selectedEnemy}
+              enemyLevel={enemyLevel}
+              onEnemyChange={setSelectedEnemy}
+              onLevelChange={setEnemyLevel}
             />
           )}
           {activeTab === 'echoes' && <Placeholder title="Echo Inventory" />}

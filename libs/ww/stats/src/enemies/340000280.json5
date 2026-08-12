@@ -1,0 +1,42 @@
+{
+  metadata: {
+    schemaVersion: "2.0",
+    id: "340000280",
+    name: "Denia",
+    entityType: "enemy",
+    rarity: 4,
+    rarityClass: "Calamity",
+    version: "1.0",
+    element: "fusion",
+    weaponType: null,
+    icon: "340000280.webp",
+    tags: ["enemy", "calamity"],
+    aliases: [],
+  },
+  stats: {
+    level: 1,
+    hp: 2227,
+    atk: 125,
+    defense: 800,
+    // Fórmula de defensa del juego: 8*level + 792 (Lv1=800). El motor escala con el nivel.
+    elementalResistances: {
+      glacio: 0.1,
+      fusion: 0.4,
+      electro: 0.1,
+      aero: 0.1,
+      havoc: 0.1,
+      spectro: 0.1,
+    },
+    physicalResistance: 0.1,
+    damageTaken: 1.0,
+    damageReduction: 0,
+    maxVibration: 15000,
+    rageLimit: 200000,
+  },
+  effects: [],
+  mechanics: [],
+  lore: {
+    about: "This enemy has a higher RES to Fusion DMG . Denia takes 25% more DMG from all Negative Statuses. She takes 30% more total DMG for 15s under Frostbind. \"A Department of Voidmatters student at Startorch Academy. Also, a professional slacker who has mastered the art of dozing through courses. Still, she hardly misses any campus event, always there to flash her 'gentle' smile to one and all.\" And yet her name, her identity, her Resonance Ability, even the ties she claimed to others... all of it was a lie. Between you and the Keystone stands nothing more but a puppet who came into existence only because of Aleph-1.",
+    undiscovered: "\"A Department of Voidmatters student at Startorch Academy. Always there to flash her 'gentle' smile to one and all.\"",
+  },
+}

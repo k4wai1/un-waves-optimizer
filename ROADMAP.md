@@ -47,6 +47,7 @@ build para un personaje contra un enemigo objetivo.
 | Sistema de efectos declarativo | Funciona (paths, stacks, ranks) |
 | UI de Resonator | Funciona (seleccion, niveles, effects, tabla de combate) |
 | UI de Armas | Funciona (120 armas con stats 1-90, imagenes, filtro por tipo, buff base 45/45 5★; pasivas complejas como texto visible) |
+| UI de Enemigos | **Nuevo (2026-08-12)**: 20 Calamity de encore.moe (imagen, hp/atk/def, resistencias, nivel 1-120, descripcion). El enemigo seleccionado + nivel se aplica al dano. Helper `enemy.ts` (`resolveEnemyStats` escala DEF) |
 | UI de Echos | No existe |
 | Sistema de equipos | No existe |
 | Optimizador | No existe |

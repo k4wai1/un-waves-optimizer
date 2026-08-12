@@ -1,0 +1,42 @@
+{
+  metadata: {
+    schemaVersion: "2.0",
+    id: "340000240",
+    name: "Voidworm",
+    entityType: "enemy",
+    rarity: 4,
+    rarityClass: "Calamity",
+    version: "1.0",
+    element: "havoc",
+    weaponType: null,
+    icon: "340000240.webp",
+    tags: ["enemy", "calamity"],
+    aliases: [],
+  },
+  stats: {
+    level: 1,
+    hp: 10000,
+    atk: 100,
+    defense: 800,
+    // Fórmula de defensa del juego: 8*level + 792 (Lv1=800). El motor escala con el nivel.
+    elementalResistances: {
+      glacio: 0.1,
+      fusion: 0.1,
+      electro: 0.1,
+      aero: 0.1,
+      havoc: 0.1,
+      spectro: 0.1,
+    },
+    physicalResistance: 0.1,
+    damageTaken: 1.0,
+    damageReduction: 0,
+    maxVibration: 15000,
+    rageLimit: 80000,
+  },
+  effects: [],
+  mechanics: [],
+  lore: {
+    about: "A higher-dimensional being originated from Aleph-1, which shaped its body with Exoswarm devoured by the Void Storm and forged its spine with the Exostrider's remnants. To the inhabitants of Lahai-Roi, Voidworm and Void Storm are equally terrifying. Both are unpredictable natural disasters that devour everything in their paths.",
+    undiscovered: "A shadow looming in the sand and storm.<br>An abomination woven from tens of thousands of Exoswarm.<br>Listen—the void-star hums, and it is near.",
+  },
+}

@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from 'react';
 import { Activity, Layers } from 'lucide-react';
-import { calculateDamage, DEFAULT_ENEMY, type CombatContext } from '../engine/calculator';
+import { calculateDamage, type CombatContext } from '../engine/calculator';
+import { resolveEnemyStats } from '../engine/enemy';
 import {
   resolveEffects, indexEffects,
   calculateActionDamage, formatDescription,
@@ -13,6 +14,8 @@ interface ResonatorSetupProps {
   weaponLevel: number;
   weaponRank: number;
   weaponStacks: number;
+  selectedEnemy?: any | null;
+  enemyLevel?: number;
 }
 
 function getStats(d: any): any { if (!d) return {}; return d.stats || d.baseStats || {}; }
@@ -36,7 +39,7 @@ const statNames: Record<string, string> = {
   healing_bonus_: 'Healing Bonus',
 };
 
-export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRank, weaponStacks }: ResonatorSetupProps) {
+export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRank, weaponStacks, selectedEnemy, enemyLevel = 100 }: ResonatorSetupProps) {
   if (!charData) return <div className="p-6 text-center opacity-50" style={{ color: 'var(--text-muted)' }}>No character data available</div>;
 
   const meta = getMeta(charData);
@@ -112,7 +115,8 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
       aeroDmgBonus_: 0, spectroDmgBonus_: 0, havocDmgBonus_: 0,
       physicalRes_: 0, glacioRes_: 0, fusionRes_: 0, electroRes_: 0, aeroRes_: 0, spectroRes_: 0, havocRes_: 0,
       healingBonus_: 0, attackerLvl: level, defIgnore_: 0,
-      enemy: JSON.parse(JSON.stringify(DEFAULT_ENEMY)),
+      // Enemigo: el seleccionado en el menú Enemies (escalado a enemyLevel), o dummy.
+      enemy: resolveEnemyStats(selectedEnemy, enemyLevel),
     };
 
     // secondaryAttribute
@@ -152,7 +156,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
 
     const activeList = Object.values(effectStates).filter(ae => ae.enabled);
     return resolveEffects(ctx, activeList, effectsDb);
-  }, [charData, level, activeNodes, equippedWeapon, weaponLevel, weaponRank, weaponStacks, effectStates, effectsDb, stats, weaponStats]);
+  }, [charData, level, activeNodes, equippedWeapon, weaponLevel, weaponRank, weaponStacks, effectStates, effectsDb, stats, weaponStats, selectedEnemy, enemyLevel]);
 
   const elementKey = (meta.element || 'Spectro').toLowerCase();
   const elementalStatKey = `${elementKey}DmgBonus_`;

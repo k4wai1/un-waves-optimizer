@@ -1,0 +1,42 @@
+{
+  metadata: {
+    schemaVersion: "2.0",
+    id: "340000050",
+    name: "Scar: Aberrant Nightmare",
+    entityType: "enemy",
+    rarity: 4,
+    rarityClass: "Calamity",
+    version: "1.0",
+    element: "spectro",
+    weaponType: null,
+    icon: "340000050.webp",
+    tags: ["enemy", "calamity"],
+    aliases: [],
+  },
+  stats: {
+    level: 1,
+    hp: 1749,
+    atk: 121,
+    defense: 800,
+    // Fórmula de defensa del juego: 8*level + 792 (Lv1=800). El motor escala con el nivel.
+    elementalResistances: {
+      glacio: 0.1,
+      fusion: 0.4,
+      electro: 0.1,
+      aero: 0.1,
+      havoc: 0.1,
+      spectro: 0.1,
+    },
+    physicalResistance: 0.1,
+    damageTaken: 1.0,
+    damageReduction: 0,
+    maxVibration: 83000,
+    rageLimit: 157467,
+  },
+  effects: [],
+  mechanics: [],
+  lore: {
+    about: "This enemy has a higher RES to Fusion DMG while in human form. When enraged, he transforms into a grim goat reaper with a higher RES to Spectro DMG and Havoc DMG . One of the Fractsidus Overseers. A rebel who revels in Overclocking, disregarding the ideas of beauty and order. He enjoys destruction and chaos, delighting in the suffering of others. He disregards rules and fame, using any means to reach his goals. With an introspective sobriety driving him, he seeks you out to witness the birth of a new world, still in its infancy. \"New life blooms from scorched earth, rising through the ashes.\"",
+    undiscovered: "A special form of one of the Fractsidus Overseers. Such monstrosity wields pitch-black scythe that cleaves through order and law.",
+  },
+}
