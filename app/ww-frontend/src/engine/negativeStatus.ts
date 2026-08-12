@@ -188,11 +188,14 @@ export function resMultiplier(res: number): number {
 /**
  * Cofactor de mitigación por defensa (misma fórmula que calculator.ts), como FLOAT.
  * @param atkStat numerador (800 + 8·Lc) en unidades reales.
- * @param enemyDef DEF efectiva del enemigo en unidades reales.
+ * @param enemyDef DEF efectiva del enemigo en unidades reales (ya con DEF Ignore aplicada).
+ *   Si es negativa (DEF Ignore > 100%), el denominador baja → M_DEF > 1 (techo 2.0), igual
+ *   que en `calculator.ts::defMultiplierFn`.
  */
 export function defMultiplier(atkStat: number, enemyDef: number): number {
-  const def = Math.max(0, enemyDef);
-  return atkStat / (atkStat + def);
+  const den = atkStat + enemyDef;
+  if (den <= 0) return 2.0;
+  return Math.min(2.0, Math.max(0, atkStat / den));
 }
 
 // ═════════════════════════════════════════════════════════════════════════════

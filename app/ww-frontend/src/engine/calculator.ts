@@ -237,9 +237,19 @@ export function getEnemyResistance(enemy: EnemyStats, element?: string): number 
   return res ?? 0.10;
 }
 
-/** Fórmula de defensa de WuWa */
+/** Fórmula de defensa de WuWa.
+ *  `M_DEF = atkStat / (atkStat + enemyDef)`.
+ *  - `atkStat` = (800 + 8·Lc), el "poder de ataque" del resonador.
+ *  - `enemyDef` ya debe venir con la DEF Ignore aplicada: `enemy.defense × (1 − DEF Ignore)`.
+ *  - Si DEF Ignore > 100%, `enemyDef` es negativo → el denominador baja del numerador y
+ *    M_DEF supera 1.0 (la armadura actúa como amplificador), con **techo algorítmico 2.0**
+ *    (200%) según investigación. Por eso NO clampeamos a 0; aplicamos techo máximo. */
 export function defMultiplierFn(atkStat: number, enemyDef: number): number {
-  return atkStat / (atkStat + Math.max(0, enemyDef));
+  const den = atkStat + enemyDef;
+  // Techo algorítmico: M_DEF nunca supera 2.0 (200%).
+  if (den <= 0) return 2.0;
+  const m = atkStat / den;
+  return Math.min(2.0, Math.max(0, m));
 }
 
 /** Fórmula de resistencia de WuWa */

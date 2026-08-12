@@ -448,3 +448,39 @@ describe('M_ER = M_RES (sin término separado)', () => {
     expect(calculateDamage(ctx, 1.0, 'atk', 'spectro').normal).toBe(expected);
   });
 });
+
+describe('DEF Ignore > 100% (M_DEF puede superar 1.0, techo 2.0)', () => {
+  it('defMultiplierFn con enemyDef negativo devuelve M_DEF > 1', () => {
+    // atkStat = 1520, enemyDef = -400 → 1520/(1520-400) = 1520/1120 ≈ 1.357
+    expect(defMultiplierFn(1520, -400)).toBeCloseTo(1520 / 1120, 5);
+  });
+
+  it('defMultiplierFn clampa al techo 2.0 si el denominador es ≤ 0', () => {
+    // enemyDef = -2000 → den = -480 ≤ 0 → techo 2.0
+    expect(defMultiplierFn(1520, -2000)).toBe(2.0);
+    // enemyDef = -1520 exacto → den 0 → techo 2.0
+    expect(defMultiplierFn(1520, -1520)).toBe(2.0);
+  });
+
+  it('defIgnore_ de 1.5 en calculateDamage produce M_DEF > 1 (armadura como amplificador)', () => {
+    const ctx = { ...BASE_CONTEXT, defIgnore_: 1.5 };
+    ctx.enemy = { ...cloneEnemy(), defense: 1000 };
+    // defY = 1000 × (1 - 1.5) = -500; defNum = 1520
+    // defMult = 1520/(1520-500) = 1520/1020 ≈ 1.4902
+    const defNum = 800 + 8 * ctx.attackerLvl;
+    const defMult = defMultiplierFn(defNum, 1000 * (1 - 1.5));
+    const resMult = 0.9; // spectro default
+    const expected = Math.round(ctx.atk * 1.0 * defMult * resMult);
+    expect(defMult).toBeGreaterThan(1);
+    expect(calculateDamage(ctx, 1.0, 'atk', 'spectro').normal).toBe(expected);
+  });
+
+  it('defIgnore_ de 20 + enemigo grande no rompe (techo 2.0 final)', () => {
+    const ctx = { ...BASE_CONTEXT, defIgnore_: 20 };
+    ctx.enemy = { ...cloneEnemy(), defense: 1600 };
+    // defY = 1600 × (1-20) = -30400 → den muy negativo → techo 2.0
+    const dmg = calculateDamage(ctx, 1.0, 'atk', 'spectro');
+    // preCrit = 1000 × 2.0 × 0.9 = 1800
+    expect(dmg.normal).toBe(Math.round(1000 * 2.0 * 0.9));
+  });
+});
