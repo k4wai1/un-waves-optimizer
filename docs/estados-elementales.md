@@ -22,7 +22,7 @@
 |---|---|---|---|---|
 | Glacio Chafe | Glacio | Daño al aplicar + slow + freeze | 10 (13 c/Chisa·Suisui) | ✅ CONFIRMADO (Gemini) |
 | Spectro Frazzle | Spectro | DoT (escala por stack) | 10 | ✅ CONFIRMADO (Gemini) |
-| Fusion Burst | Fusion | Explosión al llegar a 10 stacks | 10 | ❌ daño de explosión sin confirmar |
+| Fusion Burst | Fusion | Explosión al llegar al límite (10/13) | 13 (Chisa) | ✅ CONFIRMADO (Gemini) |
 | Aero Erosion | Aero | DoT (escala por stack) | 3 (6 c/Aero Rover) | ⚠️ daño: muestra, no fórmula |
 | Havoc Bane | Havoc | **Reducción de DEF** (v2.8) | 3 (6 c/Chisa) | ✅ DEF -2%/stack |
 | Electro Flare (¿Flayer?) | Electro | DoT + reducción ATK | 10 | ⚠️ daño por tick: muestra |
@@ -94,15 +94,29 @@
   Ver detalle en `docs/investigacion-estados/spectro-frazzle.md`.
 - **Fuentes:** Gemini 2026-08-11; refrendar (K_stack, 476/4596, 3s/4.5s) contra Game8 `archives/549799` y fandom `wiki/Spectro_Frazzle`.
 
-### 1.3 Fusion Burst (Fusion) — ❌ daño de explosión sin confirmar
-- **Daño:** **no DoT**; al llegar a 10 stacks elimina todos y detona **explosión Fusion DMG**. Escala con stacks previos. ❌ valor de explosión no público.
-- **Duración:** stacks duran 15 s; aplicar nuevo refresca TODOS. (v2.8): el daño escala por stacks presentes antes del máximo.
-- **RES:** ❌ no reduce Fusion RES (armas ignoran RES/DEF, no es inherente).
-- **Condición:** al recibir daño Fusion; o personajes. Usuarios: **Aemeath** (5★ Fusion, Sword, v3.1, modo Fusion Burst = AoE) y **Denia** (5★ Fusion, Rectifier, v3.3, "Reina de Fusion Burst").
-  - Aemeath: Heavenfall Edict - Finale = **1789.29% Fusion DMG** (medidores al máximo) ✅.
-  - Denia: 2 stacks cada 2s (misma habilidad 1/2s), campo Erosion Field, +30% Fusion DMG de equipo, +40% amplif. Fusion Burst (Outro).
-  - Equipo: Aemeath + Denia + Chisa/Lupa. Chisa sube el límite de stacks de Fusion Burst ❌ (sin especificar cuánto).
-- **Fuentes:** Game8 `archives/558431`, Game8 `archives/457025`, fandom `wiki/Fusion`, kits Lootbar/GuRu (⚠️ leaks/tercio).
+### 1.3 Fusion Burst (Fusion) — ✅ CONFIRMADO (Gemini 2026-08-11)
+- **Naturaleza:** sumidero paramétrico de umbral: **NO DoT**, **1 explosión AoE Fusion DMG**
+  al llegar al límite (**10 cargas** default; Chisa +3 → **13**). Crit default 1.0 (no critica).
+- **Explosion_MV paramétrico (v2.8+):** `Base_Coefficient + Σ(Per_Stack_Coefficient)` por cada
+  carga presente **justo antes** de detonar (pre-purga). Daño a 13 cargas > lineal de 10.
+- **Pipeline:** `Final = Base_DMG × (1+ΣDMG_Bonus) × (1+ΣAmplify) × DEF_Mult × RES_Mult × Crit_Mult`
+  - `Base_DMG = (ATK×Skill_MV)+Flat`; DMG_Bonus y Amplify en grupos separados.
+  - RES_Mult piecewise (RES≤0→1-RES/2; 0<RES<0.8→1-RES; RES≥0.8→1/(1+5R)); RES<0 amortigua /2.
+  - DEF_Mult WuWa `(800+8Lc)/[(800+8Lc)+(800+8Le)(1-DEF_Ignore)]`; Chisa Thread of Bane +18% DEF Ignore.
+- **Duración:** cargas viven 15 s; aplicar refresca todas. (v2.8) daño escala por cargas presentes.
+- **RES:** ❌ NO reduce Fusion RES inherente (armas la ignoran: Everbright Polestar -10%, Degenerate Voidmatter -10%).
+- **Aemeath** (v3.1, Sword): Forte >5 cargas → ataques aplican Fusion Burst; oyente: +30% Crit DMG por
+  aliado que aplica (tope 2); Ultimate "Heavenfall Edict: Finale" = **1789.29% Fusion DMG** (+25% Amplify a tope);
+  S3 DEF Ignore en Finale; **S6 anula CanCrit** (puede criticar).
+- **Denia** (v3.3, Rectifier, off-field): Erosion Field 30s (+2 cargas/tick, ICD 2s/objetivo); modo
+  Fusion Burst → **+30% Fusion DMG equipo**; **Outro "Unfinished Lies" +60% Fusion Burst Amplify** (30s,
+  confirmado, NO 40%); **S6**: Erosion Field = detonación forzada con límite teórico ×3.0 **SIN purgar**.
+- **Chisa:** Outro +3 cargas NS (10→13) por 15s (dilata Time-to-Burst ~30% pero MV paramétrico > lineal);
+  límite dinámico `GetDynamicMaxLimit()`; si expira con exceso → detonación forzada; evasión (iframe) bloquea aplicación.
+- **Ecos:** Chromatic Foam (+10% Fusion DMG; +10% al aplicar, +25% tras Outro) y Trailblazing Star
+  (+10% Fusion DMG; +20% Crit Rate + +20% Fusion DMG 8s).
+- **Fuentes:** Gemini 2026-08-11; refrendar **% exacto de la explosión** (aún sin número absoluto),
+  Outro Denia +60%, per-stack coefficient contra Game8 `archives/558431` y fandom `wiki/Fusion_Burst`.
 
 ### 1.4 Aero Erosion (Aero) — ⚠️ daño: muestra, no fórmula
 - **Daño periódico (DoT):** escala con stacks. **No usa ATK (escala por nivel)** ✅.
@@ -201,7 +215,6 @@ acciones de algunos Resonadores. El motor **no los modela** todavía.
 
 ## 5. Pendientes de confirmar (búsquedas profundas con IA de Google)
 
-- [ ] **Fusion Burst:** daño de la explosión (10 stacks) en %ATK o valor, ¿a cuánto sube el límite con Chisa?, confirmar que no reduce Fusion RES.
 - [ ] **Aero Erosion:** daño por tick y fórmula, confirmar que no usa ATK, duración exacta.
 - [ ] **Havoc Bane (v2.8):** duración exacta del estado (no se especifica oficial), confirmar que la reducción de DEF aplica a `M_DEF` (y no "por tick de daño").
 - [ ] **Electro Flare:** nombre exacto ("Electro Flare" vs "Electro Flayer"), daño de Electro Rage por stack, duración total, ¿escala con nivel o ATK?, umbral real de Magnetized (5 vs 7).
