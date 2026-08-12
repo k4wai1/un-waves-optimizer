@@ -23,7 +23,7 @@
 | Glacio Chafe | Glacio | Daño al aplicar + slow + freeze | 10 (13 c/Chisa·Suisui) | ✅ CONFIRMADO (Gemini) |
 | Spectro Frazzle | Spectro | DoT (escala por stack) | 10 | ✅ CONFIRMADO (Gemini) |
 | Fusion Burst | Fusion | Explosión al llegar al límite (10/13) | 13 (Chisa) | ✅ CONFIRMADO (Gemini) |
-| Aero Erosion | Aero | DoT (escala por stack) | 3 (6 c/Aero Rover) | ⚠️ daño: muestra, no fórmula |
+| Aero Erosion | Aero | DoT (escala por stack) | 3 (6/9 con externos) | ✅ CONFIRMADO (Gemini) |
 | Havoc Bane | Havoc | **Reducción de DEF** (v2.8) | 3 (6 c/Chisa) | ✅ DEF -2%/stack |
 | Electro Flare (¿Flayer?) | Electro | DoT + reducción ATK | 10 | ⚠️ daño por tick: muestra |
 | Tune Strain - Shifting | Tonalidad (Spectro) | Marcador | — | ✅ confirmado |
@@ -118,12 +118,27 @@
 - **Fuentes:** Gemini 2026-08-11; refrendar **% exacto de la explosión** (aún sin número absoluto),
   Outro Denia +60%, per-stack coefficient contra Game8 `archives/558431` y fandom `wiki/Fusion_Burst`.
 
-### 1.4 Aero Erosion (Aero) — ⚠️ daño: muestra, no fórmula
-- **Daño periódico (DoT):** escala con stacks. **No usa ATK (escala por nivel)** ✅.
-- **Stacks:** 3 por defecto (6 con Aero Rover). Duración base 15 s. Intervalo ~2 s.
-- **RES:** no es inherente; **Ciaccona**: al aplicar Erosion +20% Aero DMG (10s) y reduce 12% Aero RES del enemigo (20s).
-- **Condición:** solo skills explícitas. Ciaccona al golpear; **Aero Rover** convierte otros estados negativos en Aero Erosion. Arma WoodlandAria ("-10% Aero RES").
-- **Fuentes:** Game8 `archives/557617`, fandom `wiki/Negative_Status`, Game8 (archivo).
+### 1.4 Aero Erosion (Aero) — ✅ CONFIRMADO (Gemini 2026-08-11)
+- **DoT:** escala **por nivel del Resonador** (no ATK, no crit). **Base ~5000/tick @Lv90** (LUT/LUT),
+  daño **lineal × acumulaciones**. Hard cap **3** default (6 con Aeolian Realm, 9 con Carthethia S2).
+- **Fórmula:** `finalDamage = (BaseDamagePerTick × CurrentStacks) × DEF_Mult × RES_Mult × Bonus_Mult`
+  - DEF_Mult = `num/(num + enemyDef_eff×(1-DEF_Ignore))`, num=800+8·Lc; DEF nominal enemigo=`8·Lv+792`.
+  - RES_Mult piecewise (RES<0→1-RES/2; 0<RES<0.8→1-RES; RES≥0.8→1/(1+5R)). Woodland Aria -16% Aero RES.
+  - Bonus = `1 + AeroDMGBonus + ErosionAmplify + Vuln` (sin crit). Ciaccona Outro **+100% Erosion Amplify**.
+- **Duración:** 15 s global (refresca en cada aplicación); si expira, TODAS las acumulaciones caen. Tick **~3 s**
+  (⚠️ DeepSeek decía 2s; Gemini confirma 3s). No acelera solo (1.5s con aura Fleurdelys).
+- **RES:** ❌ NO reduce Aero RES inherente (Woodland Aria / Ciaccona Outro lo hacen, no el estado).
+- **Carthethia/Fleurdelys:** genera +2/atque (Basic4, Heavy, Skill); vuln 1-3st→+30% / +10% extra por stack
+  >3 (→60% a 6); Manifest aura tick 1.5s +50%; "Power of Discord" consume 1 stack al detonar; "Blade of
+  Howling Squall" purga hasta 5 stacks → +20% vuln c/u (→+100%). S2: límite 6→9; S6: detona sin purgar al máx.
+- **Aero Rover:** Outro "Storm's Echo" → Aeolian Realm: +3 max_stacks Aero Erosion por 10s; **Skyfall
+  Severance** convierte stacks de otros NS (Frazzle/Bane/Burst/Chafe/Flare) en Aero Erosion (suma→purga→reinyecta).
+- **Ciaccona:** la mayoría de impactos +1 acumulación; Outro **Windcalling Tune +100% Erosion Amplify**.
+- **Ecos:** Gusts of Welkin (+10% Aero DMG 2pc; +15% al infligir Erosion — no activo en Aero Rover sin conversión).
+- **Arquitectura:** ECS struct `AeroErosionStatus {CurrentStacks, MaxStacksAllowed, DurationRemaining,
+  TickTimer, BaseDamagePerTick, SourceResonator}`; update loop con colapso atómico si expira; eventos atómicos
+  HowlingSquall y SkyfallSeverance.
+- **Fuentes:** Gemini 2026-08-11; refrendar tick 3s, base ~5000@Lv90, DEF `8·Lv+792` contra Game8 `archives/557617` y fandom `wiki/Aero_Erosion`.
 
 ### 1.5 Havoc Bane (Havoc) — ✅ CONFIRMADO (v2.8)
 - ⚠️ **El usuario advirtió:** la info anterior a la **v2.8** (daño de explosión) es **OBSOLETA**. Desde la **v2.8** (20/11/2025) Havoc Bane es un **debuff de reducción de DEF**, NO de daño.
@@ -215,7 +230,6 @@ acciones de algunos Resonadores. El motor **no los modela** todavía.
 
 ## 5. Pendientes de confirmar (búsquedas profundas con IA de Google)
 
-- [ ] **Aero Erosion:** daño por tick y fórmula, confirmar que no usa ATK, duración exacta.
 - [ ] **Havoc Bane (v2.8):** duración exacta del estado (no se especifica oficial), confirmar que la reducción de DEF aplica a `M_DEF` (y no "por tick de daño").
 - [ ] **Electro Flare:** nombre exacto ("Electro Flare" vs "Electro Flayer"), daño de Electro Rage por stack, duración total, ¿escala con nivel o ATK?, umbral real de Magnetized (5 vs 7).
 - [ ] **Tune Rupture - Interfered:** duración exacta.
