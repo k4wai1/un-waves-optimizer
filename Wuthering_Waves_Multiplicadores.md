@@ -29,13 +29,25 @@ El primer paso es calcular el daño en bruto antes de aplicar reducciones o bono
 Este grupo reduce el daño que le haces al objetivo. Como jugador, buscas que estos números se acerquen lo máximo posible a `1.0` (o que lo superen mediante reducción de resistencias).
 
 ### Multiplicador de Defensa ($M_{DEF}$)
-La defensa del enemigo se mitiga en relación a la diferencia de niveles entre el atacante y el defensor.
-* **Fórmula:** `(800 + 8 \times L_c) / [800 + 8 \times L_c + (800 + 8 \times L_e) \times (1 - \delta)]`
-    * $L_c$: Nivel de tu personaje.
-    * $L_e$: Nivel del enemigo.
-    * $\delta$: Penetración o Ignorar Defensa (DEF Ignore).
-* *Análisis:* A niveles iguales ($L_c = L_e$) y sin Ignorar Defensa, el multiplicador resultante es exactamente **0.5 (es decir, el enemigo reduce tu daño base a la mitad)**.
-* **Ejemplos de Kit:** Habilidades o efectos especiales en ciertos *Resonators* o *Echoes* de alto coste que ofrezcan estadística de Ignorar Defensa impactan directamente aquí, haciendo una diferencia masiva contra jefes de alto nivel (como en la *Tower of Adversity*).
+La defensa del enemigo se mitiga en relación a la diferencia de niveles entre el atacante y el defensor. Es una función **asintótica** (no una resta lineal), lo que evita inmunidad o daño nulo en los extremos de nivel.
+
+**Valor nominal de la DEF del enemigo** (datamined, confirmado por encore.moe/crecimiento):
+$$\text{DEF}_{Target} = \left(800 + 8 \times (L_e - 1)\right) \times \text{GrowthRates DefRatio}$$
+* $L_e$: Nivel del enemigo. A nivel 1 → DEF 800 canónico.
+* `GrowthRates DefRatio`: coeficiente escalar (la mayoría de enemigos usan 1.0; permite picos de resiliencia en jefes de contenido avanzado).
+* (Es la **misma** expresión que $8 \times L_e + 792$; la primera garantiza 800 a Lv1.)
+
+**Fórmula del multiplicador (con DEF Ignore $\delta$ en el denominador):**
+$$\text{M\_DEF} = \frac{800 + 8 \times L_c}{(800 + 8 \times L_c) + \text{DEF}_{Target} \times (1 - \delta)}$$
+* $L_c$: Nivel de tu personaje. $\delta$: Penetración o Ignorar Defensa (DEF Ignore).
+* *Análisis:* A niveles iguales ($L_c = L_e$), DefRatio 1.0 y sin Ignorar Defensa,
+  el numerador y el denominador comparten el mismo valor $X$ → $\frac{X}{X+X} = \mathbf{0.5}$
+  (el enemigo reduce tu daño base a la mitad).
+* *Reducción vs Ignorar:* la **DEF Reduction** modifica $\text{DEF}_{Target}$ antes del cociente
+  (simula atacar a un ser de menor nivel); la **DEF Ignore** opera dentro del denominador como
+  $(1-\delta)$. Si $\delta > 1.0$, el denominador baja del numerador y $\text{M\_DEF} > 1.0$
+  (techo algorítmico documentado ≈ 2.0 / 200%): la DEF del enemigo se vuelve un amplificador.
+* *Ejemplos de Kit:* Habilidades o efectos especiales en ciertos *Resonators* o *Echoes* de alto coste que ofrezcan estadística de Ignorar Defensa impactan directamente aquí, haciendo una diferencia masiva contra jefes de alto nivel (como en la *Tower of Adversity*).
 
 ### Multiplicador de Resistencia ($M_{RES}$)
 Calcula la resistencia elemental base del enemigo y se le resta tu Penetración de Resistencia ($R_{PEN}$). Se define $R = R_0 - R_{PEN}$. Hay tres fórmulas dependiendo de en qué estado dejes al enemigo:

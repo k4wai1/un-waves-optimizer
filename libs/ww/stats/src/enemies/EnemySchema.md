@@ -55,6 +55,10 @@ Para escalar el HP/ATK/DEF con el nivel del enemigo se usa la tabla `growth` (ra
 - Si un enemigo no reporta `growth` (ej. Phantom: Sigillum), `resolveEnemyStats` cae a DEF
   lineal (`base + 8×delta`) y HP/ATK informativos.
 
+> **Taxonomía A/B/C**: ver `docs/enemy-stats.md` — qué stats del enemigo afectan al daño recibido
+> (DEF, RES, M_DR, DMG Amplify, DefRatio), cuáles son informativas (HP, ATK) y cuáles son mecánica
+> separada (Max Vibration, Rage Limit).
+
 ## Modificadores de enemigo (desde effects[])
 
 Los efectos pueden modificar stats del enemigo usando `target.type: "Stat"` con estos IDs:
