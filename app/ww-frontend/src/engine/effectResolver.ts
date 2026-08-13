@@ -92,6 +92,11 @@ export interface Action {
    * el motor no asume ningún comportamiento, solo lo expone para filtrado/UI.
    */
   formId?: string;
+  /**
+   * MV adicional (Wiki: MV = (motionValue + additionalMV) · (1 + MV multipliers)).
+   * Suma flat sobre el motion value base de la acción. Opcional.
+   */
+  additionalMV?: number;
 }
 
 
@@ -135,6 +140,8 @@ const PATH_TO_CTX: Record<string, string> = {
   healingBonus: 'healingBonus_',
   shieldBonus: 'shieldBonus_',
   defIgnore: 'defIgnore_',
+  // Reducción de defensa (debuff sobre el enemigo): mecánica separada de defIgnore.
+  defReduction: 'defReduction_',
   specialDmgMult: 'specialDmgMult_',
   // Deepen/Amplify por tipo (A_j específico)
   basicAmplify: 'basicAmplify_',
@@ -172,7 +179,7 @@ function legacyTargetToPath(effect: Effect): string | null {
         heavyDmg_: 'stat.heavyDmg', liberationDmg_: 'stat.liberationDmg',
         echoDmg_: 'stat.echoDmg', coordinated_dmg_: 'stat.coordinatedDmg',
         outroDmg_: 'stat.outroDmg', healing_bonus_: 'stat.healingBonus',
-        defIgnore_: 'stat.defIgnore',
+        defIgnore_: 'stat.defIgnore', defReduction_: 'stat.defReduction',
         tuneBreakBoost_: 'stat.tuneBreakBoost', offTuneBuildupRate_: 'stat.offTuneBuildupRate',
         basicAmplify_: 'stat.basicAmplify', heavyAmplify_: 'stat.heavyAmplify',
         skillAmplify_: 'stat.skillAmplify', liberationAmplify_: 'stat.liberationAmplify',
@@ -432,7 +439,11 @@ export function calculateActionDamage(
   // Reemplazo de multiplier (si aplica)
   let finalMv = mods.replacedMultiplier ?? baseMultiplier;
 
-  // damageMultiplier: suma (ej: varios efectos dan +20% cada uno)
+  // MV adicional (Wiki): MV = (motionValue + additionalMV) · (1 + MV multipliers).
+  // additionalMV suma flat sobre el MV base de la acción.
+  finalMv += action.additionalMV ?? 0;
+
+  // damageMultiplier: suma (ej: varios efectos dan +20% cada uno) = (1 + MV mult)
   finalMv *= 1 + mods.damageMultiplier;
 
   // actionType: para que calculateDamage aplique el bonus aditivo por tipo (B_i)

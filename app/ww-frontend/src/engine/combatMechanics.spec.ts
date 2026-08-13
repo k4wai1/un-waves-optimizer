@@ -484,3 +484,29 @@ describe('DEF Ignore > 100% (M_DEF puede superar 1.0, techo 2.0)', () => {
     expect(dmg.normal).toBe(Math.round(1000 * 2.0 * 0.9));
   });
 });
+
+describe('Wiki: defIgnore y defReduction son mecánicas SEPARADAS que se multiplican', () => {
+  it('(1 - defIgnore)·(1 - defReduction) en calculateDamage', () => {
+    const ctx = { ...BASE_CONTEXT, defIgnore_: 0.5, defReduction_: 0.5 };
+    ctx.enemy = { ...cloneEnemy(), defense: 1600 };
+    // defY = 1600 × 0.5 × 0.5 = 400 (NO 1600×(1-1.0)=0)
+    const defNum = 800 + 8 * ctx.attackerLvl; // 1520
+    const defY = 1600 * (1 - 0.5) * (1 - 0.5);
+    const defMult = defMultiplierFn(defNum, defY);
+    const resMult = 0.9;
+    const expected = Math.round(ctx.atk * 1.0 * defMult * resMult);
+    expect(calculateDamage(ctx, 1.0, 'atk', 'spectro').normal).toBe(expected);
+    // si se combinaran aditivamente (0.5+0.5=1.0) sería 1600×0=0 → M_DEF=1, distinto
+    expect(defY).toBe(400);
+    expect(defMult).toBeLessThan(1);
+  });
+
+  it('sin defReduction (default 0) el daño no cambia (retrocompat)', () => {
+    const sinRed = { ...BASE_CONTEXT, defIgnore_: 0.5 };
+    sinRed.enemy = { ...cloneEnemy(), defense: 1600 };
+    const conRed = { ...BASE_CONTEXT, defIgnore_: 0.5, defReduction_: 0 };
+    conRed.enemy = { ...cloneEnemy(), defense: 1600 };
+    expect(calculateDamage(sinRed, 1.0, 'atk', 'spectro').normal)
+      .toBe(calculateDamage(conRed, 1.0, 'atk', 'spectro').normal);
+  });
+});

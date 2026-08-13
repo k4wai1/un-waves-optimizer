@@ -94,8 +94,12 @@ export interface CombatContext {
   // Si no se selecciona uno, se usa EnemyBase (DEF 792, res 10%).
   enemy: EnemyStats;
 
-  // Ignorar defensa (debuffs)
+  // Ignorar defensa (debuffs del atacante) — penetra la DEF: factor (1 - defIgnore)
   defIgnore_: number;
+  // Reducción de defensa (debuffs sobre el enemigo, ej. Havoc Bane) — baja su DEF:
+  // factor (1 - defReduction). La Wiki los multiplica por separado:
+  //   M_DEF = num / (num + ENEMY_DEF·(1-defIgnore)·(1-defReduction))
+  defReduction_?: number;
 }
 
 // ─── Enemigo por defecto ────────────────────────────────────────────────
@@ -202,10 +206,12 @@ export function calculateDamage(
   const specialMult = (context.specialDmgMult_ || 0);
   const bonusMult = (1 + totalDmgBonus) * (1 + totalAmplify) * (1 + specialMult);
 
-  // 3. Defense Multiplier (Fórmula oficial de WuWa)
+  // 3. Defense Multiplier (Fórmula oficial de WuWa / Wiki)
+  // M_DEF = num / (num + DEF_enemigo·(1-defIgnore)·(1-defReduction))
+  // defIgnore_ y defReduction_ son mecánicas independientes que la Wiki MULTIPLICA.
   const enemy = context.enemy || DEFAULT_ENEMY;
   const defNum = 800 + (8 * context.attackerLvl);
-  const defY = enemy.defense * (1 - context.defIgnore_);
+  const defY = enemy.defense * (1 - (context.defIgnore_ || 0)) * (1 - (context.defReduction_ || 0));
   const defMultiplier = defMultiplierFn(defNum, defY);
 
   // 4. Resistance Multiplier

@@ -333,3 +333,37 @@ Despues de aplicar los fixes:
 - [ ] Deepen de Mortefi (+38% Heavy) solo aplica a heavy attacks
 - [ ] Los numeros coinciden con calculadoras externas (ej. wutheringlab)
 - [ ] Tests actualizados para cubrir los nuevos casos
+
+---
+
+## Fidelidad con la Wiki (fórmula general, CV/RV) — 2026-08-13
+
+La fórmula de la Wiki (la misma del juego, sin Special Damage) es:
+
+```
+totalAttack × MV × totalAmplify × totalDamageBonus × crit × defMultiplier × resistMultiplier
+```
+
+| Componente | Wiki | Motor actual | Estado |
+|---|---|---|---|
+| **ATK** | `(charAtk + weaponAtk)·(1 + %ATK) + flat` | `ctx.atk` construido así + effects | ✅ |
+| **MV** | `(mv + additionalMV)·(1 + MV mult)` | `mv` + `getAdditionalMV` (soporta `mv add` en el MV base) | ✅ (Modelado con `additionalMV` en `Action`) |
+| **Amplify** | `(1 + totalAmplify)` | `(1 + totalAmplify)` | ✅ |
+| **DMG Bonus** | `(1 + elem + attack + skillSpecific...)` | `(1 + totalDmgBonus)` aditivo | ✅ |
+| **Crit (no-crit)** | 1 | `critDmg_` = 1+CD (no suma 1 extra) | ✅ |
+| **DEF** | `800+8·Lc` / `(800+8·Lc + (8·Le+792)·(1-defIgnore)·(1-defReduction))` | `defNum/(defNum + DEF·(1-defIgnore)·(1-defReduction))` | ✅ (Corregido) |
+| **RES** | `(1 - res + resReduction)`, si `<0` se mitiga a la mitad | 3 ramas (<0 → `1-(0.5·R)`) | ✅ |
+| **Heal/Shield** | `(MV·atkDefHp + flat)·(1 + healBonus)` | `calculateHealing`/`calculateShield` | ✅ |
+
+### CV y RV
+- **CV (Crit Value)** = `Crit Rate × 2 + Crit DMG` — mostrado en Combat Statistics (calculado de `critRate_`/`critDmg_`).
+- **RV (Roll Value)** — "suerte" de substat rolls; **no es una stat del motor**, es un ranking del artifact/echo. Se documenta como concepto (cada echo tiene su propio RV); no se calcula aún.
+
+### Discrepancias corregidas (para NO repetir)
+1. **DEF Ignore vs DEF Reduction eran UNA sola stat** (`defIgnore_` aplicaba `(1-defIgnore)` sobre toda la DEF). La Wiki las **multiplica por separado**: `(1-defIgnore)·(1-defReduction)`. Corregido:
+   - `CombatContext` ahora tiene `defIgnore_` (del atacante) y `defReduction_` (debuff sobre el enemigo).
+   - `calculateDamage` aplica ambos: `DEF·(1-defIgnore)·(1-defReduction)`.
+   - `effectResolver` acepta `stat.defIgnore` y `stat.defReduction`.
+   - Test: `defIgnore=0.5` + `defReduction=0.5` → `DEF·0.25` (no `DEF·0`).
+2. **MV base no soportaba `additionalMV`** (la Wiki: `(mv + additionalMV)·(1+MV mult)`). Añadido `Action.additionalMV`, propagado desde los JSON5 y sumado en `calculateActionDamage`.
+3. **CV no visible en UI** — añadido como fila calculada.

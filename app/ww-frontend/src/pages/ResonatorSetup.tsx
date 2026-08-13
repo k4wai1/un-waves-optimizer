@@ -192,7 +192,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
           rows.push({
             name: a.name, mv: mult, stat: sc.stat,
             kind: a.kind,
-            act: { id: a.id, type: a.type, tags: a.tags || [], kind: a.kind, flat: a.flat, formId: a.formId },
+            act: { id: a.id, type: a.type, tags: a.tags || [], kind: a.kind, flat: a.flat, formId: a.formId, additionalMV: a.additionalMV },
           });
         }
       }
@@ -265,7 +265,7 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
         if (mult !== undefined) {
           rows.push({
             name: a.name, type: a.type, mv: mult, stat: sc.stat,
-            act: { id: a.id, type: a.type, tags: a.tags || [], kind: a.kind, flat: a.flat, formId: a.formId },
+            act: { id: a.id, type: a.type, tags: a.tags || [], kind: a.kind, flat: a.flat, formId: a.formId, additionalMV: a.additionalMV },
           });
         }
       }
@@ -460,6 +460,12 @@ export function ResonatorSetup({ charData, equippedWeapon, weaponLevel, weaponRa
                 </div>
               );
             })}
+            <div className="flex justify-between py-1 border-t" style={{ borderColor: 'var(--border)' }}>
+              <span style={{ color: 'var(--text-muted)' }}>Crit Value (CV)</span>
+              <span style={{ color: 'var(--accent)' }}>
+                {(combatContext.critRate_ * 2 + combatContext.critDmg_).toFixed(1)}
+              </span>
+            </div>
           </div>
 
           <div className="space-y-4">
