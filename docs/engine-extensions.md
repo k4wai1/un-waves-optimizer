@@ -14,10 +14,16 @@ cuánta vida cura, cuánto escudo da. Vive en:
 
 ```
 app/ww-frontend/src/engine/
-├── calculator.ts        ← las fórmulas de daño/cura/escudo
+├── calculator.ts        ← las fórmulas de daño/cura/escudo (+ M_DEF, M_RES, M_DR)
 ├── effectResolver.ts    ← interpreta los efectos ("+10% ATK") de personajes y armas
-└── combatMechanics.spec.ts ← tests que verifican que las fórmulas son correctas
+├── enemy.ts             ← resuelve el enemigo seleccionado (escala HP/ATK/DEF por nivel)
+├── negativeStatus.ts    ← estados negativos / DoT / Tonalidad (punto fijo, LUT, ticks)
+├── loadJson5.ts         ← carga y parsea los .json5 (personajes, armas, enemigos)
+└── *.spec.ts            ← tests que verifican que las fórmulas son correctas
 ```
+
+> ⚠️ La lista refleja los archivos reales actuales (incluye `enemy.ts`, `negativeStatus.ts`
+> y `loadJson5.ts` que aparecieron con las extensiones de enemigos y estados negativos).
 
 Los datos (personajes, armas, ecos) **no** están en el motor: están en archivos `.json5`.
 El motor los lee y calcula. Por eso puedes editar un `.json5` sin tocar código.
@@ -186,6 +192,9 @@ tiempo real: dado un estado aplicado sobre un objetivo, expone funciones determi
   DEF(solo si el estado la aplica) × (1 + NS Amp). El **DMG Bonus elemental NO aplica** a NS.
 - **Consumo por tick**: `onePerTick` (Spectro Frazzle, Aero Erosion) y `halfFloor` (Electro Flare).
 - **Havoc Bane**: `applyHavocBaneDefense` reduce DEF -2%/stack (v2.8); no produce daño.
+  Internamente baja `enemy.defense` (debuff del lado del enemigo), que en el motor de daño
+  regular equivale a la mecánica `defReduction_` (factor `(1 - defReduction)` sobre la DEF),
+  **separada** de `defIgnore_` del atacante (ver `Wuthering_Waves_Multiplicadores.md` §2).
 - **Electro Rage**: overflow → amplifica el próximo tick y se remueve.
 - **Burst/Respuestas**: `detonateStatus` para Fusion Burst y respuestas de Tonalidad/Hack.
 - **Registry de 9 estados** (`STATUS_REGISTRY`): config declarativa por estado. **Calibrado

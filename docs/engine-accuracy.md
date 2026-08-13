@@ -347,7 +347,7 @@ totalAttack × MV × totalAmplify × totalDamageBonus × crit × defMultiplier �
 | Componente | Wiki | Motor actual | Estado |
 |---|---|---|---|
 | **ATK** | `(charAtk + weaponAtk)·(1 + %ATK) + flat` | `ctx.atk` construido así + effects | ✅ |
-| **MV** | `(mv + additionalMV)·(1 + MV mult)` | `mv` + `getAdditionalMV` (soporta `mv add` en el MV base) | ✅ (Modelado con `additionalMV` en `Action`) |
+| **MV** | `(mv + additionalMV)·(1 + MV mult)` | `mv` + `Action.additionalMV` (sumado en `calculateActionDamage`) | ✅ |
 | **Amplify** | `(1 + totalAmplify)` | `(1 + totalAmplify)` | ✅ |
 | **DMG Bonus** | `(1 + elem + attack + skillSpecific...)` | `(1 + totalDmgBonus)` aditivo | ✅ |
 | **Crit (no-crit)** | 1 | `critDmg_` = 1+CD (no suma 1 extra) | ✅ |
